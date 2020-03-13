@@ -1,0 +1,291 @@
+//base queries
+@include mob(true) {
+    #pm_id_Bar,
+    #pm_id_admin_Bar,
+    #pm_admin_panel {
+        display: none !important;
+    }
+}
+
+@include mob(false) {
+    .pm_mobileBar,
+    .pm_mobileHeader {
+        display: none !important;
+    }
+}
+
+//
+.pm_barLogo {
+    width: map-get($horBar, logo_width);
+    height: map-get($horBar, height);
+    position: fixed;
+    @include dir("left", "right", 0, 0);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        max-width: calc(#{map-get($horBar, logo_width)} - 8vh);
+    }
+}
+
+@include mob(true) {
+    .pm_bar_asset {
+        height: calc(#{map-get($mob, height)} / 2.1);
+        top: calc( (#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
+    }
+}
+
+@include mob(false) {
+    .pm_bar_asset {
+        height: calc(#{map-get($horBar, height)} / 2.1);
+        top: calc( (#{map-get($horBar, height)} / 2) - ((calc(#{map-get($horBar, height)} / 2.1)) / 2));
+    }
+}
+
+.pm_bar_asset {
+    cursor: pointer;
+    width: map-get($horBar, asset);
+    position: fixed;
+    z-index: 1979;
+    @include dir("right", "left", 3vh, 3vh);
+    @include hover_heartbeat;
+}
+
+%base-Bar {
+    z-index: 1978;
+    top: 0;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    position: fixed;
+}
+
+@mixin verticalBar {
+    @extend %base-Bar;
+    width: map-get($vertBar, width);
+    height: 100vh;
+    @include dir("left", "right", 0, 0);
+}
+
+@mixin horizontalBar {
+    @extend %base-Bar;
+    width: 100vw;
+    height: map-get($horBar, height);
+    align-items: center;
+    justify-content: center;
+}
+
+#pm_id_Bar {
+    background-color: $c_domin;
+    @if $PM_BAR_IS_VERTICAL==true {
+        @include verticalBar;
+    }
+    @if $PM_BAR_IS_VERTICAL==false {
+        @include horizontalBar;
+    }
+}
+
+#pm_id_admin_Bar {
+    background-color: $c_domin;
+    @if $PM_ADMIN_BAR_IS_VERTICAL==true {
+        @include verticalBar;
+    }
+    @if $PM_ADMIN_BAR_IS_VERTICAL==false {
+        @include horizontalBar;
+    }
+}
+
+#pm_mobileBar {
+    background-image: url();
+    width: map-get($mob, open_width);
+}
+
+#pm_admin_mobileBar {
+    background-image: url();
+    width: map-get($mob, open_width);
+}
+
+.pm_mobileBar {
+    background-color: $c_interP1;
+    display: none;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    z-index: 1977;
+    @include dir("left",
+    "right",
+    -60vw,
+    -60vw);
+}
+
+#pm_mobileHeader {}
+
+#pm_admin_mobileHeader {}
+
+.pm_mobileHeader {
+    background-color: $c_domin;
+    position: fixed;
+    top: 0;
+    @include dir("left",
+    "right",
+    0,
+    0);
+    width: 100%;
+    z-index: 1978;
+    height: map-get($mob, height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 2vh;
+}
+
+#mobileHeaderLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    align-items: center;
+    height: map-get($mob, height);
+    width: 50vw;
+    left: 25vw;
+    img {
+        height: calc(#{map-get($mob, height)} / 1.8);
+    }
+}
+
+//languages menu
+#selectLangIcon {
+    width: 4vh;
+    height: 4vh;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 3px;
+    border: solid 1px transparent;
+    &:hover {
+        border: solid 1px "";
+    }
+}
+
+#selectLang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+}
+
+#selectLangSub,
+#languagesMenuMobile {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="submit"] {
+        text-transform: uppercase;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 0;
+        width: 5vh;
+        height: 5vh;
+        margin: 1vh;
+        cursor: pointer;
+        &:hover {
+            filter: brightness(1.5);
+        }
+    }
+}
+
+//langs
+.pm_class_Nav {
+    .pm_Lang {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        img {
+            background-color: $c_brand;
+            border-radius: 0.6vh;
+            padding: 0.7vh !important;
+            &:hover {
+                filter: brightness(1.2);
+                box-shadow: 0px 0px 5px 0px $c_opos;
+            }
+            &:active {
+                filter: brightness(1.2);
+                box-shadow: 0px 0px 5px 1px $c_opos;
+            }
+        }
+    }
+}
+
+.pm_langNav {
+    display: none;
+    top: -20vh;
+}
+
+.pm_langNav.--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: map-get($horBar, height);
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        input {
+            margin-top: 2vh;
+            border-radius: 0.6vh;
+            padding: 0.7vh !important;
+            box-shadow: 0px 0px 2px 0px $c_opos;
+            &:hover {
+                box-shadow: 0px 0px 5px 0px $c_opos;
+            }
+            &:active {
+                box-shadow: 0px 0px 5px 1px $c_opos;
+            }
+        }
+    }
+}
+
+.pm_mobileNav {
+    @include font(1,
+    400);
+    .pm_Lang {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        width: 100%;
+        position: absolute;
+        bottom: 3vh;
+        img {
+            display: none;
+        }
+        .pm_langNavMobile {
+            width: 100%;
+            form {
+                display: flex;
+                justify-content: space-evenly;
+                input {
+                    width: 5vh;
+                    height: 5vh;
+                    border-radius: 50%;
+                    background-color: $c_opos;
+                    color: $c_domin;
+                    margin: 0;
+                    @include font(1,
+                    400);
+                    font-size: 2vh;
+                }
+            }
+        }
+    }
+}

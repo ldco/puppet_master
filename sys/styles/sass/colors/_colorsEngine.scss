@@ -1,0 +1,44 @@
+/*automatically calculated*/
+
+//common
+$c_interBB:$c_brand;
+$c_interBP1:lighten($c_brand, 8%);
+$c_interBP2:lighten($c_brand, 16%);
+$c_interBM1:darken($c_brand, 8%);
+$c_interBM2:darken($c_brand, 16%);
+//themes
+//boolean
+$lightThemeBool: true !default;
+//
+$c_dominSub: darken($c_domin, 16%);
+$c_oposSub: lighten($c_opos, 16%);
+$c_diss: darken($c_domin, 8%);
+$c_interB: darken($c_domin, 8%);
+$c_interP1: $c_domin;
+$c_interP2: lighten($c_domin, 4%);
+$c_interM1: darken($c_domin, 16%);
+$c_interM2: darken($c_domin, 24%);
+@if $lightThemeBool==false {
+    //dark theme
+    $_shluz: $c_opos;
+    $c_opos: $c_domin;
+    $c_domin: $_shluz;
+    $c_dominSub: lighten($c_domin, 16%);
+    $c_oposSub: darken($c_opos, 16%);
+    $c_diss: lighten($c_domin, 8%);
+    $c_interB: lighten($c_domin, 10%);
+    $c_interP1: lighten($c_domin, 16%);
+    $c_interP2: lighten($c_domin, 24%);
+    $c_interM1: $c_domin;
+    $c_interM2: darken($c_domin, 4%);
+}
+
+//dark theme to use aside light
+$c_D_dominSub: lighten($c_opos, 16%);
+$c_D_oposSub: darken($c_domin, 16%);
+$c_D_diss: lighten($c_opos, 8%);
+$c_D_interB: lighten($c_opos, 10%);
+$c_D_interP1: lighten($c_opos, 16%);
+$c_D_interP2: lighten($c_opos, 24%);
+$c_D_interM1: $c_opos;
+$c_D_interM2: darken($c_opos, 4%);

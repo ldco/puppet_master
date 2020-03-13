@@ -1,0 +1,104 @@
+{
+    "name": "PuppetMaster",
+    "version": "0.1.0",
+    "description": "webframework",
+    "main": "index.php",
+    "author": "Louis David & Co.",
+    "license": "LD&CO Commercial License 1.0",
+    "homepage": "puppetmaster.pro",
+    "scripts": {
+        "pngquant": "./etc/sh/pngquant.sh",
+        "svgo--ico": "svgo -f ./sys/assets/icons/vector_dev -r -o ./sys/assets/icons/vector --multipass",
+        "svgo--imgs": "svgo -f ./sys/assets/images -r --multipass",
+        "sass--dev": "node-sass -w sys/styles/sass/master.scss www/master.css",
+        "sass--prod": "node-sass sys/styles/sass/master.scss www/master.css",
+        "concat--css": "concat -f /*.css -o www/master.css",
+        "autoprefixer": "postcss www/master.css --use=autoprefixer --map=false --output=www/master.css",
+        "cleancss": "cleancss --level 2 --output www/master.min.css www/master.css",
+        "babel--dev": "babel sys/JS -o www/babels.js -w",
+        "watchify": "watchify www/babels.js -o www/master.js",
+        "babel--prod": "babel sys/JS -o www/babels.js",
+        "browserify": "browserify -p common-shakeify www/babels.js -o www/master.js",
+        "uglify": "uglifyjs www/master.js -o www/master.min.js -c",
+        "pre--dev": "concurrently 'npm:babel--dev' 'npm:sass--dev' 'npm:watchify'",
+        "build": "npm run sass--prod && npm run autoprefixer &&  npm run cleancss && npm run babel--prod && npm run browserify && npm run uglify",
+        "dev": "npm run php && npm run pre--dev",
+        "deploy--ftp": "./vendor/dg/ftp-deployment/deployment ../deploy.ini",
+        "git": "./etc/sh/git--main.sh",
+        "g": "./etc/sh/git--master.sh",
+        "git--deploy": "./etc/sh/git--master--deploy.sh",
+        "dep": "npm run pngquant && npm run svgo--ico && npm run svgo--imgs && npm run build && npm run git--deploy && npm run deploy--ftp",
+        "php": "./etc/sh/phpServer.sh",
+        "php--kill": "killall -9 php"
+    },
+    "browserslist": [
+        "last 4 versions"
+    ],
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "dependencies": {
+        "babelify": "^10.0.0",
+        "lodash": "^4.17.15",
+        "macy": "^2.5.1",
+        "plyr": "^3.5.10",
+        "quill": "^1.3.7",
+        "redom": "^3.25.1",
+        "swiper": "^5.3.1",
+        "wow.js": "^1.2.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.6",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/plugin-transform-arrow-functions": "^7.2.0",
+        "@babel/preset-env": "^7.8.6",
+        "autoprefixer": "^9.7.4",
+        "browserify": "^16.5.0",
+        "clean-css-cli": "^4.3.0",
+        "common-shakeify": "^0.6.2",
+        "concat": "^1.0.3",
+        "concurrently": "^5.1.0",
+        "less": "^3.11.1",
+        "less-watch-compiler": "^1.14.1",
+        "node-sass": "^4.13.1",
+        "postcss-cli": "^7.1.0",
+        "svgo": "^1.3.2",
+        "uglify-js": "^3.7.2",
+        "watchify": "^3.11.1"
+    },
+    "browserify": {
+        "transform": [
+            [
+                "babelify",
+                {
+                    "presets": [
+                        "@babel/preset-env",
+                        {}
+                    ]
+                }
+            ]
+        ]
+    },
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "targets": {
+                        "esmodules": true
+                    }
+                }
+            ]
+        ],
+        "plugins": [
+            [
+                "@babel/plugin-transform-arrow-functions"
+            ],
+            [
+                "@babel/plugin-proposal-class-properties"
+            ]
+        ]
+    }
+}

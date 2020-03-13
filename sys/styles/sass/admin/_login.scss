@@ -1,0 +1,45 @@
+#pm_adminLoginView {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1990;
+    background: $c_D_interM1;
+    color: $c_domin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .adminTitle {
+        position: fixed;
+        top: 15vh;
+    }
+    img {
+        width: 30vw;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        input[type="submit"] {
+            background: $c_D_interP2;
+            color: $c_D_interM1;
+            padding: 1vh;
+            @include font(1, 400);
+        }
+    }
+    .loginMessageText {
+        position: fixed;
+        bottom: 5vh;
+        text-transform: uppercase;
+    }
+}
+
+@include mob(true) {
+    #pm_adminLoginView {
+        img {
+            width: 70vw;
+        }
+    }
+}

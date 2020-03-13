@@ -1,0 +1,50 @@
+{
+    // Place your snippets for scss here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "rtl/ltr": {
+        "prefix": "dir",
+        "body": [
+            "[dir=rtl] & {$1}",
+            "[dir=ltr] & {$2}"
+        ],
+        "description": "direction rtl/ltr"
+    },
+    "mob query": {
+        "prefix": "mob",
+        "body": [
+            "@include mob(true) {",
+            "#someid {display: none !important;}}",
+            "@include mob(false) {",
+            "#someid{display: none !important;}}"
+        ],
+        "description": "mob query"
+    },
+    "box shadow": {
+        "prefix": "s",
+        "body": [
+            "box-shadow:$1 0px$2 0px$3 2px$4 2px $5#333;"
+        ],
+        "description": "box shadow css"
+    },
+    "display flex": {
+        "prefix": "f",
+        "body": [
+            "display: flex;",
+            "ustify-content: $1center;",
+            "align-items: $2center;",
+        ],
+        "description": "display flex all center"
+    }
+
+}

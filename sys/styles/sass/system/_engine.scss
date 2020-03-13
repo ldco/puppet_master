@@ -1,0 +1,100 @@
+@function generateContentSize($admin, $widthBool, $mobis) {
+    $vertical: null;
+    @if $admin==false {
+        $vertical: $PM_BAR_IS_VERTICAL;
+    }
+    @if $admin==true {
+        $vertical: $PM_ADMIN_BAR_IS_VERTICAL;
+    }
+    @if $widthBool==true {
+        //width
+        @if $vertical==true {
+            @return calc(100vw - #{map-get($vertBar, width)});
+        }
+        @if $vertical==false {
+            @return 100vw;
+        }
+    }
+    /**/
+    //height
+    @if $widthBool==false {
+        //height1 horBar
+        $height1: null;
+        $height2: null;
+        $height3: null;
+        @if $vertical==false {
+            @if $mobis==false {
+                $height1: map-get($horBar, height);
+            }
+            @if $mobis==true {
+                $height1: map-get($mob, height);
+            }
+        }
+        @if $vertical==true {
+            $height1: 0px;
+        }
+        //height2 panel
+        $height2: map-get($adminPanel, height);
+        //height3 footer
+        @if $PM_FOOTER==true {
+            @if $mobis==true {
+                $height3: 0px;
+            }
+            @if $mobis==false {
+                $height3: map-get($footer, height);
+            }
+        }
+        @if $PM_FOOTER==false {
+            $height3: 0px;
+        }
+        @if $admin==true {
+            @return calc(100vh - #{$height1} - #{$height2});
+        }
+        @if $admin=false {
+            @return calc(100vh - #{$height1} - #{$height3});
+        }
+    }
+}
+
+@function generateContentPosition($admin, $topBool, $mobis) {
+    $vertical: null;
+    @if $admin==false {
+        $vertical: $PM_BAR_IS_VERTICAL;
+    }
+    @if $admin==true {
+        $vertical: $PM_ADMIN_BAR_IS_VERTICAL;
+    }
+    @if $topBool==true {
+        $top1: null;
+        $top2: null;
+        @if $vertical==false {
+            @if $mobis==false {
+                $top1: map-get($horBar, height);
+            }
+            @if $mobis==true {
+                $top1: map-get($mob, height);
+            }
+        }
+        @if $vertical==true {
+            $top1: 0px;
+        }
+        $top2: map-get($adminPanel, height);
+        @if $admin==true {
+            @return calc(0vh + #{$top1} + #{$top2});
+        }
+        @if $admin==false {
+            @return calc(0vh + #{$top1});
+        }
+    }
+    @if $topBool==false {
+        $vert1: null;
+        $vert2: null;
+        @if $vertical==true {
+            $vert1: map-get($vertBar, width);
+        }
+        @if $vertical==false {
+            $vert1: 0px;
+        }
+        @return calc(0vw + #{$vert1});
+    }
+}

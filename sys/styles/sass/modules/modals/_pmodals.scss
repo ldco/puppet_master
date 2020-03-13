@@ -1,0 +1,206 @@
+//PM_MODALS
+//common
+.pm_modal {
+    @include disableSelect;
+}
+
+$modalParentHeight: 30vh;
+$modalParentWidth: $modalParentHeight * 1.4;
+$modalButtonsWidth: $modalParentWidth / 4;
+$modalButtonsHeight: $modalButtonsWidth / 2.6;
+//main
+.pm_modal_parent {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    border-radius: 9px;
+    background-color: $c_domin;
+    z-index: 100;
+    text-align: center;
+    cursor: default;
+    justify-content: center;
+    z-index: 1984;
+    min-height: $modalParentHeight;
+    min-width: $modalParentWidth;
+    box-shadow: 1px 1px 1px 1px $c_interM2;
+}
+
+//areas
+.pm_modal_titleArea {
+    height: 5vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    div {
+        margin-top: 3px;
+    }
+}
+
+.pm_modal_contentArea {
+    width: 100%;
+    position: absolute;
+    top: 5vh;
+    height: calc(#{$modalParentHeight} - 5vh - 8vh);
+    display: flex;
+    justify-content: center;
+    align-items: center; // position: absolute;
+    flex-direction: column;
+    div {
+        width: 85%;
+        //padding: 1vh;
+    }
+}
+
+.pm_modal_buttonsArea {
+    width: 100%;
+    height: 8vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 0px;
+}
+
+input.pm_modal_button {
+    width: $modalButtonsWidth;
+    height: $modalButtonsHeight;
+    font-size: $modalButtonsHeight / 2;
+    border-radius: 3px;
+    background-color: $c_interM1;
+    box-shadow: 1px 1px 1px 1px $c_interM2;
+    text-transform: capitalize;
+    &:hover {
+        filter: brightness(1.1);
+    }
+    &:active {
+        filter: brightness(1.1);
+        box-shadow: -1px -1px 1px 1px $c_interM2;
+    }
+}
+
+//title
+.pm_modal_title {}
+
+//icons
+.pm_modal_icon {
+    width: 3vh;
+    height: 3vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 1vh;
+    position: absolute;
+    &:hover {
+        filter: brightness(1.8) !important;
+    }
+}
+
+.pm_modal_icon_close {
+    cursor: pointer;
+    background-image: url(../sys/assets/icons/vector/close.svg);
+    right: 10px;
+}
+
+.pm_modal_icon_drag {
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    background-image: url(../sys/assets/icons/vector/drag.svg);
+    left: 10px;
+}
+
+.pm_modal_input {}
+
+.pm_modal_img {}
+
+.pm_modal_text {}
+
+.pm_modal_innerdiv {}
+
+.pm_modal_span {}
+
+.pm_modal_canvas {}
+
+.pm_modal .asterix {
+    &::before {
+        content: "*";
+    }
+}
+
+
+/* .pm_modalNameSpan {
+    width: 100%;
+    height: 5vh;
+    top: 2vh;
+    font-size: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+
+
+.pm_modalButtonSpan {
+    width: 8vw;
+    height: 5vh;
+    z-index: 12;
+    font-size: 2.2vh;
+    border-radius: 3px;
+}
+
+.pm_modalContent {
+    
+}
+
+.pm_modalSpan {
+    font-size: 2.4vh;
+}
+
+.pm_modalWindow {
+    height: 76%;
+    background: black;
+    border-radius: 1vh;
+    width: 80% !important;
+    overflow-x: hidden;
+}
+
+.alertPrompt {
+    .promptContent {
+        text-align: center !important;
+    }
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    span {
+        padding-bottom: 1vh;
+        font-size: 2.2vh;
+        span {
+            filter: none !important;
+        }
+    }
+    input {}
+}
+
+.red {
+    color: red !important;
+    filter: none !important;
+}
+
+.red+input {
+    border: solid 1px red !important;
+}
+
+.small {
+    font-size: 1.8vh;
+}
+
+.
+} */

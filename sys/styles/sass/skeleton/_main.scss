@@ -1,0 +1,73 @@
+@include mob(false) {
+    #mainAdminContent {
+        width: generateContentSize(true, true, false);
+        min-height: generateContentSize(true, false, false);
+        top: generateContentPosition(true, true, false);
+        [dir=rtl] & {
+            right: generateContentPosition(true, false, false);
+        }
+        [dir=ltr] & {
+            left: generateContentPosition(true, false, false);
+        }
+    }
+    #mainContent {
+        width: generateContentSize(false, true, false);
+        min-height: generateContentSize(false, false, false);
+        top: generateContentPosition(false, true, false);
+        [dir=rtl] & {
+            right: generateContentPosition(false, false, false);
+        }
+        [dir=ltr] & {
+            left: generateContentPosition(false, false, false);
+        }
+    }
+}
+
+@include mob(true) {
+    #mainAdminContent {
+        width: generateContentSize(true, true, true);
+        min-height: generateContentSize(true, false, true);
+        top: generateContentPosition(true, true, true);
+        [dir=rtl] & {
+            right: generateContentPosition(true, false, true);
+        }
+        [dir=ltr] & {
+            left: generateContentPosition(true, false, true);
+        }
+    }
+    #mainContent {
+        width: generateContentSize(false, true, true);
+        min-height: generateContentSize(false, false, true);
+        top: generateContentPosition(false, true, true);
+        [dir=rtl] & {
+            right: generateContentPosition(false, false, true);
+        }
+        [dir=ltr] & {
+            left: generateContentPosition(false, false, true);
+        }
+    }
+}
+
+#mainAdminContent,
+#mainContent {
+    .pm_page_incontent {
+        min-height: 100%;
+    }
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    background-color: $c_domin;
+    h1 {
+        text-transform: uppercase;
+        margin: 0;
+        @include font(1, 50);
+        @include rfs-fs(2);
+        margin-top: 5vh;
+    }
+    /*  @if $PM_BAR_IS_VERTICAL=false {
+        h1 {
+            margin-top: map-get($horBar, height) + 1vh;
+        }
+    } */
+}

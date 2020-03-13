@@ -1,0 +1,46 @@
+//hamburger vars
+$hamburgerColor: $c_opos;
+$hamburgerBGColor: $c_domin;
+$hamburgerRadius: none; //3px;
+$hamburgerShadow: none; //1px 1px 1px 1px $c_interM2;
+$hamburgerSize: map-get($mob, height) / 4;
+.pm_hamburger {
+    height: $hamburgerSize / 1.8;
+    width: $hamburgerSize;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include dir('left', 'right', 3vh, 3vh);
+}
+
+.hamburger {
+    background-color: $hamburgerBGColor;
+    padding: 2vh;
+    border-width: $hamburgerRadius;
+    border-style: initial;
+    border-color: initial;
+    border-radius: 3px;
+    //margin: 1vh;
+    box-shadow: $hamburgerShadow;
+    .hamburger-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            width: $hamburgerSize * 2.2;
+            height: $hamburgerSize / 5;
+            background-color: $hamburgerColor;
+        }
+    }
+}
+
+.hamburgerHelperDiv {
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    position: fixed;
+    z-index: 1976;
+}

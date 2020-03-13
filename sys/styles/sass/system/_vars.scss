@@ -1,0 +1,44 @@
+.attention {}
+
+#copyto {
+    user-select: initial !important;
+}
+
+#copytoBut:hover+#copyTooltip {
+    opacity: 1 !important;
+}
+
+//copy top button
+#goTop {
+    display: none;
+    position: fixed;
+    bottom: 5vh;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    cursor: pointer;
+    &:hover {}
+    z-index: 1979;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//page blocking div
+#pm_overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1983 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $c_interM2;
+    opacity: 0.7;
+}

@@ -1,0 +1,29 @@
+%admin_panel {
+    position: fixed;
+    z-index: 1979;
+    font-size: 1.8vh;
+    z-index: 1976;
+    top: 0;
+    justify-content: flex-end;
+    @include dir('left', 'right', map-get($vertBar, width), map-get($vertBar, width));
+    height: map-get($adminPanel, height);
+    width: calc(100vw - #{map-get($vertBar, width)});
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#pm_admin_panel {
+    @extend %admin_panel;
+    .pm_admin_info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        padding-right: 3vh;
+        padding-left: 3vh;
+        img {
+            @include dir('transform', 'transform', initial, rotate(180deg));
+        }
+    }
+}

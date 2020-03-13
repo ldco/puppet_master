@@ -1,0 +1,26 @@
+@include mob(true) {
+    .pm_footer {
+        display: none;
+    }
+}
+
+.pm_footer {
+    background-color: $c_domin;
+    color: $c_opos;
+    font-size: 0.8vh;
+    width: 100%;
+    @include font(1, 900);
+    height: map-get($footer, height);
+    position: fixed;
+    bottom: 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pm_footerCredits {}
+    .pm_footerCreditsBy {}
+    .pm_footerCreditsCopy {
+        position: fixed;
+        @include dir('right', 'left', 2vw, 2vw);
+    }
+}

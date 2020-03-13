@@ -1,0 +1,202 @@
+ @mixin hor_navfontsize($x) {
+     font-size: map-get($horBar, height) / $x;
+ }
+ 
+ @mixin mob_navfontsize($x) {
+     font-size: (map-get($mob, nav_height) - $x);
+ }
+ 
+ @mixin pm_class_verticalNav {
+     @extend %base-Nav;
+     margin-top: 4vh;
+     height: 60vh;
+     width: map-get($vertBar, width);
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: column;
+     .nav_item {
+         span {}
+     }
+     .nav_admin_item {
+         span {}
+     }
+     .nav_item,
+     .nav_admin_item {
+         @include rfs-fs(0.8);
+         width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         @extend %base-Nav_item;
+         &:hover>span {
+             transition: ease-in 0.1s;
+             @include dir('left', 'right', calc(#{map-get($vertBar, width)} - 1vh), calc(#{map-get($vertBar, width)} - 1vh));
+         }
+         &:hover>img {
+             transition: ease-in 0.2s;
+             width: calc(#{map-get($vertBar, width)} / 1.8);
+         }
+         img {
+             width: calc(#{map-get($vertBar, width)} / 2.9);
+         }
+         span {
+             position: absolute;
+             display: flex;
+             align-items: center;
+             @include dir('left', 'right', -50vh, -50vh);
+             width: 15vh;
+             justify-content: center;
+             height: calc(#{map-get($vertBar, width)} / 2);
+             z-index: -1;
+             border-radius: 1vh;
+             background-color: $c_interP1;
+             padding: 0.5vh;
+         }
+     }
+ }
+ 
+ @mixin pm_class_horizontalNav {
+     @extend %base-Nav;
+     align-items: center;
+     text-align: center;
+     justify-content: space-between;
+     height: 100%;
+     width: 60vw;
+     .nav_item,
+     .nav_admin_item {
+         @extend %base-Nav_item;
+         padding-left: 1vw;
+         padding-right: 1vw;
+         height: 115%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100%;
+         width: 100%;
+         @if $PM_NAV_ICONS==true {
+             img,
+             &+div>img {
+                 padding: 1vh;
+                 border: solid 0.1vh transparent;
+                 width: calc(#{map-get($vertBar, width)} / 2);
+             }
+             &:hover>a>img {
+                 transition: ease-in 0.1s;
+                 width: calc(#{map-get($vertBar, width)} / 1.4);
+             }
+             &:hover>a>span {
+                 transition: ease-in 0.2s;
+                 opacity: 1;
+             }
+             a {
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+             }
+             span {
+                 opacity: 0;
+                 position: fixed;
+                 top: calc(#{map-get($horBar, height)} / 1.1);
+                 z-index: -10;
+                 border-radius: 0.5vh;
+                 padding: 0.4vh;
+                 @include rfs-fs(0.8);
+             }
+         }
+         @if $PM_NAV_ICONS==false {
+             span {
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 top: initial !important;
+                 width: 100%;
+                 height: 100%;
+                 @include hor_navfontsize(3);
+                 @include rfs-fs(0.6);
+             }
+             img {
+                 display: none !important;
+             }
+             &:hover>span {
+                 transition: ease-in 0.2s;
+                 margin-top: 0.1vh;
+             }
+         }
+     }
+ }
+ 
+ #pm_id_Nav {
+     @if map-get($PM_PHTML_CONTENT, horBar)==false {
+         @include pm_class_verticalNav;
+     }
+     @if map-get($PM_PHTML_CONTENT, horBar)==true {
+         @include pm_class_horizontalNav;
+     }
+ }
+ 
+ #pm_id_admin_Nav {
+     @if map-get($PM_ADMIN_CONTENT, horBar)==false {
+         @include pm_class_verticalNav;
+     }
+     @if map-get($PM_ADMIN_CONTENT, horBar)==true {
+         @include pm_class_horizontalNav;
+     }
+ }
+ 
+ %base-Nav {
+     opacity: 1;
+     text-transform: uppercase;
+     display: flex;
+ }
+ 
+ %base-Nav_item {
+     cursor: pointer;
+ }
+ 
+ .pm_mobileNav {
+     user-select: none;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     margin-top: 12vh;
+     width: 100%;
+     text-transform: uppercase;
+     @include dir('align-items', 'align-items', flex-start, flex-end);
+     .nav_item {
+         height: map-get($mob, nav_height);
+         span {
+             @include mob_navfontsize(5);
+         }
+     }
+     .nav_admin_item {
+         height: map-get($mob, ad_nav_height);
+     }
+     .nav_item,
+     .nav_admin_item {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         width: 100%;
+         img,
+         span {
+             @include dir('margin-left', 'margin-right', 3vh, 3vh);
+         }
+         &:active {}
+         a {
+             justify-content: center;
+             align-items: center;
+             display: flex;
+         }
+     }
+ }
+ 
+ #languagesMenuMobile {
+     margin-top: 3vh;
+     margin-right: 3vw;
+     form {
+         flex-direction: row;
+         justify-content: center;
+     }
+ }
