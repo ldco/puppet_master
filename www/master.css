@@ -2417,11 +2417,35 @@ input.pm_modal_button {
   background: rgba(41, 69, 82, 0.3); }
 
 #mainLogo {
-  position: absolute;
-  top: 50vh;
-  left: calc(50vw - 20vh); }
-  #mainLogo img {
-    width: 40vh; }
+  position: absolute; }
+  [dir=rtl] #mainLogo {
+    left: 3vh; }
+  [dir=ltr] #mainLogo {
+    right: 3vh; }
+
+@media (max-aspect-ratio: 13 / 9) {
+  [mob=true] #mainLogo {
+    top: 52vh; }
+    [mob=true] #mainLogo img {
+      width: 20vh; } }
+
+@media (max-width: 1210px) {
+  [mob=false] #mainLogo {
+    top: 52vh; }
+    [mob=false] #mainLogo img {
+      width: 20vh; } }
+
+@media (min-aspect-ratio: 13 / 9) {
+  [mob=true] #mainLogo {
+    top: 50vh; }
+    [mob=true] #mainLogo img {
+      width: 40vh; } }
+
+@media (min-width: 1210px) {
+  [mob=false] #mainLogo {
+    top: 50vh; }
+    [mob=false] #mainLogo img {
+      width: 40vh; } }
 
 /* #bgVideo {
     position: absolute;

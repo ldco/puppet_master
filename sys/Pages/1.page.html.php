@@ -11,7 +11,7 @@ $page1 = new Page();
 ?>
 
 
-<div id='mainLogo'><img src='<?= PM_IMAGES_REL ?>page_1/mainlogo.png'></div>
+<div id='mainLogo'><img src='<?= PM_IMAGES_REL ?>brand/barLogo.svg'></div>
 
 <div id='bgVideoEffect'></div>
 

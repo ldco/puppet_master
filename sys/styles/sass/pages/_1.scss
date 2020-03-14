@@ -1,9 +1,28 @@
 #mainLogo {
     position: absolute;
-    top: 50vh;
-    left: calc(50vw - 20vh);
-    img {
-        width: 40vh;
+    [dir=rtl] & {
+        left: 3vh;
+    }
+    [dir=ltr] & {
+        right: 3vh;
+    }
+}
+
+@include mob(true) {
+    #mainLogo {
+        top: 52vh;
+        img {
+            width: 20vh;
+        }
+    }
+}
+
+@include mob(false) {
+    #mainLogo {
+        top: 50vh;
+        img {
+            width: 40vh;
+        }
     }
 }
 

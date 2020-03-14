@@ -15,12 +15,16 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 class Page
 {
     public $arr = [];
-    public function __construct()
+    public function __construct($clss = null)
     {
         global $PM_PAGE_NUM;
         // ob_start();
-
-        echo "<div class='pm_page_incontent' id='pm_page_" . $PM_PAGE_NUM  . "'>";
+        if ($clss != null) {
+            $_clss = " " . $clss;
+        } else {
+            $_clss = "";
+        }
+        echo "<div class='pm_page_incontent" . $_clss . "' id='pm_page_" . $PM_PAGE_NUM  . "'>";
     }
 
     public function h($type, $bool)
