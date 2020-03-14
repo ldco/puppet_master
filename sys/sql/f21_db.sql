@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 14, 2020 at 08:17 AM
+-- Generation Time: Mar 15, 2020 at 12:21 AM
 -- Server version: 10.4.12-MariaDB-1:10.4.12+maria~bionic-log
 -- PHP Version: 7.4.2
 
@@ -123,7 +123,7 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (24, 'age', 'возраст', 'גיל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (32, 'age categories', 'возрастные категории', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (108, 'alert', 'внимание', 'שים לב', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(112, 'archvize', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(112, 'archvize', '3D визуализации', 'הדמיות אדרכליות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (118, 'art', 'арт', 'אומנות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (110, 'back', 'назад', 'חזור', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (27, 'belt', 'пояс', 'חגורה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -208,12 +208,12 @@ INSERT INTO `pm_pub_nav` (`_id`, `name`, `img`, `fun`, `link`, `sub`) VALUES
 (4, 113, '39', NULL, NULL, NULL),
 (5, 114, '40', NULL, NULL, NULL),
 (6, 115, '41', NULL, NULL, NULL),
-(9, 116, 'print', NULL, NULL, NULL),
-(10, 117, 'posts', NULL, NULL, NULL),
-(11, 118, '42', NULL, NULL, NULL),
-(12, 119, '13', NULL, NULL, NULL),
-(13, 120, '99', NULL, NULL, NULL),
-(14, 96, '30', NULL, NULL, NULL);
+(7, 116, 'print', NULL, NULL, NULL),
+(8, 117, 'posts', NULL, NULL, NULL),
+(9, 118, '42', NULL, NULL, NULL),
+(10, 119, '13', NULL, NULL, NULL),
+(11, 120, '43', NULL, NULL, NULL),
+(12, 96, '30', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 

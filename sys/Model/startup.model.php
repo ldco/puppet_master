@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 require_once (dirname($_SERVER['DOCUMENT_ROOT'], 1)) . "/config.ini.php";
 
-if (basename($_SERVER['DOCUMENT_ROOT']) === PM_LOCAL_APPFOLDER) {
-  define("PM_IS_LOCAL", 1);
-} else {
+if (basename($_SERVER['DOCUMENT_ROOT']) === PM_REMOTE_APPFOLDER) {
   define("PM_IS_LOCAL", 0);
+} else {
+  define("PM_IS_LOCAL", 1);
 }
 
 if (PM_IS_LOCAL) {
@@ -32,8 +32,10 @@ define("PM_ASSETS_REL", PM_SYS_FOLDER . "/assets/");
 define("PM_FONTS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "fonts/")));
 
 if (PM_IS_LOCAL) {
-
   define("DB_HOST", "localhost");
+  define("DB_NAME", DB_NAME_LOCAL);
+  define("DB_USER", DB_USER_LOCAL);
+  define("DB_PASS", DB_PASS_LOCAL);
   define("PM_IMAGES", (PM_ASSETS . "images/images_dev/"));
   define("PM_IMAGES_REL", (PM_ASSETS_REL . "images/images_dev/"));
   define("PM_VIDEOS", (PM_ASSETS . "videos/videos_dev/"));
@@ -43,6 +45,9 @@ if (PM_IS_LOCAL) {
   define("PM_DEPENS_JS", "pm_master.js");
 } else {
   define("DB_HOST", DB_HOST_URL);
+  define("DB_NAME", DB_NAME_REMOTE);
+  define("DB_USER", DB_USER_REMOTE);
+  define("DB_PASS", DB_PASS_REMOTE);
   define("PM_IMAGES", (PM_ASSETS . "images/images/"));
   define("PM_IMAGES_REL", (PM_ASSETS_REL . "images/images/"));
   define("PM_VIDEOS", (PM_ASSETS . "videos/videos/"));

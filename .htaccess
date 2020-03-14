@@ -3,8 +3,15 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
 
 
-#Redirect 301 /price-request-הצעת-מחיר http://ldcodesign.com/#page_10
-
+Redirect 301 /price-request-הצעת-מחיר http://ldcodesign.com/#page_10
+Redirect 301 /לוגו-ומיתוג http://ldcodesign.com/#page_1
+Redirect 301 /הדמיות-אדריכליות http://ldcodesign.com/#page_2
+Redirect 301 /אומנות http://ldcodesign.com/#page_8
+Redirect 301 /טיפוגרפיה http://ldcodesign.com/#page_5
+Redirect 301 /אינטרנט http://ldcodesign.com/#page_3
+Redirect 301 /אנימציה-ומושן-גרפיקס http://ldcodesign.com/#page_7
+Redirect 301 /דפוס http://ldcodesign.com/#page_6
+Redirect 301 /contacts http://ldcodesign.com/#page_11
 
 
 

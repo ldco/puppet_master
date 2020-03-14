@@ -6,7 +6,7 @@ declare(strict_types=1);
 //PM: MOVE THE FILE FOLDER UP!
 
 //title
-define("PM_TITLE", "Puppet Master");
+define("PM_TITLE", "FABRICA21 STUDIO");
 //credits
 define("PM_COPYBY", "Louis David & Co.");
 //by who
@@ -26,7 +26,7 @@ define("PM_SYS_FOLDER", "sys"); //or core
 define("PM_IS_DEV", false); // or true
 define("PM_PROD_SERVER", "apache"); //or nginx
 define("PM_LOCAL_APPFOLDER", "root");
-define("PM_REMOTE_APPFOLDER", "public_html");
+define("PM_REMOTE_APPFOLDER", "public_html/2020");
 define("PM_DEV_OS", "lin"); //lin/win/mac
 define("PM_ISAPP", false); //true or false
 
@@ -36,13 +36,16 @@ define("PM_ALL_LANGS", array("ru", "he", "en")); //list oh langs
 define("PM_ALLOW_CLIENTLANG", false); // or true (if true, default is client lang)
 define("PM_ADMIN_LANG", "en"); // define lang of admin area
 
-//db
+//DB local
 define("DB_HOST_URL", "localhost");
-define("DB_NAME", "pm_db");
-define("DB_USER", "***");
-define("DB_PASS", "***"); //hash
+define("DB_NAME_LOCAL", "");
+define("DB_USER_LOCAL", "");
+define("DB_PASS_LOCAL", ""); //hash
 
-
+//DB remote
+define("DB_NAME_REMOTE", "");
+define("DB_USER_REMOTE", "");
+define("DB_PASS_REMOTE", ""); //hash
 
 
 //ftp/sftp
