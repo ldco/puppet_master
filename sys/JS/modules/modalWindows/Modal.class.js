@@ -35,28 +35,12 @@ class Modal {
 
     title(text) {
         let titlear = this.titlear;
-
-        /*  this.getTranslate(text, function() {
-             let _text = get[0];
-             mount(titlear, el(".pm_modal pm_modal_title", _text));
-         }); */
         mount(titlear, el(".pm_modal pm_modal_title", text));
     }
 
     button(fun, text) {
 
         let but = this.buttons;
-        /*  this.getTranslate(text, function() {
-             let _text = get[0];
-             mount(
-                 but,
-                 el("input.pm_modal pm_modal_button", {
-                     type: "button",
-                     onclick: fun,
-                     value: _text
-                 })
-             );
-         }); */
         mount(
             but,
             el("input.pm_modal pm_modal_button", {
@@ -102,26 +86,6 @@ class Modal {
     get id() {
         return this.idname.substring(1) + " ";
     }
-
-    //methods
-    /* getTranslate(text, fun) {
-        let _lang = document.querySelector("html");
-        let lang = _lang.getAttribute("lang");
-        let ajx = new XMLHttpRequest();
-        
-        ajx.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                let _fromDB = ajx.responseText;
-                let fromDB = JSON.parse(_fromDB);
-                get.push(fromDB);
-                fun();
-                get.length = 0;
-            }
-        };
-        ajx.open("POST", "/sys/helpers/pmTranslateEngine.php", true);
-        ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        ajx.send("lang=" + lang + "&text=" + text);
-    } */
 
     close(closetype, id) {
         if (closetype === 1) {

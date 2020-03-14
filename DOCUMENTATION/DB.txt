@@ -14,7 +14,11 @@ host, user,password,database,charset
 Обязательным является только первый параметр - строка запроса.
 Метод поддерживает работу с prepared statements в виде перечисления переменных по порядку квантификаторов или через ассоциативный массив.
 Пример:
-DB->query("SELECT ? FROM `table` WHERE `filterfield` = ?", 'field', 1)
+$DB->query("SELECT ? FROM `table` WHERE `filterfield` = ?", 'field', 1)
+или
+$need_ids = [ 1,2,3,4,5,6,7,8 ];
+$DB->query("SELECT `id`,`fieldname` FROM `table` WHERE `id` IN ( ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? ,  ? )", $need_ids);
+
 
 2) Метод queryRaw
 Принимает единственный параметр - строку запроса.

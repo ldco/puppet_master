@@ -1,1 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1" width="24" height="24" viewBox="0 0 18 18"><path d="M15.193 2.43l-1.15.592c-.715.365-.942.483-1.983 1.02l-1.063.546-.862.445c-.14.075-.454.236-.695.36l-.437.22-.468-.235a57.954 57.954 0 01-.612-.316 48.332 48.332 0 00-.863-.445l-1.091-.56c-.205-.107-.644-.334-.978-.504l-.977-.502c-1.321-.681-1.563-.805-1.591-.805-.03 0-.207.353-.739 1.46l-.184.38v7.844l.072.003c.04.003.092.003.115.003.023 0 .069 0 .1-.003.058-.003.058-.023.058-3.84V4.256l.253.135 1.126.606.747.402.403.216c.186.103.732.397 1.106.598.112.06.279.152.374.2.094.053.296.159.445.24.333.175.342.183.256.22-.038.018-.199.098-.357.182l-1.135.589c-1.218.626-1.276.655-1.287.69-.009.03.293 1.16.543 2.017.063.215.063.23.066 2.816l.003 2.6.167.01c.155.008.164.005.166-.058V13.03l.003-2.618 1.052-.569c.58-.313 1.132-.609 1.227-.658.095-.052.264-.14.374-.201.485-.261.902-.489 1.063-.575.095-.051.258-.14.365-.195l.192-.104.181.098c.1.055.247.13.325.17.08.04.247.132.374.2.126.07.307.17.402.22.506.27.632.338.948.51l.517.28.345.186.762.411.322.175.103.058v2.675l-.003 2.673.172.006.17.003-.003-2.584v-2.586l.095-.336c.049-.184.123-.454.164-.595.037-.144.138-.506.224-.807l.152-.55L13.629 8c-.342-.176-.848-.434-1.123-.578-.276-.143-.647-.333-.822-.425l-.322-.164.106-.055c.23-.12 1.937-1.04 2.173-1.17.129-.068 1.67-.898 2.278-1.226l.236-.126v7.675h.345V4.08l-.207-.423-.451-.928-.247-.509z"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="100.svg"
+   inkscape:version="0.92.4 (unknown)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1880"
+     inkscape:window-height="1018"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="11.340604"
+     inkscape:cy="7.2630383"
+     inkscape:window-x="3840"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     d="M0 0h24v24H0z"
+     fill="none"
+     id="path2" />
+  <path
+     inkscape:export-ydpi="1159.0378"
+     inkscape:export-xdpi="1159.0378"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/x.png"
+     d="m 13.58958,14.499591 v 2.613847 H 5.5766266 v -2.07108 l 3.61368,-3.342307 q 0.4713534,-0.44278 0.6284667,-0.757013 0.15712,-0.314233 0.15712,-0.614187 0,-0.3713664 -0.2571,-0.5713331 -0.24282,-0.2142467 -0.7141667,-0.2142467 -0.4570666,0 -0.857,0.2428134 Q 7.7476933,10.028905 7.53344,10.471685 L 4.9910066,9.2004712 Q 5.56234,8.1292179 6.66216,7.5150312 7.7619733,6.8865645 9.31886,6.8865645 q 1.18552,0 2.099653,0.3856534 0.914134,0.3856466 1.428334,1.09982 0.5142,0.7141666 0.5142,1.6425801 0,0.828433 -0.357087,1.556887 -0.3428,0.714166 -1.356913,1.6283 l -1.428334,1.299786 z"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Black';-inkscape-font-specification:'Montserrat Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00070a;fill-opacity:0.99215686;stroke:none;stroke-width:0.38258949"
+     id="path1475"
+     inkscape:connector-curvature="0" />
+  <path
+     inkscape:export-ydpi="1159.0378"
+     inkscape:export-xdpi="1159.0378"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/x.png"
+     d="M 19.008993,7.1150979 V 17.113438 H 15.638127 V 9.6575379 H 13.92412 v -2.54244 z"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Black';-inkscape-font-specification:'Montserrat Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00070a;fill-opacity:0.99215686;stroke:none;stroke-width:0.38258949"
+     id="path1477"
+     inkscape:connector-curvature="0" />
+</svg>

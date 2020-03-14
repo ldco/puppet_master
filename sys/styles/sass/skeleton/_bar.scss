@@ -32,14 +32,14 @@
 @include mob(true) {
     .pm_bar_asset {
         height: calc(#{map-get($mob, height)} / 2.1);
-        top: calc( (#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
+        top: calc((#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
     }
 }
 
 @include mob(false) {
     .pm_bar_asset {
         height: calc(#{map-get($horBar, height)} / 2.1);
-        top: calc( (#{map-get($horBar, height)} / 2) - ((calc(#{map-get($horBar, height)} / 2.1)) / 2));
+        top: calc((#{map-get($horBar, height)} / 2) - ((calc(#{map-get($horBar, height)} / 2.1)) / 2));
     }
 }
 
@@ -200,6 +200,12 @@
 //langs
 .pm_class_Nav {
     .pm_Lang {
+        [dir=rtl] & {
+            padding-right: 1vw;
+        }
+        [dir=ltr] & {
+            padding-left: 1vw;
+        }
         cursor: pointer;
         display: flex;
         justify-content: center;

@@ -3,22 +3,21 @@ let PM_MODAL_LOC = [];
 function initModalLocalisation() {
     let wordsToTranslate = [
         "alert",
-        "error",
         "back",
+        "cancel",
         "close",
-        "yes",
+        "error",
         "no",
-        "cancel"
+        "yes"
     ];
 
     let name = JSON.stringify(wordsToTranslate);
     let ajx = new XMLHttpRequest();
     ajx.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            let _fromDB = ajx.responseText;
-            let fromDB = JSON.parse(_fromDB);
-            console.log(_fromDB);
-            console.log(fromDB);
+            let fromDB = JSON.parse(ajx.responseText);
+            PM_MODAL_LOC = fromDB;
+            // console.log(PM_MODAL_LOC);
         }
     };
     ajx.open("POST", "/sys/modules/initModalTranslate.php", true);

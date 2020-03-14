@@ -63,7 +63,32 @@
      text-align: center;
      justify-content: space-between;
      height: 100%;
-     width: 60vw;
+     width: 70vw;
+     .nav_item:first-of-type {
+         display: none;
+     }
+     .nav_item {
+         @if $PM_NAV_ICONS==true {
+             &:hover {
+                 //transition: ease-in 0.1s;
+                 padding: 1.25vw;
+             }
+             &:hover>a>img {
+                 //transition: ease-in 0.1s;
+                 border-radius: 5px;
+                 border: solid 1px;
+                 padding: 0.5vw;
+             }
+         }
+     }
+     .nav_admin_item {
+         @if $PM_NAV_ICONS==true {
+             &:hover>a>img {
+                 transition: ease-in 0.1s;
+                 width: calc(#{map-get($vertBar, width)} / 1.4);
+             }
+         }
+     }
      .nav_item,
      .nav_admin_item {
          @extend %base-Nav_item;
@@ -82,18 +107,14 @@
                  border: solid 0.1vh transparent;
                  width: calc(#{map-get($vertBar, width)} / 2);
              }
-             &:hover>a>img {
-                 transition: ease-in 0.1s;
-                 width: calc(#{map-get($vertBar, width)} / 1.4);
-             }
-             &:hover>a>span {
-                 transition: ease-in 0.2s;
-                 opacity: 1;
-             }
              a {
                  display: flex;
                  justify-content: center;
                  align-items: center;
+             }
+             &:hover>a>span {
+                 transition: ease-in 0.2s;
+                 opacity: 1;
              }
              span {
                  opacity: 0;

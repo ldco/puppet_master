@@ -204,28 +204,11 @@ class Modal {
 
   title(text) {
     var titlear = this.titlear;
-    /*  this.getTranslate(text, function() {
-         let _text = get[0];
-         mount(titlear, el(".pm_modal pm_modal_title", _text));
-     }); */
-
     (0, _redom.mount)(titlear, (0, _redom.el)(".pm_modal pm_modal_title", text));
   }
 
   button(fun, text) {
     var but = this.buttons;
-    /*  this.getTranslate(text, function() {
-         let _text = get[0];
-         mount(
-             but,
-             el("input.pm_modal pm_modal_button", {
-                 type: "button",
-                 onclick: fun,
-                 value: _text
-             })
-         );
-     }); */
-
     (0, _redom.mount)(but, (0, _redom.el)("input.pm_modal pm_modal_button", {
       type: "button",
       onclick: fun,
@@ -265,27 +248,7 @@ class Modal {
 
   get id() {
     return this.idname.substring(1) + " ";
-  } //methods
-
-  /* getTranslate(text, fun) {
-      let _lang = document.querySelector("html");
-      let lang = _lang.getAttribute("lang");
-      let ajx = new XMLHttpRequest();
-      
-      ajx.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-              let _fromDB = ajx.responseText;
-              let fromDB = JSON.parse(_fromDB);
-              get.push(fromDB);
-              fun();
-              get.length = 0;
-          }
-      };
-      ajx.open("POST", "/sys/helpers/pmTranslateEngine.php", true);
-      ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      ajx.send("lang=" + lang + "&text=" + text);
-  } */
-
+  }
 
   close(closetype, id) {
     if (closetype === 1) {
@@ -352,7 +315,7 @@ function pmPrompt(title, fun, content, closetype) {
   el.title(title);
   el.button(function () {
     fun();
-  }, PM_MODAL_LOC[4]);
+  }, PM_MODAL_LOC[6]);
   el.buttonClose(closetype, PM_MODAL_LOC[5]);
   el.div(content, "");
 }
@@ -361,16 +324,14 @@ function pmPrompt(title, fun, content, closetype) {
 var PM_MODAL_LOC = [];
 
 function initModalLocalisation() {
-  var wordsToTranslate = ["alert", "error", "back", "close", "yes", "no", "cancel"];
+  var wordsToTranslate = ["alert", "back", "cancel", "close", "error", "no", "yes"];
   var name = JSON.stringify(wordsToTranslate);
   var ajx = new XMLHttpRequest();
 
   ajx.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      var _fromDB = ajx.responseText;
-      var fromDB = JSON.parse(_fromDB);
-      console.log(_fromDB);
-      console.log(fromDB);
+      var fromDB = JSON.parse(ajx.responseText);
+      PM_MODAL_LOC = fromDB; // console.log(PM_MODAL_LOC);
     }
   };
 

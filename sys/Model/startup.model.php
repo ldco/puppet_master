@@ -56,8 +56,16 @@ define("PM_CLIENT_LANG", substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 0, 2));
 define("PM_ADMIN_TITLE", "Admin Dashboard - " . PM_TITLE);
 
 if (isset($_POST['submitLang'])) {
-  define("PM_LANG", $_POST['submitLang']);
-} else {
+  if (in_array($_POST['submitLang'], PM_ALL_LANGS)) {
+    define("PM_LANG", $_POST['submitLang']);
+    setcookie("PM_LANG", $_POST['submitLang'], time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
+  }
+} elseif (!empty($_COOKIE) && !empty($_COOKIE['PM_LANG'])) {
+  if (in_array($_COOKIE['PM_LANG'], PM_ALL_LANGS)) {
+    define("PM_LANG", $_COOKIE['PM_LANG']);
+  }
+}
+if (!defined("PM_LANG")) {
   if (PM_ALLOW_CLIENTLANG) {
     if (in_array(PM_CLIENT_LANG, PM_ALL_LANGS)) {
       define("PM_LANG", PM_CLIENT_LANG);
@@ -68,8 +76,6 @@ if (isset($_POST['submitLang'])) {
     define("PM_LANG", PM_DEFAULT_LANG);
   }
 }
-
-
 
 define("RTL_LANGS", array("he", "ar", "arc", "dv", "fa", "ha", "khw", "ku", "ps", "ur", "yi"));
 

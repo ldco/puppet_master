@@ -40,7 +40,13 @@ class SkeletonIndex
         $modelDepends = $this->modelDepends;
         $modelFooter = $this->modelFooter;
         $isAdmin = $this->isAdmin;
-
+        $showAgreeCookie = '';
+        if (empty($_COOKIE) || empty($_COOKIE['I_WANT_COOKIE'])) {
+            ob_start();
+            require_once PM_ROOT . PM_SYS_FOLDER . "/View/agree.cookie.view.html.php";
+            $showAgreeCookie = ob_get_contents();
+            ob_clean();
+        }
         //Store page content to $sPageContent
         require PM_ROOT . $this->viewsNames['index'];
         //MODULES
