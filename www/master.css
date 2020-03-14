@@ -1605,11 +1605,11 @@ input[type="number"]::-webkit-outer-spin-button {
       display: flex;
       justify-content: space-evenly; }
       .pm_mobileNav .pm_Lang .pm_langNavMobile form input {
-        width: 5vh;
-        height: 5vh;
-        border-radius: 50%;
-        background-color: #e4e9ed;
+        background-color: #294552;
         color: #00070a;
+        border-radius: 0.4vh;
+        width: 4vh;
+        height: 4vh;
         margin: 0;
         font-size: 2vh; }
         [lang=en] .pm_mobileNav .pm_Lang .pm_langNavMobile form input {
@@ -1790,7 +1790,7 @@ body {
       height: calc(6vh / 2);
       z-index: -1;
       border-radius: 1vh;
-      background-color: #00070a;
+      background-color: #00405c;
       padding: 0.5vh; }
       [dir=ltr] #pm_id_admin_Nav .nav_item span, [dir=ltr]
       #pm_id_admin_Nav .nav_admin_item span {
@@ -1992,7 +1992,7 @@ body {
   flex-direction: column;
   position: fixed;
   border-radius: 9px;
-  background-color: #00070a;
+  background-color: #e4e9ed;
   z-index: 100;
   text-align: center;
   cursor: default;
@@ -2036,17 +2036,18 @@ body {
   bottom: 0px; }
 
 input.pm_modal_button {
+  filter: grayscale(1);
   width: 10.5vh;
   height: 4.03846vh;
   font-size: 2.01923vh;
   border-radius: 3px;
-  background-color: black;
-  box-shadow: 1px 1px 1px 1px black;
+  background-color: #94a8b8;
+  box-shadow: 1px 1px 1px 1px #00405c;
   text-transform: capitalize; }
   input.pm_modal_button:hover {
-    filter: brightness(1.1); }
+    filter: grayscale(1) brightness(0.8); }
   input.pm_modal_button:active {
-    filter: brightness(1.1);
+    filter: grayscale(1) brightness(1.1);
     box-shadow: -1px -1px 1px 1px black; }
 
 .pm_modal_icon {
@@ -2190,10 +2191,10 @@ input.pm_modal_button {
   [dir="rtl"] #thebility_buttonsDiv {
     left: 36vh; }
   #thebility_buttonsDiv div {
-    background: rgba(0, 21, 30, 0.8);
+    background: #e4e9ed;
     padding: 1vh;
     border-radius: 4px;
-    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 0px 5px rgba(41, 69, 82, 0.9);
     user-select: none;
     display: flex;
     flex-direction: column;
@@ -2208,9 +2209,7 @@ input.pm_modal_button {
     margin-top: 2vh; }
 
 #thebilityMainDiv {
-  font-family: "medium";
   color: #e4e9ed;
-  font-size: 2vh;
   display: none;
   opacity: 0;
   width: auto;
@@ -2227,8 +2226,10 @@ input.pm_modal_button {
   [dir="rtl"] #thebilityMainDiv {
     left: 10vh; }
   #thebilityMainDiv .thebilityDiv {
+    font-size: 0.8rem;
+    text-transform: capitalize;
     text-align: center;
-    background: rgba(0, 21, 30, 0.8);
+    background: rgba(0, 93, 132, 0.8);
     padding: 2vh;
     border-radius: 4px;
     box-shadow: 0px 0px 0px 5px rgba(41, 69, 82, 0.9);
@@ -2238,15 +2239,15 @@ input.pm_modal_button {
     cursor: pointer; }
     [lang=en] #thebilityMainDiv .thebilityDiv {
       font-family: Montserrat;
-      font-weight: 600; }
+      font-weight: 400; }
     [lang=ru] #thebilityMainDiv .thebilityDiv {
       font-family: Montserrat;
-      font-weight: 600; }
+      font-weight: 400; }
     [lang=he] #thebilityMainDiv .thebilityDiv {
       font-family: Heebo;
-      font-weight: 600; }
+      font-weight: 400; }
     #thebilityMainDiv .thebilityDiv:hover {
-      background: rgba(0, 11, 15, 0.8);
+      background: rgba(0, 82, 117, 0.8);
       box-shadow: 0px 0px 0px 5px rgba(56, 95, 113, 0.9); }
   #thebilityMainDiv .column {
     display: flex;
@@ -2276,7 +2277,10 @@ input.pm_modal_button {
   [mob=true] #pm_thebility .column {
     flex-direction: column; }
   [mob=true] #pm_thebility .thebilityDiv {
-    width: 40vw; }
+    width: 60vw;
+    font-size: 0.4rem; }
+    [mob=true] #pm_thebility .thebilityDiv input {
+      margin-top: 1.5vh; }
   [mob=true] #dragThebility {
     display: none; }
   [mob=true] #closeThebility {
@@ -2297,7 +2301,10 @@ input.pm_modal_button {
   [mob=false] #pm_thebility .column {
     flex-direction: column; }
   [mob=false] #pm_thebility .thebilityDiv {
-    width: 40vw; }
+    width: 60vw;
+    font-size: 0.4rem; }
+    [mob=false] #pm_thebility .thebilityDiv input {
+      margin-top: 1.5vh; }
   [mob=false] #dragThebility {
     display: none; }
   [mob=false] #closeThebility {
@@ -2417,6 +2424,7 @@ input.pm_modal_button {
   background: rgba(41, 69, 82, 0.3); }
 
 #mainLogo {
+  z-index: 2;
   position: absolute; }
   [dir=rtl] #mainLogo {
     left: 3vh; }
@@ -2447,29 +2455,24 @@ input.pm_modal_button {
     [mob=false] #mainLogo img {
       width: 40vh; } }
 
-/* #bgVideo {
-    position: absolute;
-    left: 0;
-    // top: 8vh;
-    z-index: 0;
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    video {
+#bgVideo {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* video {
         width: 100%;
-        // height: 100vh;
+        height: 100;
         position: fixed;
-    }
-} */
-/* #bgVideoEffect {
-    // background: @_Color3;
-    opacity: 0.9;
-    z-index: 1;
-    position: relative;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-} */
+    } */ }
+
+#bgVideoEffect {
+  background: #00070a;
+  opacity: 0.8;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%; }

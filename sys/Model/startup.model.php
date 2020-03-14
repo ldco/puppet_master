@@ -10,8 +10,6 @@ if (basename($_SERVER['DOCUMENT_ROOT']) === PM_LOCAL_APPFOLDER) {
   define("PM_IS_LOCAL", 0);
 }
 
-define("PM_ICONS", "/" . PM_SYS_FOLDER . "/assets/icons/vector");
-
 if (PM_IS_LOCAL) {
   define("PM_APPFOLDER", PM_LOCAL_APPFOLDER . "/");
 } else {
@@ -40,6 +38,7 @@ if (PM_IS_LOCAL) {
   define("PM_IMAGES_REL", (PM_ASSETS_REL . "images/images_dev/"));
   define("PM_VIDEOS", (PM_ASSETS . "videos/videos_dev/"));
   define("PM_VIDEOS_REL", (PM_ASSETS_REL . "videos/videos_dev/"));
+  define("PM_ICONS", "/" . PM_SYS_FOLDER . "/assets/icons/vector_dev");
   define("PM_ICONS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "icons/vector_dev/")));
   define("PM_DEPENS_JS", "pm_master.js");
 } else {
@@ -48,6 +47,7 @@ if (PM_IS_LOCAL) {
   define("PM_IMAGES_REL", (PM_ASSETS_REL . "images/images/"));
   define("PM_VIDEOS", (PM_ASSETS . "videos/videos/"));
   define("PM_VIDEOS_REL", (PM_ASSETS_REL . "videos/videos/"));
+  define("PM_ICONS", "/" . PM_SYS_FOLDER . "/assets/icons/vector");
   define("PM_ICONS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "icons/vector/")));
   define("PM_DEPENS_JS", "pm_master.min.js");
 }

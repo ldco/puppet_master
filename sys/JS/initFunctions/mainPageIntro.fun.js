@@ -10,16 +10,15 @@ function mainPageIntro() {
             let pre1 = document.createElement("div");
             let _pre1 = document.createElement("div");
             pre1.setAttribute("class", "page_O_present_anim_1");
-            document.getElementById('pm_page_1').appendChild(_pre1);
+            document.getElementById("pm_page_1").appendChild(_pre1);
             _pre1.appendChild(pre1);
-
         }
         let colors = ["#597884", "#aebecb", "#294552", "#00070a"];
         let pre1 = document.getElementsByClassName("page_O_present_anim_1");
         for (let i = 0; i < pre1.length; i++) {
-            pre1[i].style.height = getRandomInt(1, 1.5) +
-                "vh";
-            pre1[i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            pre1[i].style.height = getRandomInt(1, 1.5) + "vh";
+            pre1[i].style.backgroundColor =
+                colors[Math.floor(Math.random() * colors.length)];
             pre1[i].style.width = "100vw";
             pre1[i].style.position = "absolute";
             pre1[i].style.top = getRandomInt(60, 70) + "vh";
@@ -30,7 +29,6 @@ function mainPageIntro() {
                 pre1[i].style.left = "-100vw";
             } else {
                 pre1[i].style.right = "-100vw";
-
             }
             setTimeout(() => {
                 if (dir === "ltr") {
@@ -38,20 +36,15 @@ function mainPageIntro() {
                 } else {
                     pre1[i].style.right = "0";
                 }
-
             }, 100);
-
         }
-
     }
 
-    setTimeout(() => {
-        presentation();
-        let bgimages = ["", "", "", "", "", "", ];
-        let videoParent = document.getElementById("bgVideo");
-        videoParent.style.backgroundImage = "url('/assets/images/0_0/" + Math.floor(Math.random() * 10 + 1) + ".png')";
-    }, 300);
-
-
-
+    presentation();
+    let bgimages = ["", "", "", "", "", ""];
+    let videoParent = document.getElementById("bgVideo");
+    videoParent.style.backgroundImage =
+        "url('sys/assets/images/images_dev/page_1/" +
+        Math.floor(Math.random() * 10 + 1) +
+        ".png')";
 }

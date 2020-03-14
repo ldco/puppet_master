@@ -16,8 +16,8 @@ $page1 = new Page();
 <div id='bgVideoEffect'></div>
 
 <div id='bgVideo'>
-    <video autoplay muted loop>
-        <source src='<?= PM_VIDEOS_REL ?>page_1/untitled2.mp4' type='video/mp4'></video>
+    <!-- <video autoplay muted loop>
+        <source src='<?= PM_VIDEOS_REL ?>page_1/untitled2.mp4' type='video/mp4'></video> -->
 </div>
 
 <?php

@@ -1,4 +1,5 @@
 #mainLogo {
+    z-index: 2;
     position: absolute;
     [dir=rtl] & {
         left: 3vh;
@@ -26,32 +27,26 @@
     }
 }
 
-
-/* #bgVideo {
+#bgVideo {
     position: absolute;
-    left: 0;
-    // top: 8vh;
     z-index: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    video {
+    /* video {
         width: 100%;
-        // height: 100vh;
+        height: 100;
         position: fixed;
-    }
-} */
+    } */
+}
 
-
-/* #bgVideoEffect {
-    // background: @_Color3;
-    opacity: 0.9;
+#bgVideoEffect {
+    background: $c_domin;
+    opacity: 0.8;
     z-index: 1;
     position: relative;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: 100vh;
-} */
+    width: 100%;
+    height: 100%;
+}

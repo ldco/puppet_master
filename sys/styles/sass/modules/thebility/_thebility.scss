@@ -55,10 +55,10 @@ $backTHebiltyColor: rgba($c_interP2, 0.8);
     justify-content: space-between;
     height: 10vh;
     div {
-        background: $backTHebiltyColor;
+        background: $c_opos;
         padding: 1vh;
         border-radius: 4px;
-        box-shadow: 0px 0px 0px 5px rgba($c_interM2, 0.6);
+        box-shadow: 0px 0px 0px 5px $mainTHebiltyColor;
         user-select: none;
         display: flex;
         flex-direction: column;
@@ -78,9 +78,7 @@ $backTHebiltyColor: rgba($c_interP2, 0.8);
 }
 
 #thebilityMainDiv {
-    font-family: "medium";
     color: $c_opos;
-    font-size: 2vh;
     display: none;
     opacity: 0;
     width: auto;
@@ -99,7 +97,9 @@ $backTHebiltyColor: rgba($c_interP2, 0.8);
         left: 10vh;
     }
     .thebilityDiv {
-        @include font(1, 600);
+        @include font(1, 400);
+        @include rfs-fs(0.8);
+        text-transform: capitalize;
         text-align: center;
         background: $backTHebiltyColor;
         padding: 2vh;
@@ -158,7 +158,11 @@ $backTHebiltyColor: rgba($c_interP2, 0.8);
             flex-direction: column;
         }
         .thebilityDiv {
-            width: 40vw;
+            width: 60vw;
+            @include rfs-fs(0.4);
+            input {
+                margin-top: 1.5vh;
+            }
         }
     }
     #dragThebility {

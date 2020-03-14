@@ -14,7 +14,8 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     flex-direction: column;
     position: fixed;
     border-radius: 9px;
-    background-color: $c_domin;
+    // background-color: $c_domin;
+    background-color: $c_opos;
     z-index: 100;
     text-align: center;
     cursor: default;
@@ -66,18 +67,20 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
 }
 
 input.pm_modal_button {
+    filter: grayscale(1);
     width: $modalButtonsWidth;
     height: $modalButtonsHeight;
     font-size: $modalButtonsHeight / 2;
     border-radius: 3px;
-    background-color: $c_interM1;
-    box-shadow: 1px 1px 1px 1px $c_interM2;
+    //background-color: $c_interM1;
+    background-color: darken($c_opos, 26%);
+    box-shadow: 1px 1px 1px 1px $c_dominSub;
     text-transform: capitalize;
     &:hover {
-        filter: brightness(1.1);
+        filter: grayscale(1) brightness(0.8);
     }
     &:active {
-        filter: brightness(1.1);
+        filter: grayscale(1) brightness(1.1);
         box-shadow: -1px -1px 1px 1px $c_interM2;
     }
 }
