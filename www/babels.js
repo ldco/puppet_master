@@ -86,13 +86,76 @@ function initFun() {
   setChangeLang();
   setBarAsset();
   initModalLocalisation();
-  new Thebility().init(); //end of functions list!
+  new Thebility().init();
+  mainPageIntro(); //end of functions list!
 
   var setURL = window.location.hash;
   if (setURL == "") return;
   var id = setURL.split("#").pop();
   if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
   getContentView(id);
+}
+"use strict";
+
+function mainPageIntro() {
+  var dir = document.getElementsByTagName("html")[0].getAttribute("dir");
+
+  function getRandomInt(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function presentation() {
+    for (var i = 0; i < 7; i++) {
+      var _pre = document.createElement("div");
+
+      var _pre1 = document.createElement("div");
+
+      _pre.setAttribute("class", "page_O_present_anim_1");
+
+      document.getElementById('pm_page_1').appendChild(_pre1);
+
+      _pre1.appendChild(_pre);
+    }
+
+    var colors = ["#597884", "#aebecb", "#294552", "#00070a"];
+    var pre1 = document.getElementsByClassName("page_O_present_anim_1");
+
+    var _loop = function _loop(_i) {
+      pre1[_i].style.height = getRandomInt(1, 1.5) + "vh";
+      pre1[_i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      pre1[_i].style.width = "100vw";
+      pre1[_i].style.position = "absolute";
+      pre1[_i].style.top = getRandomInt(60, 70) + "vh";
+      pre1[_i].style.transition = "2s";
+      pre1[_i].style.zIndex = "3";
+      pre1[_i].style.opacity = "0.8";
+
+      if (dir == "ltr") {
+        pre1[_i].style.left = "-100vw";
+      } else {
+        pre1[_i].style.right = "-100vw";
+      }
+
+      setTimeout(function () {
+        if (dir === "ltr") {
+          pre1[_i].style.left = "0";
+        } else {
+          pre1[_i].style.right = "0";
+        }
+      }, 100);
+    };
+
+    for (var _i = 0; _i < pre1.length; _i++) {
+      _loop(_i);
+    }
+  }
+
+  setTimeout(function () {
+    presentation();
+    var bgimages = ["", "", "", "", "", ""];
+    var videoParent = document.getElementById("bgVideo");
+    videoParent.style.backgroundImage = "url('/assets/images/0_0/" + Math.floor(Math.random() * 10 + 1) + ".png')";
+  }, 300);
 }
 "use strict";
 

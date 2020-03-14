@@ -21,7 +21,7 @@
             }
         }
         [mob=false] {
-            @media (orientation: portrait) {
+            @media (max-width: 1210px) {
                 @content;
             }
         }
@@ -33,7 +33,7 @@
             }
         }
         [mob=false] {
-            @media (orientation: landscape) {
+            @media (min-width: 1210px) {
                 @content;
             }
         }

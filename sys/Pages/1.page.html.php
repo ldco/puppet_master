@@ -7,5 +7,18 @@ use sys\Pages;
 require "Page.class.php";
 
 $page1 = new Page();
-$page1->h(1, true);
+
+?>
+
+
+<div id='mainLogo'><img src='<?= PM_IMAGES_REL ?>page_1/mainlogo.png'></div>
+
+<div id='bgVideoEffect'></div>
+
+<div id='bgVideo'>
+    <video autoplay muted loop>
+        <source src='<?= PM_VIDEOS_REL ?>page_1/untitled2.mp4' type='video/mp4'></video>
+</div>
+
+<?php
 $page1->close();

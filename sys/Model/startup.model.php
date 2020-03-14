@@ -38,13 +38,17 @@ if (PM_IS_LOCAL) {
   define("DB_HOST", "localhost");
   define("PM_IMAGES", (PM_ASSETS . "images/images_dev/"));
   define("PM_IMAGES_REL", (PM_ASSETS_REL . "images/images_dev/"));
-  define("PM_ICONS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "icons/vector/")));
+  define("PM_VIDEOS", (PM_ASSETS . "videos/videos_dev/"));
+  define("PM_VIDEOS_REL", (PM_ASSETS_REL . "videos/videos_dev/"));
+  define("PM_ICONS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "icons/vector_dev/")));
   define("PM_DEPENS_JS", "pm_master.js");
 } else {
   define("DB_HOST", DB_HOST_URL);
   define("PM_IMAGES", (PM_ASSETS . "images/images/"));
   define("PM_IMAGES_REL", (PM_ASSETS_REL . "images/images/"));
-  define("PM_ICONS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "icons/vector_dev/")));
+  define("PM_VIDEOS", (PM_ASSETS . "videos/videos/"));
+  define("PM_VIDEOS_REL", (PM_ASSETS_REL . "videos/videos/"));
+  define("PM_ICONS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "icons/vector/")));
   define("PM_DEPENS_JS", "pm_master.min.js");
 }
 

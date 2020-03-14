@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="522.81689"
-   height="123.19144"
-   viewBox="0 0 138.329 32.594103"
+   viewBox="0 0 138.32902 24.57069"
+   height="92.866447"
+   width="522.81696"
    version="1.1"
    id="svg8"
    sodipodi:docname="barLogoMob.svg"
@@ -41,117 +41,109 @@
      inkscape:window-height="1018"
      id="namedview10"
      showgrid="false"
+     inkscape:zoom="3.57953"
+     inkscape:cx="544.39612"
+     inkscape:cy="35.255518"
+     inkscape:window-x="3840"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.63277748"
-     inkscape:cx="146.04405"
-     inkscape:cy="-171.98498"
-     inkscape:window-x="1920"
-     inkscape:window-y="32"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg8" />
-  <g
-     inkscape:export-ydpi="300"
-     inkscape:export-xdpi="300"
-     inkscape:export-filename="/mnt/sdb2/CURRENT_WORKING_DEV/Neria/tex/logo1.png"
-     id="g894"
-     transform="matrix(1.1741002,0,0,1.1741002,-418.1019,-276.58518)"
-     style="fill:#00060a;fill-opacity:0.9254902">
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 357.19678,239.52379 v 6.40608 h 7.99153 v 0.98555 h -7.99153 v 6.62033 h -1.09268 v -14.99751 h 10.02691 v 0.98555 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path870"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 378.18592,249.31502 h -8.69855 l -1.90683,4.22073 h -1.17837 l 6.89885,-14.99751 h 1.09268 l 6.89885,14.99751 h -1.17838 z m -0.40707,-0.92127 -3.9422,-8.65571 -3.92078,8.65571 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path872"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 392.92801,245.80132 q 1.60687,0.29995 2.44245,1.26408 0.857,0.96412 0.857,2.50672 0,1.90683 -1.39263,2.93523 -1.39262,1.0284 -4.13503,1.0284 h -6.6846 v -14.99751 h 6.2561 q 2.44246,0 3.79223,1.00698 1.3712,0.98555 1.3712,2.8281 0,1.2855 -0.6856,2.16393 -0.66417,0.87842 -1.82112,1.26407 z m -7.82013,-6.32038 v 5.97758 h 5.12057 q 1.97111,0 3.02093,-0.74987 1.07125,-0.7713 1.07125,-2.24963 0,-1.4569 -1.07125,-2.20678 -1.04982,-0.7713 -3.02093,-0.7713 z m 5.59192,13.11211 q 2.18536,0 3.29946,-0.74988 1.13552,-0.7713 1.13552,-2.35675 0,-1.58545 -1.13552,-2.33532 -1.1141,-0.74988 -3.29946,-0.74988 h -5.59192 v 6.19183 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path874"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 410.53836,253.53575 -3.57798,-5.01345 q -0.79272,0.10712 -1.4569,0.10712 h -4.285 v 4.90633 h -1.09268 v -14.99751 h 5.37768 q 2.8281,0 4.43498,1.34978 1.60688,1.32835 1.60688,3.70653 0,1.77827 -0.92128,2.9995 -0.89985,1.1998 -2.59243,1.69257 l 3.74938,5.24913 z m -5.03488,-5.87045 q 2.3996,0 3.66368,-1.04983 1.26408,-1.07125 1.26408,-3.02092 0,-1.94968 -1.26408,-2.99951 -1.26408,-1.07125 -3.66368,-1.07125 h -4.285 v 8.14151 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path876"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 415.56687,238.53824 h 1.09268 v 14.99751 h -1.09268 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path878"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 428.22739,253.64288 q -2.20678,0 -3.98506,-0.98555 -1.75685,-0.98556 -2.78525,-2.72098 -1.00697,-1.73543 -1.00697,-3.89935 0,-2.16393 1.00697,-3.89935 1.0284,-1.73543 2.78525,-2.72098 1.77828,-0.98555 3.98506,-0.98555 1.6283,0 2.9995,0.53562 1.3712,0.5142 2.33532,1.5426 l -0.6856,0.70703 q -1.7997,-1.77828 -4.60637,-1.77828 -1.88541,0 -3.42801,0.857 -1.5426,0.857 -2.42102,2.37818 -0.87843,1.49975 -0.87843,3.36373 0,1.86397 0.87843,3.38515 0.87842,1.49975 2.42102,2.35675 1.5426,0.857 3.42801,0.857 2.78525,0 4.60637,-1.7997 l 0.6856,0.70702 q -0.96412,1.02841 -2.35675,1.56403 -1.3712,0.53563 -2.97807,0.53563 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path880"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 446.10153,249.31502 h -8.69855 l -1.90683,4.22073 h -1.17838 l 6.89886,-14.99751 h 1.09267 l 6.89886,14.99751 h -1.17838 z m -0.40707,-0.92127 -3.94221,-8.65571 -3.92077,8.65571 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path882"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 461.93629,249.61497 v 3.92078 h -12.01943 v -3.10663 l 5.42053,-5.01345 q 0.70702,-0.66417 0.9427,-1.13552 0.23567,-0.47135 0.23567,-0.92128 0,-0.55705 -0.38565,-0.857 -0.36422,-0.32137 -1.07125,-0.32137 -0.6856,0 -1.2855,0.36422 -0.5999,0.36423 -0.92128,1.0284 l -3.81365,-1.90683 q 0.857,-1.60687 2.50673,-2.52815 1.64972,-0.9427 3.98505,-0.9427 1.77828,0 3.14948,0.57848 1.3712,0.57847 2.1425,1.64972 0.7713,1.07125 0.7713,2.46388 0,1.24265 -0.53563,2.33533 -0.5142,1.07125 -2.03537,2.44245 l -2.1425,1.94967 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Black';-inkscape-font-specification:'Montserrat Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path884"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       d="m 470.06541,238.53824 v 14.99751 h -5.0563 V 242.3519 h -2.571 v -3.81366 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Black';-inkscape-font-specification:'Montserrat Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.57388425"
-       id="path886"
-       inkscape:connector-curvature="0" />
-    <text
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.18701363px;line-height:1.25;font-family:'Montserrat Thin';-inkscape-font-specification:'Montserrat Thin, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.21929501"
-       x="427.07001"
-       y="260.89801"
-       id="text890"><tspan
-         sodipodi:role="line"
-         id="tspan888"
-         x="427.07001"
-         y="260.89801"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';fill:#00060a;fill-opacity:0.9254902;stroke-width:0.21929501">digital creative studio</tspan></text>
-    <path
-       inkscape:export-ydpi="366.50043"
-       inkscape:export-xdpi="366.50043"
-       inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
-       inkscape:connector-curvature="0"
-       id="path892"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.8777771px;line-height:1.25;font-family:'Montserrat Thin';-inkscape-font-specification:'Montserrat Thin, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#00060a;fill-opacity:0.9254902;stroke:none;stroke-width:0.79444945"
-       d="m 470.06541,263.33313 v -0.5635 h 3.26254 v -26.63421 h -3.26254 v -0.56354 h 3.85573 v 27.76125 z" />
-  </g>
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-page="true" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path870"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="m 1.2829158,4.6397465 v 7.5213805 h 9.3828572 v 1.157134 H 1.2829158 v 7.772931 H 0 V 3.4826121 h 11.772597 v 1.1571344 z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path872"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="M 25.926269,16.135632 H 15.7133 l -2.238809,4.95556 H 12.090966 L 20.190907,3.4826121 h 1.282916 L 29.573764,21.091192 H 28.190228 Z M 25.448328,15.053969 20.819791,4.8912975 16.216402,15.053969 Z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path874"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="m 43.23496,12.010196 q 1.886627,0.352171 2.867681,1.484157 1.006204,1.131973 1.006204,2.94314 0,2.238809 -1.635087,3.446254 -1.635076,1.207445 -4.85494,1.207445 h -7.84839 V 3.4826121 h 7.345288 q 2.867693,0 4.452458,1.1822954 1.609927,1.1571345 1.609927,3.3204728 0,1.5093058 -0.804964,2.5406707 -0.779802,1.031353 -2.138177,1.484145 z M 34.053344,4.5894364 v 7.0182776 h 6.012062 q 2.314281,0 3.546875,-0.880422 1.257755,-0.9055838 1.257755,-2.6412913 0,-1.7105466 -1.257755,-2.5909809 -1.232594,-0.9055834 -3.546875,-0.9055834 z m 6.565474,15.3949316 q 2.565832,0 3.873897,-0.880435 1.333214,-0.905583 1.333214,-2.76706 0,-1.861478 -1.333214,-2.7419 -1.308065,-0.880434 -3.873897,-0.880434 h -6.565474 v 7.269829 z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path876"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="m 63.911276,21.091192 -4.200907,-5.886293 q -0.930733,0.12577 -1.710547,0.12577 h -5.031019 v 5.760523 H 51.685887 V 3.4826121 h 6.313935 q 3.320473,0 5.207111,1.584777 1.886638,1.559616 1.886638,4.3518376 0,2.0878673 -1.081675,3.5217133 -1.056514,1.408686 -3.043773,1.987247 l 4.402148,6.163005 z m -5.911454,-6.892497 q 2.817371,0 4.301527,-1.232605 1.484157,-1.257755 1.484157,-3.5468633 0,-2.2891197 -1.484157,-3.5217253 -1.484156,-1.2577549 -4.301527,-1.2577549 h -5.031019 v 9.5589485 z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path878"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="m 69.81525,3.4826121 h 1.282916 V 21.091192 H 69.81525 Z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path880"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="m 84.679969,21.216973 q -2.590981,0 -4.678859,-1.157134 -2.062718,-1.157147 -3.270163,-3.194703 -1.182284,-2.037569 -1.182284,-4.578228 0,-2.5406709 1.182284,-4.5782279 1.207445,-2.0375687 3.270163,-3.1947032 2.087878,-1.1571344 4.678859,-1.1571344 1.911788,0 3.521714,0.6288715 1.609926,0.6037224 2.741899,1.811167 l -0.804963,0.8301241 q -2.113028,-2.0878789 -5.40834,-2.0878789 -2.21366,0 -4.024827,1.0062038 -1.811167,1.0062039 -2.84252,2.7922216 -1.031365,1.7608574 -1.031365,3.9493564 0,2.188487 1.031365,3.974505 1.031353,1.760857 2.84252,2.767061 1.811167,1.006204 4.024827,1.006204 3.270163,0 5.40834,-2.113028 l 0.804963,0.830112 q -1.131973,1.207456 -2.76706,1.836328 -1.609926,0.628883 -3.496553,0.628883 z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path882"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Light';-inkscape-font-specification:'Montserrat Light, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="M 105.666,16.135632 H 95.453031 l -2.238809,4.95556 H 91.830686 L 99.930639,3.4826121 h 1.282901 l 8.09995,17.6085799 h -1.38354 z M 105.18805,15.053969 100.55951,4.8912975 95.956133,15.053969 Z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path884"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Black';-inkscape-font-specification:'Montserrat Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="m 124.25759,16.487803 v 4.603389 h -14.11201 v -3.647495 l 6.36424,-5.886293 q 0.83011,-0.779802 1.10682,-1.333214 0.27671,-0.5534124 0.27671,-1.0816753 0,-0.6540325 -0.4528,-1.0062038 -0.42763,-0.3773206 -1.25775,-0.3773206 -0.80496,0 -1.50931,0.4276308 -0.70434,0.4276425 -1.08167,1.2074446 l -4.47761,-2.2388095 q 1.0062,-1.8866264 2.94315,-2.9683014 1.93694,-1.1068243 4.67885,-1.1068243 2.08788,0 3.69781,0.6791935 1.60992,0.6791818 2.51551,1.9369366 0.90558,1.2577548 0.90558,2.892842 0,1.4589954 -0.62888,2.7419114 -0.60373,1.257755 -2.38973,2.867681 l -2.51551,2.289108 z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     inkscape:connector-curvature="0"
+     id="path886"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Black';-inkscape-font-specification:'Montserrat Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.67379761"
+     d="M 133.80199,3.4826121 V 21.091192 h -5.9366 V 7.9602311 h -3.01861 v -4.477619 z"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043" />
+  <path
+     d="m 133.80199,24.570788 v -0.661606 h 3.83055 V 0.66146063 h -3.83055 V -1.9179385e-4 h 4.52702 V 24.570788 Z"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.8777771px;line-height:1.25;font-family:'Montserrat Thin';-inkscape-font-specification:'Montserrat Thin, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#597884;fill-opacity:1;stroke:none;stroke-width:0.93276328"
+     id="path892"
+     inkscape:connector-curvature="0"
+     inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/logoHeader.png"
+     inkscape:export-xdpi="366.50043"
+     inkscape:export-ydpi="366.50043"
+     sodipodi:nodetypes="ccccccccc" />
 </svg>

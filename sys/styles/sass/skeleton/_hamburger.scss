@@ -1,5 +1,5 @@
 //hamburger vars
-$hamburgerColor: $c_opos;
+$hamburgerColor: $c_interBB;
 $hamburgerBGColor: $c_domin;
 $hamburgerRadius: none; //3px;
 $hamburgerShadow: none; //1px 1px 1px 1px $c_interM2;
@@ -30,7 +30,7 @@ $hamburgerSize: map-get($mob, height) / 4;
         .hamburger-inner,
         .hamburger-inner::before,
         .hamburger-inner::after {
-            width: $hamburgerSize * 2.2;
+            width: $hamburgerSize * 3;
             height: $hamburgerSize / 5;
             background-color: $hamburgerColor;
         }
