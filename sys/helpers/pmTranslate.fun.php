@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 use sys\Controller\DB;
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/" . "sys/Model/startup.model.php";
-
-
 function pmTranslate($_lang, $_text, $ajax)
 
 {

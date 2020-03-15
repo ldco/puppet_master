@@ -12,7 +12,14 @@ function initModalLocalisation() {
     ];
 
     let name = JSON.stringify(wordsToTranslate);
+    let ifdev = document.getElementsByTagName("html")[0].getAttribute("data-dev");
     let ajx = new XMLHttpRequest();
+    let sysFolder;
+    if (ifdev === "true") {
+        sysFolder = "/PM_DEV/sys/";
+    } else {
+        sysFolder = "/sys/";
+    }
     ajx.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let fromDB = JSON.parse(ajx.responseText);
@@ -20,7 +27,7 @@ function initModalLocalisation() {
             // console.log(PM_MODAL_LOC);
         }
     };
-    ajx.open("POST", "/sys/modules/initModalTranslate.php", true);
+    ajx.open("POST", sysFolder + "modules/initModalTranslate.php", true);
     ajx.setRequestHeader(
         "Content-type",
         "application/x-www-form-urlencoded; charset=UTF-8"

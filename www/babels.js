@@ -97,71 +97,10 @@ function initFun() {
 }
 "use strict";
 
-function mainPageIntro() {
-  var dir = document.getElementsByTagName("html")[0].getAttribute("dir");
-
-  function getRandomInt(min, max) {
-    return Math.random() * (max - min) + min;
-  }
-
-  function presentation() {
-    for (var i = 0; i < 7; i++) {
-      var _pre = document.createElement("div");
-
-      var _pre1 = document.createElement("div");
-
-      _pre.setAttribute("class", "page_O_present_anim_1");
-
-      document.getElementById("pm_page_1").appendChild(_pre1);
-
-      _pre1.appendChild(_pre);
-    }
-
-    var colors = ["#597884", "#aebecb", "#294552", "#00070a"];
-    var pre1 = document.getElementsByClassName("page_O_present_anim_1");
-
-    var _loop = function _loop(_i) {
-      pre1[_i].style.height = getRandomInt(1, 1.5) + "vh";
-      pre1[_i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      pre1[_i].style.width = "100vw";
-      pre1[_i].style.position = "absolute";
-      pre1[_i].style.top = getRandomInt(60, 70) + "vh";
-      pre1[_i].style.transition = "2s";
-      pre1[_i].style.zIndex = "3";
-      pre1[_i].style.opacity = "0.8";
-
-      if (dir == "ltr") {
-        pre1[_i].style.left = "-100vw";
-      } else {
-        pre1[_i].style.right = "-100vw";
-      }
-
-      setTimeout(function () {
-        if (dir === "ltr") {
-          pre1[_i].style.left = "0";
-        } else {
-          pre1[_i].style.right = "0";
-        }
-      }, 100);
-    };
-
-    for (var _i = 0; _i < pre1.length; _i++) {
-      _loop(_i);
-    }
-  }
-
-  presentation();
-  var bgimages = ["", "", "", "", "", ""];
-  var videoParent = document.getElementById("bgVideo");
-  videoParent.style.backgroundImage = "url('sys/assets/images/images_dev/page_1/" + Math.floor(Math.random() * 10 + 1) + ".png')";
-}
-"use strict";
-
 function setBarAsset() {
-  /* let el = document.querySelector("#pm_id_Bar .pm_bar_asset");
-  el.addEventListener("click", function() {
-      showPMInformation();
-  }); */
+  var el = document.querySelector("#pm_id_Bar .pm_bar_asset");
+  el.addEventListener("click", function () {//showPMInformation();
+  });
 }
 "use strict";
 
@@ -387,7 +326,15 @@ var PM_MODAL_LOC = [];
 function initModalLocalisation() {
   var wordsToTranslate = ["alert", "back", "cancel", "close", "error", "no", "yes"];
   var name = JSON.stringify(wordsToTranslate);
+  var ifdev = document.getElementsByTagName("html")[0].getAttribute("data-dev");
   var ajx = new XMLHttpRequest();
+  var sysFolder;
+
+  if (ifdev === "true") {
+    sysFolder = "/PM_DEV/sys/";
+  } else {
+    sysFolder = "/sys/";
+  }
 
   ajx.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
@@ -396,7 +343,7 @@ function initModalLocalisation() {
     }
   };
 
-  ajx.open("POST", "/sys/modules/initModalTranslate.php", true);
+  ajx.open("POST", sysFolder + "modules/initModalTranslate.php", true);
   ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
   ajx.send("name=" + name + "&lang=" + PM_LANG);
 }
@@ -575,10 +522,63 @@ function Thebility() {
 }
 "use strict";
 
-function showPMInformation() {
-  pmPrompt(PM_MODAL_LOC[0], function () {
-    alert("alert");
-  }, "This is prompt. Do something?", 1);
+function mainPageIntro() {
+  var dir = document.getElementsByTagName("html")[0].getAttribute("dir");
+
+  function getRandomInt(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function presentation() {
+    for (var i = 0; i < 7; i++) {
+      var _pre = document.createElement("div");
+
+      var _pre1 = document.createElement("div");
+
+      _pre.setAttribute("class", "page_O_present_anim_1");
+
+      document.getElementById("pm_page_1").appendChild(_pre1);
+
+      _pre1.appendChild(_pre);
+    }
+
+    var colors = ["#597884", "#aebecb", "#294552", "#00070a"];
+    var pre1 = document.getElementsByClassName("page_O_present_anim_1");
+
+    var _loop = function _loop(_i) {
+      pre1[_i].style.height = getRandomInt(1, 1.5) + "vh";
+      pre1[_i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      pre1[_i].style.width = "100vw";
+      pre1[_i].style.position = "absolute";
+      pre1[_i].style.top = getRandomInt(60, 70) + "vh";
+      pre1[_i].style.transition = "2s";
+      pre1[_i].style.zIndex = "3";
+      pre1[_i].style.opacity = "0.8";
+
+      if (dir == "ltr") {
+        pre1[_i].style.left = "-100vw";
+      } else {
+        pre1[_i].style.right = "-100vw";
+      }
+
+      setTimeout(function () {
+        if (dir === "ltr") {
+          pre1[_i].style.left = "0";
+        } else {
+          pre1[_i].style.right = "0";
+        }
+      }, 100);
+    };
+
+    for (var _i = 0; _i < pre1.length; _i++) {
+      _loop(_i);
+    }
+  }
+
+  presentation();
+  var bgimages = ["", "", "", "", "", ""];
+  var videoParent = document.getElementById("bgVideo");
+  videoParent.style.backgroundImage = "url('sys/assets/images/images_dev/page_1/" + Math.floor(Math.random() * 10 + 1) + ".png')";
 }
 "use strict";
 
