@@ -3,9 +3,9 @@
 require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmTranslate.fun.php";
 
 
-$thebilityToggleIconSrc = PM_ICONS . "/thebilityIconWhite.svg";
-$thebilityDragIconSrc = PM_ICONS . "/drag.svg";
-$thebilityCloseIconSrc = PM_ICONS . "/close.svg"; ?>
+$thebilityToggleIconSrc = PM_ICONS_REL . "thebilityIconWhite.svg";
+$thebilityDragIconSrc = PM_ICONS_REL . "drag.svg";
+$thebilityCloseIconSrc = PM_ICONS_REL . "close.svg"; ?>
 
 <div id="pm_thebility" class="thebility">
     <div id="thebilityIcon" class="thebility">

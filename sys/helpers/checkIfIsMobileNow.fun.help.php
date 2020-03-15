@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/mobiledetect/mobiledetectlib/Mobile_Detect.php";
+require_once dirname(dirname(__FILE__), 2) . "/vendor/mobiledetect/mobiledetectlib/Mobile_Detect.php";
 
 function checkIfIsMobileNow()
 {

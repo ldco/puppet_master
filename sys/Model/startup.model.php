@@ -12,23 +12,24 @@ if (basename($_SERVER['DOCUMENT_ROOT']) === PM_REMOTE_APPFOLDER) {
 
 if (PM_IS_LOCAL) {
   define("PM_APPFOLDER", PM_LOCAL_APPFOLDER . "/");
-} else {
-  define("PM_APPFOLDER", PM_REMOTE_APPFOLDER . "/");
-}
-
-if (PM_IS_DEV) {
-
-  define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER, "pm_dev/")));
-  define("PM_ROOT_REL", "/pm_dev/");
-} else {
-
   define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER)));
   define("PM_ROOT_REL", "");
+} else {
+  define("PM_APPFOLDER", PM_REMOTE_APPFOLDER . "/");
+  if (PM_IS_DEV) {
+    define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER, "PM_DEV/")));
+    define("PM_ROOT_REL", "/PM_DEV/");
+  } else {
+    define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER)));
+    define("PM_ROOT_REL", "");
+  }
 }
+
+
 
 define("PM_ASSETS", (PM_ROOT . PM_SYS_FOLDER . "/assets/"));
 define("PM_FONTS", join(DIRECTORY_SEPARATOR, array(PM_ASSETS, "fonts/")));
-define("PM_ASSETS_REL", PM_SYS_FOLDER . "/assets/");
+define("PM_ASSETS_REL", PM_ROOT_REL . PM_SYS_FOLDER . "/assets/");
 define("PM_FONTS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "fonts/")));
 
 if (PM_IS_LOCAL) {
@@ -36,28 +37,26 @@ if (PM_IS_LOCAL) {
   define("DB_NAME", DB_NAME_LOCAL);
   define("DB_USER", DB_USER_LOCAL);
   define("DB_PASS", DB_PASS_LOCAL);
-  define("PM_IMAGES", (PM_ASSETS . "images/images_dev/"));
-  define("PM_IMAGES_REL", (PM_ASSETS_REL . "images/images_dev/"));
-  define("PM_VIDEOS", (PM_ASSETS . "videos/videos_dev/"));
-  define("PM_VIDEOS_REL", (PM_ASSETS_REL . "videos/videos_dev/"));
-  define("PM_ICONS", "/" . PM_SYS_FOLDER . "/assets/icons/vector_dev");
-  define("PM_ICONS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "icons/vector_dev/")));
+  define("PM_IMAGES", PM_ASSETS . "images/images_dev/");
+  define("PM_IMAGES_REL", PM_ASSETS_REL . "images/images_dev/");
+  define("PM_VIDEOS", PM_ASSETS . "videos/videos_dev/");
+  define("PM_VIDEOS_REL", PM_ASSETS_REL . "videos/videos_dev/");
+  define("PM_ICONS", PM_ASSETS . "icons/vector_dev/");
+  define("PM_ICONS_REL", PM_ASSETS_REL . "icons/vector_dev/");
   define("PM_DEPENS_JS", "pm_master.js");
 } else {
   define("DB_HOST", DB_HOST_URL);
   define("DB_NAME", DB_NAME_REMOTE);
   define("DB_USER", DB_USER_REMOTE);
   define("DB_PASS", DB_PASS_REMOTE);
-  define("PM_IMAGES", (PM_ASSETS . "images/images/"));
-  define("PM_IMAGES_REL", (PM_ASSETS_REL . "images/images/"));
-  define("PM_VIDEOS", (PM_ASSETS . "videos/videos/"));
-  define("PM_VIDEOS_REL", (PM_ASSETS_REL . "videos/videos/"));
-  define("PM_ICONS", "/" . PM_SYS_FOLDER . "/assets/icons/vector");
-  define("PM_ICONS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "icons/vector/")));
+  define("PM_IMAGES", PM_ASSETS . "images/images/");
+  define("PM_IMAGES_REL", PM_ASSETS_REL . "images/images/");
+  define("PM_VIDEOS", PM_ASSETS . "videos/videos/");
+  define("PM_VIDEOS_REL", PM_ASSETS_REL . "videos/videos/");
+  define("PM_ICONS", PM_ASSETS . "icons/vector/");
+  define("PM_ICONS_REL", PM_ASSETS_REL . "icons/vector/");
   define("PM_DEPENS_JS", "pm_master.min.js");
 }
-
-
 
 
 define("PM_ADMIN_ROOT", PM_ROOT . "admin/");

@@ -32,7 +32,7 @@ class SkeletonNav
             $navClass = "pm_langNav";
         }
         $navFormAction = "index.php";
-        $imgSrc = PM_ICONS . "/lang.svg";
+        $imgSrc = PM_ICONS_REL . "lang.svg";
 
         require PM_ROOT . $this->viewsNames['nav_lang'];
     }
@@ -57,7 +57,7 @@ class SkeletonNav
                 if ($navItem['sub'] != NULL) continue;
                 //$navElementID = 'pm_' . $navItem['_id'];
                 $navElementID = $navItem['_id'];
-                $navImgSrc = PM_ICONS . '/' . $navItem['img'] . '.svg';
+                $navImgSrc = PM_ICONS_REL . $navItem['img'] . '.svg';
                 $navLang = $navItem[PM_LANG];
                 //$navRenderJS = 'getContentView(' . $navItem['_id'] . ');return false;';
                 if ($this->isAdmin) {

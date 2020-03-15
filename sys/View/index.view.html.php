@@ -11,7 +11,7 @@
 <html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" mob="<?= var_export(PM_ISMOBILENOW) ?>" <?php if ($isAdmin) echo ' admin="true"'; ?>>
 
 <head>
-    <title></title>
+    <title><?= PM_TITLE ?></title>
     <?php $modelDepends->index(); ?>
 </head>
 

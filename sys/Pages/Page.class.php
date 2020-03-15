@@ -6,8 +6,7 @@ declare(strict_types=1);
 
 use sys\Controller\DB;
 
-
-require_once $_SERVER['DOCUMENT_ROOT'] . "/" . "sys/Model/startup.model.php";
+require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 ?>
 
