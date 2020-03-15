@@ -14,6 +14,7 @@ class SkeletonDepends
     private $DB;
     private $isAdmin = false;
 
+
     public function __construct()
     {
         global $DB;

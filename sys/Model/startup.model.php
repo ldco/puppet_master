@@ -5,9 +5,9 @@ declare(strict_types=1);
 require_once (dirname($_SERVER['DOCUMENT_ROOT'], 1)) . "/config.ini.php";
 
 if (basename($_SERVER['DOCUMENT_ROOT']) === PM_REMOTE_APPFOLDER) {
-  define("PM_IS_LOCAL", 0);
+  define("PM_IS_LOCAL", false);
 } else {
-  define("PM_IS_LOCAL", 1);
+  define("PM_IS_LOCAL", true);
 }
 
 if (PM_IS_LOCAL) {
@@ -17,9 +17,11 @@ if (PM_IS_LOCAL) {
 } else {
   define("PM_APPFOLDER", PM_REMOTE_APPFOLDER . "/");
   if (PM_IS_DEV) {
+    define("PM_IS_DEV_DEFINED", true);
     define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER, "PM_DEV/")));
     define("PM_ROOT_REL", "/PM_DEV/");
   } else {
+    define("PM_IS_DEV_DEFINED", false);
     define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER)));
     define("PM_ROOT_REL", "");
   }

@@ -23,7 +23,7 @@ define("PM_FOOTER_NAV", false);
 
 //system
 define("PM_SYS_FOLDER", "sys"); //or core
-define("PM_IS_DEV", false); // or true
+define("PM_IS_DEV", true); // or true
 define("PM_PROD_SERVER", "apache"); //or nginx
 define("PM_LOCAL_APPFOLDER", "root");
 define("PM_REMOTE_APPFOLDER", "public_html/2020");

@@ -12,13 +12,18 @@ class SkeletonIndex
     private $modelDepends = null;
     private $modelFooter = null;
     private $viewsNames = [];
+    private $isLocal = false;
     private $isAdmin = false;
+    private $isDev = false;
+
 
     public function __construct()
     {
         if (!defined("PM_ROOT")) return;
         $this->viewsNames = PM_VIEWS;
+        if (defined("PM_IS_LOCAL")) $this->isLocal = PM_IS_LOCAL;
         if (defined("PM_DEFINE_ADMIN")) $this->isAdmin = PM_DEFINE_ADMIN;
+        if (defined("PM_IS_DEV_DEFINED")) $this->isDev = PM_IS_DEV_DEFINED;
 
         $modelPath = PM_ROOT . PM_SYS_FOLDER . "/Model/";
         require_once $modelPath . "Skeleton.bar.model.php";
@@ -40,6 +45,8 @@ class SkeletonIndex
         $modelDepends = $this->modelDepends;
         $modelFooter = $this->modelFooter;
         $isAdmin = $this->isAdmin;
+        $isDev = $this->isDev;
+        $isLocal = $this->isLocal;
         $showAgreeCookie = '';
         if (empty($_COOKIE) || empty($_COOKIE['I_WANT_COOKIE'])) {
             ob_start();

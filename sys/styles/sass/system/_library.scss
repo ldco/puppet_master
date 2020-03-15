@@ -15,24 +15,24 @@
 //queries
 @mixin mob($x) {
     @if $x==true {
-        [mob=true] {
+        [data-mob=true] {
             @media (max-aspect-ratio: 13/9) {
                 @content;
             }
         }
-        [mob=false] {
+        [data-mob=false] {
             @media (max-width: 1210px) {
                 @content;
             }
         }
     }
     @if $x==false {
-        [mob=true] {
+        [data-mob=true] {
             @media (min-aspect-ratio: 13/9) {
                 @content;
             }
         }
-        [mob=false] {
+        [data-mob=false] {
             @media (min-width: 1210px) {
                 @content;
             }
