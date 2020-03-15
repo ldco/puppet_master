@@ -39,7 +39,7 @@ class Page
         if ($byteLANG < 32 || $byteLANG > 127) return;
         $byteLANG = ord(substr(PM_LANG, 1, 1));
         if ($byteLANG < 32 || $byteLANG > 127) return;
-        //PM_LANG -> en,ru,he,fr,it,de,zh,ja,hi,ar 
+        //PM_LANG -> en,ru,he,fr,it,de,zh,ja,hi,ar
 
         //get page name
         $DB = new DB();
@@ -66,8 +66,16 @@ class Page
         $conn->close(); */
 
         if ($bool == true) {
-            echo "<h" . $type . ">" . $row[PM_LANG] . '<h' . $type . ">";
+            echo "<h" . $type . ">" . $row[PM_LANG] . '</h' . $type . ">";
         }
+    }
+
+    public function img($number, $class, $src)
+
+    {
+        global $PM_PAGE_NUM;
+        $div_id = "page_{$PM_PAGE_NUM}_img_{$number}";
+        echo '<img id="' . $div_id . '" class="pm_img ' . $class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">';
     }
 
     public function close()

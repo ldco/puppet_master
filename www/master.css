@@ -1327,6 +1327,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center; }
   #mainAdminContent h1,
   #mainContent h1 {
+    position: absolute;
     color: #e4e9ed;
     text-transform: uppercase;
     margin: 0;
@@ -1635,7 +1636,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: #00070a;
   color: #294552;
   font-size: 0.8vh;
-  width: 100%;
+  width: 100vw;
   height: 3vh;
   position: fixed;
   bottom: 0;

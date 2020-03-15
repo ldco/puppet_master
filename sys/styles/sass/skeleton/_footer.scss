@@ -8,7 +8,7 @@
     background-color: $c_domin;
     color: $c_interBB;
     font-size: 0.8vh;
-    width: 100%;
+    width: 100vw;
     @include font(1, 900);
     height: map-get($footer, height);
     position: fixed;

@@ -20,9 +20,17 @@ function getContentView(id) {
 
 
   if (document.querySelector("html").getAttribute("admin") === null) {
-    ajx.open("POST", "/index.php?content_page=1", true);
+    if (document.querySelector("html").getAttribute("data-dev") === "true") {
+      ajx.open("POST", "/PM_DEV/index.php?content_page=1", true);
+    } else {
+      ajx.open("POST", "/index.php?content_page=1", true);
+    }
   } else {
-    ajx.open("POST", "/admin/index.php?content_page=1", true);
+    if (document.querySelector("html").getAttribute("data-dev") === "true") {
+      ajx.open("POST", "/PM_DEV/admin/index.php?content_page=1", true);
+    } else {
+      ajx.open("POST", "/admin/index.php?content_page=1", true);
+    }
   }
 
   ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
