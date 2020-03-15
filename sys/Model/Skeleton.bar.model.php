@@ -92,6 +92,7 @@ class SkeletonBar
         } else {
             $barId = "pm_id_Bar";
         }
+        $nav_pm_bar_asset = PM_ICONS_REL . "100.svg";
         $navBarLogoMob = PM_IMAGES_REL . "brand/barLogoMob.svg";
         $modelNav = $this->modelNav;
 
