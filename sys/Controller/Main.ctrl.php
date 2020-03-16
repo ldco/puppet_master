@@ -29,7 +29,7 @@ if (empty($needPageId)) die(show404());
 if (!defined("PM_ADMIN_ROOT")) define("PM_ADMIN_ROOT", PM_ROOT . PM_SYS_FOLDER . "/admin/");
 
 $viewPagePathPrefix = PM_ROOT . PM_SYS_FOLDER . "/Pages";
-$viewPagePath = $viewPagePathPrefix . '/' . $needPageId . '.page.html.php';
+$viewPagePath = $viewPagePathPrefix . '/' . $needPageId . '.page.php';
 if (!file_exists($viewPagePath)) die(show404());
 
 //run module for get content

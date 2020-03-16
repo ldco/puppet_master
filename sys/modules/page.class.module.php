@@ -70,6 +70,20 @@ class Page
         }
     }
 
+
+    public function inner($clss = null)
+    {
+
+        if ($clss != null) {
+            $_clss = " " . $clss;
+        } else {
+            $_clss = "";
+        }
+
+        echo '<div class="pm_inner_page' . $_clss . '">';
+    }
+
+
     public function img($number, $class, $src)
 
     {
@@ -78,9 +92,16 @@ class Page
         echo '<img id="' . $div_id . '" class="pm_img ' . $class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">';
     }
 
+
+    public static function cls()
+    {
+        echo '<div class="closingPageDiv"></div>';
+        echo "</div>";
+    }
+
     public function close()
     {
-        echo "</div>";
+        echo '</div>';
         //ob_end_clean();
     }
 }

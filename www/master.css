@@ -1223,18 +1223,6 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
-#fourzerofourError {
-  background-color: #2f2f2f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  position: fixed; }
-  #fourzerofourError img {
-    width: 50vh; }
-
 @media (min-aspect-ratio: 13 / 9) {
   [data-mob=true] #mainAdminContent {
     width: calc(100vw - 6vh);
@@ -1319,36 +1307,6 @@ input[type="number"]::-webkit-outer-spin-button {
             margin-top: map-get($horBar, height) + 1vh;
         }
     } */ }
-  #mainAdminContent .pm_page_incontent,
-  #mainContent .pm_page_incontent {
-    min-height: 100%;
-    min-width: 100%;
-    display: flex;
-    justify-content: center; }
-  #mainAdminContent h1,
-  #mainContent h1 {
-    position: absolute;
-    color: #e4e9ed;
-    text-transform: uppercase;
-    margin: 0;
-    font-size: calc(1.325rem + 0.9vw);
-    margin-top: 5vh; }
-    [lang=en] #mainAdminContent h1, [lang=en]
-    #mainContent h1 {
-      font-family: Montserrat;
-      font-weight: 50; }
-    [lang=ru] #mainAdminContent h1, [lang=ru]
-    #mainContent h1 {
-      font-family: Montserrat;
-      font-weight: 50; }
-    [lang=he] #mainAdminContent h1, [lang=he]
-    #mainContent h1 {
-      font-family: Heebo;
-      font-weight: 50; }
-    @media (min-width: 1200px) {
-      #mainAdminContent h1,
-      #mainContent h1 {
-        font-size: 2rem; } }
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] #pm_id_Bar,
@@ -1569,6 +1527,7 @@ input[type="number"]::-webkit-outer-spin-button {
     justify-content: center;
     align-items: center; }
     .pm_langNav.--active form input {
+      background-color: rgba(0, 7, 10, 0.7);
       color: #e4e9ed;
       margin-top: 2vh;
       border-radius: 0.6vh;
@@ -2422,6 +2381,41 @@ input.pm_modal_button {
 #thebilityMainDiv input[type="range"]:focus::-ms-fill-upper {
   background: rgba(41, 69, 82, 0.3); }
 
+.pm_page_incontent {
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #00070a; }
+  .pm_page_incontent h1 {
+    position: absolute;
+    color: #e4e9ed;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: calc(1.325rem + 0.9vw);
+    margin-top: 5vh; }
+    [lang=en] .pm_page_incontent h1 {
+      font-family: Montserrat;
+      font-weight: 50; }
+    [lang=ru] .pm_page_incontent h1 {
+      font-family: Montserrat;
+      font-weight: 50; }
+    [lang=he] .pm_page_incontent h1 {
+      font-family: Heebo;
+      font-weight: 50; }
+    @media (min-width: 1200px) {
+      .pm_page_incontent h1 {
+        font-size: 2rem; } }
+  .pm_page_incontent .pm_inner_page {
+    margin-top: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+  .pm_page_incontent .closingPageDiv {
+    height: 5vh; }
+
 #mainLogo {
   z-index: 2;
   position: absolute; }
@@ -2475,3 +2469,27 @@ input.pm_modal_button {
   position: relative;
   width: 100%;
   height: 100%; }
+
+#pm_page_2 {
+  background-color: #e4e9ed;
+  color: #00070a; }
+  #pm_page_2 h1 {
+    color: #00070a; }
+
+#logoGrid {
+  margin-top: 5vh;
+  margin-bottom: 5vh; }
+  #logoGrid .pm_grid_div {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2vh;
+    border: solid 1vh rgba(41, 69, 82, 0.6);
+    margin-bottom: 3vh;
+    filter: grayscale(1) brightness(0.5); }
+    #logoGrid .pm_grid_div:hover {
+      transition: 0.2s;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 4vh;
+      filter: grayscale(0) brightness(1); }
+
+.page2img {
+  width: 96%; }

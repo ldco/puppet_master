@@ -50,26 +50,11 @@
 
 #mainAdminContent,
 #mainContent {
-    .pm_page_incontent {
-        min-height: 100%;
-        min-width: 100%;
-        display: flex;
-        justify-content: center;
-    }
     position: absolute;
     display: flex;
     justify-content: center;
     overflow-y: auto;
     background-color: $c_domin;
-    h1 {
-        position: absolute;
-        color: $c_opos;
-        text-transform: uppercase;
-        margin: 0;
-        @include font(1, 50);
-        @include rfs-fs(2);
-        margin-top: 5vh;
-    }
     /*  @if $PM_BAR_IS_VERTICAL=false {
         h1 {
             margin-top: map-get($horBar, height) + 1vh;

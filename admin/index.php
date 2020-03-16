@@ -58,7 +58,7 @@ if ($login->isUserLoggedIn() == true) {
     if (empty($needPageId)) die(show404());
 
     $viewPagePathPrefix = PM_ROOT . "admin/Pages";
-    $viewPagePath = $viewPagePathPrefix . '/' . $needPageId . '.page.html.php';
+    $viewPagePath = $viewPagePathPrefix . '/' . $needPageId . '.page.php';
     if (!file_exists($viewPagePath)) die(show404());
 
     //run module for get content

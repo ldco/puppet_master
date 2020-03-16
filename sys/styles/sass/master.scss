@@ -18,7 +18,6 @@
 @import "system/vars";
 @import "system/links";
 @import "system/browser";
-@import "system/fourzerofourError";
 @import "system/engine";
 //layout
 //skeleton
@@ -35,4 +34,6 @@
 @import "modules/modals/pmodals";
 @import "modules/thebility/thebility";
 //pages
+@import "pages/common";
 @import "pages/1";
+@import "pages/2";

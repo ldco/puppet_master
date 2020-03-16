@@ -6,21 +6,19 @@ class Grid
     public $array_sort = 'natsort';
     public $grid_count = 0;
     public $colomns;
-    public $grid_ratio = 80;
     public $cursor = 'pointer';
-    public $padding = '1vw';
     public $img_as_background = 0;
     public $background_size = "cover";
     public $wowjs_reveal = 1;
     public $grid_id_;
     public $title = 0;
     public $text = 0;
-    public function make($grid_id)
+    public function make($grid_id, $grid_ratio, $padding)
     {
         global $pm_lang;
         $this->grid_id_ = $grid_id;
         //MAIN GRID DIV
-        echo '<div id="' . $grid_id . '" class="pm_grid ' . $this->grid_class . '"style="display: grid; width: 100%; grid-template-columns: repeat(' . $this->colomns . ' , 1fr); justify-items: center;">';
+        echo '<div id="' . $grid_id . '" class="pm_grid ' . $this->grid_class . '"style="display: grid; width: 96%; grid-template-columns: repeat(' . $this->colomns . ' , 1fr); justify-items: center;">';
 
         $scanned_files = array_diff(scandir($this->folder), array('..', '.'));
 
@@ -39,7 +37,7 @@ class Grid
                 if ($this->wowjs_reveal) {
                     echo ' wowjs_reveal';
                 }
-                echo '"style="display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: ' . $this->cursor . '; padding: ' . $this->padding . '">';
+                echo '"style="display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: ' . $this->cursor . '; padding: ' . $padding . 'vw">';
                 //TITLE
                 if ($this->title) {
 
@@ -48,13 +46,13 @@ class Grid
                     echo '</div>';
                 }
                 //IMG
-                echo '<img style="width: calc(' . $this->grid_ratio . 'vw / ' . $this->colomns . ')"; src="' . $this->folder . '/' . $val . '"></div>';
+                echo '<img style="width: calc(' . $grid_ratio . 'vw / ' . $this->colomns . ')"; src="' . $this->folder . '/' . $val . '"></div>';
             } else {
                 echo '<div class="pm_grid_div';
                 if ($this->wowjs_reveal) {
                     echo ' wowjs_reveal';
                 }
-                echo '"style="display: flex; align-items: center; justify-content: center; cursor: ' . $this->cursor . '; padding: ' . $this->padding . ';
+                echo '"style="display: flex; align-items: center; justify-content: center; cursor: ' . $this->cursor . '; padding: ' . $padding . 'vw;
                 background-image: url(' . $this->folder . '/' . $val . '); background-repeat: no-repeat; background-position: center;
                 background-size: ' . $this->background_size . '; width: calc(' . $this->grid_ratio . 'vw / ' . $this->colomns . ')">&nbsp;</div>';
             }

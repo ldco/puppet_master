@@ -1,0 +1,27 @@
+ .pm_page_incontent {
+     min-height: 100%;
+     min-width: 100%;
+     display: flex;
+     justify-content: center;
+     background-color: $c_domin;
+     h1 {
+         position: absolute;
+         color: $c_opos;
+         text-transform: uppercase;
+         margin: 0;
+         @include font(1, 50);
+         @include rfs-fs(2);
+         margin-top: 5vh;
+     }
+     .pm_inner_page {
+         margin-top: 15vh;
+         width: 100vw;
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         align-items: center;
+     }
+     .closingPageDiv {
+         height: 5vh;
+     }
+ }

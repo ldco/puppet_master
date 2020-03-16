@@ -1,0 +1,29 @@
+       #pm_page_2 {
+           background-color: $c_white;
+           color: $c_black;
+           h1 {
+               color: $c_black;
+           }
+       }
+       
+       #logoGrid {
+           margin-top: 5vh;
+           margin-bottom: 5vh;
+           .pm_grid_div {
+               background: rgba(#fff, 0.1);
+               border-radius: 2vh;
+               border: solid 1vh rgba($c_brand, 0.6);
+               margin-bottom: 3vh;
+               filter: grayscale(1) brightness(0.5);
+               &:hover {
+                   transition: 0.2s;
+                   background: rgba(#fff, 0.9);
+                   border-radius: 4vh;
+                   filter: grayscale(0) brightness(1);
+               }
+           }
+       }
+       
+       .page2img {
+           width: 96%;
+       }
