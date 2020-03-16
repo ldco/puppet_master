@@ -95,7 +95,7 @@ class Page
 
     public static function cls()
     {
-        echo '<div class="closingPageDiv"></div>';
+
         echo "</div>";
     }
 

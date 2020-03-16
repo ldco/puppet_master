@@ -49,9 +49,7 @@ function getThisContentView(x) {
 }
 "use strict";
 
-var translated;
-
-function getTranslate(text, fun) {
+function pmGetTranslate(text, fun) {
   var _lang = document.querySelector("html");
 
   var lang = _lang.getAttribute("lang");
@@ -76,6 +74,7 @@ document.addEventListener("DOMContentLoaded", initFun);
 var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
 var PM_ISADMIN = document.querySelector("html").getAttribute("data-admin");
+var PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
 var PM_ARR_OF_LANGS = ["en", "ru", "he"];
 
 if (PM_DIR === "ltr") {
@@ -95,8 +94,8 @@ function initFun() {
   setBarAsset();
   initModalLocalisation();
   new Thebility().init();
-  mainPageIntro();
   setPageFunctions();
+  mainPageIntro();
   /*end of functions list!*/
 
   var setURL = window.location.hash;
@@ -185,6 +184,15 @@ function setPageFunctions() {
     element.addEventListener("click", function () {
       setTimeout(function () {
         mainPageIntro();
+      }, time);
+    });
+  });
+  var page3 = [];
+  set(2, page3);
+  page3.forEach(function (element) {
+    element.addEventListener("click", function () {
+      setTimeout(function () {
+        archSlider();
       }, time);
     });
   });
@@ -612,6 +620,41 @@ function mainPageIntro() {
   var bgimages = ["", "", "", "", "", ""];
   var videoParent = document.getElementById("bgVideo");
   videoParent.style.backgroundImage = "url('sys/assets/images/images_dev/page_1/" + Math.floor(Math.random() * 10 + 1) + ".png')";
+}
+"use strict";
+
+var _swiper = _interopRequireDefault(require("swiper"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function archSlider() {
+  var mySwiper = new _swiper.default(".archSlider", {
+    // Optional parameters
+    direction: "horizontal",
+
+    /* effect: 'fade', */
+    centeredSlides: true,
+
+    /*  autoplay: {
+     delay: 2500,
+     disableOnInteraction: false,
+     }, */
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination"
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    } // And if we need scrollbar
+
+    /*  scrollbar: {
+        el: ".swiper-scrollbar"
+    } */
+
+  });
 }
 "use strict";
 

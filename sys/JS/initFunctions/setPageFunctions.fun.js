@@ -6,12 +6,23 @@ function setPageFunctions() {
         let _pagem = document.querySelectorAll("#pm_mobileBar .nav_item")[i];
         arr.push(_page, _pagem);
     }
+
     let page1 = [];
     set(0, page1);
     page1.forEach(element => {
         element.addEventListener("click", function() {
             setTimeout(() => {
                 mainPageIntro();
+            }, time);
+        });
+    });
+
+    let page3 = [];
+    set(2, page3);
+    page3.forEach(element => {
+        element.addEventListener("click", function() {
+            setTimeout(() => {
+                archSlider();
             }, time);
         });
     });
