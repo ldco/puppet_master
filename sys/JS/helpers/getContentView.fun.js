@@ -34,6 +34,7 @@ function getContentView(id) {
             ajx.open("POST", `/admin/index.php?content_page=1`, true);
         }
     }
+
     ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajx.send("id=" + id + "&lang=" + lang);
     window.location.hash += id;

@@ -1,4 +1,5 @@
 function mainPageIntro() {
+
     let dir = document.getElementsByTagName("html")[0].getAttribute("dir");
 
     function getRandomInt(min, max) {

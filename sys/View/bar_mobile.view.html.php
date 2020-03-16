@@ -22,7 +22,7 @@
 
 <?php /* Warning! lost </div> */ ?>
 <?php if ($admin) : ?>
-    <div id="pm_mobileBar" class="pm_mobileBar">
+    <div id="pm_admin_mobileBar" class="pm_mobileBar">
     <?php else : ?>
         <div id="pm_mobileBar" class="pm_mobileBar">
         <?php endif; ?>

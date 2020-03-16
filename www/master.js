@@ -859,7 +859,7 @@ function getTranslate(text, fun) {
 document.addEventListener("DOMContentLoaded", initFun);
 var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
-var PM_ISADMIN = document.querySelector("html").getAttribute("admin");
+var PM_ISADMIN = document.querySelector("html").getAttribute("data-admin");
 var PM_ARR_OF_LANGS = ["en", "ru", "he"];
 
 if (PM_DIR === "ltr") {
@@ -879,7 +879,9 @@ function initFun() {
   setBarAsset();
   initModalLocalisation();
   new Thebility().init();
-  mainPageIntro(); //end of functions list!
+  mainPageIntro();
+  setPageFunctions();
+  /*end of functions list!*/
 
   var setURL = window.location.hash;
   if (setURL == "") return;
@@ -956,11 +958,35 @@ function setHamburgerMenu() {
 
 "use strict";
 
+function setPageFunctions() {
+  var time = 50;
+
+  function set(i, arr) {
+    var _page = document.querySelectorAll("#pm_id_Bar .nav_item")[i];
+    var _pagem = document.querySelectorAll("#pm_mobileBar .nav_item")[i];
+    arr.push(_page, _pagem);
+  }
+
+  var page1 = [];
+  set(0, page1);
+  page1.forEach(function (element) {
+    element.addEventListener("click", function () {
+      setTimeout(function () {
+        mainPageIntro();
+      }, time);
+    });
+  });
+}
+
+"use strict";
+
 function setRouter() {
-  if (PM_ISADMIN == null) {
-    var els = document.querySelectorAll(".nav_item");
+  var els;
+
+  if (PM_ISADMIN === "false") {
+    els = document.querySelectorAll(".nav_item");
   } else {
-    var els = document.querySelectorAll(".nav_admin_item");
+    els = document.querySelectorAll(".nav_admin_item");
   }
 
   els.forEach(function (el) {

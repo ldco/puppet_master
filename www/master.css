@@ -1703,7 +1703,7 @@ body {
     #pm_id_Nav .nav_admin_item span {
       opacity: 0;
       position: fixed;
-      top: calc(6vh / 1.1);
+      top: calc(6vh / 0.9);
       z-index: -10;
       border-radius: 0.5vh;
       padding: 0.4vh;
@@ -2393,7 +2393,7 @@ input.pm_modal_button {
     text-transform: uppercase;
     margin: 0;
     font-size: calc(1.325rem + 0.9vw);
-    margin-top: 5vh; }
+    margin-top: 8vh; }
     [lang=en] .pm_page_incontent h1 {
       font-family: Montserrat;
       font-weight: 50; }

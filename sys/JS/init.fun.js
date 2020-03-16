@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", initFun);
 
 const PM_DIR = document.querySelector("html").getAttribute("dir");
 const PM_LANG = document.querySelector("html").getAttribute("lang");
-const PM_ISADMIN = document.querySelector("html").getAttribute("admin");
+const PM_ISADMIN = document.querySelector("html").getAttribute("data-admin");
 const PM_ARR_OF_LANGS = ["en", "ru", "he"];
 
 if (PM_DIR === "ltr") {
@@ -24,9 +24,8 @@ function initFun() {
     initModalLocalisation();
     new Thebility().init();
     mainPageIntro();
-
-
-    //end of functions list!
+    setPageFunctions();
+    /*end of functions list!*/
     let setURL = window.location.hash;
     if (setURL == "") return;
     let id = setURL.split("#").pop();

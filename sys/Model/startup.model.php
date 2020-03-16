@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 require_once (dirname($_SERVER['DOCUMENT_ROOT'], 1)) . "/config.ini.php";
 
-if (basename($_SERVER['DOCUMENT_ROOT']) === PM_REMOTE_APPFOLDER) {
+if (!defined("PM_LOCAL_APPFOLDER") && !defined("PM_REMOTE_APPFOLDER")) die("config.ini is incorrect");
+
+if (defined("PM_REMOTE_APPFOLDER") && basename($_SERVER['DOCUMENT_ROOT']) === PM_REMOTE_APPFOLDER) {
   define("PM_IS_LOCAL", false);
 } else {
   define("PM_IS_LOCAL", true);
@@ -16,7 +18,7 @@ if (PM_IS_LOCAL) {
   define("PM_ROOT_REL", "");
 } else {
   define("PM_APPFOLDER", PM_REMOTE_APPFOLDER . "/");
-  if (PM_IS_DEV) {
+  if (defined("PM_IS_DEV") && PM_IS_DEV) {
     define("PM_IS_DEV_DEFINED", true);
     define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER, "PM_DEV/")));
     define("PM_ROOT_REL", "/PM_DEV/");
@@ -27,7 +29,7 @@ if (PM_IS_LOCAL) {
   }
 }
 
-
+if (!defined("PM_SYS_FOLDER")) die("Define PM_SYS_FOLDER in config.ini");
 
 define("PM_ASSETS", (PM_ROOT . PM_SYS_FOLDER . "/assets/"));
 define("PM_FONTS", join(DIRECTORY_SEPARATOR, array(PM_ASSETS, "fonts/")));
@@ -68,11 +70,19 @@ define("PM_ADMIN_TITLE", "Admin Dashboard - " . PM_TITLE);
 if (isset($_POST['submitLang'])) {
   if (in_array($_POST['submitLang'], PM_ALL_LANGS)) {
     define("PM_LANG", $_POST['submitLang']);
-    setcookie("PM_LANG", $_POST['submitLang'], time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
+    if (defined("PM_RUN_DEV") && PM_RUN_DEV == true) {
+      $_SESSION['PM_LANG'] = $_POST['submitLang']; //PHP HTTP server does not support cookie
+    } else {
+      setcookie("PM_LANG", $_POST['submitLang'], time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
+    }
   }
 } elseif (!empty($_COOKIE) && !empty($_COOKIE['PM_LANG'])) {
   if (in_array($_COOKIE['PM_LANG'], PM_ALL_LANGS)) {
     define("PM_LANG", $_COOKIE['PM_LANG']);
+  }
+} elseif (defined("PM_RUN_DEV") && PM_RUN_DEV == true && !empty($_SESSION) && !empty($_SESSION['PM_LANG'])) {
+  if (in_array($_SESSION['PM_LANG'], PM_ALL_LANGS)) {
+    define("PM_LANG", $_SESSION['PM_LANG']);
   }
 }
 if (!defined("PM_LANG")) {
