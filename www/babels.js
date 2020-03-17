@@ -71,6 +71,7 @@ function pmGetTranslate(text, fun) {
 "use strict";
 
 document.addEventListener("DOMContentLoaded", initFun);
+window.addEventListener("hashchange", setPageFunctions, false);
 var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
 var PM_ISADMIN = document.querySelector("html").getAttribute("data-admin");
@@ -94,7 +95,6 @@ function initFun() {
   setBarAsset();
   initModalLocalisation();
   new Thebility().init();
-  setPageFunctions();
   mainPageIntro();
   /*end of functions list!*/
 
@@ -165,36 +165,6 @@ function setHamburgerMenu() {
         mobileBar.style.display = "none";
       }, 10);
     }
-  });
-}
-"use strict";
-
-function setPageFunctions() {
-  var time = 50;
-
-  function set(i, arr) {
-    var _page = document.querySelectorAll("#pm_id_Bar .nav_item")[i];
-    var _pagem = document.querySelectorAll("#pm_mobileBar .nav_item")[i];
-    arr.push(_page, _pagem);
-  }
-
-  var page1 = [];
-  set(0, page1);
-  page1.forEach(function (element) {
-    element.addEventListener("click", function () {
-      setTimeout(function () {
-        mainPageIntro();
-      }, time);
-    });
-  });
-  var page3 = [];
-  set(2, page3);
-  page3.forEach(function (element) {
-    element.addEventListener("click", function () {
-      setTimeout(function () {
-        archSlider();
-      }, time);
-    });
   });
 }
 "use strict";
@@ -655,6 +625,30 @@ function archSlider() {
     } */
 
   });
+}
+"use strict";
+
+function setPageFunctions() {
+  var setURL = window.location.hash;
+  if (setURL == "") return;
+  var id = setURL.split("#").pop();
+  if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
+  var timeout = 100;
+  var fun = {
+    fun_1: function fun_1() {
+      mainPageIntro();
+    },
+    fun_2: function fun_2() {},
+    fun_3: function fun_3() {
+      archSlider();
+    }
+  };
+
+  if (fun["fun_" + id]) {
+    setTimeout(function () {
+      fun["fun_" + id]();
+    }, timeout);
+  }
 }
 "use strict";
 

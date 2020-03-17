@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", initFun);
+window.addEventListener("hashchange", setPageFunctions, false);
 
 const PM_DIR = document.querySelector("html").getAttribute("dir");
 const PM_LANG = document.querySelector("html").getAttribute("lang");
@@ -23,7 +24,6 @@ function initFun() {
     setBarAsset();
     initModalLocalisation();
     new Thebility().init();
-    setPageFunctions();
     mainPageIntro();
     /*end of functions list!*/
     let setURL = window.location.hash;
