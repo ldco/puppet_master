@@ -4,6 +4,7 @@ import {
     mount
 } from "redom";
 
+
 class Modal {
     constructor() {
         document.querySelector("#pm_overlay").style.display = "flex";

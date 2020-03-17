@@ -25,6 +25,7 @@ function initFun() {
     initModalLocalisation();
     new Thebility().init();
     mainPageIntro();
+
     /*end of functions list!*/
     let setURL = window.location.hash;
     if (setURL == "") return;

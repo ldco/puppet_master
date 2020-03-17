@@ -1,4 +1,4 @@
-import Swiper from "swiper";
+const Swiper = require("swiper");
 
 function archSlider() {
 

@@ -39,14 +39,14 @@
         "url": ""
     },
     "dependencies": {
+        "aos": "^2.3.4",
         "babelify": "^10.0.0",
         "lodash": "^4.17.15",
         "macy": "^2.5.1",
         "plyr": "^3.5.10",
         "quill": "^1.3.7",
         "redom": "^3.25.1",
-        "swiper": "^5.3.6",
-        "wow.js": "^1.2.2"
+        "swiper": "^5.3.6"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.4",

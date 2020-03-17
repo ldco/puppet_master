@@ -9,7 +9,7 @@ class Grid
     public $cursor = 'pointer';
     public $img_as_background = 0;
     public $background_size = "cover";
-    public $wowjs_reveal = 1;
+    public $aosjs = 1;
     public $grid_id_;
     public $title = 0;
     public $text = 0;
@@ -34,8 +34,8 @@ class Grid
             if (!$this->img_as_background) {
                 //ITEM DIV 
                 echo '<div class="pm_grid_div ' . $grid_id;
-                if ($this->wowjs_reveal) {
-                    echo ' wowjs_reveal';
+                if ($this->aosjs) {
+                    echo ' aos_reveal"';
                 }
                 echo '"style="display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: ' . $this->cursor . '; padding: ' . $padding . 'vw">';
                 //TITLE
@@ -49,8 +49,8 @@ class Grid
                 echo '<img style="width: calc(' . $grid_ratio . 'vw / ' . $this->colomns . ')"; src="' . $this->folder . '/' . $val . '"></div>';
             } else {
                 echo '<div class="pm_grid_div';
-                if ($this->wowjs_reveal) {
-                    echo ' wowjs_reveal';
+                if ($this->aosjs) {
+                    echo ' aos_reveal"';
                 }
                 echo '"style="display: flex; align-items: center; justify-content: center; cursor: ' . $this->cursor . '; padding: ' . $padding . 'vw;
                 background-image: url(' . $this->folder . '/' . $val . '); background-repeat: no-repeat; background-position: center;

@@ -14,6 +14,10 @@
                border-radius: 2vh;
                border: solid 1vh rgba($c_brand, 0.6);
                margin-bottom: 3vh;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               cursor: pointer;
                filter: grayscale(1) brightness(0.5);
                &:hover {
                    transition: 0.2s;

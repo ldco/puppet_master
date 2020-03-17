@@ -106,6 +106,33 @@ function initFun() {
 }
 "use strict";
 
+var AOS = require("aos");
+
+function aosjs() {
+  var anim = "fade";
+  var clas = "aos_reveal";
+
+  for (var i = 0; i < document.getElementsByClassName(clas).length; i++) {
+    document.getElementsByClassName(clas)[i].setAttribute("data-aos", anim);
+  }
+  /*  let scrollFunction = () => {
+      let el = window.scrollY;
+      if (el > 0) {
+          window.removeEventListener("scroll", scrollFunction, false);
+      }
+  };
+  window.addEventListener("scroll", scrollFunction, false); */
+
+
+  AOS.init({
+    offset: 0,
+    duration: 600,
+    easing: "ease-in-sine",
+    delay: 100
+  });
+}
+"use strict";
+
 function setBarAsset() {
   var el = document.querySelector("#pm_id_Bar .pm_bar_asset");
   el.addEventListener("click", function () {//showPMInformation();
@@ -593,12 +620,10 @@ function mainPageIntro() {
 }
 "use strict";
 
-var _swiper = _interopRequireDefault(require("swiper"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var Swiper = require("swiper");
 
 function archSlider() {
-  var mySwiper = new _swiper.default(".archSlider", {
+  var mySwiper = new Swiper(".archSlider", {
     // Optional parameters
     direction: "horizontal",
 
@@ -638,7 +663,9 @@ function setPageFunctions() {
     fun_1: function fun_1() {
       mainPageIntro();
     },
-    fun_2: function fun_2() {},
+    fun_2: function fun_2() {
+      aosjs();
+    },
     fun_3: function fun_3() {
       archSlider();
     }

@@ -8,19 +8,17 @@ function setPageFunctions() {
         fun_1: function() {
             mainPageIntro();
         },
-        fun_2: function() {},
+        fun_2: function() {
+            aosjs();
+        },
         fun_3: function() {
             archSlider();
         }
     };
 
     if (fun["fun_" + id]) {
-
         setTimeout(() => {
             fun["fun_" + id]();
         }, timeout);
     }
-
-
-
 }

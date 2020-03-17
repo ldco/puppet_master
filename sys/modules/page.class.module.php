@@ -95,12 +95,13 @@ class Page
 
     public static function cls()
     {
-
+        echo '<div class="closingPageDiv"></div>';
         echo "</div>";
     }
 
     public function close()
     {
+
         echo '</div>';
         //ob_end_clean();
     }
