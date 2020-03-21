@@ -9,7 +9,7 @@ function setPageFunctions() {
             mainPageIntro();
         },
         fun_2: function() {
-            aosjs();
+            aosjs("logoGrid", "fade", 0, 600, 100);
         },
         fun_3: function() {
             archSlider();

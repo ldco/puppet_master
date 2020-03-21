@@ -1,8 +1,7 @@
 const AOS = require("aos");
 
-function aosjs() {
-    let anim = "fade";
-    let clas = "aos_reveal";
+function aosjs(clas, anim, offset, duration, delay) {
+
 
     for (let i = 0; i < document.getElementsByClassName(clas).length; i++) {
         document.getElementsByClassName(clas)[i].setAttribute("data-aos", anim);
@@ -17,9 +16,9 @@ function aosjs() {
     window.addEventListener("scroll", scrollFunction, false); */
 
     AOS.init({
-        offset: 0,
-        duration: 600,
+        offset: offset,
+        duration: duration,
         easing: "ease-in-sine",
-        delay: 100
+        delay: delay
     });
 }

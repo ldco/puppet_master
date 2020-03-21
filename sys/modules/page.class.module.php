@@ -92,17 +92,9 @@ class Page
         echo '<img id="' . $div_id . '" class="pm_img ' . $class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">';
     }
 
-
-    public static function cls()
+    public function close()
     {
         echo '<div class="closingPageDiv"></div>';
         echo "</div>";
-    }
-
-    public function close()
-    {
-
-        echo '</div>';
-        //ob_end_clean();
     }
 }

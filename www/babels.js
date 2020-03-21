@@ -106,33 +106,6 @@ function initFun() {
 }
 "use strict";
 
-var AOS = require("aos");
-
-function aosjs() {
-  var anim = "fade";
-  var clas = "aos_reveal";
-
-  for (var i = 0; i < document.getElementsByClassName(clas).length; i++) {
-    document.getElementsByClassName(clas)[i].setAttribute("data-aos", anim);
-  }
-  /*  let scrollFunction = () => {
-      let el = window.scrollY;
-      if (el > 0) {
-          window.removeEventListener("scroll", scrollFunction, false);
-      }
-  };
-  window.addEventListener("scroll", scrollFunction, false); */
-
-
-  AOS.init({
-    offset: 0,
-    duration: 600,
-    easing: "ease-in-sine",
-    delay: 100
-  });
-}
-"use strict";
-
 function setBarAsset() {
   var el = document.querySelector("#pm_id_Bar .pm_bar_asset");
   el.addEventListener("click", function () {//showPMInformation();
@@ -209,6 +182,30 @@ function setRouter() {
     el.addEventListener("click", function () {
       getThisContentView(this);
     });
+  });
+}
+"use strict";
+
+var AOS = require("aos");
+
+function aosjs(clas, anim, offset, duration, delay) {
+  for (var i = 0; i < document.getElementsByClassName(clas).length; i++) {
+    document.getElementsByClassName(clas)[i].setAttribute("data-aos", anim);
+  }
+  /*  let scrollFunction = () => {
+      let el = window.scrollY;
+      if (el > 0) {
+          window.removeEventListener("scroll", scrollFunction, false);
+      }
+  };
+  window.addEventListener("scroll", scrollFunction, false); */
+
+
+  AOS.init({
+    offset: offset,
+    duration: duration,
+    easing: "ease-in-sine",
+    delay: delay
   });
 }
 "use strict";
@@ -664,7 +661,7 @@ function setPageFunctions() {
       mainPageIntro();
     },
     fun_2: function fun_2() {
-      aosjs();
+      aosjs("logoGrid", "fade", 0, 600, 100);
     },
     fun_3: function fun_3() {
       archSlider();

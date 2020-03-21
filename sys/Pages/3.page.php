@@ -17,5 +17,4 @@ $archSlider = new Swiper;
 $archSlider->folder = PM_IMAGES_REL . "page_3/swipe";
 $archSlider->make(true, "archSlider");
 
-$page3::cls();
 $page3->close();

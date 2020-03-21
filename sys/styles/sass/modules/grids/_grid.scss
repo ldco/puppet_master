@@ -1,0 +1,44 @@
+.pm_grid {
+    display: grid;
+    width: 98vw;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 1vw;
+    //grid-gap: 10vw;
+    //grid-auto-flow: dense;
+}
+
+.pm_grid_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@include mob(true) {
+    @for $i from 1 through 6 {
+        .pm_grid_mobcol_#{$i} {
+            grid-template-columns: repeat($i, 1fr) !important;
+            div {
+                img {}
+            }
+        }
+    }
+}
+
+@include mob(false) {
+    @for $i from 1 through 12 {
+        .pm_grid_col_#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+            div {
+                width: 24vw;
+                height: 24vw;
+                img {
+                    max-width: 96%;
+                    max-height: 96%;
+                }
+            }
+        }
+    }
+}
