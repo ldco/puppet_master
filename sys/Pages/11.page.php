@@ -7,5 +7,5 @@ declare(strict_types=1);
 require PM_ROOT . PM_SYS_FOLDER . "/modules/page.class.module.php";
 
 $page11 = new Page();
-$page11->h(1, true);
+$page11->h(1);
 $page11->close();

@@ -79,7 +79,8 @@ function Thebility() {
         if (!enabled) {
             enabled = !0;
             let thebilityMainDiv = document.getElementById("thebilityMainDiv");
-
+            document
+                .querySelector("#dragThebility").click();
             thebilityMainDiv.style.display = "flex";
             setTimeout(() => {
                 thebilityMainDiv.style.opacity = "1";

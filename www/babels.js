@@ -434,6 +434,7 @@ function Thebility() {
 
       var _thebilityMainDiv = document.getElementById("thebilityMainDiv");
 
+      document.querySelector("#dragThebility").click();
       _thebilityMainDiv.style.display = "flex";
       setTimeout(function () {
         _thebilityMainDiv.style.opacity = "1";

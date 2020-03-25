@@ -26,7 +26,7 @@ class Page
         echo "<div class='pm_page_incontent" . $_clss . "' id='pm_page_" . $PM_PAGE_NUM  . "'>";
     }
 
-    public function h($type, $bool)
+    public function h($type)
     {
         if (isset($_POST['el'])) {
             echo $_POST['el'];
@@ -49,25 +49,8 @@ class Page
         } else {
             return; //record not found
         }
-        /*  $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-        $conn->set_charset('utf8mb4');
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        };
-        $sql = "SELECT pm_loc." . PM_LANG . " FROM pm_loc INNER JOIN pm_pub_nav ON pm_loc.id=pm_pub_nav.name WHERE _id='" . $PM_PAGE_NUM . "';";
-        $result = $conn->query($sql);
-        if ($result) {
-            while ($_row = $result->fetch_assoc()) {
-                $row = $_row;
-            }
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-        $conn->close(); */
 
-        if ($bool == true) {
-            echo "<h" . $type . ">" . $row[PM_LANG] . '</h' . $type . ">";
-        }
+        echo "<h" . $type . ">" . $row[PM_LANG] . '</h' . $type . ">";
     }
 
 
@@ -96,5 +79,16 @@ class Page
     {
         echo '<div class="closingPageDiv"></div>';
         echo "</div>";
+    }
+    public function text($textId)
+    {
+        //get text
+        $DB = new DB();
+        $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_texts WHERE id='" . $textId . "';");
+        if ($result && ($row = $result->fetch_assoc())) {
+        } else {
+            return; //record not found
+        }
+        echo "<div>" . $row[PM_LANG] . '</div>';
     }
 }
