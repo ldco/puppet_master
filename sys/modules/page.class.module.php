@@ -67,7 +67,7 @@ class Page
     }
 
 
-    public function img($number, $class, $src)
+    public function img($number, $class = null, $src)
 
     {
         global $PM_PAGE_NUM;
@@ -80,15 +80,16 @@ class Page
         echo '<div class="closingPageDiv"></div>';
         echo "</div>";
     }
-    public function text($textId)
+    public function text($textId, $class = null)
     {
         //get text
+        global $PM_PAGE_NUM;
         $DB = new DB();
-        $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_texts WHERE id='" . $textId . "';");
+        $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_text WHERE id='" . $PM_PAGE_NUM . "_" .  $textId . "';");
         if ($result && ($row = $result->fetch_assoc())) {
         } else {
             return; //record not found
         }
-        echo "<div>" . $row[PM_LANG] . '</div>';
+        echo "<div class='pm_text " . $class . "' id='text_" . $PM_PAGE_NUM . "_" .  $textId . "'>" . $row[PM_LANG] . '</div>';
     }
 }

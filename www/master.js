@@ -9912,9 +9912,12 @@ function Thebility() {
     if (!enabled) {
       enabled = !0;
 
-      var _thebilityMainDiv = document.getElementById("thebilityMainDiv");
+      var _thebilityMainDiv = document.getElementById("thebilityMainDiv"); //fix workaround for drag button
+
 
       document.querySelector("#dragThebility").click();
+      /**/
+
       _thebilityMainDiv.style.display = "flex";
       setTimeout(function () {
         _thebilityMainDiv.style.opacity = "1";

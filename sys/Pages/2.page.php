@@ -18,4 +18,5 @@ $logoGrid1->make("logoGrid");
 $page2->img(2, "page2img", "twoIIc.png");
 $page2->img(3, "page2img", "tundraI.png");
 
+
 $page2->close();
