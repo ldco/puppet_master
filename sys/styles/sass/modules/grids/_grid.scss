@@ -15,11 +15,10 @@ grid-template-columns: repeat($col,
 div {
     width: $width;
     height: $width;
-}
-div {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     cursor: pointer;
     img {
         max-width: 96%;
@@ -27,4 +26,7 @@ div {
     }
 }
 
+}
+.grid_title {
+    text-align: center;
 }

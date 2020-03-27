@@ -115,6 +115,7 @@
              &:hover>a>span {
                  transition: ease-in 0.2s;
                  opacity: 1;
+                 background-color: $c_domin;
              }
              span {
                  opacity: 0;
@@ -127,6 +128,8 @@
              }
          }
          @if $PM_NAV_ICONS==false {
+             .nav_item,
+             .nav_admin_item {}
              span {
                  display: flex;
                  align-items: center;
@@ -136,13 +139,14 @@
                  height: 100%;
                  @include hor_navfontsize(3);
                  @include rfs-fs(0.6);
+                 &:hover {
+                     transition: 1s;
+                     filter: brightness(1.5);
+                     border-bottom: solid 1px $c_brand;
+                 }
              }
              img {
                  display: none !important;
-             }
-             &:hover>span {
-                 transition: ease-in 0.2s;
-                 margin-top: 0.1vh;
              }
          }
      }

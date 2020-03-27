@@ -1,0 +1,18 @@
+@include mob(true) {
+    #softGrid {
+        margin-top: 5vh;
+        @include pmGrid(4, 1vw);
+        img {
+            width: 6vh;
+        }
+    }
+}
+
+@include mob(false) {
+    #softGrid {
+        @include pmGrid(5, 1vw);
+        img {
+            width: 12vh;
+        }
+    }
+}

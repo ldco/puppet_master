@@ -1,9 +1,3 @@
-#text_4_1 {
-    text-align: center;
-    width: 90vw;
-    color: $c_opos;
-}
-
 @include mob(true) {
     #internetGrid {
         @include pmGrid(1, 0vw);

@@ -23,8 +23,8 @@ class Files
             echo '<div>';
             //TITLE
             if ($this->title) {
-                echo '<div class="' . $_id . '_title">';
-                echo $this->title[$pm_lang][pathinfo($val, PATHINFO_FILENAME)];
+                echo '<div class="' . $_id . '_title grid_title">';
+                echo pathinfo($val, PATHINFO_FILENAME);
                 echo '</div>';
             }
             //IMG

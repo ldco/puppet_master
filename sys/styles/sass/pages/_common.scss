@@ -1,28 +1,45 @@
- .pm_page_incontent {
-     min-height: 100%;
-     min-width: 100%;
-     display: flex;
-     flex-direction: column;
-     // justify-content: center;
-     align-items: center;
-     background-color: $c_domin;
-     h1 {
-         //  position: absolute;
-         color: $c_opos;
-         text-transform: uppercase;
-         @include font(1, 50);
-         @include rfs-fs(2);
-         margin-top: 10vh;
-     }
-     .pm_inner_page {
-         // margin-top: 20vh;
-         width: 100vw;
-         display: flex;
-         justify-content: center;
-         flex-direction: column;
-         align-items: center;
-     }
-     .closingPageDiv {
-         height: 5vh;
-     }
- }
+         .pm_page_incontent {
+             color: $c_opos;
+             min-height: 100%;
+             min-width: 100%;
+             display: flex;
+             flex-direction: column;
+             // justify-content: center;
+             align-items: center;
+             background-color: $c_domin;
+             h1 {
+                 //  position: absolute;
+                 color: $c_opos;
+                 text-transform: uppercase;
+                 @include font(1, 50);
+                 @include rfs-fs(2);
+                 margin-top: 10vh;
+                 &:after {
+                     content: "";
+                     display: block;
+                     margin: 0 auto;
+                     width: 20%;
+                     padding-top: 1vh;
+                     border-bottom: 2px solid $c_brand;
+                 }
+             }
+             .pm_inner_page {
+                 // margin-top: 20vh;
+                 width: 100vw;
+                 display: flex;
+                 justify-content: center;
+                 flex-direction: column;
+                 align-items: center;
+             }
+             .closingPageDiv {
+                 height: 5vh;
+             }
+         }
+         
+         .lightPage {
+             background-color: $c_white;
+             color: $c_black;
+             h1 {
+                 color: $c_black;
+             }
+         }
