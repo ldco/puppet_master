@@ -1,4 +1,5 @@
 function mainPageIntro() {
+    if ((window.location.hash !== "") && (window.location.hash !== "#1")) return;
 
     let dir = document.getElementsByTagName("html")[0].getAttribute("dir");
 
@@ -37,7 +38,7 @@ function mainPageIntro() {
                 } else {
                     pre1[i].style.right = "0";
                 }
-            }, 100);
+            }, 500);
         }
     }
 

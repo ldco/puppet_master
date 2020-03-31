@@ -7,6 +7,9 @@
  }
  
  @mixin pm_class_verticalNav {
+     a {
+         border-bottom: none;
+     }
      @extend %base-Nav;
      margin-top: 4vh;
      height: 60vh;
@@ -58,6 +61,9 @@
  }
  
  @mixin pm_class_horizontalNav {
+     a {
+         border-bottom: none;
+     }
      @extend %base-Nav;
      align-items: center;
      text-align: center;
@@ -182,6 +188,9 @@
  }
  
  .pm_mobileNav {
+     a {
+         border-bottom: none;
+     }
      user-select: none;
      display: flex;
      flex-direction: column;

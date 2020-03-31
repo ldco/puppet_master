@@ -43,3 +43,23 @@
                  color: $c_black;
              }
          }
+         
+         @include mob(true) {
+             .pm_text {
+                 width: 90vw;
+                 line-height: 115%;
+             }
+         }
+         
+         @include mob(false) {
+             .pm_text {
+                 width: 90vw;
+                 line-height: 160%;
+             }
+         }
+         
+         .pm_text {}
+         
+         .pm_intro_text {
+             text-align: center;
+         }

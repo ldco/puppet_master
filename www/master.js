@@ -9817,7 +9817,11 @@ function pmAlert(closetype) {
 function pmModalBase(closetype) {
   var el = new Modal();
   el.dragIcon();
-  el.closeIcon(closetype);
+  el.closeIcon(closetype); //drag fix
+
+  document.querySelector(".pm_modal_icon_drag").click();
+  /**/
+
   return el;
 }
 
@@ -10043,6 +10047,7 @@ function Thebility() {
 "use strict";
 
 function mainPageIntro() {
+  if (window.location.hash !== "" && window.location.hash !== "#1") return;
   var dir = document.getElementsByTagName("html")[0].getAttribute("dir");
 
   function getRandomInt(min, max) {
@@ -10087,7 +10092,7 @@ function mainPageIntro() {
         } else {
           pre1[_i].style.right = "0";
         }
-      }, 100);
+      }, 500);
     };
 
     for (var _i = 0; _i < pre1.length; _i++) {
@@ -10137,6 +10142,40 @@ function archSlider() {
 
 "use strict";
 
+function downloadAllFonts() {}
+
+"use strict";
+
+function downloadFont(x) {}
+
+"use strict";
+
+function initDownloadFont() {
+  var els = document.getElementById("fontsGrid").querySelectorAll("div");
+  els.forEach(function (el) {
+    el.addEventListener("click", function () {
+      promptDownloadFont(this);
+    });
+  });
+}
+
+"use strict";
+
+function promptDownloadFont(y) {
+  var font = y.querySelector("div").innerHTML;
+  pmPrompt("Alert", function () {
+    downloadFont();
+  }, "Are you sure you want do download the font", 1);
+  var x = document.querySelector(".pm_modal_innerdiv").innerHTML;
+  document.querySelector(".pm_modal_innerdiv").innerHTML = x + " " + font.toUpperCase() + "?";
+
+  function downloadFont() {
+    console.log(font);
+  }
+}
+
+"use strict";
+
 function setPageFunctions() {
   var setURL = window.location.hash;
   if (setURL == "") return;
@@ -10152,6 +10191,9 @@ function setPageFunctions() {
     },
     fun_3: function fun_3() {
       archSlider();
+    },
+    fun_6: function fun_6() {
+      initDownloadFont();
     }
   };
 

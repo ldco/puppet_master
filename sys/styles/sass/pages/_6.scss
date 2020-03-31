@@ -1,18 +1,39 @@
 @include mob(true) {
+    #page_6_img_1 {
+        margin-top: 5vh;
+        width: 40vw;
+    }
     #fontsGrid {
         margin-top: 5vh;
-        @include pmGrid(4, 1vw);
+        margin-bottom: 2vh;
+        @include pmGrid(1, 7vh);
+        div {
+            height: 100%;
+        }
         img {
-            width: 6vh;
+            width: 70vw;
         }
     }
 }
 
 @include mob(false) {
+    #page_6_img_1 {
+        margin-top: 5vh;
+        width: 20vw;
+    }
     #fontsGrid {
-        @include pmGrid(1, 0vw);
+        @include pmGrid(1, 10vh);
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+        div {
+            height: 100%;
+        }
         img {
-            width: 80vh;
+            width: 40vw;
         }
     }
+}
+
+#gofanariumLink {
+    border-bottom: none;
 }

@@ -27,6 +27,19 @@ div {
 }
 
 }
+@include mob(true) {
+    .grid_title {
+        margin-bottom: 2vh;
+    }
+}
+@include mob(false) {
+    .grid_title {
+        margin-bottom: 4vh;
+    }
+}
 .grid_title {
     text-align: center;
+    text-transform: uppercase;
+    @include font(1,
+    600);
 }

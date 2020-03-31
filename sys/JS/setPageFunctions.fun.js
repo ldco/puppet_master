@@ -13,6 +13,9 @@ function setPageFunctions() {
         },
         fun_3: function() {
             archSlider();
+        },
+        fun_6: function() {
+            initDownloadFont();
         }
     };
 
