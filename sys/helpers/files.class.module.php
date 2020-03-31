@@ -3,8 +3,9 @@ class Files
 {
     public $title;
     public $folder;
+    public $imgNetto = false;
     public $array_sort = 'natsort';
-    public function make($_id, $class = null)
+    public function make($_id, $childClass = null, $class = null)
     {
         global $pm_lang;
         //MAIN GRID DIV
@@ -20,15 +21,28 @@ class Files
         foreach ($scanned_files as $key => $val) {
 
             //ITEM DIV
-            echo '<div>';
-            //TITLE
-            if ($this->title) {
-                echo '<div class="' . $_id . '_title grid_title">';
-                echo pathinfo($val, PATHINFO_FILENAME);
-                echo '</div>';
+            if ($this->imgNetto == false) {
+                echo '<div class="' . $childClass . '">';
+                //TITLE
+                if ($this->title) {
+                    echo '<div class="' . $_id . '_title grid_title">';
+                    echo pathinfo($val, PATHINFO_FILENAME);
+                    echo '</div>';
+                }
+                //IMG
+                echo '<img src="' . $this->folder . '/' . $val . '"></div>';
             }
-            //IMG
-            echo '<img src="' . $this->folder . '/' . $val . '"></div>';
+            if ($this->imgNetto == true) {
+
+                //TITLE
+                if ($this->title) {
+                    echo '<div class="' . $_id . '_title grid_title">';
+                    echo pathinfo($val, PATHINFO_FILENAME);
+                    echo '</div>';
+                }
+                //IMG
+                echo '<img class="' . $childClass . '" src="' . $this->folder . '/' . $val . '">';
+            }
         }
         echo '</div>';
     }

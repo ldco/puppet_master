@@ -190,7 +190,6 @@ var AOS = require("aos");
 
 function aosjs(id, anim, offset, duration, delay) {
   for (var i = 0; i < document.querySelectorAll("#" + id + " div").length; i++) {
-    console.log();
     document.querySelectorAll("#" + id + " div")[i].setAttribute("data-aos", anim);
   }
   /*  let scrollFunction = () => {
@@ -208,6 +207,24 @@ function aosjs(id, anim, offset, duration, delay) {
     easing: "ease-in-sine",
     delay: delay
   });
+}
+"use strict";
+
+var Macy = require("macy");
+
+function macyjs(id, col, margin) {
+  var macy = Macy({
+    container: "#" + id,
+    trueOrder: false,
+    waitForImages: false,
+    margin: margin,
+    columns: col
+  });
+  document.querySelector("#" + id).style.width = "100%";
+
+  for (var i = 0; i < document.querySelectorAll("#" + id + " img").length; i++) {
+    document.querySelectorAll("#" + id + " img")[i].style.width = "100%";
+  }
 }
 "use strict";
 
@@ -718,6 +735,13 @@ function setPageFunctions() {
     fun_6: function fun_6() {
       aosjs("fontsGrid", "fade", 0, 600, 100);
       initDownloadFont();
+    },
+    fun_7: function fun_7() {
+      aosjs("printGrid", "fade", 0, 600, 100);
+    },
+    fun_8: function fun_8() {},
+    fun_9: function fun_9() {
+      macyjs("artGrid", 4, 0);
     }
   };
 

@@ -4,7 +4,7 @@ function aosjs(id, anim, offset, duration, delay) {
 
 
     for (let i = 0; i < document.querySelectorAll("#" + id + " div").length; i++) {
-        console.log();
+
 
         document.querySelectorAll("#" + id + " div")[i].setAttribute("data-aos", anim);
     }

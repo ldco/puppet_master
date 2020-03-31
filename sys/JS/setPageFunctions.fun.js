@@ -17,6 +17,13 @@ function setPageFunctions() {
         fun_6: function() {
             aosjs("fontsGrid", "fade", 0, 600, 100);
             initDownloadFont();
+        },
+        fun_7: function() {
+            aosjs("printGrid", "fade", 0, 600, 100);
+        },
+        fun_8: function() {},
+        fun_9: function() {
+            macyjs("artGrid", 4, 0);
         }
     };
 
