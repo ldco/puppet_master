@@ -9,21 +9,21 @@ function setPageFunctions() {
             mainPageIntro();
         },
         fun_2: function() {
-            aosjs("logoGrid", "fade", 0, 600, 100);
+            aosjs("logoGrid");
         },
         fun_3: function() {
             archSlider();
         },
         fun_6: function() {
-            aosjs("fontsGrid", "fade", 0, 600, 100);
+            aosjs("fontsGrid");
             initDownloadFont();
         },
         fun_7: function() {
-            aosjs("printGrid", "fade", 0, 600, 100);
+            aosjs("printGrid");
         },
         fun_8: function() {},
         fun_9: function() {
-            macyjs("artGrid", 4, 0);
+            macyjs("artGrid", 4);
         }
     };
 

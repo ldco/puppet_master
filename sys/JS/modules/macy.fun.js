@@ -1,6 +1,6 @@
 const Macy = require("macy");
 
-function macyjs(id, col, margin) {
+function macyjs(id, col, margin = 0) {
     let macy = Macy({
         container: "#" + id,
         trueOrder: false,

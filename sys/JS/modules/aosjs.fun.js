@@ -1,12 +1,11 @@
 const AOS = require("aos");
 
-function aosjs(id, anim, offset, duration, delay) {
-
-
-    for (let i = 0; i < document.querySelectorAll("#" + id + " div").length; i++) {
-
-
-        document.querySelectorAll("#" + id + " div")[i].setAttribute("data-aos", anim);
+function aosjs(id, anim = "fade", offset = 0, duration = 600, delay = 0) {
+    for (
+        let i = 0; i < document.querySelectorAll("#" + id + " div").length; i++
+    ) {
+        document
+            .querySelectorAll("#" + id + " div")[i].setAttribute("data-aos", anim);
     }
 
     /*  let scrollFunction = () => {

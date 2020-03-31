@@ -188,7 +188,12 @@ function setRouter() {
 
 var AOS = require("aos");
 
-function aosjs(id, anim, offset, duration, delay) {
+function aosjs(id) {
+  var anim = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "fade";
+  var offset = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  var duration = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 600;
+  var delay = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
+
   for (var i = 0; i < document.querySelectorAll("#" + id + " div").length; i++) {
     document.querySelectorAll("#" + id + " div")[i].setAttribute("data-aos", anim);
   }
@@ -212,7 +217,8 @@ function aosjs(id, anim, offset, duration, delay) {
 
 var Macy = require("macy");
 
-function macyjs(id, col, margin) {
+function macyjs(id, col) {
+  var margin = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
   var macy = Macy({
     container: "#" + id,
     trueOrder: false,
@@ -727,21 +733,21 @@ function setPageFunctions() {
       mainPageIntro();
     },
     fun_2: function fun_2() {
-      aosjs("logoGrid", "fade", 0, 600, 100);
+      aosjs("logoGrid");
     },
     fun_3: function fun_3() {
       archSlider();
     },
     fun_6: function fun_6() {
-      aosjs("fontsGrid", "fade", 0, 600, 100);
+      aosjs("fontsGrid");
       initDownloadFont();
     },
     fun_7: function fun_7() {
-      aosjs("printGrid", "fade", 0, 600, 100);
+      aosjs("printGrid");
     },
     fun_8: function fun_8() {},
     fun_9: function fun_9() {
-      macyjs("artGrid", 4, 0);
+      macyjs("artGrid", 4);
     }
   };
 

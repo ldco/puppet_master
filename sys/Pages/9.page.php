@@ -14,5 +14,5 @@ $artGrid = new Files;
 $artGrid->folder = PM_IMAGES_REL . "page_9/artGrid";
 //$artGrid->imgNetto = true;
 
-$artGrid->make("artGrid", "artGridItem");
+$artGrid->make("artGrid");
 $page9->close();
