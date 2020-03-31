@@ -15,6 +15,7 @@ function setPageFunctions() {
             archSlider();
         },
         fun_6: function() {
+            aosjs("fontsGrid", "fade", 0, 600, 100);
             initDownloadFont();
         }
     };

@@ -4234,3 +4234,9 @@ input.pm_modal_button {
 
 #gofanariumLink {
   border-bottom: none; }
+
+#text_6_3 {
+  cursor: pointer; }
+  #text_6_3:hover {
+    margin-bottom: 1vh;
+    transition: 1s; }

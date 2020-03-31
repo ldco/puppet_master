@@ -3,7 +3,7 @@ function promptDownloadFont(y) {
     pmPrompt(
         "Alert",
         function() {
-            downloadFont();
+            downloadFont(font);
         },
         "Are you sure you want do download the font",
         1
@@ -11,7 +11,4 @@ function promptDownloadFont(y) {
     let x = document.querySelector(".pm_modal_innerdiv").innerHTML;
     document.querySelector(".pm_modal_innerdiv").innerHTML = x + " " + font.toUpperCase() + "?";
 
-    function downloadFont() {
-        console.log(font);
-    }
 }

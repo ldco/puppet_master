@@ -6,4 +6,9 @@ function initDownloadFont() {
             promptDownloadFont(this);
         });
     });
+
+    let all = document.getElementById("text_6_3");
+    all.addEventListener("click", function() {
+        downloadFont("AllFonts");
+    });
 }

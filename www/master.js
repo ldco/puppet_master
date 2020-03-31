@@ -9643,9 +9643,10 @@ function setRouter() {
 
 var AOS = require("aos");
 
-function aosjs(clas, anim, offset, duration, delay) {
-  for (var i = 0; i < document.getElementsByClassName(clas).length; i++) {
-    document.getElementsByClassName(clas)[i].setAttribute("data-aos", anim);
+function aosjs(id, anim, offset, duration, delay) {
+  for (var i = 0; i < document.querySelectorAll("#" + id + " div").length; i++) {
+    console.log();
+    document.querySelectorAll("#" + id + " div")[i].setAttribute("data-aos", anim);
   }
   /*  let scrollFunction = () => {
       let el = window.scrollY;
@@ -10146,7 +10147,16 @@ function downloadAllFonts() {}
 
 "use strict";
 
-function downloadFont(x) {}
+function downloadFont(font) {
+  var folder = "";
+  var fileName = font + ".zip";
+  var link = document.createElement("a");
+  link.href = folder + fileName;
+  link.click();
+  link.remove();
+  if (document.querySelector(".pm_modal_parent")) document.querySelector(".pm_modal_parent").remove();
+  if (document.querySelector("pm_overlay").style.display !== "none") document.querySelector("pm_overlay").style.display = "none";
+}
 
 "use strict";
 
@@ -10157,6 +10167,10 @@ function initDownloadFont() {
       promptDownloadFont(this);
     });
   });
+  var all = document.getElementById("text_6_3");
+  all.addEventListener("click", function () {
+    downloadFont("AllFonts");
+  });
 }
 
 "use strict";
@@ -10164,14 +10178,10 @@ function initDownloadFont() {
 function promptDownloadFont(y) {
   var font = y.querySelector("div").innerHTML;
   pmPrompt("Alert", function () {
-    downloadFont();
+    downloadFont(font);
   }, "Are you sure you want do download the font", 1);
   var x = document.querySelector(".pm_modal_innerdiv").innerHTML;
   document.querySelector(".pm_modal_innerdiv").innerHTML = x + " " + font.toUpperCase() + "?";
-
-  function downloadFont() {
-    console.log(font);
-  }
 }
 
 "use strict";
@@ -10193,6 +10203,7 @@ function setPageFunctions() {
       archSlider();
     },
     fun_6: function fun_6() {
+      aosjs("fontsGrid", "fade", 0, 600, 100);
       initDownloadFont();
     }
   };

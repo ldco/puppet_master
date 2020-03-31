@@ -37,3 +37,11 @@
 #gofanariumLink {
     border-bottom: none;
 }
+
+#text_6_3 {
+    cursor: pointer;
+    &:hover {
+        margin-bottom: 1vh;
+        transition: 1s;
+    }
+}
