@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-
+require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
 
 class Files
 {
@@ -10,12 +10,14 @@ class Files
     public $folder;
     public $imgNetto = false;
     public $array_sort = 'natsort';
-    public function make($_id, $childClass = null, $class = null)
+    public function make($childClass = null, $class = null)
     {
-        global $pm_lang;
+        global $PM_PAGE_NUM;
+
         //MAIN GRID DIV
-        echo '<div id="' . $_id . '" class="' . $class . '">';
-        $scanned_files = array_diff(scandir($this->folder), array('..', '.'));
+        $path = PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $this->folder;
+        echo '<div id="' . $this->folder . '" class="' . $class . '">';
+        $scanned_files = array_diff(scandir($path), array('..', '.'));
         if ($this->array_sort === "natsort") {
             natsort($scanned_files);
         }
@@ -35,7 +37,7 @@ class Files
                     echo '</div>';
                 }
                 //IMG
-                echo '<img src="' . $this->folder . '/' . $val . '"></div>';
+                echo '<img src="' . $path . '/' . $val . '"></div>';
             }
             if ($this->imgNetto == true) {
 
@@ -46,7 +48,7 @@ class Files
                     echo '</div>';
                 }
                 //IMG
-                echo '<img class="' . $childClass . '" src="' . $this->folder . '/' . $val . '">';
+                echo '<img class="' . $childClass . '" src="' . $path . '/' . $val . '">';
             }
         }
         echo '</div>';
