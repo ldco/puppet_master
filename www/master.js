@@ -10236,7 +10236,9 @@ function setPageFunctions() {
     fun_7: function fun_7() {
       aosjs("printGrid");
     },
-    fun_8: function fun_8() {},
+    fun_8: function fun_8() {
+      aosjs("motiongraphicsGrid");
+    },
     fun_9: function fun_9() {
       macyjs("artGrid", 4);
     }

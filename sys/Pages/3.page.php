@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 //use sys\Pages;
 
-require PM_ROOT . PM_SYS_FOLDER . "/modules/page.class.module.php";
-require PM_ROOT . PM_SYS_FOLDER . "/modules/swiper.class.module.php";
+require PM_ROOT . PM_SYS_FOLDER . "/modules/Page.class.module.php";
+require PM_ROOT . PM_SYS_FOLDER . "/modules/Swiper.class.module.php";
 
 $page3 = new Page();
 $page3->h(1);

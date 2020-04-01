@@ -21,7 +21,10 @@ function setPageFunctions() {
         fun_7: function() {
             aosjs("printGrid");
         },
-        fun_8: function() {},
+        fun_8: function() {
+            aosjs("motiongraphicsGrid");
+
+        },
         fun_9: function() {
             macyjs("artGrid", 4);
         }
