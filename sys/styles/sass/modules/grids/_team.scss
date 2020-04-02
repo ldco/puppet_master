@@ -1,13 +1,25 @@
 $rankNumber: 3;
-@mixin col-pm_team {
+@mixin col-pm_team($mob) {
     @for $i from 1 through $rankNumber {
         .pm_team_rank_#{$i} {
-            width:calc(((#{100vw} / (#{$i} / 0.4)) + ((#{100vh} / (#{$i} / 0.3)) * #{$i})) / 2.2);
+            @if $mob==false {
+                width:calc(((#{100vw} / (#{$i} / 0.4)) + ((#{100vh} / (#{$i} / 0.8)) * #{$i})) / 3);
+            }
+            @if $mob==true {
+                width:calc(((#{100vh} / (#{$i} / 0.4)) + ((#{100vw} / (#{$i} / 0.8)) * #{$i})) / 3);
+            }
         }
     }
 }
 
-@include col-pm_team;
+@include mob(true) {
+    @include col-pm_team(true);
+}
+
+@include mob(false) {
+    @include col-pm_team(false);
+}
+
 .pm_team {
     display: grid;
     justify-items: center;
@@ -30,7 +42,6 @@ $rankNumber: 3;
         }
         img {
             width: 100%;
-            padding: 2vw;
             box-shadow: 0px 0px 20px 0px #222;
             border-radius: 50%;
             cursor: pointer;
@@ -43,14 +54,6 @@ $rankNumber: 3;
         }
         span:nth-of-type(3) {}
     }
-}
-
-@include mob(true) {
-    .pm_team {}
-}
-
-@include mob(false) {
-    .pm_team {}
 }
 
 
