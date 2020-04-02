@@ -11,6 +11,6 @@ $page5 = new Page();
 $page5->h(1);
 $page5->text("1", "pm_intro_text");
 $softGrid = new Files;
-$softGrid->folder = PM_IMAGES_REL . "page_5/softGrid";
-$softGrid->make("softGrid");
+$softGrid->folder = "softGrid";
+$softGrid->make();
 $page5->close();
