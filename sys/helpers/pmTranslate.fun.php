@@ -9,7 +9,7 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 function pmTranslate($_lang, $_text, $ajax)
 
 {
-    global $DB;
+    $DB = new DB();
     if ($ajax == true) {
         $arr = [];
     } else {

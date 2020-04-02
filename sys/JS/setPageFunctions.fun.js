@@ -14,6 +14,10 @@ function setPageFunctions() {
         fun_3: function() {
             archSlider();
         },
+        fun_4: function() {
+            aosjs("internetGrid");
+
+        },
         fun_6: function() {
             aosjs("fontsGrid");
             initDownloadFont();
@@ -27,7 +31,11 @@ function setPageFunctions() {
         },
         fun_9: function() {
             macyjs("artGrid", 4);
+        },
+        fun_10: function() {
+            teamHelp();
         }
+
     };
 
     if (fun["fun_" + id]) {

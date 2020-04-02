@@ -1,143 +1,101 @@
 $rankNumber: 3;
 @mixin col-pm_team($mob) {
     @for $i from 1 through $rankNumber {
+        $teamFontScale: null;
         .pm_team_rank_#{$i} {
             @if $mob==false {
                 width:calc(((#{100vw} / (#{$i} / 0.4)) + ((#{100vh} / (#{$i} / 0.8)) * #{$i})) / 3);
+                //more is smaller
+                $teamFontScale: 1;
             }
             @if $mob==true {
                 width:calc(((#{100vh} / (#{$i} / 0.4)) + ((#{100vw} / (#{$i} / 0.8)) * #{$i})) / 3);
+                //more is smaller
+                $teamFontScale: 1.5;
             }
+            $teamFontSize: ((100 / ($i * 2)) + ($i * 100)) / ($i * ($teamFontScale * 100));
+            @include rfs-fs($teamFontSize);
         }
     }
-}
-
-@include mob(true) {
-    @include col-pm_team(true);
-}
-
-@include mob(false) {
-    @include col-pm_team(false);
 }
 
 .pm_team {
     display: grid;
     justify-items: center;
     align-items: center;
-    text-align: justify;
-    // width: 100%;
-    div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #666;
-        &:hover {
-            div,
-            span,
-            img {
-                filter: brightness(1.2);
-                color: #000;
-            }
-        }
-        img {
-            width: 100%;
-            box-shadow: 0px 0px 20px 0px #222;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        span:nth-of-type(1) {
-            text-align: center;
-        }
-        span:nth-of-type(2) {
-            text-align: center;
-        }
-        span:nth-of-type(3) {}
-    }
+    width: 100vw;
 }
 
-
-/* .team_page {
+.pm_team_item {
     display: flex;
-}
-
-.team_grid_ {
-    display: grid;
-    justify-items: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: justify;
     width: 100%;
-    div {
-        padding: 0 3vw 0 3vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: #666;
-        &:hover {
-            div,
-            span,
-            img {
-                filter: brightness(1.2);
-                color: #000;
-            }
-        }
+    color: #666;
+    &:hover {
+        div,
+        span,
         img {
-            height: auto;
-            box-shadow: 0px 6px 20px 0px #222;
-            border-radius: 50%;
-            cursor: pointer;
+            filter: brightness(1.2);
         }
-        span:nth-of-type(1) {
-            text-align: center;
-        }
-        span:nth-of-type(2) {
-            text-align: center;
-        }
-        span:nth-of-type(3) {}
+    }
+    img {
+        width: 100%;
+        box-shadow: 0px 0px 20px 0px #222;
+        border-radius: 50%;
+        cursor: pointer;
     }
 }
 
-.team_grid_rank_1 {
-    div {
-        width: auto;
-        img {
-            width: 25vw;
-        }
-        span:nth-of-type(1) {
-            font-size: 4vh;
-            font-weight: bold;
-            margin-top: 3vh;
-        }
-        span:nth-of-type(2) {
-            font-size: 3vh;
-            font-weight: bold;
-            margin-top: 1vh;
-            margin-bottom: 2vh;
-        }
-        span:nth-of-type(3) {}
-    }
+.pm_team_name {
+    @include font(1, 400);
+    text-align: center;
 }
 
-.team_grid_rank_2 {
-    margin-top: 10vh;
-    div {
-        width: 20vw;
-        font-size: 2vh;
-        img {
-            width: 20vw;
-        }
-        span:nth-of-type(1) {
-            font-size: 3vh;
-            font-weight: bold;
-            margin-top: 3vh;
-        }
-        span:nth-of-type(2) {
-            font-size: 2vh;
-            font-weight: bold;
-            margin-top: 1vh;
-            margin-bottom: 1vh;
-        }
-        span:nth-of-type(3) {}
+.pm_team_job {
+    text-align: center;
+}
+
+.pm_team_bio {
+    text-align: justify;
+}
+
+@include mob(false) {
+    @include col-pm_team(false);
+    .pm_team {}
+    .pm_team_item {
+        margin-top: 5vh;
     }
-} */
+    .pm_team_name {
+        margin-top: 2vw;
+    }
+    .pm_team_job {}
+    .pm_team_bio {}
+}
+
+@include mob(false) {
+    @include col-pm_team(false);
+    .pm_team {}
+    .pm_team_item {
+        margin-top: 5vw;
+    }
+    .pm_team_name {
+        margin-top: 2vw;
+    }
+    .pm_team_job {}
+    .pm_team_bio {}
+}
+
+@include mob(true) {
+    @include col-pm_team(true);
+    .pm_team {}
+    .pm_team_item {
+        margin-top: 5vh;
+    }
+    .pm_team_name {
+        margin-top: 1.5vh;
+    }
+    .pm_team_job {}
+    .pm_team_bio {}
+}

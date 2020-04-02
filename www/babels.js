@@ -412,6 +412,27 @@ function initModalLocalisation() {
 }
 "use strict";
 
+function teamHelp() {
+  var els = document.querySelectorAll('[class*="pm_team_rank_"]');
+  var arr = [];
+  els.forEach(function (el) {
+    var el2 = el.className;
+    var el3 = el2.split("pm_team_rank_").pop();
+    arr.push(el3);
+  });
+  arr = new Set(arr);
+  arr.forEach(function (el) {
+    var div = document.createElement("div");
+    var els = document.querySelectorAll(".pm_team_rank_" + el);
+    els.forEach(function (elm) {
+      div.appendChild(elm);
+      div.setAttribute("class", "pm_team_wrapper_rank_" + el);
+      document.querySelector(".pm_team").appendChild(div);
+    });
+  });
+}
+"use strict";
+
 function Thebility() {
   this.init = function () {
     document.querySelector("#thebilityIcon").addEventListener("click", function () {
@@ -738,6 +759,9 @@ function setPageFunctions() {
     fun_3: function fun_3() {
       archSlider();
     },
+    fun_4: function fun_4() {
+      aosjs("internetGrid");
+    },
     fun_6: function fun_6() {
       aosjs("fontsGrid");
       initDownloadFont();
@@ -750,6 +774,9 @@ function setPageFunctions() {
     },
     fun_9: function fun_9() {
       macyjs("artGrid", 4);
+    },
+    fun_10: function fun_10() {
+      teamHelp();
     }
   };
 

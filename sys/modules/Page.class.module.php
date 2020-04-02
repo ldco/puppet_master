@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-//namespace sys\Pages;
+//namespace sys\modules;
 
 use sys\Controller\DB;
 

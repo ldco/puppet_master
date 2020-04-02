@@ -7,7 +7,7 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
 class Files
 {
     public $title;
-    public $folder;
+    public string $folder;
     public $imgNetto = false;
     public $array_sort = 'natsort';
     public function make($childClass = null, $class = null)
@@ -32,7 +32,7 @@ class Files
                 echo '<div class="' . $childClass . '">';
                 //TITLE
                 if ($this->title) {
-                    echo '<div class="' . $_id . '_title grid_title">';
+                    echo '<div class="' . $childClass . ' grid_title">';
                     echo pathinfo($val, PATHINFO_FILENAME);
                     echo '</div>';
                 }
@@ -43,7 +43,7 @@ class Files
 
                 //TITLE
                 if ($this->title) {
-                    echo '<div class="' . $_id . '_title grid_title">';
+                    echo '<div class="' . $childClass . ' grid_title">';
                     echo pathinfo($val, PATHINFO_FILENAME);
                     echo '</div>';
                 }

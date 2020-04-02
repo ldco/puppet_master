@@ -1,9 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
+//namespace sys\modules;
+
 class Swiper
 {
 
-    public $folder;
+    public string $folder;
 
     public function make($buttons, $class)
     {

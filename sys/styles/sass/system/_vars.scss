@@ -8,8 +8,14 @@
     opacity: 1 !important;
 }
 
-//copy top button
+//go top button
 #goTop {
+    [dir=rtl] & {
+        right: 5vh;
+    }
+    [dir=ltr] & {
+        left: 5vh;
+    }
     display: none;
     position: fixed;
     bottom: 5vh;
@@ -19,6 +25,7 @@
     align-items: center;
     justify-content: center;
     padding: 1vh;
+    background-color: $c_interM2;
     cursor: pointer;
     &:hover {}
     z-index: 1979;

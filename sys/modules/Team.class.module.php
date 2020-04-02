@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+//namespace sys\modules;
+
 use sys\Controller\DB;
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
@@ -10,8 +12,8 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 class Team
 {
     public $title = null;
-    public $table = "pm_team";
-    public $folder = "team";
+    public string $table = "pm_team";
+    public string $folder = "team";
     public function make($_id = null, $childClass = null, $class = "pm_team")
     {
         global $PM_PAGE_NUM;

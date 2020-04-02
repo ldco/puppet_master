@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+//namespace sys\modules;
+
 use sys\Controller\DB;
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
@@ -9,9 +11,9 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 class VideoList
 {
     public $title = null;
-    public $table;
-    public $row;
-    public $prelink = "https://www.youtube.com/embed/";
+    public string $table;
+    public string $row;
+    public string $prelink = "https://www.youtube.com/embed/";
     public function make($_id, $childClass = null, $class = null)
     {
         $DB = new DB();

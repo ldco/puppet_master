@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-//use sys\Pages;
+use sys\modules;
 
 require PM_ROOT . PM_SYS_FOLDER . "/modules/Page.class.module.php";
 require PM_ROOT . PM_SYS_FOLDER . "/modules/Files.class.module.php";
