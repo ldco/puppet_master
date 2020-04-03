@@ -19,7 +19,7 @@ class Team
         global $PM_PAGE_NUM;
         $DB = new DB();
         echo '<div id="' . $_id . '" class="' . $class . '">';
-        $result = $DB->queryRaw("SELECT * FROM pm_team JOIN pm_text ON pm_team.name=pm_text.id");
+        $result = $DB->queryRaw("SELECT * FROM $this->table JOIN pm_text ON $this->table.name=pm_text.id");
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="' . $childClass . ' pm_team_item pm_team_rank_' . $row["rank"] . '">';

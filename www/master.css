@@ -3977,7 +3977,8 @@ input.pm_modal_button {
   background: rgba(41, 69, 82, 0.3); }
 
 .pm_loader {
-  position: absolute;
+  position: fixed;
+  background-image: url(../sys/assets/icons/vector/100a.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 20vh;
@@ -4753,6 +4754,3 @@ input.pm_modal_button {
       height: 100%; }
       [data-mob=false] #motiongraphicsGrid div iframe {
         height: 50vh; } }
-
-#pm_loader1 {
-  background-image: url(../sys/assets/icons/vector/100a.svg); }

@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 //namespace sys\modules;
-
 class Swiper
 {
 

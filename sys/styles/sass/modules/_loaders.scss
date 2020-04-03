@@ -1,7 +1,8 @@
 .pm_loader {
     $width: 20vh;
     $height: 20vh;
-    position: absolute;
+    position: fixed;
+    background-image: url(../sys/assets/icons/vector/100a.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: $width;
