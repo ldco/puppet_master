@@ -227,10 +227,9 @@ function macyjs(id, col) {
     columns: col
   });
   document.querySelector("#" + id).style.width = "100%";
-
-  for (var i = 0; i < document.querySelectorAll("#" + id + " img").length; i++) {
-    document.querySelectorAll("#" + id + " img")[i].style.width = "100%";
-  }
+  document.querySelectorAll("#" + id + " img").forEach(function (el) {
+    el.style.width = "100%";
+  });
 }
 "use strict";
 
@@ -409,6 +408,24 @@ function initModalLocalisation() {
   ajx.open("POST", sysFolder + "modules/initModalTranslate.php", true);
   ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
   ajx.send("name=" + name + "&lang=" + PM_LANG);
+}
+"use strict";
+
+function pmLoader(el, parent, event) {
+  var id = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "pm_loader";
+  var anim = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "ping";
+  var loader = document.createElement("div");
+
+  function initLoader() {
+    loader.setAttribute("id", id);
+    loader.setAttribute("class", "pm_loader " + anim);
+    document.querySelector(parent).appendChild(loader);
+  }
+
+  initLoader();
+  document.querySelector(el).addEventListener(event, function () {
+    loader.remove();
+  });
 }
 "use strict";
 
@@ -771,6 +788,7 @@ function setPageFunctions() {
     },
     fun_8: function fun_8() {
       aosjs("motiongraphicsGrid");
+      pmLoader("iframe", "#pm_page_8", "load", "pm_loader1", "rotate-center");
     },
     fun_9: function fun_9() {
       macyjs("artGrid", 4);

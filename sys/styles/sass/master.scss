@@ -14,6 +14,8 @@
 @import "system/fonts";
 //animations
 @import "animista/heartbeat";
+@import "animista/ping";
+@import "animista/rotate-center";
 //color
 @import "colors/colors";
 @import "colors/colorsEngine";
@@ -39,6 +41,7 @@
 @import "modules/grids/team";
 @import "modules/modals/pmodals";
 @import "modules/thebility/thebility";
+@import "modules/loaders";
 //pages
 @import "pages/common";
 @import "pages/1";

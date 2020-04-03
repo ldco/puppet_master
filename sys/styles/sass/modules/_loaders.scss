@@ -1,0 +1,11 @@
+.pm_loader {
+    $width: 20vh;
+    $height: 20vh;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $width;
+    height: $height;
+    top: calc(#{50vh} - (#{$width} / 2) - #{10vh});
+    left: calc(#{50vw} - (#{$width} / 2));
+}
