@@ -10,6 +10,6 @@ require PM_ROOT . PM_SYS_FOLDER . "/modules/Contacts.class.module.php";
 
 $page12 = new Page();
 $page12->h(1);
-$f21Contacts = new Contacts;
-$f21Contacts->make();
+$f21Contacts = new Contacts();
+
 $page12->close();

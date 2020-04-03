@@ -4754,3 +4754,19 @@ input.pm_modal_button {
       height: 100%; }
       [data-mob=false] #motiongraphicsGrid div iframe {
         height: 50vh; } }
+
+@media (max-aspect-ratio: 13 / 9) {
+  [data-mob=true] .pm_contacts_item {
+    display: none !important; } }
+
+@media (max-width: 1210px) {
+  [data-mob=false] .pm_contacts_item {
+    display: none !important; } }
+
+@media (min-aspect-ratio: 13 / 9) {
+  [data-mob=true] .pm_contactsMobile_item {
+    display: none !important; } }
+
+@media (min-width: 1210px) {
+  [data-mob=false] .pm_contactsMobile_item {
+    display: none !important; } }

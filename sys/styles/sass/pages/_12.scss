@@ -1,0 +1,11 @@
+@include mob(true) {
+    .pm_contacts_item {
+        display: none !important;
+    }
+}
+
+@include mob(false) {
+    .pm_contactsMobile_item {
+        display: none !important;
+    }
+}
