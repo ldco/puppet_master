@@ -147,6 +147,7 @@
     "classBuilder": {
         "prefix": "DB",
         "body": [
+            "use sys\\Controller\\DB;",
             "require_once PM_ROOT . PM_SYS_FOLDER . \"/Controller/DB.class.ctrl.php\";",
             "\\$DB = new DB();",
             "\\$result = \\$DB->queryRaw(\"SELECT * FROM pm_loc\");",

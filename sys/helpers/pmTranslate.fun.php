@@ -20,9 +20,9 @@ function pmTranslate($_lang, $_text, $ajax)
         while ($row = $result->fetch_assoc()) {
             if ($row["en"] == $_text) {
                 if ($row[$_lang]) {
-                    $arr = $row[$_lang];
+                    return $arr = $row[$_lang];
                 } else {
-                    $arr = $row["en"];
+                    return $arr = $row["en"];
                 }
             } else {
                 //$arr = $_text;
@@ -30,8 +30,8 @@ function pmTranslate($_lang, $_text, $ajax)
         }
     }
     if ($ajax == true) {
-        echo json_encode($arr);
+        return json_encode($arr);
     } else {
-        echo $arr;
+        return $arr;
     }
 }
