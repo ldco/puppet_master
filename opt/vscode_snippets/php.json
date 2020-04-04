@@ -16,7 +16,7 @@
     "echoDiv": {
         "prefix": "eDiv",
         "body": [
-            "echo \"<div id='' class=''></div>\";"
+            "echo \"<div id='' class='' onclick=''></div>\";"
         ],
         "description": "echo Div"
     },
@@ -143,5 +143,22 @@
             "};"
         ],
         "description": "class Builder"
+    },
+    "classBuilder": {
+        "prefix": "DB",
+        "body": [
+            "require_once PM_ROOT . PM_SYS_FOLDER . \"/Controller/DB.class.ctrl.php\";",
+            "\\$DB = new DB();",
+            "\\$result = \\$DB->queryRaw(\"SELECT * FROM pm_loc\");",
+            "if (\\$result) {",
+            "    while (\\$row = \\$result->fetch_assoc()) {",
+            "}",
+            "}",
+            "\/*if (\\$result && (\\$row = \\$result->fetch_assoc())) {",
+            "} else {",
+            " return;",
+            "}*\/"
+        ],
+        "description": "Puppet Master DB"
     }
 }

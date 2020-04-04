@@ -14,7 +14,7 @@
     width: calc(#{$sizex} + #{$sizey} + #{($sizez / 2)});
 }
 
-//rfs font size
+//rfs font size fix
 @mixin f-size($size) {
     @include rfs(($size)*((1vh)*3));
 }

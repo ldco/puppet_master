@@ -214,7 +214,7 @@
              @include dir('margin-left', 'margin-right', 3vh, 3vh);
          }
          img {
-             @include width-fill(1.6);
+             @include width-fill(1.5);
          }
          &:active {}
          a {

@@ -3157,7 +3157,7 @@ body {
       margin-right: 3vh; }
     .pm_mobileNav .nav_item img,
     .pm_mobileNav .nav_admin_item img {
-      width: calc(1.6vw + 1.6vh + 0.8vmin); }
+      width: calc(1.5vw + 1.5vh + 0.75vmin); }
     .pm_mobileNav .nav_item a,
     .pm_mobileNav .nav_admin_item a {
       justify-content: center;
