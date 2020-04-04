@@ -98,7 +98,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     }
     .thebilityDiv {
         @include font(1, 400);
-        @include rfs-fs(0.8);
+        @include f-size(0.8);
         text-transform: capitalize;
         text-align: center;
         background: $backTHebiltyColor;
@@ -159,7 +159,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         }
         .thebilityDiv {
             width: 60vw;
-            @include rfs-fs(0.4);
+            @include f-size(0.4);
             input {
                 margin-top: 1.5vh;
             }

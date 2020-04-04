@@ -18,7 +18,7 @@ $rankMobColumns: 1,
                 $teamFontScale: 1.5;
             }
             $teamFontSize: ((100 / ($i * 2)) + ($i * 100)) / ($i * ($teamFontScale * 100));
-            @include rfs-fs($teamFontSize);
+            @include f-size($teamFontSize);
             img {
                 @if $mob==false {
                     width:calc(((#{100vw} / (#{$i} / 0.4)) + ((#{100vh} / (#{$i} / 0.8)) * #{$i})) / 3);

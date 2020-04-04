@@ -1,9 +1,5 @@
- @mixin hor_navfontsize($x) {
-     font-size: map-get($horBar, height) / $x;
- }
- 
- @mixin mob_navfontsize($x) {
-     font-size: (map-get($mob, nav_height) - $x);
+ @mixin hor_navfontsize() {
+     font-size: map-get($horBar, height) / 3;
  }
  
  @mixin pm_class_verticalNav {
@@ -26,13 +22,12 @@
      }
      .nav_item,
      .nav_admin_item {
-         @include rfs-fs(0.8);
+         @extend %base-Nav_item;
          width: 100%;
          height: 100%;
          display: flex;
          justify-content: center;
          align-items: center;
-         @extend %base-Nav_item;
          &:hover>span {
              transition: ease-in 0.1s;
              @include dir('left', 'right', calc(#{map-get($vertBar, width)} - 1vh), calc(#{map-get($vertBar, width)} - 1vh));
@@ -75,10 +70,7 @@
      }
      .nav_item {
          @if $PM_NAV_ICONS==true {
-             &:hover {
-                 //transition: ease-in 0.1s;
-                 //padding: 1.25vw;
-             }
+             &:hover {}
              &:hover>a>img {
                  transition: ease-in 0.3s;
                  border-radius: 5px;
@@ -124,27 +116,26 @@
                  background-color: $c_domin;
              }
              span {
+                 @include hor_navfontsize();
                  opacity: 0;
                  position: fixed;
                  top: calc(#{map-get($horBar, height)} / 0.9);
                  z-index: -10;
                  border-radius: 0.5vh;
                  padding: 0.4vh;
-                 @include rfs-fs(0.8);
              }
          }
          @if $PM_NAV_ICONS==false {
              .nav_item,
              .nav_admin_item {}
              span {
+                 @include hor_navfontsize(3);
                  display: flex;
                  align-items: center;
                  justify-content: center;
                  top: initial !important;
                  width: 100%;
                  height: 100%;
-                 @include hor_navfontsize(3);
-                 @include rfs-fs(0.6);
                  &:hover {
                      transition: 1s;
                      filter: brightness(1.5);
@@ -159,19 +150,19 @@
  }
  
  #pm_id_Nav {
-     @if map-get($PM_PHTML_CONTENT, horBar)==false {
+     @if $PM_BAR_IS_VERTICAL==true {
          @include pm_class_verticalNav;
      }
-     @if map-get($PM_PHTML_CONTENT, horBar)==true {
+     @if $PM_BAR_IS_VERTICAL==false {
          @include pm_class_horizontalNav;
      }
  }
  
  #pm_id_admin_Nav {
-     @if map-get($PM_ADMIN_CONTENT, horBar)==false {
+     @if $PM_ADMIN_BAR_IS_VERTICAL==true {
          @include pm_class_verticalNav;
      }
-     @if map-get($PM_ADMIN_CONTENT, horBar)==true {
+     @if $PM_ADMIN_BAR_IS_VERTICAL==false {
          @include pm_class_horizontalNav;
      }
  }
@@ -202,12 +193,14 @@
      .nav_item {
          height: map-get($mob, nav_height);
          span {
-             // @include mob_navfontsize(4);
-             font-size: 2vw;
+             @include f-size-fill(1)
          }
      }
      .nav_admin_item {
          height: map-get($mob, ad_nav_height);
+         span {
+             @include f-size-fill(1)
+         }
      }
      .nav_item,
      .nav_admin_item {
@@ -219,6 +212,9 @@
          img,
          span {
              @include dir('margin-left', 'margin-right', 3vh, 3vh);
+         }
+         img {
+             @include width-fill(1.6);
          }
          &:active {}
          a {

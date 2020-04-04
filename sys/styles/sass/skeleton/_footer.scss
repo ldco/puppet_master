@@ -6,6 +6,9 @@
 
 .pm_footer {
     background-color: $c_domin;
+    //hack to remove stripe between content and footer
+    border-top: solid $c_domin 1px;
+    /**/
     color: $c_interBB;
     font-size: 0.8vh;
     width: 100vw;

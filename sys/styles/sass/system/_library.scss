@@ -1,15 +1,22 @@
 //responisve font sizes
 //font fills
-@mixin fontfill($size) {
+@mixin f-size-fill($size) {
     $sizex: ($size * 1vw);
     $sizey: ($size * 1vh);
     $sizez: ($size * 1vmin);
     font-size: calc(#{$sizex} + #{$sizey} + #{($sizez / 2)});
 }
 
+@mixin width-fill($size) {
+    $sizex: ($size * 1vw);
+    $sizey: ($size * 1vh);
+    $sizez: ($size * 1vmin);
+    width: calc(#{$sizex} + #{$sizey} + #{($sizez / 2)});
+}
+
 //rfs font size
-@mixin rfs-fs($size) {
-    @include font-size(($size*1rem));
+@mixin f-size($size) {
+    @include rfs(($size)*((1vh)*3));
 }
 
 //queries

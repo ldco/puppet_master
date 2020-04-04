@@ -78,6 +78,9 @@
 
 #pm_id_Bar {
     background-color: $c_domin;
+    //hack to remove stripe between bar and content
+    border-bottom: solid $c_domin 1px;
+    /**/
     @if $PM_BAR_IS_VERTICAL==true {
         @include verticalBar;
     }

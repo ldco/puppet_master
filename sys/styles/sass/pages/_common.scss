@@ -7,12 +7,15 @@
              // justify-content: center;
              align-items: center;
              background-color: $c_domin;
+             a {
+                 @include f-size($basicTextSize);
+             }
              h1 {
                  //  position: absolute;
                  color: $c_opos;
                  text-transform: uppercase;
                  @include font(1, 50);
-                 @include rfs-fs(2);
+                 @include f-size(2);
                  margin-top: 10vh;
                  &:after {
                      content: "";
@@ -20,7 +23,7 @@
                      margin: 0 auto;
                      width: 20%;
                      padding-top: 1vh;
-                     border-bottom: 2px solid $c_brand;
+                     border-bottom: 0.3vh solid $c_brand;
                  }
              }
              .pm_inner_page {
@@ -54,11 +57,14 @@
          @include mob(false) {
              .pm_text {
                  width: 90vw;
-                 line-height: 160%;
+                 line-height: 130%;
              }
          }
          
-         .pm_text {}
+         .pm_text {
+             @include f-size($basicTextSize);
+             @include font(1, 300);
+         }
          
          .pm_intro_text {
              text-align: center;
