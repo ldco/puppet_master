@@ -212,7 +212,8 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     input[type="range"] {
         -webkit-appearance: none;
         width: 100%;
-        margin: 1vh 0;
+        margin-top: 2vh;
+        margin-bottom: -1vh;
         box-shadow: none !important;
         border: none !important;
     }
