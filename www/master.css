@@ -2491,28 +2491,21 @@ input:focus,
 button:focus {
   outline: none; }
 
-.pm_mobileBar {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
 img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;
-  -o-user-drag: none;
-  user-drag: none; }
+  -o-user-drag: none; }
 
 button,
 textarea,
 input,
 canvas {
   border: none !important;
-  border-radius: 3px;
+  border-radius: 0.2vh;
   padding: 0;
   font: inherit;
-  box-shadow: 1px 1px 2px 0 "";
+  box-shadow: 0.1vh 0.1vh 0.1vh 0 #474747;
   -webkit-user-select: text;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2530,32 +2523,11 @@ input[type="submit"] {
 input[type="password"] {
   direction: ltr !important; }
 
-iframe[src*=youtube] {
-  width: 1px;
-  min-width: 100%; }
-
-video,
-iframe {
-  -webkit-user-select: text;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border-radius: 1vh;
-  outline: none; }
-
 input {
   margin: 0 0 2vh 0;
   -webkit-appearance: none !important; }
   input:hover {
     filter: brightness(1.2); }
-
-select {
-  margin: 0 0 2vh 0;
-  font-size: 2.6vh;
-  text-transform: capitalize; }
-
-textarea {
-  margin: 0 0 2vh 0; }
 
 input[type="number"] {
   -moz-appearance: textfield; }
@@ -2587,10 +2559,27 @@ form {
     color: #ff0c00ff;
     font-size: 3vh; }
 
-.loginMessageText {
-  position: fixed;
-  bottom: 5vh;
-  text-transform: uppercase; }
+select {
+  font-size: 2.4vh;
+  margin: 0 0 2vh 0;
+  text-transform: capitalize; }
+
+textarea {
+  font-size: 2.4vh;
+  margin: 0 0 2vh 0; }
+
+iframe[src*=youtube] {
+  width: 1px;
+  min-width: 100%; }
+
+video,
+iframe {
+  -webkit-user-select: text;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 1vh;
+  outline: none; }
 
 @media (min-aspect-ratio: 13 / 9) {
   [data-mob=true] #mainAdminContent {
@@ -3254,6 +3243,11 @@ body {
 @media (max-width: 1210px) {
   [data-mob=false] #pm_adminLoginView img {
     width: 70vw; } }
+
+.loginMessageText {
+  position: fixed;
+  bottom: 5vh;
+  text-transform: uppercase; }
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] .grid_title {

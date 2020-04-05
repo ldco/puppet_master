@@ -23,20 +23,11 @@ button:focus {
     outline: none;
 }
 
-//users select none
-.pm_mobileBar {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
 img {
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
-    user-drag: none;
 }
 
 button,
@@ -44,10 +35,10 @@ textarea,
 input,
 canvas {
     border: none !important;
-    border-radius: 3px;
+    border-radius: 0.2vh;
     padding: 0;
     font: inherit;
-    box-shadow: 1px 1px 2px 0 "";
+    box-shadow: 0.1vh 0.1vh 0.1vh 0 $c_shadow;
     -webkit-user-select: text;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -69,6 +60,58 @@ input[type="password"] {
     direction: ltr !important;
 }
 
+input {
+    margin: 0 0 2vh 0;
+    -webkit-appearance: none !important;
+    &:hover {
+        filter: brightness(1.2);
+    }
+}
+
+//remove arrows from number input
+//For Firefox
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+//Webkit browsers like Safari and Chrome
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include f-size($basicTextSize);
+    input[type="submit"] {
+        background: $c_D_interP2;
+        color: $c_D_interM1;
+        padding: 1vh;
+        @include font(1, 400);
+    }
+    input {}
+    label {
+        span {
+            color: #ff0c00ff;
+            @include f-size($basicTextSize);
+        }
+    }
+}
+
+select {
+    @include f-size($basicTextSize - 0.2);
+    margin: 0 0 2vh 0;
+    text-transform: capitalize;
+}
+
+textarea {
+    @include f-size($basicTextSize - 0.2);
+    margin: 0 0 2vh 0;
+}
+
 iframe[src*=youtube] {
     width: 1px;
     min-width: 100%;
@@ -85,34 +128,3 @@ iframe {
 }
 
 video:focus {}
-
-input {
-    margin: 0 0 2vh 0;
-    -webkit-appearance: none !important;
-    &:hover {
-        filter: brightness(1.2);
-    }
-}
-
-select {
-    margin: 0 0 2vh 0;
-    font-size: 2.6vh;
-    text-transform: capitalize;
-}
-
-textarea {
-    margin: 0 0 2vh 0;
-}
-
-//remove arrows from number input
-//For Firefox
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-//Webkit browsers like Safari and Chrome
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}

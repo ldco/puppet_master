@@ -1,7 +1,7 @@
 //PM_MODALS
 //common
 .pm_modal {
-    @include disableSelect;
+    @include selectNone;
 }
 
 $modalParentHeight: 30vh;
