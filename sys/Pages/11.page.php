@@ -28,28 +28,30 @@ $form21->action = htmlspecialchars("mail.php");
 echo $form21->form_open("inscript_form", "inscript_form_1", "", "", "onsubmit='$jsfun'");
 
 $form21->required = "name,mail";
-$form21->required_indicator = "*";
+$form21->required_indicator = "<span>*</span>";
 
 echo $form21->input_text("name", $form21_name, "", "", "placeholder='{$form21_name}'");
 echo $form21->input_email("mail", $form21_mail, "", "", "placeholder='{$form21_mail}'");
 echo $form21->input_tel("tel", $form21_tel, "", "", "placeholder='$form21_tel'");
 
-/* $form21r_options = array(
-     $inscription_dropdown["logo"][PM_LANG],
-    $inscription_dropdown["brand"][PM_LANG],
-    $inscription_dropdown["vcard"][PM_LANG],
-    $inscription_dropdown["archvise"][PM_LANG],
-    $inscription_dropdown["wpage"][PM_LANG],
-    $inscription_dropdown["wapp"][PM_LANG],
-    $inscription_dropdown["dapp"][PM_LANG],
-    $inscription_dropdown["mapp"][PM_LANG],
-    $inscription_dropdown["font"][PM_LANG],
-    $inscription_dropdown["ui"][PM_LANG],
-    $inscription_dropdown["print"][PM_LANG],
-    $inscription_dropdown["motion"][PM_LANG],); */
+$form21r_options = array(
+    pmTranslate(PM_LANG, "logo", false),
+    pmTranslate(PM_LANG, "branding", false),
+    pmTranslate(PM_LANG, "visit card", false),
+    pmTranslate(PM_LANG, "archvize", false),
+    pmTranslate(PM_LANG, "web page", false),
+    pmTranslate(PM_LANG, "web app", false),
+    pmTranslate(PM_LANG, "desktop app", false),
+    pmTranslate(PM_LANG, "mobile app", false),
+    pmTranslate(PM_LANG, "custom font", false),
+    pmTranslate(PM_LANG, "UI design", false),
+    pmTranslate(PM_LANG, "UX design", false),
+    pmTranslate(PM_LANG, "print", false),
+    pmTranslate(PM_LANG, "motion graphics", false)
+);
 
-/* echo $form21->input_select("options", $form21_interest, "", "", "", "", "", $form21r_options);
-*/
+
+echo $form21->input_select("options", $form21_interest, "", "", "", "", "", $form21r_options);
 
 echo $form21->input_textarea("comments", $form21_com, "", "rows='4'", "placeholder='$form21_com'");
 

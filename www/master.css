@@ -2583,6 +2583,9 @@ form {
     [lang=he] form input[type="submit"] {
       font-family: Heebo;
       font-weight: 400; }
+  form label span {
+    color: #ff0c00ff;
+    font-size: 3vh; }
 
 .loginMessageText {
   position: fixed;

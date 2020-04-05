@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 02, 2020 at 01:47 AM
+-- Generation Time: Apr 06, 2020 at 01:10 AM
 -- Server version: 10.4.12-MariaDB-1:10.4.12+maria~bionic-log
 -- PHP Version: 7.4.2
 
@@ -78,6 +78,32 @@ INSERT INTO `pm_adm_nav` (`id`, `name`, `img`, `fun`, `link`, `sub`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pm_contact`
+--
+
+CREATE TABLE `pm_contact` (
+  `id` int(11) NOT NULL,
+  `text` int(11) NOT NULL,
+  `img` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pm_contact`
+--
+
+INSERT INTO `pm_contact` (`id`, `text`, `img`, `value`, `link`) VALUES
+(13, 28, 'tel', '+972527970845', '+972527970845'),
+(14, 124, 'telega', '@ldandco', 'https://telegram.me/ldandco'),
+(15, 123, 'wa', '+972527970845', 'https://wa.me/972527970845'),
+(16, 122, 'fb', 'fabrica21studio', 'https://www.facebook.com/fabrica21studio/'),
+(17, 126, 'insta', 'fabrica21studio', 'https://www.instagram.com/fabrica21studio/'),
+(18, 125, 'mail', 'fabrica21studio@yandex.ru', 'fabrica21studio@yandex.ru');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pm_loc`
 --
 
@@ -104,7 +130,6 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (58, NULL, NULL, 'איש קשר', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (87, NULL, NULL, 'המייל נשלח בהצלחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (74, NULL, NULL, 'הנחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(63, NULL, NULL, 'הערות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (79, NULL, NULL, 'העתק', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (84, NULL, NULL, 'הפעולה עברה בהצלחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (85, NULL, NULL, 'חשבונית מס הופקה בהצלחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -120,7 +145,6 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (81, NULL, NULL, 'מבוטל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (70, NULL, NULL, 'מחיר', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (78, NULL, NULL, 'מחשבון מהיר', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(60, NULL, NULL, 'מייל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (89, NULL, NULL, 'מייל זה נשלח ע\'י', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (67, NULL, NULL, 'מס\'', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (54, NULL, NULL, 'מס\' לקוח', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -142,7 +166,6 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (65, NULL, NULL, 'פריטים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (48, NULL, NULL, 'רשיון תכנה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (51, NULL, NULL, 'רשימת לקוחות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(56, NULL, NULL, 'תאריך', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (64, NULL, NULL, 'תפריט ראשי', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (97, 'about', 'о нас', 'עלינו', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (24, 'age', 'возраст', 'גיל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -160,24 +183,34 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (103, 'brightness', 'яркость', 'בהירות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (39, 'cancel', 'отменить', 'בטל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (40, 'close', 'закрыть', 'סגור', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(63, 'comments', 'комментарии', 'הערות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (96, 'contacts', 'контакты', 'צור קשר', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (102, 'contrast', 'контраст', 'ניגודיות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(135, 'custom font', 'шрифт на заказ', 'גופן אישי', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(56, 'date', 'дата', 'תאריך', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(133, 'desktop app', 'десктопное приложение', 'אפליקציית דסקטופ', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (34, 'disciplines', 'дисциплины', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (37, 'enter', 'войти', 'כנס', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (109, 'error', 'ошибка', 'שגיאה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7, 'events list', 'список чемпионатов', 'רשימת תחרויות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (38, 'exit', 'выход', 'יציאה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(122, 'facebook', 'фейсбук', 'פייסבוק', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (99, 'font size', 'размер шрифта', 'גודל פונט', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (106, 'highlight links', 'подчеркнуть ссылки', 'הדגשת קישורים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (1, 'home', 'на главную', 'בית', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (29, 'id', 'номер у.л.', 'מס תז', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (91, 'images', 'изображения', 'תמונות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(128, 'inetersted in', 'заинтересован в', 'מעוניין ב', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(126, 'instagram', 'инстаграм', 'אינסטגרם', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (113, 'internet', 'интернет', 'אינטרנט', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (31, 'judge positions', 'судейские должности', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 'judges', 'судьи', 'שופטים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (22, 'last name', 'фамилия', 'שם משפחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(129, 'logo', 'логотип', 'לוגו', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(125, 'mail', 'эл. почта', 'דוא\'ל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (6, 'mailing', 'рассылка', 'דיוור', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (42, 'message', 'сообщение', 'הודעה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(134, 'mobile app', 'мобильное приложение', 'אפליקציית מובייל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (117, 'motion graphics', 'моушн дизайн', 'מושן גרפיקס', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (21, 'name', 'имя', 'שם', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (107, 'negative', 'негатив', 'תשליל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -198,14 +231,40 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (5, 'statistics', 'статистика', 'סטטיסטיקה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (105, 'stop/restart animations', 'стоп/старт анимации', 'עצור/שחזר אנימציה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (93, 'styles', 'стили', 'סגנונות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(94, 'team', 'команда', 'צוות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(127, 'submit', 'отправить', 'שלח', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (119, 'team', 'команда', 'צוות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (28, 'tel.', 'тел.', 'טל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(124, 'telegram', 'телеграм', 'טלגרם', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (92, 'texts', 'тексты', 'טקסטים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, 'tournament', 'соревнование', 'תחרות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (115, 'typography', 'типографика', 'גופנים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(136, 'UI design', 'UI-дизайн', 'עיצוב ממשק משתמש', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(137, 'UX design', 'UX-дизайн', 'עיצוב חוויית משתמש', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(130, 'visit card', 'визитка', 'כרטיס ביקור', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(132, 'web app', 'интернет приложение', 'אפליקציית ווב', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(131, 'web page', 'веб-сайт', 'אתר אינטרטנט', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (25, 'weight', 'вес', 'משקל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(123, 'whatsapp', 'ватсап', 'וואטסאפ', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (35, 'yes', 'да', 'כן', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_mail`
+--
+
+CREATE TABLE `pm_mail` (
+  `id` int(11) NOT NULL,
+  `mail` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password_hash` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pm_mail`
+--
+
+INSERT INTO `pm_mail` (`id`, `mail`, `password_hash`) VALUES
+(1, 'fabrica21studio@yandex.ru', '');
 
 -- --------------------------------------------------------
 
@@ -291,7 +350,7 @@ CREATE TABLE `pm_text` (
 --
 
 INSERT INTO `pm_text` (`id`, `en`, `ru`, `he`, `fr`, `it`, `es`, `de`, `zh`, `ja`, `hi`, `ar`) VALUES
-('10_1', 'Louis David (Jack of Spades)', 'Луи Давид (Пиковый валет)', 'לואי דוד (נסיף עלה)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('10_1', 'Louis David (Jack of Spades)', 'Луи Давид (Пиковый валет)', 'לואי דוד (נסיך עלה)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('10_10', 'Black Joker', 'Черный Джокер', 'ג\'וקר שחור', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('10_2', 'B.O.S.S', 'Б.О.С.С', 'ב.ו.ס.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('10_4', 'Queen of Clubs', 'Крестовая Дама', 'מלכה תלתן', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -319,7 +378,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `user_email`, `user_password_hash`) VALUES
-(1, 'ad', 'nikitatut@yandex.ru', '$argon2i$v=19$m=65536,t=4,p=1$YXdrWmFjQ2JZQVRmRTBYaQ$QmaMUYBMumh5JqJYXHHy7yilaugBrgIQqpWt1mZ2u6w');
+(1, 'ad', '', '$argon2i$v=19$m=65536,t=4,p=1$YXdrWmFjQ2JZQVRmRTBYaQ$QmaMUYBMumh5JqJYXHHy7yilaugBrgIQqpWt1mZ2u6w');
 
 --
 -- Indexes for dumped tables
@@ -341,6 +400,14 @@ ALTER TABLE `pm_adm_nav`
   ADD KEY `id` (`id`);
 
 --
+-- Indexes for table `pm_contact`
+--
+ALTER TABLE `pm_contact`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`),
+  ADD KEY `text` (`text`);
+
+--
 -- Indexes for table `pm_loc`
 --
 ALTER TABLE `pm_loc`
@@ -348,6 +415,12 @@ ALTER TABLE `pm_loc`
   ADD UNIQUE KEY `en` (`en`,`ru`,`he`,`fr`,`it`,`de`,`zh`,`ja`,`hi`,`ar`),
   ADD UNIQUE KEY `id` (`id`,`en`,`ru`,`he`,`fr`,`it`,`de`,`zh`,`ja`,`hi`,`ar`),
   ADD UNIQUE KEY `id_2` (`id`,`en`,`ru`,`he`,`fr`,`it`,`de`,`zh`,`ja`,`hi`,`ar`);
+
+--
+-- Indexes for table `pm_mail`
+--
+ALTER TABLE `pm_mail`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `pm_pub_nav`
@@ -397,10 +470,22 @@ ALTER TABLE `pm_adm_nav`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `pm_contact`
+--
+ALTER TABLE `pm_contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
 -- AUTO_INCREMENT for table `pm_loc`
 --
 ALTER TABLE `pm_loc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+
+--
+-- AUTO_INCREMENT for table `pm_mail`
+--
+ALTER TABLE `pm_mail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pm_pub_nav`
@@ -429,6 +514,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `pm_adm_nav`
   ADD CONSTRAINT `pm_adm_nav_ibfk_1` FOREIGN KEY (`name`) REFERENCES `pm_loc` (`id`);
+
+--
+-- Constraints for table `pm_contact`
+--
+ALTER TABLE `pm_contact`
+  ADD CONSTRAINT `pm_contact_ibfk_1` FOREIGN KEY (`text`) REFERENCES `pm_loc` (`id`);
 
 --
 -- Constraints for table `pm_pub_nav`
