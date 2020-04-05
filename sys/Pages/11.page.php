@@ -15,8 +15,6 @@ $page11->h(1);
 
 $form21jsfun = "form21jsFun();";
 
-
-
 $form21_name = pmTranslate(PM_LANG, "name", false);
 $form21_mail = pmTranslate(PM_LANG, "mail", false);
 $form21_tel = pmTranslate(PM_LANG, "tel.", false);
@@ -51,7 +49,8 @@ echo $form21->input_tel("tel", $form21_tel, "", "", "placeholder='$form21_tel'")
     $inscription_dropdown["motion"][PM_LANG],); */
 
 /* echo $form21->input_select("options", $form21_interest, "", "", "", "", "", $form21r_options);
- */
+*/
+
 echo $form21->input_textarea("comments", $form21_com, "", "rows='4'", "placeholder='$form21_com'");
 
 $form21->html_purifier = $_SERVER["DOCUMENT_ROOT"] . "vendor/masterjoa/htmlpurifier-standalone/src/HTMLPurifier.php";
@@ -59,6 +58,5 @@ $form21->html_purifier = $_SERVER["DOCUMENT_ROOT"] . "vendor/masterjoa/htmlpurif
 echo $form21->input_submit("submitForm", "&nbsp;", "$form21_submit");
 
 echo $form21->form_close();
-
 
 $page11->close();

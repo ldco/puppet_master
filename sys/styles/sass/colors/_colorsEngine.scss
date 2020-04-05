@@ -1,6 +1,5 @@
 /*automatically calculated*/
 
-//common
 $c_interBB:$c_brand;
 $c_interBP1:lighten($c_brand, 8%);
 $c_interBP2:lighten($c_brand, 16%);
@@ -42,3 +41,5 @@ $c_D_interP1: lighten($c_opos, 16%);
 $c_D_interP2: lighten($c_opos, 24%);
 $c_D_interM1: $c_opos;
 $c_D_interM2: darken($c_opos, 4%);
+//shadow
+$c_shadow: desaturate(lighten($c_black, 26%), 100);

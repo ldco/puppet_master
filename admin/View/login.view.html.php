@@ -17,9 +17,9 @@
     ?>
 
     <script>
-        var el = document.getElementsByClassName("loginMessageText")[0];
+        let el = document.getElementsByClassName("loginMessageText")[0];
         if (el.className === "loginMessageText errorText") {
-            el.style.borderBottom = "solid 6px red";
+            el.style.borderBottom = "solid 2vh red";
         }
     </script>
 

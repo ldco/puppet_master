@@ -8,6 +8,8 @@ form {
         padding: 1vh;
         @include font(1, 400);
     }
+    @include f-size($basicTextSize);
+    input {}
 }
 
 .loginMessageText {

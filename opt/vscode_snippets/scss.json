@@ -24,27 +24,50 @@
         "prefix": "mob",
         "body": [
             "@include mob(true) {",
-            "#someid {display: none !important;}}",
+            "$1#someid {$2display: none !important;}}",
             "@include mob(false) {",
-            "#someid{display: none !important;}}"
+            "$3#someid{$4display: none !important;}}"
         ],
         "description": "mob query"
     },
     "box shadow": {
-        "prefix": "s",
+        "prefix": "bs",
         "body": [
-            "box-shadow:$1 0px$2 0px$3 2px$4 2px $5#333;"
+            "box-shadow:$1 0$2 0$3 2$4 2 $5\\$c_shadow;"
         ],
         "description": "box shadow css"
     },
     "display flex": {
-        "prefix": "f",
+        "prefix": "fc",
         "body": [
             "display: flex;",
-            "ustify-content: $1center;",
+            "justify-content: $1center;",
             "align-items: $2center;",
         ],
         "description": "display flex all center"
-    }
+    },
+    "calc": {
+        "prefix": "calc",
+        "body": [
+            "calc(#{$1} / #{$2})"
+        ],
+        "description": "calc"
+    },
+    "widthheight": {
+        "prefix": "wh",
+        "body": [
+            "width: $1vw;",
+            "height: $1vh;",
+        ],
+        "description": "width & height"
+    },
+    "fontSize": {
+        "prefix": "fs",
+        "body": [
+            " @include f-size($1\\$basicTextSize)"
+
+        ],
+        "description": "pm font size"
+    },
 
 }

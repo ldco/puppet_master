@@ -161,45 +161,6 @@ font-size: 2vh;
         height: calc(#{map-get($mob, height)} / 2.6);
     }
 }
-//languages menu
-#selectLangIcon {
-    width: 4vh;
-    height: 4vh;
-    cursor: pointer;
-    padding: 3px;
-    border-radius: 3px;
-    border: solid 1px transparent;
-    &:hover {
-        border: solid 1px "";
-    }
-}
-#selectLang {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2vh;
-}
-#selectLangSub,
-#languagesMenuMobile {
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    input[type="submit"] {
-        text-transform: uppercase;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border: 0;
-        width: 5vh;
-        height: 5vh;
-        margin: 1vh;
-        cursor: pointer;
-        &:hover {
-            filter: brightness(1.5);
-        }
-    }
-}
 //langs
 .pm_class_Nav {
     .pm_Lang {
@@ -222,11 +183,11 @@ font-size: 2vh;
             padding: 0.7vh !important;
             &:hover {
                 filter: brightness(1.2);
-                box-shadow: 0px 0px 5px 0px $c_opos;
+                box-shadow: 0 0 0.5vh 0 $c_opos;
             }
             &:active {
                 filter: brightness(1.2);
-                box-shadow: 0px 0px 5px 1px $c_opos;
+                box-shadow: 0 0 0.5vh 0.1vh $c_opos;
             }
         }
     }
@@ -248,17 +209,18 @@ font-size: 2vh;
         justify-content: center;
         align-items: center;
         input {
-            background-color: rgba($c_domin, 0.7);
+            @include f-size(0.8);
+            background-color: rgba($c_domin, 0.8);
             color: $c_opos;
             margin-top: 2vh;
             border-radius: 0.6vh;
             padding: 0.7vh !important;
             box-shadow: 0px 0px 2px 0px $c_opos;
             &:hover {
-                box-shadow: 0px 0px 5px 0px $c_opos;
+                box-shadow: 0px 0px 0.5vh 0px $c_opos;
             }
             &:active {
-                box-shadow: 0px 0px 5px 1px $c_opos;
+                box-shadow: 0 0 0.5vh 0.1vh $c_opos;
             }
         }
     }
@@ -267,32 +229,32 @@ font-size: 2vh;
     @include font(1,
     400);
     .pm_Lang {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10vh;
-        width: 100%;
         position: absolute;
         bottom: 3vh;
+        width: 100%;
+        height: 10vh;
         img {
             display: none;
         }
-        .pm_langNavMobile {
-            width: 100%;
-            form {
+        .pm_langNavMobile {}
+        form {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: row;
+            input {
                 display: flex;
-                justify-content: space-evenly;
-                input {
-                    background-color: $c_brand;
-                    color: $c_domin;
-                    border-radius: 0.4vh;
-                    width: 4vh;
-                    height: 4vh;
-                    margin: 0;
-                    @include font(1,
-                    400);
-                    font-size: 2vh;
-                }
+                justify-content: center;
+                align-items: center;
+                background-color: $c_brand;
+                color: $c_domin;
+                border-radius: 0.4vh;
+                width: 4vh;
+                height: 4vh;
+                margin: 0;
+                @include font(1,
+                400);
+                @include f-size(0.7)
             }
         }
     }

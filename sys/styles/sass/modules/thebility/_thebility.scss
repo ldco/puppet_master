@@ -1,12 +1,12 @@
 #pm_thebility {
-    z-index: 2000;
+    z-index: 2020;
 }
 
 $mainTHebiltyColor: rgba($c_interBP1, 0.7);
 $backTHebiltyColor: rgba($c_domin, 0.8);
 #thebilityIcon {
     position: fixed;
-    z-index: 2001;
+    z-index: 2020;
     [dir="rtl"] & {
         left: 0;
     }
@@ -16,12 +16,12 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     top: 15vh;
     background-color: $mainTHebiltyColor;
     [dir="rtl"] & {
-        border-top-right-radius: 0.6vh;
-        border-bottom-right-radius: 0.6vh;
+        border-top-right-radius: 0.4vh;
+        border-bottom-right-radius: 0.4vh;
     }
     [dir="ltr"] & {
-        border-top-left-radius: 0.6vh;
-        border-bottom-left-radius: 0.6vh;
+        border-top-left-radius: 0.4vh;
+        border-bottom-left-radius: 0.4vh;
     }
     img {
         cursor: pointer;
@@ -57,8 +57,8 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     div {
         background: rgba($c_opos, 0.7);
         padding: 1vh;
-        border-radius: 0.6vh;
-        box-shadow: 0px 0px 0px 0.6vh $mainTHebiltyColor;
+        border-radius: 0.4vh;
+        box-shadow: 0 0 0 0.4vh $mainTHebiltyColor;
         user-select: none;
         display: flex;
         flex-direction: column;
@@ -100,21 +100,24 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         right: calc(#{90vw} - #{35vh});
     }
     .thebilityDiv {
-        @include font(1, 400);
-        @include f-size(0.8);
+        @include font(1, 200);
+        @include f-size(0.6);
         text-transform: capitalize;
         text-align: center;
         background: $backTHebiltyColor;
         padding: 2vh;
         border-radius: 0.8vh;
-        box-shadow: 0px 0px 0px 0.6vh $mainTHebiltyColor;
+        box-shadow: 0 0 0 0.4vh $mainTHebiltyColor;
         width: 30vh;
         user-select: none;
         margin-top: 2vh;
         cursor: pointer;
         &:hover {
             background: darken($backTHebiltyColor, 3%);
-            box-shadow: 0px 0px 0px 0.6vh lighten($mainTHebiltyColor, 9%);
+            box-shadow: 0 0 0 0.4vh lighten($mainTHebiltyColor, 9%);
+        }
+        input {
+            margin-top: 1vh;
         }
     }
     .column {
@@ -223,16 +226,16 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         width: 100%;
         height: 1vh;
         cursor: pointer;
-        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0 0 0.5vh rgba(13, 13, 13, 0);
         background: rgba($c_interBB, 0.8);
         border-radius: 0.5vh;
-        border: 0px solid rgba(255, 255, 255, 0);
+        border: 0 solid rgba(255, 255, 255, 0);
     }
     input[type="range"]::-webkit-slider-thumb {
-        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
         height: 3vh;
         width: 2vh;
-        border-radius: 0px;
+        border-radius: 0;
         background: rgba($c_opos, 0.3);
         cursor: pointer;
         -webkit-appearance: none;
@@ -245,53 +248,51 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         width: 100%;
         height: 1vh;
         cursor: pointer;
-        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0 0 0.5vh rgba(13, 13, 13, 0);
         background: rgba($c_interBB, 0.8);
         border-radius: 0.5vh;
-        border: 0px solid rgba(255, 255, 255, 0);
+        border: 0 solid rgba(255, 255, 255, 0);
     }
     input[type="range"]::-moz-range-thumb {
-        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
         height: 3vh;
         width: 2vh;
-        border-radius: 0px;
+        border-radius: 0;
         background: rgba($c_opos, 0.3);
         cursor: pointer;
         margin-top: -1vh;
     }
-    /*  input[type="range"]::-ms-track {
-         width: 100%;
-         height: 1vh;
-         cursor: pointer;
-          background: transparent;
-          border-color: transparent;
-          color: transparent;
-
+    input[type="range"]::-ms-track {
+        width: 100%;
+        height: 3vh;
+        cursor: pointer;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
     }
     input[type="range"]::-ms-fill-lower {
-        background: rgba($c_interBB, 0.3);
-        border: 0px solid rgba(255, 255, 255, 0);
+        background: rgba($c_interBB, 0.8);
+        border: 0 solid rgba(255, 255, 255, 0);
         border-radius: 1vh;
-        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0 0 0.5vh rgba(13, 13, 13, 0);
     }
     input[type="range"]::-ms-fill-upper {
-        background: rgba($c_interBB, 0.3);
-        border: 0px solid rgba(255, 255, 255, 0);
+        background: rgba($c_interBB, 0.8);
+        border: 0 solid rgba(255, 255, 255, 0);
         border-radius: 1vh;
-        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0 0 0.5vh rgba(13, 13, 13, 0);
     }
     input[type="range"]::-ms-thumb {
-        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-        // border: 0px solid #d670b7;
-        height: 4vh;
-        width: 3vh;
-        border-radius: 0px;
-        background: rgba($c_interBB, 0.66);
+        box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+        height: 3vh;
+        width: 2vh;
+        border-radius: 0;
+        background: rgba($c_opos, 0.3);
     }
     input[type="range"]:focus::-ms-fill-lower {
-        background: rgba($c_interBB, 0.3);
+        background: rgba($c_interBB, 0.5);
     }
     input[type="range"]:focus::-ms-fill-upper {
-        background: rgba($c_interBB, 0.3);
-    } */
+        background: rgba($c_interBB, 0.5);
+    }
 }

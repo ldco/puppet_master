@@ -13,9 +13,8 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     display: flex;
     flex-direction: column;
     position: fixed;
-    border-radius: 9px;
-    // background-color: $c_domin;
-    background-color: $c_opos;
+    border-radius: 1vh;
+    background-color: $c_white;
     z-index: 100;
     text-align: center;
     cursor: default;
@@ -23,7 +22,7 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     z-index: 1984;
     min-height: $modalParentHeight;
     min-width: $modalParentWidth;
-    box-shadow: 1px 1px 1px 1px $c_interM2;
+    box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh $c_shadow;
 }
 
 //areas
@@ -37,11 +36,12 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     align-items: center;
     text-transform: uppercase;
     div {
-        margin-top: 3px;
+        margin-top: 1vh;
     }
 }
 
 .pm_modal_contentArea {
+    @include f-size(0.8);
     width: 100%;
     position: absolute;
     top: 5vh;
@@ -63,30 +63,30 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    bottom: 0px;
+    bottom: 0;
 }
 
 input.pm_modal_button {
-    filter: grayscale(1);
+    @include f-size($basicTextSize);
     width: $modalButtonsWidth;
     height: $modalButtonsHeight;
     font-size: $modalButtonsHeight / 2;
-    border-radius: 3px;
-    //background-color: $c_interM1;
-    background-color: darken($c_opos, 26%);
-    box-shadow: 1px 1px 1px 1px $c_dominSub;
+    border-radius: 0.3vh;
+    background-color: darken($c_white, 14%);
+    box-shadow: 0.08vh 0.08vh 0.08vh 0.08vh $c_shadow;
     text-transform: capitalize;
-    &:hover {
-        filter: grayscale(1) brightness(0.8);
-    }
+    &:hover {}
     &:active {
-        filter: grayscale(1) brightness(1.1);
-        box-shadow: -1px -1px 1px 1px $c_interM2;
+        box-shadow: -0.08vh -0.08vh 0.08vh 0.08vh $c_shadow;
     }
 }
 
 //title
-.pm_modal_title {}
+.pm_modal_title {
+    @include font(1, 400);
+    @include f-size(1.1);
+    color: $c_brand;
+}
 
 //icons
 .pm_modal_icon {
@@ -96,15 +96,13 @@ input.pm_modal_button {
     background-repeat: no-repeat;
     top: 1vh;
     position: absolute;
-    &:hover {
-        filter: brightness(1.8) !important;
-    }
+    &:hover {}
 }
 
 .pm_modal_icon_close {
     cursor: pointer;
     background-image: url(../sys/assets/icons/vector/close.svg);
-    right: 10px;
+    right: 2vh;
 }
 
 .pm_modal_icon_drag {
@@ -114,7 +112,7 @@ input.pm_modal_button {
     cursor: -moz-grab;
     cursor: -webkit-grab;
     background-image: url(../sys/assets/icons/vector/drag.svg);
-    left: 10px;
+    left: 2vh;
 }
 
 .pm_modal_input {}
@@ -134,76 +132,3 @@ input.pm_modal_button {
         content: "*";
     }
 }
-
-
-/* .pm_modalNameSpan {
-    width: 100%;
-    height: 5vh;
-    top: 2vh;
-    font-size: 3.5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}
-
-
-
-.pm_modalButtonSpan {
-    width: 8vw;
-    height: 5vh;
-    z-index: 12;
-    font-size: 2.2vh;
-    border-radius: 3px;
-}
-
-.pm_modalContent {
-    
-}
-
-.pm_modalSpan {
-    font-size: 2.4vh;
-}
-
-.pm_modalWindow {
-    height: 76%;
-    background: black;
-    border-radius: 1vh;
-    width: 80% !important;
-    overflow-x: hidden;
-}
-
-.alertPrompt {
-    .promptContent {
-        text-align: center !important;
-    }
-}
-
-.inputDiv {
-    display: flex;
-    flex-direction: column;
-    span {
-        padding-bottom: 1vh;
-        font-size: 2.2vh;
-        span {
-            filter: none !important;
-        }
-    }
-    input {}
-}
-
-.red {
-    color: red !important;
-    filter: none !important;
-}
-
-.red+input {
-    border: solid 1px red !important;
-}
-
-.small {
-    font-size: 1.8vh;
-}
-
-.
-} */
