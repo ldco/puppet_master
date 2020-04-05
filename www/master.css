@@ -2565,6 +2565,29 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  form input[type="submit"] {
+    background: white;
+    color: #e4e9ed;
+    padding: 1vh; }
+    [lang=en] form input[type="submit"] {
+      font-family: Montserrat;
+      font-weight: 400; }
+    [lang=ru] form input[type="submit"] {
+      font-family: Montserrat;
+      font-weight: 400; }
+    [lang=he] form input[type="submit"] {
+      font-family: Heebo;
+      font-weight: 400; }
+
+.loginMessageText {
+  position: fixed;
+  bottom: 5vh;
+  text-transform: uppercase; }
+
 @media (min-aspect-ratio: 13 / 9) {
   [data-mob=true] #mainAdminContent {
     width: calc(100vw - 6vh);
@@ -3256,27 +3279,6 @@ body {
     top: 15vh; }
   #pm_adminLoginView img {
     width: 30vw; }
-  #pm_adminLoginView form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; }
-    #pm_adminLoginView form input[type="submit"] {
-      background: white;
-      color: #e4e9ed;
-      padding: 1vh; }
-      [lang=en] #pm_adminLoginView form input[type="submit"] {
-        font-family: Montserrat;
-        font-weight: 400; }
-      [lang=ru] #pm_adminLoginView form input[type="submit"] {
-        font-family: Montserrat;
-        font-weight: 400; }
-      [lang=he] #pm_adminLoginView form input[type="submit"] {
-        font-family: Heebo;
-        font-weight: 400; }
-  #pm_adminLoginView .loginMessageText {
-    position: fixed;
-    bottom: 5vh;
-    text-transform: uppercase; }
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] #pm_adminLoginView img {
@@ -3700,11 +3702,11 @@ input.pm_modal_button {
   [dir="ltr"] #thebilityIcon {
     right: 0; }
   [dir="rtl"] #thebilityIcon {
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px; }
+    border-top-right-radius: 0.6vh;
+    border-bottom-right-radius: 0.6vh; }
   [dir="ltr"] #thebilityIcon {
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px; }
+    border-top-left-radius: 0.6vh;
+    border-bottom-left-radius: 0.6vh; }
   #thebilityIcon img {
     cursor: pointer;
     width: 2.6vh;
@@ -3732,8 +3734,8 @@ input.pm_modal_button {
   #thebility_buttonsDiv div {
     background: rgba(228, 233, 237, 0.7);
     padding: 1vh;
-    border-radius: 4px;
-    box-shadow: 0px 0px 0px 5px rgba(55, 92, 109, 0.7);
+    border-radius: 0.6vh;
+    box-shadow: 0px 0px 0px 0.6vh rgba(55, 92, 109, 0.7);
     user-select: none;
     display: flex;
     flex-direction: column;
@@ -3744,6 +3746,9 @@ input.pm_modal_button {
       filter: grayscale(0); }
     #thebility_buttonsDiv div:active {
       filter: grayscale(0); }
+    #thebility_buttonsDiv div img {
+      width: 2.8vh;
+      height: 2.8vh; }
   #thebility_buttonsDiv div:last-of-type {
     margin-top: 2vh; }
 
@@ -3753,25 +3758,24 @@ input.pm_modal_button {
   opacity: 0;
   width: auto;
   position: fixed;
-  top: 12vh;
-  border-radius: 4px;
+  top: 8vh;
   z-index: 999;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   user-select: none; }
   [dir="ltr"] #thebilityMainDiv {
-    left: calc(90vw- 35vh); }
+    left: calc(90vw - 35vh); }
   [dir="rtl"] #thebilityMainDiv {
-    left: 10vh; }
+    right: calc(90vw - 35vh); }
   #thebilityMainDiv .thebilityDiv {
     font-size: 2.4vh;
     text-transform: capitalize;
     text-align: center;
     background: rgba(0, 7, 10, 0.8);
     padding: 2vh;
-    border-radius: 4px;
-    box-shadow: 0px 0px 0px 5px rgba(55, 92, 109, 0.7);
+    border-radius: 0.8vh;
+    box-shadow: 0px 0px 0px 0.6vh rgba(55, 92, 109, 0.7);
     width: 30vh;
     user-select: none;
     margin-top: 2vh;
@@ -3787,13 +3791,14 @@ input.pm_modal_button {
       font-weight: 400; }
     #thebilityMainDiv .thebilityDiv:hover {
       background: rgba(0, 0, 0, 0.8);
-      box-shadow: 0px 0px 0px 5px rgba(70, 118, 140, 0.7); }
+      box-shadow: 0px 0px 0px 0.6vh rgba(70, 118, 140, 0.7); }
   #thebilityMainDiv .column {
     display: flex;
     flex-direction: column; }
 
 #dragThebility {
-  cursor: -webkit-grab; }
+  cursor: -webkit-grab;
+  cursor: -moz-grab; }
 
 #closeThebility {
   cursor: pointer; }
@@ -3865,7 +3870,7 @@ input.pm_modal_button {
   animation-play-state: paused !important; }
 
 .aUnderline {
-  border-bottom: 1.5px solid #294552 !important; }
+  border-bottom: 0.5vh solid #294552 !important; }
 
 .invertHtml {
   filter: invert(100%) !important; }
@@ -3873,91 +3878,87 @@ input.pm_modal_button {
 .bolderfont {
   font-weight: 900 !important; }
 
-#thebilityMainDiv input[type="range"] {
-  -webkit-appearance: none;
-  width: 100%;
-  margin: 6.5px 0;
-  box-shadow: none !important;
-  border: none !important; }
+#thebilityMainDiv {
+  /*  input[type="range"]::-ms-track {
+         width: 100%;
+         height: 1vh;
+         cursor: pointer;
+          background: transparent;
+          border-color: transparent;
+          color: transparent;
 
-#thebilityMainDiv input[type="range"]:focus {
-  outline: none !important; }
-
-#thebilityMainDiv input[type="range"]:active {
-  outline: none !important; }
-
-#thebilityMainDiv input[type="range"]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 9px;
-  cursor: pointer;
-  box-shadow: 1px 1px 2.3px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
-  background: rgba(41, 69, 82, 0.3);
-  border-radius: 1px;
-  border: 0px solid rgba(255, 255, 255, 0); }
-
-#thebilityMainDiv input[type="range"]::-webkit-slider-thumb {
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  height: 22px;
-  width: 17px;
-  border-radius: 0px;
-  background: rgba(41, 69, 82, 0.66);
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -6.5px; }
-
-#thebilityMainDiv input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: rgba(41, 69, 82, 0.3); }
-
-#thebilityMainDiv input[type="range"]::-moz-range-track {
-  width: 100%;
-  height: 9px;
-  cursor: pointer;
-  box-shadow: 1px 1px 2.3px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
-  background: rgba(41, 69, 82, 0.3);
-  border-radius: 1px;
-  border: 0px solid rgba(255, 255, 255, 0); }
-
-#thebilityMainDiv input[type="range"]::-moz-range-thumb {
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  height: 22px;
-  width: 17px;
-  border-radius: 0px;
-  background: rgba(41, 69, 82, 0.66);
-  cursor: pointer; }
-
-#thebilityMainDiv input[type="range"]::-ms-track {
-  width: 100%;
-  height: 9px;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent; }
-
-#thebilityMainDiv input[type="range"]::-ms-fill-lower {
-  background: rgba(41, 69, 82, 0.3);
-  border: 0px solid rgba(255, 255, 255, 0);
-  border-radius: 2px;
-  box-shadow: 1px 1px 2.3px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0); }
-
-#thebilityMainDiv input[type="range"]::-ms-fill-upper {
-  background: rgba(41, 69, 82, 0.3);
-  border: 0px solid rgba(255, 255, 255, 0);
-  border-radius: 2px;
-  box-shadow: 1px 1px 2.3px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0); }
-
-#thebilityMainDiv input[type="range"]::-ms-thumb {
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-  height: 22px;
-  width: 17px;
-  border-radius: 0px;
-  background: rgba(41, 69, 82, 0.66);
-  height: 9px; }
-
-#thebilityMainDiv input[type="range"]:focus::-ms-fill-lower {
-  background: rgba(41, 69, 82, 0.3); }
-
-#thebilityMainDiv input[type="range"]:focus::-ms-fill-upper {
-  background: rgba(41, 69, 82, 0.3); }
+    }
+    input[type="range"]::-ms-fill-lower {
+        background: rgba($c_interBB, 0.3);
+        border: 0px solid rgba(255, 255, 255, 0);
+        border-radius: 1vh;
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+    }
+    input[type="range"]::-ms-fill-upper {
+        background: rgba($c_interBB, 0.3);
+        border: 0px solid rgba(255, 255, 255, 0);
+        border-radius: 1vh;
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+    }
+    input[type="range"]::-ms-thumb {
+        box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+        // border: 0px solid #d670b7;
+        height: 4vh;
+        width: 3vh;
+        border-radius: 0px;
+        background: rgba($c_interBB, 0.66);
+    }
+    input[type="range"]:focus::-ms-fill-lower {
+        background: rgba($c_interBB, 0.3);
+    }
+    input[type="range"]:focus::-ms-fill-upper {
+        background: rgba($c_interBB, 0.3);
+    } */ }
+  #thebilityMainDiv input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 1vh 0;
+    box-shadow: none !important;
+    border: none !important; }
+  #thebilityMainDiv input[type="range"]:focus {
+    outline: none !important; }
+  #thebilityMainDiv input[type="range"]:active {
+    outline: none !important; }
+  #thebilityMainDiv input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1vh;
+    cursor: pointer;
+    box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+    background: rgba(41, 69, 82, 0.8);
+    border-radius: 0.5vh;
+    border: 0px solid rgba(255, 255, 255, 0); }
+  #thebilityMainDiv input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    height: 3vh;
+    width: 2vh;
+    border-radius: 0px;
+    background: rgba(228, 233, 237, 0.3);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -1vh; }
+  #thebilityMainDiv input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: rgba(41, 69, 82, 0.5); }
+  #thebilityMainDiv input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 1vh;
+    cursor: pointer;
+    box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+    background: rgba(41, 69, 82, 0.8);
+    border-radius: 0.5vh;
+    border: 0px solid rgba(255, 255, 255, 0); }
+  #thebilityMainDiv input[type="range"]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    height: 3vh;
+    width: 2vh;
+    border-radius: 0px;
+    background: rgba(228, 233, 237, 0.3);
+    cursor: pointer;
+    margin-top: -1vh; }
 
 .pm_loader {
   position: fixed;

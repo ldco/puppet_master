@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    input[type="submit"] {
+        background: $c_D_interP2;
+        color: $c_D_interM1;
+        padding: 1vh;
+        @include font(1, 400);
+    }
+}
+
+.loginMessageText {
+    position: fixed;
+    bottom: 5vh;
+    text-transform: uppercase;
+}

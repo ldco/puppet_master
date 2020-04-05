@@ -16,12 +16,12 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     top: 15vh;
     background-color: $mainTHebiltyColor;
     [dir="rtl"] & {
-        border-top-right-radius: 7px;
-        border-bottom-right-radius: 7px;
+        border-top-right-radius: 0.6vh;
+        border-bottom-right-radius: 0.6vh;
     }
     [dir="ltr"] & {
-        border-top-left-radius: 7px;
-        border-bottom-left-radius: 7px;
+        border-top-left-radius: 0.6vh;
+        border-bottom-left-radius: 0.6vh;
     }
     img {
         cursor: pointer;
@@ -57,8 +57,8 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     div {
         background: rgba($c_opos, 0.7);
         padding: 1vh;
-        border-radius: 4px;
-        box-shadow: 0px 0px 0px 5px $mainTHebiltyColor;
+        border-radius: 0.6vh;
+        box-shadow: 0px 0px 0px 0.6vh $mainTHebiltyColor;
         user-select: none;
         display: flex;
         flex-direction: column;
@@ -70,6 +70,10 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         }
         &:active {
             filter: grayscale(0);
+        }
+        img {
+            width: 2.8vh;
+            height: 2.8vh;
         }
     }
     div:last-of-type {
@@ -83,18 +87,17 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     opacity: 0;
     width: auto;
     position: fixed;
-    top: 12vh;
-    border-radius: 4px;
+    top: 8vh;
     z-index: 999;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     user-select: none;
     [dir="ltr"] & {
-        left: calc(90vw- 35vh);
+        left: calc(#{90vw} - #{35vh});
     }
     [dir="rtl"] & {
-        left: 10vh;
+        right: calc(#{90vw} - #{35vh});
     }
     .thebilityDiv {
         @include font(1, 400);
@@ -103,15 +106,15 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         text-align: center;
         background: $backTHebiltyColor;
         padding: 2vh;
-        border-radius: 4px;
-        box-shadow: 0px 0px 0px 5px $mainTHebiltyColor;
+        border-radius: 0.8vh;
+        box-shadow: 0px 0px 0px 0.6vh $mainTHebiltyColor;
         width: 30vh;
         user-select: none;
         margin-top: 2vh;
         cursor: pointer;
         &:hover {
             background: darken($backTHebiltyColor, 3%);
-            box-shadow: 0px 0px 0px 5px lighten($mainTHebiltyColor, 9%);
+            box-shadow: 0px 0px 0px 0.6vh lighten($mainTHebiltyColor, 9%);
         }
     }
     .column {
@@ -122,6 +125,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
 
 #dragThebility {
     cursor: -webkit-grab;
+    cursor: -moz-grab;
 }
 
 #closeThebility {
@@ -190,7 +194,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
 }
 
 .aUnderline {
-    border-bottom: 1.5px solid $c_interBB !important;
+    border-bottom: 0.5vh solid $c_interBB !important;
 }
 
 .invertHtml {
@@ -205,7 +209,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     input[type="range"] {
         -webkit-appearance: none;
         width: 100%;
-        margin: 6.5px 0;
+        margin: 1vh 0;
         box-shadow: none !important;
         border: none !important;
     }
@@ -217,78 +221,77 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     }
     input[type="range"]::-webkit-slider-runnable-track {
         width: 100%;
-        height: 9px;
+        height: 1vh;
         cursor: pointer;
-        box-shadow: 1px 1px 2.3px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
-        background: rgba($c_interBB, 0.3);
-        border-radius: 1px;
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+        background: rgba($c_interBB, 0.8);
+        border-radius: 0.5vh;
         border: 0px solid rgba(255, 255, 255, 0);
     }
     input[type="range"]::-webkit-slider-thumb {
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-        // border: 0px solid #d670b7;
-        height: 22px;
-        width: 17px;
+        height: 3vh;
+        width: 2vh;
         border-radius: 0px;
-        background: rgba($c_interBB, 0.66);
+        background: rgba($c_opos, 0.3);
         cursor: pointer;
         -webkit-appearance: none;
-        margin-top: -6.5px;
+        margin-top: -1vh;
     }
     input[type="range"]:focus::-webkit-slider-runnable-track {
-        background: rgba($c_interBB, 0.3);
+        background: rgba($c_interBB, 0.5);
     }
     input[type="range"]::-moz-range-track {
         width: 100%;
-        height: 9px;
+        height: 1vh;
         cursor: pointer;
-        box-shadow: 1px 1px 2.3px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
-        background: rgba($c_interBB, 0.3);
-        border-radius: 1px;
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
+        background: rgba($c_interBB, 0.8);
+        border-radius: 0.5vh;
         border: 0px solid rgba(255, 255, 255, 0);
     }
     input[type="range"]::-moz-range-thumb {
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-        //  border: 0px solid #d670b7;
-        height: 22px;
-        width: 17px;
+        height: 3vh;
+        width: 2vh;
         border-radius: 0px;
-        background: rgba($c_interBB, 0.66);
+        background: rgba($c_opos, 0.3);
         cursor: pointer;
+        margin-top: -1vh;
     }
-    input[type="range"]::-ms-track {
-        width: 100%;
-        height: 9px;
-        cursor: pointer;
-        background: transparent;
-        border-color: transparent;
-        color: transparent;
+    /*  input[type="range"]::-ms-track {
+         width: 100%;
+         height: 1vh;
+         cursor: pointer;
+          background: transparent;
+          border-color: transparent;
+          color: transparent;
+
     }
     input[type="range"]::-ms-fill-lower {
         background: rgba($c_interBB, 0.3);
         border: 0px solid rgba(255, 255, 255, 0);
-        border-radius: 2px;
-        box-shadow: 1px 1px 2.3px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+        border-radius: 1vh;
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
     }
     input[type="range"]::-ms-fill-upper {
         background: rgba($c_interBB, 0.3);
         border: 0px solid rgba(255, 255, 255, 0);
-        border-radius: 2px;
-        box-shadow: 1px 1px 2.3px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+        border-radius: 1vh;
+        box-shadow: 0.5vh 0.5vh 1.5vh rgba(0, 0, 0, 0), 0px 0px 0.5vh rgba(13, 13, 13, 0);
     }
     input[type="range"]::-ms-thumb {
         box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
         // border: 0px solid #d670b7;
-        height: 22px;
-        width: 17px;
+        height: 4vh;
+        width: 3vh;
         border-radius: 0px;
         background: rgba($c_interBB, 0.66);
-        height: 9px;
     }
     input[type="range"]:focus::-ms-fill-lower {
         background: rgba($c_interBB, 0.3);
     }
     input[type="range"]:focus::-ms-fill-upper {
         background: rgba($c_interBB, 0.3);
-    }
+    } */
 }

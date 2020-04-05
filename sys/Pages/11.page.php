@@ -32,10 +32,9 @@ echo $form21->form_open("inscript_form", "inscript_form_1", "", "", "onsubmit='$
 $form21->required = "name,mail";
 $form21->required_indicator = "*";
 
-
 echo $form21->input_text("name", $form21_name, "", "", "placeholder='{$form21_name}'");
 echo $form21->input_email("mail", $form21_mail, "", "", "placeholder='{$form21_mail}'");
-echo $form21->input_tel("tel", $form21_tel, "", "", "placeholder='{$form21_tel}'");
+echo $form21->input_tel("tel", $form21_tel, "", "", "placeholder='$form21_tel'");
 
 /* $form21r_options = array(
      $inscription_dropdown["logo"][PM_LANG],
