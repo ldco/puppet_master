@@ -1,0 +1,42 @@
+$swiperArrowSize: 8vh;
+$swiperArrowSizeMob: 9vw;
+@include mob(true) {
+    %swiper-button {
+        height: $swiperArrowSizeMob;
+        width: $swiperArrowSizeMob;
+    }
+}
+
+@include mob(false) {
+    %swiper-button {
+        height: $swiperArrowSize;
+        width: $swiperArrowSize;
+    }
+}
+
+.swiper-container {
+    img {
+        width: 100vw;
+    }
+    %swiper-button {
+        background-image: url(../sys/assets/icons/vector/25a.svg);
+        background-size: contain;
+    }
+    .swiper-button-prev {
+        @extend %swiper-button;
+    }
+    .swiper-button-next {
+        @extend %swiper-button;
+        transform: rotate(180deg);
+    }
+    [dir=rtl] & {
+        .swiper-button-next {
+            margin-left: 1.6vh;
+        }
+    }
+    [dir=ltr] & {
+        .swiper-button-next {
+            margin-right: 1.6vh;
+        }
+    }
+}

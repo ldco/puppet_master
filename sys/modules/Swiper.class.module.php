@@ -8,7 +8,7 @@ class Swiper
 
     public string $folder;
 
-    public function make($buttons, $class)
+    public function make($class, $buttons = true)
     {
 
         echo '<div class="swiper-container ' . $class . '">';

@@ -37,16 +37,16 @@
             "background-color: transparent;",
             "}"
         ],
-        "description": "custom scrollbars",
+        "description": "custom scrollbars"
     },
     "flex": {
         "prefix": "flexCenter",
         "body": [
             "display: flex;",
             "justify-content: $1center;",
-            "align-items: $2center;",
+            "align-items: $2center;"
         ],
-        "description": "custom scrollbars",
+        "description": "custom scrollbars"
     },
     "boxshadow": {
         "prefix": "boxshadow",
@@ -60,14 +60,14 @@
         "body": [
             "grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr 2fr 0.2fr 0.2fr;"
         ],
-        "description": "grid-template-columns",
+        "description": "grid-template-columns"
     },
     "backgroundColor": {
         "prefix": "bgColor",
         "body": [
             "background: @_Color2$1;"
         ],
-        "description": "background color",
+        "description": "background color"
     },
     "backgroundImage": {
         "prefix": "bgImage",
@@ -80,8 +80,8 @@
             "background-size: $3contain;"
 
         ],
-        "description": "background image",
-    },
+        "description": "background image"
+    }
 
 
 

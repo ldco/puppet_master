@@ -100,12 +100,10 @@
 }
 
 #pm_mobileBar {
-    background-image: url();
     width: map-get($mob, open_width);
 }
 
 #pm_admin_mobileBar {
-    background-image: url();
     width: map-get($mob, open_width);
 }
 
@@ -116,10 +114,7 @@
     height: 100%;
     top: 0;
     z-index: 1977;
-    @include dir("left",
-    "right",
-    -60vw,
-    -60vw);
+    @include dir("left", "right", -60vw, -60vw);
 }
 
 #pm_mobileHeader {}
@@ -130,10 +125,7 @@
     background-color: $c_domin;
     position: fixed;
     top: 0;
-    @include dir("left",
-    "right",
-    0,
-    0);
+    @include dir("left", "right", 0, 0);
     width: 100%;
     z-index: 1978;
     height: calc(#{(map-get($mob, height)) + #{1px}
@@ -226,8 +218,7 @@ font-size: 2vh;
     }
 }
 .pm_mobileNav {
-    @include font(1,
-    400);
+    @include font(1, 400);
     .pm_Lang {
         position: absolute;
         bottom: 3vh;
@@ -252,8 +243,7 @@ font-size: 2vh;
                 width: 4vh;
                 height: 4vh;
                 margin: 0;
-                @include font(1,
-                400);
+                @include font(1, 400);
                 @include f-size(0.7)
             }
         }
