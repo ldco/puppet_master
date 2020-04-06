@@ -85,8 +85,8 @@ function setOnScroll(element, classname) {
 }
 "use strict";
 
-function smoothScroll(arr) {
-  arr.forEach(function (anchor) {
+function smoothScroll(elems) {
+  document.querySelectorAll(elems).forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -95,7 +95,7 @@ function smoothScroll(arr) {
     });
   });
 } //all anchors:
-//document.querySelectorAll('a[href^="#"]')
+//'a[href^="#"]'
 "use strict";
 
 document.addEventListener("DOMContentLoaded", initFun);

@@ -6,8 +6,6 @@ namespace sys\Model;
 
 use sys\Model\Nav;
 
-
-
 class SkeletonBar
 {
 

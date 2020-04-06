@@ -47,6 +47,9 @@ define("DB_NAME_REMOTE", "");
 define("DB_USER_REMOTE", "");
 define("DB_PASS_REMOTE", ""); //hash
 
+define("PM_MAIN_GMAIL_USER", "");
+define("PM_MAIN_GMAIL_PASS", ""); 
+
 
 //ftp/sftp
 //define("DB_FTP_HOST", "");

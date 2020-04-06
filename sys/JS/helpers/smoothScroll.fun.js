@@ -1,5 +1,5 @@
-function smoothScroll(arr) {
-    arr.forEach(anchor => {
+function smoothScroll(elems) {
+    document.querySelectorAll(elems).forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -10,4 +10,4 @@ function smoothScroll(arr) {
 }
 
 //all anchors:
-//document.querySelectorAll('a[href^="#"]')
+//'a[href^="#"]'

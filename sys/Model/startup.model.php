@@ -117,8 +117,10 @@ if (PM_ISAPP) {
   define("PM_ADMIN_ISROOT", 0);
 }
 
+define("PM_HELPER", PM_ROOT . PM_SYS_FOLDER . "/helpers/");
 
-require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/checkIfIsMobileNow.fun.help.php";
+
+require_once PM_HELPER . "checkIfIsMobileNow.fun.help.php";
 checkIfIsMobileNow();
 
 
@@ -142,4 +144,3 @@ define("PM_VIEWS", [
 ]);
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
-//require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/Html.class.help.php";

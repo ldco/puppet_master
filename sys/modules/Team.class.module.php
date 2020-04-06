@@ -6,7 +6,6 @@ declare(strict_types=1);
 
 use sys\Controller\DB;
 
-require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 
 class Team
@@ -17,7 +16,8 @@ class Team
     public function make($_id = null, $childClass = null, $class = "pm_team")
     {
         global $PM_PAGE_NUM;
-        $DB = new DB();
+        global $DB;
+        if (!isset($DB)) $DB = new DB;
         echo '<div id="' . $_id . '" class="' . $class . '">';
         $result = $DB->queryRaw("SELECT * FROM $this->table JOIN pm_text ON $this->table.name=pm_text.id");
         if ($result) {

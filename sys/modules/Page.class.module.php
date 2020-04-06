@@ -82,7 +82,8 @@ class Page
     {
         //get text
         global $PM_PAGE_NUM;
-        $DB = new DB();
+        global $DB;
+        if (!isset($DB)) $DB = new DB;
         $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_text WHERE id='" . $PM_PAGE_NUM . "_" .  $textId . "';");
         if ($result && ($row = $result->fetch_assoc())) {
         } else {

@@ -23,7 +23,9 @@ class Contacts
     public function __construct()
     {
 
-        $DB = new DB();
+        global $DB;
+        if (!isset($DB)) $DB = new DB;
+
         echo '<div id="' . $this->id . '" class="' . $this->class . '">';
         $result = $DB->queryRaw("SELECT * FROM pm_contact JOIN pm_loc ON pm_contact.text=pm_loc.id");
         if ($result) {

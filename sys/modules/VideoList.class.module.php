@@ -16,7 +16,8 @@ class VideoList
     public string $prelink = "https://www.youtube.com/embed/";
     public function make($_id, $childClass = null, $class = null)
     {
-        $DB = new DB();
+        global $DB;
+        if (!isset($DB)) $DB = new DB;
         echo '<div id="' . $_id . '" class="' . $class . '">';
         $result = $DB->queryRaw("SELECT * FROM $this->table");
         if ($result) {

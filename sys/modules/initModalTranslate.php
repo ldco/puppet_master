@@ -14,10 +14,8 @@ if (empty($name)) exit;
 $name = array_values(json_decode($name));
 if (!is_array($name)) exit;
 
-$DB = new DB;
-/* $langTranslate = [];
-foreach ($name as $elemName => $elemValue) if (!empty($elemValue)) $langTranslate[] = $elemValue;
-if (empty($langTranslate)) exit; */
+global $DB;
+if (!isset($DB)) $DB = new DB;
 
 $sql = "SELECT * FROM `pm_loc` where `en` IN (";
 $langCount = count($name);

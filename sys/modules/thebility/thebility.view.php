@@ -1,7 +1,7 @@
 <!-- THEBILITY -->
 <?php
 
-require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmTranslate.fun.php";
+require_once PM_HELPER . "pmTranslate.fun.php";
 
 
 $thebilityToggleIconSrc = PM_ICONS_REL . "thebilityIconWhite.svg";
