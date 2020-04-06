@@ -76,6 +76,41 @@
     justify-content: center;
 }
 
+@mixin scrolledBar {
+    .pm_bar_scrolled {
+        height:calc(#{map-get($horBar, height)} / 1.6) !important;
+        transition: ease 1s;
+        .pm_barLogo,
+        .pm_bar_asset {
+            height:calc(#{map-get($horBar, height)} / 1.6) !important;
+            top: calc((#{map-get($horBar, height)} / 2) - ((calc(#{map-get($horBar, height)} / 2.1)) / 0.9));
+            transition: ease 1s;
+        }
+        .pm_class_Nav {
+            @if $PM_NAV_ICONS==true {
+                .nav_item,
+                .nav_admin_item {
+                    img,
+                    &+div>img {
+                        width: calc(#{map-get($vertBar, width)} / 3) !important;
+                    }
+                    span {
+                        top: calc(#{map-get($horBar, height)} / 1.5) !important;
+                        font-size: map-get($horBar, height) / 4 !important;
+                    }
+                }
+            }
+            @if $PM_NAV_ICONS==false {
+                .nav_item,
+                .nav_admin_item {}
+                span {
+                    font-size: map-get($horBar, height) / 4 !important;
+                }
+            }
+        }
+    }
+}
+
 #pm_id_Bar {
     background-color: $c_domin;
     //hack to remove stripe between bar and content
@@ -86,6 +121,12 @@
     }
     @if $PM_BAR_IS_VERTICAL==false {
         @include horizontalBar;
+    }
+}
+
+body {
+    @if $PM_BAR_IS_VERTICAL==false {
+        @include scrolledBar;
     }
 }
 

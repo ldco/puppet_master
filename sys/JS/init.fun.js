@@ -23,6 +23,8 @@ function initFun() {
     setChangeLang();
     setBarAsset();
     initModalLocalisation();
+    setGoTopButton();
+    setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
     new Thebility().init();
     mainPageIntro();
 

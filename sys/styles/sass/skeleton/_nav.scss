@@ -59,6 +59,11 @@
      a {
          border-bottom: none;
      }
+     .pm_Lang {
+         img {
+             padding: 0.3vh !important;
+         }
+     }
      @extend %base-Nav;
      align-items: center;
      text-align: center;
@@ -70,7 +75,6 @@
      }
      .nav_item {
          @if $PM_NAV_ICONS==true {
-             &:hover {}
              &:hover>a>img {
                  transition: ease-in 0.3s;
                  border-radius: 0.4vh;
@@ -83,7 +87,7 @@
          @if $PM_NAV_ICONS==true {
              &:hover>a>img {
                  transition: ease-in 0.1s;
-                 width: calc(#{map-get($vertBar, width)} / 1.4);
+                 width: calc(#{map-get($horBar, width)} / 1.4);
              }
          }
      }
@@ -117,6 +121,7 @@
              }
              span {
                  @include hor_navfontsize();
+                 @include font(1, 400);
                  opacity: 0;
                  position: fixed;
                  top: calc(#{map-get($horBar, height)} / 0.9);
@@ -126,8 +131,6 @@
              }
          }
          @if $PM_NAV_ICONS==false {
-             .nav_item,
-             .nav_admin_item {}
              span {
                  @include hor_navfontsize(3);
                  display: flex;

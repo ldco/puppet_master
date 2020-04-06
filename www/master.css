@@ -2431,26 +2431,30 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 #copytoBut:hover + #copyTooltip {
   opacity: 1 !important; }
 
-#goTop {
+#pm_gototop {
   display: none;
   position: fixed;
-  bottom: 5vh;
+  background-color: #294552;
+  bottom: 5vh !important;
   width: 2vw;
   height: 2vw;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
   padding: 1vh;
-  background-color: black;
   cursor: pointer;
+  box-shadow: 0 0 0.2vh 0.2vh #474747;
   z-index: 1979; }
-  [dir=rtl] #goTop {
-    right: 5vh; }
-  [dir=ltr] #goTop {
+  [dir=rtl] #pm_gototop {
     left: 5vh; }
-  #goTop img {
+  [dir=ltr] #pm_gototop {
+    right: 5vh; }
+  #pm_gototop img {
     width: 100%;
     height: 100%; }
+
+.pm_gototop_scrolled {
+  display: flex !important; }
 
 #pm_overlay {
   width: 100vw;
@@ -2748,6 +2752,24 @@ iframe {
   align-items: center;
   justify-content: center; }
 
+body .pm_bar_scrolled {
+  height: calc(6vh / 1.6) !important;
+  transition: ease 1s; }
+  body .pm_bar_scrolled .pm_barLogo,
+  body .pm_bar_scrolled .pm_bar_asset {
+    height: calc(6vh / 1.6) !important;
+    top: calc((6vh / 2) - ((calc(6vh / 2.1)) / 0.9));
+    transition: ease 1s; }
+  body .pm_bar_scrolled .pm_class_Nav .nav_item img,
+  body .pm_bar_scrolled .pm_class_Nav .nav_item + div > img,
+  body .pm_bar_scrolled .pm_class_Nav .nav_admin_item img,
+  body .pm_bar_scrolled .pm_class_Nav .nav_admin_item + div > img {
+    width: calc(6vh / 3) !important; }
+  body .pm_bar_scrolled .pm_class_Nav .nav_item span,
+  body .pm_bar_scrolled .pm_class_Nav .nav_admin_item span {
+    top: calc(6vh / 1.5) !important;
+    font-size: 1.5vh !important; }
+
 #pm_id_admin_Bar {
   background-color: #00070a;
   width: 6vh;
@@ -2985,6 +3007,8 @@ body {
   width: 70vw; }
   #pm_id_Nav a {
     border-bottom: none; }
+  #pm_id_Nav .pm_Lang img {
+    padding: 0.3vh !important; }
   #pm_id_Nav .nav_item:first-of-type {
     display: none; }
   #pm_id_Nav .nav_item:hover > a > img {
@@ -2994,7 +3018,7 @@ body {
     padding: 0.3vh; }
   #pm_id_Nav .nav_admin_item:hover > a > img {
     transition: ease-in 0.1s;
-    width: calc(6vh / 1.4); }
+    width: calc( / 1.4); }
   #pm_id_Nav .nav_item,
   #pm_id_Nav .nav_admin_item {
     padding-left: 1vw;
@@ -3031,6 +3055,18 @@ body {
       z-index: -10;
       border-radius: 0.5vh;
       padding: 0.4vh; }
+      [lang=en] #pm_id_Nav .nav_item span, [lang=en]
+      #pm_id_Nav .nav_admin_item span {
+        font-family: Montserrat;
+        font-weight: 400; }
+      [lang=ru] #pm_id_Nav .nav_item span, [lang=ru]
+      #pm_id_Nav .nav_admin_item span {
+        font-family: Montserrat;
+        font-weight: 400; }
+      [lang=he] #pm_id_Nav .nav_item span, [lang=he]
+      #pm_id_Nav .nav_admin_item span {
+        font-family: Heebo;
+        font-weight: 400; }
 
 #pm_id_admin_Nav {
   margin-top: 4vh;

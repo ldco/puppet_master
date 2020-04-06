@@ -70,6 +70,34 @@ function pmGetTranslate(text, fun) {
 }
 "use strict";
 
+function setOnScroll(element, classname) {
+  var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 180;
+  window.addEventListener("scroll", function () {
+    var win = window.scrollY;
+    var el = document.querySelector(element);
+
+    if (win > height) {
+      el.classList.add(classname);
+    } else {
+      el.classList.remove(classname);
+    }
+  });
+}
+"use strict";
+
+function smoothScroll(arr) {
+  arr.forEach(function (anchor) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+} //all anchors:
+//document.querySelectorAll('a[href^="#"]')
+"use strict";
+
 document.addEventListener("DOMContentLoaded", initFun);
 window.addEventListener("hashchange", setPageFunctions, false);
 var PM_DIR = document.querySelector("html").getAttribute("dir");
@@ -94,6 +122,8 @@ function initFun() {
   setChangeLang();
   setBarAsset();
   initModalLocalisation();
+  setGoTopButton();
+  setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
   new Thebility().init();
   mainPageIntro();
   /*end of functions list!*/
@@ -122,6 +152,19 @@ function setChangeLang() {
       el2.classList.toggle("--active");
     });
   }
+}
+"use strict";
+
+function setGoTopButton() {
+  var el = "#pm_gototop";
+  setOnScroll("#pm_gototop", "pm_gototop_scrolled", 180);
+  document.querySelector(el).addEventListener("click", function () {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
 }
 "use strict";
 

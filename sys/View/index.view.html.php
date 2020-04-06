@@ -32,8 +32,8 @@ if ($isLocal) {
     <?php $modelDepends->index(); ?>
 </head>
 
-<body id="" class=" body">
-    <a href="" name="gototop_placeholder"></a>
+<body id="pm_body" class=" body">
+
     <div id="pm_overlay" style="display: none"></div>
     <?php
     $modelBar->index(); ?>
@@ -44,6 +44,11 @@ if ($isLocal) {
     <?php else : ?>
         <div id="mainContent"><?= $sPageContent; ?></div>
     <?php endif; ?>
+
+    <div id="pm_gototop">
+        <img src="<?= PM_ICONS_REL ?>/up.svg">
+    </div>
+
     <?php if (!$isAdmin) :
         if (defined("PM_FOOTER") && PM_FOOTER) $modelFooter->index();
     endif; ?>

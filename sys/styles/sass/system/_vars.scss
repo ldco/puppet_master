@@ -9,30 +9,35 @@
 }
 
 //go top button
-#goTop {
+#pm_gototop {
+    display: none;
     [dir=rtl] & {
-        right: 5vh;
-    }
-    [dir=ltr] & {
         left: 5vh;
     }
-    display: none;
+    [dir=ltr] & {
+        right: 5vh;
+    }
     position: fixed;
-    bottom: 5vh;
+    background-color: $c_brand;
+    bottom: 5vh !important;
     width: 2vw;
     height: 2vw;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
     padding: 1vh;
-    background-color: $c_interM2;
     cursor: pointer;
+    box-shadow: 0 0 0.2vh 0.2vh $c_shadow;
     &:hover {}
     z-index: 1979;
     img {
         width: 100%;
         height: 100%;
     }
+}
+
+.pm_gototop_scrolled {
+    display: flex !important;
 }
 
 //page blocking div
