@@ -3910,7 +3910,11 @@ input.pm_modal_button {
   width: 20vh;
   height: 20vh;
   top: calc(50vh - (20vh / 2) - 5vh);
-  left: calc(50vw - (20vh / 2)); }
+  left: calc(50vw - (20vh / 2));
+  z-index: 1984; }
+
+.pm_emailLoader {
+  background-image: url(../sys/assets/icons/vector/mail.svg); }
 
 .pm_contacts {
   height: 100%;

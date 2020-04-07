@@ -28,14 +28,17 @@ function setPageFunctions() {
         fun_8: function() {
             aosjs("motiongraphicsGrid");
             pmLoader("iframe", "#pm_page_8", "load", "pm_loader1", "rotate-center");
-
         },
         fun_9: function() {
             macyjs("artGrid", 4);
         },
         fun_10: function() {
             teamHelp();
+        },
+        fun_11: function() {
+            pmEmailLoader("11");
         }
+
 
     };
 

@@ -9,11 +9,9 @@ require_once dirname(dirname(__FILE__), 2) . "/vendor/xlad/formr/class.formr.php
 require_once  PM_HELPER . "pmTranslate.fun.php";
 require_once  PM_HELPER . "path2url.fun.php";
 
-
 $page11 = new Page();
 $page11->h(1);
 
-$form21jsfun = "form21jsFun();";
 $form21action = path2url(PM_ROOT . PM_SYS_FOLDER . "/Pages/11_sendMail.php");
 
 $form21_name = pmTranslate(PM_LANG, "name", false);
@@ -50,7 +48,6 @@ $form21r_options = array(
     "print" => pmTranslate(PM_LANG, "print", false),
     "motion graphics" => pmTranslate(PM_LANG, "motion graphics", false)
 );
-
 
 echo $form21->input_select("options", $form21_interest, "", "", "", "", "", $form21r_options);
 

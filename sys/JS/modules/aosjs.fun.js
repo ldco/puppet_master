@@ -8,14 +8,6 @@ function aosjs(id, anim = "fade", offset = 0, duration = 600, delay = 0) {
             .querySelectorAll("#" + id + " div")[i].setAttribute("data-aos", anim);
     }
 
-    /*  let scrollFunction = () => {
-        let el = window.scrollY;
-        if (el > 0) {
-            window.removeEventListener("scroll", scrollFunction, false);
-        }
-    };
-    window.addEventListener("scroll", scrollFunction, false); */
-
     AOS.init({
         offset: offset,
         duration: duration,

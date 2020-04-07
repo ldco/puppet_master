@@ -9,4 +9,9 @@
     height: $height;
     top: calc(#{50vh} - (#{$width} / 2) - #{5vh});
     left: calc(#{50vw} - (#{$width} / 2));
+    z-index: 1984;
+}
+
+.pm_emailLoader {
+    background-image: url(../sys/assets/icons/vector/mail.svg);
 }

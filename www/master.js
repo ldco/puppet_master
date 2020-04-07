@@ -9702,20 +9702,54 @@ function aosjs(id) {
   for (var i = 0; i < document.querySelectorAll("#" + id + " div").length; i++) {
     document.querySelectorAll("#" + id + " div")[i].setAttribute("data-aos", anim);
   }
-  /*  let scrollFunction = () => {
-      let el = window.scrollY;
-      if (el > 0) {
-          window.removeEventListener("scroll", scrollFunction, false);
-      }
-  };
-  window.addEventListener("scroll", scrollFunction, false); */
-
 
   AOS.init({
     offset: offset,
     duration: duration,
     easing: "ease-in-sine",
     delay: delay
+  });
+}
+
+"use strict";
+
+function pmEmailLoader(page) {
+  var loader = document.createElement("div");
+
+  var _parent = "#pm_page_" + page;
+
+  var parent = document.querySelector(_parent);
+
+  function init_setEmailLoader() {
+    loader.setAttribute("class", "pm_loader pm_emailLoader ping");
+    parent.appendChild(loader);
+    document.querySelector("#pm_overlay").style.display = "flex";
+  }
+
+  var form = document.querySelectorAll(_parent + " form");
+  form.forEach(function (el) {
+    el.addEventListener("submit", function () {
+      init_setEmailLoader();
+    });
+  });
+}
+
+"use strict";
+
+function pmLoader(el, parent, event) {
+  var id = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "pm_loader";
+  var anim = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "ping";
+  var loader = document.createElement("div");
+
+  function initLoader() {
+    loader.setAttribute("id", id);
+    loader.setAttribute("class", "pm_loader " + anim);
+    document.querySelector(parent).appendChild(loader);
+  }
+
+  initLoader();
+  document.querySelector(el).addEventListener(event, function () {
+    loader.remove();
   });
 }
 
@@ -9938,25 +9972,6 @@ function initModalLocalisation() {
   ajx.open("POST", sysFolder + "modules/initModalTranslate.php", true);
   ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
   ajx.send("name=" + name + "&lang=" + PM_LANG);
-}
-
-"use strict";
-
-function pmLoader(el, parent, event) {
-  var id = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "pm_loader";
-  var anim = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "ping";
-  var loader = document.createElement("div");
-
-  function initLoader() {
-    loader.setAttribute("id", id);
-    loader.setAttribute("class", "pm_loader " + anim);
-    document.querySelector(parent).appendChild(loader);
-  }
-
-  initLoader();
-  document.querySelector(el).addEventListener(event, function () {
-    loader.remove();
-  });
 }
 
 "use strict";
@@ -10335,6 +10350,9 @@ function setPageFunctions() {
     },
     fun_10: function fun_10() {
       teamHelp();
+    },
+    fun_11: function fun_11() {
+      pmEmailLoader("11");
     }
   };
 
