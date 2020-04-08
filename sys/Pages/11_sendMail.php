@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use sys\modules;
 
-
 require_once dirname(dirname(__FILE__), 1) . "/Model/startup.model.php";
 require_once dirname(dirname(__FILE__), 1) . "/modules/Email.class.module.php";
 require_once dirname(dirname(__FILE__), 1) . "/helpers/path2url.fun.php";

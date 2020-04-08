@@ -2585,6 +2585,70 @@ iframe {
   border-radius: 1vh;
   outline: none; }
 
+#pm_404 .pm_infoPageLogo {
+  background-image: url("../sys/assets/images/info/pmlogo404.svg"); }
+
+#pm_pageUnderConstruction .pm_infoPageLogo {
+  background-image: url("../sys/assets/images/info/pmlogoUnderConstruction.svg"); }
+
+#pm_pageUnderMaintenance .pm_infoPageLogo {
+  background-image: url("../sys/assets/images/info/pmlogoUnderMaintenance.svg"); }
+
+#pm_pageMailUnSuccess .pm_infoPageLogo {
+  background-image: url("../sys/assets/images/info/pmlogoMailUnSuccess.svg"); }
+
+#pm_pageMailSuccess .pm_infoPageLogo {
+  background-image: url("../sys/assets/images/info/pmlogoMailSuccess.svg"); }
+
+.pm_infoPageLogo {
+  background-image: url("../sys/assets/images/info/pmlogo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: #494949;
+  box-shadow: 0 0 5vh 5vh #494949; }
+
+.pm_infoPage {
+  background-color: #2f2f2f;
+  color: #575757;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: fixed; }
+
+.pm_infoPageText {
+  font-size: 4.8vh; }
+  [lang=en] .pm_infoPageText {
+    font-family: Montserrat;
+    font-weight: 400; }
+  [lang=ru] .pm_infoPageText {
+    font-family: Montserrat;
+    font-weight: 400; }
+  [lang=he] .pm_infoPageText {
+    font-family: Heebo;
+    font-weight: 400; }
+
+@media (max-aspect-ratio: 13 / 9) {
+  .pm_infoPageLogo {
+    margin-top: -10vh;
+    margin-bottom: 20vh;
+    width: 30vh;
+    height: 30vh; } }
+
+@media (min-aspect-ratio: 13 / 9) {
+  .pm_infoPageLogo {
+    margin-top: -5vw;
+    margin-bottom: 7vw;
+    width: 26vw;
+    height: 26vw; }
+  .pm_infoPageText {
+    font-size: 6vh; } }
+
 @media (min-aspect-ratio: 13 / 9) {
   [data-mob=true] #mainAdminContent {
     width: calc(100vw - 6vh);

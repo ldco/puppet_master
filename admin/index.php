@@ -10,7 +10,8 @@ function show404()
     global $_SERVER;
     $serverProtocol = (empty($_SERVER["SERVER_PROTOCOL"]) ? 'HTTP/1.0' : $_SERVER["SERVER_PROTOCOL"]);
     header($serverProtocol . " 404 Not Found");
-    require PM_ROOT . PM_SYS_FOLDER . "/View/SysInfo/404.view.html.php";
+    $pm_lang = PM_LANG;
+    require PM_ROOT . PM_SYS_FOLDER . "/SysInfo/404.php";
 }
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/" . PM_SYS_FOLDER . "/Model/startup.model.php";

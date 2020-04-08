@@ -34,8 +34,8 @@ class Email
     public $addCC = null;
     public $addBCC = null;
     public $addAttachment = null; // Add attachments
-    public $LocationSuccess = PM_ROOT . PM_SYS_FOLDER . "/View/SysInfo/mailSuccess.view.html.php";
-    public $LocationUnSuccess = PM_ROOT . PM_SYS_FOLDER . "/View/pmSysInfo/mailUnSuccess.view.html.php";
+    private $LocationSuccess = PM_ROOT . PM_SYS_FOLDER . "/SysInfo/mailSuccess.php";
+    private $LocationUnSuccess = PM_ROOT . PM_SYS_FOLDER . "/SysInfo/mailUnSuccess.php";
 
     function make()
     {
@@ -79,6 +79,7 @@ class Email
         $mail->AltBody = $this->Body;
         if (!$mail->Send()) {
             if ($this->SMTPDebug === 0) {
+                $pm_lang = PM_LANG;
                 require_once $this->LocationUnSuccess;
                 die;
                 /*  header("Location: " . path2url($this->LocationUnSuccess));
@@ -87,6 +88,7 @@ class Email
                 echo "Mailer Error: " . $mail->ErrorInfo;
             }
         } else {
+            $pm_lang = PM_LANG;
             require_once $this->LocationSuccess;
             die;
             /*  header("Location: " . path2url($this->LocationSuccess));

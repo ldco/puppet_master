@@ -1,3 +1,7 @@
+//themes
+//boolean
+$lightThemeBool: false !default;
+
 /*automatically calculated*/
 
 $c_interBB:$c_brand;
@@ -5,9 +9,6 @@ $c_interBP1:lighten($c_brand, 8%);
 $c_interBP2:lighten($c_brand, 16%);
 $c_interBM1:darken($c_brand, 8%);
 $c_interBM2:darken($c_brand, 16%);
-//themes
-//boolean
-$lightThemeBool: false !default;
 //
 $c_dominSub: darken($c_domin, 16%);
 $c_oposSub: lighten($c_opos, 16%);

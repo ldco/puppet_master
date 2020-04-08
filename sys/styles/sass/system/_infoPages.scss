@@ -1,15 +1,75 @@
-#pm_404 {}
+$infoPages_puppetMasterBrandingOn: true !default;
+$infoPages_bgColor: null;
+$infoPages_color: null;
+$infoPages_errColor: null;
+$infoPages_sysFolder: null;
+@if $infoPages_puppetMasterBrandingOn==true {
+    $infoPages_errColor: #aa0000;
+    $infoPages_sysFolder: "sys";
+    @if $lightThemeBool==true {
+        $infoPages_bgColor: #f0f0f0;
+        $infoPages_color: #2f2f2f;
+    }
+    @if $lightThemeBool==false {
+        $infoPages_bgColor: #2f2f2f;
+        $infoPages_color: darken(#f0f0f0, 60%);
+    }
+}
 
-#pm_mailUnSuccess {}
+@if $infoPages_puppetMasterBrandingOn==false {
+    $infoPages_bgColor: $c_domin;
+    $infoPages_color: $c_brand;
+    $infoPages_errColor: $c_err;
+    $infoPages_sysFolder: "core";
+}
 
-#pm_mailSuccess {}
+//
+#pm_404 {
+    .pm_infoPageLogo {
+        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogo404.svg");
+    }
+}
+
+#pm_pageUnderConstruction {
+    .pm_infoPageLogo {
+        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoUnderConstruction.svg");
+    }
+}
+
+#pm_pageUnderMaintenance {
+    .pm_infoPageLogo {
+        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoUnderMaintenance.svg");
+    }
+}
+
+#pm_pageMailUnSuccess {
+    .pm_infoPageLogo {
+        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoMailUnSuccess.svg");
+    }
+}
+
+#pm_pageMailSuccess {
+    .pm_infoPageLogo {
+        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoMailSuccess.svg");
+    }
+}
+
+.pm_infoPageLogo {
+    background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-color: lighten($infoPages_bgColor, 10%);
+    box-shadow: 0 0 5vh 5vh lighten($infoPages_bgColor, 10%);
+}
 
 .pm_infoPage {
-    background-color: $c_domin;
-    color: $c_opos;
+    background-color: $infoPages_bgColor;
+    color: $infoPages_color;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     left: 0;
@@ -17,6 +77,30 @@
     position: fixed;
 }
 
-.pm_infoPageLogo {}
+.pm_infoPageText {
+    @include f-size(1.6);
+    @include font(1,
+    400)
+}
 
-.pm_infoPageText {}
+@media (max-aspect-ratio: 13/9) {
+    .pm_infoPageLogo {
+        margin-top: -10vh;
+        margin-bottom: 20vh;
+        width: 30vh;
+        height: 30vh;
+    }
+    .pm_infoPageText {}
+}
+
+@media (min-aspect-ratio: 13/9) {
+    .pm_infoPageLogo {
+        margin-top: -5vw;
+        margin-bottom: 7vw;
+        width: 26vw;
+        height: 26vw;
+    }
+    .pm_infoPageText {
+        @include f-size(2);
+    }
+}
