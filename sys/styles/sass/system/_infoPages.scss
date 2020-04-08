@@ -1,0 +1,22 @@
+#pm_404 {}
+
+#pm_mailUnSuccess {}
+
+#pm_mailSuccess {}
+
+.pm_infoPage {
+    background-color: $c_domin;
+    color: $c_opos;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+.pm_infoPageLogo {}
+
+.pm_infoPageText {}

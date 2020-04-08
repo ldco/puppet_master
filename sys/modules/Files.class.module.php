@@ -14,9 +14,15 @@ class Files
     {
         global $PM_PAGE_NUM;
 
+        if ($class != null) {
+            $_class = 'class="' . $class . '"';
+        } else {
+            $_class = '';
+        }
+
         //MAIN GRID DIV
         $path = PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $this->folder;
-        echo '<div id="' . $this->folder . '" class="' . $class . '">';
+        echo '<div id="' . $this->folder . '"' . $_class . '>';
         $scanned_files = array_diff(scandir($path), array('..', '.'));
         if ($this->array_sort === "natsort") {
             natsort($scanned_files);

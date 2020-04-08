@@ -6,13 +6,9 @@ namespace sys\Controller;
 
 use Mysqli;
 
-
 require_once (dirname($_SERVER['DOCUMENT_ROOT'], 1)) . "/config.ini.php";
-
 class DB
 {
-
-
     protected $connection = null;
     protected $query;
     public $query_count = 0;

@@ -139,7 +139,7 @@ if (PM_DEFINE_ADMIN) {
 
 //path to views
 define("PM_VIEWS", [
-  "bar_mobile" => PM_SYS_FOLDER . "/View/bar_mobile.view.html.php", "bar_skeleton" => PM_SYS_FOLDER .  "/View/bar_skeleton.view.html.php", "depends" => PM_SYS_FOLDER . "/View/depends.view.html.php", "footer" => PM_SYS_FOLDER . "/View/footer.view.html.php",
+  "bar_mobile" => PM_SYS_FOLDER . "/View/bar_mobile.view.html.php", "bar_skeleton" => PM_SYS_FOLDER . "/View/bar_skeleton.view.html.php", "depends" => PM_SYS_FOLDER . "/View/depends.view.html.php", "footer" => PM_SYS_FOLDER . "/View/footer.view.html.php",
   "index" => PM_SYS_FOLDER . "/View/index.view.html.php", "logout" => PM_SYS_FOLDER . "/View/logout.view.html.php", "nav_lang" => PM_SYS_FOLDER . "/View/nav_lang.view.html.php", "nav" => PM_SYS_FOLDER . "/View/nav.view.html.php"
 ]);
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 06, 2020 at 01:10 AM
+-- Generation Time: Apr 07, 2020 at 04:39 PM
 -- Server version: 10.4.12-MariaDB-1:10.4.12+maria~bionic-log
 -- PHP Version: 7.4.2
 
@@ -128,7 +128,6 @@ CREATE TABLE `pm_loc` (
 INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`, `ar`) VALUES
 (83, NULL, NULL, 'אירעה שגיאה נסה שוב', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (58, NULL, NULL, 'איש קשר', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(87, NULL, NULL, 'המייל נשלח בהצלחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (74, NULL, NULL, 'הנחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (79, NULL, NULL, 'העתק', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (84, NULL, NULL, 'הפעולה עברה בהצלחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -216,6 +215,7 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (107, 'negative', 'негатив', 'תשליל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (36, 'no', 'нет', 'לא', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (98, 'order', 'заказать', 'להזמין', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(139, 'page not found', 'страница не найдена', 'הדף לא נמצא', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (90, 'pages', 'страницы', 'עמודים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (3, 'participants', 'участники', 'משתתפים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (30, 'position', 'должность', 'תפקיד', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -236,6 +236,8 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (28, 'tel.', 'тел.', 'טל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (124, 'telegram', 'телеграм', 'טלגרם', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (92, 'texts', 'тексты', 'טקסטים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(87, 'the mail has been sent successfully', 'письмо было успешно отправлено', 'הדוא\"ל נשלח בהצלחה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(138, 'there was an error sending mail', 'произошла ошибка при отправке электронной почты', 'אירעה שגיאה בשליחת דואר אלקטרוני', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, 'tournament', 'соревнование', 'תחרות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (115, 'typography', 'типографика', 'גופנים', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (136, 'UI design', 'UI-дизайн', 'עיצוב ממשק משתמש', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -246,25 +248,6 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (25, 'weight', 'вес', 'משקל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (123, 'whatsapp', 'ватсап', 'וואטסאפ', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (35, 'yes', 'да', 'כן', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pm_mail`
---
-
-CREATE TABLE `pm_mail` (
-  `id` int(11) NOT NULL,
-  `mail` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password_hash` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `pm_mail`
---
-
-INSERT INTO `pm_mail` (`id`, `mail`, `password_hash`) VALUES
-(1, 'fabrica21studio@yandex.ru', '');
 
 -- --------------------------------------------------------
 
@@ -358,7 +341,8 @@ INSERT INTO `pm_text` (`id`, `en`, `ru`, `he`, `fr`, `it`, `es`, `de`, `zh`, `ja
 ('5_1', 'We provide software solutions for small businesses - web apps, desktop apps, mobile apps.', 'Мы предоставляем программные решения для маленького бизнеса - веб приложения, мобильные и десктопные приложения.', 'אנחנו מספקים פטרונות תוכנה לעסקים קטנים - אפליקציות ווב, מובייל ודסקטופ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('6_1', 'We published for you some Hebrew fonts under the', 'Мы опубликовали некоторое количество ивритских шрифтов под лицензией', 'הצאנו לאור מספר גופים חופשיים תחת הרשיון', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('6_2', '- you can use them for free also for commercial purposes. To download a font just click on the desired font or download all fonts at once on link at bottom of the page, but first we advise you to try the fonts out in the Gofanarium:', '- вы можете использовать их бесплатно, в том числе для коммерческих целей(в соответствии с условиями лицензии). Чтоб скачать шрифт кликните на картинку с нужным шрифтом. Можно также скачать все шрифты одним архивом по ссылке внизу страницы. Для начала мы предлагаем воспользоваться программой для проверки шрифтов Гофанариумом:', 'אתם מוזמנים להשתמש בהם, הם חופשיים גם לשימוש מסחרי. כדי להוריד את קובץ הגופן פשוט הקליקו על התמונה עם הפונט הרצוי, או תשתמשו בקישור בתחתית הדף כדי להוריד את כל הפונטים ביחד בקובץ ארכיון. לפני ההורדה אתם מוזמנים להיכנס למערכת לבדיקת הפונטים - הגופנריום:', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('6_3', 'Download all fonts in archive', 'Скачать все шрифты одним архивом', 'להוריד את כל הגופנים בארכיון', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('6_3', 'Download all fonts in archive', 'Скачать все шрифты одним архивом', 'להוריד את כל הגופנים בארכיון', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('pm404', 'You\'re a creep, you don\'t belong here', 'Вы не туда попали', 'פנייה לא נכונה', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -417,12 +401,6 @@ ALTER TABLE `pm_loc`
   ADD UNIQUE KEY `id_2` (`id`,`en`,`ru`,`he`,`fr`,`it`,`de`,`zh`,`ja`,`hi`,`ar`);
 
 --
--- Indexes for table `pm_mail`
---
-ALTER TABLE `pm_mail`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `pm_pub_nav`
 --
 ALTER TABLE `pm_pub_nav`
@@ -479,13 +457,7 @@ ALTER TABLE `pm_contact`
 -- AUTO_INCREMENT for table `pm_loc`
 --
 ALTER TABLE `pm_loc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
-
---
--- AUTO_INCREMENT for table `pm_mail`
---
-ALTER TABLE `pm_mail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 
 --
 -- AUTO_INCREMENT for table `pm_pub_nav`

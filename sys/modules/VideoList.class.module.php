@@ -17,8 +17,13 @@ class VideoList
     public function make($_id, $childClass = null, $class = null)
     {
         global $DB;
+        if ($class != null) {
+            $_class = 'class="' . $class . '"';
+        } else {
+            $_class = '';
+        }
         if (!isset($DB)) $DB = new DB;
-        echo '<div id="' . $_id . '" class="' . $class . '">';
+        echo '<div id="' . $_id . '"' . $_class . '>';
         $result = $DB->queryRaw("SELECT * FROM $this->table");
         if ($result) {
             while ($row = $result->fetch_assoc()) {

@@ -11,6 +11,7 @@ require PM_ROOT . "vendor/phpmailer/phpmailer/src/PHPMailer.php";
 require PM_ROOT . "vendor/phpmailer/phpmailer/src/SMTP.php";
 require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
+require_once  PM_HELPER . "path2url.fun.php";
 
 require_once (dirname($_SERVER['DOCUMENT_ROOT'], 1)) . "/config.ini.php";
 
@@ -33,7 +34,8 @@ class Email
     public $addCC = null;
     public $addBCC = null;
     public $addAttachment = null; // Add attachments
-    public $Location = PM_ROOT . "index.php";
+    public $LocationSuccess = PM_ROOT . PM_SYS_FOLDER . "/View/SysInfo/mailSuccess.view.html.php";
+    public $LocationUnSuccess = PM_ROOT . PM_SYS_FOLDER . "/View/pmSysInfo/mailUnSuccess.view.html.php";
 
     function make()
     {
@@ -76,10 +78,19 @@ class Email
         $mail->Body = $this->Body;
         $mail->AltBody = $this->Body;
         if (!$mail->Send()) {
-            echo "Mailer Error: " . $mail->ErrorInfo;
+            if ($this->SMTPDebug === 0) {
+                require_once $this->LocationUnSuccess;
+                die;
+                /*  header("Location: " . path2url($this->LocationUnSuccess));
+                die; */
+            } else {
+                echo "Mailer Error: " . $mail->ErrorInfo;
+            }
         } else {
-            header("Location: " . $this->Location);
+            require_once $this->LocationSuccess;
             die;
+            /*  header("Location: " . path2url($this->LocationSuccess));
+            die; */
         }
     }
 }

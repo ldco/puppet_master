@@ -3702,7 +3702,7 @@ input.pm_modal_button {
   [dir="ltr"] #thebilityMainDiv {
     left: calc(90vw - 35vh); }
   [dir="rtl"] #thebilityMainDiv {
-    right: calc(90vw - 35vh); }
+    left: calc(-12.5vw + 35vh); }
   #thebilityMainDiv .thebilityDiv {
     font-size: 1.8vh;
     text-transform: capitalize;

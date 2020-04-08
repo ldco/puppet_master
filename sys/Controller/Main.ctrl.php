@@ -8,7 +8,7 @@ function show404()
     global $_SERVER;
     $serverProtocol = (empty($_SERVER["SERVER_PROTOCOL"]) ? 'HTTP/1.0' : $_SERVER["SERVER_PROTOCOL"]);
     header($serverProtocol . " 404 Not Found");
-    require PM_ROOT . PM_SYS_FOLDER . "/View/404.view.html.php";
+    require PM_ROOT . PM_SYS_FOLDER . "/View/SysInfo/404.view.html.php";
 }
 
 $needShowFull = true;

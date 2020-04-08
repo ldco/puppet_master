@@ -97,7 +97,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         left: calc(#{90vw} - #{35vh});
     }
     [dir="rtl"] & {
-        right: calc(#{90vw} - #{35vh});
+        left: calc(#{-12.5vw} + #{35vh});
     }
     .thebilityDiv {
         @include font(1, 200);

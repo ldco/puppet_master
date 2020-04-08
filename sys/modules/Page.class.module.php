@@ -68,9 +68,14 @@ class Page
     public function img($number, $class = null, $src)
 
     {
+        if ($class != null) {
+            $_class = " " . $class;
+        } else {
+            $_class = "";
+        }
         global $PM_PAGE_NUM;
         $div_id = "page_{$PM_PAGE_NUM}_img_{$number}";
-        echo '<img id="' . $div_id . '" class="pm_img ' . $class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">';
+        echo '<img id="' . $div_id . '" class="pm_img ' . $_class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">';
     }
 
     public function close()
@@ -80,6 +85,11 @@ class Page
     }
     public function text($textId, $class = null)
     {
+        if ($class != null) {
+            $_class = " " . $class;
+        } else {
+            $_class = "";
+        }
         //get text
         global $PM_PAGE_NUM;
         global $DB;
@@ -89,6 +99,6 @@ class Page
         } else {
             return; //record not found
         }
-        echo "<div class='pm_text " . $class . "' id='text_" . $PM_PAGE_NUM . "_" .  $textId . "'>" . $row[PM_LANG] . '</div>';
+        echo "<div class='pm_text " . $_class . "' id='text_" . $PM_PAGE_NUM . "_" .  $textId . "'>" . $row[PM_LANG] . '</div>';
     }
 }

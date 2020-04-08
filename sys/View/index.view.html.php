@@ -32,7 +32,7 @@ if ($isLocal) {
     <?php $modelDepends->index(); ?>
 </head>
 
-<body id="pm_body" class=" body">
+<body id="pm_body" class="body">
 
     <div id="pm_overlay" style="display: none"></div>
     <?php

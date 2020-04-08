@@ -18,10 +18,10 @@ $mail21Body = "
 ";
 
 $mail21 = new Email();
+$mail21->SMTPDebug = 0;
 $mail21->Subject = "PRE-ORDER from FABRICA21.COM by " . $_POST["name"];
 $mail21->Body = $mail21Body;
 //$mail21->addAddress = ["fabrica21studio@yandex.ru"];
 $mail21->addAddress = ["nikitatut@yandex.ru"];
-$mail21->Location = path2url(PM_ROOT . "index.php#11");
 
 $mail21->make();
