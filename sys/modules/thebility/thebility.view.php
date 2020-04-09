@@ -6,7 +6,14 @@ require_once PM_HELPER . "pmTranslate.fun.php";
 
 $thebilityToggleIconSrc = PM_ICONS_REL . "thebility.svg";
 $thebilityDragIconSrc = PM_ICONS_REL . "drag.svg";
-$thebilityCloseIconSrc = PM_ICONS_REL . "close.svg"; ?>
+$thebilityCloseIconSrc = PM_ICONS_REL . "close.svg";
+
+if (PM_THEME_LIGHT === true) :
+    $thebilityThemeBollean = "false";
+else :
+    $thebilityThemeBollean = "true";
+endif;
+?>
 
 <div id="pm_thebility" class="thebility">
     <div id="thebilityIcon" class="thebility">
@@ -22,6 +29,12 @@ $thebilityCloseIconSrc = PM_ICONS_REL . "close.svg"; ?>
                 <img src="<?= $thebilityCloseIconSrc ?>" class="thebility">
             </div>
         </div>
+        <form id="form_lightDarkTheme" action="index.php" method="POST" onclick="javascript:this.submit();">
+            <div class="thebilityDiv thebility" id="lightDarkTheme">
+                <?php echo pmTranslate(PM_LANG, "dark / light theme", false);  ?>
+            </div>
+            <input type="hidden" name="submitTheme" value=<?= $thebilityThemeBollean ?> />
+        </form>
         <div class="thebilityDiv thebility">
             <?php echo pmTranslate(PM_LANG, "font size", false);  ?>
             <input class="slider thebility" id="fontDivSizeSlider" type="range" value="2" min="0.5" max="7" step="0.01" />

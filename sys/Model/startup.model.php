@@ -71,11 +71,13 @@ define("PM_ADMIN_TITLE", "Admin Dashboard - " . PM_TITLE);
 //theme
 
 if (isset($_POST['submitTheme'])) {
-  define("PM_THEME_LIGHT", $_POST['submitTheme']);
+
+  define("PM_THEME_LIGHT", filter_var($_POST['submitTheme'], FILTER_VALIDATE_BOOLEAN));
+
   if (defined("PM_RUN_DEV") && PM_RUN_DEV == true) {
-    $_SESSION['PM_THEME_LIGHT'] = $_POST['submitTheme']; //PHP HTTP server does not support cookie
+    $_SESSION['PM_THEME_LIGHT'] = filter_var($_POST['submitTheme'], FILTER_VALIDATE_BOOLEAN); //PHP HTTP server does not support cookie
   } else {
-    setcookie("PM_THEME_LIGHT", $_POST['submitTheme'], time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
+    setcookie("PM_THEME_LIGHT", filter_var($_POST['submitTheme'], FILTER_VALIDATE_BOOLEAN), time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
   }
 } else {
   define("PM_THEME_LIGHT", PM_DEFAULT_THEME_LIGHT);

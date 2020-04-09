@@ -2,10 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <?php
 
-if (PM_DEFAULT_THEME_LIGHT === true) :
+if (PM_THEME_LIGHT) :
     $ccsMasterTheme = "master-l";
+
 else :
     $ccsMasterTheme = "master-r";
+
 endif;
 
 if (defined("PM_IS_LOCAL") && PM_IS_LOCAL) :
