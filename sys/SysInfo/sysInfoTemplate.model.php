@@ -2,7 +2,7 @@
 if (!empty($_POST["pm_lang"])) {
     $pm_lang = $_POST["pm_lang"];
 } elseif ($_pm_lang) {
-    $_pm_lang = $pm_lang;
+    $pm_lang = $_pm_lang;
 } else {
     $pm_lang = "en";
 }
