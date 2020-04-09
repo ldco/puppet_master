@@ -24,6 +24,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         border-bottom-left-radius: 0.4vh;
     }
     img {
+        filter: invert(1);
         cursor: pointer;
         width: 2.6vh;
         padding: 1vh;
@@ -55,7 +56,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
     justify-content: space-between;
     height: 10vh;
     div {
-        background: rgba($c_opos, 0.7);
+        background: rgba($c_white, 0.6);
         padding: 1vh;
         border-radius: 0.4vh;
         box-shadow: 0 0 0 0.4vh $mainTHebiltyColor;
@@ -100,7 +101,7 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
         left: calc(#{-12.5vw} + #{35vh});
     }
     .thebilityDiv {
-        @include font(1, 200);
+        @include font(1, 400);
         @include f-size(0.6);
         text-transform: capitalize;
         text-align: center;
@@ -181,6 +182,11 @@ $backTHebiltyColor: rgba($c_domin, 0.8);
 }
 
 @include mob(false) {
+    #thebilityIcon {
+        img {
+            width: 2.8vh;
+        }
+    }
     #pm_thebility .column {
         flex-direction: column;
     }

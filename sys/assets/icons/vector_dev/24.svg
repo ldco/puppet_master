@@ -13,7 +13,7 @@
    version="1.1"
    id="svg918"
    sodipodi:docname="24.svg"
-   inkscape:version="0.92.3 (unknown)">
+   inkscape:version="0.92.4 (unknown)">
   <metadata
      id="metadata924">
     <rdf:RDF>
@@ -37,12 +37,12 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1883"
-     inkscape:window-height="1012"
+     inkscape:window-width="1880"
+     inkscape:window-height="1018"
      id="namedview920"
      showgrid="false"
      inkscape:zoom="8"
-     inkscape:cx="-36.220753"
+     inkscape:cx="-63.220753"
      inkscape:cy="13.815141"
      inkscape:window-x="0"
      inkscape:window-y="32"
@@ -53,7 +53,7 @@
      id="circle912"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="cccsssccccccccssccsssccccccccccccccssc"
-     style="stroke-width:0.90093261" />
+     style="stroke-width:0.90093261;fill:#294552;fill-opacity:1" />
   <path
      d="M0 0h24v24H0z"
      fill="none"

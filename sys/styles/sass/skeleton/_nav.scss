@@ -1,238 +1,252 @@
- @mixin hor_navfontsize() {
-     font-size: map-get($horBar, height) / 3;
- }
- 
- @mixin pm_class_verticalNav {
-     a {
-         border-bottom: none;
-     }
-     @extend %base-Nav;
-     margin-top: 4vh;
-     height: 60vh;
-     width: map-get($vertBar, width);
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     flex-direction: column;
-     .nav_item {
-         span {}
-     }
-     .nav_admin_item {
-         span {}
-     }
-     .nav_item,
-     .nav_admin_item {
-         @extend %base-Nav_item;
-         width: 100%;
-         height: 100%;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         &:hover>span {
-             transition: ease-in 0.1s;
-             @include dir('left', 'right', calc(#{map-get($vertBar, width)} - 1vh), calc(#{map-get($vertBar, width)} - 1vh));
-         }
-         &:hover>img {
-             transition: ease-in 0.2s;
-             width: calc(#{map-get($vertBar, width)} / 1.8);
-         }
-         img {
-             width: calc(#{map-get($vertBar, width)} / 2.9);
-         }
-         span {
-             position: absolute;
-             display: flex;
-             align-items: center;
-             @include dir('left', 'right', -50vh, -50vh);
-             width: 15vh;
-             justify-content: center;
-             height: calc(#{map-get($vertBar, width)} / 2);
-             z-index: -1;
-             border-radius: 1vh;
-             background-color: $c_interP1;
-             padding: 0.5vh;
-         }
-     }
- }
- 
- @mixin pm_class_horizontalNav {
-     a {
-         border-bottom: none;
-     }
-     .pm_Lang {
-         img {
-             padding: 0.3vh !important;
-         }
-     }
-     @extend %base-Nav;
-     align-items: center;
-     text-align: center;
-     justify-content: space-between;
-     height: 100%;
-     width: 70vw;
-     .nav_item:first-of-type {
-         display: none;
-     }
-     .nav_item {
-         @if $PM_NAV_ICONS==true {
-             &:hover>a>img {
-                 transition: ease-in 0.3s;
-                 border-radius: 0.4vh;
-                 border: solid 0.1vh;
-                 padding: 0.3vh;
-             }
-         }
-     }
-     .nav_admin_item {
-         @if $PM_NAV_ICONS==true {
-             &:hover>a>img {
-                 transition: ease-in 0.1s;
-                 width: calc(#{map-get($horBar, width)} / 1.4);
-             }
-         }
-     }
-     .nav_item,
-     .nav_admin_item {
-         @extend %base-Nav_item;
-         padding-left: 1vw;
-         padding-right: 1vw;
-         height: 115%;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         height: 100%;
-         width: 100%;
-         @if $PM_NAV_ICONS==true {
-             img,
-             &+div>img {
-                 padding: 1vh;
-                 border: solid 0.1vh transparent;
-                 width: calc(#{map-get($vertBar, width)} / 2);
-             }
-             a {
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-             }
-             &:hover>a>span {
-                 transition: ease-in 0.2s;
-                 opacity: 1;
-                 background-color: $c_domin;
-             }
-             span {
-                 @include hor_navfontsize();
-                 @include font(1, 400);
-                 opacity: 0;
-                 position: fixed;
-                 top: calc(#{map-get($horBar, height)} / 0.9);
-                 z-index: -10;
-                 border-radius: 0.5vh;
-                 padding: 0.4vh;
-             }
-         }
-         @if $PM_NAV_ICONS==false {
-             span {
-                 @include hor_navfontsize(3);
-                 display: flex;
-                 align-items: center;
-                 justify-content: center;
-                 top: initial !important;
-                 width: 100%;
-                 height: 100%;
-                 &:hover {
-                     transition: 1s;
-                     filter: brightness(1.5);
-                     border-bottom: solid 0.1vh $c_brand;
-                 }
-             }
-             img {
-                 display: none !important;
-             }
-         }
-     }
- }
- 
- #pm_id_Nav {
-     @if $PM_BAR_IS_VERTICAL==true {
-         @include pm_class_verticalNav;
-     }
-     @if $PM_BAR_IS_VERTICAL==false {
-         @include pm_class_horizontalNav;
-     }
- }
- 
- #pm_id_admin_Nav {
-     @if $PM_ADMIN_BAR_IS_VERTICAL==true {
-         @include pm_class_verticalNav;
-     }
-     @if $PM_ADMIN_BAR_IS_VERTICAL==false {
-         @include pm_class_horizontalNav;
-     }
- }
- 
- %base-Nav {
-     opacity: 1;
-     text-transform: uppercase;
-     display: flex;
-     color: $c_opos;
- }
- 
- %base-Nav_item {
-     cursor: pointer;
- }
- 
- .pm_mobileNav {
-     a {
-         border-bottom: none;
-     }
-     user-select: none;
-     display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
-     margin-top: 12vh;
-     width: 100%;
-     text-transform: uppercase;
-     @include dir('align-items', 'align-items', flex-start, flex-end);
-     .nav_item {
-         height: map-get($mob, nav_height);
-         span {
-             @include f-size-fill(1)
-         }
-     }
-     .nav_admin_item {
-         height: map-get($mob, ad_nav_height);
-         span {
-             @include f-size-fill(1)
-         }
-     }
-     .nav_item,
-     .nav_admin_item {
-         color: $c_opos;
-         display: flex;
-         justify-content: flex-start;
-         align-items: center;
-         width: 100%;
-         img,
-         span {
-             @include dir('margin-left', 'margin-right', 3vh, 3vh);
-         }
-         img {
-             @include width-fill(1.5);
-         }
-         &:active {}
-         a {
-             justify-content: center;
-             align-items: center;
-             display: flex;
-         }
-     }
- }
- 
- #languagesMenuMobile {
-     margin-top: 3vh;
-     margin-right: 3vw;
-     form {
-         flex-direction: row;
-         justify-content: center;
-     }
- }
+    @mixin navImageFilter {
+        @if $lightThemeBool==false {
+            filter: brightness(1.5) contrast(0.7);
+        }
+        @if $lightThemeBool==true {
+            filter: none;
+        }
+    }
+    
+    @mixin hor_navfontsize() {
+        font-size: map-get($horBar, height) / 3;
+    }
+    
+    @mixin pm_class_verticalNav {
+        a {
+            border-bottom: none;
+        }
+        @extend %base-Nav;
+        margin-top: 4vh;
+        height: 60vh;
+        width: map-get($vertBar, width);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .nav_item {
+            span {}
+        }
+        .nav_admin_item {
+            span {}
+        }
+        .nav_item,
+        .nav_admin_item {
+            @extend %base-Nav_item;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover>span {
+                transition: ease-in 0.1s;
+                @include dir('left', 'right', calc(#{map-get($vertBar, width)} - 1vh), calc(#{map-get($vertBar, width)} - 1vh));
+            }
+            &:hover>img {
+                transition: ease-in 0.2s;
+                width: calc(#{map-get($vertBar, width)} / 1.8);
+            }
+            img {
+                width: calc(#{map-get($vertBar, width)} / 2.9);
+                @include navImageFilter();
+            }
+            span {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                @include dir('left', 'right', -50vh, -50vh);
+                width: 15vh;
+                justify-content: center;
+                height: calc(#{map-get($vertBar, width)} / 2);
+                z-index: -1;
+                border-radius: 1vh;
+                background-color: $c_interP1;
+                padding: 0.5vh;
+            }
+        }
+    }
+    
+    @mixin pm_class_horizontalNav {
+        a {
+            border-bottom: none;
+        }
+        .pm_Lang {
+            img {
+                padding: 0.3vh !important;
+            }
+        }
+        @extend %base-Nav;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 70vw;
+        .nav_item:first-of-type {
+            display: none;
+        }
+        .nav_item {
+            @if $PM_NAV_ICONS==true {
+                &:hover>a>img {
+                    transition: ease-in 0.3s;
+                    border-radius: 0.4vh;
+                    border: solid 0.1vh;
+                    padding: 0.3vh;
+                }
+            }
+        }
+        .nav_admin_item {
+            @if $PM_NAV_ICONS==true {
+                &:hover>a>img {
+                    transition: ease-in 0.1s;
+                    width: calc(#{map-get($horBar, width)} / 1.4);
+                }
+            }
+        }
+        .nav_item,
+        .nav_admin_item {
+            @extend %base-Nav_item;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            height: 115%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            @if $PM_NAV_ICONS==true {
+                img {
+                    @include navImageFilter();
+                }
+                img,
+                &+div>img {
+                    padding: 1vh;
+                    border: solid 0.1vh transparent;
+                    width: calc(#{map-get($vertBar, width)} / 2);
+                }
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &:hover>a>span {
+                    transition: ease-in 0.2s;
+                    opacity: 1;
+                    background-color: $c_domin;
+                }
+                span {
+                    @include hor_navfontsize();
+                    @include font(1, 400);
+                    opacity: 0;
+                    position: fixed;
+                    top: calc(#{map-get($horBar, height)} / 0.9);
+                    z-index: -10;
+                    border-radius: 0.5vh;
+                    padding: 0.4vh;
+                }
+            }
+            @if $PM_NAV_ICONS==false {
+                span {
+                    @include hor_navfontsize(3);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: initial !important;
+                    width: 100%;
+                    height: 100%;
+                    &:hover {
+                        transition: 1s;
+                        filter: brightness(1.5);
+                        border-bottom: solid 0.1vh $c_brand;
+                    }
+                }
+                img {
+                    display: none !important;
+                }
+            }
+        }
+    }
+    
+    #pm_id_Nav {
+        @if $PM_BAR_IS_VERTICAL==true {
+            @include pm_class_verticalNav;
+        }
+        @if $PM_BAR_IS_VERTICAL==false {
+            @include pm_class_horizontalNav;
+        }
+    }
+    
+    #pm_id_admin_Nav {
+        @if $PM_ADMIN_BAR_IS_VERTICAL==true {
+            @include pm_class_verticalNav;
+        }
+        @if $PM_ADMIN_BAR_IS_VERTICAL==false {
+            @include pm_class_horizontalNav;
+        }
+    }
+    
+    %base-Nav {
+        opacity: 1;
+        text-transform: uppercase;
+        display: flex;
+        color: $c_opos;
+    }
+    
+    %base-Nav_item {
+        cursor: pointer;
+    }
+    
+    .pm_mobileNav {
+        a {
+            border-bottom: none;
+        }
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 12vh;
+        width: 100%;
+        text-transform: uppercase;
+        @include dir('align-items', 'align-items', flex-start, flex-end);
+        .nav_item {
+            height: map-get($mob, nav_height);
+            span {
+                @include f-size-fill(1)
+            }
+        }
+        .nav_admin_item {
+            height: map-get($mob, ad_nav_height);
+            span {
+                @include f-size-fill(1)
+            }
+        }
+        .nav_item,
+        .nav_admin_item {
+            color: $c_opos;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            img,
+            span {
+                @include dir('margin-left', 'margin-right', 3vh, 3vh);
+            }
+            img {
+                @include width-fill(1.5);
+                @include navImageFilter();
+            }
+            &:active {}
+            a {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+        }
+    }
+    
+    #languagesMenuMobile {
+        margin-top: 3vh;
+        margin-right: 3vw;
+        form {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }

@@ -56,6 +56,19 @@
 
         ],
         "description": "pm font size"
+    },
+    "lightTheme": {
+        "prefix": "theme",
+        "body": [
+            "@if \\$lightThemeBool == true {",
+            " ",
+            "}",
+            "@if \\$lightThemeBool == false {",
+            " ",
+            "}",
+
+        ],
+        "description": "Light Theme"
     }
 
 }

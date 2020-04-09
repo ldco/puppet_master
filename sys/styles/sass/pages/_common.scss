@@ -12,6 +12,7 @@
              h1 {
                  color: $c_opos;
                  text-transform: uppercase;
+                 text-align: center;
                  @include font(1, 50);
                  @include f-size(2);
                  margin-top: 10vh;

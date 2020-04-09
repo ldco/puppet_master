@@ -18,7 +18,12 @@
         right: 5vh;
     }
     position: fixed;
-    background-color: $c_brand;
+    @if $lightThemeBool==true {
+        background-color: $c_domin;
+    }
+    @if $lightThemeBool==false {
+        background-color: $c_brand;
+    }
     bottom: 5vh !important;
     width: 2vw;
     height: 2vw;

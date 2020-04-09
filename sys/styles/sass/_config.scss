@@ -1,3 +1,5 @@
+//THEME
+$lightThemeBool: false !default;
 //GLOBALS
 $PM_BAR_IS_VERTICAL: false;
 $PM_ADMIN_BAR_IS_VERTICAL: true;
@@ -12,3 +14,6 @@ $mob: (height:6vh, open_width:45vw, nav_height:6vh, ad_nav_height:7vh);
 $adminPanel: (height: 3vh);
 $footer: (height: 3vh);
 $basicTextSize: 1;
+//themes
+//info pages
+$infoPages_puppetMasterBrandingOn: true !default;

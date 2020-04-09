@@ -3109,6 +3109,9 @@ body {
     height: 100%;
     width: 100%; }
     #pm_id_Nav .nav_item img,
+    #pm_id_Nav .nav_admin_item img {
+      filter: brightness(1.5) contrast(0.7); }
+    #pm_id_Nav .nav_item img,
     #pm_id_Nav .nav_item + div > img,
     #pm_id_Nav .nav_admin_item img,
     #pm_id_Nav .nav_admin_item + div > img {
@@ -3179,7 +3182,8 @@ body {
       width: calc(6vh / 1.8); }
     #pm_id_admin_Nav .nav_item img,
     #pm_id_admin_Nav .nav_admin_item img {
-      width: calc(6vh / 2.9); }
+      width: calc(6vh / 2.9);
+      filter: brightness(1.5) contrast(0.7); }
     #pm_id_admin_Nav .nav_item span,
     #pm_id_admin_Nav .nav_admin_item span {
       position: absolute;
@@ -3251,7 +3255,8 @@ body {
       margin-right: 3vh; }
     .pm_mobileNav .nav_item img,
     .pm_mobileNav .nav_admin_item img {
-      width: calc(1.5vw + 1.5vh + 0.75vmin); }
+      width: calc(1.5vw + 1.5vh + 0.75vmin);
+      filter: brightness(1.5) contrast(0.7); }
     .pm_mobileNav .nav_item a,
     .pm_mobileNav .nav_admin_item a {
       justify-content: center;
@@ -3722,6 +3727,7 @@ input.pm_modal_button {
     border-top-left-radius: 0.4vh;
     border-bottom-left-radius: 0.4vh; }
   #thebilityIcon img {
+    filter: invert(1);
     cursor: pointer;
     width: 2.6vh;
     padding: 1vh;
@@ -3746,7 +3752,7 @@ input.pm_modal_button {
   [dir="rtl"] #thebility_buttonsDiv {
     left: 36vh; }
   #thebility_buttonsDiv div {
-    background: rgba(228, 233, 237, 0.7);
+    background: rgba(228, 233, 237, 0.6);
     padding: 1vh;
     border-radius: 0.4vh;
     box-shadow: 0 0 0 0.4vh rgba(55, 92, 109, 0.7);
@@ -3796,13 +3802,13 @@ input.pm_modal_button {
     cursor: pointer; }
     [lang=en] #thebilityMainDiv .thebilityDiv {
       font-family: Montserrat;
-      font-weight: 200; }
+      font-weight: 400; }
     [lang=ru] #thebilityMainDiv .thebilityDiv {
       font-family: Montserrat;
-      font-weight: 200; }
+      font-weight: 400; }
     [lang=he] #thebilityMainDiv .thebilityDiv {
       font-family: Heebo;
-      font-weight: 200; }
+      font-weight: 400; }
     #thebilityMainDiv .thebilityDiv:hover {
       background: rgba(0, 0, 0, 0.8);
       box-shadow: 0 0 0 0.4vh rgba(70, 118, 140, 0.7); }
@@ -3871,10 +3877,14 @@ input.pm_modal_button {
     display: none; } }
 
 @media (min-aspect-ratio: 13 / 9) {
+  [data-mob=true] #thebilityIcon img {
+    width: 2.8vh; }
   [data-mob=true] #pm_thebility .column {
     flex-direction: column; } }
 
 @media (min-width: 1210px) {
+  [data-mob=false] #thebilityIcon img {
+    width: 2.8vh; }
   [data-mob=false] #pm_thebility .column {
     flex-direction: column; } }
 
@@ -4085,6 +4095,7 @@ input.pm_modal_button {
   .pm_page_incontent h1 {
     color: #e4e9ed;
     text-transform: uppercase;
+    text-align: center;
     font-size: 6vh;
     margin-top: 10vh; }
     [lang=en] .pm_page_incontent h1 {

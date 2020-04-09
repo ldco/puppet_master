@@ -7,6 +7,12 @@
     [dir=ltr] & {
         right: 3vh;
     }
+    img {
+        @if $lightThemeBool==true {
+            filter: drop-shadow(0px 6px 4px$c_brand);
+        }
+        @if $lightThemeBool==false {}
+    }
 }
 
 @include mob(true) {

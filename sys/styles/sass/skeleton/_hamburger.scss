@@ -1,5 +1,13 @@
 //hamburger vars
-$hamburgerColor: $c_interBB;
+$hamburgerColor: null;
+@if $lightThemeBool==true {
+    $hamburgerColor: $c_brand;
+}
+
+@if $lightThemeBool==false {
+    $hamburgerColor: $c_interBB;
+}
+
 $hamburgerBGColor: $c_domin;
 $hamburgerRadius: none; //3px;
 $hamburgerShadow: none; //1px 1px 1px 1px $c_interM2;
