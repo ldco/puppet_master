@@ -19,7 +19,7 @@ $swiperArrowSizeMob: 9vw;
         width: 100vw;
     }
     %swiper-button {
-        background-image: url(../sys/assets/icons/vector/25a.svg);
+        background-image: url($ICONS_FOLDER + "25a.svg");
         background-size: contain;
     }
     .swiper-button-prev {

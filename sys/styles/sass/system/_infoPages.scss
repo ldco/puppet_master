@@ -5,16 +5,16 @@ $infoPages_errColor: null;
 $infoPages_sysFolder: null;
 $infoPages_divBgColor: null;
 $infoPages_text-shadow: null;
-@if $infoPages_puppetMasterBrandingOn==true {
+@if $INFO_PM_BRAND==true {
     $infoPages_errColor: #aa0000;
     $infoPages_sysFolder: "sys";
-    @if $lightThemeBool==true {
+    @if $LIGHT_THEME==true {
         $infoPages_bgColor: #f0f0f0;
         $infoPages_divBgColor: #f0f0f0;
         $infoPages_color: #2f2f2f;
         $infoPages_text-shadow: none;
     }
-    @if $lightThemeBool==false {
+    @if $LIGHT_THEME==false {
         $infoPages_bgColor: #2f2f2f;
         $infoPages_divBgColor: lighten($infoPages_bgColor, 10%);
         $infoPages_color: darken(#f0f0f0, 60%);
@@ -22,16 +22,16 @@ $infoPages_text-shadow: null;
     }
 }
 
-@if $infoPages_puppetMasterBrandingOn==false {
+@if $INFO_PM_BRAND==false {
     $infoPages_bgColor: $c_domin;
     $infoPages_errColor: $c_err;
     $infoPages_sysFolder: "core";
-    @if $lightThemeBool==true {
+    @if $LIGHT_THEME==true {
         $infoPages_text-shadow: none;
         $infoPages_divBgColor: $c_domin;
         $infoPages_color: $c_black;
     }
-    @if $lightThemeBool==false {
+    @if $LIGHT_THEME==false {
         $infoPages_text-shadow: 0.2vh 0.2vh #000;
         $infoPages_divBgColor: $c_brand;
         $infoPages_color: $c_brand;

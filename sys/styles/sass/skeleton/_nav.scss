@@ -1,8 +1,8 @@
     @mixin navImageFilter {
-        @if $lightThemeBool==false {
+        @if $LIGHT_THEME==false {
             filter: brightness(1.5) contrast(0.7);
         }
-        @if $lightThemeBool==true {
+        @if $LIGHT_THEME==true {
             filter: none;
         }
     }

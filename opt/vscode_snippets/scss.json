@@ -60,10 +60,10 @@
     "lightTheme": {
         "prefix": "theme",
         "body": [
-            "@if \\$lightThemeBool == true {",
+            "@if \\$LIGHT_THEME == true {",
             " ",
             "}",
-            "@if \\$lightThemeBool == false {",
+            "@if \\$LIGHT_THEME == false {",
             " ",
             "}",
 

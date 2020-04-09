@@ -77,14 +77,23 @@
 }
 
 @mixin scrolledBar {
+    $pmBarScrolledHeight: calc(#{map-get($horBar, height)} / 1.6);
     .pm_bar_scrolled {
-        height:calc(#{map-get($horBar, height)} / 1.6) !important;
+        height: $pmBarScrolledHeight !important;
         transition: ease 1s;
         .pm_barLogo,
         .pm_bar_asset {
-            height:calc(#{map-get($horBar, height)} / 1.6) !important;
-            top: calc((#{map-get($horBar, height)} / 2) - ((calc(#{map-get($horBar, height)} / 2.1)) / 0.9));
             transition: ease 1s;
+        }
+        .pm_barLogo {
+            top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.65) / 2);
+            img {
+                max-width: calc(#{$pmBarScrolledHeight} / 0.35) !important;
+            }
+        }
+        .pm_bar_asset {
+            height: calc(#{$pmBarScrolledHeight} / 0.8);
+            top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.8) / 2);
         }
         .pm_class_Nav {
             @if $PM_NAV_ICONS==true {

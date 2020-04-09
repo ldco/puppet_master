@@ -101,7 +101,7 @@ input.pm_modal_button {
 
 .pm_modal_icon_close {
     cursor: pointer;
-    background-image: url(../sys/assets/icons/vector/close.svg);
+    background-image: url($ICONS_FOLDER + "close.svg");
     right: 2vh;
 }
 
@@ -111,7 +111,7 @@ input.pm_modal_button {
     cursor: grab;
     cursor: -moz-grab;
     cursor: -webkit-grab;
-    background-image: url(../sys/assets/icons/vector/drag.svg);
+    background-image: url($ICONS_FOLDER + "drag.svg");
     left: 2vh;
 }
 

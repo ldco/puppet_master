@@ -18,10 +18,10 @@
         right: 5vh;
     }
     position: fixed;
-    @if $lightThemeBool==true {
+    @if $LIGHT_THEME==true {
         background-color: $c_domin;
     }
-    @if $lightThemeBool==false {
+    @if $LIGHT_THEME==false {
         background-color: $c_brand;
     }
     bottom: 5vh !important;

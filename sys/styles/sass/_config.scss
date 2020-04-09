@@ -1,5 +1,26 @@
+//SYS FOLDER
+$SYS_FOLDER: "sys"; //or "core"
+//DEV
+$IS_DEV: true;
+//FOLDERS
+$ICONS_FOLDER: null;
+$IMAGES_FOLDER: null;
+@if $IS_DEV==true {
+    $ICONS_FOLDER: "../#{$SYS_FOLDER}/assets/icons/vector_dev/";
+    $IMAGES_FOLDER: "../#{$SYS_FOLDER}/assets/images/images_dev/";
+}
+
+@if $IS_DEV==false {
+    $ICONS_FOLDER: "../#{$SYS_FOLDER}/assets/icons/vector/";
+    $IMAGES_FOLDER: "../#{$SYS_FOLDER}/assets/images/images/";
+    ;
+}
+
 //THEME
-$lightThemeBool: false !default;
+$LIGHT_THEME: true !default;
+//info pages puppet master or custom branding
+$INFO_PM_BRAND: true !default;
+//
 //GLOBALS
 $PM_BAR_IS_VERTICAL: false;
 $PM_ADMIN_BAR_IS_VERTICAL: true;
@@ -14,6 +35,3 @@ $mob: (height:6vh, open_width:45vw, nav_height:6vh, ad_nav_height:7vh);
 $adminPanel: (height: 3vh);
 $footer: (height: 3vh);
 $basicTextSize: 1;
-//themes
-//info pages
-$infoPages_puppetMasterBrandingOn: true !default;

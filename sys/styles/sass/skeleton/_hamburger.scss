@@ -1,10 +1,10 @@
 //hamburger vars
 $hamburgerColor: null;
-@if $lightThemeBool==true {
+@if $LIGHT_THEME==true {
     $hamburgerColor: $c_brand;
 }
 
-@if $lightThemeBool==false {
+@if $LIGHT_THEME==false {
     $hamburgerColor: $c_interBB;
 }
 

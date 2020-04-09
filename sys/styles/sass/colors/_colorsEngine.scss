@@ -14,7 +14,7 @@ $c_interP1: $c_domin;
 $c_interP2: lighten($c_domin, 4%);
 $c_interM1: darken($c_domin, 16%);
 $c_interM2: darken($c_domin, 24%);
-@if $lightThemeBool==false {
+@if $LIGHT_THEME==false {
     //dark theme
     $_shluz: $c_opos;
     $c_opos: $c_domin;
