@@ -82,12 +82,13 @@ class Email
             try {
                 $mail->Send();
             } catch (exception $e) {
-                $_pm_lang = PM_LANG;
+
+
                 require_once $this->LocationUnSuccess;
                 /*  header("Location: " . path2url($this->LocationUnSuccess)); */
                 die;
             } finally {
-                $_pm_lang = PM_LANG;
+
                 require_once $this->LocationSuccess;
                 /*  header("Location: " . path2url($this->LocationSuccess)); */
                 die;

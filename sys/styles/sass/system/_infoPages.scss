@@ -95,6 +95,7 @@ $infoPages_text-shadow: null;
     left: 0;
     top: 0;
     position: fixed;
+    //button {}
 }
 
 .pm_infoPageText {
@@ -110,21 +111,38 @@ $infoPages_text-shadow: null;
 .pm_infoPageText::first-letter {}
 
 @media (max-aspect-ratio: 13/9) {
+    .pm_infoPage {
+        button {
+            width: 30vw;
+            height: 15vw;
+            @include f-size(0.7);
+        }
+    }
     .pm_infoPageLogo {
         width: 30vh;
         height: 30vh;
     }
     .pm_infoPageText {
+        margin-top: 7vh;
         @include f-size(1.2);
     }
 }
 
 @media (min-aspect-ratio: 13/9) {
+    .pm_infoPage {
+        button {
+            width: 22vh;
+            height: 9vh;
+            @include f-size(0.8);
+            margin-bottom: -3vw;
+        }
+    }
     .pm_infoPageLogo {
         width: 26vw;
         height: 26vw;
     }
     .pm_infoPageText {
+        margin-top: 3vw;
         @include f-size(1.5);
     }
 }

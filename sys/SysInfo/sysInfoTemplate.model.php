@@ -1,23 +1,23 @@
 <?php
 if (!empty($_POST["pm_lang"])) {
     $pm_lang = $_POST["pm_lang"];
-} elseif ($_pm_lang) {
-    $pm_lang = $_pm_lang;
 } else {
     $pm_lang = "en";
 }
 
 if (file_exists("../../www/master.css")) {
-    $fileapthtocss = "../../www/master.css";
+    $filepathtocss = "../../www/master.css";
 } else {
-    $fileapthtocss = "../../www/master.min.css";
+    $filepathtocss = "../../www/master.min.css";
 }
 ?>
 
 <html lang=<?= $pm_lang ?>>
 
-<title>Puppet Master Info Page</title>
-<link rel="stylesheet" href="<?= $fileapthtocss ?>" />
+<title>INFO</title>
+<link rel="icon" type="image/png" href="../assets/favicons/favicon.ico">
+<link rel="stylesheet" href="<?= $filepathtocss ?>" />
+
 
 <?php
 
@@ -61,11 +61,3 @@ $sysInfopageTextLoc = array(
 );
 
 ?>
-
-<script>
-    document.addEventListener("DOMContentLoaded", pm_initSysInfoPage);
-
-    function pm_initSysInfoPage() {
-
-    }
-</script>

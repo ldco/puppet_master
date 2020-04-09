@@ -2640,17 +2640,28 @@ iframe {
     font-weight: 400; }
 
 @media (max-aspect-ratio: 13 / 9) {
+  .pm_infoPage button {
+    width: 30vw;
+    height: 15vw;
+    font-size: 2.1vh; }
   .pm_infoPageLogo {
     width: 30vh;
     height: 30vh; }
   .pm_infoPageText {
+    margin-top: 7vh;
     font-size: 3.6vh; } }
 
 @media (min-aspect-ratio: 13 / 9) {
+  .pm_infoPage button {
+    width: 22vh;
+    height: 9vh;
+    font-size: 2.4vh;
+    margin-bottom: -3vw; }
   .pm_infoPageLogo {
     width: 26vw;
     height: 26vw; }
   .pm_infoPageText {
+    margin-top: 3vw;
     font-size: 4.5vh; } }
 
 @media (min-aspect-ratio: 13 / 9) {
