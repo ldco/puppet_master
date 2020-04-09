@@ -21,8 +21,6 @@ if ($isLocal) {
         $ifIsDev = "false";
     }
 }
-
-
 ?>
 
 <html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>" data-admin="<?= $ifIsAdmin ?>" data-local="<?= $ifIsLocal ?>" data-dev="<?= $ifIsDev ?>">

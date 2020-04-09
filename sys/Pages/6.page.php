@@ -7,7 +7,7 @@ use sys\modules;
 require PM_ROOT . PM_SYS_FOLDER . "/modules/Page.class.module.php";
 require PM_ROOT . PM_SYS_FOLDER . "/modules/Files.class.module.php";
 
-$page6 = new Page("lightPage");
+$page6 = new Page();
 $page6->h(1);
 $page6->text("1", "pm_intro_text");
 ?>

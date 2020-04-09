@@ -67,6 +67,22 @@ define("PM_ADMIN_ROOT", PM_ROOT . "admin/");
 define("PM_CLIENT_LANG", substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 0, 2));
 define("PM_ADMIN_TITLE", "Admin Dashboard - " . PM_TITLE);
 
+
+//theme
+
+if (isset($_POST['submitTheme'])) {
+  define("PM_THEME_LIGHT", $_POST['submitTheme']);
+  if (defined("PM_RUN_DEV") && PM_RUN_DEV == true) {
+    $_SESSION['PM_THEME_LIGHT'] = $_POST['submitTheme']; //PHP HTTP server does not support cookie
+  } else {
+    setcookie("PM_THEME_LIGHT", $_POST['submitTheme'], time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
+  }
+} else {
+  define("PM_THEME_LIGHT", PM_DEFAULT_THEME_LIGHT);
+}
+
+
+//lang
 if (isset($_POST['submitLang'])) {
   if (in_array($_POST['submitLang'], PM_ALL_LANGS)) {
     define("PM_LANG", $_POST['submitLang']);

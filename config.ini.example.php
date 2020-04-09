@@ -15,6 +15,8 @@ define("PM_BYWHO", "FABRICA21");
 define("PM_BYWHOWEB", "https://fabrica21.com");
 //if under construction
 define("PM_UNDERCONSTRACTION", false); // or true
+//theme
+define("PM_DEFAULT_THEME_LIGHT", true);
 
 //sceleton items
 define("PM_BAR", true);
@@ -26,7 +28,7 @@ define("PM_SYS_FOLDER", "sys"); //or core
 define("PM_IS_DEV", true); // or true
 define("PM_PROD_SERVER", "apache"); //or nginx
 define("PM_LOCAL_APPFOLDER", "root");
-define("PM_REMOTE_APPFOLDER", "public_html/2020");
+define("PM_REMOTE_APPFOLDER", "public_html"); //don't touch unless
 define("PM_DEV_OS", "lin"); //lin/win/mac
 define("PM_ISAPP", false); //true or false
 
@@ -37,19 +39,20 @@ define("PM_ALLOW_CLIENTLANG", false); // or true (if true, default is client lan
 define("PM_ADMIN_LANG", "en"); // define lang of admin area
 
 //DB local
-define("DB_HOST_URL", "localhost");
-define("DB_NAME_LOCAL", "");
+define("DB_NAME_LOCAL", "f21_db");
 define("DB_USER_LOCAL", "");
-define("DB_PASS_LOCAL", ""); //hash
+define("DB_PASS_LOCAL", "");
 
 //DB remote
+define("DB_HOST_URL", "localhost");
 define("DB_NAME_REMOTE", "");
 define("DB_USER_REMOTE", "");
-define("DB_PASS_REMOTE", ""); //hash
+define("DB_PASS_REMOTE", "");
+
+
 
 define("PM_MAIN_GMAIL_USER", "");
 define("PM_MAIN_GMAIL_PASS", ""); 
-
 
 //ftp/sftp
 //define("DB_FTP_HOST", "");
