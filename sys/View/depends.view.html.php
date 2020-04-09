@@ -6,7 +6,7 @@ if (PM_THEME_LIGHT) :
     $ccsMasterTheme = "master-l";
 
 else :
-    $ccsMasterTheme = "master-r";
+    $ccsMasterTheme = "master-d";
 
 endif;
 

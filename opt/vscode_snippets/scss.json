@@ -1,11 +1,7 @@
 {
-
     "rtl/ltr": {
         "prefix": "dir",
-        "body": [
-            "[dir=rtl] & {$1}",
-            "[dir=ltr] & {$2}"
-        ],
+        "body": ["[dir=rtl] & {$1}", "[dir=ltr] & {$2}"],
         "description": "direction rtl/ltr"
     },
     "mob query": {
@@ -20,9 +16,7 @@
     },
     "box shadow": {
         "prefix": "bs",
-        "body": [
-            "box-shadow:$1 0$2 0$3 2$4 2 $5\\$c_shadow;"
-        ],
+        "body": ["box-shadow:$1 0$2 0$3 2$4 2 $5\\$c_shadow;"],
         "description": "box shadow css"
     },
     "display flex": {
@@ -30,31 +24,23 @@
         "body": [
             "display: flex;",
             "justify-content: $1center;",
-            "align-items: $2center;",
+            "align-items: $2center;"
         ],
         "description": "display flex all center"
     },
     "calc": {
         "prefix": "calc",
-        "body": [
-            "calc(#{$1} / #{$2})"
-        ],
+        "body": ["calc(#{$1} / #{$2})"],
         "description": "calc"
     },
     "widthheight": {
         "prefix": "wh",
-        "body": [
-            "width: $1vw;",
-            "height: $1vh;",
-        ],
+        "body": ["width: $1vw;", "height: $1vh;"],
         "description": "width & height"
     },
     "fontSize": {
         "prefix": "fs",
-        "body": [
-            "@include f-size($1\\$basicTextSize);"
-
-        ],
+        "body": ["@include f-size($1\\$basicTextSize);"],
         "description": "pm font size"
     },
     "lightTheme": {
@@ -65,10 +51,8 @@
             "}",
             "@if \\$LIGHT_THEME == false {",
             " ",
-            "}",
-
+            "}"
         ],
         "description": "Light Theme"
     }
-
 }
