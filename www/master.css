@@ -2597,6 +2597,9 @@ iframe {
 #pm_pageMailUnSuccess .pm_infoPageLogo {
   background-image: url("../sys/assets/images/info/pmlogoMailUnSuccess.svg"); }
 
+#pm_pageMailUnSuccess .pm_infoPageText {
+  color: #aa0000 !important; }
+
 #pm_pageMailSuccess .pm_infoPageLogo {
   background-image: url("../sys/assets/images/info/pmlogoMailSuccess.svg"); }
 
@@ -2610,9 +2613,8 @@ iframe {
 
 .pm_infoPage {
   background-color: #2f2f2f;
-  color: #575757;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   width: 100vw;
@@ -2622,7 +2624,11 @@ iframe {
   position: fixed; }
 
 .pm_infoPageText {
-  font-size: 4.8vh; }
+  color: #575757;
+  font-size: 3.6vh;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0.2vh 0.2vh #000; }
   [lang=en] .pm_infoPageText {
     font-family: Montserrat;
     font-weight: 400; }
@@ -2635,19 +2641,17 @@ iframe {
 
 @media (max-aspect-ratio: 13 / 9) {
   .pm_infoPageLogo {
-    margin-top: -10vh;
-    margin-bottom: 20vh;
     width: 30vh;
-    height: 30vh; } }
+    height: 30vh; }
+  .pm_infoPageText {
+    font-size: 3.6vh; } }
 
 @media (min-aspect-ratio: 13 / 9) {
   .pm_infoPageLogo {
-    margin-top: -5vw;
-    margin-bottom: 7vw;
     width: 26vw;
     height: 26vw; }
   .pm_infoPageText {
-    font-size: 6vh; } }
+    font-size: 4.5vh; } }
 
 @media (min-aspect-ratio: 13 / 9) {
   [data-mob=true] #mainAdminContent {

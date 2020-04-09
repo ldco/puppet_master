@@ -3,30 +3,48 @@ $infoPages_bgColor: null;
 $infoPages_color: null;
 $infoPages_errColor: null;
 $infoPages_sysFolder: null;
+$infoPages_divBgColor: null;
+$infoPages_text-shadow: null;
 @if $infoPages_puppetMasterBrandingOn==true {
     $infoPages_errColor: #aa0000;
     $infoPages_sysFolder: "sys";
     @if $lightThemeBool==true {
         $infoPages_bgColor: #f0f0f0;
+        $infoPages_divBgColor: #f0f0f0;
         $infoPages_color: #2f2f2f;
+        $infoPages_text-shadow: none;
     }
     @if $lightThemeBool==false {
         $infoPages_bgColor: #2f2f2f;
+        $infoPages_divBgColor: lighten($infoPages_bgColor, 10%);
         $infoPages_color: darken(#f0f0f0, 60%);
+        $infoPages_text-shadow: 0.2vh 0.2vh #000
     }
 }
 
 @if $infoPages_puppetMasterBrandingOn==false {
     $infoPages_bgColor: $c_domin;
-    $infoPages_color: $c_brand;
     $infoPages_errColor: $c_err;
     $infoPages_sysFolder: "core";
+    @if $lightThemeBool==true {
+        $infoPages_text-shadow: none;
+        $infoPages_divBgColor: $c_domin;
+        $infoPages_color: $c_black;
+    }
+    @if $lightThemeBool==false {
+        $infoPages_text-shadow: 0.2vh 0.2vh #000;
+        $infoPages_divBgColor: $c_brand;
+        $infoPages_color: $c_brand;
+    }
 }
 
 //
 #pm_404 {
     .pm_infoPageLogo {
         background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogo404.svg");
+    }
+    .pm_infoPageText {
+        // color: $infoPages_errColor !important;
     }
 }
 
@@ -46,6 +64,9 @@ $infoPages_sysFolder: null;
     .pm_infoPageLogo {
         background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoMailUnSuccess.svg");
     }
+    .pm_infoPageText {
+        color: $infoPages_errColor !important;
+    }
 }
 
 #pm_pageMailSuccess {
@@ -59,15 +80,14 @@ $infoPages_sysFolder: null;
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 50%;
-    background-color: lighten($infoPages_bgColor, 10%);
-    box-shadow: 0 0 5vh 5vh lighten($infoPages_bgColor, 10%);
+    background-color: $infoPages_divBgColor;
+    box-shadow: 0 0 5vh 5vh $infoPages_divBgColor;
 }
 
 .pm_infoPage {
     background-color: $infoPages_bgColor;
-    color: $infoPages_color;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     width: 100vw;
@@ -78,29 +98,33 @@ $infoPages_sysFolder: null;
 }
 
 .pm_infoPageText {
-    @include f-size(1.6);
+    color: $infoPages_color;
+    @include f-size(1.2);
     @include font(1,
-    400)
+    400);
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: $infoPages_text-shadow;
 }
+
+.pm_infoPageText::first-letter {}
 
 @media (max-aspect-ratio: 13/9) {
     .pm_infoPageLogo {
-        margin-top: -10vh;
-        margin-bottom: 20vh;
         width: 30vh;
         height: 30vh;
     }
-    .pm_infoPageText {}
+    .pm_infoPageText {
+        @include f-size(1.2);
+    }
 }
 
 @media (min-aspect-ratio: 13/9) {
     .pm_infoPageLogo {
-        margin-top: -5vw;
-        margin-bottom: 7vw;
         width: 26vw;
         height: 26vw;
     }
     .pm_infoPageText {
-        @include f-size(2);
+        @include f-size(1.5);
     }
 }

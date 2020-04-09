@@ -77,22 +77,27 @@ class Email
         $mail->Subject = $this->Subject;
         $mail->Body = $this->Body;
         $mail->AltBody = $this->Body;
-        if (!$mail->Send()) {
-            if ($this->SMTPDebug === 0) {
-                $pm_lang = PM_LANG;
+
+        if ($this->SMTPDebug == 0) {
+            try {
+                $mail->Send();
+            } catch (exception $e) {
+                $_pm_lang = PM_LANG;
                 require_once $this->LocationUnSuccess;
+                /*  header("Location: " . path2url($this->LocationUnSuccess)); */
                 die;
-                /*  header("Location: " . path2url($this->LocationUnSuccess));
-                die; */
-            } else {
-                echo "Mailer Error: " . $mail->ErrorInfo;
+            } finally {
+                $_pm_lang = PM_LANG;
+                require_once $this->LocationSuccess;
+                /*  header("Location: " . path2url($this->LocationSuccess)); */
+                die;
             }
         } else {
-            $pm_lang = PM_LANG;
-            require_once $this->LocationSuccess;
-            die;
-            /*  header("Location: " . path2url($this->LocationSuccess));
-            die; */
+            if (!$mail->Send()) {
+                echo "Mailer Error: " . $mail->ErrorInfo;
+            } else {
+                echo "The mail has been sent successfully";
+            }
         }
     }
 }
