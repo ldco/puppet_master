@@ -20,7 +20,7 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     min-height: $modalParentHeight;
     min-width: $modalParentWidth;
     @include font(1, 200);
-    @include f-size(0.9);
+    @include f-size($basicTextSize - 0.1);
     padding: 0;
     border: none !important;
     border-radius: 0.4vh;
@@ -45,7 +45,7 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
 }
 
 .pm_modal_contentArea {
-    @include f-size(0.8);
+    @include f-size($basicTextSize - 0.2);
     width: 100%;
     position: absolute;
     top: 5vh;

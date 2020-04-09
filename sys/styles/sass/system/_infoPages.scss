@@ -83,36 +83,43 @@ $infoPages_text-shadow: null;
 
 .pm_infoPage {
     background-color: $infoPages_bgColor;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
     width: 100vw;
     height: 100vh;
     left: 0;
     top: 0;
     position: fixed;
-    //button {}
+    .pm_infoPageInner {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: 90vh;
+        width: 100vw;
+        left: 0;
+        top: 8vh;
+        position: fixed;
+        .pm_infoPageText {
+            color: $infoPages_color;
+            @include font(1,
+            400);
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: $infoPages_text-shadow;
+        }
+        .pm_infoPageButtons {
+            button {
+                margin: 1.5vh;
+            }
+        }
+    }
 }
-
-.pm_infoPageText {
-    color: $infoPages_color;
-    @include f-size(1.2);
-    @include font(1,
-    400);
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: $infoPages_text-shadow;
-}
-
-.pm_infoPageText::first-letter {}
 
 @media (max-aspect-ratio: 13/9) {
-    .pm_infoPage {
+    .pm_infoPageInner {
         button {
-            width: 30vw;
-            height: 15vw;
-            @include f-size(0.7);
+            width: 18vh;
+            height: 7vh;
+            @include f-size($basicTextSize - 0.3);
         }
     }
     .pm_infoPageLogo {
@@ -121,17 +128,17 @@ $infoPages_text-shadow: null;
     }
     .pm_infoPageText {
         margin-top: 7vh;
-        @include f-size(1.2);
+        @include f-size($basicTextSize+0.2);
     }
 }
 
 @media (min-aspect-ratio: 13/9) {
-    .pm_infoPage {
+    .pm_infoPageInner {
         button {
-            width: 22vh;
-            height: 9vh;
-            @include f-size(0.8);
-            margin-bottom: -3vw;
+            width: 18vw;
+            height: 5vw;
+            @include f-size($basicTextSize - 0.2);
+            margin: 2vw;
         }
     }
     .pm_infoPageLogo {
@@ -140,6 +147,6 @@ $infoPages_text-shadow: null;
     }
     .pm_infoPageText {
         margin-top: 3vw;
-        @include f-size(1.5);
+        @include f-size($basicTextSize+1.2);
     }
 }

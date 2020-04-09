@@ -40,3 +40,16 @@ $c_D_interM1: $c_opos;
 $c_D_interM2: darken($c_opos, 4%);
 //shadow
 $c_shadow: desaturate(lighten($c_black, 48%), 100);
+$pm_formBS: null;
+$pm_formBSactive_oldStyle: null;
+$pm_formBSactive: null;
+$pm_formBSactive_oldStyle: -0.08vh -0.08vh 0.08vh 0.08vh $c_shadow;
+@if $LIGHT_THEME==true {
+    $pm_formBS: 0.1vh 0.1vh 0.1vh 0.1vh rgba($c_shadow, 0.4);
+    $pm_formBSactive: 0vh 0vh 0.3vh 0.3vh rgba($c_interBP2, 0.6);
+}
+
+@if $LIGHT_THEME==false {
+    $pm_formBS: 0vh 0vh 0.4vh 0.4vh rgba($c_interBP1, 0.9);
+    $pm_formBSactive: 0vh 0vh 1.2vh 0.9vh rgba($c_brand, 0.8);
+}

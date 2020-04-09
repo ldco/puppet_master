@@ -10,7 +10,6 @@
     border-top: solid $c_domin 1px;
     /**/
     color: $c_interBB;
-    font-size: 0.8vh;
     width: 100vw;
     @include font(1, 900);
     height: map-get($footer, height);
@@ -20,8 +19,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .pm_footerCredits {}
-    .pm_footerCreditsBy {}
+    span {
+        font-size: 0.8vh;
+    }
+    .pm_footerCredits,
+    .pm_footerCreditsBy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .pm_footerCreditsCopy {
         position: fixed;
         @include dir('right', 'left', 2vw, 2vw);

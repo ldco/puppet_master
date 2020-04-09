@@ -6,9 +6,6 @@
              flex-direction: column;
              align-items: center;
              background-color: $c_domin;
-             a {
-                 @include f-size($basicTextSize);
-             }
              h1 {
                  color: $c_opos;
                  text-transform: uppercase;
@@ -46,13 +43,20 @@
          }
          
          @include mob(true) {
+             a {
+                 @include f-size($basicTextSize - 0.2);
+             }
              .pm_text {
-                 width: 90vw;
-                 line-height: 115%;
+                 width: 80vw;
+                 line-height: 140%;
+                 @include f-size($basicTextSize - 0.2);
              }
          }
          
          @include mob(false) {
+             a {
+                 @include f-size($basicTextSize);
+             }
              .pm_text {
                  width: 90vw;
                  line-height: 130%;
@@ -60,7 +64,6 @@
          }
          
          .pm_text {
-             @include f-size($basicTextSize);
              @include font(1, 300);
          }
          

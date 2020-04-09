@@ -28,17 +28,27 @@
 }
 
 @include mob(true) {
-    .pm_contacts {}
+    .pm_contacts {
+        a {
+            border: none;
+        }
+    }
     .pm_contacts_item {
         display: none !important;
-    }
-    a {
-        border: none;
     }
 }
 
 @include mob(false) {
-    .pm_contacts {}
+    .pm_contacts {
+        @if $LIGHT_THEME==true {}
+        @if $LIGHT_THEME==false {
+            a {
+                border: none;
+                box-shadow: $pm_formBS;
+                padding: 0.2vh;
+            }
+        }
+    }
     .pm_contactsMobile_item {
         display: none !important;
     }

@@ -1,8 +1,5 @@
 /*change browser defaults*/
 
-$pm_formBS: 0.1vh 0.1vh 0.1vh 0.1vh rgba($c_shadow, 0.4);
-$pm_formBSactive_oldStyle: -0.08vh -0.08vh 0.08vh 0.08vh $c_shadow;
-$pm_formBSactive: 0vh 0vh 0.3vh 0.3vh rgba($c_interBP2, 0.6);
 img {
     -webkit-user-drag: none;
     -khtml-user-drag: none;
@@ -57,7 +54,7 @@ select {
         background-position: right 0.7vh top 50%, 0 0;
     }
     text-transform: capitalize;
-    @include f-size(0.7);
+    @include f-size($basicTextSize - 0.3);
     background: $c_interB;
     color: $c_opos;
 }
@@ -97,9 +94,19 @@ input[type="submit"],
 button {
     cursor: pointer;
     box-shadow: $pm_formBS;
+    text-align: center;
+    vertical-align: text-bottom;
     &:hover {
-        background: $c_interM1;
-        color: $c_brand;
+        @if $LIGHT_THEME==true {
+            background: $c_interM1;
+            color: $c_brand;
+        }
+        @if $LIGHT_THEME==false {
+            @include font(1,
+            400);
+            background: $c_interP2;
+            color: $c_opos;
+        }
     }
     &:focus {}
     &:active {
@@ -133,11 +140,17 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    @include f-size($basicTextSize);
+    @include f-size($basicTextSize - 0.1);
+    @if $LIGHT_THEME==true {}
+    @if $LIGHT_THEME==false {
+        @include font(1,
+        400);
+    }
 }
 
 label {
     text-transform: capitalize;
+    padding-bottom: 1vh;
     span {
         color: $c_err;
     }
@@ -156,4 +169,15 @@ video:focus {}
 
 *:focus {
     outline: 0 !important;
+}
+
+@if $LIGHT_THEME==true {}
+
+@if $LIGHT_THEME==false {
+    textarea,
+    input,
+    select,
+    option {
+        color: $c_opos;
+    }
 }

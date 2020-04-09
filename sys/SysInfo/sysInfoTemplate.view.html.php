@@ -1,28 +1,29 @@
 <div id="<?= $sysInfopageId ?>" class="pm_infoPage">
-    <div class="pm_infoPageLogo"></div>
-    <div class="pm_infoPageText"><?= $sysInfopageText ?></div>
+    <div class="pm_infoPageInner">
+        <div class="pm_infoPageLogo"></div>
+        <div class="pm_infoPageText"><?= $sysInfopageText ?></div>
 
 
-    <?php
-    if ($sysInfopageId == "pm_pageMailSuccess") :
-    ?>
+        <?php
+        if ($sysInfopageId == "pm_pageMailSuccess") :
+        ?>
 
-        <div class="pm_infoPageButtons">
-            <button id="pm_infoPageButton_GoHome"><?= $sysInfopageTextLoc["goHome"][$pm_lang]; ?></button>
-            <button id="pm_infoPageButton_GoBack"><?= $sysInfopageTextLoc["goBack"][$pm_lang]; ?></button>
-        </div>
-
-
-    <?php elseif ($sysInfopageId == "pm_pageMailUnSuccess") :
-    ?>
-        <div class="pm_infoPageButtons">
-            <button id="pm_infoPageButton_GoBack"><?= $sysInfopageTextLoc["goBack"][$pm_lang]; ?></button>
-        </div>
-
-    <?php endif; ?>
+            <div class="pm_infoPageButtons">
+                <button id="pm_infoPageButton_GoHome"><?= $sysInfopageTextLoc["goHome"][$pm_lang]; ?></button>
+                <button id="pm_infoPageButton_GoBack"><?= $sysInfopageTextLoc["goBack"][$pm_lang]; ?></button>
+            </div>
 
 
+        <?php elseif ($sysInfopageId == "pm_pageMailUnSuccess") :
+        ?>
+            <div class="pm_infoPageButtons">
+                <button id="pm_infoPageButton_GoBack"><?= $sysInfopageTextLoc["goBack"][$pm_lang]; ?></button>
+            </div>
 
+        <?php endif; ?>
+
+
+    </div>
 </div>
 
 <script>

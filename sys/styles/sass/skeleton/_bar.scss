@@ -251,7 +251,7 @@ font-size: 2vh;
         justify-content: center;
         align-items: center;
         input {
-            @include f-size(0.8);
+            @include f-size($basicTextSize - 0.2);
             background-color: rgba($c_domin, 0.8);
             color: $c_opos;
             margin-top: 2vh;
@@ -294,7 +294,7 @@ font-size: 2vh;
                 height: 4vh;
                 margin: 0;
                 @include font(1, 400);
-                @include f-size(0.7)
+                @include f-size($basicTextSize - 0.3)
             }
         }
     }
