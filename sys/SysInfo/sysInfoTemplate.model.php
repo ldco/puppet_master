@@ -24,9 +24,6 @@ if (!$pm_theme_l) {
     }
 }
 
-
-
-
 ?>
 
 <html lang=<?= $pm_lang ?>>

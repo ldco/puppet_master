@@ -10,19 +10,23 @@ $modalButtonsWidth: $modalParentWidth / 4;
 $modalButtonsHeight: $modalButtonsWidth / 2.6;
 //main
 .pm_modal_parent {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    border-radius: 1vh;
-    background-color: $c_white;
-    z-index: 100;
     text-align: center;
-    cursor: default;
     justify-content: center;
-    z-index: 1984;
+    background-color: rgba($c_domin, 0.9);
+    color: $c_opos;
     min-height: $modalParentHeight;
     min-width: $modalParentWidth;
-    box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh $c_shadow;
+    @include font(1, 200);
+    @include f-size(0.9);
+    padding: 0;
+    border: none !important;
+    border-radius: 0.4vh;
+    box-shadow: $pm_formBS;
+    z-index: 1984;
+    cursor: default;
 }
 
 //areas
@@ -71,14 +75,6 @@ input.pm_modal_button {
     width: $modalButtonsWidth;
     height: $modalButtonsHeight;
     font-size: $modalButtonsHeight / 2;
-    border-radius: 0.3vh;
-    background-color: darken($c_white, 14%);
-    box-shadow: 0.08vh 0.08vh 0.08vh 0.08vh $c_shadow;
-    text-transform: capitalize;
-    &:hover {}
-    &:active {
-        box-shadow: -0.08vh -0.08vh 0.08vh 0.08vh $c_shadow;
-    }
 }
 
 //title
@@ -96,7 +92,6 @@ input.pm_modal_button {
     background-repeat: no-repeat;
     top: 1vh;
     position: absolute;
-    &:hover {}
 }
 
 .pm_modal_icon_close {

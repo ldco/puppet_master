@@ -1,3 +1,20 @@
+@if $LIGHT_THEME==true {}
+
+@if $LIGHT_THEME==false {
+    #gofanariumLink {
+        margin-top: 8vh;
+        margin-bottom: 5vh;
+        background-color: $c_opos;
+    }
+    #fontsGrid {
+        img {
+            background-color: rgba($c_opos, 0.6);
+            border-radius: 2vh;
+            padding: 5vh;
+        }
+    }
+}
+
 @include mob(true) {
     #page_6_img_1 {
         margin-top: 5vh;
@@ -11,7 +28,7 @@
             height: 100%;
         }
         img {
-            width: 70vw;
+            width: 50vw;
         }
     }
 }
@@ -29,13 +46,18 @@
             height: 100%;
         }
         img {
-            width: 40vw;
+            width: 35vw;
         }
     }
 }
 
 #gofanariumLink {
     border-bottom: none;
+    border-radius: 50%;
+    width: 40vw;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
 }
 
 #text_6_3 {
