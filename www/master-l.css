@@ -2590,33 +2590,33 @@ iframe {
   outline: none; }
 
 #pm_404 .pm_infoPageLogo {
-  background-image: url("../sys/assets/images/info/pmlogo404.svg"); }
+  background-image: url("../sys/assets/images/images_dev/info/pmlogo404.svg"); }
 
 #pm_pageUnderConstruction .pm_infoPageLogo {
-  background-image: url("../sys/assets/images/info/pmlogoUnderConstruction.svg"); }
+  background-image: url("../sys/assets/images/images_dev/info/pmlogoUnderConstruction.svg"); }
 
 #pm_pageUnderMaintenance .pm_infoPageLogo {
-  background-image: url("../sys/assets/images/info/pmlogoUnderMaintenance.svg"); }
+  background-image: url("../sys/assets/images/images_dev/info/pmlogoUnderMaintenance.svg"); }
 
 #pm_pageMailUnSuccess .pm_infoPageLogo {
-  background-image: url("../sys/assets/images/info/pmlogoMailUnSuccess.svg"); }
+  background-image: url("../sys/assets/images/images_dev/info/pmlogoMailUnSuccess.svg"); }
 
 #pm_pageMailUnSuccess .pm_infoPageText {
-  color: #aa0000 !important; }
+  color: #ff0c00ff !important; }
 
 #pm_pageMailSuccess .pm_infoPageLogo {
-  background-image: url("../sys/assets/images/info/pmlogoMailSuccess.svg"); }
+  background-image: url("../sys/assets/images/images_dev/info/pmlogoMailSuccess.svg"); }
 
 .pm_infoPageLogo {
-  background-image: url("../sys/assets/images/info/pmlogo.svg");
+  background-image: url("../sys/assets/images/images_dev/info/pmlogo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
-  background-color: #f0f0f0;
-  box-shadow: 0 0 5vh 5vh #f0f0f0; }
+  background-color: #e4e9ed;
+  box-shadow: 0 0 5vh 5vh #e4e9ed; }
 
 .pm_infoPage {
-  background-color: #f0f0f0;
+  background-color: #e4e9ed;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -2628,7 +2628,7 @@ iframe {
   position: fixed; }
 
 .pm_infoPageText {
-  color: #2f2f2f;
+  color: #00070a;
   font-size: 3.6vh;
   text-align: center;
   text-transform: uppercase;

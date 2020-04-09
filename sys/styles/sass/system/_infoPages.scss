@@ -2,12 +2,10 @@
 $infoPages_bgColor: null;
 $infoPages_color: null;
 $infoPages_errColor: null;
-$infoPages_sysFolder: null;
 $infoPages_divBgColor: null;
 $infoPages_text-shadow: null;
 @if $INFO_PM_BRAND==true {
     $infoPages_errColor: #aa0000;
-    $infoPages_sysFolder: "sys";
     @if $LIGHT_THEME==true {
         $infoPages_bgColor: #f0f0f0;
         $infoPages_divBgColor: #f0f0f0;
@@ -25,7 +23,6 @@ $infoPages_text-shadow: null;
 @if $INFO_PM_BRAND==false {
     $infoPages_bgColor: $c_domin;
     $infoPages_errColor: $c_err;
-    $infoPages_sysFolder: "core";
     @if $LIGHT_THEME==true {
         $infoPages_text-shadow: none;
         $infoPages_divBgColor: $c_domin;
@@ -41,7 +38,7 @@ $infoPages_text-shadow: null;
 //
 #pm_404 {
     .pm_infoPageLogo {
-        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogo404.svg");
+        background-image: url("#{$IMAGES_FOLDER}info/pmlogo404.svg");
     }
     .pm_infoPageText {
         // color: $infoPages_errColor !important;
@@ -50,19 +47,19 @@ $infoPages_text-shadow: null;
 
 #pm_pageUnderConstruction {
     .pm_infoPageLogo {
-        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoUnderConstruction.svg");
+        background-image: url("#{$IMAGES_FOLDER}info/pmlogoUnderConstruction.svg");
     }
 }
 
 #pm_pageUnderMaintenance {
     .pm_infoPageLogo {
-        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoUnderMaintenance.svg");
+        background-image: url("#{$IMAGES_FOLDER}info/pmlogoUnderMaintenance.svg");
     }
 }
 
 #pm_pageMailUnSuccess {
     .pm_infoPageLogo {
-        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoMailUnSuccess.svg");
+        background-image: url("#{$IMAGES_FOLDER}info/pmlogoMailUnSuccess.svg");
     }
     .pm_infoPageText {
         color: $infoPages_errColor !important;
@@ -71,12 +68,12 @@ $infoPages_text-shadow: null;
 
 #pm_pageMailSuccess {
     .pm_infoPageLogo {
-        background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogoMailSuccess.svg");
+        background-image: url("#{$IMAGES_FOLDER}info/pmlogoMailSuccess.svg");
     }
 }
 
 .pm_infoPageLogo {
-    background-image: url("../#{$infoPages_sysFolder}/assets/images/info/pmlogo.svg");
+    background-image: url("#{$IMAGES_FOLDER}info/pmlogo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 50%;

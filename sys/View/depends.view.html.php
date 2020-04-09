@@ -14,7 +14,7 @@ if (defined("PM_IS_LOCAL") && PM_IS_LOCAL) :
     $cssDependFile = $ccsMasterTheme . ".css";
     $jsDependFile = "master.js";
 else :
-    $cssDependFile = $ccsMasterTheme . ".min.css";
+    $cssDependFile = $ccsMasterTheme . "-prod.min.css";
     $jsDependFile = "master.min.js";
 endif;
 ?>

@@ -4,12 +4,29 @@ if (!empty($_POST["pm_lang"])) {
 } else {
     $pm_lang = "en";
 }
-
-if (file_exists("../../www/master.css")) {
-    $filepathtocss = "../../www/master.css";
+if (!empty($_POST["pm_theme"])) {
+    $pm_theme_l = $_POST["pm_theme"];
 } else {
-    $filepathtocss = "../../www/master.min.css";
+    $pm_theme_l = false;
 }
+
+if (!$pm_theme_l) {
+    if (file_exists("../../www/master-d.css")) {
+        $filepathtocss = "../../www/master-d.css";
+    } else {
+        $filepathtocss = "../../www/master-d-prod.min.css";
+    }
+} else {
+    if (file_exists("../../www/master-l.css")) {
+        $filepathtocss = "../../www/master-l.css";
+    } else {
+        $filepathtocss = "../../www/master-l-prod.min.css";
+    }
+}
+
+
+
+
 ?>
 
 <html lang=<?= $pm_lang ?>>
