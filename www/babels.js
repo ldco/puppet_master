@@ -121,11 +121,12 @@ function initFun() {
   setRouter();
   setChangeLang();
   setBarAsset();
-  initModalLocalisation();
   setGoTopButton();
   setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
+  initModalLocalisation();
   new Thebility().init();
   mainPageIntro();
+  console.log("test3");
   /*end of functions list!*/
 
   var setURL = window.location.hash;
@@ -476,7 +477,7 @@ function initModalLocalisation() {
   ajx.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       var fromDB = JSON.parse(ajx.responseText);
-      PM_MODAL_LOC = fromDB; // console.log(PM_MODAL_LOC);
+      PM_MODAL_LOC = fromDB;
     }
   };
 
@@ -495,6 +496,8 @@ function teamHelp() {
     arr.push(el3);
   });
   arr = new Set(arr);
+  /* if (!/in/.test(document.readyState)) //checks if document ready */
+
   arr.forEach(function (el) {
     var div = document.createElement("div");
     var els = document.querySelectorAll(".pm_team_rank_" + el);
@@ -746,11 +749,7 @@ function mainPageIntro() {
     videoParent.style.backgroundImage = "url('sys/assets/images/" + folder + "/page_1/" + Math.floor(Math.random() * 10 + 1) + ".png')";
   }
 
-  if (x("images")) {
-    x("images");
-  } else {
-    x("images_dev");
-  }
+  x("images");
 }
 "use strict";
 
@@ -831,7 +830,7 @@ function setPageFunctions() {
   if (setURL == "") return;
   var id = setURL.split("#").pop();
   if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
-  var timeout = 100;
+  var timeout = 500;
   var fun = {
     fun_1: function fun_1() {
       mainPageIntro();

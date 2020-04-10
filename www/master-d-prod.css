@@ -3993,8 +3993,7 @@ body .pm_bar_scrolled {
     body .pm_bar_scrolled .pm_barLogo img {
       max-width: calc(calc(6vh / 1.6) / 0.35) !important; }
   body .pm_bar_scrolled .pm_bar_asset {
-    height: calc(calc(6vh / 1.6) / 0.8);
-    top: calc((calc(6vh / 1.6) / 2) - (calc(6vh / 1.6) / 0.8) / 2); }
+    top: calc((calc(6vh / 1.6) / 2) - (calc(6vh / 1.6) / 0.8) / 3.5); }
   body .pm_bar_scrolled .pm_class_Nav .nav_item img,
   body .pm_bar_scrolled .pm_class_Nav .nav_item + div > img,
   body .pm_bar_scrolled .pm_class_Nav .nav_admin_item img,

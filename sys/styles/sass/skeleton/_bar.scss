@@ -92,8 +92,7 @@
             }
         }
         .pm_bar_asset {
-            height: calc(#{$pmBarScrolledHeight} / 0.8);
-            top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.8) / 2);
+            top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.8) / 3.5);
         }
         .pm_class_Nav {
             @if $PM_NAV_ICONS==true {

@@ -22,11 +22,13 @@ function initFun() {
     setRouter();
     setChangeLang();
     setBarAsset();
-    initModalLocalisation();
     setGoTopButton();
     setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
+    initModalLocalisation();
     new Thebility().init();
     mainPageIntro();
+    console.log("test3");
+
 
     /*end of functions list!*/
     let setURL = window.location.hash;

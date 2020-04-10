@@ -8,6 +8,11 @@ function teamHelp() {
         arr.push(el3);
     });
     arr = new Set(arr);
+
+
+    /* if (!/in/.test(document.readyState)) //checks if document ready */
+
+
     arr.forEach(el => {
         let div = document.createElement("div");
         let els = document.querySelectorAll(".pm_team_rank_" + el);
@@ -17,4 +22,7 @@ function teamHelp() {
             document.querySelector(".pm_team").appendChild(div);
         });
     });
+
+
+
 }

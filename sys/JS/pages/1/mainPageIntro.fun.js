@@ -55,9 +55,7 @@ function mainPageIntro() {
             ".png')";
     }
 
-    if (x("images")) {
-        x("images");
-    } else {
-        x("images_dev");
-    }
+
+    x("images");
+
 }

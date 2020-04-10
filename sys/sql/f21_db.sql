@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2020 at 04:39 PM
+-- Generation Time: Apr 10, 2020 at 06:24 AM
 -- Server version: 10.4.12-MariaDB-1:10.4.12+maria~bionic-log
 -- PHP Version: 7.4.2
 
@@ -186,6 +186,7 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (96, 'contacts', 'контакты', 'צור קשר', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (102, 'contrast', 'контраст', 'ניגודיות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (135, 'custom font', 'шрифт на заказ', 'גופן אישי', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(140, 'dark / light theme', 'темная / светлая тема', 'נושא כהה / בהיר', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (56, 'date', 'дата', 'תאריך', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (133, 'desktop app', 'десктопное приложение', 'אפליקציית דסקטופ', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (34, 'disciplines', 'дисциплины', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -341,8 +342,7 @@ INSERT INTO `pm_text` (`id`, `en`, `ru`, `he`, `fr`, `it`, `es`, `de`, `zh`, `ja
 ('5_1', 'We provide software solutions for small businesses - web apps, desktop apps, mobile apps.', 'Мы предоставляем программные решения для маленького бизнеса - веб приложения, мобильные и десктопные приложения.', 'אנחנו מספקים פטרונות תוכנה לעסקים קטנים - אפליקציות ווב, מובייל ודסקטופ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('6_1', 'We published for you some Hebrew fonts under the', 'Мы опубликовали некоторое количество ивритских шрифтов под лицензией', 'הצאנו לאור מספר גופים חופשיים תחת הרשיון', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('6_2', '- you can use them for free also for commercial purposes. To download a font just click on the desired font or download all fonts at once on link at bottom of the page, but first we advise you to try the fonts out in the Gofanarium:', '- вы можете использовать их бесплатно, в том числе для коммерческих целей(в соответствии с условиями лицензии). Чтоб скачать шрифт кликните на картинку с нужным шрифтом. Можно также скачать все шрифты одним архивом по ссылке внизу страницы. Для начала мы предлагаем воспользоваться программой для проверки шрифтов Гофанариумом:', 'אתם מוזמנים להשתמש בהם, הם חופשיים גם לשימוש מסחרי. כדי להוריד את קובץ הגופן פשוט הקליקו על התמונה עם הפונט הרצוי, או תשתמשו בקישור בתחתית הדף כדי להוריד את כל הפונטים ביחד בקובץ ארכיון. לפני ההורדה אתם מוזמנים להיכנס למערכת לבדיקת הפונטים - הגופנריום:', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('6_3', 'Download all fonts in archive', 'Скачать все шрифты одним архивом', 'להוריד את כל הגופנים בארכיון', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('pm404', 'You\'re a creep, you don\'t belong here', 'Вы не туда попали', 'פנייה לא נכונה', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('6_3', 'Download all fonts in archive', 'Скачать все шрифты одним архивом', 'להוריד את כל הגופנים בארכיון', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -457,7 +457,7 @@ ALTER TABLE `pm_contact`
 -- AUTO_INCREMENT for table `pm_loc`
 --
 ALTER TABLE `pm_loc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT for table `pm_pub_nav`

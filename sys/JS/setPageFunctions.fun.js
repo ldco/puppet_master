@@ -3,7 +3,9 @@ function setPageFunctions() {
     if (setURL == "") return;
     let id = setURL.split("#").pop();
     if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
-    let timeout = 100;
+    let timeout = 500;
+
+
     let fun = {
         fun_1: function() {
             mainPageIntro();
@@ -42,9 +44,13 @@ function setPageFunctions() {
 
     };
 
+
     if (fun["fun_" + id]) {
         setTimeout(() => {
             fun["fun_" + id]();
+
         }, timeout);
+
     }
+
 }

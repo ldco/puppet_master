@@ -23,8 +23,9 @@ function initModalLocalisation() {
     ajx.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let fromDB = JSON.parse(ajx.responseText);
+
             PM_MODAL_LOC = fromDB;
-            // console.log(PM_MODAL_LOC);
+
         }
     };
     ajx.open("POST", sysFolder + "modules/initModalTranslate.php", true);
