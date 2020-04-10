@@ -1,4 +1,6 @@
 node_modules
 vendor
 opt/phpMyAdmin/*
+sys/assets/icons/vector/*
+sys/assets/images/images/*
 
