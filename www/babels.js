@@ -741,7 +741,16 @@ function mainPageIntro() {
   presentation();
   var bgimages = ["", "", "", "", "", ""];
   var videoParent = document.getElementById("bgVideo");
-  videoParent.style.backgroundImage = "url('sys/assets/images/images_dev/page_1/" + Math.floor(Math.random() * 10 + 1) + ".png')";
+
+  function x(folder) {
+    videoParent.style.backgroundImage = "url('sys/assets/images/" + folder + "/page_1/" + Math.floor(Math.random() * 10 + 1) + ".png')";
+  }
+
+  if (x("images")) {
+    x("images");
+  } else {
+    x("images_dev");
+  }
 }
 "use strict";
 

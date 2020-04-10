@@ -8,17 +8,17 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 
 class Contacts
 {
-    public string $extension = "svg";
-    public string $telName = "tel.";
-    public string $mailName = "mail";
-    public string $table = "pm_contact";
-    public string $folder = "team";
+    public $extension = "svg";
+    public $telName = "tel.";
+    public $mailName = "mail";
+    public $table = "pm_contact";
+    public $folder = "team";
     public $id = null;
-    public string $class = "pm_contacts";
-    public string $classMob = "pm_contactsMobile";
-    public bool $forMob = true;
-    public bool $text = true;
-    public bool $img = true;
+    public $class = "pm_contacts";
+    public $classMob = "pm_contactsMobile";
+    public $forMob = true;
+    public $text = true;
+    public $img = true;
 
     public function __construct()
     {

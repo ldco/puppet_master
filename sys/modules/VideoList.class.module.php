@@ -11,9 +11,9 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 class VideoList
 {
     public $title = null;
-    public string $table;
-    public string $row;
-    public string $prelink = "https://www.youtube.com/embed/";
+    public $table;
+    public $row;
+    public $prelink = "https://www.youtube.com/embed/";
     public function make($_id, $childClass = null, $class = null)
     {
         global $DB;

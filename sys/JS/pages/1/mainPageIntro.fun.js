@@ -1,5 +1,5 @@
 function mainPageIntro() {
-    if ((window.location.hash !== "") && (window.location.hash !== "#1")) return;
+    if (window.location.hash !== "" && window.location.hash !== "#1") return;
 
     let dir = document.getElementsByTagName("html")[0].getAttribute("dir");
 
@@ -45,8 +45,19 @@ function mainPageIntro() {
     presentation();
     let bgimages = ["", "", "", "", "", ""];
     let videoParent = document.getElementById("bgVideo");
-    videoParent.style.backgroundImage =
-        "url('sys/assets/images/images_dev/page_1/" +
-        Math.floor(Math.random() * 10 + 1) +
-        ".png')";
+
+    function x(folder) {
+        videoParent.style.backgroundImage =
+            "url('sys/assets/images/" +
+            folder +
+            "/page_1/" +
+            Math.floor(Math.random() * 10 + 1) +
+            ".png')";
+    }
+
+    if (x("images")) {
+        x("images");
+    } else {
+        x("images_dev");
+    }
 }

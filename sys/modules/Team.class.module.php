@@ -11,8 +11,8 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 class Team
 {
     public $title = null;
-    public string $table = "pm_team";
-    public string $folder = "team";
+    public $table = "pm_team";
+    public $folder = "team";
     public function make($_id = null, $childClass = null, $class = "pm_team")
     {
         global $PM_PAGE_NUM;

@@ -7,7 +7,7 @@ require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
 class Files
 {
     public $title;
-    public string $folder;
+    public $folder;
     public $imgNetto = false;
     public $array_sort = 'natsort';
     public function make($childClass = null, $class = null)

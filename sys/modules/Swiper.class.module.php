@@ -6,7 +6,7 @@ declare(strict_types=1);
 class Swiper
 {
 
-    public string $folder;
+    public $folder;
 
     public function make($class, $buttons = true)
     {

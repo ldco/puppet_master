@@ -20,8 +20,8 @@ if (PM_IS_LOCAL) {
   define("PM_APPFOLDER", PM_REMOTE_APPFOLDER . "/");
   if (defined("PM_IS_DEV") && PM_IS_DEV) {
     define("PM_IS_DEV_DEFINED", true);
-    define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER, "PM_DEV/")));
-    define("PM_ROOT_REL", "/PM_DEV/");
+    define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER .  "PM_DEV/")));
+    define("PM_ROOT_REL", "");
   } else {
     define("PM_IS_DEV_DEFINED", false);
     define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER)));
@@ -77,12 +77,11 @@ if (isset($_POST['submitTheme'])) {
   if (defined("PM_RUN_DEV") && PM_RUN_DEV == true) {
     $_SESSION['PM_THEME_LIGHT'] = filter_var($_POST['submitTheme'], FILTER_VALIDATE_BOOLEAN); //PHP HTTP server does not support cookie
   } else {
-    setcookie("PM_THEME_LIGHT", filter_var($_POST['submitTheme'], FILTER_VALIDATE_BOOLEAN), time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
+    setcookie("PM_THEME_LIGHT", $_POST['submitTheme'], time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
   }
 } else {
   define("PM_THEME_LIGHT", PM_DEFAULT_THEME_LIGHT);
 }
-
 
 //lang
 if (isset($_POST['submitLang'])) {
