@@ -38,7 +38,6 @@ function clearTerminal() {
 }
 
 function postGit() {
-
     let gitself = document.getElementsByName("gitself")[0].value;
     let gitmaster = document.getElementsByName("gitmaster")[0].value;
     let gitto = document.getElementsByName("gitto")[0].value;
