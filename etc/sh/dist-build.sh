@@ -19,6 +19,6 @@ rsync -arvh --delete vendor/ DIST/vendor &&
 
 rsync -arvh --delete --exclude 'videos/videos_dev' --exclude 'icons/vector_dev' --exclude 'images/images_dev' sys/assets/ DIST/assets &&
 
-rsync -arvh --delete admin DIST/admin
+rsync -arvh --delete admin/ DIST/admin
 
 

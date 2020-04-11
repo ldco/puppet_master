@@ -52,10 +52,14 @@ define("DB_PASS_REMOTE", "");
 
 
 define("PM_MAIN_GMAIL_USER", "");
-define("PM_MAIN_GMAIL_PASS", ""); 
+define("PM_MAIN_GMAIL_PASS", "");
 
 //ftp/sftp
-//define("DB_FTP_HOST", "");
-//define("DB_FTP_NAME", "");
-//define("DB_FTP_USER", "");
-//define("DB_FTP_PASS", "");
+
+define("REMOTE", "");
+define("REMOTE_USER", "");
+define("REMOTE_PASS", "");
+define("LOCAL_ROOT", "/mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/" . PM_LOCAL_APPFOLDER);
+define("LOCAL_DIST", "DIST" . "/");
+define("FTP_DEV_FOLDER", "PM_DEV" . "/");
+define("FTP_IS_DEV", true);

@@ -1,0 +1,21 @@
+Started at [2020/04/11 02:29]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/FtpDeploy/deploy--vendor.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/DIST/vendor
+Ignoring ./xlad/formr/.git              
+Ignoring ./ezyang/htmlpurifier/plugins/phorum/.gitignore
+Ignoring ./tecnickcom/tcpdf/fonts/ae_fonts_2.0/ChangeLog.9745.BAK
+Ignoring ./tecnickcom/tcpdf/fonts/freefont-20120503/ChangeLog.10070.BAK
+Already synchronized.
+
+
+
+Finished at [2020/04/11 02:29] (in 2 seconds)
+----------------------------------------------
+
+
