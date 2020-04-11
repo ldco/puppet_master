@@ -6,7 +6,7 @@ Note: connection is not encrypted
 Live mode
 Connecting to server
 Loaded remote .htdeployment file
-Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/DIST/vendor
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/vendor
 Ignoring ./xlad/formr/.git              
 Ignoring ./ezyang/htmlpurifier/plugins/phorum/.gitignore
 Ignoring ./tecnickcom/tcpdf/fonts/ae_fonts_2.0/ChangeLog.9745.BAK

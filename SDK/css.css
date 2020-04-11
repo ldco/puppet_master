@@ -1,0 +1,43 @@
+#sdk_terminal {
+    width: 30vw;
+    height: 80vh;
+    background-color: #444;
+    color: #05a608;
+    /* #fee818 */
+    border-radius: 1vh;
+    box-shadow: 0.2vh 0.2vh 1vh 0.2vh #000;
+}
+
+#sdk_control {
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sdk_control_item {
+    text-transform: capitalize;
+    display: flex;
+    padding-top: 1vh;
+    align-items: center;
+}
+
+.sdk_control_item label,
+.sdk_control_item input {
+    margin-right: 1vh;
+}
+
+.sdk_control_main {
+    margin-bottom: 10vh;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}

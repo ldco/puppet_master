@@ -1,0 +1,75 @@
+<link rel="stylesheet" href="css.css">
+<script src="js.js"></script>
+
+
+
+<div id="sdk_control">
+
+    <div class="sdk_control_main">
+        <div class="sdk_control_item">
+            <label>git commit</label>
+            <input type="text" name="gitcom">
+            <label>to</label>
+            <input type="text" name="gitto">
+            <label>master</label>
+            <input type="checkbox" name="gitmaster">
+            <label>self</label>
+            <input type="checkbox" name="gitself">
+            <input type="submit">
+        </div>
+
+        <div class="sdk_control_item">
+            <label>icons color</label>
+            <input type="text" name="gitcom">
+            <label>to</label>
+            <input type="text" name="gitto">
+            <input type="submit">
+        </div>
+        <div class="sdk_control_item">
+            <label>hash password</label>
+            <input type="text" value="" name="pass" id="">
+            <input type="submit">
+            <span id="sdk_hashedpassword"></span>
+        </div>
+
+        <div class="sdk_control_item">
+            <label>deploy</label>
+            <select name="ftp">
+                <option>init (dist + vendor)</option>
+                <option>dist</option>
+                <option>vendor</option>
+                <option>css</option>
+                <option>js</option>
+                <option>assets</option>
+            </select>
+            <input type="submit">
+        </div>
+        <div class="sdk_control_item">
+            <label>kill php</label>
+            <input type="submit">
+        </div>
+    </div>
+    <div class="sdk_control_second">
+        <div class="sdk_control_item">
+            <label>command</label>
+            <input type="text" name="com">
+            <input type="submit">
+        </div>
+
+        <div class="sdk_control_item">
+            <label>npm script</label>
+            <input type="text" name="npm">
+            <input type="submit">
+        </div>
+
+        <div class="sdk_control_item">
+            <label>sh script</label>
+            <input type="text" name="sh">
+            <input type="submit">
+        </div>
+
+    </div>
+</div>
+<div id="sdk_terminal"></div>
+
+</div>

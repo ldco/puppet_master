@@ -1,0 +1,1234 @@
+Started at [2020/04/11 02:47]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/FtpDeploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/DIST
+Ignoring ./assets/var/.gitkeep          
+Ignoring ./assets/fonts/.gitkeep        
+Ignoring ./vendor                       
+
+Uploading:
+( 1 of 16) /admin/Pages/
+( 2 of 16) /admin/Pages/6.page.php
+( 3 of 16) /admin/Pages/7.page.php
+( 4 of 16) /admin/Pages/4.page.php
+( 5 of 16) /admin/Pages/5.page.php
+( 6 of 16) /admin/Pages/3.page.php
+( 7 of 16) /admin/Pages/1.page.php
+( 8 of 16) /admin/Pages/2.page.php
+( 9 of 16) /admin/index.php
+(10 of 16) /admin/Model/
+(11 of 16) /admin/Model/registration.class.php
+(12 of 16) /admin/Model/login.class.php
+(13 of 16) /admin/View/
+(14 of 16) /admin/View/registration.view.html.php
+(15 of 16) /admin/View/login.view.html.php
+(16 of 16) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+( 1 of 13) Renaming /admin/Pages/6.page.php
+( 2 of 13) Renaming /admin/Pages/7.page.php
+( 3 of 13) Renaming /admin/Pages/4.page.php
+( 4 of 13) Renaming /admin/Pages/5.page.php
+( 5 of 13) Renaming /admin/Pages/3.page.php
+( 6 of 13) Renaming /admin/Pages/1.page.php
+( 7 of 13) Renaming /admin/Pages/2.page.php
+Error: Entering Passive Mode (185,131,144,174,203,34)
+Started at [2020/04/11 03:01]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/FtpDeploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/DIST
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+
+Uploading:
+(  1 of 403) /admin/Pages/
+(  2 of 403) /admin/Pages/6.page.php
+(  3 of 403) /admin/Pages/7.page.php
+(  4 of 403) /admin/Pages/4.page.php
+(  5 of 403) /admin/Pages/5.page.php
+(  6 of 403) /admin/Pages/3.page.php
+(  7 of 403) /admin/Pages/1.page.php
+(  8 of 403) /admin/Pages/2.page.php
+(  9 of 403) /admin/index.php
+( 10 of 403) /admin/Model/
+( 11 of 403) /admin/Model/registration.class.php
+( 12 of 403) /admin/Model/login.class.php
+( 13 of 403) /admin/View/
+( 14 of 403) /admin/View/registration.view.html.php
+( 15 of 403) /admin/View/login.view.html.php
+( 16 of 403) /sys/
+( 17 of 403) /sys/assets/
+( 18 of 403) /sys/assets/modules/
+( 19 of 403) /sys/assets/images/
+( 20 of 403) /sys/assets/images/images/
+( 21 of 403) /sys/assets/images/images/page_2/
+( 22 of 403) /sys/assets/images/images/page_2/twoIIc.png
+( 23 of 403) /sys/assets/images/images/page_2/tundraI.png
+( 24 of 403) /sys/assets/images/images/page_2/two2.png
+( 25 of 403) /sys/assets/images/images/page_2/logoGrid/
+( 26 of 403) /sys/assets/images/images/page_2/logoGrid/2a.png
+( 27 of 403) /sys/assets/images/images/page_2/logoGrid/17.png
+( 28 of 403) /sys/assets/images/images/page_2/logoGrid/13al.png
+( 29 of 403) /sys/assets/images/images/page_2/logoGrid/19.png
+( 30 of 403) /sys/assets/images/images/page_2/logoGrid/13.png
+( 31 of 403) /sys/assets/images/images/page_2/logoGrid/40.png
+( 32 of 403) /sys/assets/images/images/page_2/logoGrid/38.png
+( 33 of 403) /sys/assets/images/images/page_2/logoGrid/56.png
+( 34 of 403) /sys/assets/images/images/page_2/logoGrid/21a.png
+( 35 of 403) /sys/assets/images/images/page_2/logoGrid/3a.png
+( 36 of 403) /sys/assets/images/images/page_2/logoGrid/8al.png
+( 37 of 403) /sys/assets/images/images/page_2/logoGrid/38a.png
+( 38 of 403) /sys/assets/images/images/page_2/logoGrid/45.png
+( 39 of 403) /sys/assets/images/images/page_2/logoGrid/37.png
+( 40 of 403) /sys/assets/images/images/page_2/logoGrid/6.png
+( 41 of 403) /sys/assets/images/images/page_2/logoGrid/7al.png
+( 42 of 403) /sys/assets/images/images/page_2/logoGrid/1.png
+( 43 of 403) /sys/assets/images/images/page_2/logoGrid/18.png
+( 44 of 403) /sys/assets/images/images/page_2/logoGrid/50a.png
+( 45 of 403) /sys/assets/images/images/page_2/logoGrid/44.png
+( 46 of 403) /sys/assets/images/images/page_2/logoGrid/39.png
+( 47 of 403) /sys/assets/images/images/page_2/logoGrid/47.png
+( 48 of 403) /sys/assets/images/images/page_2/logoGrid/55.png
+( 49 of 403) /sys/assets/images/images/page_2/logoGrid/17al.png
+( 50 of 403) /sys/assets/images/images/page_2/logoGrid/21.png
+( 51 of 403) /sys/assets/images/images/page_2/logoGrid/42.png
+( 52 of 403) /sys/assets/images/images/page_2/logoGrid/4.png
+( 53 of 403) /sys/assets/images/images/page_2/logoGrid/11.png
+( 54 of 403) /sys/assets/images/images/page_2/logoGrid/43.png
+( 55 of 403) /sys/assets/images/images/page_2/logoGrid/18a.png
+( 56 of 403) /sys/assets/images/images/page_2/logoGrid/5.png
+( 57 of 403) /sys/assets/images/images/page_2/logoGrid/10al.png
+( 58 of 403) /sys/assets/images/images/page_2/logoGrid/3b.png
+( 59 of 403) /sys/assets/images/images/page_2/logoGrid/11al.png
+( 60 of 403) /sys/assets/images/images/page_2/logoGrid/54.png
+( 61 of 403) /sys/assets/images/images/page_2/logoGrid/12.png
+( 62 of 403) /sys/assets/images/images/page_2/logoGrid/20.png
+( 63 of 403) /sys/assets/images/images/page_2/logoGrid/7.png
+( 64 of 403) /sys/assets/images/images/page_2/logoGrid/2.png
+( 65 of 403) /sys/assets/images/images/page_2/logoGrid/5al.png
+( 66 of 403) /sys/assets/images/images/page_2/logoGrid/46.png
+( 67 of 403) /sys/assets/images/images/page_2/logoGrid/57.png
+( 68 of 403) /sys/assets/images/images/page_2/logoGrid/48.png
+( 69 of 403) /sys/assets/images/images/page_2/logoGrid/16.png
+( 70 of 403) /sys/assets/images/images/page_2/logoGrid/51.png
+( 71 of 403) /sys/assets/images/images/page_2/logoGrid/22.png
+( 72 of 403) /sys/assets/images/images/page_2/logoGrid/9al.png
+( 73 of 403) /sys/assets/images/images/page_2/logoGrid/53.png
+( 74 of 403) /sys/assets/images/images/page_2/logoGrid/14.png
+( 75 of 403) /sys/assets/images/images/page_2/logoGrid/8.png
+( 76 of 403) /sys/assets/images/images/page_2/logoGrid/10.png
+( 77 of 403) /sys/assets/images/images/page_2/logoGrid/20a.png
+( 78 of 403) /sys/assets/images/images/page_2/logoGrid/15.png
+( 79 of 403) /sys/assets/images/images/page_2/logoGrid/52.png
+( 80 of 403) /sys/assets/images/images/page_2/logoGrid/41.png
+( 81 of 403) /sys/assets/images/images/page_2/logoGrid/9.png
+( 82 of 403) /sys/assets/images/images/page_6/
+( 83 of 403) /sys/assets/images/images/page_6/gofanariumLogo.svg
+( 84 of 403) /sys/assets/images/images/page_6/fontsGrid/
+( 85 of 403) /sys/assets/images/images/page_6/fontsGrid/sticks.png
+( 86 of 403) /sys/assets/images/images/page_6/fontsGrid/lilach.png
+( 87 of 403) /sys/assets/images/images/page_6/fontsGrid/patch stencil.png
+( 88 of 403) /sys/assets/images/images/page_6/fontsGrid/sayfan.png
+( 89 of 403) /sys/assets/images/images/page_6/fontsGrid/miso.png
+( 90 of 403) /sys/assets/images/images/page_6/fontsGrid/eco.png
+( 91 of 403) /sys/assets/images/images/page_6/fontsGrid/daniel.png
+( 92 of 403) /sys/assets/images/images/page_6/fontsGrid/yam suf.png
+( 93 of 403) /sys/assets/images/images/page_6/fontsGrid/patch sans.png
+( 94 of 403) /sys/assets/images/images/page_6/fontsGrid/amit.png
+( 95 of 403) /sys/assets/images/images/page_6/fontsGrid/kimchi.png
+( 96 of 403) /sys/assets/images/images/page_6/fontsGrid/noam.png
+( 97 of 403) /sys/assets/images/images/page_6/fontsGrid/patch serif.png
+( 98 of 403) /sys/assets/images/images/page_6/fontsGrid/neo.png
+( 99 of 403) /sys/assets/images/images/page_6/fontsGrid/skechers.png
+(100 of 403) /sys/assets/images/images/page_6/fontsGrid/har sinai.png
+(101 of 403) /sys/assets/images/images/page_6/fontsGrid/josef.png
+(102 of 403) /sys/assets/images/images/page_6/fontsGrid/mixer.png
+(103 of 403) /sys/assets/images/images/page_6/fontsGrid/strokes.png
+(104 of 403) /sys/assets/images/images/page_6/fontsGrid/hidekel.png
+(105 of 403) /sys/assets/images/images/page_10/
+(106 of 403) /sys/assets/images/images/page_10/team/
+(107 of 403) /sys/assets/images/images/page_10/team/king.png
+(108 of 403) /sys/assets/images/images/page_10/team/lorem.png
+(109 of 403) /sys/assets/images/images/page_10/team/queen.png
+(110 of 403) /sys/assets/images/images/page_10/team/joker.png
+(111 of 403) /sys/assets/images/images/page_10/team/louis.png
+(112 of 403) /sys/assets/images/images/page_9/
+(113 of 403) /sys/assets/images/images/page_9/artGrid/
+(114 of 403) /sys/assets/images/images/page_9/artGrid/TrilogyA2.png
+(115 of 403) /sys/assets/images/images/page_9/artGrid/queen1.png
+(116 of 403) /sys/assets/images/images/page_9/artGrid/gagarin1-2.png
+(117 of 403) /sys/assets/images/images/page_9/artGrid/map1.png
+(118 of 403) /sys/assets/images/images/page_9/artGrid/map3.png
+(119 of 403) /sys/assets/images/images/page_9/artGrid/map2-2.png
+(120 of 403) /sys/assets/images/images/page_9/artGrid/Goethe2.png
+(121 of 403) /sys/assets/images/images/page_9/artGrid/neon1_01.png
+(122 of 403) /sys/assets/images/images/page_9/artGrid/einstein2.png
+(123 of 403) /sys/assets/images/images/page_9/artGrid/PastelLinesDTCOMP.png
+(124 of 403) /sys/assets/images/images/page_9/artGrid/king1.png
+(125 of 403) /sys/assets/images/images/page_9/artGrid/ChessFLAT1DT.png
+(126 of 403) /sys/assets/images/images/page_9/artGrid/LaChute.png
+(127 of 403) /sys/assets/images/images/page_9/artGrid/Bubi.png
+(128 of 403) /sys/assets/images/images/page_9/artGrid/TWallA.png
+(129 of 403) /sys/assets/images/images/page_9/artGrid/dollar1DT.png
+(130 of 403) /sys/assets/images/images/page_9/artGrid/linesDT.png
+(131 of 403) /sys/assets/images/images/page_9/artGrid/GunsNRosesDT.png
+(132 of 403) /sys/assets/images/images/page_9/artGrid/CubesWallA.png
+(133 of 403) /sys/assets/images/images/page_9/artGrid/chessNONflatDT.png
+(134 of 403) /sys/assets/images/images/page_9/artGrid/5crabs1.png
+(135 of 403) /sys/assets/images/images/page_9/artGrid/Che.png
+(136 of 403) /sys/assets/images/images/page_9/artGrid/KesefHakol.png
+(137 of 403) /sys/assets/images/images/page_9/artGrid/hevel.png
+(138 of 403) /sys/assets/images/images/page_9/artGrid/TWallB.png
+(139 of 403) /sys/assets/images/images/page_9/artGrid/WindRose1.png
+(140 of 403) /sys/assets/images/images/page_9/artGrid/napoleoin2.png
+(141 of 403) /sys/assets/images/images/page_9/artGrid/ZebrasA.png
+(142 of 403) /sys/assets/images/images/page_9/artGrid/Jack1.png
+(143 of 403) /sys/assets/images/images/page_9/artGrid/jokerHat1.png
+(144 of 403) /sys/assets/images/images/page_9/artGrid/CirclesA.png
+(145 of 403) /sys/assets/images/images/page_9/artGrid/CirclesB.png
+(146 of 403) /sys/assets/images/images/page_9/artGrid/Ghost1_01.png
+(147 of 403) /sys/assets/images/images/page_9/artGrid/StrokesA.png
+(148 of 403) /sys/assets/images/images/page_9/artGrid/masti171.png
+(149 of 403) /sys/assets/images/images/page_9/artGrid/TrilogyA3.png
+(150 of 403) /sys/assets/images/images/page_9/artGrid/BonApetit_01.png
+(151 of 403) /sys/assets/images/images/page_9/artGrid/OtiotA.png
+(152 of 403) /sys/assets/images/images/page_9/artGrid/BeRovHohma.png
+(153 of 403) /sys/assets/images/images/page_9/artGrid/hem1-2.png
+(154 of 403) /sys/assets/images/images/page_9/artGrid/TrilogyA1.png
+(155 of 403) /sys/assets/images/images/info/
+(156 of 403) /sys/assets/images/images/info/pmlogo.svg
+(157 of 403) /sys/assets/images/images/info/pmlogoMailSuccess.svg
+(158 of 403) /sys/assets/images/images/info/pmlogoMailUnSuccess.svg
+(159 of 403) /sys/assets/images/images/info/pmlogoUnderMaintenance.svg
+(160 of 403) /sys/assets/images/images/info/pmlogoUnderConstruction.svg
+(161 of 403) /sys/assets/images/images/info/pmlogo404.svg
+(162 of 403) /sys/assets/images/images/page_7/
+(163 of 403) /sys/assets/images/images/page_7/printGrid/
+(164 of 403) /sys/assets/images/images/page_7/printGrid/cartaTEX.png
+(165 of 403) /sys/assets/images/images/page_7/printGrid/MenuShadow1.png
+(166 of 403) /sys/assets/images/images/page_7/printGrid/karty2dallinonepngs1MB.png
+(167 of 403) /sys/assets/images/images/page_7/printGrid/books.png
+(168 of 403) /sys/assets/images/images/page_7/printGrid/BuycardPrint2.png
+(169 of 403) /sys/assets/images/images/page_7/printGrid/1052.png
+(170 of 403) /sys/assets/images/images/page_7/printGrid/VISITS3dShadow.png
+(171 of 403) /sys/assets/images/images/page_7/printGrid/sumoS2.png
+(172 of 403) /sys/assets/images/images/page_7/printGrid/allcards3dsvg1MB.png
+(173 of 403) /sys/assets/images/images/page_7/printGrid/Cards3dShadow2.png
+(174 of 403) /sys/assets/images/images/page_7/printGrid/JOURNAL.png
+(175 of 403) /sys/assets/images/images/page_7/printGrid/diplomKravMAga.png
+(176 of 403) /sys/assets/images/images/page_7/printGrid/verso.png
+(177 of 403) /sys/assets/images/images/page_7/printGrid/Cards2dShadow.png
+(178 of 403) /sys/assets/images/images/page_7/printGrid/chessrender20141920.png
+(179 of 403) /sys/assets/images/images/page_3/
+(180 of 403) /sys/assets/images/images/page_3/swipe/
+(181 of 403) /sys/assets/images/images/page_3/swipe/13.png
+(182 of 403) /sys/assets/images/images/page_3/swipe/6.png
+(183 of 403) /sys/assets/images/images/page_3/swipe/1.png
+(184 of 403) /sys/assets/images/images/page_3/swipe/4.png
+(185 of 403) /sys/assets/images/images/page_3/swipe/11.png
+(186 of 403) /sys/assets/images/images/page_3/swipe/5.png
+(187 of 403) /sys/assets/images/images/page_3/swipe/3.png
+(188 of 403) /sys/assets/images/images/page_3/swipe/12.png
+(189 of 403) /sys/assets/images/images/page_3/swipe/7.png
+(190 of 403) /sys/assets/images/images/page_3/swipe/2.png
+(191 of 403) /sys/assets/images/images/page_3/swipe/8.png
+(192 of 403) /sys/assets/images/images/page_3/swipe/10.png
+(193 of 403) /sys/assets/images/images/page_3/swipe/9.png
+(194 of 403) /sys/assets/images/images/page_1/
+(195 of 403) /sys/assets/images/images/page_1/6.png
+(196 of 403) /sys/assets/images/images/page_1/1.png
+(197 of 403) /sys/assets/images/images/page_1/4.png
+(198 of 403) /sys/assets/images/images/page_1/5.png
+(199 of 403) /sys/assets/images/images/page_1/3.png
+(200 of 403) /sys/assets/images/images/page_1/7.png
+(201 of 403) /sys/assets/images/images/page_1/2.png
+(202 of 403) /sys/assets/images/images/page_1/8.png
+(203 of 403) /sys/assets/images/images/page_1/10.png
+(204 of 403) /sys/assets/images/images/page_1/9.png
+(205 of 403) /sys/assets/images/images/page_5/
+(206 of 403) /sys/assets/images/images/page_5/softGrid/
+(207 of 403) /sys/assets/images/images/page_5/softGrid/17.svg
+(208 of 403) /sys/assets/images/images/page_5/softGrid/18.svg
+(209 of 403) /sys/assets/images/images/page_5/softGrid/3.svg
+(210 of 403) /sys/assets/images/images/page_5/softGrid/12.svg
+(211 of 403) /sys/assets/images/images/page_5/softGrid/14.svg
+(212 of 403) /sys/assets/images/images/page_5/softGrid/16.svg
+(213 of 403) /sys/assets/images/images/page_5/softGrid/15.svg
+(214 of 403) /sys/assets/images/images/page_5/softGrid/4.svg
+(215 of 403) /sys/assets/images/images/page_5/softGrid/6.svg
+(216 of 403) /sys/assets/images/images/page_5/softGrid/2.svg
+(217 of 403) /sys/assets/images/images/page_5/softGrid/9a.svg
+(218 of 403) /sys/assets/images/images/page_5/softGrid/9.svg
+(219 of 403) /sys/assets/images/images/page_5/softGrid/8.svg
+(220 of 403) /sys/assets/images/images/page_5/softGrid/5.svg
+(221 of 403) /sys/assets/images/images/page_5/softGrid/7.svg
+(222 of 403) /sys/assets/images/images/page_5/softGrid/10.svg
+(223 of 403) /sys/assets/images/images/page_5/softGrid/3a.svg
+(224 of 403) /sys/assets/images/images/page_5/softGrid/19.svg
+(225 of 403) /sys/assets/images/images/page_5/softGrid/6a.svg
+(226 of 403) /sys/assets/images/images/page_5/softGrid/1.svg
+(227 of 403) /sys/assets/images/images/brand/
+(228 of 403) /sys/assets/images/images/brand/squareLogo.svg
+(229 of 403) /sys/assets/images/images/brand/barLogoInvert.svg
+(230 of 403) /sys/assets/images/images/brand/barLogoMob.svg
+(231 of 403) /sys/assets/images/images/brand/barLogo.svg
+(232 of 403) /sys/assets/images/images/page_4/
+(233 of 403) /sys/assets/images/images/page_4/internetGrid/
+(234 of 403) /sys/assets/images/images/page_4/internetGrid/6.png
+(235 of 403) /sys/assets/images/images/page_4/internetGrid/1.png
+(236 of 403) /sys/assets/images/images/page_4/internetGrid/4.png
+(237 of 403) /sys/assets/images/images/page_4/internetGrid/5.png
+(238 of 403) /sys/assets/images/images/page_4/internetGrid/3.png
+(239 of 403) /sys/assets/images/images/page_4/internetGrid/7.png
+(240 of 403) /sys/assets/images/images/page_4/internetGrid/2.png
+(241 of 403) /sys/assets/images/images/page_4/internetGrid/8.png
+(242 of 403) /sys/assets/icons/
+(243 of 403) /sys/assets/icons/vector/
+(244 of 403) /sys/assets/icons/vector/trash.svg
+(245 of 403) /sys/assets/icons/vector/17.svg
+(246 of 403) /sys/assets/icons/vector/18.svg
+(247 of 403) /sys/assets/icons/vector/40.svg
+(248 of 403) /sys/assets/icons/vector/3.svg
+(249 of 403) /sys/assets/icons/vector/wa.svg
+(250 of 403) /sys/assets/icons/vector/info.svg
+(251 of 403) /sys/assets/icons/vector/finance.svg
+(252 of 403) /sys/assets/icons/vector/12.svg
+(253 of 403) /sys/assets/icons/vector/30.svg
+(254 of 403) /sys/assets/icons/vector/44.svg
+(255 of 403) /sys/assets/icons/vector/14.svg
+(256 of 403) /sys/assets/icons/vector/0.svg
+(257 of 403) /sys/assets/icons/vector/mails.svg
+(258 of 403) /sys/assets/icons/vector/window-maximize.svg
+(259 of 403) /sys/assets/icons/vector/16.svg
+(260 of 403) /sys/assets/icons/vector/22.svg
+(261 of 403) /sys/assets/icons/vector/mail.svg
+(262 of 403) /sys/assets/icons/vector/31.svg
+(263 of 403) /sys/assets/icons/vector/tel.svg
+(264 of 403) /sys/assets/icons/vector/close.svg
+(265 of 403) /sys/assets/icons/vector/29.svg
+(266 of 403) /sys/assets/icons/vector/print.svg
+(267 of 403) /sys/assets/icons/vector/23.svg
+(268 of 403) /sys/assets/icons/vector/25.svg
+(269 of 403) /sys/assets/icons/vector/exit.svg
+(270 of 403) /sys/assets/icons/vector/15.svg
+(271 of 403) /sys/assets/icons/vector/telega.svg
+(272 of 403) /sys/assets/icons/vector/insta.svg
+(273 of 403) /sys/assets/icons/vector/4.svg
+(274 of 403) /sys/assets/icons/vector/26a.svg
+(275 of 403) /sys/assets/icons/vector/43.svg
+(276 of 403) /sys/assets/icons/vector/25a.svg
+(277 of 403) /sys/assets/icons/vector/27.svg
+(278 of 403) /sys/assets/icons/vector/41.svg
+(279 of 403) /sys/assets/icons/vector/6.svg
+(280 of 403) /sys/assets/icons/vector/33.svg
+(281 of 403) /sys/assets/icons/vector/2.svg
+(282 of 403) /sys/assets/icons/vector/26.svg
+(283 of 403) /sys/assets/icons/vector/37.svg
+(284 of 403) /sys/assets/icons/vector/28.svg
+(285 of 403) /sys/assets/icons/vector/minus-circle.svg
+(286 of 403) /sys/assets/icons/vector/team.svg
+(287 of 403) /sys/assets/icons/vector/trashRed.svg
+(288 of 403) /sys/assets/icons/vector/9.svg
+(289 of 403) /sys/assets/icons/vector/24.svg
+(290 of 403) /sys/assets/icons/vector/35.svg
+(291 of 403) /sys/assets/icons/vector/settings.svg
+(292 of 403) /sys/assets/icons/vector/36.svg
+(293 of 403) /sys/assets/icons/vector/checkbox-marked-circle.svg
+(294 of 403) /sys/assets/icons/vector/lang.svg
+(295 of 403) /sys/assets/icons/vector/clock.svg
+(296 of 403) /sys/assets/icons/vector/38.svg
+(297 of 403) /sys/assets/icons/vector/date.svg
+(298 of 403) /sys/assets/icons/vector/7.svg
+(299 of 403) /sys/assets/icons/vector/10.svg
+(300 of 403) /sys/assets/icons/vector/window-close.svg
+(301 of 403) /sys/assets/icons/vector/add.svg
+(302 of 403) /sys/assets/icons/vector/pm.svg
+(303 of 403) /sys/assets/icons/vector/17b.svg
+(304 of 403) /sys/assets/icons/vector/13.svg
+(305 of 403) /sys/assets/icons/vector/calculator.svg
+(306 of 403) /sys/assets/icons/vector/atach.svg
+(307 of 403) /sys/assets/icons/vector/32.svg
+(308 of 403) /sys/assets/icons/vector/11.svg
+(309 of 403) /sys/assets/icons/vector/100a.svg
+(310 of 403) /sys/assets/icons/vector/100.svg
+(311 of 403) /sys/assets/icons/vector/down.svg
+(312 of 403) /sys/assets/icons/vector/drag.svg
+(313 of 403) /sys/assets/icons/vector/thebility.svg
+(314 of 403) /sys/assets/icons/vector/19.svg
+(315 of 403) /sys/assets/icons/vector/up.svg
+(316 of 403) /sys/assets/icons/vector/eye.svg
+(317 of 403) /sys/assets/icons/vector/39.svg
+(318 of 403) /sys/assets/icons/vector/pencil.svg
+(319 of 403) /sys/assets/icons/vector/gavel.svg
+(320 of 403) /sys/assets/icons/vector/21.svg
+(321 of 403) /sys/assets/icons/vector/fb.svg
+(322 of 403) /sys/assets/icons/vector/20.svg
+(323 of 403) /sys/assets/icons/vector/posts.svg
+(324 of 403) /sys/assets/icons/vector/add2.svg
+(325 of 403) /sys/assets/icons/vector/42.svg
+(326 of 403) /sys/assets/icons/vector/34.svg
+(327 of 403) /sys/assets/icons/vector/1.svg
+(328 of 403) /sys/assets/favicons/
+(329 of 403) /sys/assets/favicons/favicon.ico
+(330 of 403) /sys/assets/favicons/safari-pinned-tab.svg
+(331 of 403) /sys/assets/favicons/android-chrome-192x192.png
+(332 of 403) /sys/assets/favicons/favicon-32x32.png
+(333 of 403) /sys/assets/favicons/favicon-16x16.png
+(334 of 403) /sys/assets/favicons/browserconfig.xml
+(335 of 403) /sys/assets/favicons/android-chrome-512x512.png
+(336 of 403) /sys/assets/favicons/mstile-150x150.png
+(337 of 403) /sys/assets/favicons/site.webmanifest
+(338 of 403) /sys/assets/favicons/.htdeployment
+(339 of 403) /sys/assets/favicons/apple-touch-icon.png
+(340 of 403) /sys/assets/var/
+(341 of 403) /sys/assets/videos/
+(342 of 403) /sys/assets/videos/videos/
+(343 of 403) /sys/assets/fonts/
+(344 of 403) /sys/SysInfo/
+(345 of 403) /sys/SysInfo/underMaintenance.php
+(346 of 403) /sys/SysInfo/mailUnSuccess.php
+(347 of 403) /sys/SysInfo/sysInfoTemplate.view.html.php
+(348 of 403) /sys/SysInfo/sysInfoTemplate.model.php
+(349 of 403) /sys/SysInfo/underConstruction.php
+(350 of 403) /sys/SysInfo/404.php
+(351 of 403) /sys/SysInfo/mailSuccess.php
+(352 of 403) /sys/modules/
+(353 of 403) /sys/modules/initModalTranslate.php
+(354 of 403) /sys/modules/Page.class.module.php
+(355 of 403) /sys/modules/VideoList.class.module.php
+(356 of 403) /sys/modules/Email.class.module.php
+(357 of 403) /sys/modules/Swiper.class.module.php
+(358 of 403) /sys/modules/Team.class.module.php
+(359 of 403) /sys/modules/Files.class.module.php
+(360 of 403) /sys/modules/thebility/
+(361 of 403) /sys/modules/thebility/thebility.view.php
+(362 of 403) /sys/modules/Contacts.class.module.php
+(363 of 403) /sys/Pages/
+(364 of 403) /sys/Pages/8.page.php
+(365 of 403) /sys/Pages/11.page.php
+(366 of 403) /sys/Pages/12.page.php
+(367 of 403) /sys/Pages/6.page.php
+(368 of 403) /sys/Pages/10.page.php
+(369 of 403) /sys/Pages/7.page.php
+(370 of 403) /sys/Pages/4.page.php
+(371 of 403) /sys/Pages/5.page.php
+(372 of 403) /sys/Pages/11_sendMail.php
+(373 of 403) /sys/Pages/3.page.php
+(374 of 403) /sys/Pages/9.page.php
+(375 of 403) /sys/Pages/1.page.php
+(376 of 403) /sys/Pages/2.page.php
+(377 of 403) /sys/helpers/
+(378 of 403) /sys/helpers/pmTranslate.fun.php
+(379 of 403) /sys/helpers/checkIfIsMobileNow.fun.help.php
+(380 of 403) /sys/helpers/pmTranslateEngine.php
+(381 of 403) /sys/helpers/Html.class.help.php
+(382 of 403) /sys/helpers/path2url.fun.php
+(383 of 403) /sys/Controller/
+(384 of 403) /sys/Controller/Main.ctrl.php
+(385 of 403) /sys/Controller/DB.class.ctrl.php
+(386 of 403) /sys/Model/
+(387 of 403) /sys/Model/Skeleton.depends.model.php
+(388 of 403) /sys/Model/Skeleton.bar.model.php
+(389 of 403) /sys/Model/Skeleton.footer.model.php
+(390 of 403) /sys/Model/Skeleton.index.model.php
+(391 of 403) /sys/Model/startup.model.php
+(392 of 403) /sys/Model/Skeleton.nav.model.php
+(393 of 403) /sys/View/
+(394 of 403) /sys/View/bar_mobile.view.html.php
+(395 of 403) /sys/View/footer.view.html.php
+(396 of 403) /sys/View/nav.view.html.php
+(397 of 403) /sys/View/nav_lang.view.html.php
+(398 of 403) /sys/View/logout.view.html.php
+(399 of 403) /sys/View/depends.view.html.php
+(400 of 403) /sys/View/index.view.html.php
+(401 of 403) /sys/View/agree.cookie.view.html.php
+(402 of 403) /sys/View/bar_skeleton.view.html.php
+(403 of 403) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(  1 of 361) Renaming /admin/Pages/6.page.php
+(  2 of 361) Renaming /admin/Pages/7.page.php
+(  3 of 361) Renaming /admin/Pages/4.page.php
+(  4 of 361) Renaming /admin/Pages/5.page.php
+(  5 of 361) Renaming /admin/Pages/3.page.php
+(  6 of 361) Renaming /admin/Pages/1.page.php
+(  7 of 361) Renaming /admin/Pages/2.page.php
+(  8 of 361) Renaming /admin/index.php
+(  9 of 361) Renaming /admin/Model/registration.class.php
+( 10 of 361) Renaming /admin/Model/login.class.php
+( 11 of 361) Renaming /admin/View/registration.view.html.php
+( 12 of 361) Renaming /admin/View/login.view.html.php
+( 13 of 361) Renaming /sys/assets/images/images/page_2/twoIIc.png
+( 14 of 361) Renaming /sys/assets/images/images/page_2/tundraI.png
+( 15 of 361) Renaming /sys/assets/images/images/page_2/two2.png
+( 16 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/2a.png
+( 17 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/17.png
+( 18 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/13al.png
+( 19 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/19.png
+( 20 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/13.png
+( 21 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/40.png
+( 22 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/38.png
+( 23 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/56.png
+( 24 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/21a.png
+( 25 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/3a.png
+( 26 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/8al.png
+( 27 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/38a.png
+( 28 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/45.png
+( 29 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/37.png
+( 30 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/6.png
+( 31 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/7al.png
+( 32 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/1.png
+( 33 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/18.png
+( 34 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/50a.png
+( 35 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/44.png
+( 36 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/39.png
+( 37 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/47.png
+( 38 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/55.png
+( 39 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/17al.png
+( 40 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/21.png
+( 41 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/42.png
+( 42 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/4.png
+( 43 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/11.png
+( 44 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/43.png
+( 45 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/18a.png
+( 46 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/5.png
+( 47 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/10al.png
+( 48 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/3b.png
+( 49 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/11al.png
+( 50 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/54.png
+( 51 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/12.png
+( 52 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/20.png
+( 53 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/7.png
+( 54 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/2.png
+( 55 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/5al.png
+( 56 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/46.png
+( 57 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/57.png
+( 58 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/48.png
+( 59 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/16.png
+( 60 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/51.png
+( 61 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/22.png
+( 62 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/9al.png
+( 63 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/53.png
+( 64 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/14.png
+( 65 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/8.png
+( 66 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/10.png
+( 67 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/20a.png
+( 68 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/15.png
+( 69 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/52.png
+( 70 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/41.png
+( 71 of 361) Renaming /sys/assets/images/images/page_2/logoGrid/9.png
+( 72 of 361) Renaming /sys/assets/images/images/page_6/gofanariumLogo.svg
+( 73 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/sticks.png
+( 74 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/lilach.png
+( 75 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/patch stencil.png
+( 76 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/sayfan.png
+( 77 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/miso.png
+( 78 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/eco.png
+( 79 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/daniel.png
+( 80 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/yam suf.png
+( 81 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/patch sans.png
+( 82 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/amit.png
+( 83 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/kimchi.png
+( 84 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/noam.png
+( 85 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/patch serif.png
+( 86 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/neo.png
+( 87 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/skechers.png
+( 88 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/har sinai.png
+( 89 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/josef.png
+( 90 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/mixer.png
+( 91 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/strokes.png
+( 92 of 361) Renaming /sys/assets/images/images/page_6/fontsGrid/hidekel.png
+( 93 of 361) Renaming /sys/assets/images/images/page_10/team/king.png
+( 94 of 361) Renaming /sys/assets/images/images/page_10/team/lorem.png
+( 95 of 361) Renaming /sys/assets/images/images/page_10/team/queen.png
+( 96 of 361) Renaming /sys/assets/images/images/page_10/team/joker.png
+( 97 of 361) Renaming /sys/assets/images/images/page_10/team/louis.png
+( 98 of 361) Renaming /sys/assets/images/images/page_9/artGrid/TrilogyA2.png
+( 99 of 361) Renaming /sys/assets/images/images/page_9/artGrid/queen1.png
+(100 of 361) Renaming /sys/assets/images/images/page_9/artGrid/gagarin1-2.png
+(101 of 361) Renaming /sys/assets/images/images/page_9/artGrid/map1.png
+(102 of 361) Renaming /sys/assets/images/images/page_9/artGrid/map3.png
+(103 of 361) Renaming /sys/assets/images/images/page_9/artGrid/map2-2.png
+(104 of 361) Renaming /sys/assets/images/images/page_9/artGrid/Goethe2.png
+(105 of 361) Renaming /sys/assets/images/images/page_9/artGrid/neon1_01.png
+(106 of 361) Renaming /sys/assets/images/images/page_9/artGrid/einstein2.png
+(107 of 361) Renaming /sys/assets/images/images/page_9/artGrid/PastelLinesDTCOMP.png
+(108 of 361) Renaming /sys/assets/images/images/page_9/artGrid/king1.png
+(109 of 361) Renaming /sys/assets/images/images/page_9/artGrid/ChessFLAT1DT.png
+(110 of 361) Renaming /sys/assets/images/images/page_9/artGrid/LaChute.png
+(111 of 361) Renaming /sys/assets/images/images/page_9/artGrid/Bubi.png
+(112 of 361) Renaming /sys/assets/images/images/page_9/artGrid/TWallA.png
+(113 of 361) Renaming /sys/assets/images/images/page_9/artGrid/dollar1DT.png
+(114 of 361) Renaming /sys/assets/images/images/page_9/artGrid/linesDT.png
+(115 of 361) Renaming /sys/assets/images/images/page_9/artGrid/GunsNRosesDT.png
+(116 of 361) Renaming /sys/assets/images/images/page_9/artGrid/CubesWallA.png
+(117 of 361) Renaming /sys/assets/images/images/page_9/artGrid/chessNONflatDT.png
+(118 of 361) Renaming /sys/assets/images/images/page_9/artGrid/5crabs1.png
+(119 of 361) Renaming /sys/assets/images/images/page_9/artGrid/Che.png
+(120 of 361) Renaming /sys/assets/images/images/page_9/artGrid/KesefHakol.png
+(121 of 361) Renaming /sys/assets/images/images/page_9/artGrid/hevel.png
+(122 of 361) Renaming /sys/assets/images/images/page_9/artGrid/TWallB.png
+(123 of 361) Renaming /sys/assets/images/images/page_9/artGrid/WindRose1.png
+(124 of 361) Renaming /sys/assets/images/images/page_9/artGrid/napoleoin2.png
+(125 of 361) Renaming /sys/assets/images/images/page_9/artGrid/ZebrasA.png
+(126 of 361) Renaming /sys/assets/images/images/page_9/artGrid/Jack1.png
+(127 of 361) Renaming /sys/assets/images/images/page_9/artGrid/jokerHat1.png
+(128 of 361) Renaming /sys/assets/images/images/page_9/artGrid/CirclesA.png
+(129 of 361) Renaming /sys/assets/images/images/page_9/artGrid/CirclesB.png
+(130 of 361) Renaming /sys/assets/images/images/page_9/artGrid/Ghost1_01.png
+(131 of 361) Renaming /sys/assets/images/images/page_9/artGrid/StrokesA.png
+(132 of 361) Renaming /sys/assets/images/images/page_9/artGrid/masti171.png
+(133 of 361) Renaming /sys/assets/images/images/page_9/artGrid/TrilogyA3.png
+(134 of 361) Renaming /sys/assets/images/images/page_9/artGrid/BonApetit_01.png
+(135 of 361) Renaming /sys/assets/images/images/page_9/artGrid/OtiotA.png
+(136 of 361) Renaming /sys/assets/images/images/page_9/artGrid/BeRovHohma.png
+(137 of 361) Renaming /sys/assets/images/images/page_9/artGrid/hem1-2.png
+(138 of 361) Renaming /sys/assets/images/images/page_9/artGrid/TrilogyA1.png
+(139 of 361) Renaming /sys/assets/images/images/info/pmlogo.svg
+(140 of 361) Renaming /sys/assets/images/images/info/pmlogoMailSuccess.svg
+(141 of 361) Renaming /sys/assets/images/images/info/pmlogoMailUnSuccess.svg
+(142 of 361) Renaming /sys/assets/images/images/info/pmlogoUnderMaintenance.svg
+(143 of 361) Renaming /sys/assets/images/images/info/pmlogoUnderConstruction.svg
+(144 of 361) Renaming /sys/assets/images/images/info/pmlogo404.svg
+(145 of 361) Renaming /sys/assets/images/images/page_7/printGrid/cartaTEX.png
+(146 of 361) Renaming /sys/assets/images/images/page_7/printGrid/MenuShadow1.png
+(147 of 361) Renaming /sys/assets/images/images/page_7/printGrid/karty2dallinonepngs1MB.png
+(148 of 361) Renaming /sys/assets/images/images/page_7/printGrid/books.png
+(149 of 361) Renaming /sys/assets/images/images/page_7/printGrid/BuycardPrint2.png
+(150 of 361) Renaming /sys/assets/images/images/page_7/printGrid/1052.png
+(151 of 361) Renaming /sys/assets/images/images/page_7/printGrid/VISITS3dShadow.png
+(152 of 361) Renaming /sys/assets/images/images/page_7/printGrid/sumoS2.png
+(153 of 361) Renaming /sys/assets/images/images/page_7/printGrid/allcards3dsvg1MB.png
+(154 of 361) Renaming /sys/assets/images/images/page_7/printGrid/Cards3dShadow2.png
+(155 of 361) Renaming /sys/assets/images/images/page_7/printGrid/JOURNAL.png
+(156 of 361) Renaming /sys/assets/images/images/page_7/printGrid/diplomKravMAga.png
+(157 of 361) Renaming /sys/assets/images/images/page_7/printGrid/verso.png
+(158 of 361) Renaming /sys/assets/images/images/page_7/printGrid/Cards2dShadow.png
+(159 of 361) Renaming /sys/assets/images/images/page_7/printGrid/chessrender20141920.png
+(160 of 361) Renaming /sys/assets/images/images/page_3/swipe/13.png
+(161 of 361) Renaming /sys/assets/images/images/page_3/swipe/6.png
+(162 of 361) Renaming /sys/assets/images/images/page_3/swipe/1.png
+(163 of 361) Renaming /sys/assets/images/images/page_3/swipe/4.png
+(164 of 361) Renaming /sys/assets/images/images/page_3/swipe/11.png
+(165 of 361) Renaming /sys/assets/images/images/page_3/swipe/5.png
+(166 of 361) Renaming /sys/assets/images/images/page_3/swipe/3.png
+(167 of 361) Renaming /sys/assets/images/images/page_3/swipe/12.png
+(168 of 361) Renaming /sys/assets/images/images/page_3/swipe/7.png
+(169 of 361) Renaming /sys/assets/images/images/page_3/swipe/2.png
+(170 of 361) Renaming /sys/assets/images/images/page_3/swipe/8.png
+(171 of 361) Renaming /sys/assets/images/images/page_3/swipe/10.png
+(172 of 361) Renaming /sys/assets/images/images/page_3/swipe/9.png
+(173 of 361) Renaming /sys/assets/images/images/page_1/6.png
+(174 of 361) Renaming /sys/assets/images/images/page_1/1.png
+(175 of 361) Renaming /sys/assets/images/images/page_1/4.png
+(176 of 361) Renaming /sys/assets/images/images/page_1/5.png
+(177 of 361) Renaming /sys/assets/images/images/page_1/3.png
+(178 of 361) Renaming /sys/assets/images/images/page_1/7.png
+(179 of 361) Renaming /sys/assets/images/images/page_1/2.png
+(180 of 361) Renaming /sys/assets/images/images/page_1/8.png
+(181 of 361) Renaming /sys/assets/images/images/page_1/10.png
+(182 of 361) Renaming /sys/assets/images/images/page_1/9.png
+(183 of 361) Renaming /sys/assets/images/images/page_5/softGrid/17.svg
+(184 of 361) Renaming /sys/assets/images/images/page_5/softGrid/18.svg
+(185 of 361) Renaming /sys/assets/images/images/page_5/softGrid/3.svg
+(186 of 361) Renaming /sys/assets/images/images/page_5/softGrid/12.svg
+(187 of 361) Renaming /sys/assets/images/images/page_5/softGrid/14.svg
+(188 of 361) Renaming /sys/assets/images/images/page_5/softGrid/16.svg
+(189 of 361) Renaming /sys/assets/images/images/page_5/softGrid/15.svg
+(190 of 361) Renaming /sys/assets/images/images/page_5/softGrid/4.svg
+(191 of 361) Renaming /sys/assets/images/images/page_5/softGrid/6.svg
+(192 of 361) Renaming /sys/assets/images/images/page_5/softGrid/2.svg
+(193 of 361) Renaming /sys/assets/images/images/page_5/softGrid/9a.svg
+(194 of 361) Renaming /sys/assets/images/images/page_5/softGrid/9.svg
+(195 of 361) Renaming /sys/assets/images/images/page_5/softGrid/8.svg
+(196 of 361) Renaming /sys/assets/images/images/page_5/softGrid/5.svg
+(197 of 361) Renaming /sys/assets/images/images/page_5/softGrid/7.svg
+(198 of 361) Renaming /sys/assets/images/images/page_5/softGrid/10.svg
+(199 of 361) Renaming /sys/assets/images/images/page_5/softGrid/3a.svg
+(200 of 361) Renaming /sys/assets/images/images/page_5/softGrid/19.svg
+(201 of 361) Renaming /sys/assets/images/images/page_5/softGrid/6a.svg
+(202 of 361) Renaming /sys/assets/images/images/page_5/softGrid/1.svg
+(203 of 361) Renaming /sys/assets/images/images/brand/squareLogo.svg
+(204 of 361) Renaming /sys/assets/images/images/brand/barLogoInvert.svg
+(205 of 361) Renaming /sys/assets/images/images/brand/barLogoMob.svg
+(206 of 361) Renaming /sys/assets/images/images/brand/barLogo.svg
+(207 of 361) Renaming /sys/assets/images/images/page_4/internetGrid/6.png
+(208 of 361) Renaming /sys/assets/images/images/page_4/internetGrid/1.png
+(209 of 361) Renaming /sys/assets/images/images/page_4/internetGrid/4.png
+(210 of 361) Renaming /sys/assets/images/images/page_4/internetGrid/5.png
+(211 of 361) Renaming /sys/assets/images/images/page_4/internetGrid/3.png
+(212 of 361) Renaming /sys/assets/images/images/page_4/internetGrid/7.png
+(213 of 361) Renaming /sys/assets/images/images/page_4/internetGrid/2.png
+(214 of 361) Renaming /sys/assets/images/images/page_4/internetGrid/8.png
+(215 of 361) Renaming /sys/assets/icons/vector/trash.svg
+(216 of 361) Renaming /sys/assets/icons/vector/17.svg
+(217 of 361) Renaming /sys/assets/icons/vector/18.svg
+(218 of 361) Renaming /sys/assets/icons/vector/40.svg
+(219 of 361) Renaming /sys/assets/icons/vector/3.svg
+(220 of 361) Renaming /sys/assets/icons/vector/wa.svg
+(221 of 361) Renaming /sys/assets/icons/vector/info.svg
+(222 of 361) Renaming /sys/assets/icons/vector/finance.svg
+(223 of 361) Renaming /sys/assets/icons/vector/12.svg
+(224 of 361) Renaming /sys/assets/icons/vector/30.svg
+(225 of 361) Renaming /sys/assets/icons/vector/44.svg
+(226 of 361) Renaming /sys/assets/icons/vector/14.svg
+(227 of 361) Renaming /sys/assets/icons/vector/0.svg
+(228 of 361) Renaming /sys/assets/icons/vector/mails.svg
+(229 of 361) Renaming /sys/assets/icons/vector/window-maximize.svg
+(230 of 361) Renaming /sys/assets/icons/vector/16.svg
+(231 of 361) Renaming /sys/assets/icons/vector/22.svg
+(232 of 361) Renaming /sys/assets/icons/vector/mail.svg
+(233 of 361) Renaming /sys/assets/icons/vector/31.svg
+(234 of 361) Renaming /sys/assets/icons/vector/tel.svg
+(235 of 361) Renaming /sys/assets/icons/vector/close.svg
+(236 of 361) Renaming /sys/assets/icons/vector/29.svg
+(237 of 361) Renaming /sys/assets/icons/vector/print.svg
+(238 of 361) Renaming /sys/assets/icons/vector/23.svg
+(239 of 361) Renaming /sys/assets/icons/vector/25.svg
+(240 of 361) Renaming /sys/assets/icons/vector/exit.svg
+(241 of 361) Renaming /sys/assets/icons/vector/15.svg
+(242 of 361) Renaming /sys/assets/icons/vector/telega.svg
+(243 of 361) Renaming /sys/assets/icons/vector/insta.svg
+(244 of 361) Renaming /sys/assets/icons/vector/4.svg
+(245 of 361) Renaming /sys/assets/icons/vector/26a.svg
+(246 of 361) Renaming /sys/assets/icons/vector/43.svg
+(247 of 361) Renaming /sys/assets/icons/vector/25a.svg
+(248 of 361) Renaming /sys/assets/icons/vector/27.svg
+(249 of 361) Renaming /sys/assets/icons/vector/41.svg
+(250 of 361) Renaming /sys/assets/icons/vector/6.svg
+(251 of 361) Renaming /sys/assets/icons/vector/33.svg
+(252 of 361) Renaming /sys/assets/icons/vector/2.svg
+(253 of 361) Renaming /sys/assets/icons/vector/26.svg
+(254 of 361) Renaming /sys/assets/icons/vector/37.svg
+(255 of 361) Renaming /sys/assets/icons/vector/28.svg
+(256 of 361) Renaming /sys/assets/icons/vector/minus-circle.svg
+(257 of 361) Renaming /sys/assets/icons/vector/team.svg
+(258 of 361) Renaming /sys/assets/icons/vector/trashRed.svg
+(259 of 361) Renaming /sys/assets/icons/vector/9.svg
+(260 of 361) Renaming /sys/assets/icons/vector/24.svg
+(261 of 361) Renaming /sys/assets/icons/vector/35.svg
+(262 of 361) Renaming /sys/assets/icons/vector/settings.svg
+(263 of 361) Renaming /sys/assets/icons/vector/36.svg
+(264 of 361) Renaming /sys/assets/icons/vector/checkbox-marked-circle.svg
+(265 of 361) Renaming /sys/assets/icons/vector/lang.svg
+(266 of 361) Renaming /sys/assets/icons/vector/clock.svg
+(267 of 361) Renaming /sys/assets/icons/vector/38.svg
+(268 of 361) Renaming /sys/assets/icons/vector/date.svg
+(269 of 361) Renaming /sys/assets/icons/vector/7.svg
+(270 of 361) Renaming /sys/assets/icons/vector/10.svg
+(271 of 361) Renaming /sys/assets/icons/vector/window-close.svg
+(272 of 361) Renaming /sys/assets/icons/vector/add.svg
+(273 of 361) Renaming /sys/assets/icons/vector/pm.svg
+(274 of 361) Renaming /sys/assets/icons/vector/17b.svg
+(275 of 361) Renaming /sys/assets/icons/vector/13.svg
+(276 of 361) Renaming /sys/assets/icons/vector/calculator.svg
+(277 of 361) Renaming /sys/assets/icons/vector/atach.svg
+(278 of 361) Renaming /sys/assets/icons/vector/32.svg
+(279 of 361) Renaming /sys/assets/icons/vector/11.svg
+(280 of 361) Renaming /sys/assets/icons/vector/100a.svg
+(281 of 361) Renaming /sys/assets/icons/vector/100.svg
+(282 of 361) Renaming /sys/assets/icons/vector/down.svg
+(283 of 361) Renaming /sys/assets/icons/vector/drag.svg
+(284 of 361) Renaming /sys/assets/icons/vector/thebility.svg
+(285 of 361) Renaming /sys/assets/icons/vector/19.svg
+(286 of 361) Renaming /sys/assets/icons/vector/up.svg
+(287 of 361) Renaming /sys/assets/icons/vector/eye.svg
+(288 of 361) Renaming /sys/assets/icons/vector/39.svg
+(289 of 361) Renaming /sys/assets/icons/vector/pencil.svg
+(290 of 361) Renaming /sys/assets/icons/vector/gavel.svg
+(291 of 361) Renaming /sys/assets/icons/vector/21.svg
+(292 of 361) Renaming /sys/assets/icons/vector/fb.svg
+(293 of 361) Renaming /sys/assets/icons/vector/20.svg
+(294 of 361) Renaming /sys/assets/icons/vector/posts.svg
+(295 of 361) Renaming /sys/assets/icons/vector/add2.svg
+(296 of 361) Renaming /sys/assets/icons/vector/42.svg
+(297 of 361) Renaming /sys/assets/icons/vector/34.svg
+(298 of 361) Renaming /sys/assets/icons/vector/1.svg
+(299 of 361) Renaming /sys/assets/favicons/favicon.ico
+(300 of 361) Renaming /sys/assets/favicons/safari-pinned-tab.svg
+(301 of 361) Renaming /sys/assets/favicons/android-chrome-192x192.png
+(302 of 361) Renaming /sys/assets/favicons/favicon-32x32.png
+(303 of 361) Renaming /sys/assets/favicons/favicon-16x16.png
+(304 of 361) Renaming /sys/assets/favicons/browserconfig.xml
+(305 of 361) Renaming /sys/assets/favicons/android-chrome-512x512.png
+(306 of 361) Renaming /sys/assets/favicons/mstile-150x150.png
+(307 of 361) Renaming /sys/assets/favicons/site.webmanifest
+(308 of 361) Renaming /sys/assets/favicons/.htdeployment
+(309 of 361) Renaming /sys/assets/favicons/apple-touch-icon.png
+(310 of 361) Renaming /sys/SysInfo/underMaintenance.php
+(311 of 361) Renaming /sys/SysInfo/mailUnSuccess.php
+(312 of 361) Renaming /sys/SysInfo/sysInfoTemplate.view.html.php
+(313 of 361) Renaming /sys/SysInfo/sysInfoTemplate.model.php
+(314 of 361) Renaming /sys/SysInfo/underConstruction.php
+(315 of 361) Renaming /sys/SysInfo/404.php
+(316 of 361) Renaming /sys/SysInfo/mailSuccess.php
+(317 of 361) Renaming /sys/modules/initModalTranslate.php
+(318 of 361) Renaming /sys/modules/Page.class.module.php
+(319 of 361) Renaming /sys/modules/VideoList.class.module.php
+(320 of 361) Renaming /sys/modules/Email.class.module.php
+(321 of 361) Renaming /sys/modules/Swiper.class.module.php
+(322 of 361) Renaming /sys/modules/Team.class.module.php
+(323 of 361) Renaming /sys/modules/Files.class.module.php
+(324 of 361) Renaming /sys/modules/thebility/thebility.view.php
+(325 of 361) Renaming /sys/modules/Contacts.class.module.php
+(326 of 361) Renaming /sys/Pages/8.page.php
+(327 of 361) Renaming /sys/Pages/11.page.php
+(328 of 361) Renaming /sys/Pages/12.page.php
+(329 of 361) Renaming /sys/Pages/6.page.php
+(330 of 361) Renaming /sys/Pages/10.page.php
+(331 of 361) Renaming /sys/Pages/7.page.php
+(332 of 361) Renaming /sys/Pages/4.page.php
+(333 of 361) Renaming /sys/Pages/5.page.php
+(334 of 361) Renaming /sys/Pages/11_sendMail.php
+(335 of 361) Renaming /sys/Pages/3.page.php
+(336 of 361) Renaming /sys/Pages/9.page.php
+(337 of 361) Renaming /sys/Pages/1.page.php
+(338 of 361) Renaming /sys/Pages/2.page.php
+(339 of 361) Renaming /sys/helpers/pmTranslate.fun.php
+(340 of 361) Renaming /sys/helpers/checkIfIsMobileNow.fun.help.php
+(341 of 361) Renaming /sys/helpers/pmTranslateEngine.php
+(342 of 361) Renaming /sys/helpers/Html.class.help.php
+(343 of 361) Renaming /sys/helpers/path2url.fun.php
+(344 of 361) Renaming /sys/Controller/Main.ctrl.php
+(345 of 361) Renaming /sys/Controller/DB.class.ctrl.php
+(346 of 361) Renaming /sys/Model/Skeleton.depends.model.php
+(347 of 361) Renaming /sys/Model/Skeleton.bar.model.php
+(348 of 361) Renaming /sys/Model/Skeleton.footer.model.php
+(349 of 361) Renaming /sys/Model/Skeleton.index.model.php
+(350 of 361) Renaming /sys/Model/startup.model.php
+(351 of 361) Renaming /sys/Model/Skeleton.nav.model.php
+(352 of 361) Renaming /sys/View/bar_mobile.view.html.php
+(353 of 361) Renaming /sys/View/footer.view.html.php
+(354 of 361) Renaming /sys/View/nav.view.html.php
+(355 of 361) Renaming /sys/View/nav_lang.view.html.php
+(356 of 361) Renaming /sys/View/logout.view.html.php
+(357 of 361) Renaming /sys/View/depends.view.html.php
+(358 of 361) Renaming /sys/View/index.view.html.php
+(359 of 361) Renaming /sys/View/agree.cookie.view.html.php
+(360 of 361) Renaming /sys/View/bar_skeleton.view.html.php
+(361 of 361) Renaming /.htdeployment
+
+Deleting:
+(  1 of 402) Deleting /modules/thebility/thebility.view.php
+(  2 of 402) Deleting /modules/thebility/
+(  3 of 402) Deleting /modules/initModalTranslate.php
+(  4 of 402) Deleting /modules/VideoList.class.module.php
+(  5 of 402) Deleting /modules/Team.class.module.php
+(  6 of 402) Deleting /modules/Swiper.class.module.php
+(  7 of 402) Deleting /modules/Page.class.module.php
+(  8 of 402) Deleting /modules/Files.class.module.php
+(  9 of 402) Deleting /modules/Email.class.module.php
+( 10 of 402) Deleting /modules/Contacts.class.module.php
+( 11 of 402) Deleting /modules/
+( 12 of 402) Deleting /helpers/pmTranslateEngine.php
+( 13 of 402) Deleting /helpers/pmTranslate.fun.php
+( 14 of 402) Deleting /helpers/path2url.fun.php
+( 15 of 402) Deleting /helpers/checkIfIsMobileNow.fun.help.php
+( 16 of 402) Deleting /helpers/Html.class.help.php
+( 17 of 402) Deleting /helpers/
+( 18 of 402) Deleting /assets/videos/videos/
+( 19 of 402) Deleting /assets/videos/
+( 20 of 402) Deleting /assets/var/
+( 21 of 402) Deleting /assets/modules/
+( 22 of 402) Deleting /assets/images/images/page_9/artGrid/queen1.png
+( 23 of 402) Deleting /assets/images/images/page_9/artGrid/neon1_01.png
+( 24 of 402) Deleting /assets/images/images/page_9/artGrid/napoleoin2.png
+( 25 of 402) Deleting /assets/images/images/page_9/artGrid/masti171.png
+( 26 of 402) Deleting /assets/images/images/page_9/artGrid/map3.png
+( 27 of 402) Deleting /assets/images/images/page_9/artGrid/map2-2.png
+( 28 of 402) Deleting /assets/images/images/page_9/artGrid/map1.png
+( 29 of 402) Deleting /assets/images/images/page_9/artGrid/linesDT.png
+( 30 of 402) Deleting /assets/images/images/page_9/artGrid/king1.png
+( 31 of 402) Deleting /assets/images/images/page_9/artGrid/jokerHat1.png
+( 32 of 402) Deleting /assets/images/images/page_9/artGrid/hevel.png
+( 33 of 402) Deleting /assets/images/images/page_9/artGrid/hem1-2.png
+( 34 of 402) Deleting /assets/images/images/page_9/artGrid/gagarin1-2.png
+( 35 of 402) Deleting /assets/images/images/page_9/artGrid/einstein2.png
+( 36 of 402) Deleting /assets/images/images/page_9/artGrid/dollar1DT.png
+( 37 of 402) Deleting /assets/images/images/page_9/artGrid/chessNONflatDT.png
+( 38 of 402) Deleting /assets/images/images/page_9/artGrid/ZebrasA.png
+( 39 of 402) Deleting /assets/images/images/page_9/artGrid/WindRose1.png
+( 40 of 402) Deleting /assets/images/images/page_9/artGrid/TrilogyA3.png
+( 41 of 402) Deleting /assets/images/images/page_9/artGrid/TrilogyA2.png
+( 42 of 402) Deleting /assets/images/images/page_9/artGrid/TrilogyA1.png
+( 43 of 402) Deleting /assets/images/images/page_9/artGrid/TWallB.png
+( 44 of 402) Deleting /assets/images/images/page_9/artGrid/TWallA.png
+( 45 of 402) Deleting /assets/images/images/page_9/artGrid/StrokesA.png
+( 46 of 402) Deleting /assets/images/images/page_9/artGrid/PastelLinesDTCOMP.png
+( 47 of 402) Deleting /assets/images/images/page_9/artGrid/OtiotA.png
+( 48 of 402) Deleting /assets/images/images/page_9/artGrid/LaChute.png
+( 49 of 402) Deleting /assets/images/images/page_9/artGrid/KesefHakol.png
+( 50 of 402) Deleting /assets/images/images/page_9/artGrid/Jack1.png
+( 51 of 402) Deleting /assets/images/images/page_9/artGrid/GunsNRosesDT.png
+( 52 of 402) Deleting /assets/images/images/page_9/artGrid/Goethe2.png
+( 53 of 402) Deleting /assets/images/images/page_9/artGrid/Ghost1_01.png
+( 54 of 402) Deleting /assets/images/images/page_9/artGrid/CubesWallA.png
+( 55 of 402) Deleting /assets/images/images/page_9/artGrid/CirclesB.png
+( 56 of 402) Deleting /assets/images/images/page_9/artGrid/CirclesA.png
+( 57 of 402) Deleting /assets/images/images/page_9/artGrid/ChessFLAT1DT.png
+( 58 of 402) Deleting /assets/images/images/page_9/artGrid/Che.png
+( 59 of 402) Deleting /assets/images/images/page_9/artGrid/Bubi.png
+( 60 of 402) Deleting /assets/images/images/page_9/artGrid/BonApetit_01.png
+( 61 of 402) Deleting /assets/images/images/page_9/artGrid/BeRovHohma.png
+( 62 of 402) Deleting /assets/images/images/page_9/artGrid/5crabs1.png
+( 63 of 402) Deleting /assets/images/images/page_9/artGrid/
+( 64 of 402) Deleting /assets/images/images/page_9/
+( 65 of 402) Deleting /assets/images/images/page_7/printGrid/verso.png
+( 66 of 402) Deleting /assets/images/images/page_7/printGrid/sumoS2.png
+( 67 of 402) Deleting /assets/images/images/page_7/printGrid/karty2dallinonepngs1MB.png
+( 68 of 402) Deleting /assets/images/images/page_7/printGrid/diplomKravMAga.png
+( 69 of 402) Deleting /assets/images/images/page_7/printGrid/chessrender20141920.png
+( 70 of 402) Deleting /assets/images/images/page_7/printGrid/cartaTEX.png
+( 71 of 402) Deleting /assets/images/images/page_7/printGrid/books.png
+( 72 of 402) Deleting /assets/images/images/page_7/printGrid/allcards3dsvg1MB.png
+( 73 of 402) Deleting /assets/images/images/page_7/printGrid/VISITS3dShadow.png
+( 74 of 402) Deleting /assets/images/images/page_7/printGrid/MenuShadow1.png
+( 75 of 402) Deleting /assets/images/images/page_7/printGrid/JOURNAL.png
+( 76 of 402) Deleting /assets/images/images/page_7/printGrid/Cards3dShadow2.png
+( 77 of 402) Deleting /assets/images/images/page_7/printGrid/Cards2dShadow.png
+( 78 of 402) Deleting /assets/images/images/page_7/printGrid/BuycardPrint2.png
+( 79 of 402) Deleting /assets/images/images/page_7/printGrid/1052.png
+( 80 of 402) Deleting /assets/images/images/page_7/printGrid/
+( 81 of 402) Deleting /assets/images/images/page_7/
+( 82 of 402) Deleting /assets/images/images/page_6/gofanariumLogo.svg
+( 83 of 402) Deleting /assets/images/images/page_6/fontsGrid/yam suf.png
+( 84 of 402) Deleting /assets/images/images/page_6/fontsGrid/strokes.png
+( 85 of 402) Deleting /assets/images/images/page_6/fontsGrid/sticks.png
+( 86 of 402) Deleting /assets/images/images/page_6/fontsGrid/skechers.png
+( 87 of 402) Deleting /assets/images/images/page_6/fontsGrid/sayfan.png
+( 88 of 402) Deleting /assets/images/images/page_6/fontsGrid/patch stencil.png
+( 89 of 402) Deleting /assets/images/images/page_6/fontsGrid/patch serif.png
+( 90 of 402) Deleting /assets/images/images/page_6/fontsGrid/patch sans.png
+( 91 of 402) Deleting /assets/images/images/page_6/fontsGrid/noam.png
+( 92 of 402) Deleting /assets/images/images/page_6/fontsGrid/neo.png
+( 93 of 402) Deleting /assets/images/images/page_6/fontsGrid/mixer.png
+( 94 of 402) Deleting /assets/images/images/page_6/fontsGrid/miso.png
+( 95 of 402) Deleting /assets/images/images/page_6/fontsGrid/lilach.png
+( 96 of 402) Deleting /assets/images/images/page_6/fontsGrid/kimchi.png
+( 97 of 402) Deleting /assets/images/images/page_6/fontsGrid/josef.png
+( 98 of 402) Deleting /assets/images/images/page_6/fontsGrid/hidekel.png
+( 99 of 402) Deleting /assets/images/images/page_6/fontsGrid/har sinai.png
+(100 of 402) Deleting /assets/images/images/page_6/fontsGrid/eco.png
+(101 of 402) Deleting /assets/images/images/page_6/fontsGrid/daniel.png
+(102 of 402) Deleting /assets/images/images/page_6/fontsGrid/amit.png
+(103 of 402) Deleting /assets/images/images/page_6/fontsGrid/
+(104 of 402) Deleting /assets/images/images/page_6/
+(105 of 402) Deleting /assets/images/images/page_5/softGrid/9a.svg
+(106 of 402) Deleting /assets/images/images/page_5/softGrid/9.svg
+(107 of 402) Deleting /assets/images/images/page_5/softGrid/8.svg
+(108 of 402) Deleting /assets/images/images/page_5/softGrid/7.svg
+(109 of 402) Deleting /assets/images/images/page_5/softGrid/6a.svg
+(110 of 402) Deleting /assets/images/images/page_5/softGrid/6.svg
+(111 of 402) Deleting /assets/images/images/page_5/softGrid/5.svg
+(112 of 402) Deleting /assets/images/images/page_5/softGrid/4.svg
+(113 of 402) Deleting /assets/images/images/page_5/softGrid/3a.svg
+(114 of 402) Deleting /assets/images/images/page_5/softGrid/3.svg
+(115 of 402) Deleting /assets/images/images/page_5/softGrid/2.svg
+(116 of 402) Deleting /assets/images/images/page_5/softGrid/19.svg
+(117 of 402) Deleting /assets/images/images/page_5/softGrid/18.svg
+(118 of 402) Deleting /assets/images/images/page_5/softGrid/17.svg
+(119 of 402) Deleting /assets/images/images/page_5/softGrid/16.svg
+(120 of 402) Deleting /assets/images/images/page_5/softGrid/15.svg
+(121 of 402) Deleting /assets/images/images/page_5/softGrid/14.svg
+(122 of 402) Deleting /assets/images/images/page_5/softGrid/12.svg
+(123 of 402) Deleting /assets/images/images/page_5/softGrid/10.svg
+(124 of 402) Deleting /assets/images/images/page_5/softGrid/1.svg
+(125 of 402) Deleting /assets/images/images/page_5/softGrid/
+(126 of 402) Deleting /assets/images/images/page_5/
+(127 of 402) Deleting /assets/images/images/page_4/internetGrid/8.png
+(128 of 402) Deleting /assets/images/images/page_4/internetGrid/7.png
+(129 of 402) Deleting /assets/images/images/page_4/internetGrid/6.png
+(130 of 402) Deleting /assets/images/images/page_4/internetGrid/5.png
+(131 of 402) Deleting /assets/images/images/page_4/internetGrid/4.png
+(132 of 402) Deleting /assets/images/images/page_4/internetGrid/3.png
+(133 of 402) Deleting /assets/images/images/page_4/internetGrid/2.png
+(134 of 402) Deleting /assets/images/images/page_4/internetGrid/1.png
+(135 of 402) Deleting /assets/images/images/page_4/internetGrid/
+(136 of 402) Deleting /assets/images/images/page_4/
+(137 of 402) Deleting /assets/images/images/page_3/swipe/9.png
+(138 of 402) Deleting /assets/images/images/page_3/swipe/8.png
+(139 of 402) Deleting /assets/images/images/page_3/swipe/7.png
+(140 of 402) Deleting /assets/images/images/page_3/swipe/6.png
+(141 of 402) Deleting /assets/images/images/page_3/swipe/5.png
+(142 of 402) Deleting /assets/images/images/page_3/swipe/4.png
+(143 of 402) Deleting /assets/images/images/page_3/swipe/3.png
+(144 of 402) Deleting /assets/images/images/page_3/swipe/2.png
+(145 of 402) Deleting /assets/images/images/page_3/swipe/13.png
+(146 of 402) Deleting /assets/images/images/page_3/swipe/12.png
+(147 of 402) Deleting /assets/images/images/page_3/swipe/11.png
+(148 of 402) Deleting /assets/images/images/page_3/swipe/10.png
+(149 of 402) Deleting /assets/images/images/page_3/swipe/1.png
+(150 of 402) Deleting /assets/images/images/page_3/swipe/
+(151 of 402) Deleting /assets/images/images/page_3/
+(152 of 402) Deleting /assets/images/images/page_2/twoIIc.png
+(153 of 402) Deleting /assets/images/images/page_2/two2.png
+(154 of 402) Deleting /assets/images/images/page_2/tundraI.png
+(155 of 402) Deleting /assets/images/images/page_2/logoGrid/9al.png
+(156 of 402) Deleting /assets/images/images/page_2/logoGrid/9.png
+(157 of 402) Deleting /assets/images/images/page_2/logoGrid/8al.png
+(158 of 402) Deleting /assets/images/images/page_2/logoGrid/8.png
+(159 of 402) Deleting /assets/images/images/page_2/logoGrid/7al.png
+(160 of 402) Deleting /assets/images/images/page_2/logoGrid/7.png
+(161 of 402) Deleting /assets/images/images/page_2/logoGrid/6.png
+(162 of 402) Deleting /assets/images/images/page_2/logoGrid/5al.png
+(163 of 402) Deleting /assets/images/images/page_2/logoGrid/57.png
+(164 of 402) Deleting /assets/images/images/page_2/logoGrid/56.png
+(165 of 402) Deleting /assets/images/images/page_2/logoGrid/55.png
+(166 of 402) Deleting /assets/images/images/page_2/logoGrid/54.png
+(167 of 402) Deleting /assets/images/images/page_2/logoGrid/53.png
+(168 of 402) Deleting /assets/images/images/page_2/logoGrid/52.png
+(169 of 402) Deleting /assets/images/images/page_2/logoGrid/51.png
+(170 of 402) Deleting /assets/images/images/page_2/logoGrid/50a.png
+(171 of 402) Deleting /assets/images/images/page_2/logoGrid/5.png
+(172 of 402) Deleting /assets/images/images/page_2/logoGrid/48.png
+(173 of 402) Deleting /assets/images/images/page_2/logoGrid/47.png
+(174 of 402) Deleting /assets/images/images/page_2/logoGrid/46.png
+(175 of 402) Deleting /assets/images/images/page_2/logoGrid/45.png
+(176 of 402) Deleting /assets/images/images/page_2/logoGrid/44.png
+(177 of 402) Deleting /assets/images/images/page_2/logoGrid/43.png
+(178 of 402) Deleting /assets/images/images/page_2/logoGrid/42.png
+(179 of 402) Deleting /assets/images/images/page_2/logoGrid/41.png
+(180 of 402) Deleting /assets/images/images/page_2/logoGrid/40.png
+(181 of 402) Deleting /assets/images/images/page_2/logoGrid/4.png
+(182 of 402) Deleting /assets/images/images/page_2/logoGrid/3b.png
+(183 of 402) Deleting /assets/images/images/page_2/logoGrid/3a.png
+(184 of 402) Deleting /assets/images/images/page_2/logoGrid/39.png
+(185 of 402) Deleting /assets/images/images/page_2/logoGrid/38a.png
+(186 of 402) Deleting /assets/images/images/page_2/logoGrid/38.png
+(187 of 402) Deleting /assets/images/images/page_2/logoGrid/37.png
+(188 of 402) Deleting /assets/images/images/page_2/logoGrid/2a.png
+(189 of 402) Deleting /assets/images/images/page_2/logoGrid/22.png
+(190 of 402) Deleting /assets/images/images/page_2/logoGrid/21a.png
+(191 of 402) Deleting /assets/images/images/page_2/logoGrid/21.png
+(192 of 402) Deleting /assets/images/images/page_2/logoGrid/20a.png
+(193 of 402) Deleting /assets/images/images/page_2/logoGrid/20.png
+(194 of 402) Deleting /assets/images/images/page_2/logoGrid/2.png
+(195 of 402) Deleting /assets/images/images/page_2/logoGrid/19.png
+(196 of 402) Deleting /assets/images/images/page_2/logoGrid/18a.png
+(197 of 402) Deleting /assets/images/images/page_2/logoGrid/18.png
+(198 of 402) Deleting /assets/images/images/page_2/logoGrid/17al.png
+(199 of 402) Deleting /assets/images/images/page_2/logoGrid/17.png
+(200 of 402) Deleting /assets/images/images/page_2/logoGrid/16.png
+(201 of 402) Deleting /assets/images/images/page_2/logoGrid/15.png
+(202 of 402) Deleting /assets/images/images/page_2/logoGrid/14.png
+(203 of 402) Deleting /assets/images/images/page_2/logoGrid/13al.png
+(204 of 402) Deleting /assets/images/images/page_2/logoGrid/13.png
+(205 of 402) Deleting /assets/images/images/page_2/logoGrid/12.png
+(206 of 402) Deleting /assets/images/images/page_2/logoGrid/11al.png
+(207 of 402) Deleting /assets/images/images/page_2/logoGrid/11.png
+(208 of 402) Deleting /assets/images/images/page_2/logoGrid/10al.png
+(209 of 402) Deleting /assets/images/images/page_2/logoGrid/10.png
+(210 of 402) Deleting /assets/images/images/page_2/logoGrid/1.png
+(211 of 402) Deleting /assets/images/images/page_2/logoGrid/
+(212 of 402) Deleting /assets/images/images/page_2/
+(213 of 402) Deleting /assets/images/images/page_10/team/queen.png
+(214 of 402) Deleting /assets/images/images/page_10/team/louis.png
+(215 of 402) Deleting /assets/images/images/page_10/team/lorem.png
+(216 of 402) Deleting /assets/images/images/page_10/team/king.png
+(217 of 402) Deleting /assets/images/images/page_10/team/joker.png
+(218 of 402) Deleting /assets/images/images/page_10/team/
+(219 of 402) Deleting /assets/images/images/page_10/
+(220 of 402) Deleting /assets/images/images/page_1/9.png
+(221 of 402) Deleting /assets/images/images/page_1/8.png
+(222 of 402) Deleting /assets/images/images/page_1/7.png
+(223 of 402) Deleting /assets/images/images/page_1/6.png
+(224 of 402) Deleting /assets/images/images/page_1/5.png
+(225 of 402) Deleting /assets/images/images/page_1/4.png
+(226 of 402) Deleting /assets/images/images/page_1/3.png
+(227 of 402) Deleting /assets/images/images/page_1/2.png
+(228 of 402) Deleting /assets/images/images/page_1/10.png
+(229 of 402) Deleting /assets/images/images/page_1/1.png
+(230 of 402) Deleting /assets/images/images/page_1/
+(231 of 402) Deleting /assets/images/images/info/pmlogoUnderMaintenance.svg
+(232 of 402) Deleting /assets/images/images/info/pmlogoUnderConstruction.svg
+(233 of 402) Deleting /assets/images/images/info/pmlogoMailUnSuccess.svg
+(234 of 402) Deleting /assets/images/images/info/pmlogoMailSuccess.svg
+(235 of 402) Deleting /assets/images/images/info/pmlogo404.svg
+(236 of 402) Deleting /assets/images/images/info/pmlogo.svg
+(237 of 402) Deleting /assets/images/images/info/
+(238 of 402) Deleting /assets/images/images/brand/squareLogo.svg
+(239 of 402) Deleting /assets/images/images/brand/barLogoMob.svg
+(240 of 402) Deleting /assets/images/images/brand/barLogoInvert.svg
+(241 of 402) Deleting /assets/images/images/brand/barLogo.svg
+(242 of 402) Deleting /assets/images/images/brand/
+(243 of 402) Deleting /assets/images/images/
+(244 of 402) Deleting /assets/images/
+(245 of 402) Deleting /assets/icons/vector/window-maximize.svg
+(246 of 402) Deleting /assets/icons/vector/window-close.svg
+(247 of 402) Deleting /assets/icons/vector/wa.svg
+(248 of 402) Deleting /assets/icons/vector/up.svg
+(249 of 402) Deleting /assets/icons/vector/trashRed.svg
+(250 of 402) Deleting /assets/icons/vector/trash.svg
+(251 of 402) Deleting /assets/icons/vector/thebility.svg
+(252 of 402) Deleting /assets/icons/vector/telega.svg
+(253 of 402) Deleting /assets/icons/vector/tel.svg
+(254 of 402) Deleting /assets/icons/vector/team.svg
+(255 of 402) Deleting /assets/icons/vector/settings.svg
+(256 of 402) Deleting /assets/icons/vector/print.svg
+(257 of 402) Deleting /assets/icons/vector/posts.svg
+(258 of 402) Deleting /assets/icons/vector/pm.svg
+(259 of 402) Deleting /assets/icons/vector/pencil.svg
+(260 of 402) Deleting /assets/icons/vector/minus-circle.svg
+(261 of 402) Deleting /assets/icons/vector/mails.svg
+(262 of 402) Deleting /assets/icons/vector/mail.svg
+(263 of 402) Deleting /assets/icons/vector/lang.svg
+(264 of 402) Deleting /assets/icons/vector/insta.svg
+(265 of 402) Deleting /assets/icons/vector/info.svg
+(266 of 402) Deleting /assets/icons/vector/gavel.svg
+(267 of 402) Deleting /assets/icons/vector/finance.svg
+(268 of 402) Deleting /assets/icons/vector/fb.svg
+(269 of 402) Deleting /assets/icons/vector/eye.svg
+(270 of 402) Deleting /assets/icons/vector/exit.svg
+(271 of 402) Deleting /assets/icons/vector/drag.svg
+(272 of 402) Deleting /assets/icons/vector/down.svg
+(273 of 402) Deleting /assets/icons/vector/date.svg
+(274 of 402) Deleting /assets/icons/vector/close.svg
+(275 of 402) Deleting /assets/icons/vector/clock.svg
+(276 of 402) Deleting /assets/icons/vector/checkbox-marked-circle.svg
+(277 of 402) Deleting /assets/icons/vector/calculator.svg
+(278 of 402) Deleting /assets/icons/vector/atach.svg
+(279 of 402) Deleting /assets/icons/vector/add2.svg
+(280 of 402) Deleting /assets/icons/vector/add.svg
+(281 of 402) Deleting /assets/icons/vector/9.svg
+(282 of 402) Deleting /assets/icons/vector/7.svg
+(283 of 402) Deleting /assets/icons/vector/6.svg
+(284 of 402) Deleting /assets/icons/vector/44.svg
+(285 of 402) Deleting /assets/icons/vector/43.svg
+(286 of 402) Deleting /assets/icons/vector/42.svg
+(287 of 402) Deleting /assets/icons/vector/41.svg
+(288 of 402) Deleting /assets/icons/vector/40.svg
+(289 of 402) Deleting /assets/icons/vector/4.svg
+(290 of 402) Deleting /assets/icons/vector/39.svg
+(291 of 402) Deleting /assets/icons/vector/38.svg
+(292 of 402) Deleting /assets/icons/vector/37.svg
+(293 of 402) Deleting /assets/icons/vector/36.svg
+(294 of 402) Deleting /assets/icons/vector/35.svg
+(295 of 402) Deleting /assets/icons/vector/34.svg
+(296 of 402) Deleting /assets/icons/vector/33.svg
+(297 of 402) Deleting /assets/icons/vector/32.svg
+(298 of 402) Deleting /assets/icons/vector/31.svg
+(299 of 402) Deleting /assets/icons/vector/30.svg
+(300 of 402) Deleting /assets/icons/vector/3.svg
+(301 of 402) Deleting /assets/icons/vector/29.svg
+(302 of 402) Deleting /assets/icons/vector/28.svg
+(303 of 402) Deleting /assets/icons/vector/27.svg
+(304 of 402) Deleting /assets/icons/vector/26a.svg
+(305 of 402) Deleting /assets/icons/vector/26.svg
+(306 of 402) Deleting /assets/icons/vector/25a.svg
+(307 of 402) Deleting /assets/icons/vector/25.svg
+(308 of 402) Deleting /assets/icons/vector/24.svg
+(309 of 402) Deleting /assets/icons/vector/23.svg
+(310 of 402) Deleting /assets/icons/vector/22.svg
+(311 of 402) Deleting /assets/icons/vector/21.svg
+(312 of 402) Deleting /assets/icons/vector/20.svg
+(313 of 402) Deleting /assets/icons/vector/2.svg
+(314 of 402) Deleting /assets/icons/vector/19.svg
+(315 of 402) Deleting /assets/icons/vector/18.svg
+(316 of 402) Deleting /assets/icons/vector/17b.svg
+(317 of 402) Deleting /assets/icons/vector/17.svg
+(318 of 402) Deleting /assets/icons/vector/16.svg
+(319 of 402) Deleting /assets/icons/vector/15.svg
+(320 of 402) Deleting /assets/icons/vector/14.svg
+(321 of 402) Deleting /assets/icons/vector/13.svg
+(322 of 402) Deleting /assets/icons/vector/12.svg
+(323 of 402) Deleting /assets/icons/vector/11.svg
+(324 of 402) Deleting /assets/icons/vector/100a.svg
+(325 of 402) Deleting /assets/icons/vector/100.svg
+(326 of 402) Deleting /assets/icons/vector/10.svg
+(327 of 402) Deleting /assets/icons/vector/1.svg
+(328 of 402) Deleting /assets/icons/vector/0.svg
+(329 of 402) Deleting /assets/icons/vector/
+(330 of 402) Deleting /assets/icons/
+(331 of 402) Deleting /assets/fonts/
+(332 of 402) Deleting /assets/favicons/site.webmanifest
+(333 of 402) Deleting /assets/favicons/safari-pinned-tab.svg
+(334 of 402) Deleting /assets/favicons/mstile-150x150.png
+(335 of 402) Deleting /assets/favicons/favicon.ico
+(336 of 402) Deleting /assets/favicons/favicon-32x32.png
+(337 of 402) Deleting /assets/favicons/favicon-16x16.png
+(338 of 402) Deleting /assets/favicons/browserconfig.xml
+(339 of 402) Deleting /assets/favicons/apple-touch-icon.png
+(340 of 402) Deleting /assets/favicons/android-chrome-512x512.png
+(341 of 402) Deleting /assets/favicons/android-chrome-192x192.png
+(342 of 402) Deleting /assets/favicons/.htdeployment
+(343 of 402) Deleting /assets/favicons/
+(344 of 402) Deleting /assets/
+(345 of 402) Deleting /admin/admin/index.php
+(346 of 402) Deleting /admin/admin/View/registration.view.html.php
+(347 of 402) Deleting /admin/admin/View/login.view.html.php
+(348 of 402) Deleting /admin/admin/View/
+(349 of 402) Deleting /admin/admin/Pages/7.page.php
+(350 of 402) Deleting /admin/admin/Pages/6.page.php
+(351 of 402) Deleting /admin/admin/Pages/5.page.php
+(352 of 402) Deleting /admin/admin/Pages/4.page.php
+(353 of 402) Deleting /admin/admin/Pages/3.page.php
+(354 of 402) Deleting /admin/admin/Pages/2.page.php
+(355 of 402) Deleting /admin/admin/Pages/1.page.php
+(356 of 402) Deleting /admin/admin/Pages/
+(357 of 402) Deleting /admin/admin/Model/registration.class.php
+(358 of 402) Deleting /admin/admin/Model/login.class.php
+(359 of 402) Deleting /admin/admin/Model/
+(360 of 402) Deleting /admin/admin/
+(361 of 402) Deleting /View/nav_lang.view.html.php
+(362 of 402) Deleting /View/nav.view.html.php
+(363 of 402) Deleting /View/logout.view.html.php
+(364 of 402) Deleting /View/index.view.html.php
+(365 of 402) Deleting /View/footer.view.html.php
+(366 of 402) Deleting /View/depends.view.html.php
+(367 of 402) Deleting /View/bar_skeleton.view.html.php
+(368 of 402) Deleting /View/bar_mobile.view.html.php
+(369 of 402) Deleting /View/agree.cookie.view.html.php
+(370 of 402) Deleting /View/
+(371 of 402) Deleting /SysInfo/underMaintenance.php
+(372 of 402) Deleting /SysInfo/underConstruction.php
+(373 of 402) Deleting /SysInfo/sysInfoTemplate.view.html.php
+(374 of 402) Deleting /SysInfo/sysInfoTemplate.model.php
+(375 of 402) Deleting /SysInfo/mailUnSuccess.php
+(376 of 402) Deleting /SysInfo/mailSuccess.php
+(377 of 402) Deleting /SysInfo/404.php
+(378 of 402) Deleting /SysInfo/
+(379 of 402) Deleting /Pages/9.page.php
+(380 of 402) Deleting /Pages/8.page.php
+(381 of 402) Deleting /Pages/7.page.php
+(382 of 402) Deleting /Pages/6.page.php
+(383 of 402) Deleting /Pages/5.page.php
+(384 of 402) Deleting /Pages/4.page.php
+(385 of 402) Deleting /Pages/3.page.php
+(386 of 402) Deleting /Pages/2.page.php
+(387 of 402) Deleting /Pages/12.page.php
+(388 of 402) Deleting /Pages/11_sendMail.php
+(389 of 402) Deleting /Pages/11.page.php
+(390 of 402) Deleting /Pages/10.page.php
+(391 of 402) Deleting /Pages/1.page.php
+(392 of 402) Deleting /Pages/
+(393 of 402) Deleting /Model/startup.model.php
+(394 of 402) Deleting /Model/Skeleton.nav.model.php
+(395 of 402) Deleting /Model/Skeleton.index.model.php
+(396 of 402) Deleting /Model/Skeleton.footer.model.php
+(397 of 402) Deleting /Model/Skeleton.depends.model.php
+(398 of 402) Deleting /Model/Skeleton.bar.model.php
+(399 of 402) Deleting /Model/
+(400 of 402) Deleting /Controller/Main.ctrl.php
+(401 of 402) Deleting /Controller/DB.class.ctrl.php
+(402 of 402) Deleting /Controller/
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/04/11 03:17] (in 947 seconds)
+----------------------------------------------
+
+
