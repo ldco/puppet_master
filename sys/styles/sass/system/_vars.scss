@@ -1,5 +1,9 @@
 .attention {}
 
+.pm_emailLoader {
+    @include ping;
+}
+
 #copyto {
     user-select: initial !important;
 }

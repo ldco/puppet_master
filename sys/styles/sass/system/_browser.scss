@@ -31,12 +31,13 @@ img {
     }
 }
 
-input {
-    height: 5vh;
-}
-
-input[type="submit"] {
-    height: 7vh;
+@mixin form_input_fixedHeight {
+    input {
+        height: 5vh;
+    }
+    input[type="submit"] {
+        height: 7vh;
+    }
 }
 
 button,

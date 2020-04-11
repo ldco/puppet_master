@@ -26,4 +26,6 @@
     }
 }
 
-#pm_loader1 {}
+#pm_loader1 {
+    @include rotate-center;
+}

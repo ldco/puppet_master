@@ -9582,7 +9582,6 @@ function initFun() {
   initModalLocalisation();
   new Thebility().init();
   mainPageIntro();
-  console.log("test3");
   /*end of functions list!*/
 
   var setURL = window.location.hash;
@@ -9722,7 +9721,7 @@ function pmEmailLoader(page) {
   var parent = document.querySelector(_parent);
 
   function init_setEmailLoader() {
-    loader.setAttribute("class", "pm_loader pm_emailLoader ping");
+    loader.setAttribute("class", "pm_loader pm_emailLoader");
     parent.appendChild(loader);
     document.querySelector("#pm_overlay").style.display = "flex";
   }
@@ -9739,12 +9738,11 @@ function pmEmailLoader(page) {
 
 function pmLoader(el, parent, event) {
   var id = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "pm_loader";
-  var anim = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : "ping";
   var loader = document.createElement("div");
 
   function initLoader() {
     loader.setAttribute("id", id);
-    loader.setAttribute("class", "pm_loader " + anim);
+    loader.setAttribute("class", "pm_loader ");
     document.querySelector(parent).appendChild(loader);
   }
 
@@ -9760,16 +9758,43 @@ var Macy = require("macy");
 
 function macyjs(id, col) {
   var margin = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-  var macy = Macy({
-    container: "#" + id,
-    trueOrder: false,
-    waitForImages: false,
-    margin: margin,
-    columns: col
-  });
-  document.querySelector("#" + id).style.width = "100%";
-  document.querySelectorAll("#" + id + " img").forEach(function (el) {
-    el.style.width = "100%";
+  var elid = "#" + id;
+
+  function pre_iniMacy(fun) {
+    setTimeout(function () {
+      fun();
+    }, 100);
+  }
+
+  function initMacy(fun) {
+    makeMacy();
+    setTimeout(function () {
+      fun();
+    }, 100);
+  }
+
+  function makeMacy() {
+    var macy = Macy({
+      container: elid,
+      trueOrder: false,
+      waitForImages: false,
+      margin: margin,
+      columns: col
+    });
+    document.querySelector(elid).style.width = "100%";
+    document.querySelectorAll(elid + " img").forEach(function (el) {
+      el.style.width = "100%";
+    });
+  }
+
+  pre_iniMacy(function () {
+    initMacy(function () {
+      document.querySelector(elid).style.opacity = "1";
+
+      if (document.querySelector(".pm_loader")) {
+        document.querySelector(".pm_loader").remove();
+      }
+    });
   });
 }
 
@@ -10351,7 +10376,7 @@ function setPageFunctions() {
     },
     fun_8: function fun_8() {
       aosjs("motiongraphicsGrid");
-      pmLoader("iframe", "#pm_page_8", "load", "pm_loader1", "rotate-center");
+      pmLoader("iframe", "#pm_page_8", "load", "pm_loader1");
     },
     fun_9: function fun_9() {
       macyjs("artGrid", 4);

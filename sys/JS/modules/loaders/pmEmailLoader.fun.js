@@ -4,7 +4,7 @@ function pmEmailLoader(page) {
     let parent = document.querySelector(_parent);
 
     function init_setEmailLoader() {
-        loader.setAttribute("class", "pm_loader pm_emailLoader ping");
+        loader.setAttribute("class", "pm_loader pm_emailLoader");
         parent.appendChild(loader);
         document.querySelector("#pm_overlay").style.display = "flex";
     }

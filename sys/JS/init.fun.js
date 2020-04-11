@@ -27,8 +27,6 @@ function initFun() {
     initModalLocalisation();
     new Thebility().init();
     mainPageIntro();
-    console.log("test3");
-
 
     /*end of functions list!*/
     let setURL = window.location.hash;

@@ -50,6 +50,6 @@ $pm_formBSactive_oldStyle: -0.08vh -0.08vh 0.08vh 0.08vh $c_shadow;
 }
 
 @if $LIGHT_THEME==false {
-    $pm_formBS: 0vh 0vh 0.4vh 0.4vh rgba($c_interBP1, 0.9);
-    $pm_formBSactive: 0vh 0vh 1.2vh 0.9vh rgba($c_brand, 0.8);
+    $pm_formBS: 0vh 0vh 0.1vh 0.1vh rgba($c_interBP1, 0.9);
+    $pm_formBSactive: 0vh 0vh 0.1vh 0.4vh rgba($c_brand, 1);
 }

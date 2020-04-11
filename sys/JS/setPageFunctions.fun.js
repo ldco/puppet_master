@@ -29,9 +29,10 @@ function setPageFunctions() {
         },
         fun_8: function() {
             aosjs("motiongraphicsGrid");
-            pmLoader("iframe", "#pm_page_8", "load", "pm_loader1", "rotate-center");
+            pmLoader("iframe", "#pm_page_8", "load", "pm_loader1");
         },
         fun_9: function() {
+
             macyjs("artGrid", 4);
         },
         fun_10: function() {

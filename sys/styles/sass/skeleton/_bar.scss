@@ -49,7 +49,9 @@
     position: fixed;
     z-index: 1979;
     @include dir("right", "left", 3vh, 3vh);
-    @include hover_heartbeat;
+    &:hover {
+        @include heartbeat;
+    }
 }
 
 %base-Bar {
