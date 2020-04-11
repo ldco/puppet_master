@@ -12,24 +12,24 @@ if (isset($_POST["gitself"])) {
         $add = shell_exec("git add .");
         $com = shell_exec("git commit -m 'self commit " . $now . "'");
         $push = shell_exec("git push -u origin master");
-        echo "git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $now . "'" . "\r\n" . $com . "git push -u origin master" . "\r\n" . $push;
+        echo "1 git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $now . "'" . "\r\n" . $com . "git push -u origin master" . "\r\n" . $push;
     } else {
         $add = shell_exec("git add .");
         $com = shell_exec("git commit -m 'self commit " . $now . "'");
         $push = shell_exec("git push -u" . $_POST['gitto']);
-        echo "git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $now . "'" . "\r\n" . $com . "git push -u" . $_POST['gitto']  . "\r\n" . $push;
+        echo "2 git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $now . "'" . "\r\n" . $com . "git push -u" . $_POST['gitto']  . "\r\n" . $push;
     }
 } else {
     if (isset($_POST["gitmaster"])) {
         $add = shell_exec("git add .");
         $com = shell_exec("git commit -m" . $_POST['gitcom']);
         $push = shell_exec("git push -u origin master");
-        echo "git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $_POST['gitcom'] . "'" . "\r\n" . $com . "git push -u origin master" . $push;
+        echo "3 git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $_POST['gitcom'] . "'" . "\r\n" . $com . "git push -u origin master" . $push;
     } else {
         $add = shell_exec("git add .");
         $com = shell_exec("git commit -m" . $_POST['gitcom']);
         $push = shell_exec("git push -u" . $_POST['gitto']);
-        echo "git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $_POST['gitcom'] . "'" . "\r\n" . $com . "git push -u" . $_POST['gitto']  . "\r\n" . $push;
+        echo "4 git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $_POST['gitcom'] . "'" . "\r\n" . $com . "git push -u" . $_POST['gitto']  . "\r\n" . $push;
     }
 }
 
