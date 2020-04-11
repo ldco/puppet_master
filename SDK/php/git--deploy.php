@@ -9,13 +9,13 @@ $now = date("Y-m-d H:i:s");
 
 if (isset($_POST["gitself"])) {
     if (isset($_POST["gitmaster"])) {
-        $add = shell_exec('git add');
+        $add = shell_exec('git add .');
         $com = shell_exec('git commit -m "self commit ' . $now . '"');
         echo $com;
         $push = shell_exec('git push -u origin master');
         echo  $add . $com . $push;
     } else {
-        $add = shell_exec('git add');
+        $add = shell_exec('git add .');
         $com = shell_exec('git commit -m "self commit ' . $now . '"');
         echo $com;
         $push = shell_exec('git push -u' . $_POST["gitto"]);
@@ -23,14 +23,14 @@ if (isset($_POST["gitself"])) {
     }
 } else {
     if (isset($_POST["gitmaster"])) {
-        $add = shell_exec('git add');
+        $add = shell_exec('git add .');
         $com = shell_exec('git commit -m' . $_POST["gitcom"]);
         echo $com;
         $push = shell_exec('git push -u origin master');
         echo  $add . $com . $push;
         echo $output;
     } else {
-        $add = shell_exec('git add');
+        $add = shell_exec('git add .');
         $com = shell_exec('git commit -m' . $_POST["gitcom"]);
         echo $com;
         $push = shell_exec('git push -u' . $_POST["gitto"]);
