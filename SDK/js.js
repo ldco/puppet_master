@@ -7,6 +7,9 @@ function initFun() {
     assignFun("#submit_git", function() {
         postGit();
     });
+    assignFun("#submit_gitadd", function() {
+        gitAdd();
+    });
 }
 
 function toggleDisabledInput(checkbox, textinput) {
@@ -56,4 +59,17 @@ function postGit() {
     ajx.open("POST", "php/git--deploy.php", true);
     ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajx.send("gitself=" + gitself + "&idgitmaster=" + gitmaster + "&gitto=" + gitto + "&gitcom=" + gitcom);
+}
+
+
+function gitAdd() {
+    let ajx = new XMLHttpRequest();
+    ajx.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("sdk_terminal").innerHTML = "added";
+        }
+    };
+    ajx.open("POST", "php/git--add.php", true);
+    ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajx.send();
 }

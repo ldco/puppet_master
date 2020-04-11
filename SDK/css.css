@@ -1,7 +1,7 @@
 #sdk_terminal {
     width: 30vw;
     height: 80vh;
-    background-color: #444;
+    background-color: #2f2f2f;
     color: #05a608;
     /* #fee818 */
     border-radius: 1vh;
@@ -19,7 +19,9 @@
 }
 
 .sdk_control_item {
-    text-transform: capitalize;
+    font-size: 2vh;
+    text-transform: uppercase;
+    font-family: monospace;
     display: flex;
     padding-top: 1vh;
     align-items: center;
@@ -35,6 +37,8 @@
 }
 
 body {
+    background-color: #2f2f2f;
+    color: #929292;
     width: 100vw;
     height: 100vh;
     position: fixed;

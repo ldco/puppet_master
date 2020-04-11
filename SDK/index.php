@@ -1,3 +1,4 @@
+<title>SDK PUPPET MASTER</title>
 <link rel="stylesheet" href="css.css">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <script src="js.js"></script>
@@ -5,6 +6,14 @@
 <div id="sdk_control">
 
     <div class="sdk_control_main">
+
+        <div class="sdk_control_item">
+
+            <label>git add</label>
+            <input type="submit" id="submit_gitadd">
+        </div>
+
+
         <div class="sdk_control_item">
             <label>git commit</label>
             <input type="text" disabled name="gitcom">
