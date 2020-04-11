@@ -31,6 +31,14 @@ img {
     }
 }
 
+input {
+    height: 5vh;
+}
+
+input[type="submit"] {
+    height: 7vh;
+}
+
 button,
 textarea,
 input,
@@ -150,7 +158,7 @@ form {
 
 label {
     text-transform: capitalize;
-    padding-bottom: 1vh;
+    padding-bottom: 0.5vh;
     span {
         color: $c_err;
     }
@@ -179,5 +187,29 @@ video:focus {}
     select,
     option {
         color: $c_opos;
+    }
+}
+
+@if $LIGHT_THEME==true {
+     ::-moz-selection {
+        /* Code for Firefox */
+        color: $c_domin;
+        background: $c_brand;
+    }
+     ::selection {
+        color: $c_domin;
+        background: $c_brand;
+    }
+}
+
+@if $LIGHT_THEME==false {
+     ::-moz-selection {
+        /* Code for Firefox */
+        color: $c_brand;
+        background: $c_domin;
+    }
+     ::selection {
+        color: $c_domin;
+        background: $c_opos;
     }
 }

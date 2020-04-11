@@ -2573,6 +2573,12 @@ iframe {
   iframe:focus {
     box-shadow: 0vh 0vh 1.2vh 0.9vh rgba(41, 69, 82, 0.8); }
 
+input {
+  height: 5vh; }
+
+input[type="submit"] {
+  height: 7vh; }
+
 select {
   background-image: url("../sys/assets/icons/vector_dev/down.svg");
   background-repeat: no-repeat, repeat;
@@ -2673,7 +2679,7 @@ form {
 
 label {
   text-transform: capitalize;
-  padding-bottom: 1vh; }
+  padding-bottom: 0.5vh; }
   label span {
     color: #ff0c00ff; }
 
@@ -2692,6 +2698,15 @@ input,
 select,
 option {
   color: #e4e9ed; }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #294552;
+  background: #00070a; }
+
+::selection {
+  color: #00070a;
+  background: #e4e9ed; }
 
 #pm_404 .pm_infoPageLogo {
   background-image: url("../sys/assets/images/images_dev/info/pmlogo404.svg"); }

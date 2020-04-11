@@ -2571,6 +2571,12 @@ iframe {
   iframe:focus {
     box-shadow: 0vh 0vh 0.3vh 0.3vh rgba(68, 115, 136, 0.6); }
 
+input {
+  height: 5vh; }
+
+input[type="submit"] {
+  height: 7vh; }
+
 select {
   background-image: url("../sys/assets/icons/vector_dev/down.svg");
   background-repeat: no-repeat, repeat;
@@ -2647,7 +2653,7 @@ form {
 
 label {
   text-transform: capitalize;
-  padding-bottom: 1vh; }
+  padding-bottom: 0.5vh; }
   label span {
     color: #ff0c00ff; }
 
@@ -2660,6 +2666,15 @@ iframe[src*=youtube] {
 
 *:focus {
   outline: 0 !important; }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #e4e9ed;
+  background: #294552; }
+
+::selection {
+  color: #e4e9ed;
+  background: #294552; }
 
 #pm_404 .pm_infoPageLogo {
   background-image: url("../sys/assets/images/images_dev/info/pmlogo404.svg"); }
