@@ -13,13 +13,13 @@ if (isset($_POST["gitself"])) {
 git add .
 git commit -m "self commit ' . $now . '"
 git push -u origin master', $output, $status);
-        echo $output;
+        echo json_encode($output);
     } else {
         exec('
 git add .
 git commit -m "self commit ' . $now . '"
 git push -u ' . $_POST["gitto"], $output, $status);
-        echo $output;
+        echo json_encode($output);
     }
 } else {
     if (isset($_POST["gitmaster"])) {
@@ -27,13 +27,13 @@ git push -u ' . $_POST["gitto"], $output, $status);
 git add .
 git commit -m "' . $_POST["gitcom"] . '"
 git push -u origin master', $output, $status);
-        echo $output;
+        echo json_encode($output);
     } else {
         exec('
 git add .
 git commit -m "' . $_POST["gitcom"] . '"
 git push -u ' . $_POST["gitto"], $output, $status);
-        echo $output;
+        echo json_encode($output);
     }
 }
 
