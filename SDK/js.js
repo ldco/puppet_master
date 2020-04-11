@@ -48,6 +48,9 @@ function postGit() {
             let fromDB = ajx.responseText;
 
             document.getElementById("sdk_terminal").innerHTML = fromDB;
+            document.getElementsByName("gitcom")[0].value = "";
+            document.getElementsByName("gitto")[0].value = "";
+
         }
     };
     ajx.open("POST", "php/git--deploy.php", true);
