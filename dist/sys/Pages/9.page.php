@@ -10,6 +10,8 @@ require PM_ROOT . PM_SYS_FOLDER . "/modules/Files.class.module.php";
 $page9 = new Page();
 $page9->h(1);
 
+echo "<div class='pm_loader'></div>";
+
 $artGrid = new Files;
 $artGrid->folder = "artGrid";
 $artGrid->make();

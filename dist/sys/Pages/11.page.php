@@ -24,9 +24,9 @@ $form21_submit = pmTranslate(PM_LANG, "submit", false);
 $form21 = new Formr();
 $form21->action = htmlspecialchars($form21action);
 
-echo $form21->form_open("inscript_form", "inscript_form_1", "", "", "onsubmit='$form21jsfun'");
+echo $form21->form_open("preorder_form", "preorder_form_1", "", "", "onsubmit='$form21jsfun'");
 
-//$form21->required = "name,mail";
+$form21->required = "name,mail";
 $form21->required_indicator = "<span>*</span>";
 
 echo $form21->input_text("name", $form21_name, "", "", "placeholder='{$form21_name}'");

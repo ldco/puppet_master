@@ -14,6 +14,10 @@ $swiperArrowSizeMob: 9vw;
     }
 }
 
+%swiper-button:after {
+    content: none;
+}
+
 .swiper-container {
     img {
         width: 100vw;
