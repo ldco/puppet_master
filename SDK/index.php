@@ -8,13 +8,13 @@
     <div class="sdk_control_main">
         <div class="sdk_control_item">
             <label>git commit</label>
-            <input type="text" name="gitcom">
+            <input type="text" disabled name="gitcom">
             <label>to</label>
-            <input type="text" name="gitto">
+            <input type="text" disabled name="gitto">
             <label>master</label>
-            <input type="checkbox" name="gitmaster">
+            <input type="checkbox" checked name="gitmaster">
             <label>self</label>
-            <input type="checkbox" name="gitself">
+            <input type="checkbox" checked name="gitself">
             <input type="submit">
         </div>
 
