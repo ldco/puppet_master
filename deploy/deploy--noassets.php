@@ -8,11 +8,11 @@ require_once "main.ftp.php";
 
 return [
     "my site" => [
-        "remote" => REMOTE_ROOT . "sys/assets/",
-        "local" => LOCAL_ROOT . LOCAL_DIST . "sys/assets/",
+        "remote" => REMOTE_ROOT . "sys/",
+        "local" => LOCAL_ROOT . LOCAL_DIST . "sys/",
         "test" => false,
         "ignore" => "
-     
+     assets
 		",
 
         "include" => "

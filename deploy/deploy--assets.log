@@ -1,0 +1,675 @@
+Started at [2020/04/11 19:10]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--assets.php
+
+Deploying my site
+Note: connection is not encrypted
+Error: Directory /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/DIST/assets/ not found. in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/Deployer.php:74
+
+InvalidArgumentException: Directory /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/DIST/assets/ not found. in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/Deployer.php:74
+Stack trace:
+#0 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/CliRunner.php(143): Deployment\Deployer->__construct()
+#1 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/CliRunner.php(78): Deployment\CliRunner->createDeployer()
+#2 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/deployment.php(29): Deployment\CliRunner->run()
+#3 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/deployment(3): require('/mnt/sdb2/CURRE...')
+#4 {main}
+Started at [2020/04/11 19:12]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--assets.php
+
+Deploying my site
+Note: connection is not encrypted
+Error: Directory /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/DIST/sys/assets/ not found. in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/Deployer.php:74
+
+InvalidArgumentException: Directory /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/DIST/sys/assets/ not found. in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/Deployer.php:74
+Stack trace:
+#0 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/CliRunner.php(143): Deployment\Deployer->__construct()
+#1 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/CliRunner.php(78): Deployment\CliRunner->createDeployer()
+#2 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/deployment.php(29): Deployment\CliRunner->run()
+#3 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/deployment(3): require('/mnt/sdb2/CURRE...')
+#4 {main}
+Started at [2020/04/11 19:12]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--assets.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Remote .htdeployment file not found
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/sys/assets
+Ignoring ./var/.gitkeep                 
+Ignoring ./fonts/.gitkeep               
+
+Uploading:
+(  1 of 324) /images/
+(  2 of 324) /images/images/
+(  3 of 324) /images/images/page_2/
+(  4 of 324) /images/images/page_2/twoIIc.png
+(  5 of 324) /images/images/page_2/tundraI.png
+(  6 of 324) /images/images/page_2/two2.png
+(  7 of 324) /images/images/page_2/logoGrid/
+(  8 of 324) /images/images/page_2/logoGrid/2a.png
+(  9 of 324) /images/images/page_2/logoGrid/17.png
+( 10 of 324) /images/images/page_2/logoGrid/13al.png
+( 11 of 324) /images/images/page_2/logoGrid/19.png
+( 12 of 324) /images/images/page_2/logoGrid/13.png
+( 13 of 324) /images/images/page_2/logoGrid/40.png
+( 14 of 324) /images/images/page_2/logoGrid/38.png
+( 15 of 324) /images/images/page_2/logoGrid/56.png
+( 16 of 324) /images/images/page_2/logoGrid/21a.png
+( 17 of 324) /images/images/page_2/logoGrid/3a.png
+( 18 of 324) /images/images/page_2/logoGrid/8al.png
+( 19 of 324) /images/images/page_2/logoGrid/38a.png
+( 20 of 324) /images/images/page_2/logoGrid/45.png
+( 21 of 324) /images/images/page_2/logoGrid/37.png
+( 22 of 324) /images/images/page_2/logoGrid/6.png
+( 23 of 324) /images/images/page_2/logoGrid/7al.png
+( 24 of 324) /images/images/page_2/logoGrid/1.png
+( 25 of 324) /images/images/page_2/logoGrid/18.png
+( 26 of 324) /images/images/page_2/logoGrid/50a.png
+( 27 of 324) /images/images/page_2/logoGrid/44.png
+( 28 of 324) /images/images/page_2/logoGrid/39.png
+( 29 of 324) /images/images/page_2/logoGrid/47.png
+( 30 of 324) /images/images/page_2/logoGrid/55.png
+( 31 of 324) /images/images/page_2/logoGrid/17al.png
+( 32 of 324) /images/images/page_2/logoGrid/21.png
+( 33 of 324) /images/images/page_2/logoGrid/42.png
+( 34 of 324) /images/images/page_2/logoGrid/4.png
+( 35 of 324) /images/images/page_2/logoGrid/11.png
+( 36 of 324) /images/images/page_2/logoGrid/43.png
+( 37 of 324) /images/images/page_2/logoGrid/18a.png
+( 38 of 324) /images/images/page_2/logoGrid/5.png
+( 39 of 324) /images/images/page_2/logoGrid/10al.png
+( 40 of 324) /images/images/page_2/logoGrid/3b.png
+( 41 of 324) /images/images/page_2/logoGrid/11al.png
+( 42 of 324) /images/images/page_2/logoGrid/54.png
+( 43 of 324) /images/images/page_2/logoGrid/12.png
+( 44 of 324) /images/images/page_2/logoGrid/20.png
+( 45 of 324) /images/images/page_2/logoGrid/7.png
+( 46 of 324) /images/images/page_2/logoGrid/2.png
+( 47 of 324) /images/images/page_2/logoGrid/5al.png
+( 48 of 324) /images/images/page_2/logoGrid/46.png
+( 49 of 324) /images/images/page_2/logoGrid/57.png
+( 50 of 324) /images/images/page_2/logoGrid/48.png
+( 51 of 324) /images/images/page_2/logoGrid/16.png
+( 52 of 324) /images/images/page_2/logoGrid/51.png
+( 53 of 324) /images/images/page_2/logoGrid/22.png
+( 54 of 324) /images/images/page_2/logoGrid/9al.png
+( 55 of 324) /images/images/page_2/logoGrid/53.png
+( 56 of 324) /images/images/page_2/logoGrid/14.png
+( 57 of 324) /images/images/page_2/logoGrid/8.png
+( 58 of 324) /images/images/page_2/logoGrid/10.png
+( 59 of 324) /images/images/page_2/logoGrid/20a.png
+( 60 of 324) /images/images/page_2/logoGrid/15.png
+( 61 of 324) /images/images/page_2/logoGrid/52.png
+( 62 of 324) /images/images/page_2/logoGrid/41.png
+( 63 of 324) /images/images/page_2/logoGrid/9.png
+( 64 of 324) /images/images/page_6/
+( 65 of 324) /images/images/page_6/gofanariumLogo.svg
+( 66 of 324) /images/images/page_6/fontsGrid/
+( 67 of 324) /images/images/page_6/fontsGrid/sticks.png
+( 68 of 324) /images/images/page_6/fontsGrid/lilach.png
+( 69 of 324) /images/images/page_6/fontsGrid/patch stencil.png
+( 70 of 324) /images/images/page_6/fontsGrid/sayfan.png
+( 71 of 324) /images/images/page_6/fontsGrid/miso.png
+( 72 of 324) /images/images/page_6/fontsGrid/eco.png
+( 73 of 324) /images/images/page_6/fontsGrid/daniel.png
+( 74 of 324) /images/images/page_6/fontsGrid/yam suf.png
+( 75 of 324) /images/images/page_6/fontsGrid/patch sans.png
+( 76 of 324) /images/images/page_6/fontsGrid/amit.png
+( 77 of 324) /images/images/page_6/fontsGrid/kimchi.png
+( 78 of 324) /images/images/page_6/fontsGrid/noam.png
+( 79 of 324) /images/images/page_6/fontsGrid/patch serif.png
+( 80 of 324) /images/images/page_6/fontsGrid/neo.png
+( 81 of 324) /images/images/page_6/fontsGrid/skechers.png
+( 82 of 324) /images/images/page_6/fontsGrid/har sinai.png
+( 83 of 324) /images/images/page_6/fontsGrid/josef.png
+( 84 of 324) /images/images/page_6/fontsGrid/mixer.png
+( 85 of 324) /images/images/page_6/fontsGrid/strokes.png
+( 86 of 324) /images/images/page_6/fontsGrid/hidekel.png
+( 87 of 324) /images/images/page_10/
+( 88 of 324) /images/images/page_10/team/
+( 89 of 324) /images/images/page_10/team/king.png
+( 90 of 324) /images/images/page_10/team/lorem.png
+( 91 of 324) /images/images/page_10/team/queen.png
+( 92 of 324) /images/images/page_10/team/joker.png
+( 93 of 324) /images/images/page_10/team/louis.png
+( 94 of 324) /images/images/page_9/
+( 95 of 324) /images/images/page_9/artGrid/
+( 96 of 324) /images/images/page_9/artGrid/TrilogyA2.png
+( 97 of 324) /images/images/page_9/artGrid/queen1.png
+( 98 of 324) /images/images/page_9/artGrid/gagarin1-2.png
+( 99 of 324) /images/images/page_9/artGrid/map1.png
+(100 of 324) /images/images/page_9/artGrid/map3.png
+(101 of 324) /images/images/page_9/artGrid/map2-2.png
+(102 of 324) /images/images/page_9/artGrid/Goethe2.png
+(103 of 324) /images/images/page_9/artGrid/neon1_01.png
+(104 of 324) /images/images/page_9/artGrid/einstein2.png
+(105 of 324) /images/images/page_9/artGrid/PastelLinesDTCOMP.png
+(106 of 324) /images/images/page_9/artGrid/king1.png
+(107 of 324) /images/images/page_9/artGrid/ChessFLAT1DT.png
+(108 of 324) /images/images/page_9/artGrid/LaChute.png
+(109 of 324) /images/images/page_9/artGrid/Bubi.png
+(110 of 324) /images/images/page_9/artGrid/TWallA.png
+(111 of 324) /images/images/page_9/artGrid/dollar1DT.png
+(112 of 324) /images/images/page_9/artGrid/linesDT.png
+(113 of 324) /images/images/page_9/artGrid/GunsNRosesDT.png
+(114 of 324) /images/images/page_9/artGrid/CubesWallA.png
+(115 of 324) /images/images/page_9/artGrid/chessNONflatDT.png
+(116 of 324) /images/images/page_9/artGrid/5crabs1.png
+(117 of 324) /images/images/page_9/artGrid/Che.png
+(118 of 324) /images/images/page_9/artGrid/KesefHakol.png
+(119 of 324) /images/images/page_9/artGrid/hevel.png
+(120 of 324) /images/images/page_9/artGrid/TWallB.png
+(121 of 324) /images/images/page_9/artGrid/WindRose1.png
+(122 of 324) /images/images/page_9/artGrid/napoleoin2.png
+(123 of 324) /images/images/page_9/artGrid/ZebrasA.png
+(124 of 324) /images/images/page_9/artGrid/Jack1.png
+(125 of 324) /images/images/page_9/artGrid/jokerHat1.png
+(126 of 324) /images/images/page_9/artGrid/CirclesA.png
+(127 of 324) /images/images/page_9/artGrid/CirclesB.png
+(128 of 324) /images/images/page_9/artGrid/Ghost1_01.png
+(129 of 324) /images/images/page_9/artGrid/StrokesA.png
+(130 of 324) /images/images/page_9/artGrid/masti171.png
+(131 of 324) /images/images/page_9/artGrid/TrilogyA3.png
+(132 of 324) /images/images/page_9/artGrid/BonApetit_01.png
+(133 of 324) /images/images/page_9/artGrid/OtiotA.png
+(134 of 324) /images/images/page_9/artGrid/BeRovHohma.png
+(135 of 324) /images/images/page_9/artGrid/hem1-2.png
+(136 of 324) /images/images/page_9/artGrid/TrilogyA1.png
+(137 of 324) /images/images/info/
+(138 of 324) /images/images/info/pmlogo.svg
+(139 of 324) /images/images/info/pmlogoMailSuccess.svg
+(140 of 324) /images/images/info/pmlogoMailUnSuccess.svg
+(141 of 324) /images/images/info/pmlogoUnderMaintenance.svg
+(142 of 324) /images/images/info/pmlogoUnderConstruction.svg
+(143 of 324) /images/images/info/pmlogo404.svg
+(144 of 324) /images/images/page_7/
+(145 of 324) /images/images/page_7/printGrid/
+(146 of 324) /images/images/page_7/printGrid/cartaTEX.png
+(147 of 324) /images/images/page_7/printGrid/MenuShadow1.png
+(148 of 324) /images/images/page_7/printGrid/karty2dallinonepngs1MB.png
+(149 of 324) /images/images/page_7/printGrid/books.png
+(150 of 324) /images/images/page_7/printGrid/BuycardPrint2.png
+(151 of 324) /images/images/page_7/printGrid/1052.png
+(152 of 324) /images/images/page_7/printGrid/VISITS3dShadow.png
+(153 of 324) /images/images/page_7/printGrid/sumoS2.png
+(154 of 324) /images/images/page_7/printGrid/allcards3dsvg1MB.png
+(155 of 324) /images/images/page_7/printGrid/Cards3dShadow2.png
+(156 of 324) /images/images/page_7/printGrid/JOURNAL.png
+(157 of 324) /images/images/page_7/printGrid/diplomKravMAga.png
+(158 of 324) /images/images/page_7/printGrid/verso.png
+(159 of 324) /images/images/page_7/printGrid/Cards2dShadow.png
+(160 of 324) /images/images/page_7/printGrid/chessrender20141920.png
+(161 of 324) /images/images/page_3/
+(162 of 324) /images/images/page_3/swipe/
+(163 of 324) /images/images/page_3/swipe/13.png
+(164 of 324) /images/images/page_3/swipe/6.png
+(165 of 324) /images/images/page_3/swipe/1.png
+(166 of 324) /images/images/page_3/swipe/4.png
+(167 of 324) /images/images/page_3/swipe/11.png
+(168 of 324) /images/images/page_3/swipe/5.png
+(169 of 324) /images/images/page_3/swipe/3.png
+(170 of 324) /images/images/page_3/swipe/12.png
+(171 of 324) /images/images/page_3/swipe/7.png
+(172 of 324) /images/images/page_3/swipe/2.png
+(173 of 324) /images/images/page_3/swipe/8.png
+(174 of 324) /images/images/page_3/swipe/10.png
+(175 of 324) /images/images/page_3/swipe/9.png
+(176 of 324) /images/images/page_1/
+(177 of 324) /images/images/page_1/6.png
+(178 of 324) /images/images/page_1/1.png
+(179 of 324) /images/images/page_1/4.png
+(180 of 324) /images/images/page_1/5.png
+(181 of 324) /images/images/page_1/3.png
+(182 of 324) /images/images/page_1/7.png
+(183 of 324) /images/images/page_1/2.png
+(184 of 324) /images/images/page_1/8.png
+(185 of 324) /images/images/page_1/10.png
+(186 of 324) /images/images/page_1/9.png
+(187 of 324) /images/images/page_5/
+(188 of 324) /images/images/page_5/softGrid/
+(189 of 324) /images/images/page_5/softGrid/17.svg
+(190 of 324) /images/images/page_5/softGrid/18.svg
+(191 of 324) /images/images/page_5/softGrid/3.svg
+(192 of 324) /images/images/page_5/softGrid/12.svg
+(193 of 324) /images/images/page_5/softGrid/14.svg
+(194 of 324) /images/images/page_5/softGrid/16.svg
+(195 of 324) /images/images/page_5/softGrid/15.svg
+(196 of 324) /images/images/page_5/softGrid/4.svg
+(197 of 324) /images/images/page_5/softGrid/6.svg
+(198 of 324) /images/images/page_5/softGrid/2.svg
+(199 of 324) /images/images/page_5/softGrid/9a.svg
+(200 of 324) /images/images/page_5/softGrid/9.svg
+(201 of 324) /images/images/page_5/softGrid/8.svg
+(202 of 324) /images/images/page_5/softGrid/5.svg
+(203 of 324) /images/images/page_5/softGrid/7.svg
+(204 of 324) /images/images/page_5/softGrid/10.svg
+(205 of 324) /images/images/page_5/softGrid/3a.svg
+(206 of 324) /images/images/page_5/softGrid/19.svg
+(207 of 324) /images/images/page_5/softGrid/6a.svg
+(208 of 324) /images/images/page_5/softGrid/1.svg
+(209 of 324) /images/images/brand/
+(210 of 324) /images/images/brand/squareLogo.svg
+(211 of 324) /images/images/brand/barLogoInvert.svg
+(212 of 324) /images/images/brand/barLogoMob.svg
+(213 of 324) /images/images/brand/barLogo.svg
+(214 of 324) /images/images/page_4/
+(215 of 324) /images/images/page_4/internetGrid/
+(216 of 324) /images/images/page_4/internetGrid/6.png
+(217 of 324) /images/images/page_4/internetGrid/1.png
+(218 of 324) /images/images/page_4/internetGrid/4.png
+(219 of 324) /images/images/page_4/internetGrid/5.png
+(220 of 324) /images/images/page_4/internetGrid/3.png
+(221 of 324) /images/images/page_4/internetGrid/7.png
+(222 of 324) /images/images/page_4/internetGrid/2.png
+(223 of 324) /images/images/page_4/internetGrid/8.png
+(224 of 324) /icons/
+(225 of 324) /icons/vector/
+(226 of 324) /icons/vector/trash.svg
+(227 of 324) /icons/vector/17.svg
+(228 of 324) /icons/vector/18.svg
+(229 of 324) /icons/vector/40.svg
+(230 of 324) /icons/vector/3.svg
+(231 of 324) /icons/vector/wa.svg
+(232 of 324) /icons/vector/info.svg
+(233 of 324) /icons/vector/finance.svg
+(234 of 324) /icons/vector/12.svg
+(235 of 324) /icons/vector/30.svg
+(236 of 324) /icons/vector/44.svg
+(237 of 324) /icons/vector/14.svg
+(238 of 324) /icons/vector/0.svg
+(239 of 324) /icons/vector/mails.svg
+(240 of 324) /icons/vector/window-maximize.svg
+(241 of 324) /icons/vector/16.svg
+(242 of 324) /icons/vector/22.svg
+(243 of 324) /icons/vector/mail.svg
+(244 of 324) /icons/vector/31.svg
+(245 of 324) /icons/vector/tel.svg
+(246 of 324) /icons/vector/close.svg
+(247 of 324) /icons/vector/29.svg
+(248 of 324) /icons/vector/print.svg
+(249 of 324) /icons/vector/23.svg
+(250 of 324) /icons/vector/25.svg
+(251 of 324) /icons/vector/exit.svg
+(252 of 324) /icons/vector/15.svg
+(253 of 324) /icons/vector/telega.svg
+(254 of 324) /icons/vector/insta.svg
+(255 of 324) /icons/vector/4.svg
+(256 of 324) /icons/vector/26a.svg
+(257 of 324) /icons/vector/43.svg
+(258 of 324) /icons/vector/25a.svg
+(259 of 324) /icons/vector/27.svg
+(260 of 324) /icons/vector/41.svg
+(261 of 324) /icons/vector/6.svg
+(262 of 324) /icons/vector/33.svg
+(263 of 324) /icons/vector/2.svg
+(264 of 324) /icons/vector/26.svg
+(265 of 324) /icons/vector/37.svg
+(266 of 324) /icons/vector/28.svg
+(267 of 324) /icons/vector/minus-circle.svg
+(268 of 324) /icons/vector/team.svg
+(269 of 324) /icons/vector/trashRed.svg
+(270 of 324) /icons/vector/9.svg
+(271 of 324) /icons/vector/24.svg
+(272 of 324) /icons/vector/35.svg
+(273 of 324) /icons/vector/settings.svg
+(274 of 324) /icons/vector/36.svg
+(275 of 324) /icons/vector/checkbox-marked-circle.svg
+(276 of 324) /icons/vector/lang.svg
+(277 of 324) /icons/vector/clock.svg
+(278 of 324) /icons/vector/38.svg
+(279 of 324) /icons/vector/date.svg
+(280 of 324) /icons/vector/7.svg
+(281 of 324) /icons/vector/10.svg
+(282 of 324) /icons/vector/window-close.svg
+(283 of 324) /icons/vector/add.svg
+(284 of 324) /icons/vector/pm.svg
+(285 of 324) /icons/vector/17b.svg
+(286 of 324) /icons/vector/13.svg
+(287 of 324) /icons/vector/calculator.svg
+(288 of 324) /icons/vector/atach.svg
+(289 of 324) /icons/vector/32.svg
+(290 of 324) /icons/vector/11.svg
+(291 of 324) /icons/vector/100a.svg
+(292 of 324) /icons/vector/100.svg
+(293 of 324) /icons/vector/down.svg
+(294 of 324) /icons/vector/drag.svg
+(295 of 324) /icons/vector/thebility.svg
+(296 of 324) /icons/vector/19.svg
+(297 of 324) /icons/vector/up.svg
+(298 of 324) /icons/vector/eye.svg
+(299 of 324) /icons/vector/39.svg
+(300 of 324) /icons/vector/pencil.svg
+(301 of 324) /icons/vector/gavel.svg
+(302 of 324) /icons/vector/21.svg
+(303 of 324) /icons/vector/fb.svg
+(304 of 324) /icons/vector/20.svg
+(305 of 324) /icons/vector/posts.svg
+(306 of 324) /icons/vector/add2.svg
+(307 of 324) /icons/vector/42.svg
+(308 of 324) /icons/vector/34.svg
+(309 of 324) /icons/vector/1.svg
+(310 of 324) /favicons/
+(311 of 324) /favicons/favicon.ico
+(312 of 324) /favicons/safari-pinned-tab.svg
+(313 of 324) /favicons/android-chrome-192x192.png
+(314 of 324) /favicons/favicon-32x32.png
+(315 of 324) /favicons/favicon-16x16.png
+(316 of 324) /favicons/browserconfig.xml
+(317 of 324) /favicons/android-chrome-512x512.png
+(318 of 324) /favicons/mstile-150x150.png
+(319 of 324) /favicons/site.webmanifest
+(320 of 324) /favicons/.htdeployment
+(321 of 324) /favicons/apple-touch-icon.png
+(322 of 324) /var/
+(323 of 324) /fonts/
+(324 of 324) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(  1 of 298) Renaming /images/images/page_2/twoIIc.png
+(  2 of 298) Renaming /images/images/page_2/tundraI.png
+(  3 of 298) Renaming /images/images/page_2/two2.png
+(  4 of 298) Renaming /images/images/page_2/logoGrid/2a.png
+(  5 of 298) Renaming /images/images/page_2/logoGrid/17.png
+(  6 of 298) Renaming /images/images/page_2/logoGrid/13al.png
+(  7 of 298) Renaming /images/images/page_2/logoGrid/19.png
+(  8 of 298) Renaming /images/images/page_2/logoGrid/13.png
+(  9 of 298) Renaming /images/images/page_2/logoGrid/40.png
+( 10 of 298) Renaming /images/images/page_2/logoGrid/38.png
+( 11 of 298) Renaming /images/images/page_2/logoGrid/56.png
+( 12 of 298) Renaming /images/images/page_2/logoGrid/21a.png
+( 13 of 298) Renaming /images/images/page_2/logoGrid/3a.png
+( 14 of 298) Renaming /images/images/page_2/logoGrid/8al.png
+( 15 of 298) Renaming /images/images/page_2/logoGrid/38a.png
+( 16 of 298) Renaming /images/images/page_2/logoGrid/45.png
+( 17 of 298) Renaming /images/images/page_2/logoGrid/37.png
+( 18 of 298) Renaming /images/images/page_2/logoGrid/6.png
+( 19 of 298) Renaming /images/images/page_2/logoGrid/7al.png
+( 20 of 298) Renaming /images/images/page_2/logoGrid/1.png
+( 21 of 298) Renaming /images/images/page_2/logoGrid/18.png
+( 22 of 298) Renaming /images/images/page_2/logoGrid/50a.png
+( 23 of 298) Renaming /images/images/page_2/logoGrid/44.png
+( 24 of 298) Renaming /images/images/page_2/logoGrid/39.png
+( 25 of 298) Renaming /images/images/page_2/logoGrid/47.png
+( 26 of 298) Renaming /images/images/page_2/logoGrid/55.png
+( 27 of 298) Renaming /images/images/page_2/logoGrid/17al.png
+( 28 of 298) Renaming /images/images/page_2/logoGrid/21.png
+( 29 of 298) Renaming /images/images/page_2/logoGrid/42.png
+( 30 of 298) Renaming /images/images/page_2/logoGrid/4.png
+( 31 of 298) Renaming /images/images/page_2/logoGrid/11.png
+( 32 of 298) Renaming /images/images/page_2/logoGrid/43.png
+( 33 of 298) Renaming /images/images/page_2/logoGrid/18a.png
+( 34 of 298) Renaming /images/images/page_2/logoGrid/5.png
+( 35 of 298) Renaming /images/images/page_2/logoGrid/10al.png
+( 36 of 298) Renaming /images/images/page_2/logoGrid/3b.png
+( 37 of 298) Renaming /images/images/page_2/logoGrid/11al.png
+( 38 of 298) Renaming /images/images/page_2/logoGrid/54.png
+( 39 of 298) Renaming /images/images/page_2/logoGrid/12.png
+( 40 of 298) Renaming /images/images/page_2/logoGrid/20.png
+( 41 of 298) Renaming /images/images/page_2/logoGrid/7.png
+( 42 of 298) Renaming /images/images/page_2/logoGrid/2.png
+( 43 of 298) Renaming /images/images/page_2/logoGrid/5al.png
+( 44 of 298) Renaming /images/images/page_2/logoGrid/46.png
+( 45 of 298) Renaming /images/images/page_2/logoGrid/57.png
+( 46 of 298) Renaming /images/images/page_2/logoGrid/48.png
+( 47 of 298) Renaming /images/images/page_2/logoGrid/16.png
+( 48 of 298) Renaming /images/images/page_2/logoGrid/51.png
+( 49 of 298) Renaming /images/images/page_2/logoGrid/22.png
+( 50 of 298) Renaming /images/images/page_2/logoGrid/9al.png
+( 51 of 298) Renaming /images/images/page_2/logoGrid/53.png
+( 52 of 298) Renaming /images/images/page_2/logoGrid/14.png
+( 53 of 298) Renaming /images/images/page_2/logoGrid/8.png
+( 54 of 298) Renaming /images/images/page_2/logoGrid/10.png
+( 55 of 298) Renaming /images/images/page_2/logoGrid/20a.png
+( 56 of 298) Renaming /images/images/page_2/logoGrid/15.png
+( 57 of 298) Renaming /images/images/page_2/logoGrid/52.png
+( 58 of 298) Renaming /images/images/page_2/logoGrid/41.png
+( 59 of 298) Renaming /images/images/page_2/logoGrid/9.png
+( 60 of 298) Renaming /images/images/page_6/gofanariumLogo.svg
+( 61 of 298) Renaming /images/images/page_6/fontsGrid/sticks.png
+( 62 of 298) Renaming /images/images/page_6/fontsGrid/lilach.png
+( 63 of 298) Renaming /images/images/page_6/fontsGrid/patch stencil.png
+( 64 of 298) Renaming /images/images/page_6/fontsGrid/sayfan.png
+( 65 of 298) Renaming /images/images/page_6/fontsGrid/miso.png
+( 66 of 298) Renaming /images/images/page_6/fontsGrid/eco.png
+( 67 of 298) Renaming /images/images/page_6/fontsGrid/daniel.png
+( 68 of 298) Renaming /images/images/page_6/fontsGrid/yam suf.png
+( 69 of 298) Renaming /images/images/page_6/fontsGrid/patch sans.png
+( 70 of 298) Renaming /images/images/page_6/fontsGrid/amit.png
+( 71 of 298) Renaming /images/images/page_6/fontsGrid/kimchi.png
+( 72 of 298) Renaming /images/images/page_6/fontsGrid/noam.png
+( 73 of 298) Renaming /images/images/page_6/fontsGrid/patch serif.png
+( 74 of 298) Renaming /images/images/page_6/fontsGrid/neo.png
+( 75 of 298) Renaming /images/images/page_6/fontsGrid/skechers.png
+( 76 of 298) Renaming /images/images/page_6/fontsGrid/har sinai.png
+( 77 of 298) Renaming /images/images/page_6/fontsGrid/josef.png
+( 78 of 298) Renaming /images/images/page_6/fontsGrid/mixer.png
+( 79 of 298) Renaming /images/images/page_6/fontsGrid/strokes.png
+( 80 of 298) Renaming /images/images/page_6/fontsGrid/hidekel.png
+( 81 of 298) Renaming /images/images/page_10/team/king.png
+( 82 of 298) Renaming /images/images/page_10/team/lorem.png
+( 83 of 298) Renaming /images/images/page_10/team/queen.png
+( 84 of 298) Renaming /images/images/page_10/team/joker.png
+( 85 of 298) Renaming /images/images/page_10/team/louis.png
+( 86 of 298) Renaming /images/images/page_9/artGrid/TrilogyA2.png
+( 87 of 298) Renaming /images/images/page_9/artGrid/queen1.png
+( 88 of 298) Renaming /images/images/page_9/artGrid/gagarin1-2.png
+( 89 of 298) Renaming /images/images/page_9/artGrid/map1.png
+( 90 of 298) Renaming /images/images/page_9/artGrid/map3.png
+( 91 of 298) Renaming /images/images/page_9/artGrid/map2-2.png
+( 92 of 298) Renaming /images/images/page_9/artGrid/Goethe2.png
+( 93 of 298) Renaming /images/images/page_9/artGrid/neon1_01.png
+( 94 of 298) Renaming /images/images/page_9/artGrid/einstein2.png
+( 95 of 298) Renaming /images/images/page_9/artGrid/PastelLinesDTCOMP.png
+( 96 of 298) Renaming /images/images/page_9/artGrid/king1.png
+( 97 of 298) Renaming /images/images/page_9/artGrid/ChessFLAT1DT.png
+( 98 of 298) Renaming /images/images/page_9/artGrid/LaChute.png
+( 99 of 298) Renaming /images/images/page_9/artGrid/Bubi.png
+(100 of 298) Renaming /images/images/page_9/artGrid/TWallA.png
+(101 of 298) Renaming /images/images/page_9/artGrid/dollar1DT.png
+(102 of 298) Renaming /images/images/page_9/artGrid/linesDT.png
+(103 of 298) Renaming /images/images/page_9/artGrid/GunsNRosesDT.png
+(104 of 298) Renaming /images/images/page_9/artGrid/CubesWallA.png
+(105 of 298) Renaming /images/images/page_9/artGrid/chessNONflatDT.png
+(106 of 298) Renaming /images/images/page_9/artGrid/5crabs1.png
+(107 of 298) Renaming /images/images/page_9/artGrid/Che.png
+(108 of 298) Renaming /images/images/page_9/artGrid/KesefHakol.png
+(109 of 298) Renaming /images/images/page_9/artGrid/hevel.png
+(110 of 298) Renaming /images/images/page_9/artGrid/TWallB.png
+(111 of 298) Renaming /images/images/page_9/artGrid/WindRose1.png
+(112 of 298) Renaming /images/images/page_9/artGrid/napoleoin2.png
+(113 of 298) Renaming /images/images/page_9/artGrid/ZebrasA.png
+(114 of 298) Renaming /images/images/page_9/artGrid/Jack1.png
+(115 of 298) Renaming /images/images/page_9/artGrid/jokerHat1.png
+(116 of 298) Renaming /images/images/page_9/artGrid/CirclesA.png
+(117 of 298) Renaming /images/images/page_9/artGrid/CirclesB.png
+(118 of 298) Renaming /images/images/page_9/artGrid/Ghost1_01.png
+(119 of 298) Renaming /images/images/page_9/artGrid/StrokesA.png
+(120 of 298) Renaming /images/images/page_9/artGrid/masti171.png
+(121 of 298) Renaming /images/images/page_9/artGrid/TrilogyA3.png
+(122 of 298) Renaming /images/images/page_9/artGrid/BonApetit_01.png
+(123 of 298) Renaming /images/images/page_9/artGrid/OtiotA.png
+(124 of 298) Renaming /images/images/page_9/artGrid/BeRovHohma.png
+(125 of 298) Renaming /images/images/page_9/artGrid/hem1-2.png
+(126 of 298) Renaming /images/images/page_9/artGrid/TrilogyA1.png
+(127 of 298) Renaming /images/images/info/pmlogo.svg
+(128 of 298) Renaming /images/images/info/pmlogoMailSuccess.svg
+(129 of 298) Renaming /images/images/info/pmlogoMailUnSuccess.svg
+(130 of 298) Renaming /images/images/info/pmlogoUnderMaintenance.svg
+(131 of 298) Renaming /images/images/info/pmlogoUnderConstruction.svg
+(132 of 298) Renaming /images/images/info/pmlogo404.svg
+(133 of 298) Renaming /images/images/page_7/printGrid/cartaTEX.png
+(134 of 298) Renaming /images/images/page_7/printGrid/MenuShadow1.png
+(135 of 298) Renaming /images/images/page_7/printGrid/karty2dallinonepngs1MB.png
+(136 of 298) Renaming /images/images/page_7/printGrid/books.png
+(137 of 298) Renaming /images/images/page_7/printGrid/BuycardPrint2.png
+(138 of 298) Renaming /images/images/page_7/printGrid/1052.png
+(139 of 298) Renaming /images/images/page_7/printGrid/VISITS3dShadow.png
+(140 of 298) Renaming /images/images/page_7/printGrid/sumoS2.png
+(141 of 298) Renaming /images/images/page_7/printGrid/allcards3dsvg1MB.png
+(142 of 298) Renaming /images/images/page_7/printGrid/Cards3dShadow2.png
+(143 of 298) Renaming /images/images/page_7/printGrid/JOURNAL.png
+(144 of 298) Renaming /images/images/page_7/printGrid/diplomKravMAga.png
+(145 of 298) Renaming /images/images/page_7/printGrid/verso.png
+(146 of 298) Renaming /images/images/page_7/printGrid/Cards2dShadow.png
+(147 of 298) Renaming /images/images/page_7/printGrid/chessrender20141920.png
+(148 of 298) Renaming /images/images/page_3/swipe/13.png
+(149 of 298) Renaming /images/images/page_3/swipe/6.png
+(150 of 298) Renaming /images/images/page_3/swipe/1.png
+(151 of 298) Renaming /images/images/page_3/swipe/4.png
+(152 of 298) Renaming /images/images/page_3/swipe/11.png
+(153 of 298) Renaming /images/images/page_3/swipe/5.png
+(154 of 298) Renaming /images/images/page_3/swipe/3.png
+(155 of 298) Renaming /images/images/page_3/swipe/12.png
+(156 of 298) Renaming /images/images/page_3/swipe/7.png
+(157 of 298) Renaming /images/images/page_3/swipe/2.png
+(158 of 298) Renaming /images/images/page_3/swipe/8.png
+(159 of 298) Renaming /images/images/page_3/swipe/10.png
+(160 of 298) Renaming /images/images/page_3/swipe/9.png
+(161 of 298) Renaming /images/images/page_1/6.png
+(162 of 298) Renaming /images/images/page_1/1.png
+(163 of 298) Renaming /images/images/page_1/4.png
+(164 of 298) Renaming /images/images/page_1/5.png
+(165 of 298) Renaming /images/images/page_1/3.png
+(166 of 298) Renaming /images/images/page_1/7.png
+(167 of 298) Renaming /images/images/page_1/2.png
+(168 of 298) Renaming /images/images/page_1/8.png
+(169 of 298) Renaming /images/images/page_1/10.png
+(170 of 298) Renaming /images/images/page_1/9.png
+(171 of 298) Renaming /images/images/page_5/softGrid/17.svg
+(172 of 298) Renaming /images/images/page_5/softGrid/18.svg
+(173 of 298) Renaming /images/images/page_5/softGrid/3.svg
+(174 of 298) Renaming /images/images/page_5/softGrid/12.svg
+(175 of 298) Renaming /images/images/page_5/softGrid/14.svg
+(176 of 298) Renaming /images/images/page_5/softGrid/16.svg
+(177 of 298) Renaming /images/images/page_5/softGrid/15.svg
+(178 of 298) Renaming /images/images/page_5/softGrid/4.svg
+(179 of 298) Renaming /images/images/page_5/softGrid/6.svg
+(180 of 298) Renaming /images/images/page_5/softGrid/2.svg
+(181 of 298) Renaming /images/images/page_5/softGrid/9a.svg
+(182 of 298) Renaming /images/images/page_5/softGrid/9.svg
+(183 of 298) Renaming /images/images/page_5/softGrid/8.svg
+(184 of 298) Renaming /images/images/page_5/softGrid/5.svg
+(185 of 298) Renaming /images/images/page_5/softGrid/7.svg
+(186 of 298) Renaming /images/images/page_5/softGrid/10.svg
+(187 of 298) Renaming /images/images/page_5/softGrid/3a.svg
+(188 of 298) Renaming /images/images/page_5/softGrid/19.svg
+(189 of 298) Renaming /images/images/page_5/softGrid/6a.svg
+(190 of 298) Renaming /images/images/page_5/softGrid/1.svg
+(191 of 298) Renaming /images/images/brand/squareLogo.svg
+(192 of 298) Renaming /images/images/brand/barLogoInvert.svg
+(193 of 298) Renaming /images/images/brand/barLogoMob.svg
+(194 of 298) Renaming /images/images/brand/barLogo.svg
+(195 of 298) Renaming /images/images/page_4/internetGrid/6.png
+(196 of 298) Renaming /images/images/page_4/internetGrid/1.png
+(197 of 298) Renaming /images/images/page_4/internetGrid/4.png
+(198 of 298) Renaming /images/images/page_4/internetGrid/5.png
+(199 of 298) Renaming /images/images/page_4/internetGrid/3.png
+(200 of 298) Renaming /images/images/page_4/internetGrid/7.png
+(201 of 298) Renaming /images/images/page_4/internetGrid/2.png
+(202 of 298) Renaming /images/images/page_4/internetGrid/8.png
+(203 of 298) Renaming /icons/vector/trash.svg
+(204 of 298) Renaming /icons/vector/17.svg
+(205 of 298) Renaming /icons/vector/18.svg
+(206 of 298) Renaming /icons/vector/40.svg
+(207 of 298) Renaming /icons/vector/3.svg
+(208 of 298) Renaming /icons/vector/wa.svg
+(209 of 298) Renaming /icons/vector/info.svg
+(210 of 298) Renaming /icons/vector/finance.svg
+(211 of 298) Renaming /icons/vector/12.svg
+(212 of 298) Renaming /icons/vector/30.svg
+(213 of 298) Renaming /icons/vector/44.svg
+(214 of 298) Renaming /icons/vector/14.svg
+(215 of 298) Renaming /icons/vector/0.svg
+(216 of 298) Renaming /icons/vector/mails.svg
+(217 of 298) Renaming /icons/vector/window-maximize.svg
+(218 of 298) Renaming /icons/vector/16.svg
+(219 of 298) Renaming /icons/vector/22.svg
+(220 of 298) Renaming /icons/vector/mail.svg
+(221 of 298) Renaming /icons/vector/31.svg
+(222 of 298) Renaming /icons/vector/tel.svg
+(223 of 298) Renaming /icons/vector/close.svg
+(224 of 298) Renaming /icons/vector/29.svg
+(225 of 298) Renaming /icons/vector/print.svg
+(226 of 298) Renaming /icons/vector/23.svg
+(227 of 298) Renaming /icons/vector/25.svg
+(228 of 298) Renaming /icons/vector/exit.svg
+(229 of 298) Renaming /icons/vector/15.svg
+(230 of 298) Renaming /icons/vector/telega.svg
+(231 of 298) Renaming /icons/vector/insta.svg
+(232 of 298) Renaming /icons/vector/4.svg
+(233 of 298) Renaming /icons/vector/26a.svg
+(234 of 298) Renaming /icons/vector/43.svg
+(235 of 298) Renaming /icons/vector/25a.svg
+(236 of 298) Renaming /icons/vector/27.svg
+(237 of 298) Renaming /icons/vector/41.svg
+(238 of 298) Renaming /icons/vector/6.svg
+(239 of 298) Renaming /icons/vector/33.svg
+(240 of 298) Renaming /icons/vector/2.svg
+(241 of 298) Renaming /icons/vector/26.svg
+(242 of 298) Renaming /icons/vector/37.svg
+(243 of 298) Renaming /icons/vector/28.svg
+(244 of 298) Renaming /icons/vector/minus-circle.svg
+(245 of 298) Renaming /icons/vector/team.svg
+(246 of 298) Renaming /icons/vector/trashRed.svg
+(247 of 298) Renaming /icons/vector/9.svg
+(248 of 298) Renaming /icons/vector/24.svg
+(249 of 298) Renaming /icons/vector/35.svg
+(250 of 298) Renaming /icons/vector/settings.svg
+(251 of 298) Renaming /icons/vector/36.svg
+(252 of 298) Renaming /icons/vector/checkbox-marked-circle.svg
+(253 of 298) Renaming /icons/vector/lang.svg
+(254 of 298) Renaming /icons/vector/clock.svg
+(255 of 298) Renaming /icons/vector/38.svg
+(256 of 298) Renaming /icons/vector/date.svg
+(257 of 298) Renaming /icons/vector/7.svg
+(258 of 298) Renaming /icons/vector/10.svg
+(259 of 298) Renaming /icons/vector/window-close.svg
+(260 of 298) Renaming /icons/vector/add.svg
+(261 of 298) Renaming /icons/vector/pm.svg
+(262 of 298) Renaming /icons/vector/17b.svg
+(263 of 298) Renaming /icons/vector/13.svg
+(264 of 298) Renaming /icons/vector/calculator.svg
+(265 of 298) Renaming /icons/vector/atach.svg
+(266 of 298) Renaming /icons/vector/32.svg
+(267 of 298) Renaming /icons/vector/11.svg
+(268 of 298) Renaming /icons/vector/100a.svg
+(269 of 298) Renaming /icons/vector/100.svg
+(270 of 298) Renaming /icons/vector/down.svg
+(271 of 298) Renaming /icons/vector/drag.svg
+(272 of 298) Renaming /icons/vector/thebility.svg
+(273 of 298) Renaming /icons/vector/19.svg
+(274 of 298) Renaming /icons/vector/up.svg
+(275 of 298) Renaming /icons/vector/eye.svg
+(276 of 298) Renaming /icons/vector/39.svg
+(277 of 298) Renaming /icons/vector/pencil.svg
+(278 of 298) Renaming /icons/vector/gavel.svg
+(279 of 298) Renaming /icons/vector/21.svg
+(280 of 298) Renaming /icons/vector/fb.svg
+(281 of 298) Renaming /icons/vector/20.svg
+(282 of 298) Renaming /icons/vector/posts.svg
+(283 of 298) Renaming /icons/vector/add2.svg
+(284 of 298) Renaming /icons/vector/42.svg
+(285 of 298) Renaming /icons/vector/34.svg
+(286 of 298) Renaming /icons/vector/1.svg
+(287 of 298) Renaming /favicons/favicon.ico
+(288 of 298) Renaming /favicons/safari-pinned-tab.svg
+(289 of 298) Renaming /favicons/android-chrome-192x192.png
+(290 of 298) Renaming /favicons/favicon-32x32.png
+(291 of 298) Renaming /favicons/favicon-16x16.png
+(292 of 298) Renaming /favicons/browserconfig.xml
+(293 of 298) Renaming /favicons/android-chrome-512x512.png
+(294 of 298) Renaming /favicons/mstile-150x150.png
+(295 of 298) Renaming /favicons/site.webmanifest
+(296 of 298) Renaming /favicons/.htdeployment
+(297 of 298) Renaming /favicons/apple-touch-icon.png
+(298 of 298) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/04/11 19:22] (in 578 seconds)
+----------------------------------------------
+
+
