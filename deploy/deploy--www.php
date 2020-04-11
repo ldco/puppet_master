@@ -1,6 +1,5 @@
 <?php
 
-
 declare(strict_types=1);
 
 require_once "main.ftp.php";
@@ -11,11 +10,10 @@ return [
         "local" => LOCAL_ROOT . LOCAL_DIST . "www/",
         "test" => false,
         "ignore" => "
-     master.min.js
+     
 		",
 
         "include" => "
-
         ",
 
         "allowDelete" => true,
