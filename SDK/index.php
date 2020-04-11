@@ -61,7 +61,7 @@
         <div class="sdk_control_item">
             <label>command</label>
             <input type="text" name="com">
-            <input type="submit">
+            <input type="submit" id="com">
         </div>
 
         <div class="sdk_control_item">
@@ -73,7 +73,7 @@
         <div class="sdk_control_item">
             <label>sh script</label>
             <input type="text" name="sh">
-            <input type="submit">
+            <input type="submit" id="sh">
         </div>
 
     </div>

@@ -10,6 +10,10 @@ function initFun() {
     assignFun("#submit_gitadd", function() {
         gitAdd();
     });
+    assignFun("#com", function() {
+        execCustomCommand();
+    });
+
 }
 
 function toggleDisabledInput(checkbox, textinput) {
@@ -58,7 +62,7 @@ function postGit() {
     };
     ajx.open("POST", "php/git--deploy.php", true);
     ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    ajx.send("gitself=" + gitself + "&idgitmaster=" + gitmaster + "&gitto=" + gitto + "&gitcom=" + gitcom);
+    ajx.send("gitself=" + gitself + "&gitmaster=" + gitmaster + "&gitto=" + gitto + "&gitcom=" + gitcom);
 }
 
 
@@ -72,4 +76,19 @@ function gitAdd() {
     ajx.open("POST", "php/git--add.php", true);
     ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajx.send();
+}
+
+
+function execCustomCommand() {
+    let ajx = new XMLHttpRequest();
+    let com = document.getElementsByName("com")[0].value;
+    ajx.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let fromDB = ajx.responseText;
+            document.getElementById("sdk_terminal").innerHTML = fromDB;
+        }
+    };
+    ajx.open("POST", "php/custom-command.php", true);
+    ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajx.send("com=" + com);
 }

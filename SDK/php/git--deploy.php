@@ -9,27 +9,27 @@ $now = date("Y-m-d H:i:s");
 
 if (isset($_POST["gitself"])) {
     if (isset($_POST["gitmaster"])) {
-        $add = shell_exec("git add .");
-        $com = shell_exec("git commit -m 'self commit " . $now . "'");
+
+        $com = shell_exec("git commit -am 'self commit " . $now . "'");
         $push = shell_exec("git push -u origin master");
-        echo "1 git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $now . "'" . "\r\n" . $com . "git push -u origin master" . "\r\n" . $push;
+        echo "1 git commit -am 'self commit " . $now . "'" . "\r\n" . $com . "git push -u origin master" . "\r\n" . $push;
     } else {
-        $add = shell_exec("git add .");
-        $com = shell_exec("git commit -m 'self commit " . $now . "'");
+
+        $com = shell_exec("git commit -am 'self commit " . $now . "'");
         $push = shell_exec("git push -u" . $_POST['gitto']);
-        echo "2 git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $now . "'" . "\r\n" . $com . "git push -u" . $_POST['gitto']  . "\r\n" . $push;
+        echo "2 git commit -am 'self commit " . $now . "'" . "\r\n" . $com . "git push -u" . $_POST['gitto']  . "\r\n" . $push;
     }
 } else {
     if (isset($_POST["gitmaster"])) {
-        $add = shell_exec("git add .");
-        $com = shell_exec("git commit -m" . $_POST['gitcom']);
+
+        $com = shell_exec("git commit -am" . $_POST['gitcom']);
         $push = shell_exec("git push -u origin master");
-        echo "3 git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $_POST['gitcom'] . "'" . "\r\n" . $com . "git push -u origin master" . $push;
+        echo "3 git commit -am 'self commit " . $_POST['gitcom'] . "'" . "\r\n" . $com . "git push -u origin master" . $push;
     } else {
-        $add = shell_exec("git add .");
-        $com = shell_exec("git commit -m" . $_POST['gitcom']);
+
+        $com = shell_exec("git commit -am" . $_POST['gitcom']);
         $push = shell_exec("git push -u" . $_POST['gitto']);
-        echo "4 git add ." . $add  . "\r\n" . "git commit -m 'self commit " . $_POST['gitcom'] . "'" . "\r\n" . $com . "git push -u" . $_POST['gitto']  . "\r\n" . $push;
+        echo "4 git commit -am 'self commit " . $_POST['gitcom'] . "'" . "\r\n" . $com . "git push -u" . $_POST['gitto']  . "\r\n" . $push;
     }
 }
 
