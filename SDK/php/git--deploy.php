@@ -9,31 +9,35 @@ $now = date("Y-m-d H:i:s");
 
 if (isset($_POST["gitself"])) {
     if (isset($_POST["gitmaster"])) {
-        exec('
-git add .
+
+
+        $output = shell_exec('
+git add . &&
 git commit -m "self commit ' . $now . '"
-git push -u origin master', $output, $status);
-        echo json_encode($output);
+git push -u origin master');
+        echo $output;
     } else {
-        exec('
-git add .
+
+
+        $output = shell_exec('
+git add . &&
 git commit -m "self commit ' . $now . '"
-git push -u ' . $_POST["gitto"], $output, $status);
-        echo json_encode($output);
+git push -u ' . $_POST["gitto"] . '"');
+        echo $output;
     }
 } else {
     if (isset($_POST["gitmaster"])) {
-        exec('
+        $output = shell_exec('
 git add .
 git commit -m "' . $_POST["gitcom"] . '"
-git push -u origin master', $output, $status);
-        echo json_encode($output);
+git push -u origin master');
+        echo $output;
     } else {
-        exec('
+        $output = shell_exec('
 git add .
 git commit -m "' . $_POST["gitcom"] . '"
-git push -u ' . $_POST["gitto"], $output, $status);
-        echo json_encode($output);
+git push -u ' . $_POST["gitto"]);
+        echo $output;
     }
 }
 
