@@ -52,7 +52,7 @@ function postGit() {
     let ajx = new XMLHttpRequest();
     ajx.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            let fromDB = ajx.responseText;
+            let fromDB = JSON.parse(ajx.responseText);
 
             document.getElementById("sdk_terminal").innerHTML = fromDB;
             document.getElementsByName("gitcom")[0].value = "";
