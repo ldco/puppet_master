@@ -1,8 +1,6 @@
 <link rel="stylesheet" href="css.css">
 <script src="js.js"></script>
 
-
-
 <div id="sdk_control">
 
     <div class="sdk_control_main">
@@ -15,7 +13,7 @@
             <input type="checkbox" checked name="gitmaster">
             <label>self</label>
             <input type="checkbox" checked name="gitself">
-            <input type="submit">
+            <input type="submit" id="submit_git">
         </div>
 
         <div class="sdk_control_item">
