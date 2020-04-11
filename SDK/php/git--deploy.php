@@ -11,11 +11,16 @@ if (isset($_POST["gitself"])) {
     if (isset($_POST["gitmaster"])) {
 
 
-        $output = shell_exec('
-git add . &&
-git commit -m "self commit ' . $now . '"
-git push -u origin master');
-        echo $output;
+        $add = shell_exec('git add');
+
+
+        $com = shell_exec('git commit -m "self commit ' . $now . '"');
+        echo $com;
+
+        $push = shell_exec('git push -u origin master');
+
+
+        echo  $add . $com . $push;
     } else {
 
 
