@@ -6,6 +6,9 @@
     /* #fee818 */
     border-radius: 1vh;
     box-shadow: 0.2vh 0.2vh 1vh 0.2vh #000;
+    font-family: 'VT323', monospace;
+    padding: 2vh;
+    font-size: 2vh;
 }
 
 #sdk_control {
