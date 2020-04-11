@@ -9790,6 +9790,7 @@ function macyjs(id, col) {
   var elid = "#" + id;
 
   function pre_iniMacy(fun) {
+    document.querySelector(elid).style.opacity = "0";
     setTimeout(function () {
       fun();
     }, 400);

@@ -4,6 +4,7 @@ function macyjs(id, col, margin = 0) {
     let elid = "#" + id;
 
     function pre_iniMacy(fun) {
+        document.querySelector(elid).style.opacity = "0";
         setTimeout(() => {
             fun();
         }, 400);
