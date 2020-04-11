@@ -10,9 +10,9 @@ $now = date("Y-m-d H:i:s");
 if (isset($_POST["gitself"])) {
     if (isset($_POST["gitmaster"])) {
         exec('
-git add .
+git add . &&
 git commit -m "self commit ' . $now . '"
-git push -u origin master', $output, $status);
+ && git push -u origin master', $output, $status);
         echo json_encode($output);
     } else {
         exec('
