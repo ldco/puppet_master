@@ -66,19 +66,6 @@ function postGit() {
 }
 
 
-function gitAdd() {
-    let ajx = new XMLHttpRequest();
-    ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("sdk_terminal").innerHTML = "added";
-        }
-    };
-    ajx.open("POST", "php/git--add.php", true);
-    ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    ajx.send();
-}
-
-
 function execCustomCommand() {
     let ajx = new XMLHttpRequest();
     let com = document.getElementsByName("com")[0].value;

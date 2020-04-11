@@ -7,12 +7,6 @@
 
     <div class="sdk_control_main">
 
-        <div class="sdk_control_item">
-
-            <label>git add</label>
-            <input type="submit" id="submit_gitadd">
-        </div>
-
 
         <div class="sdk_control_item">
             <label>git commit</label>
