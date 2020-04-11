@@ -9792,7 +9792,7 @@ function macyjs(id, col) {
   function pre_iniMacy(fun) {
     setTimeout(function () {
       fun();
-    }, 100);
+    }, 400);
   }
 
   function initMacy(fun) {
@@ -9805,8 +9805,8 @@ function macyjs(id, col) {
   function makeMacy() {
     var macy = Macy({
       container: elid,
-      trueOrder: false,
-      waitForImages: false,
+      trueOrder: true,
+      waitForImages: true,
       margin: margin,
       columns: col
     });
@@ -10377,15 +10377,6 @@ function promptDownloadFont(y) {
 
 "use strict";
 
-function fixMacy() {
-  //no fix here yet - need to REKOAD PAGE ONCE
-  setTimeout(function () {
-    macyjs("artGrid", 4);
-  }, 500);
-}
-
-"use strict";
-
 function setPageFunctions() {
   var setURL = window.location.hash;
   if (setURL == "") return;
@@ -10417,7 +10408,7 @@ function setPageFunctions() {
       pmLoader("iframe", "#pm_page_8", "load", "pm_loader1");
     },
     fun_9: function fun_9() {
-      fixMacy();
+      macyjs("artGrid", 4);
     },
     fun_10: function fun_10() {
       teamHelp();

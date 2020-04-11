@@ -6,7 +6,7 @@ function macyjs(id, col, margin = 0) {
     function pre_iniMacy(fun) {
         setTimeout(() => {
             fun();
-        }, 100);
+        }, 400);
     }
 
     function initMacy(fun) {
@@ -19,8 +19,8 @@ function macyjs(id, col, margin = 0) {
     function makeMacy() {
         let macy = Macy({
             container: elid,
-            trueOrder: false,
-            waitForImages: false,
+            trueOrder: true,
+            waitForImages: true,
             margin: margin,
             columns: col
         });
