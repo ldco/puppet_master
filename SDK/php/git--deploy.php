@@ -12,7 +12,7 @@ if (isset($_POST["gitself"])) {
         exec('git add .', $output, $status);
         exec('git commit -m "self commit ' . $now . '"', $output, $status);
         exec('git push -u origin master', $output, $status);
-        echo json_encode($status);
+        echo json_encode($output);
     } else {
 
         exec('git add .', $output, $status);
