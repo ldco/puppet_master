@@ -30,7 +30,7 @@ function setPageFunctions() {
             pmLoader("iframe", "#pm_page_8", "load", "pm_loader1");
         },
         fun_9: function() {
-            macyjs("artGrid", 4);
+            fixMacy();
         },
         fun_10: function() {
             teamHelp();

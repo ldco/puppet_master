@@ -10377,6 +10377,15 @@ function promptDownloadFont(y) {
 
 "use strict";
 
+function fixMacy() {
+  //no fix here yet - need to REKOAD PAGE ONCE
+  setTimeout(function () {
+    macyjs("artGrid", 4);
+  }, 500);
+}
+
+"use strict";
+
 function setPageFunctions() {
   var setURL = window.location.hash;
   if (setURL == "") return;
@@ -10408,7 +10417,7 @@ function setPageFunctions() {
       pmLoader("iframe", "#pm_page_8", "load", "pm_loader1");
     },
     fun_9: function fun_9() {
-      macyjs("artGrid", 4);
+      fixMacy();
     },
     fun_10: function fun_10() {
       teamHelp();

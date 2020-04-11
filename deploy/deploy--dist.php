@@ -7,7 +7,7 @@ require_once "main.ftp.php";
 return [
     "my site" => [
         "remote" => REMOTE_ROOT,
-        "local" => LOCAL_ROOT . "/DIST",
+        "local" => LOCAL_ROOT . "/dist",
         "test" => false,
         "ignore" => "
         vendor
