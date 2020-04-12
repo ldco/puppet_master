@@ -2426,7 +2426,8 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 60%; }
+  background-size: 60%;
+  overflow-wrap: break-word; }
   [lang=en] body {
     font-family: Montserrat;
     font-weight: 100; }
