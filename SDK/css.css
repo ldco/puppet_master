@@ -64,3 +64,10 @@ canvas {
     top: 0;
     z-index: -1;
 }
+
+#sdktitle {
+    font-size: 12vh;
+    margin-top: -7vh;
+    margin-bottom: 7vh;
+    text-shadow: 1vh 1vh #003f01;
+}

@@ -1,4 +1,4 @@
-<title>SDK PUPPET MASTER</title>
+<title>PUPPET MASTER SDK</title>
 <link rel="stylesheet" href="css.css">
 
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
@@ -10,6 +10,7 @@
 
 
 <div id="sdk_control">
+    <div id="sdktitle">PUPPET MASTER SDK</div>
 
     <div class="sdk_control_main">
 
