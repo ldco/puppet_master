@@ -37,8 +37,7 @@
         <div class="sdk_control_item">
             <label>hash password</label>
             <input type="text" value="" name="pass" id="">
-            <input type="submit">
-            <span id="sdk_hashedpassword"></span>
+            <input type="submit" id="pass">
         </div>
 
         <div class="sdk_control_item">
