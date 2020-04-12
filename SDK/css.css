@@ -1,8 +1,11 @@
 #sdk_terminal {
     width: 30vw;
     height: 80vh;
-    background-color: #2f2f2f;
+    background-color: #1c140a;
+    /* #2f2f2f */
     color: #cc8c44;
+    /* #397e5b */
+    /* */
     /* #05a608 */
     /* #fee818 */
     border-radius: 1vh;
@@ -48,4 +51,14 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+}
+
+canvas {
+    position: absolute;
+    width: 32vw;
+    height: 82vh;
+    margin-left: -2vh;
+    margin-top: -2vh;
+    opacity: 0.2;
+    border-radius: 1vh;
 }

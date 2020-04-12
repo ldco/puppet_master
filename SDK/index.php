@@ -3,6 +3,10 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <script src="js.js"></script>
 
+
+
+
+
 <div id="sdk_control">
 
     <div class="sdk_control_main">
@@ -72,6 +76,11 @@
 
     </div>
 </div>
-<div id="sdk_terminal"></div>
+<div id="sdk_terminal">
+    <canvas id="c"></canvas>
+</div>
 
 </div>
+
+
+<script src="matrix.js"></script>
