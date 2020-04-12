@@ -76,9 +76,14 @@
 
     </div>
 </div>
+
+
 <div id="sdk_terminal">
-    <canvas id="c"></canvas>
+
 </div>
+<canvas id="c"></canvas>
+
+
 
 </div>
 

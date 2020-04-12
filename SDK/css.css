@@ -54,11 +54,11 @@ body {
 }
 
 canvas {
-    position: absolute;
-    width: 32vw;
-    height: 82vh;
-    margin-left: -2vh;
-    margin-top: -2vh;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
     opacity: 0.2;
-    border-radius: 1vh;
+    left: 0;
+    top: 0;
+    z-index: -1;
 }
