@@ -36,7 +36,7 @@
         </div>
         <div class="sdk_control_item">
             <label>hash password</label>
-            <input type="text" value="" name="pass" id="">
+            <input type="text" value="" name="pass" autocomplete="off">
             <input type="submit" id="pass">
         </div>
 
