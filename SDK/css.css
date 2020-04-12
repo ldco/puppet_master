@@ -3,13 +3,13 @@
     height: 80vh;
     background-color: #1c140a;
     /* #2f2f2f */
-    color: #cc8c44;
+    color: #05a608;
     /* #397e5b */
-    /* */
+    /*#cc8c44 */
     /* #05a608 */
     /* #fee818 */
     border-radius: 1vh;
-    box-shadow: 0.2vh 0.2vh 1vh 0.2vh #000;
+    box-shadow: 0vh 0vh 1.5vh 0vh #05a608;
     font-family: 'VT323', monospace;
     padding: 2vh;
     font-size: 3vh;
@@ -25,10 +25,10 @@
 .sdk_control_item {
     font-size: 2vh;
     text-transform: uppercase;
-    font-family: monospace;
     display: flex;
     padding-top: 1vh;
     align-items: center;
+    font-size: 4vh;
 }
 
 .sdk_control_item label,
@@ -41,7 +41,7 @@
 }
 
 body {
-    background-color: #2f2f2f;
+    background-color: #1c140a;
     color: #929292;
     width: 100vw;
     height: 100vh;
@@ -51,13 +51,15 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+    font-family: 'VT323', monospace;
+    color: #036904;
 }
 
 canvas {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    opacity: 0.2;
+    opacity: 0.1;
     left: 0;
     top: 0;
     z-index: -1;
