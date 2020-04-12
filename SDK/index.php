@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css.css">
 
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-<script src="js.js"></script>
+<script src="JS/js.js"></script>
 
 
 
@@ -101,4 +101,4 @@
 </div>
 
 
-<script src="matrix.js"></script>
+<script src="JS/matrix.js"></script>

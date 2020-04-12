@@ -31,8 +31,6 @@
         "watchify": "watchify www/babels.js -o www/master.js",
         "uglify": "uglifyjs www/master.js -o www/master.min.js -c",
         "dev": "npm run start--dev && concurrently 'npm:babel--dev' 'npm:sass--dev-l' 'npm:sass--dev-r' 'npm:watchify'",
-        "sdk--dev": "npm run start--sdk_dev && concurrently 'npm:babel--dev' 'npm:sass--dev-l' 'npm:sass--dev-r' 'npm:watchify'",
-        "sdk": "npm run start--sdk && concurrently 'npm:babel--dev' 'npm:sass--dev-l' 'npm:sass--dev-r' 'npm:watchify'",
         "deploy--vendor": "./vendor/dg/ftp-deployment/deployment deploy/deploy--vendor.php",
         "deploy--dist": "./vendor/dg/ftp-deployment/deployment deploy/deploy--dist.php",
         "deploy--assets": "./vendor/dg/ftp-deployment/deployment deploy/deploy--assets.php",
@@ -56,8 +54,6 @@
         "dep--noassets": "npm run predist--noassets && npm run build--noassets && npm run git--self && npm run deploy--noassets",
         "dep--www": "npm run predist--noassets && npm run build--noassets && npm run git--self && npm run deploy--www",
         "start--dev": "./SDK/sh/start--dev.sh",
-        "start--sdk": "./SDK/sh/start--sdk.sh",
-        "start--sdk_dev": "./SDK/sh/start--sdk_dev.sh",
         "phpkill": "killall -9 php"
     },
     "browserslist": [
