@@ -1,6 +1,6 @@
 <title>PUPPET MASTER SDK</title>
 <link rel="stylesheet" href="css.css">
-
+<link rel="stylesheet" href="tooltip.css">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <script src="JS/js.js"></script>
 
@@ -29,9 +29,9 @@
 
         <div class="sdk_control_item">
             <label>icons color</label>
-            <input type="text" name="gitcom">
+            <input type="color" name="colorfrom">
             <label>to</label>
-            <input type="text" name="gitto">
+            <input type="color" name="colorto">
             <input type="submit">
         </div>
         <div class="sdk_control_item">
@@ -70,7 +70,7 @@
         </div>
         <div class="sdk_control_item">
             <label>command</label>
-            <textarea cols="30" rows="8" name="com"></textarea>
+            <textarea cols="30" rows="4" name="com"></textarea>
             <input type="submit" id="com">
         </div>
 

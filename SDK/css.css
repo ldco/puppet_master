@@ -15,11 +15,22 @@
     font-size: 3vh;
 }
 
+::-moz-selection {
+    background-color: #05a608;
+    color: #1c140a;
+}
+
+::selection {
+    background-color: #05a608;
+    color: #1c140a;
+}
+
 #sdk_control {
     width: 60vw;
     height: 80vh;
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 .sdk_control_item {
