@@ -4,9 +4,14 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <script src="JS/js.js"></script>
 
+<?php require_once "Sdk.class.php";
 
 
 
+$gitCommit = new Sdk("$gitCommit");
+
+$gitCommit->input("git commit", "text", "value");
+?>
 
 
 <div id="sdk_control">

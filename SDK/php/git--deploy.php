@@ -9,7 +9,6 @@ $now = date("Y-m-d H:i:s");
 
 if (isset($_POST["gitself"])) {
     if (isset($_POST["gitmaster"])) {
-
         $com = shell_exec("git commit -am 'self commit " . $now . "'");
         $push = shell_exec("git push -u origin master");
         echo "1 -> git commit -am 'self commit " . $now . "'" . $com . "git push -u origin master" . $push;
@@ -32,8 +31,3 @@ if (isset($_POST["gitself"])) {
         echo "4 -> git commit -am 'self commit " . $_POST['gitcom'] . "'" . $com . "git push -u" . $_POST['gitto']  . $push;
     }
 }
-
-
-
-/* PM_GIT_REPO
-PM_GIT_PASS */
