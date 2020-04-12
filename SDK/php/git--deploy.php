@@ -12,7 +12,7 @@ if (isset($_POST["gitself"])) {
 
         $com = shell_exec("git commit -am 'self commit " . $now . "'");
         $push = shell_exec("git push -u origin master");
-        echo "1 -> git commit -am 'self commit " . $now . "'" . "\r\n" . $com . "git push -u origin master" . "\r\n" . $push;
+        echo "1 -> \r\n git commit -am 'self commit " . $now . "'" . "\r\n" . $com . "git push -u origin master" . "\r\n" . $push;
     } else {
 
         $com = shell_exec("git commit -am 'self commit " . $now . "'");
