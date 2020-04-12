@@ -7,9 +7,7 @@ function initFun() {
     assignFun("#submit_git", function() {
         postGit();
     });
-    assignFun("#submit_gitadd", function() {
-        gitAdd();
-    });
+
     assignFun("#com", function() {
         execCustomCommand();
     });
