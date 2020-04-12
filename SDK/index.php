@@ -57,8 +57,18 @@
     </div>
     <div class="sdk_control_second">
         <div class="sdk_control_item">
+            <label>commands</label>
+            <select name="commands">
+                <option>git add .</option>
+                <option>ls</option>
+                <option>npm i</option>
+                <option>composer i</option>
+            </select>
+            <input type="submit" id="coms">
+        </div>
+        <div class="sdk_control_item">
             <label>command</label>
-            <input type="text" name="com">
+            <textarea cols="30" rows="8" name="com"></textarea>
             <input type="submit" id="com">
         </div>
 
