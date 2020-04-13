@@ -48,12 +48,11 @@ $gitCommit->input("git commit", "text", "value"); */
         <div class="sdk_control_item">
             <label>deploy</label>
             <select name="deploy">
-                <option>init (dist + vendor)</option>
-                <option>dist</option>
-                <option>vendor</option>
-                <option>css</option>
-                <option>js</option>
-                <option>assets</option>
+                <option>init (all included vendor)</option>
+                <option>dist (all except vendor)</option>
+                <option>assets (only assets)</option>
+                <option>noassets (all exept assets)</option>
+                <option>www (js + css)</option>
             </select>
             <input type="submit" id="deploy">
         </div>
