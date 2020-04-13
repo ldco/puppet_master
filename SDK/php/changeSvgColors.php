@@ -5,10 +5,7 @@ if (isset($_POST["colorfrom"]) && isset($_POST["colorto"])) {
     $from = $_POST["colorfrom"];
     $to = $_POST["colorto"];
     $path = "sys/assets/icons/vector_dev/";
-
-
-
-    $change =  shell_exec("cd " . $path . " && pwd && grep -rli '" . $from . "' * | xargs -i@ sed -i 's/" . $from . "/" . $to . "/g' @; echo $?");
+    $change =  shell_exec("cd ../../" . $path . " && pwd && grep -rli '" . $from . "' * | xargs -i@ sed -i 's/" . $from . "/" . $to . "/g' @; echo $?");
 
 
     if ($change) {

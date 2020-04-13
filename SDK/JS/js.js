@@ -37,9 +37,7 @@ function goRoot() {
         if (this.readyState == 4 && this.status == 200) {
             setTimeout(() => {
                 if (ajx.responseText) {
-                    htmlWrapper(
-                        "Welcome, MASTER! Your working directory is \n" + ajx.responseText
-                    );
+                    htmlWrapper(ajx.responseText);
                 } else {
                     htmlWrapper("matrix error...");
                 }
