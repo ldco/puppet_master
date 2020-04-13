@@ -8,7 +8,7 @@ if (isset($_POST["colorfrom"]) && isset($_POST["colorto"])) {
 
 
 
-    $change =  shell_exec("cd ../../ && cd " . $path . " && pwd && grep -rli '" . $from . "' * | xargs -i@ sed -i 's/" . $from . "/" . $to . "/g' @; echo $?");
+    $change =  shell_exec("cd " . $path . " && pwd && grep -rli '" . $from . "' * | xargs -i@ sed -i 's/" . $from . "/" . $to . "/g' @; echo $?");
 
 
     if ($change) {

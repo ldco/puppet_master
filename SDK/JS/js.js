@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", initFun);
 
 function initFun() {
+    goRoot();
     clearTerminal();
     toggleDisabledInput("gitmaster", "gitto");
     toggleDisabledInput("gitself", "gitcom");
@@ -17,16 +18,51 @@ function initFun() {
         execNpm("deploy");
     });
     assignFun("#coms", function() {
-        execCommand();
+        execCommand("coms");
     });
     assignFun("#com", function() {
-        execCommand();
+        execCommand("com");
     });
     assignFun("#npm", function() {
         execNpm("npm");
     });
     assignFun("#sh", function() {
         execSh();
+    });
+}
+
+function goRoot() {
+    let ajx = new XMLHttpRequest();
+    ajx.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            setTimeout(() => {
+                if (ajx.responseText) {
+                    htmlWrapper(
+                        "Welcome, MASTER! Your working directory is \n" + ajx.responseText
+                    );
+                } else {
+                    htmlWrapper("matrix error...");
+                }
+            }, 100);
+        }
+    };
+    ajx.open("POST", "php/goRoot.php", true);
+    ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajx.send();
+}
+
+function clearTerminal() {
+    els = document.querySelectorAll("input[type='submit']");
+    els.forEach((el) => {
+        el.addEventListener("click", function() {
+            document.getElementById("sdk_terminal").innerHTML = "";
+        });
+    });
+}
+
+function assignFun(el, fun) {
+    document.querySelector(el).addEventListener("click", function() {
+        fun();
     });
 }
 
@@ -39,21 +75,6 @@ function toggleDisabledInput(checkbox, textinput) {
         } else {
             tel.disabled = false;
         }
-    });
-}
-
-function assignFun(el, fun) {
-    document.querySelector(el).addEventListener("click", function() {
-        fun();
-    });
-}
-
-function clearTerminal() {
-    els = document.querySelectorAll("input[type='submit']");
-    els.forEach((el) => {
-        el.addEventListener("click", function() {
-            document.getElementById("sdk_terminal").innerHTML = "";
-        });
     });
 }
 
@@ -141,9 +162,9 @@ function passwordHash() {
     ajx.send("pass=" + pass);
 }
 
-function execCommand() {
+function execCommand(name) {
     let ajx = new XMLHttpRequest();
-    let com = document.getElementsByName("com")[0].value;
+    let com = document.getElementsByName(name)[0].value;
     ajx.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             htmlWrapper(ajx.responseText);
@@ -153,8 +174,6 @@ function execCommand() {
     ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajx.send("com=" + com);
 }
-
-
 
 function execNpm(name) {
     let ajx = new XMLHttpRequest();
