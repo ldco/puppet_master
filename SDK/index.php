@@ -29,7 +29,7 @@ $gitCommit->input("git commit", "text", "value"); */
             <input type="checkbox" checked name="gitmaster">
             <label>self</label>
             <input type="checkbox" checked name="gitself">
-            <input type="submit" id="submit_git">
+            <input type="submit" id="git">
         </div>
 
         <div class="sdk_control_item">
@@ -47,7 +47,7 @@ $gitCommit->input("git commit", "text", "value"); */
 
         <div class="sdk_control_item">
             <label>deploy</label>
-            <select name="ftp">
+            <select name="deploy">
                 <option>init (dist + vendor)</option>
                 <option>dist</option>
                 <option>vendor</option>
@@ -55,17 +55,13 @@ $gitCommit->input("git commit", "text", "value"); */
                 <option>js</option>
                 <option>assets</option>
             </select>
-            <input type="submit">
-        </div>
-        <div class="sdk_control_item">
-            <label>kill php</label>
-            <input type="submit">
+            <input type="submit" id="deploy">
         </div>
     </div>
     <div class="sdk_control_second">
         <div class="sdk_control_item">
             <label>commands</label>
-            <select name="commands">
+            <select name="coms">
                 <option>git add .</option>
                 <option>ls</option>
                 <option>npm i</option>
@@ -82,7 +78,7 @@ $gitCommit->input("git commit", "text", "value"); */
         <div class="sdk_control_item">
             <label>npm script</label>
             <input type="text" name="npm">
-            <input type="submit">
+            <input type="submit" id="npm">
         </div>
 
         <div class="sdk_control_item">
