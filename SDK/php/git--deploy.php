@@ -27,12 +27,12 @@ if ($_POST["gitself"] == "true") {
 } else {
     if ($_POST["gitmaster"] == "true") {
 
-        $com = shell_exec("git commit -am " . $_POST['gitcom']);
+        $com = shell_exec("git commit -am '" . $_POST['gitcom'] . "'");
         $push = shell_exec("git push -u origin master");
         echo "3 -> git commit -am '" . $_POST['gitcom'] . "' " . $com . " git push -u origin master " . $push;
     } else {
 
-        $com = shell_exec("git commit -am " . $_POST['gitcom']);
+        $com = shell_exec("git commit -am '" . $_POST['gitcom'] . "'");
         $push = shell_exec("git push -u" . $_POST['gitto']);
         echo "4 -> git commit -am '" . $_POST['gitcom'] . "' " . $com . " git push -u " . $_POST['gitto']  . " " . $push;
     }
