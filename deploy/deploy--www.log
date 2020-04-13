@@ -173,3 +173,20 @@ Finished at [2020/04/13 16:34] (in 2 seconds)
 ----------------------------------------------
 
 
+Started at [2020/04/13 16:37]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--www.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/www
+Already synchronized.
+
+
+
+Finished at [2020/04/13 16:37] (in 1 seconds)
+----------------------------------------------
+
+
