@@ -1,10 +1,10 @@
 <title>PUPPET MASTER SDK</title>
-<link rel="stylesheet" href="css.css">
-<link rel="stylesheet" href="tooltip.css">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/tooltip.css">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <script src="JS/js.js"></script>
 
-<?php require_once "Sdk.class.php";
+<?php require_once "php/Sdk.class.php";
 
 
 
