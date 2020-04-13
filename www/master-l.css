@@ -2683,11 +2683,11 @@ body {
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] #pm_adminLoginView img {
-    width: 70vw; } }
+    width: 45vh; } }
 
 @media (max-width: 1210px) {
   [data-mob=false] #pm_adminLoginView img {
-    width: 70vw; } }
+    width: 45vh; } }
 
 .loginMessageText {
   position: fixed;

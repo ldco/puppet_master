@@ -29,7 +29,7 @@
 
 
 
-    <div class='adminTitle'><img src='../<?= PM_IMAGES_REL ?>brand/barLogoInvert.svg'></div>
+    <div class='adminTitle'><img src='../<?= PM_IMAGES_REL ?>brand/barLogo.svg'></div>
 
     <?php
     $form = new Formr();

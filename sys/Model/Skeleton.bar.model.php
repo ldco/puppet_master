@@ -91,7 +91,7 @@ class SkeletonBar
             $barId = "pm_id_Bar";
         }
         $nav_pm_bar_asset = PM_ICONS_REL . "100.svg";
-        $navBarLogoMob = PM_IMAGES_REL . "brand/barLogoMob.svg";
+        $navBarLogoMob = PM_IMAGES_REL . "brand/barLogo.svg";
         $modelNav = $this->modelNav;
 
         require_once PM_ROOT . $this->viewsNames['bar_mobile'];
