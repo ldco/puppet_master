@@ -7,14 +7,7 @@ error_reporting(E_ALL); ?>
 
 $now = date("Y-m-d H:i:s");
 
-$com = "Com";
-$push = "Push";
-
-
-echo $_POST["gitself"] . $_POST["gitmaster"];
-
 if (isset($_POST["gitself"]) && isset($_POST["gitmaster"])) {
-
 
     if ($_POST["gitself"] == "true") {
         if ($_POST["gitmaster"] == "true") {

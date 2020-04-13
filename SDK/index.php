@@ -37,7 +37,7 @@ $gitCommit->input("git commit", "text", "value"); */
             <input type="color" name="colorfrom">
             <label>to</label>
             <input type="color" name="colorto">
-            <input type="submit">
+            <input type="submit" id="color">
         </div>
         <div class="sdk_control_item">
             <label>hash password</label>
