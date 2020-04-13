@@ -8,9 +8,9 @@
 
 
 
-$gitCommit = new Sdk("$gitCommit");
+/* $gitCommit = new Sdk("$gitCommit");
 
-$gitCommit->input("git commit", "text", "value");
+$gitCommit->input("git commit", "text", "value"); */
 ?>
 
 

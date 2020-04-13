@@ -150,15 +150,8 @@ body {
     }
 }
 
-#pm_mobileBar {
-    width: map-get($mob, open_width);
-}
-
-#pm_admin_mobileBar {
-    width: map-get($mob, open_width);
-}
-
 .pm_mobileBar {
+    width: map-get($mob, open_width);
     background-color: $c_domin;
     display: none;
     position: fixed;
@@ -167,10 +160,6 @@ body {
     z-index: 1977;
     @include dir("left", "right", -60vw, -60vw);
 }
-
-#pm_mobileHeader {}
-
-#pm_admin_mobileHeader {}
 
 .pm_mobileHeader {
     background-color: $c_domin;
@@ -204,99 +193,7 @@ font-size: 2vh;
         height: calc(#{map-get($mob, height)} / 2.6);
     }
 }
-//langs
-.pm_class_Nav {
-    .pm_Lang {
-        [dir=rtl] & {
-            padding-right: 1vw;
-        }
-        [dir=ltr] & {
-            padding-left: 1vw;
-        }
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        img {
-            background-color: $c_brand;
-            border-radius: 0.6vh;
-            padding: 0.7vh !important;
-            &:hover {
-                filter: brightness(1.2);
-                box-shadow: 0 0 0.5vh 0 $c_opos;
-            }
-            &:active {
-                filter: brightness(1.2);
-                box-shadow: 0 0 0.5vh 0.1vh $c_opos;
-            }
-        }
-    }
-}
-.pm_langNav {
-    display: none;
-    top: -20vh;
-}
-.pm_langNav.--active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: map-get($horBar, height);
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        input {
-            @include f-size($basicTextSize - 0.2);
-            background-color: rgba($c_domin, 0.8);
-            color: $c_opos;
-            margin-top: 2vh;
-            border-radius: 0.6vh;
-            padding: 0.7vh !important;
-            box-shadow: 0px 0px 2px 0px $c_opos;
-            &:hover {
-                box-shadow: 0px 0px 0.5vh 0px $c_opos;
-            }
-            &:active {
-                box-shadow: 0 0 0.5vh 0.1vh $c_opos;
-            }
-        }
-    }
-}
-.pm_mobileNav {
-    @include font(1, 400);
-    .pm_Lang {
-        position: absolute;
-        bottom: 3vh;
-        width: 100%;
-        height: 10vh;
-        img {
-            display: none;
-        }
-        .pm_langNavMobile {}
-        form {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            flex-direction: row;
-            input {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $c_brand;
-                color: $c_domin;
-                border-radius: 0.4vh;
-                width: 4vh;
-                height: 4vh;
-                margin: 0;
-                @include font(1, 400);
-                @include f-size($basicTextSize - 0.3)
-            }
-        }
-    }
-}
+#pm_mobileBar {}
+#pm_admin_mobileBar {}
+#pm_mobileHeader {}
+#pm_admin_mobileHeader {}
