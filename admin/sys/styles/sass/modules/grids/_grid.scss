@@ -1,0 +1,45 @@
+@mixin pmGrid($col, $gap) {
+    $width: calc(#{(#{98vw} / #{$col}) - #{(#{$gap})
+}
+
+
+}
+);
+display: grid;
+justify-items: center;
+align-items: center;
+align-content: center;
+grid-gap: $gap;
+grid-template-columns: repeat($col,
+1fr);
+div {
+    width: $width;
+    height: $width;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    img {
+        max-width: 96%;
+        max-height: 96%;
+    }
+}
+
+}
+@include mob(true) {
+    .grid_title {
+        margin-bottom: 2vh;
+    }
+}
+@include mob(false) {
+    .grid_title {
+        margin-bottom: 4vh;
+    }
+}
+.grid_title {
+    text-align: center;
+    text-transform: uppercase;
+    @include font(1,
+    600);
+}

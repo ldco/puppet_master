@@ -1,0 +1,56 @@
+@if $LIGHT_THEME==true {}
+
+@if $LIGHT_THEME==false {
+    #logoGrid {
+        div {
+            filter: grayscale(1) brightness(3) !important;
+            &:hover {
+                filter: grayscale(0) brightness(1) !important;
+            }
+        }
+    }
+    @include mob(true) {
+        #logoGrid {
+            div {
+                filter: none !important;
+            }
+        }
+    }
+}
+
+@include mob(true) {
+    #logoGrid {
+        @include pmGrid(2, 2vw)
+    }
+}
+
+@include mob(false) {
+    #logoGrid {
+        @include pmGrid(4, 1vw);
+        div {
+            filter: grayscale(1) brightness(0.5);
+            &:hover {
+                filter: grayscale(0) brightness(1);
+            }
+        }
+    }
+}
+
+#logoGrid {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    div {
+        background: rgba(#fff, 0.1);
+        border-radius: 2vh;
+        border: solid 0.2vh rgba($c_brand, 0.6);
+        &:hover {
+            transition: 0.2s;
+            background: rgba(#fff, 0.9);
+            border-radius: 4vh;
+        }
+    }
+}
+
+.page2img {
+    width: 96%;
+}

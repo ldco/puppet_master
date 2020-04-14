@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="100a.svg"
+   inkscape:version="0.92.4 (unknown)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1880"
+     inkscape:window-height="1018"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="9.8333333"
+     inkscape:cx="11.340604"
+     inkscape:cy="7.2630383"
+     inkscape:window-x="3840"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     d="M0 0h24v24H0z"
+     fill="none"
+     id="path2" />
+  <g
+     id="g1235"
+     transform="matrix(0.66666667,0,0,0.66666667,-34.159719,-217.62777)">
+    <circle
+       inkscape:export-ydpi="1693.3335"
+       inkscape:export-xdpi="1693.3335"
+       r="15"
+       cy="344.44165"
+       cx="69.239578"
+       id="path1486"
+       style="opacity:0.98999999;fill:#00070a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.27782542;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <g
+       inkscape:export-ydpi="1693.3335"
+       inkscape:export-xdpi="1693.3335"
+       style="fill:#e4e9ed;fill-opacity:1"
+       transform="translate(-29.706072,-24.398915)"
+       id="g1490">
+      <path
+         inkscape:export-ydpi="1159.0378"
+         inkscape:export-xdpi="1159.0378"
+         inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/x.png"
+         d="m 101.33002,372.58995 v 3.92077 H 89.31059 v -3.10662 l 5.42052,-5.01346 q 0.70703,-0.66417 0.9427,-1.13552 0.23568,-0.47135 0.23568,-0.92128 0,-0.55705 -0.38565,-0.857 -0.36423,-0.32137 -1.07125,-0.32137 -0.6856,0 -1.2855,0.36422 -0.5999,0.36423 -0.92128,1.0284 l -3.81365,-1.90682 q 0.857,-1.60688 2.50673,-2.52816 1.64972,-0.9427 3.98505,-0.9427 1.77828,0 3.14948,0.57848 1.3712,0.57847 2.1425,1.64973 0.7713,1.07125 0.7713,2.46387 0,1.24265 -0.53563,2.33533 -0.5142,1.07125 -2.03537,2.44245 l -2.1425,1.94968 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Black';-inkscape-font-specification:'Montserrat Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#e4e9ed;fill-opacity:1;stroke:none;stroke-width:0.57388425"
+         id="path1475"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="1159.0378"
+         inkscape:export-xdpi="1159.0378"
+         inkscape:export-filename="/home/ldco/CURRENT_WORKING_DEV/ldcoRebrand2019/web/app/assets/icons/x.png"
+         d="m 109.45914,361.51321 v 14.99751 h -5.0563 v -11.18385 h -2.57101 v -3.81366 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.42501068px;line-height:1.25;font-family:'Montserrat Black';-inkscape-font-specification:'Montserrat Black, ';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#e4e9ed;fill-opacity:1;stroke:none;stroke-width:0.57388425"
+         id="path1477"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

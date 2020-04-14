@@ -1,0 +1,216 @@
+/*change browser defaults*/
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+%commonForElemnts {
+    @include font(1, 200);
+    @include f-size(0.9);
+    border: none !important;
+    border-radius: 0.2vh;
+    padding: 0;
+    -webkit-user-select: text;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none;
+    background-color: $c_interB;
+    box-shadow: $pm_formBS;
+    &:hover {
+        background-color: $c_interP2;
+    }
+    &:focus {
+        box-shadow: $pm_formBSactive;
+    }
+}
+
+@mixin form_input_fixedHeight {
+    input {
+        height: 5vh;
+    }
+    input[type="submit"] {
+        height: 7vh;
+    }
+}
+
+button,
+textarea,
+input,
+canvas,
+select,
+option,
+video,
+iframe {
+    @extend %commonForElemnts;
+}
+
+select {
+    background-image: url("#{$ICONS_FOLDER}down.svg");
+    background-repeat: no-repeat, repeat;
+    background-size: 1.6vh auto, 100%;
+    font-family: inherit !important;
+    [dir=rtl] & {
+        background-position: left 0.7vh top 50%, 0 0;
+    }
+    [dir=ltr] & {
+        background-position: right 0.7vh top 50%, 0 0;
+    }
+    text-transform: capitalize;
+    @include f-size($basicTextSize - 0.3);
+    background: $c_interB;
+    color: $c_opos;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select option {}
+
+select option:hover {}
+
+option {
+    text-transform: capitalize;
+    @include f-size(0.7);
+}
+
+input,
+textarea,
+select {
+    margin: 0 0 1.6vh 0;
+}
+
+input[type="submit"] {
+    background: $c_brand;
+    color: $c_domin;
+}
+
+input[type="button"],
+button {
+    background: $c_domin;
+    color: $c_opos;
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+    cursor: pointer;
+    box-shadow: $pm_formBS;
+    text-align: center;
+    vertical-align: text-bottom;
+    &:hover {
+        @if $LIGHT_THEME==true {
+            background: $c_interM1;
+            color: $c_brand;
+        }
+        @if $LIGHT_THEME==false {
+            @include font(1,
+            400);
+            background: $c_interP2;
+            color: $c_opos;
+        }
+    }
+    &:focus {}
+    &:active {
+        box-shadow: $pm_formBSactive;
+    }
+    text-transform: uppercase;
+    padding: 1vh;
+}
+
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    text-align: center !important;
+    direction: ltr !important;
+}
+
+//remove arrows from number input
+//For Firefox
+input[type="number"] {
+    -moz-appearance: textfield !important;
+}
+
+//Webkit browsers like Safari and Chrome
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @include f-size($basicTextSize - 0.1);
+    @if $LIGHT_THEME==true {}
+    @if $LIGHT_THEME==false {
+        @include font(1,
+        400);
+    }
+}
+
+label {
+    text-transform: capitalize;
+    padding-bottom: 0.5vh;
+    span {
+        color: $c_err;
+    }
+}
+
+textarea {
+    @include f-size($basicTextSize - 0.2);
+}
+
+iframe[src*=youtube] {
+    width: 1px;
+    min-width: 100%;
+}
+
+video:focus {}
+
+*:focus {
+    outline: 0 !important;
+}
+
+@if $LIGHT_THEME==true {}
+
+@if $LIGHT_THEME==false {
+    textarea,
+    input,
+    select,
+    option {
+        color: $c_opos;
+    }
+}
+
+@if $LIGHT_THEME==true {
+     ::-moz-selection {
+        /* Code for Firefox */
+        color: $c_domin;
+        background: $c_brand;
+    }
+     ::selection {
+        color: $c_domin;
+        background: $c_brand;
+    }
+}
+
+@if $LIGHT_THEME==false {
+     ::-moz-selection {
+        /* Code for Firefox */
+        color: $c_brand;
+        background: $c_domin;
+    }
+     ::selection {
+        color: $c_domin;
+        background: $c_opos;
+    }
+}

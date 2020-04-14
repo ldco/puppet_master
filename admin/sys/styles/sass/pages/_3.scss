@@ -1,0 +1,14 @@
+#pm_page_3 {}
+
+@include mob(true) {
+    .archSlider {
+        margin-top: 10vh;
+    }
+}
+
+@include mob(false) {}
+
+.archSlider {
+    width: 100vw;
+    margin-bottom: 6vh;
+}

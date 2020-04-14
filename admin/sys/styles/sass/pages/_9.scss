@@ -1,0 +1,9 @@
+#artGrid {
+    opacity: 0;
+}
+
+#pm_page_9 {
+    .pm_loader {
+        @include rotate-center;
+    }
+}

@@ -1,0 +1,58 @@
+@include mob(false) {
+    #mainAdminContent {
+        width: generateContentSize(true, true, false);
+        min-height: generateContentSize(true, false, false);
+        top: generateContentPosition(true, true, false);
+        [dir=rtl] & {
+            right: generateContentPosition(true, false, false);
+        }
+        [dir=ltr] & {
+            left: generateContentPosition(true, false, false);
+        }
+    }
+    #mainContent {
+        width: generateContentSize(false, true, false);
+        min-height: generateContentSize(false, false, false);
+        top: generateContentPosition(false, true, false);
+        [dir=rtl] & {
+            right: generateContentPosition(false, false, false);
+        }
+        [dir=ltr] & {
+            left: generateContentPosition(false, false, false);
+        }
+    }
+}
+
+@include mob(true) {
+    #mainAdminContent {
+        width: generateContentSize(true, true, true);
+        min-height: generateContentSize(true, false, true);
+        top: generateContentPosition(false, true, true);
+        [dir=rtl] & {
+            right: generateContentPosition(true, false, true);
+        }
+        [dir=ltr] & {
+            left: generateContentPosition(true, false, true);
+        }
+    }
+    #mainContent {
+        width: generateContentSize(false, true, true);
+        min-height: generateContentSize(false, false, true);
+        top: generateContentPosition(false, true, true);
+        [dir=rtl] & {
+            right: generateContentPosition(false, false, true);
+        }
+        [dir=ltr] & {
+            left: generateContentPosition(false, false, true);
+        }
+    }
+}
+
+#mainAdminContent,
+#mainContent {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    background-color: $c_domin;
+}

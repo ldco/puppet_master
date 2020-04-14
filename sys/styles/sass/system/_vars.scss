@@ -4,12 +4,51 @@
     @include ping;
 }
 
+//COPY
 #copyto {
     user-select: initial !important;
 }
 
-#copytoBut:hover+#copyTooltip {
+#copytoBut:hover+.pm_copyTooltip {
     opacity: 1 !important;
+}
+
+.pm_copyTooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.pm_copyTooltip .pm_copyTooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pm_copyTooltip .pm_copyTooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.pm_copyTooltip:hover .pm_copyTooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 
 //go top button
