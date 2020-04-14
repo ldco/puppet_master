@@ -2,102 +2,22 @@
 <link rel="stylesheet" href="css/css.css">
 <link rel="stylesheet" href="css/tooltip.css">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-<script src="JS/js.js"></script>
+<script src="JS/init.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="/assets/favicons/safari-pinned-tab.svg" color="#aa0000">
+<meta name="msapplication-TileColor" content="#aa0000">
+<meta name="theme-color" content="#2f2f2f">
 
-<?php require_once "php/Sdk.class.php";
 
+<?php require_once "Pages/0.php";
 
-
-/* $gitCommit = new Sdk("$gitCommit");
-
-$gitCommit->input("git commit", "text", "value"); */
 ?>
 
 
-<div id="sdk_control">
-    <div id="sdktitle">PUPPET MASTER SDK</div>
 
-    <div class="sdk_control_main">
-
-
-        <div class="sdk_control_item">
-            <label>git commit</label>
-            <input type="text" disabled name="gitcom">
-            <label>to</label>
-            <input type="text" disabled name="gitto">
-            <label>master</label>
-            <input type="checkbox" checked name="gitmaster">
-            <label>self</label>
-            <input type="checkbox" checked name="gitself">
-            <input type="submit" id="git">
-        </div>
-
-        <div class="sdk_control_item">
-            <label>icons color</label>
-            <input type="color" name="colorfrom">
-            <label>to</label>
-            <input type="color" name="colorto">
-            <input type="submit" id="color">
-        </div>
-        <div class="sdk_control_item">
-            <label>hash password</label>
-            <input type="text" value="" name="pass" autocomplete="off">
-            <input type="submit" id="pass">
-        </div>
-
-        <div class="sdk_control_item">
-            <label>deploy</label>
-            <select name="deploy">
-                <option>init (all included vendor)</option>
-                <option>dist (all except vendor)</option>
-                <option>assets (only assets)</option>
-                <option>noassets (all exept assets)</option>
-                <option>www (js + css)</option>
-            </select>
-            <input type="submit" id="deploy">
-        </div>
-    </div>
-    <div class="sdk_control_second">
-        <div class="sdk_control_item">
-            <label>commands</label>
-            <select name="coms">
-                <option>git add .</option>
-                <option>ls</option>
-                <option>npm i</option>
-                <option>composer i</option>
-            </select>
-            <input type="submit" id="coms">
-        </div>
-        <div class="sdk_control_item">
-            <label>command</label>
-            <textarea cols="30" rows="4" name="com"></textarea>
-            <input type="submit" id="com">
-        </div>
-
-        <div class="sdk_control_item">
-            <label>npm script</label>
-            <input type="text" name="npm">
-            <input type="submit" id="npm">
-        </div>
-
-        <div class="sdk_control_item">
-            <label>sh script</label>
-            <input type="text" name="sh">
-            <input type="submit" id="sh">
-        </div>
-
-    </div>
-</div>
-
-
-<div id="sdk_terminal">
-
-</div>
-<canvas id="c"></canvas>
-
-
-
-</div>
-
-
-<script src="JS/matrix.js"></script>
+<script src="JS/modules/matrix.js"></script>
