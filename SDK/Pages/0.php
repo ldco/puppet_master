@@ -11,10 +11,9 @@
 
                 <label>git commit</label><br>
                 <input type="text" disabled name="gitcom">
-
-                <label>master</label>
                 <label>to</label>
                 <input type="text" disabled name="gitto">
+                <label>master</label>
                 <input type="checkbox" checked name="gitmaster">
                 <label>self</label>
                 <input type="checkbox" checked name="gitself">

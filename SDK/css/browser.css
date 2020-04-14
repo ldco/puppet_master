@@ -149,6 +149,7 @@ input[type="password"],
 input[type="text"] {
     text-align: center !important;
     direction: ltr !important;
+    font-size: 2.2vh;
 }
 
 input[type="number"] {
