@@ -1,7 +1,7 @@
 @import "browser.css";
 #sdk_terminal {
-    /*   width: 30vw;
-    height: 80vh; */
+    display: flex;
+    justify-content: center;
     background-color: #1c140a;
     /* #2f2f2f */
     color: #05a608;
@@ -15,19 +15,22 @@
     /*  padding: 2vh; */
     font-size: 3vh;
     overflow-y: auto;
+    width: 100%;
+}
+
+.terminal_string {
+    width: 90%;
+    margin-top: 5%;
 }
 
 #sdk_control {
-    /*  width: 60vw;
-    height: 80vh; */
     display: flex;
     flex-direction: column;
     user-select: none;
-    /* padding: 2vh; */
 }
 
 .sdk_control_item {
-    /*  padding-bottom: 2vh; */
+    margin-bottom: 2vh;
     display: flex;
     justify-content: stretch;
 }
@@ -56,15 +59,13 @@ canvas {
 }
 
 #sdktitle {
-    font-size: 12vh;
-    /*    margin-top: -7vh;
-    margin-bottom: 7vh; */
     text-shadow: 1vh 1vh #003f01;
 }
 
 #blockA {
     display: flex;
     flex-direction: column;
+    padding: 2.5vh;
 }
 
 #blockB {
@@ -72,20 +73,34 @@ canvas {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2.5vh;
 }
 
 @media (orientation: portrait) {
     body {
         flex-direction: column;
     }
+    #sdktitle {
+        font-size: 10vh;
+    }
     #blockA {
-        height: 60vh;
-        width: 100vw;
-        align-items: center;
+        height: 60%;
+        padding: 3%;
     }
     #blockB {
-        height: 40vh;
-        width: 100vw;
+        height: 40%;
+    }
+    #sdk_terminal {
+        height: 100%;
+    }
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        font-size: 1vh;
+    }
+    #sdktitle {
+        margin-bottom: 3vh;
     }
 }
 
@@ -93,12 +108,28 @@ canvas {
     body {
         align-items: center;
     }
+    #sdktitle {
+        font-size: 12vh;
+    }
     #blockA {
         height: 100vh;
-        width: 60vw;
+        width: 74vw;
     }
     #blockB {
         height: 100vh;
-        width: 40vw;
+        width: 26vw;
+    }
+    #sdk_terminal {
+        height: 90vh;
+    }
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        font-size: 2.6vh;
+    }
+    #sdktitle {
+        margin-top: 3vh;
+        margin-bottom: 3vh;
     }
 }

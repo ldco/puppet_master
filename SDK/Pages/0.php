@@ -1,17 +1,20 @@
 <?php require_once "php/Sdk.class.php";
 
 ?>
+<canvas id="terminalCanvas"></canvas>
 <div id="blockA">
     <div id="sdktitle">PUPPET MASTER SDK</div>
     <div id="sdk_control">
 
         <div class="sdk_control_main">
             <div class="sdk_control_item">
-                <label>git commit</label>
+
+                <label>git commit</label><br>
                 <input type="text" disabled name="gitcom">
+
+                <label>master</label>
                 <label>to</label>
                 <input type="text" disabled name="gitto">
-                <label>master</label>
                 <input type="checkbox" checked name="gitmaster">
                 <label>self</label>
                 <input type="checkbox" checked name="gitself">
@@ -54,7 +57,7 @@
             </div>
             <div class="sdk_control_item">
                 <label>command</label>
-                <textarea cols="40" rows="4" name="com"></textarea>
+                <textarea cols="40" rows="1" name="com"></textarea>
                 <input type="submit" id="com">
             </div>
             <div class="sdk_control_item">
@@ -74,7 +77,7 @@
 
 <div id="blockB">
     <div id="sdk_terminal"></div>
-    <canvas id="terminalCanvas"></canvas>
+
 </div>
 
 </div>

@@ -88,7 +88,6 @@ textarea,
 select,
 label {
     margin-right: 1vh;
-    height: 3vh;
 }
 
 textarea,
@@ -104,7 +103,7 @@ select,
 {}
 
 label {
-    font-size: 2.6vh;
+    font-size: 3.6vh;
     text-transform: uppercase;
 }
 
@@ -124,7 +123,7 @@ input[type="button"],
 input[type="submit"],
 button {
     cursor: pointer;
-    box-shadow: $pm_formBS;
+    /*   box-shadow: $pm_formBS; */
     text-align: center;
     vertical-align: text-bottom;
     text-transform: uppercase;
@@ -150,7 +149,6 @@ input[type="password"],
 input[type="text"] {
     text-align: center !important;
     direction: ltr !important;
-    font-size: 2.6vh;
 }
 
 input[type="number"] {
