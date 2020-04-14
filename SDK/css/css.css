@@ -23,12 +23,13 @@
     display: flex;
     flex-direction: column;
     user-select: none;
+    padding: 2vh;
 }
 
 .sdk_control_item {
     padding-bottom: 2vh;
     display: flex;
-    align-items: center;
+    justify-content: stretch;
 }
 
 .sdk_control_main {
@@ -54,7 +55,7 @@ canvas {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    opacity: 0.2;
+    opacity: 1;
     left: 0;
     top: 0;
     z-index: -1;

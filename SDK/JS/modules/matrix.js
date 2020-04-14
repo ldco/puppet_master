@@ -1,4 +1,4 @@
-var c = document.getElementById("c");
+var c = document.getElementById("terminalCanvas");
 var ctx = c.getContext("2d");
 
 //making the canvas full screen
@@ -6,7 +6,7 @@ c.height = window.innerHeight;
 c.width = window.innerWidth;
 
 //chinese characters - taken from the unicode charset
-var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
+var chinese = "あぁかさたなはまやゃらわがざだばぱぴびぢじぎゐりみひにちしきぃうくすぬふむるぐずぶぺべでぜれてけぇおこよもよろをごぞどぼぽアカサタナマヤラワガザダバピビヂジヰリミニチシキィウクスグヅブペデゼゲレケェオコドボ";
 //converting the string into an array of single characters
 chinese = chinese.split("");
 

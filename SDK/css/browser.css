@@ -26,6 +26,7 @@ iframe {
     -ms-appearance: none;
     /*  background-color: $c_interB;
     box-shadow: $pm_formBS; */
+    font-family: 'VT323', monospace;
 }
 
 button:hover,
@@ -65,9 +66,9 @@ select {
     text-transform: capitalize;
     /*  background: $c_interB; */
     /*  color: $c_opos; */
+    font-size: 2.6vh;
     padding-right: 3vh;
     padding-left: 0.5vh;
-    font-size: 2.6vh;
 }
 
 select::-ms-expand {
@@ -103,15 +104,13 @@ select,
 {}
 
 label {
-    font-size: 3vh;
+    font-size: 2.6vh;
     text-transform: uppercase;
 }
 
-label span {}
-
 input[type="submit"] {
-    font-size: 1.1vh;
-    background: $c_brand;
+    font-size: 2vh;
+    /* background: $c_brand; */
     /* color: $c_domin; */
 }
 
@@ -129,7 +128,7 @@ button {
     text-align: center;
     vertical-align: text-bottom;
     text-transform: uppercase;
-    padding: 1vh;
+    padding: 0 1vh 0 1vh;
 }
 
 input[type="button"]:hover input[type="submit"]:hover button:hover {
@@ -138,6 +137,7 @@ input[type="button"]:hover input[type="submit"]:hover button:hover {
     /*  color: $c_opos; */
 }
 
+button,
 input[type="button"]:active,
 input[type="submit"]:active,
 button:active {
@@ -150,6 +150,7 @@ input[type="password"],
 input[type="text"] {
     text-align: center !important;
     direction: ltr !important;
+    font-size: 2.6vh;
 }
 
 input[type="number"] {
