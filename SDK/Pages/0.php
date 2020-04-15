@@ -8,32 +8,37 @@
 
         <div class="sdk_control_main">
             <div class="sdk_control_item">
+                <label for="_gitcom">git commit</label><br>
+                <input type="text" disabled id="_gitcom" name="gitcom">
+                <label for="_gitto">to</label>
+                <input type="text" disabled id="_gitto" name="gitto">
+                <div class="checkbox">
 
-                <label>git commit</label><br>
-                <input type="text" disabled name="gitcom">
-                <label>to</label>
-                <input type="text" disabled name="gitto">
-                <label>master</label>
-                <input type="checkbox" checked name="gitmaster">
-                <label>self</label>
-                <input type="checkbox" checked name="gitself">
+                    <input type="checkbox" checked id="_gitmaster" name="gitmaster">
+                    <label for="_gitmaster">master</label>
+                </div>
+                <div class="checkbox">
+
+                    <input type="checkbox" checked id="_gitself" name="gitself">
+                    <label for="_gitself">self</label>
+                </div>
                 <input type="submit" id="git">
             </div>
             <div class="sdk_control_item">
-                <label>icons color</label>
-                <input type="color" name="colorfrom">
-                <label>to</label>
-                <input type="color" name="colorto">
+                <label for="_colorfrom">icons color</label>
+                <input type="color" id="_colorfrom" name="colorfrom">
+                <label for="_colorto">to</label>
+                <input type="color" id="_colorto" name="colorto">
                 <input type="submit" id="color">
             </div>
             <div class="sdk_control_item">
-                <label>hash password</label>
-                <input type="text" value="" name="pass" autocomplete="off">
+                <label for="_pass">hash password</label>
+                <input type="text" value="" id="_pass" name="pass" autocomplete="off">
                 <input type="submit" id="pass">
             </div>
             <div class="sdk_control_item">
-                <label>deploy</label>
-                <select name="deploy">
+                <label for="_deploy">deploy</label>
+                <select id="_deploy" name="deploy">
                     <option>init (all included vendor)</option>
                     <option>dist (all except vendor)</option>
                     <option>assets (only assets)</option>
@@ -45,8 +50,8 @@
         </div>
         <div class="sdk_control_second">
             <div class="sdk_control_item">
-                <label>commands</label>
-                <select name="coms">
+                <label for="_coms">commands</label>
+                <select id="_coms" name="coms">
                     <option>git add .</option>
                     <option>ls</option>
                     <option>npm i</option>
@@ -55,18 +60,18 @@
                 <input type="submit" id="coms">
             </div>
             <div class="sdk_control_item">
-                <label>command</label>
-                <textarea cols="40" rows="1" name="com"></textarea>
+                <label for="_com">command</label>
+                <textarea cols="40" rows="1" id="_com" name="com"></textarea>
                 <input type="submit" id="com">
             </div>
             <div class="sdk_control_item">
-                <label>npm script</label>
-                <input type="text" name="npm">
+                <label for="_npm">npm script</label>
+                <input type="text" id="_npm" name="npm">
                 <input type="submit" id="npm">
             </div>
             <div class="sdk_control_item">
-                <label>sh script</label>
-                <input type="text" name="sh">
+                <label for="_sh">sh script</label>
+                <input type="text" id="_sh" name="sh">
                 <input type="submit" id="sh">
             </div>
         </div>

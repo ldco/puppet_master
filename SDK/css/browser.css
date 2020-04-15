@@ -12,7 +12,22 @@ canvas,
 select,
 option,
 video,
-iframe {}
+iframe {
+    border: none !important;
+    border-radius: 0.2vh;
+    padding: 0;
+    -webkit-user-select: text;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -ms-appearance: none;
+    /*  background-color: $c_interB;
+box-shadow: $pm_formBS; */
+    font-family: 'VT323', monospace;
+}
 
 button:hover,
 textarea:hover,
@@ -41,12 +56,6 @@ select {
     background-repeat: no-repeat, repeat;
     background-size: 1.6vh auto, 100%;
     font-family: inherit !important;
-    /* [dir=rtl] & {
-        background-position: left 0.7vh top 50%, 0 0;
-    }
-    [dir=ltr] & {
-        background-position: right 0.7vh top 50%, 0 0;
-    } */
     background-position: right 0.7vh top 50%, 0 0;
     text-transform: capitalize;
     /*  background: $c_interB; */
@@ -177,6 +186,51 @@ iframe[src*=youtube] {
 }
 
 video:focus {}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox label::after {
+    content: "";
+    display: inline-block;
+    height: 1vh;
+    width: 1vh;
+    border-left: 0.2vh solid;
+    border-bottom: 0.2vh solid;
+    transform: rotate(-45deg);
+}
+
+.checkbox label {
+    position: relative;
+}
+
+.checkbox label::before,
+.checkbox label::after {
+    position: absolute;
+}
+
+.checkbox label::after {
+    left: -2.65vh;
+    top: 0.9vh;
+}
+
+.checkbox label::before {}
+
+
+/*Hide the checkmark by default*/
+
+.checkbox input[type="checkbox"]+label::after {
+    content: none;
+}
+
+
+/*Unhide the checkmark on the checked state*/
+
+.checkbox input[type="checkbox"]:checked+label::after {
+    content: "";
+}
 
 *:focus {
     outline: 0 !important;
