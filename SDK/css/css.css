@@ -37,6 +37,9 @@ canvas {
     margin-top: 7vh;
     margin-bottom: 7vh;
     text-shadow: 1vh 1vh #003f01;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #sdk_control {
