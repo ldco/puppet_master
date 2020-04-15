@@ -1,16 +1,21 @@
 @import "browser.css";
+:root {
+    --main-bg-color: #1c140a;
+    --main-color: #05a608;
+    /* #397e5b */
+    /*#cc8c44 */
+    /* var(--main-color */
+    /* #fee818 */
+}
+
 #sdk_terminal {
     width: 30vw;
     height: 80vh;
-    background-color: #1c140a;
+    background-color: var(--main-bg-color);
     /* #2f2f2f */
-    color: #05a608;
-    /* #397e5b */
-    /*#cc8c44 */
-    /* #05a608 */
-    /* #fee818 */
+    color: var(--main-color);
     border-radius: 1vh;
-    box-shadow: 0vh 0vh 1.5vh 0vh #05a608;
+    box-shadow: 0vh 0vh 1.5vh 0vh var(--main-color);
     font-family: 'VT323', monospace;
     padding: 2vh;
     font-size: 3vh;
@@ -22,7 +27,6 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
-    user-select: none;
 }
 
 .sdk_control_item {
@@ -32,12 +36,10 @@
     height: 5vh;
 }
 
-.sdk_control_main {
-    /* margin-bottom: 10vh; */
-}
+.sdk_control_main {}
 
 body {
-    background-color: #1c140a;
+    background-color: var(--main-bg-color);
     width: 100vw;
     height: 100vh;
     position: fixed;

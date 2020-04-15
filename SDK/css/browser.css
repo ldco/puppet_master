@@ -12,22 +12,7 @@ canvas,
 select,
 option,
 video,
-iframe {
-    border: none !important;
-    border-radius: 0.2vh;
-    padding: 0;
-    -webkit-user-select: text;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -ms-appearance: none;
-    /*  background-color: $c_interB;
-    box-shadow: $pm_formBS; */
-    font-family: 'VT323', monospace;
-}
+iframe {}
 
 button:hover,
 textarea:hover,
@@ -198,13 +183,13 @@ video:focus {}
 }
 
 ::-moz-selection {
-    background-color: #05a608;
-    color: #1c140a;
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
 }
 
 ::selection {
-    background-color: #05a608;
-    color: #1c140a;
+    background-color: var(--main-color);
+    color: var(--main-bg-color);
 }
 
 .tooltip {
