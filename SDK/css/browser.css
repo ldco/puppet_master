@@ -177,12 +177,14 @@ input[type="checkbox"] {
     height: 2vh;
     background-color: var(--main-bg-color);
     ;
+    cursor: pointer;
 }
 
 input[type="checkbox"]:after {
     content: "";
     position: absolute;
     display: none;
+    cursor: pointer;
 }
 
 form {
@@ -224,6 +226,7 @@ video:focus {}
 .checkbox label::before,
 .checkbox label::after {
     position: absolute;
+    cursor: pointer;
 }
 
 .checkbox label::after {
