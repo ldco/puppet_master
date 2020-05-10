@@ -1,0 +1,14 @@
+Started at [2020/05/10 05:03]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--vendor.php
+
+Deploying my site
+Note: connection is not encrypted
+Error: Directory /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/vendor/ not found. in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/Deployer.php:74
+
+InvalidArgumentException: Directory /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/vendor/ not found. in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/Deployer.php:74
+Stack trace:
+#0 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/CliRunner.php(143): Deployment\Deployer->__construct()
+#1 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/Deployment/CliRunner.php(78): Deployment\CliRunner->createDeployer()
+#2 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/src/deployment.php(29): Deployment\CliRunner->run()
+#3 /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/vendor/dg/ftp-deployment/deployment(3): require('/mnt/sdb2/CURRE...')
+#4 {main}
