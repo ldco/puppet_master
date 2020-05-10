@@ -9,7 +9,7 @@ createFolder("vendor");
 return [
     "my site" => [
         "remote" => REMOTE_ROOT . "vendor/",
-        "local" => LOCAL_ROOT . LOCAL_DIST . "vendor/",
+        "local" => LOCAL_ROOT . "vendor/",
         "test" => false,
         "ignore" => "
     ",

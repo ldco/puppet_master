@@ -1,0 +1,122 @@
+Started at [2020/05/10 05:12]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+
+Uploading:
+(  1 of 271) /admin/Pages/6.page.php
+(  2 of 271) /admin/Pages/7.page.php
+(  3 of 271) /admin/Pages/4.page.php
+(  4 of 271) /admin/Pages/5.page.php
+(  5 of 271) /admin/Pages/3.page.php
+(  6 of 271) /admin/Pages/1.page.php
+(  7 of 271) /admin/Pages/2.page.php
+(  8 of 271) /admin/adminMaster.js
+(  9 of 271) /admin/JSadmin/
+( 10 of 271) /admin/JSadmin/init.fun.js
+( 11 of 271) /admin/View/login.view.html.php
+( 12 of 271) /www/master-l-prod.css.map
+( 13 of 271) /www/master-d-prod.css.map
+( 14 of 271) /www/master-d-prod.min.css
+( 15 of 271) /www/master-l-prod.min.css
+( 16 of 271) /www/master.min.js
+( 17 of 271) /sys/assets/images/images/page_2/twoIIc.png
+( 18 of 271) /sys/assets/images/images/page_2/tundraI.png
+( 19 of 271) /sys/assets/images/images/page_2/two2.png
+( 20 of 271) /sys/assets/images/images/page_2/logoGrid/2a.png
+( 21 of 271) /sys/assets/images/images/page_2/logoGrid/17.png
+( 22 of 271) /sys/assets/images/images/page_2/logoGrid/13al.png
+( 23 of 271) /sys/assets/images/images/page_2/logoGrid/19.png
+( 24 of 271) /sys/assets/images/images/page_2/logoGrid/13.png
+( 25 of 271) /sys/assets/images/images/page_2/logoGrid/40.png
+( 26 of 271) /sys/assets/images/images/page_2/logoGrid/38.png
+( 27 of 271) /sys/assets/images/images/page_2/logoGrid/56.png
+( 28 of 271) /sys/assets/images/images/page_2/logoGrid/21a.png
+( 29 of 271) /sys/assets/images/images/page_2/logoGrid/3a.png
+( 30 of 271) /sys/assets/images/images/page_2/logoGrid/8al.png
+( 31 of 271) /sys/assets/images/images/page_2/logoGrid/38a.png
+( 32 of 271) /sys/assets/images/images/page_2/logoGrid/45.png
+( 33 of 271) /sys/assets/images/images/page_2/logoGrid/37.png
+( 34 of 271) /sys/assets/images/images/page_2/logoGrid/6.png
+( 35 of 271) /sys/assets/images/images/page_2/logoGrid/7al.png
+( 36 of 271) /sys/assets/images/images/page_2/logoGrid/1.png
+( 37 of 271) /sys/assets/images/images/page_2/logoGrid/61.png
+( 38 of 271) /sys/assets/images/images/page_2/logoGrid/18.png
+( 39 of 271) /sys/assets/images/images/page_2/logoGrid/50a.png
+( 40 of 271) /sys/assets/images/images/page_2/logoGrid/44.png
+( 41 of 271) /sys/assets/images/images/page_2/logoGrid/39.png
+( 42 of 271) /sys/assets/images/images/page_2/logoGrid/47.png
+( 43 of 271) /sys/assets/images/images/page_2/logoGrid/55.png
+( 44 of 271) /sys/assets/images/images/page_2/logoGrid/17al.png
+( 45 of 271) /sys/assets/images/images/page_2/logoGrid/59.png
+( 46 of 271) /sys/assets/images/images/page_2/logoGrid/21.png
+( 47 of 271) /sys/assets/images/images/page_2/logoGrid/42.png
+( 48 of 271) /sys/assets/images/images/page_2/logoGrid/4.png
+( 49 of 271) /sys/assets/images/images/page_2/logoGrid/11.png
+( 50 of 271) /sys/assets/images/images/page_2/logoGrid/43.png
+( 51 of 271) /sys/assets/images/images/page_2/logoGrid/18a.png
+( 52 of 271) /sys/assets/images/images/page_2/logoGrid/5.png
+( 53 of 271) /sys/assets/images/images/page_2/logoGrid/10al.png
+( 54 of 271) /sys/assets/images/images/page_2/logoGrid/3b.png
+( 55 of 271) /sys/assets/images/images/page_2/logoGrid/11al.png
+( 56 of 271) /sys/assets/images/images/page_2/logoGrid/54.png
+( 57 of 271) /sys/assets/images/images/page_2/logoGrid/12.png
+( 58 of 271) /sys/assets/images/images/page_2/logoGrid/20.png
+( 59 of 271) /sys/assets/images/images/page_2/logoGrid/60.png
+( 60 of 271) /sys/assets/images/images/page_2/logoGrid/7.png
+( 61 of 271) /sys/assets/images/images/page_2/logoGrid/2.png
+( 62 of 271) /sys/assets/images/images/page_2/logoGrid/5al.png
+( 63 of 271) /sys/assets/images/images/page_2/logoGrid/46.png
+( 64 of 271) /sys/assets/images/images/page_2/logoGrid/57.png
+( 65 of 271) /sys/assets/images/images/page_2/logoGrid/48.png
+( 66 of 271) /sys/assets/images/images/page_2/logoGrid/16.png
+( 67 of 271) /sys/assets/images/images/page_2/logoGrid/58.png
+( 68 of 271) /sys/assets/images/images/page_2/logoGrid/51.png
+( 69 of 271) /sys/assets/images/images/page_2/logoGrid/22.png
+( 70 of 271) /sys/assets/images/images/page_2/logoGrid/9al.png
+( 71 of 271) /sys/assets/images/images/page_2/logoGrid/53.png
+( 72 of 271) /sys/assets/images/images/page_2/logoGrid/14.png
+( 73 of 271) /sys/assets/images/images/page_2/logoGrid/8.png
+( 74 of 271) /sys/assets/images/images/page_2/logoGrid/10.png
+( 75 of 271) /sys/assets/images/images/page_2/logoGrid/20a.png
+( 76 of 271) /sys/assets/images/images/page_2/logoGrid/15.png
+( 77 of 271) /sys/assets/images/images/page_2/logoGrid/52.png
+( 78 of 271) /sys/assets/images/images/page_2/logoGrid/41.png
+( 79 of 271) /sys/assets/images/images/page_2/logoGrid/9.png
+( 80 of 271) /sys/assets/images/images/page_6/fontsGrid/sticks.png
+( 81 of 271) /sys/assets/images/images/page_6/fontsGrid/lilach.png
+( 82 of 271) /sys/assets/images/images/page_6/fontsGrid/patch stencil.png
+( 83 of 271) /sys/assets/images/images/page_6/fontsGrid/sayfan.png
+( 84 of 271) /sys/assets/images/images/page_6/fontsGrid/miso.png
+( 85 of 271) /sys/assets/images/images/page_6/fontsGrid/eco.png
+( 86 of 271) /sys/assets/images/images/page_6/fontsGrid/daniel.png
+( 87 of 271) /sys/assets/images/images/page_6/fontsGrid/yam suf.png
+( 88 of 271) /sys/assets/images/images/page_6/fontsGrid/patch sans.png
+( 89 of 271) /sys/assets/images/images/page_6/fontsGrid/amit.png
+( 90 of 271) /sys/assets/images/images/page_6/fontsGrid/kimchi.png
+( 91 of 271) /sys/assets/images/images/page_6/fontsGrid/noam.png
+( 92 of 271) /sys/assets/images/images/page_6/fontsGrid/patch serif.png
+( 93 of 271) /sys/assets/images/images/page_6/fontsGrid/neo.png
+( 94 of 271) /sys/assets/images/images/page_6/fontsGrid/skechers.png
+( 95 of 271) /sys/assets/images/images/page_6/fontsGrid/har sinai.png
+( 96 of 271) /sys/assets/images/images/page_6/fontsGrid/josef.png
+( 97 of 271) /sys/assets/images/images/page_6/fontsGrid/mixer.png
+( 98 of 271) /sys/assets/images/images/page_6/fontsGrid/strokes.png
+( 99 of 271) /sys/assets/images/images/page_6/fontsGrid/hidekel.png
+(100 of 271) /sys/assets/images/images/page_10/team/king.png
+(101 of 271) /sys/assets/images/images/page_10/team/lorem.png
+(102 of 271) /sys/assets/images/images/page_10/team/queen.png
+(103 of 271) /sys/assets/images/images/page_10/team/joker.png
+(104 of 271) /sys/assets/images/images/page_10/team/louis.png
+(105 of 271) /sys/assets/images/images/page_9/artGrid/TrilogyA2.png
+(106 of 271) /sys/assets/images/images/page_9/artGrid/queen1.png
+(107 of 271) /sys/assets/images/images/page_9/artGrid/gagarin1-2.png
+(108 of 271) /sys/assets/images/images/page_9/artGrid/map3.png
+(109 of 271) /sys/assets/images/images/page_9/artGrid/map2-2.png
