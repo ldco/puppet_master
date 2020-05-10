@@ -2238,8 +2238,44 @@ button.swiper-pagination-bullet {
       -ms-user-select: initial !important;
           user-select: initial !important; }
 
-#copytoBut:hover + #copyTooltip {
+#copytoBut:hover + .pm_copyTooltip {
   opacity: 1 !important; }
+
+.pm_copyTooltip {
+  position: relative;
+  display: inline-block; }
+
+.pm_copyTooltip .pm_copyTooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+.pm_copyTooltip .pm_copyTooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent; }
+
+.pm_copyTooltip:hover .pm_copyTooltiptext {
+  visibility: visible;
+  opacity: 1; }
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] #pm_gototop {
@@ -2540,6 +2576,44 @@ option {
 ::selection {
   color: #00070a;
   background: #e4e9ed; }
+
+.pm_checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.pm_checkbox label::after {
+  content: "";
+  display: inline-block;
+  height: 1vh;
+  width: 1vh;
+  border-left: 0.2vh solid;
+  border-bottom: 0.2vh solid;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.pm_checkbox label {
+  position: relative; }
+
+.pm_checkbox label::before,
+.pm_checkbox label::after {
+  position: absolute; }
+
+.pm_checkbox label::after {
+  left: -2.65vh;
+  top: 0.9vh; }
+
+/*Hide the checkmark by default*/
+.pm_checkbox input[type="checkbox"] + label::after {
+  content: none; }
+
+/*Unhide the checkmark on the checked state*/
+.pm_checkbox input[type="checkbox"]:checked + label::after {
+  content: ""; }
 
 #pm_404 .pm_infoPageLogo {
   background-image: url("../sys/assets/images/images/info/pmlogo404.svg"); }
@@ -3614,11 +3688,11 @@ body {
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] #pm_adminLoginView img {
-    width: 70vw; } }
+    width: 45vh; } }
 
 @media (max-width: 1210px) {
   [data-mob=false] #pm_adminLoginView img {
-    width: 70vw; } }
+    width: 45vh; } }
 
 .loginMessageText {
   position: fixed;

@@ -25,7 +25,7 @@ define("PM_FOOTER_NAV", false);
 
 //system
 define("PM_SYS_FOLDER", "sys"); //or core
-define("PM_IS_DEV", true); // or true
+define("PM_IS_DEV", false); // or true
 define("PM_PROD_SERVER", "apache"); //or nginx
 define("PM_LOCAL_APPFOLDER", "root");
 define("PM_REMOTE_APPFOLDER", "public_html"); //don't touch unless
@@ -61,5 +61,5 @@ define("REMOTE_USER", "");
 define("REMOTE_PASS", "");
 define("LOCAL_ROOT", "/mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/" . PM_LOCAL_APPFOLDER);
 define("LOCAL_DIST", "DIST" . "/");
-define("FTP_DEV_FOLDER", "PM_DEV" . "/");
-define("FTP_IS_DEV", true);
+/* define("FTP_DEV_FOLDER", "PM_DEV" . "/");
+define("FTP_IS_DEV", true); */

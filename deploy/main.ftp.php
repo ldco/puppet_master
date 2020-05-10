@@ -3,8 +3,8 @@
 require_once "../config.ini.php";
 
 
-if (FTP_IS_DEV) :
-    define("REMOTE_ROOT", "ftp://" . REMOTE_USER . ":" . REMOTE_PASS . "@" . REMOTE . "/" . PM_REMOTE_APPFOLDER . "/" . FTP_DEV_FOLDER);
+if (PM_IS_DEV) :
+    define("REMOTE_ROOT", "ftp://" . REMOTE_USER . ":" . REMOTE_PASS . "@" . REMOTE . "/" . PM_REMOTE_APPFOLDER . "/" . "PM_DEV");
 
 else :
     define("REMOTE_ROOT", "ftp://" . REMOTE_USER . ":" . REMOTE_PASS . "@" . REMOTE . "/" . PM_REMOTE_APPFOLDER . "/");
@@ -16,8 +16,8 @@ function createFolder($folder)
 {
     $ftp_conn = ftp_connect(REMOTE) or die("Could not connect");
     $login = ftp_login($ftp_conn, REMOTE_USER, REMOTE_PASS);
-    if (FTP_IS_DEV) {
-        $dir = REMOTE_ROOT . "/" . FTP_DEV_FOLDER . "/" . $folder;
+    if (PM_IS_DEV) {
+        $dir = REMOTE_ROOT . "/" . "PM_DEV" . "/" . $folder;
     } else {
         $dir = REMOTE_ROOT . "/" . $folder . "/";
     }
