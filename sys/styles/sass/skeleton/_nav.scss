@@ -221,10 +221,8 @@
         .nav_item,
         .nav_admin_item {
             color: $c_opos;
-            /* display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%; */
+            display: flex;
+            width: 100%;
             img,
             span {
                 @include dir('margin-left', 'margin-right', 3vh, 3vh);

@@ -2741,3 +2741,22 @@ Finished at [2020/05/10 06:32] (in 2254 seconds)
 ----------------------------------------------
 
 
+Started at [2020/05/10 07:07]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+Already synchronized.
+
+
+
+Finished at [2020/05/10 07:07] (in 2 seconds)
+----------------------------------------------
+
+
