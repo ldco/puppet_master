@@ -3381,10 +3381,10 @@ body {
   .pm_mobileNav .nav_item,
   .pm_mobileNav .nav_admin_item {
     color: #e4e9ed;
-    /* display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%; */ }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
     [dir=ltr] .pm_mobileNav .nav_item img, [dir=ltr]
     .pm_mobileNav .nav_item span, [dir=ltr]
     .pm_mobileNav .nav_admin_item img, [dir=ltr]
