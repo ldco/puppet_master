@@ -69,7 +69,7 @@ $rankMobColumns: 1,
             box-shadow: 0 0 0.8vh 0 $c_shadow;
         }
         @if $LIGHT_THEME==false {
-            box-shadow: $pm_formBS;
+            box-shadow: none;
         }
         border-radius: 50%;
         cursor: pointer;

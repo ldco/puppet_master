@@ -6,7 +6,7 @@ declare(strict_types=1);
 //PM: MOVE THE FILE FOLDER UP!
 
 //title
-define("PM_TITLE", "FABRICA21 STUDIO");
+define("PM_TITLE", "PUPPET MASTER");
 //credits
 define("PM_COPYBY", "Louis David & Co.");
 //by who
@@ -25,7 +25,7 @@ define("PM_FOOTER_NAV", false);
 
 //system
 define("PM_SYS_FOLDER", "sys"); //or core
-define("PM_IS_DEV", false); // or true
+define("PM_IS_DEV", false); // or true -> don't forget to replace config file on host!
 define("PM_PROD_SERVER", "apache"); //or nginx
 define("PM_LOCAL_APPFOLDER", "root");
 define("PM_REMOTE_APPFOLDER", "public_html"); //don't touch unless
@@ -39,7 +39,7 @@ define("PM_ALLOW_CLIENTLANG", false); // or true (if true, default is client lan
 define("PM_ADMIN_LANG", "en"); // define lang of admin area
 
 //DB local
-define("DB_NAME_LOCAL", "f21_db");
+define("DB_NAME_LOCAL", "");
 define("DB_USER_LOCAL", "");
 define("DB_PASS_LOCAL", "");
 
@@ -59,7 +59,11 @@ define("PM_MAIN_GMAIL_PASS", "");
 define("REMOTE", "");
 define("REMOTE_USER", "");
 define("REMOTE_PASS", "");
-define("LOCAL_ROOT", "/mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/" . PM_LOCAL_APPFOLDER);
-define("LOCAL_DIST", "DIST" . "/");
-/* define("FTP_DEV_FOLDER", "PM_DEV" . "/");
-define("FTP_IS_DEV", true); */
+define("LOCAL_ROOT", "" . PM_LOCAL_APPFOLDER . "/");
+define("LOCAL_DIST", "dist" . "/");
+define("FTP_DEV_FOLDER", "PM_DEV" . "/");
+define("FTP_IS_DEV", true);
+
+//GIT
+
+define("PM_GIT_REPO", "");
