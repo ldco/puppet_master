@@ -43,6 +43,11 @@
         "body": ["@include f-size($1\\$basicTextSize);"],
         "description": "pm font size"
     },
+    "font": {
+        "prefix": "font",
+        "body": ["@include font($1, $400);"],
+        "description": "pm font"
+    },
     "lightTheme": {
         "prefix": "theme",
         "body": [

@@ -3568,6 +3568,47 @@ input.pm_modal_button {
     height: auto;
     align-self: center; }
 
+.pm_blog_name {
+  align-self: center;
+  margin-bottom: 2vh;
+  font-size: 3.6vh; }
+  [lang=en] .pm_blog_name {
+    font-family: Montserrat;
+    font-weight: 600; }
+  [lang=ru] .pm_blog_name {
+    font-family: Montserrat;
+    font-weight: 600; }
+  [lang=he] .pm_blog_name {
+    font-family: Heebo;
+    font-weight: 600; }
+
+.pm_blog_text {
+  margin-top: 2vh;
+  font-size: 3vh; }
+  [lang=en] .pm_blog_text {
+    font-family: Montserrat;
+    font-weight: 300; }
+  [lang=ru] .pm_blog_text {
+    font-family: Montserrat;
+    font-weight: 300; }
+  [lang=he] .pm_blog_text {
+    font-family: Heebo;
+    font-weight: 300; }
+
+.pm_blog_date {
+  margin-top: 2vh;
+  font-size: 1.8vh;
+  font-style: italic; }
+  [lang=en] .pm_blog_date {
+    font-family: Montserrat;
+    font-weight: 400; }
+  [lang=ru] .pm_blog_date {
+    font-family: Montserrat;
+    font-weight: 400; }
+  [lang=he] .pm_blog_date {
+    font-family: Heebo;
+    font-weight: 400; }
+
 .pm_blog_item {
   box-shadow: 0.2vh 0vh 1vh 0.2vh rgba(255, 255, 255, 0.33); }
 

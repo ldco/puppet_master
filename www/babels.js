@@ -825,14 +825,14 @@ function downloadAllFonts() {}
 "use strict";
 
 function downloadFont(font) {
-  var folder = "";
+  var folder = "../ldcofonts/";
   var fileName = font + ".zip";
   var link = document.createElement("a");
   link.href = folder + fileName;
   link.click();
   link.remove();
   if (document.querySelector(".pm_modal_parent")) document.querySelector(".pm_modal_parent").remove();
-  if (document.querySelector("pm_overlay").style.display !== "none") document.querySelector("pm_overlay").style.display = "none";
+  if (document.querySelector("#pm_overlay").style.display !== "none") document.querySelector("#pm_overlay").style.display = "none";
 }
 "use strict";
 
@@ -845,7 +845,7 @@ function initDownloadFont() {
   });
   var all = document.getElementById("text_6_3");
   all.addEventListener("click", function () {
-    downloadFont("AllFonts");
+    downloadFont("LDCOFonts");
   });
 }
 "use strict";
