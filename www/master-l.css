@@ -2523,7 +2523,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 12vh;
+  margin-top: 8vh;
   width: 100%;
   text-transform: uppercase; }
   .pm_mobileNav a {
@@ -3505,7 +3505,7 @@ input.pm_modal_button {
     text-transform: uppercase;
     text-align: center;
     font-size: 6vh;
-    margin-top: 10vh; }
+    margin-top: 6vh; }
     [lang=en] .pm_page_incontent h1 {
       font-family: Montserrat;
       font-weight: 50; }

@@ -23,11 +23,13 @@ class Blog
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="' . $childClass . ' pm_blog_item">';
-                echo '<img src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["img"] . '.png">';
+
                 echo '<div class="pm_blog_name">' . $row["name_" . PM_LANG] . '</div>';
-                if (("job_" . PM_LANG !== "") || ("job_" . PM_LANG !== null)) echo '<div class="pm_blog_job">' . $row["job_" . PM_LANG] . '</div>';
-                if (("bio_" . PM_LANG !== "") || ("bio_" . PM_LANG  !== null))  echo '<div class="pm_blog_bio">' . $row["bio_" . PM_LANG] . '</div>';
-                echo '</div>';
+
+                echo '<img src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["img"] . '.png">';
+
+                echo '<div class="pm_blog_text">' . $row["text_" . PM_LANG] . '</div>';
+                echo '<div class="pm_blog_date">' . $row["date"] . '</div>';
             }
         }
         echo '</div>';

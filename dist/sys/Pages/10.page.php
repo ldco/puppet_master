@@ -11,6 +11,5 @@ $page10 = new Page();
 $page10->h(1);
 
 $teamGrid = new Team;
-$teamGrid->make();
 
 $page10->close();
