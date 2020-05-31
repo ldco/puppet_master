@@ -2979,3 +2979,82 @@ Finished at [2020/05/31 22:57] (in 3 seconds)
 ----------------------------------------------
 
 
+Started at [2020/06/01 00:30]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+
+Uploading:
+( 1 of 27) /admin/View/login.view.html.php
+( 2 of 27) /www/master-l-prod.css.map
+( 3 of 27) /www/master-d-prod.css.map
+( 4 of 27) /www/master-d-prod.min.css
+( 5 of 27) /www/master-l-prod.min.css
+( 6 of 27) /www/master.min.js
+( 7 of 27) /.htaccess
+( 8 of 27) /sys/SysInfo/sysInfoTemplate.view.html.php
+( 9 of 27) /sys/SysInfo/sysInfoTemplate.model.php
+(10 of 27) /sys/modules/Blog.class.module.php
+(11 of 27) /sys/modules/Page.class.module.php
+(12 of 27) /sys/modules/Swiper.class.module.php
+(13 of 27) /sys/modules/Team.class.module.php
+(14 of 27) /sys/modules/Catalog.class.module.php
+(15 of 27) /sys/modules/Files.class.module.php
+(16 of 27) /sys/modules/thebility/thebility.view.php
+(17 of 27) /sys/modules/Contacts.class.module.php
+(18 of 27) /sys/Pages/1.page.php
+(19 of 27) /sys/View/bar_mobile.view.html.php
+(20 of 27) /sys/View/footer.view.html.php
+(21 of 27) /sys/View/nav.view.html.php
+(22 of 27) /sys/View/nav_lang.view.html.php
+(23 of 27) /sys/View/logout.view.html.php
+(24 of 27) /sys/View/depends.view.html.php
+(25 of 27) /sys/View/index.view.html.php
+(26 of 27) /sys/View/bar_skeleton.view.html.php
+(27 of 27) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+( 1 of 27) Renaming /admin/View/login.view.html.php
+( 2 of 27) Renaming /www/master-l-prod.css.map
+( 3 of 27) Renaming /www/master-d-prod.css.map
+( 4 of 27) Renaming /www/master-d-prod.min.css
+( 5 of 27) Renaming /www/master-l-prod.min.css
+( 6 of 27) Renaming /www/master.min.js
+( 7 of 27) Renaming /.htaccess
+( 8 of 27) Renaming /sys/SysInfo/sysInfoTemplate.view.html.php
+( 9 of 27) Renaming /sys/SysInfo/sysInfoTemplate.model.php
+(10 of 27) Renaming /sys/modules/Blog.class.module.php
+(11 of 27) Renaming /sys/modules/Page.class.module.php
+(12 of 27) Renaming /sys/modules/Swiper.class.module.php
+(13 of 27) Renaming /sys/modules/Team.class.module.php
+(14 of 27) Renaming /sys/modules/Catalog.class.module.php
+(15 of 27) Renaming /sys/modules/Files.class.module.php
+(16 of 27) Renaming /sys/modules/thebility/thebility.view.php
+(17 of 27) Renaming /sys/modules/Contacts.class.module.php
+(18 of 27) Renaming /sys/Pages/1.page.php
+(19 of 27) Renaming /sys/View/bar_mobile.view.html.php
+(20 of 27) Renaming /sys/View/footer.view.html.php
+(21 of 27) Renaming /sys/View/nav.view.html.php
+(22 of 27) Renaming /sys/View/nav_lang.view.html.php
+(23 of 27) Renaming /sys/View/logout.view.html.php
+(24 of 27) Renaming /sys/View/depends.view.html.php
+(25 of 27) Renaming /sys/View/index.view.html.php
+(26 of 27) Renaming /sys/View/bar_skeleton.view.html.php
+(27 of 27) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/06/01 00:30] (in 6 seconds)
+----------------------------------------------
+
+
