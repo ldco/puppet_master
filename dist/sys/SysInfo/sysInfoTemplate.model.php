@@ -29,8 +29,8 @@ if (!$pm_theme_l) {
 <html lang=<?= $pm_lang ?>>
 
 <title>INFO</title>
-<link rel="icon" type="image/png" href="../assets/favicons/favicon.ico">
-<link rel="stylesheet" href="<?= $filepathtocss ?>" />
+<link rel="icon" type="image/png" href="../assets/favicons/favicon.ico" async>
+<link rel="stylesheet" href="<?= $filepathtocss ?>" async>
 
 
 <?php

@@ -26,7 +26,7 @@
     </div>
 </div>
 
-<script>
+<script async>
     if (document.querySelector("#pm_infoPageButton_GoHome")) {
         document.querySelector("#pm_infoPageButton_GoHome").addEventListener("click", function() {
             window.location = '/';
