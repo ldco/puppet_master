@@ -3676,11 +3676,6 @@ input.pm_modal_button {
   width: 100%;
   height: 100%; }
 
-#logoGrid div {
-  filter: grayscale(1) brightness(3) !important; }
-  #logoGrid div:hover {
-    filter: grayscale(0) brightness(1) !important; }
-
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] #logoGrid div {
     filter: none !important; } }
@@ -3772,8 +3767,11 @@ input.pm_modal_button {
 #logoGrid {
   margin-top: 5vh;
   margin-bottom: 5vh; }
-  #logoGrid div:hover {
-    /*   transition: 0.2s;
+  #logoGrid div {
+    background: #e4e9ed;
+    border-radius: 1%; }
+    #logoGrid div:hover {
+      /* transition: 0.2s;
             background: rgba(#fff, 0.9);
             border-radius: 4vh; */ }
 

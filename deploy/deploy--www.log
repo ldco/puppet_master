@@ -101,3 +101,36 @@ Finished at [2020/05/31 11:32] (in 3 seconds)
 ----------------------------------------------
 
 
+Started at [2020/05/31 11:43]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--www.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/www
+
+Uploading:
+(1 of 5) /master-l-prod.css.map
+(2 of 5) /master-d-prod.css.map
+(3 of 5) /master-d-prod.min.css
+(4 of 5) /master-l-prod.min.css
+(5 of 5) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(1 of 5) Renaming /master-l-prod.css.map
+(2 of 5) Renaming /master-d-prod.css.map
+(3 of 5) Renaming /master-d-prod.min.css
+(4 of 5) Renaming /master-l-prod.min.css
+(5 of 5) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/05/31 11:43] (in 2 seconds)
+----------------------------------------------
+
+

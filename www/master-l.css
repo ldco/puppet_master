@@ -3721,8 +3721,11 @@ input.pm_modal_button {
 #logoGrid {
   margin-top: 5vh;
   margin-bottom: 5vh; }
-  #logoGrid div:hover {
-    /*   transition: 0.2s;
+  #logoGrid div {
+    background: #e4e9ed;
+    border-radius: 1%; }
+    #logoGrid div:hover {
+      /* transition: 0.2s;
             background: rgba(#fff, 0.9);
             border-radius: 4vh; */ }
 
