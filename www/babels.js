@@ -201,10 +201,8 @@ function setHamburgerMenu() {
 }
 
 function removeHamburger() {
-  var ham = document.querySelectorAll(".pm_hamburger")[0];
-
-  if (ham.classList.contains("is-active")) {
-    ham.classList.remove("is-active");
+  if (document.querySelector(".hamburgerHelperDiv")) {
+    document.querySelectorAll(".pm_hamburger")[0].classList.remove("is-active");
     document.querySelector(".hamburgerHelperDiv").remove();
     var mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
 

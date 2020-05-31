@@ -312,3 +312,31 @@ Finished at [2020/06/01 00:35] (in 7 seconds)
 ----------------------------------------------
 
 
+Started at [2020/06/01 00:37]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--noassets.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/sys
+Ignoring ./assets                       
+
+Uploading:
+(1 of 2) /View/depends.view.html.php
+(2 of 2) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(1 of 2) Renaming /View/depends.view.html.php
+(2 of 2) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/06/01 00:37] (in 2 seconds)
+----------------------------------------------
+
+

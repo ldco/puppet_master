@@ -16,7 +16,7 @@
     }
     ?>
 
-    <script async>
+    <script>
         let el = document.getElementsByClassName("loginMessageText")[0];
         if (el.className === "loginMessageText errorText") {
             el.style.borderBottom = "solid 2vh red";

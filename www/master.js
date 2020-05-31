@@ -750,27 +750,27 @@
     return svgCache[query] || (svgCache[query] = createElement(query, ns));
   }
 
-  /* common-shake removed: exports.List = */ void List;
-  /* common-shake removed: exports.ListPool = */ void ListPool;
-  /* common-shake removed: exports.Place = */ void Place;
-  /* common-shake removed: exports.Router = */ void Router;
+  exports.List = List;
+  exports.ListPool = ListPool;
+  exports.Place = Place;
+  exports.Router = Router;
   exports.el = el;
-  /* common-shake removed: exports.h = */ void h;
-  /* common-shake removed: exports.html = */ void html;
-  /* common-shake removed: exports.list = */ void list;
-  /* common-shake removed: exports.listPool = */ void listPool;
+  exports.h = h;
+  exports.html = html;
+  exports.list = list;
+  exports.listPool = listPool;
   exports.mount = mount;
-  /* common-shake removed: exports.place = */ void place;
-  /* common-shake removed: exports.router = */ void router;
-  /* common-shake removed: exports.s = */ void s;
-  /* common-shake removed: exports.setAttr = */ void setAttr;
-  /* common-shake removed: exports.setChildren = */ void setChildren;
-  /* common-shake removed: exports.setData = */ void setData;
-  /* common-shake removed: exports.setStyle = */ void setStyle;
-  /* common-shake removed: exports.setXlink = */ void setXlink;
-  /* common-shake removed: exports.svg = */ void svg;
-  /* common-shake removed: exports.text = */ void text;
-  /* common-shake removed: exports.unmount = */ void unmount;
+  exports.place = place;
+  exports.router = router;
+  exports.s = s;
+  exports.setAttr = setAttr;
+  exports.setChildren = setChildren;
+  exports.setData = setData;
+  exports.setStyle = setStyle;
+  exports.setXlink = setXlink;
+  exports.svg = svg;
+  exports.text = text;
+  exports.unmount = unmount;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
@@ -9690,10 +9690,8 @@ function setHamburgerMenu() {
 }
 
 function removeHamburger() {
-  var ham = document.querySelectorAll(".pm_hamburger")[0];
-
-  if (ham.classList.contains("is-active")) {
-    ham.classList.remove("is-active");
+  if (document.querySelector(".hamburgerHelperDiv")) {
+    document.querySelectorAll(".pm_hamburger")[0].classList.remove("is-active");
     document.querySelector(".hamburgerHelperDiv").remove();
     var mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
 

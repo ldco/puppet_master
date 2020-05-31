@@ -32,12 +32,8 @@ function setHamburgerMenu() {
 
 function removeHamburger() {
 
-    let ham = document.querySelectorAll(".pm_hamburger")[0]
-
-    if (ham.classList.contains("is-active")) {
-
-
-        ham.classList.remove("is-active");
+    if (document.querySelector(".hamburgerHelperDiv")) {
+        document.querySelectorAll(".pm_hamburger")[0].classList.remove("is-active");
         document.querySelector(".hamburgerHelperDiv").remove();
         let mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
         if (PM_LTR) {
@@ -49,6 +45,5 @@ function removeHamburger() {
         setTimeout(() => {
             mobileBar.style.display = "none";
         }, 800);
-
     }
 }
