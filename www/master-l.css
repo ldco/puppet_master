@@ -3492,6 +3492,29 @@ input.pm_modal_button {
   margin-right: 1.6vh;
   transform: rotate(180deg); }
 
+@media (max-aspect-ratio: 13 / 9) {
+  [data-mob=true] .pm_blog_item {
+    width: 90vw; } }
+
+@media (max-width: 1210px) {
+  [data-mob=false] .pm_blog_item {
+    width: 90vw; } }
+
+@media (min-aspect-ratio: 13 / 9) {
+  [data-mob=true] .pm_blog_item {
+    width: 50vw; } }
+
+@media (min-width: 1210px) {
+  [data-mob=false] .pm_blog_item {
+    width: 50vw; } }
+
+.pm_blog_item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2%;
+  padding: 2vh;
+  box-shadow: 1vh 1vh 1vh 1vh #000; }
+
 .pm_page_incontent {
   color: #00070a;
   min-height: 100%;
