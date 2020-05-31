@@ -19,14 +19,14 @@ class Team
         global $DB;
         if (!isset($DB)) $DB = new DB;
         echo '<div id="' . $_id . '" class="' . $class . '">';
-        $result = $DB->queryRaw("SELECT * FROM $this->table JOIN pm_text ON $this->table.name=pm_text.id");
+        $result = $DB->queryRaw("SELECT * FROM $this->table");
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="' . $childClass . ' pm_team_item pm_team_rank_' . $row["rank"] . '">';
                 echo '<img src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["img"] . '.png">';
-                echo '<div class="pm_team_name">' . $row[PM_LANG] . '</div>';
-                if ($row[PM_LANG] !== null) echo '<div class="pm_team_job">' . $row["job"] . '</div>';
-                if ($row[PM_LANG] !== null)  echo '<div class="pm_team_bio">' . $row["bio"] . '</div>';
+                echo '<div class="pm_team_name">' . $row["name_" . PM_LANG] . '</div>';
+                if (("job_" . PM_LANG !== "") || ("job_" . PM_LANG !== null)) echo '<div class="pm_team_job">' . $row["job_" . PM_LANG] . '</div>';
+                if (("bio_" . PM_LANG !== "") || ("bio_" . PM_LANG  !== null))  echo '<div class="pm_team_bio">' . $row["bio_" . PM_LANG] . '</div>';
                 echo '</div>';
             }
         }

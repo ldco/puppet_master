@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 10, 2020 at 06:24 AM
--- Server version: 10.4.12-MariaDB-1:10.4.12+maria~bionic-log
--- PHP Version: 7.4.2
+-- Generation Time: May 31, 2020 at 12:20 PM
+-- Server version: 10.3.22-MariaDB-1ubuntu1
+-- PHP Version: 7.4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -166,7 +165,7 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (48, NULL, NULL, 'רשיון תכנה', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (51, NULL, NULL, 'רשימת לקוחות', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (64, NULL, NULL, 'תפריט ראשי', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(97, 'about', 'о нас', 'עלינו', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(97, 'about', 'о нас', 'אודותנו', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (24, 'age', 'возраст', 'גיל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (32, 'age categories', 'возрастные категории', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (108, 'alert', 'внимание', 'שים לב', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -293,20 +292,25 @@ CREATE TABLE `pm_team` (
   `id` int(11) NOT NULL,
   `img` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `rank` int(10) NOT NULL,
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `job` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `bio` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `name_en` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_ru` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_he` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_en` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_ru` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_he` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bio_en` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bio_ru` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bio_he` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pm_team`
 --
 
-INSERT INTO `pm_team` (`id`, `img`, `rank`, `name`, `job`, `bio`) VALUES
-(1, 'louis', 1, '10_1', '10_2', NULL),
-(2, 'queen', 2, '10_4', NULL, NULL),
-(3, 'king', 2, '10_7', NULL, NULL),
-(4, 'joker', 2, '10_10', NULL, NULL);
+INSERT INTO `pm_team` (`id`, `img`, `rank`, `name_en`, `name_ru`, `name_he`, `job_en`, `job_ru`, `job_he`, `bio_en`, `bio_ru`, `bio_he`) VALUES
+(1, 'louis', 1, 'louis david ', 'луи давид ', 'לואי דוד', 'B.O.S.S', 'Б.О.С.С', 'ב.ו.ס', '', '', ''),
+(2, 'nikita', 2, 'nikita t.', 'никита т.', 'ניקיטה ט.', 'chief technology officer', 'технический директор', 'מנהל טכנולוגיות ראשי', '', '', ''),
+(3, 'sanya', 2, 'alexander k.', 'александр к.', 'אלכסנדר ק.', 'chief marketing officer', 'директор по маркетингу', 'מנהל שיווק ראשי', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -334,11 +338,6 @@ CREATE TABLE `pm_text` (
 --
 
 INSERT INTO `pm_text` (`id`, `en`, `ru`, `he`, `fr`, `it`, `es`, `de`, `zh`, `ja`, `hi`, `ar`) VALUES
-('10_1', 'Louis David (Jack of Spades)', 'Луи Давид (Пиковый валет)', 'לואי דוד (נסיך עלה)', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('10_10', 'Black Joker', 'Черный Джокер', 'ג\'וקר שחור', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('10_2', 'B.O.S.S', 'Б.О.С.С', 'ב.ו.ס.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('10_4', 'Queen of Clubs', 'Крестовая Дама', 'מלכה תלתן', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('10_7', 'King of Diamonds', 'Бубновый Король', 'מלך יהלום', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('5_1', 'We provide software solutions for small businesses - web apps, desktop apps, mobile apps.', 'Мы предоставляем программные решения для маленького бизнеса - веб приложения, мобильные и десктопные приложения.', 'אנחנו מספקים פטרונות תוכנה לעסקים קטנים - אפליקציות ווב, מובייל ודסקטופ', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('6_1', 'We published for you some Hebrew fonts under the', 'Мы опубликовали некоторое количество ивритских шрифтов под лицензией', 'הצאנו לאור מספר גופים חופשיים תחת הרשיון', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('6_2', '- you can use them for free also for commercial purposes. To download a font just click on the desired font or download all fonts at once on link at bottom of the page, but first we advise you to try the fonts out in the Gofanarium:', '- вы можете использовать их бесплатно, в том числе для коммерческих целей(в соответствии с условиями лицензии). Чтоб скачать шрифт кликните на картинку с нужным шрифтом. Можно также скачать все шрифты одним архивом по ссылке внизу страницы. Для начала мы предлагаем воспользоваться программой для проверки шрифтов Гофанариумом:', 'אתם מוזמנים להשתמש בהם, הם חופשיים גם לשימוש מסחרי. כדי להוריד את קובץ הגופן פשוט הקליקו על התמונה עם הפונט הרצוי, או תשתמשו בקישור בתחתית הדף כדי להוריד את כל הפונטים ביחד בקובץ ארכיון. לפני ההורדה אתם מוזמנים להיכנס למערכת לבדיקת הפונטים - הגופנריום:', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -414,9 +413,9 @@ ALTER TABLE `pm_pub_nav`
 ALTER TABLE `pm_team`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `id` (`id`),
-  ADD KEY `name` (`name`),
-  ADD KEY `job` (`job`),
-  ADD KEY `bio` (`bio`);
+  ADD KEY `name` (`name_en`),
+  ADD KEY `job` (`job_en`),
+  ADD KEY `bio` (`bio_en`);
 
 --
 -- Indexes for table `pm_text`
@@ -498,14 +497,6 @@ ALTER TABLE `pm_contact`
 --
 ALTER TABLE `pm_pub_nav`
   ADD CONSTRAINT `pm_pub_nav_ibfk_1` FOREIGN KEY (`name`) REFERENCES `pm_loc` (`id`);
-
---
--- Constraints for table `pm_team`
---
-ALTER TABLE `pm_team`
-  ADD CONSTRAINT `pm_team_ibfk_1` FOREIGN KEY (`name`) REFERENCES `pm_text` (`id`),
-  ADD CONSTRAINT `pm_team_ibfk_2` FOREIGN KEY (`job`) REFERENCES `pm_text` (`id`),
-  ADD CONSTRAINT `pm_team_ibfk_3` FOREIGN KEY (`bio`) REFERENCES `pm_text` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
