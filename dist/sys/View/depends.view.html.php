@@ -23,7 +23,7 @@ endif;
 ?>
 
 <link href="<?= PM_ROOT_REL ?>www/<?= $cssDependFile ?>" rel="stylesheet">
-<script src="<?= PM_ROOT_REL ?>www/<?= $jsDependFile ?>"></script>
+<script defer src="<?= PM_ROOT_REL ?>www/<?= $jsDependFile ?>"></script>
 <link rel="apple-touch-icon" sizes="180x180" href="<?= PM_SYS_FOLDER ?>/assets/favicons/apple-touch-icon.png" async>
 <link rel="icon" type="image/png" sizes="32x32" href="<?= PM_SYS_FOLDER ?>/assets/favicons/favicon-32x32.png" async>
 <link rel="icon" type="image/png" sizes="194x194" href="<?= PM_SYS_FOLDER ?>/assets/favicons/favicon-194x194.png" async>
