@@ -17,16 +17,16 @@ endif;
 
 <div id="pm_thebility" class="thebility">
     <div id="thebilityIcon" class="thebility">
-        <img src="<?= $thebilityToggleIconSrc ?>" class="thebility">
+        <img alt="thebility-icon" src="<?= $thebilityToggleIconSrc ?>" class="thebility">
     </div>
 
     <div id="thebilityMainDiv" class="thebility">
         <div id="thebility_buttonsDiv" class="thebility">
             <div id="dragThebility" class="thebility">
-                <img id="dragThebility" src="<?= $thebilityDragIconSrc ?>" class="thebility">
+                <img alt="thebility-drag-icon" id="dragThebility" src="<?= $thebilityDragIconSrc ?>" class="thebility">
             </div>
             <div id="closeThebility" class="thebility">
-                <img src="<?= $thebilityCloseIconSrc ?>" class="thebility">
+                <img alt="thebility-close-icon" src="<?= $thebilityCloseIconSrc ?>" class="thebility">
             </div>
         </div>
         <form id="form_lightDarkTheme" action="index.php" method="POST" onclick="javascript:this.submit();">

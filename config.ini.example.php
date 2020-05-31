@@ -7,6 +7,8 @@ declare(strict_types=1);
 
 //title
 define("PM_TITLE", "PUPPET MASTER");
+//meta description
+define("PM_META_DESCRIPT", "");
 //credits
 define("PM_COPYBY", "Louis David & Co.");
 //by who
