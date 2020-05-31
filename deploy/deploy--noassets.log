@@ -220,3 +220,33 @@ Finished at [2020/05/31 23:31] (in 6 seconds)
 ----------------------------------------------
 
 
+Started at [2020/05/31 23:47]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--noassets.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/sys
+Ignoring ./assets                       
+
+Uploading:
+(1 of 3) /modules/thebility/thebility.view.php
+(2 of 3) /View/depends.view.html.php
+(3 of 3) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(1 of 3) Renaming /modules/thebility/thebility.view.php
+(2 of 3) Renaming /View/depends.view.html.php
+(3 of 3) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/05/31 23:47] (in 1 seconds)
+----------------------------------------------
+
+

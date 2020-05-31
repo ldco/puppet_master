@@ -205,6 +205,10 @@ font-size: 2vh;
     img {
         height: calc(#{map-get($mob, height)} / 2.6);
     }
+    
+    a {
+        border: none;
+    }
 }
 #pm_mobileBar {}
 #pm_admin_mobileBar {}

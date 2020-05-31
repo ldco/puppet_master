@@ -1,4 +1,4 @@
-<div class="pm_footer">
+<footer class="pm_footer">
     <?php if (PM_FOOTER_NAV) : ?>
         <nav>
             <?php $modelNav->index(); ?>
@@ -10,4 +10,4 @@
         </a>
         <span class="pm_footerCreditsCopy"><?= $copy ?></span>
     </div>
-</div>
+</footer>

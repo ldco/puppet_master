@@ -40,7 +40,7 @@ if ($isLocal) {
     ?>
         <div id="mainAdminContent"><?= $sPageContent; ?></div>
     <?php else : ?>
-        <div id="mainContent"><?= $sPageContent; ?></div>
+        <main id="mainContent"><?= $sPageContent; ?></main>
     <?php endif; ?>
 
     <div id="pm_gototop">

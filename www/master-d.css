@@ -2331,6 +2331,8 @@ body .pm_bar_scrolled {
   left: 25vw; }
   #mobileHeaderLogo img {
     height: calc(6vh / 2.6); }
+  #mobileHeaderLogo a {
+    border: none; }
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] .pm_footer {

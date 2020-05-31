@@ -8,9 +8,12 @@
                 <div class="hamburger-inner"></div>
             </div>
         </div>
-        <div id="mobileHeaderLogo"><img alt="logo" src="<?= $navBarLogoMob ?>">
 
+        <div id="mobileHeaderLogo">
+            <a href="">
+                <img alt="logo" src="<?= $navBarLogoMob ?>"></a>
         </div>
+
         <img alt="bar asset" class="pm_bar_asset anim" src="<?= $nav_pm_bar_asset; ?>" alt="">
         </div>
         <?php
