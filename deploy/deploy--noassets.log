@@ -250,3 +250,35 @@ Finished at [2020/05/31 23:47] (in 1 seconds)
 ----------------------------------------------
 
 
+Started at [2020/06/01 00:04]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--noassets.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/sys
+Ignoring ./assets                       
+
+Uploading:
+(1 of 4) /View/bar_mobile.view.html.php
+(2 of 4) /View/footer.view.html.php
+(3 of 4) /View/index.view.html.php
+(4 of 4) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(1 of 4) Renaming /View/bar_mobile.view.html.php
+(2 of 4) Renaming /View/footer.view.html.php
+(3 of 4) Renaming /View/index.view.html.php
+(4 of 4) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/06/01 00:04] (in 1 seconds)
+----------------------------------------------
+
+
