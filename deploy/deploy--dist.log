@@ -2760,3 +2760,134 @@ Finished at [2020/05/10 07:07] (in 2 seconds)
 ----------------------------------------------
 
 
+Started at [2020/05/31 11:26]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+
+Uploading:
+(1 of 9) /www/master-l-prod.css.map
+(2 of 9) /www/master-d-prod.css.map
+(3 of 9) /www/master-d-prod.min.css
+(4 of 9) /www/master-l-prod.min.css
+(5 of 9) /www/master.min.js
+(6 of 9) /sys/assets/images/images/page_10/team/nikita.png
+(7 of 9) /sys/assets/images/images/page_10/team/sanya.png
+(8 of 9) /sys/modules/Team.class.module.php
+(9 of 9) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(1 of 9) Renaming /www/master-l-prod.css.map
+(2 of 9) Renaming /www/master-d-prod.css.map
+(3 of 9) Renaming /www/master-d-prod.min.css
+(4 of 9) Renaming /www/master-l-prod.min.css
+(5 of 9) Renaming /www/master.min.js
+(6 of 9) Renaming /sys/assets/images/images/page_10/team/nikita.png
+(7 of 9) Renaming /sys/assets/images/images/page_10/team/sanya.png
+(8 of 9) Renaming /sys/modules/Team.class.module.php
+(9 of 9) Renaming /.htdeployment
+
+Deleting:
+( 1 of 86) Deleting /sys/assets/icons/vector_dev (copy)/window-maximize.svg
+( 2 of 86) Deleting /sys/assets/icons/vector_dev (copy)/window-close.svg
+( 3 of 86) Deleting /sys/assets/icons/vector_dev (copy)/wa.svg
+( 4 of 86) Deleting /sys/assets/icons/vector_dev (copy)/up.svg
+( 5 of 86) Deleting /sys/assets/icons/vector_dev (copy)/trashRed.svg
+( 6 of 86) Deleting /sys/assets/icons/vector_dev (copy)/trash.svg
+( 7 of 86) Deleting /sys/assets/icons/vector_dev (copy)/thebility.svg
+( 8 of 86) Deleting /sys/assets/icons/vector_dev (copy)/telega.svg
+( 9 of 86) Deleting /sys/assets/icons/vector_dev (copy)/tel.svg
+(10 of 86) Deleting /sys/assets/icons/vector_dev (copy)/team.svg
+(11 of 86) Deleting /sys/assets/icons/vector_dev (copy)/settings.svg
+(12 of 86) Deleting /sys/assets/icons/vector_dev (copy)/print.svg
+(13 of 86) Deleting /sys/assets/icons/vector_dev (copy)/posts.svg
+(14 of 86) Deleting /sys/assets/icons/vector_dev (copy)/pm.svg
+(15 of 86) Deleting /sys/assets/icons/vector_dev (copy)/pencil.svg
+(16 of 86) Deleting /sys/assets/icons/vector_dev (copy)/minus-circle.svg
+(17 of 86) Deleting /sys/assets/icons/vector_dev (copy)/mails.svg
+(18 of 86) Deleting /sys/assets/icons/vector_dev (copy)/mail.svg
+(19 of 86) Deleting /sys/assets/icons/vector_dev (copy)/lang.svg
+(20 of 86) Deleting /sys/assets/icons/vector_dev (copy)/insta.svg
+(21 of 86) Deleting /sys/assets/icons/vector_dev (copy)/info.svg
+(22 of 86) Deleting /sys/assets/icons/vector_dev (copy)/gavel.svg
+(23 of 86) Deleting /sys/assets/icons/vector_dev (copy)/finance.svg
+(24 of 86) Deleting /sys/assets/icons/vector_dev (copy)/fb.svg
+(25 of 86) Deleting /sys/assets/icons/vector_dev (copy)/eye.svg
+(26 of 86) Deleting /sys/assets/icons/vector_dev (copy)/exit.svg
+(27 of 86) Deleting /sys/assets/icons/vector_dev (copy)/drag.svg
+(28 of 86) Deleting /sys/assets/icons/vector_dev (copy)/down.svg
+(29 of 86) Deleting /sys/assets/icons/vector_dev (copy)/date.svg
+(30 of 86) Deleting /sys/assets/icons/vector_dev (copy)/close.svg
+(31 of 86) Deleting /sys/assets/icons/vector_dev (copy)/clock.svg
+(32 of 86) Deleting /sys/assets/icons/vector_dev (copy)/checkbox-marked-circle.svg
+(33 of 86) Deleting /sys/assets/icons/vector_dev (copy)/calculator.svg
+(34 of 86) Deleting /sys/assets/icons/vector_dev (copy)/atach.svg
+(35 of 86) Deleting /sys/assets/icons/vector_dev (copy)/add2.svg
+(36 of 86) Deleting /sys/assets/icons/vector_dev (copy)/add.svg
+(37 of 86) Deleting /sys/assets/icons/vector_dev (copy)/9.svg
+(38 of 86) Deleting /sys/assets/icons/vector_dev (copy)/7.svg
+(39 of 86) Deleting /sys/assets/icons/vector_dev (copy)/6.svg
+(40 of 86) Deleting /sys/assets/icons/vector_dev (copy)/44.svg
+(41 of 86) Deleting /sys/assets/icons/vector_dev (copy)/43.svg
+(42 of 86) Deleting /sys/assets/icons/vector_dev (copy)/42.svg
+(43 of 86) Deleting /sys/assets/icons/vector_dev (copy)/41.svg
+(44 of 86) Deleting /sys/assets/icons/vector_dev (copy)/40.svg
+(45 of 86) Deleting /sys/assets/icons/vector_dev (copy)/4.svg
+(46 of 86) Deleting /sys/assets/icons/vector_dev (copy)/39.svg
+(47 of 86) Deleting /sys/assets/icons/vector_dev (copy)/38.svg
+(48 of 86) Deleting /sys/assets/icons/vector_dev (copy)/37.svg
+(49 of 86) Deleting /sys/assets/icons/vector_dev (copy)/36.svg
+(50 of 86) Deleting /sys/assets/icons/vector_dev (copy)/35.svg
+(51 of 86) Deleting /sys/assets/icons/vector_dev (copy)/34.svg
+(52 of 86) Deleting /sys/assets/icons/vector_dev (copy)/33.svg
+(53 of 86) Deleting /sys/assets/icons/vector_dev (copy)/32.svg
+(54 of 86) Deleting /sys/assets/icons/vector_dev (copy)/31.svg
+(55 of 86) Deleting /sys/assets/icons/vector_dev (copy)/30.svg
+(56 of 86) Deleting /sys/assets/icons/vector_dev (copy)/3.svg
+(57 of 86) Deleting /sys/assets/icons/vector_dev (copy)/29.svg
+(58 of 86) Deleting /sys/assets/icons/vector_dev (copy)/28.svg
+(59 of 86) Deleting /sys/assets/icons/vector_dev (copy)/27.svg
+(60 of 86) Deleting /sys/assets/icons/vector_dev (copy)/26a.svg
+(61 of 86) Deleting /sys/assets/icons/vector_dev (copy)/26.svg
+(62 of 86) Deleting /sys/assets/icons/vector_dev (copy)/25a.svg
+(63 of 86) Deleting /sys/assets/icons/vector_dev (copy)/25.svg
+(64 of 86) Deleting /sys/assets/icons/vector_dev (copy)/24.svg
+(65 of 86) Deleting /sys/assets/icons/vector_dev (copy)/23.svg
+(66 of 86) Deleting /sys/assets/icons/vector_dev (copy)/22.svg
+(67 of 86) Deleting /sys/assets/icons/vector_dev (copy)/21.svg
+(68 of 86) Deleting /sys/assets/icons/vector_dev (copy)/20.svg
+(69 of 86) Deleting /sys/assets/icons/vector_dev (copy)/2.svg
+(70 of 86) Deleting /sys/assets/icons/vector_dev (copy)/19.svg
+(71 of 86) Deleting /sys/assets/icons/vector_dev (copy)/18.svg
+(72 of 86) Deleting /sys/assets/icons/vector_dev (copy)/17b.svg
+(73 of 86) Deleting /sys/assets/icons/vector_dev (copy)/17.svg
+(74 of 86) Deleting /sys/assets/icons/vector_dev (copy)/16.svg
+(75 of 86) Deleting /sys/assets/icons/vector_dev (copy)/15.svg
+(76 of 86) Deleting /sys/assets/icons/vector_dev (copy)/14.svg
+(77 of 86) Deleting /sys/assets/icons/vector_dev (copy)/13.svg
+(78 of 86) Deleting /sys/assets/icons/vector_dev (copy)/12.svg
+(79 of 86) Deleting /sys/assets/icons/vector_dev (copy)/11.svg
+(80 of 86) Deleting /sys/assets/icons/vector_dev (copy)/100a.svg
+(81 of 86) Deleting /sys/assets/icons/vector_dev (copy)/100.svg
+(82 of 86) Deleting /sys/assets/icons/vector_dev (copy)/10.svg
+(83 of 86) Deleting /sys/assets/icons/vector_dev (copy)/1.svg
+(84 of 86) Deleting /sys/assets/icons/vector_dev (copy)/0.svg
+(85 of 86) Deleting /sys/assets/icons/vector_dev (copy)/
+(86 of 86) Deleting /sys/assets/icons/vector/2.svg
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/05/31 11:27] (in 9 seconds)
+----------------------------------------------
+
+
