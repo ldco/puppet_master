@@ -2891,3 +2891,54 @@ Finished at [2020/05/31 11:27] (in 9 seconds)
 ----------------------------------------------
 
 
+Started at [2020/05/31 17:32]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+
+Uploading:
+( 1 of 14) /www/master-l-prod.css.map
+( 2 of 14) /www/master-d-prod.css.map
+( 3 of 14) /www/master-d-prod.min.css
+( 4 of 14) /www/master-l-prod.min.css
+( 5 of 14) /www/master.min.js
+( 6 of 14) /sys/assets/images/images/page_13/
+( 7 of 14) /sys/assets/images/images/page_13/blog/
+( 8 of 14) /sys/assets/images/images/page_13/blog/brik21.png
+( 9 of 14) /sys/modules/Blog.class.module.php
+(10 of 14) /sys/modules/Team.class.module.php
+(11 of 14) /sys/modules/Catalog.class.module.php
+(12 of 14) /sys/Pages/10.page.php
+(13 of 14) /sys/Pages/13.page.php
+(14 of 14) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+( 1 of 12) Renaming /www/master-l-prod.css.map
+( 2 of 12) Renaming /www/master-d-prod.css.map
+( 3 of 12) Renaming /www/master-d-prod.min.css
+( 4 of 12) Renaming /www/master-l-prod.min.css
+( 5 of 12) Renaming /www/master.min.js
+( 6 of 12) Renaming /sys/assets/images/images/page_13/blog/brik21.png
+( 7 of 12) Renaming /sys/modules/Blog.class.module.php
+( 8 of 12) Renaming /sys/modules/Team.class.module.php
+( 9 of 12) Renaming /sys/modules/Catalog.class.module.php
+(10 of 12) Renaming /sys/Pages/10.page.php
+(11 of 12) Renaming /sys/Pages/13.page.php
+(12 of 12) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/05/31 17:32] (in 8 seconds)
+----------------------------------------------
+
+

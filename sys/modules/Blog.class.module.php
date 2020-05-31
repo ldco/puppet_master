@@ -26,7 +26,7 @@ class Blog
 
                 echo '<div class="pm_blog_name">' . $row["name_" . PM_LANG] . '</div>';
 
-                echo '<img src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["blog_img"] . '.png">';
+                echo '<img src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["blog_id"] . '/' . $row["blog_img"] . '.png">';
 
                 echo '<div class="pm_blog_text">' . $row["text_" . PM_LANG] . '</div>';
                 echo '<div class="pm_blog_date">' . $row["blog_date"] . '</div>';
