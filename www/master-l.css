@@ -2084,6 +2084,14 @@ iframe[src*=youtube] {
   [data-mob=false] .pm_mobileHeader {
     display: none !important; } }
 
+.pm_class_Bar,
+.pm_bar_scrolled {
+  box-shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.1); }
+
+.pm_mobileBar,
+.pm_mobileHeader {
+  box-shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.5); }
+
 .pm_barLogo {
   width: 12vw;
   height: 6vh;
@@ -2535,10 +2543,8 @@ body {
   .pm_mobileNav .nav_item,
   .pm_mobileNav .nav_admin_item {
     color: #00070a;
-    /* display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%; */ }
+    display: flex;
+    width: 100%; }
     [dir=ltr] .pm_mobileNav .nav_item img, [dir=ltr]
     .pm_mobileNav .nav_item span, [dir=ltr]
     .pm_mobileNav .nav_admin_item img, [dir=ltr]

@@ -8,6 +8,10 @@ function setRouter() {
     els.forEach(el => {
         el.addEventListener("click", function() {
             getThisContentView(this);
+            setTimeout(() => {
+                removeHamburger();
+
+            }, 50);
         });
     });
 }

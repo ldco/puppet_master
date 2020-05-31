@@ -145,7 +145,7 @@
             }
             @if $PM_NAV_ICONS==false {
                 span {
-                    @include hor_navfontsize(3);
+                    @include hor_navfontsize();
                     display: flex;
                     align-items: center;
                     justify-content: center;

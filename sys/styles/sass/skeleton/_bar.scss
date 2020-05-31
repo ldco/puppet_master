@@ -14,6 +14,19 @@
     }
 }
 
+//shadow
+$pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.1);
+$pm_bar_mob_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.5);
+.pm_class_Bar,
+.pm_bar_scrolled {
+    box-shadow: $pm_bar_shadow;
+}
+
+.pm_mobileBar,
+.pm_mobileHeader {
+    box-shadow: $pm_bar_mob_shadow;
+}
+
 //
 .pm_barLogo {
     width: map-get($horBar, logo_width);

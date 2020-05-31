@@ -195,20 +195,26 @@ function setHamburgerMenu() {
         mobileBar.style.transition = "ease 1s";
       }, 10);
     } else {
-      helperDiv.remove();
-
-      if (PM_LTR) {
-        mobileBar.style.left = "-60vw";
-      } else {
-        mobileBar.style.right = "-60vw";
-      }
-
-      mobileBar.style.transition = "ease 0.2s";
-      setTimeout(function () {
-        mobileBar.style.display = "none";
-      }, 10);
+      removeHamburger();
     }
   });
+}
+
+function removeHamburger() {
+  document.querySelectorAll(".pm_hamburger")[0].classList.remove("is-active");
+  document.querySelector(".hamburgerHelperDiv").remove();
+  var mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
+
+  if (PM_LTR) {
+    mobileBar.style.left = "-60vw";
+  } else {
+    mobileBar.style.right = "-60vw";
+  }
+
+  mobileBar.style.transition = "ease 0.8s";
+  setTimeout(function () {
+    mobileBar.style.display = "none";
+  }, 800);
 }
 "use strict";
 
@@ -224,6 +230,9 @@ function setRouter() {
   els.forEach(function (el) {
     el.addEventListener("click", function () {
       getThisContentView(this);
+      setTimeout(function () {
+        removeHamburger();
+      }, 50);
     });
   });
 }
