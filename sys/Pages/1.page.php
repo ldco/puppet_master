@@ -9,7 +9,7 @@ $page1 = new Page();
 ?>
 
 
-<div id='mainLogo'><img src='<?= PM_IMAGES_REL ?>brand/barLogo.svg'></div>
+<div id='mainLogo'><img alt="logo" src='<?= PM_IMAGES_REL ?>brand/barLogo.svg'></div>
 
 <div id='bgVideoEffect'></div>
 

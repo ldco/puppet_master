@@ -27,7 +27,7 @@
     <?php
     require_once "../vendor/xlad/formr/class.formr.php"; ?>
 
-    <div class="adminTitle"><img src="../<?= PM_IMAGES_REL ?>brand/barLogo.svg"></div>
+    <div class="adminTitle"><img alt="logo" src="../<?= PM_IMAGES_REL ?>brand/barLogo.svg"></div>
 
     <?php
     $form = new Formr();

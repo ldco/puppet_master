@@ -140,3 +140,55 @@ Finished at [2020/05/31 22:51] (in 14 seconds)
 ----------------------------------------------
 
 
+Started at [2020/05/31 23:26]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--noassets.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/sys
+Ignoring ./assets                       
+
+Uploading:
+( 1 of 14) /modules/Blog.class.module.php
+( 2 of 14) /modules/Page.class.module.php
+( 3 of 14) /modules/Swiper.class.module.php
+( 4 of 14) /modules/Team.class.module.php
+( 5 of 14) /modules/Catalog.class.module.php
+( 6 of 14) /modules/Files.class.module.php
+( 7 of 14) /modules/Contacts.class.module.php
+( 8 of 14) /View/bar_mobile.view.html.php
+( 9 of 14) /View/nav.view.html.php
+(10 of 14) /View/nav_lang.view.html.php
+(11 of 14) /View/logout.view.html.php
+(12 of 14) /View/index.view.html.php
+(13 of 14) /View/bar_skeleton.view.html.php
+(14 of 14) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+( 1 of 14) Renaming /modules/Blog.class.module.php
+( 2 of 14) Renaming /modules/Page.class.module.php
+( 3 of 14) Renaming /modules/Swiper.class.module.php
+( 4 of 14) Renaming /modules/Team.class.module.php
+( 5 of 14) Renaming /modules/Catalog.class.module.php
+( 6 of 14) Renaming /modules/Files.class.module.php
+( 7 of 14) Renaming /modules/Contacts.class.module.php
+( 8 of 14) Renaming /View/bar_mobile.view.html.php
+( 9 of 14) Renaming /View/nav.view.html.php
+(10 of 14) Renaming /View/nav_lang.view.html.php
+(11 of 14) Renaming /View/logout.view.html.php
+(12 of 14) Renaming /View/index.view.html.php
+(13 of 14) Renaming /View/bar_skeleton.view.html.php
+(14 of 14) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/05/31 23:26] (in 2 seconds)
+----------------------------------------------
+
+
