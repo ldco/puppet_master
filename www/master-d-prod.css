@@ -4867,13 +4867,7 @@ input.pm_modal_button {
       cursor: pointer; }
       [data-mob=true] #logoGrid div img {
         max-width: 96%;
-        max-height: 96%; }
-    [data-mob=true] #logoGrid div {
-      -webkit-filter: grayscale(1) brightness(0.5);
-              filter: grayscale(1) brightness(0.5); }
-      [data-mob=true] #logoGrid div:hover {
-        -webkit-filter: grayscale(0) brightness(1);
-                filter: grayscale(0) brightness(1); } }
+        max-height: 96%; } }
 
 @media (min-width: 1210px) {
   [data-mob=false] #logoGrid {
@@ -4905,27 +4899,15 @@ input.pm_modal_button {
       cursor: pointer; }
       [data-mob=false] #logoGrid div img {
         max-width: 96%;
-        max-height: 96%; }
-    [data-mob=false] #logoGrid div {
-      -webkit-filter: grayscale(1) brightness(0.5);
-              filter: grayscale(1) brightness(0.5); }
-      [data-mob=false] #logoGrid div:hover {
-        -webkit-filter: grayscale(0) brightness(1);
-                filter: grayscale(0) brightness(1); } }
+        max-height: 96%; } }
 
 #logoGrid {
   margin-top: 5vh;
   margin-bottom: 5vh; }
-  #logoGrid div {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2vh;
-    border: solid 0.2vh rgba(41, 69, 82, 0.6); }
-    #logoGrid div:hover {
-      -webkit-transition: 0.2s;
-      -o-transition: 0.2s;
-      transition: 0.2s;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 4vh; }
+  #logoGrid div:hover {
+    /*   transition: 0.2s;
+            background: rgba(#fff, 0.9);
+            border-radius: 4vh; */ }
 
 .page2img {
   width: 96%; }

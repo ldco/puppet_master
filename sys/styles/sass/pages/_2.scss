@@ -28,9 +28,9 @@
     #logoGrid {
         @include pmGrid(4, 1vw);
         div {
-            filter: grayscale(1) brightness(0.5);
+            // filter: grayscale(1) brightness(0.5);
             &:hover {
-                filter: grayscale(0) brightness(1);
+                // filter: grayscale(0) brightness(1);
             }
         }
     }
@@ -40,13 +40,13 @@
     margin-top: 5vh;
     margin-bottom: 5vh;
     div {
-        background: rgba(#fff, 0.1);
-        border-radius: 2vh;
-        border: solid 0.2vh rgba($c_brand, 0.6);
+        // background: rgba(#fff, 0.1);
+        //  border-radius: 2vh;
+        // border: solid 0.2vh rgba($c_brand, 0.6);
         &:hover {
-            transition: 0.2s;
+            /*   transition: 0.2s;
             background: rgba(#fff, 0.9);
-            border-radius: 4vh;
+            border-radius: 4vh; */
         }
     }
 }
