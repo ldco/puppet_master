@@ -8,10 +8,10 @@
                 <div class="hamburger-inner"></div>
             </div>
         </div>
-        <div id="mobileHeaderLogo"><img src="<?= $navBarLogoMob ?>">
+        <div id="mobileHeaderLogo"><img alt="logo" src="<?= $navBarLogoMob ?>">
 
         </div>
-        <img class="pm_bar_asset anim" src="<?= $nav_pm_bar_asset; ?>" alt="">
+        <img alt="bar asset" class="pm_bar_asset anim" src="<?= $nav_pm_bar_asset; ?>" alt="">
         </div>
         <?php
         if ($admin) :

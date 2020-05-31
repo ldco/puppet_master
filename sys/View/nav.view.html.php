@@ -4,7 +4,7 @@
                 <div id="<?= $navElementID; ?>" class="<?= $navItemClass; ?>">
                         <a href="<?= $navElemURL; ?>" id="pm_<?= $navElementID; ?>" onclick="<?= $navRenderJS; ?>">
                         <?php endif; ?>
-                        <img src="<?= $navImgSrc; ?>" alt="" <?php if (!empty($navRenderJS)) echo 'onclick="' . $navRenderJS . '"'; ?>>
+                        <img alt="menu icon" src="<?= $navImgSrc; ?>" <?php if (!empty($navRenderJS)) echo 'onclick="' . $navRenderJS . '"'; ?>>
                         <span><?= $navLang; ?></span>
                         <?php if (!$admin) : ?>
                         </a>

@@ -2942,3 +2942,40 @@ Finished at [2020/05/31 17:32] (in 8 seconds)
 ----------------------------------------------
 
 
+Started at [2020/05/31 22:57]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+
+Uploading:
+(1 of 4) /sys/assets/images/images/page_13/blog/1/
+(2 of 4) /sys/assets/images/images/page_13/blog/1/brik21.png
+(3 of 4) /sys/modules/Blog.class.module.php
+(4 of 4) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(1 of 3) Renaming /sys/assets/images/images/page_13/blog/1/brik21.png
+(2 of 3) Renaming /sys/modules/Blog.class.module.php
+(3 of 3) Renaming /.htdeployment
+
+Deleting:
+(1 of 3) Deleting /sys/assets/images/images/page_13/blog/brik21.png
+(2 of 3) Deleting /sys/assets/images/images/page_10/team/sanya.png
+(3 of 3) Deleting /sys/assets/images/images/page_10/team/nikita.png
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/05/31 22:57] (in 3 seconds)
+----------------------------------------------
+
+

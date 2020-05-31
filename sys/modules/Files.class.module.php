@@ -43,7 +43,7 @@ class Files
                     echo '</div>';
                 }
                 //IMG
-                echo '<img src="' . $path . '/' . $val . '"></div>';
+                echo '<img alt="' . $this->folder . '-image" src="' . $path . '/' . $val . '"></div>';
             }
             if ($this->imgNetto == true) {
 
@@ -54,7 +54,7 @@ class Files
                     echo '</div>';
                 }
                 //IMG
-                echo '<img class="' . $childClass . '" src="' . $path . '/' . $val . '">';
+                echo '<img alt="' . $this->folder . '-image" class="' . $childClass . '" src="' . $path . '/' . $val . '">';
             }
         }
         echo '</div>';

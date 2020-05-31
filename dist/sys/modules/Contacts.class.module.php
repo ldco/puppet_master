@@ -41,7 +41,7 @@ class Contacts
     {
         echo '<div class="' . $this->class . '_item">';
         if ($this->img == true)
-            echo '<img class="' . $this->class . '_img" src="' . PM_ICONS_REL . $_row["img"] . '.' . $this->extension . '">';
+            echo '<img alt="contacts icons" class="' . $this->class . '_img" src="' . PM_ICONS_REL . $_row["img"] . '.' . $this->extension . '">';
         if ($this->text == true)
             echo '<span class="' . $this->class . '_text">' . $_row[PM_LANG] . ': </span>';
         echo '<span class="' . $this->class . '_link">';
@@ -70,7 +70,7 @@ class Contacts
         }
         echo $_row["link"] . '">';
 
-        echo '<img class="' . $this->classMob . '_img" src="' . PM_ICONS_REL . $_row["img"] . '.' . $this->extension . '">';
+        echo '<img alt="contacts icons" class="' . $this->classMob . '_img" src="' . PM_ICONS_REL . $_row["img"] . '.' . $this->extension . '">';
 
         echo '</a>';
         echo '</div>';

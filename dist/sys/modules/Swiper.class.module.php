@@ -18,7 +18,7 @@ class Swiper
         $count_files = count($scanned_files);
 
         for ($i = 1; $i < ($count_files + 1); $i++) {
-            echo '<div class="swiper-slide"><img src="' . $this->folder . '/' . $i . '.png"></div>';
+            echo '<div class="swiper-slide"><img alt="swiper-' . $class . '-img" src="' . $this->folder . '/' . $i . '.png"></div>';
         }
         echo '</div>';
 

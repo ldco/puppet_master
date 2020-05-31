@@ -75,7 +75,7 @@ class Page
         }
         global $PM_PAGE_NUM;
         $div_id = "page_{$PM_PAGE_NUM}_img_{$number}";
-        echo '<img id="' . $div_id . '" class="pm_img ' . $_class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">';
+        echo '<img alt="page_' . $PM_PAGE_NUM . '-img-' . $number . '" id="' . $div_id . '" class="pm_img ' . $_class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">';
     }
 
     public function close()
