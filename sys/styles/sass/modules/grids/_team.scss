@@ -52,6 +52,9 @@ $rankMobColumns: 1,
     align-items: center;
     flex-direction: column;
     width: 100vw;
+    a {
+        border-bottom: none;
+    }
 }
 
 .pm_team_item {
@@ -61,13 +64,6 @@ $rankMobColumns: 1,
     align-items: center;
     width: 100%;
     color: #666;
-    &:hover {
-        div,
-        span,
-        img {
-            filter: brightness(1.2);
-        }
-    }
     img {
         @if $LIGHT_THEME==true {
             box-shadow: 0 0 0.8vh 0 $c_shadow;
@@ -77,6 +73,9 @@ $rankMobColumns: 1,
         }
         border-radius: 50%;
         cursor: pointer;
+        &:hover {
+            filter: brightness(1.2);
+        }
     }
 }
 
