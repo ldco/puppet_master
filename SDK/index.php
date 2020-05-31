@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css/css.css">
 
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-<script src="JS/init.js"></script>
+<script async src="JS/init.js"></script>
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="194x194" href="assets/favicons/favicon-194x194.png">
@@ -16,4 +16,4 @@
 
 ?>
 
-<script src="JS/modules/matrix.js"></script>
+<script async src="JS/modules/matrix.js"></script>
