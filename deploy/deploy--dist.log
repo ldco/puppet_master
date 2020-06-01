@@ -3058,3 +3058,40 @@ Finished at [2020/06/01 00:30] (in 6 seconds)
 ----------------------------------------------
 
 
+Started at [2020/06/01 01:10]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+
+Uploading:
+(1 of 6) /admin/View/login.view.html.php
+(2 of 6) /www/master.min.js
+(3 of 6) /sys/assets/images/images/page_1/10.png
+(4 of 6) /sys/SysInfo/sysInfoTemplate.view.html.php
+(5 of 6) /sys/View/depends.view.html.php
+(6 of 6) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(1 of 6) Renaming /admin/View/login.view.html.php
+(2 of 6) Renaming /www/master.min.js
+(3 of 6) Renaming /sys/assets/images/images/page_1/10.png
+(4 of 6) Renaming /sys/SysInfo/sysInfoTemplate.view.html.php
+(5 of 6) Renaming /sys/View/depends.view.html.php
+(6 of 6) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/06/01 01:10] (in 4 seconds)
+----------------------------------------------
+
+

@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
+require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
+
 
 class Files
 {
@@ -33,28 +35,37 @@ class Files
         $i = 0;
         foreach ($scanned_files as $key => $val) {
 
+            $_val = pathinfo($val, PATHINFO_FILENAME);
+
             //ITEM DIV
             if ($this->imgNetto == false) {
                 echo '<div class="' . $childClass . '">';
                 //TITLE
                 if ($this->title) {
                     echo '<div class="' . $childClass . ' grid_title">';
-                    echo pathinfo($val, PATHINFO_FILENAME);
+                    echo $_val;
                     echo '</div>';
                 }
                 //IMG
-                echo '<img alt="' . $this->folder . '-image" src="' . $path . '/' . $val . '"></div>';
+                /*  echo '<img alt="' . $this->folder . '-image" src="' . $path . '/' . $val . '"></div>'; */
+
+
+                pmImg($this->folder . "-image", $path . "/" . $_val);
+
+                echo '</div>';
             }
             if ($this->imgNetto == true) {
 
                 //TITLE
                 if ($this->title) {
                     echo '<div class="' . $childClass . ' grid_title">';
-                    echo pathinfo($val, PATHINFO_FILENAME);
+                    echo $_val;
                     echo '</div>';
                 }
                 //IMG
-                echo '<img alt="' . $this->folder . '-image" class="' . $childClass . '" src="' . $path . '/' . $val . '">';
+                /*  echo '<img alt="' . $this->folder . '-image" class="' . $childClass . '" src="' . $path . '/' . $val . '">'; */
+
+                pmImg($this->folder . "-image", $path . "/" . $_val, $childClass);
             }
         }
         echo '</div>';
