@@ -60,6 +60,7 @@
              .pm_text {
                  width: 90vw;
                  line-height: 130%;
+                 @include f-size($basicTextSize - 0.1);
              }
          }
          

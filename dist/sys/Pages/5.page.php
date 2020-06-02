@@ -12,6 +12,5 @@ $page5->h(1);
 $page5->text("1", "pm_intro_text");
 $softGrid = new Files;
 $softGrid->folder = "softGrid";
-$softGrid->ext = "png";
 $softGrid->make();
 $page5->close();

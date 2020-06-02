@@ -4725,14 +4725,16 @@ input.pm_modal_button {
     font-size: 3vh; }
   [data-mob="true"] .pm_text {
     width: 90vw;
-    line-height: 130%; } }
+    line-height: 130%;
+    font-size: 2.7vh; } }
 
 @media (min-width: 1210px) {
   [data-mob="false"] a {
     font-size: 3vh; }
   [data-mob="false"] .pm_text {
     width: 90vw;
-    line-height: 130%; } }
+    line-height: 130%;
+    font-size: 2.7vh; } }
 
 [lang=en] .pm_text {
   font-family: Montserrat;
