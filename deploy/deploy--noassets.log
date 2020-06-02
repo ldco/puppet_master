@@ -368,3 +368,65 @@ Finished at [2020/06/01 01:02] (in 2 seconds)
 ----------------------------------------------
 
 
+Started at [2020/06/02 20:40]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--noassets.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/sys
+Ignoring ./assets                       
+
+Uploading:
+( 1 of 19) /modules/Blog.class.module.php
+( 2 of 19) /modules/Page.class.module.php
+( 3 of 19) /modules/Swiper.class.module.php
+( 4 of 19) /modules/Team.class.module.php
+( 5 of 19) /modules/Catalog.class.module.php
+( 6 of 19) /modules/Files.class.module.php
+( 7 of 19) /modules/thebility/thebility.view.php
+( 8 of 19) /modules/Contacts.class.module.php
+( 9 of 19) /Pages/6.page.php
+(10 of 19) /Pages/7.page.php
+(11 of 19) /Pages/4.page.php
+(12 of 19) /Pages/9.page.php
+(13 of 19) /Pages/1.page.php
+(14 of 19) /Pages/2.page.php
+(15 of 19) /helpers/pmImg.fun.help.php
+(16 of 19) /View/nav_lang.view.html.php
+(17 of 19) /View/index.view.html.php
+(18 of 19) /View/bar_skeleton.view.html.php
+(19 of 19) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+( 1 of 19) Renaming /modules/Blog.class.module.php
+( 2 of 19) Renaming /modules/Page.class.module.php
+( 3 of 19) Renaming /modules/Swiper.class.module.php
+( 4 of 19) Renaming /modules/Team.class.module.php
+( 5 of 19) Renaming /modules/Catalog.class.module.php
+( 6 of 19) Renaming /modules/Files.class.module.php
+( 7 of 19) Renaming /modules/thebility/thebility.view.php
+( 8 of 19) Renaming /modules/Contacts.class.module.php
+( 9 of 19) Renaming /Pages/6.page.php
+(10 of 19) Renaming /Pages/7.page.php
+(11 of 19) Renaming /Pages/4.page.php
+(12 of 19) Renaming /Pages/9.page.php
+(13 of 19) Renaming /Pages/1.page.php
+(14 of 19) Renaming /Pages/2.page.php
+(15 of 19) Renaming /helpers/pmImg.fun.help.php
+(16 of 19) Renaming /View/nav_lang.view.html.php
+(17 of 19) Renaming /View/index.view.html.php
+(18 of 19) Renaming /View/bar_skeleton.view.html.php
+(19 of 19) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/06/02 20:40] (in 3 seconds)
+----------------------------------------------
+
+

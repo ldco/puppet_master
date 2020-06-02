@@ -20,7 +20,8 @@ div {
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-    img {
+    img,
+    picture {
         max-width: 96%;
         max-height: 96%;
     }

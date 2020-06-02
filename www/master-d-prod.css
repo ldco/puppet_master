@@ -4884,7 +4884,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #logoGrid div img {
+      [data-mob="true"] #logoGrid div img,
+      [data-mob="true"] #logoGrid div picture {
         max-width: 96%;
         max-height: 96%; } }
 
@@ -4916,7 +4917,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #logoGrid div img {
+      [data-mob="false"] #logoGrid div img,
+      [data-mob="false"] #logoGrid div picture {
         max-width: 96%;
         max-height: 96%; } }
 
@@ -4948,7 +4950,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #logoGrid div img {
+      [data-mob="true"] #logoGrid div img,
+      [data-mob="true"] #logoGrid div picture {
         max-width: 96%;
         max-height: 96%; } }
 
@@ -4980,7 +4983,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #logoGrid div img {
+      [data-mob="false"] #logoGrid div img,
+      [data-mob="false"] #logoGrid div picture {
         max-width: 96%;
         max-height: 96%; } }
 
@@ -5039,7 +5043,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #internetGrid div img {
+      [data-mob="true"] #internetGrid div img,
+      [data-mob="true"] #internetGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #internetGrid div {
@@ -5074,7 +5079,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #internetGrid div img {
+      [data-mob="false"] #internetGrid div img,
+      [data-mob="false"] #internetGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #internetGrid div {
@@ -5109,7 +5115,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #internetGrid div img {
+      [data-mob="true"] #internetGrid div img,
+      [data-mob="true"] #internetGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #internetGrid div {
@@ -5150,7 +5157,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #internetGrid div img {
+      [data-mob="false"] #internetGrid div img,
+      [data-mob="false"] #internetGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #internetGrid div {
@@ -5200,7 +5208,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #softGrid div img {
+      [data-mob="true"] #softGrid div img,
+      [data-mob="true"] #softGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #softGrid img {
@@ -5235,7 +5244,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #softGrid div img {
+      [data-mob="false"] #softGrid div img,
+      [data-mob="false"] #softGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #softGrid img {
@@ -5269,7 +5279,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #softGrid div img {
+      [data-mob="true"] #softGrid div img,
+      [data-mob="true"] #softGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #softGrid img {
@@ -5303,7 +5314,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #softGrid div img {
+      [data-mob="false"] #softGrid div img,
+      [data-mob="false"] #softGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #softGrid img {
@@ -5352,7 +5364,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #fontsGrid div img {
+      [data-mob="true"] #fontsGrid div img,
+      [data-mob="true"] #fontsGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #fontsGrid div {
@@ -5393,7 +5406,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #fontsGrid div img {
+      [data-mob="false"] #fontsGrid div img,
+      [data-mob="false"] #fontsGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #fontsGrid div {
@@ -5434,7 +5448,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #fontsGrid div img {
+      [data-mob="true"] #fontsGrid div img,
+      [data-mob="true"] #fontsGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #fontsGrid div {
@@ -5475,7 +5490,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #fontsGrid div img {
+      [data-mob="false"] #fontsGrid div img,
+      [data-mob="false"] #fontsGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #fontsGrid div {
@@ -5533,7 +5549,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #printGrid div img {
+      [data-mob="true"] #printGrid div img,
+      [data-mob="true"] #printGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #printGrid div {
@@ -5571,7 +5588,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #printGrid div img {
+      [data-mob="false"] #printGrid div img,
+      [data-mob="false"] #printGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #printGrid div {
@@ -5609,7 +5627,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #printGrid div img {
+      [data-mob="true"] #printGrid div img,
+      [data-mob="true"] #printGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #printGrid div {
@@ -5647,7 +5666,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #printGrid div img {
+      [data-mob="false"] #printGrid div img,
+      [data-mob="false"] #printGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #printGrid div {
@@ -5685,7 +5705,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #motiongraphicsGrid div img {
+      [data-mob="true"] #motiongraphicsGrid div img,
+      [data-mob="true"] #motiongraphicsGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #motiongraphicsGrid div {
@@ -5723,7 +5744,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #motiongraphicsGrid div img {
+      [data-mob="false"] #motiongraphicsGrid div img,
+      [data-mob="false"] #motiongraphicsGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #motiongraphicsGrid div {
@@ -5761,7 +5783,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="true"] #motiongraphicsGrid div img {
+      [data-mob="true"] #motiongraphicsGrid div img,
+      [data-mob="true"] #motiongraphicsGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="true"] #motiongraphicsGrid div {
@@ -5799,7 +5822,8 @@ input.pm_modal_button {
           -ms-flex-direction: column;
               flex-direction: column;
       cursor: pointer; }
-      [data-mob="false"] #motiongraphicsGrid div img {
+      [data-mob="false"] #motiongraphicsGrid div img,
+      [data-mob="false"] #motiongraphicsGrid div picture {
         max-width: 96%;
         max-height: 96%; }
     [data-mob="false"] #motiongraphicsGrid div {
