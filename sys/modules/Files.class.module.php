@@ -11,7 +11,7 @@ class Files
     public $title;
     public $folder;
     public $imgNetto = false;
-    public $array_sort = 'natsort';
+    public $array_sort = "natsort";
     public function make($childClass = null, $class = null)
     {
         global $PM_PAGE_NUM;
@@ -66,7 +66,7 @@ class Files
                     echo '</div>';
                 }
                 //IMG
-                pmImg($this->folder . "-image", $path . "/" . $_val, $childClass);
+                pmImg($this->folder . "-image", $path . "/" . $_val, $svg, $childClass);
             }
         }
         echo '</div>';

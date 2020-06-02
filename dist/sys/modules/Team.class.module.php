@@ -7,6 +7,8 @@ declare(strict_types=1);
 use sys\Controller\DB;
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
+require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
+
 
 class Team
 {
@@ -23,7 +25,12 @@ class Team
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="' . $childClass . ' pm_team_item pm_team_rank_' . $row["rank"] . '">';
-                echo '<a href="#' . $PM_PAGE_NUM . "/" . $row["name_en"] . '"><img alt="team ' . $row["name_en"] . '-img" src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["img"] . '.png"></a>';
+                echo '<a href="#' . $PM_PAGE_NUM . "/" . $row["name_en"] . '">';
+
+
+                pmImg("team-" . $row["name_en"] . "-img", PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $this->folder . "/" . $row['img']);
+
+                echo '</a>';
                 echo '<div id="' . $PM_PAGE_NUM . "/" . $row["name_en"] . '" class="pm_team_name">' . $row["name_" . PM_LANG] . '</div>';
                 if (("job_" . PM_LANG !== "") || ("job_" . PM_LANG !== null)) echo '<div class="pm_team_job">' . $row["job_" . PM_LANG] . '</div>';
                 if (("bio_" . PM_LANG !== "") || ("bio_" . PM_LANG  !== null))  echo '<div class="pm_team_bio">' . $row["bio_" . PM_LANG] . '</div>';

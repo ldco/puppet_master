@@ -8,6 +8,8 @@ use sys\Controller\DB;
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
+require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
+
 
 class Page
 {
@@ -65,18 +67,31 @@ class Page
     }
 
 
-    public function img($number, $class = null, $src)
-
+    public function img($number, $src, $class = null)
     {
+        $_extension = pathinfo($src, PATHINFO_EXTENSION);
+        if ($_extension === "svg") {
+            $svg = true;
+        } else {
+            $svg = false;
+        }
         if ($class != null) {
             $_class = " " . $class;
         } else {
             $_class = "";
         }
         global $PM_PAGE_NUM;
-        $div_id = "page_{$PM_PAGE_NUM}_img_{$number}";
-        echo '<img alt="page_' . $PM_PAGE_NUM . '-img-' . $number . '" id="' . $div_id . '" class="pm_img ' . $_class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">';
+        $img_id = "page_{$PM_PAGE_NUM}_img_{$number}";
+
+        pmImg(
+            "page_" . $PM_PAGE_NUM . "-img-" . $number,
+            PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $src,
+            $svg,
+            "pm_img " . $_class,
+            $img_id
+        );
     }
+
 
     public function close()
     {

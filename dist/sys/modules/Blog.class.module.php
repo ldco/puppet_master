@@ -7,6 +7,7 @@ declare(strict_types=1);
 use sys\Controller\DB;
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
+require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
 
 class Blog
 {
@@ -26,7 +27,7 @@ class Blog
 
                 echo '<div class="pm_blog_name">' . $row["name_" . PM_LANG] . '</div>';
 
-                echo '<img alt="blog post-' . $row["blog_id"] . ' image" src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["blog_id"] . '/' . $row["blog_img"] . '.png">';
+                pmImg("blog post-{$row['blog_id']}-image", PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $this->folder . "/" . $row["blog_id"] . "/" . $row['blog_img']);
 
                 echo '<div class="pm_blog_text">' . $row["text_" . PM_LANG] . '</div>';
                 echo '<div class="pm_blog_date">' . $row["blog_date"] . '</div>';

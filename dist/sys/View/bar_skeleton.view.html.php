@@ -1,7 +1,9 @@
 <div id="<?= $navBarId; ?>" class="<?= $navBarClass; ?>">
     <?php if (!$admin) : ?>
         <a href="">
-            <div class="pm_barLogo"><img alt="logo" src="<?= $navBarLogoImg; ?>"></div>
+            <div class="pm_barLogo">
+                <img alt="logo" src="<?= $navBarLogoImg; ?>">
+            </div>
         </a>
     <?php
     endif;
@@ -23,6 +25,6 @@
             <?php if ($isAuthenticated) $modelBar->makeLogout(); ?>
         </div>
     <?php else : ?>
-        <img alt="bar asset" class="pm_bar_asset anim" src="<?= $nav_pm_bar_asset; ?>" alt="">
+        <?php pmImg("bar asset", $nav_pm_bar_asset, true, "pm_bar_asset anim"); ?>
     <?php endif; ?>
 </div>

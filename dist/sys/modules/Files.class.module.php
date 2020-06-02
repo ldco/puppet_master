@@ -3,13 +3,15 @@
 declare(strict_types=1);
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
+require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
+
 
 class Files
 {
     public $title;
     public $folder;
     public $imgNetto = false;
-    public $array_sort = 'natsort';
+    public $array_sort = "natsort";
     public function make($childClass = null, $class = null)
     {
         global $PM_PAGE_NUM;
@@ -33,28 +35,38 @@ class Files
         $i = 0;
         foreach ($scanned_files as $key => $val) {
 
+            $_val = pathinfo($val, PATHINFO_FILENAME);
+
+            $_extension = pathinfo($val, PATHINFO_EXTENSION);
+            if ($_extension === "svg") {
+                $svg = true;
+            } else {
+                $svg = false;
+            }
+
             //ITEM DIV
             if ($this->imgNetto == false) {
                 echo '<div class="' . $childClass . '">';
                 //TITLE
                 if ($this->title) {
                     echo '<div class="' . $childClass . ' grid_title">';
-                    echo pathinfo($val, PATHINFO_FILENAME);
+                    echo $_val;
                     echo '</div>';
                 }
-                //IMG
-                echo '<img alt="' . $this->folder . '-image" src="' . $path . '/' . $val . '"></div>';
+                pmImg($this->folder . "-image", $path . "/" . $_val, $svg);
+
+                echo '</div>';
             }
             if ($this->imgNetto == true) {
 
                 //TITLE
                 if ($this->title) {
                     echo '<div class="' . $childClass . ' grid_title">';
-                    echo pathinfo($val, PATHINFO_FILENAME);
+                    echo $_val;
                     echo '</div>';
                 }
                 //IMG
-                echo '<img alt="' . $this->folder . '-image" class="' . $childClass . '" src="' . $path . '/' . $val . '">';
+                pmImg($this->folder . "-image", $path . "/" . $_val, $svg, $childClass);
             }
         }
         echo '</div>';

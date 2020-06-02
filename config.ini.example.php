@@ -19,6 +19,8 @@ define("PM_BYWHOWEB", "https://fabrica21.com");
 define("PM_UNDERCONSTRACTION", false); // or true
 //theme
 define("PM_DEFAULT_THEME_LIGHT", true);
+//WEBP
+define("PM_WEBP", true);
 
 //sceleton items
 define("PM_BAR", true);

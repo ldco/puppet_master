@@ -12,7 +12,7 @@
 
 if ($isLocal) {
     $ifIsLocal = "true";
-    $ifIsDev = "";
+    $ifIsDev = "local";
 } else {
     $ifIsLocal = "false";
     if ($isDev) {
@@ -23,7 +23,7 @@ if ($isLocal) {
 }
 ?>
 
-<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>" data-admin="<?= $ifIsAdmin ?>" data-local="<?= $ifIsLocal ?>" data-dev="<?= $ifIsDev ?>">
+<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>" data-admin="<?= $ifIsAdmin ?>" data-local="<?= $ifIsLocal ?>" data-dev="<?= $ifIsDev ?>" data-webp="<?= var_export(PM_WEBP) ?>">
 
 <head>
     <title><?= PM_TITLE ?></title>

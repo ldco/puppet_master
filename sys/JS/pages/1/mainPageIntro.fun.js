@@ -1,6 +1,5 @@
 function mainPageIntro() {
     if (window.location.hash !== "" && window.location.hash !== "#1") return;
-
     let dir = document.getElementsByTagName("html")[0].getAttribute("dir");
 
     function getRandomInt(min, max) {
@@ -41,10 +40,19 @@ function mainPageIntro() {
             }, 500);
         }
     }
-
     presentation();
     let bgimages = ["", "", "", "", "", ""];
     let videoParent = document.getElementById("bgVideo");
+    let extension;
+
+    let dataWebpAtr = document.querySelector("html").getAttribute('data-webp');
+    let dataLocalAtr = document.querySelector("html").getAttribute('data-local');
+
+    if ((dataLocalAtr === "false") && (dataWebpAtr === "true")) {
+        extension = "webp";
+    } else {
+        extension = "png";
+    }
 
     function x(folder) {
         videoParent.style.backgroundImage =
@@ -52,10 +60,7 @@ function mainPageIntro() {
             folder +
             "/page_1/" +
             Math.floor(Math.random() * 10 + 1) +
-            ".png')";
+            "." + extension + "')";
     }
-
-
     x("images");
-
 }

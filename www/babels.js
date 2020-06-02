@@ -781,9 +781,18 @@ function mainPageIntro() {
   presentation();
   var bgimages = ["", "", "", "", "", ""];
   var videoParent = document.getElementById("bgVideo");
+  var extension;
+  var dataWebpAtr = document.querySelector("html").getAttribute('data-webp');
+  var dataLocalAtr = document.querySelector("html").getAttribute('data-local');
+
+  if (dataLocalAtr === "false" && dataWebpAtr === "true") {
+    extension = "webp";
+  } else {
+    extension = "png";
+  }
 
   function x(folder) {
-    videoParent.style.backgroundImage = "url('sys/assets/images/" + folder + "/page_1/" + Math.floor(Math.random() * 10 + 1) + ".png')";
+    videoParent.style.backgroundImage = "url('sys/assets/images/" + folder + "/page_1/" + Math.floor(Math.random() * 10 + 1) + "." + extension + "')";
   }
 
   x("images");
