@@ -14,6 +14,7 @@ $page2->inner();
 $page2->img(1, "two2.png", "page2img");
 $logoGrid1 = new Files;
 $logoGrid1->folder = "logoGrid";
+$logoGrid1->ext = "png";
 $logoGrid1->make();
 $page2->img(2, "twoIIc.png", "page2img");
 $page2->img(3, "tundraI.png", "page2img");

@@ -20,6 +20,7 @@ echo "</a>";
 $fontsGrid = new Files;
 $fontsGrid->folder = "fontsGrid";
 $fontsGrid->title = true;
+$fontsGrid->ext = "png";
 $fontsGrid->make();
 echo "<br>";
 $page6->text("3", "pm_intro_text");

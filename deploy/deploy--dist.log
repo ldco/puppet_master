@@ -3095,3 +3095,424 @@ Finished at [2020/06/01 01:10] (in 4 seconds)
 ----------------------------------------------
 
 
+Started at [2020/06/02 17:31]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--dist.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist
+Ignoring ./sys/assets/var/.gitkeep      
+Ignoring ./sys/assets/fonts/.gitkeep    
+
+Uploading:
+(  1 of 198) /www/master-l-prod.css.map
+(  2 of 198) /www/master-d-prod.css.map
+(  3 of 198) /www/master-d-prod.min.css
+(  4 of 198) /www/master-l-prod.min.css
+(  5 of 198) /www/master.min.js
+(  6 of 198) /sys/assets/images/images/page_2/tundraI.webp
+(  7 of 198) /sys/assets/images/images/page_2/two2.webp
+(  8 of 198) /sys/assets/images/images/page_2/logoGrid/3a.webp
+(  9 of 198) /sys/assets/images/images/page_2/logoGrid/55.webp
+( 10 of 198) /sys/assets/images/images/page_2/logoGrid/8al.webp
+( 11 of 198) /sys/assets/images/images/page_2/logoGrid/8.webp
+( 12 of 198) /sys/assets/images/images/page_2/logoGrid/51.webp
+( 13 of 198) /sys/assets/images/images/page_2/logoGrid/52.webp
+( 14 of 198) /sys/assets/images/images/page_2/logoGrid/50a.webp
+( 15 of 198) /sys/assets/images/images/page_2/logoGrid/38.webp
+( 16 of 198) /sys/assets/images/images/page_2/logoGrid/7al.webp
+( 17 of 198) /sys/assets/images/images/page_2/logoGrid/17.webp
+( 18 of 198) /sys/assets/images/images/page_2/logoGrid/13.webp
+( 19 of 198) /sys/assets/images/images/page_2/logoGrid/54.webp
+( 20 of 198) /sys/assets/images/images/page_2/logoGrid/20.webp
+( 21 of 198) /sys/assets/images/images/page_2/logoGrid/11al.webp
+( 22 of 198) /sys/assets/images/images/page_2/logoGrid/16.webp
+( 23 of 198) /sys/assets/images/images/page_2/logoGrid/3b.webp
+( 24 of 198) /sys/assets/images/images/page_2/logoGrid/44.webp
+( 25 of 198) /sys/assets/images/images/page_2/logoGrid/48.webp
+( 26 of 198) /sys/assets/images/images/page_2/logoGrid/41.webp
+( 27 of 198) /sys/assets/images/images/page_2/logoGrid/1.webp
+( 28 of 198) /sys/assets/images/images/page_2/logoGrid/18.webp
+( 29 of 198) /sys/assets/images/images/page_2/logoGrid/19.webp
+( 30 of 198) /sys/assets/images/images/page_2/logoGrid/2a.webp
+( 31 of 198) /sys/assets/images/images/page_2/logoGrid/43.webp
+( 32 of 198) /sys/assets/images/images/page_2/logoGrid/14.webp
+( 33 of 198) /sys/assets/images/images/page_2/logoGrid/59.webp
+( 34 of 198) /sys/assets/images/images/page_2/logoGrid/5.webp
+( 35 of 198) /sys/assets/images/images/page_2/logoGrid/53.webp
+( 36 of 198) /sys/assets/images/images/page_2/logoGrid/11.webp
+( 37 of 198) /sys/assets/images/images/page_2/logoGrid/18a.webp
+( 38 of 198) /sys/assets/images/images/page_2/logoGrid/45.webp
+( 39 of 198) /sys/assets/images/images/page_2/logoGrid/4.webp
+( 40 of 198) /sys/assets/images/images/page_2/logoGrid/15.webp
+( 41 of 198) /sys/assets/images/images/page_2/logoGrid/57.webp
+( 42 of 198) /sys/assets/images/images/page_2/logoGrid/12.webp
+( 43 of 198) /sys/assets/images/images/page_2/logoGrid/10.webp
+( 44 of 198) /sys/assets/images/images/page_2/logoGrid/13al.webp
+( 45 of 198) /sys/assets/images/images/page_2/logoGrid/21.webp
+( 46 of 198) /sys/assets/images/images/page_2/logoGrid/56.webp
+( 47 of 198) /sys/assets/images/images/page_2/logoGrid/2.webp
+( 48 of 198) /sys/assets/images/images/page_2/logoGrid/38a.webp
+( 49 of 198) /sys/assets/images/images/page_2/logoGrid/9.webp
+( 50 of 198) /sys/assets/images/images/page_2/logoGrid/17al.webp
+( 51 of 198) /sys/assets/images/images/page_2/logoGrid/10al.webp
+( 52 of 198) /sys/assets/images/images/page_2/logoGrid/61.webp
+( 53 of 198) /sys/assets/images/images/page_2/logoGrid/46.webp
+( 54 of 198) /sys/assets/images/images/page_2/logoGrid/47.webp
+( 55 of 198) /sys/assets/images/images/page_2/logoGrid/5al.webp
+( 56 of 198) /sys/assets/images/images/page_2/logoGrid/22.webp
+( 57 of 198) /sys/assets/images/images/page_2/logoGrid/37.webp
+( 58 of 198) /sys/assets/images/images/page_2/logoGrid/9al.webp
+( 59 of 198) /sys/assets/images/images/page_2/logoGrid/20a.webp
+( 60 of 198) /sys/assets/images/images/page_2/logoGrid/40.webp
+( 61 of 198) /sys/assets/images/images/page_2/logoGrid/21a.webp
+( 62 of 198) /sys/assets/images/images/page_2/logoGrid/39.webp
+( 63 of 198) /sys/assets/images/images/page_2/logoGrid/7.webp
+( 64 of 198) /sys/assets/images/images/page_2/logoGrid/58.webp
+( 65 of 198) /sys/assets/images/images/page_2/logoGrid/42.webp
+( 66 of 198) /sys/assets/images/images/page_2/logoGrid/6.webp
+( 67 of 198) /sys/assets/images/images/page_2/logoGrid/60.webp
+( 68 of 198) /sys/assets/images/images/page_2/twoIIc.webp
+( 69 of 198) /sys/assets/images/images/page_6/fontsGrid/strokes.webp
+( 70 of 198) /sys/assets/images/images/page_6/fontsGrid/skechers.webp
+( 71 of 198) /sys/assets/images/images/page_6/fontsGrid/kimchi.webp
+( 72 of 198) /sys/assets/images/images/page_6/fontsGrid/eco.webp
+( 73 of 198) /sys/assets/images/images/page_6/fontsGrid/patch serif.webp
+( 74 of 198) /sys/assets/images/images/page_6/fontsGrid/yam suf.webp
+( 75 of 198) /sys/assets/images/images/page_6/fontsGrid/josef.webp
+( 76 of 198) /sys/assets/images/images/page_6/fontsGrid/miso.webp
+( 77 of 198) /sys/assets/images/images/page_6/fontsGrid/har sinai.webp
+( 78 of 198) /sys/assets/images/images/page_6/fontsGrid/lilach.webp
+( 79 of 198) /sys/assets/images/images/page_6/fontsGrid/noam.webp
+( 80 of 198) /sys/assets/images/images/page_6/fontsGrid/amit.webp
+( 81 of 198) /sys/assets/images/images/page_6/fontsGrid/daniel.webp
+( 82 of 198) /sys/assets/images/images/page_6/fontsGrid/sayfan.webp
+( 83 of 198) /sys/assets/images/images/page_6/fontsGrid/patch sans.webp
+( 84 of 198) /sys/assets/images/images/page_6/fontsGrid/sticks.webp
+( 85 of 198) /sys/assets/images/images/page_6/fontsGrid/patch stencil.webp
+( 86 of 198) /sys/assets/images/images/page_6/fontsGrid/hidekel.webp
+( 87 of 198) /sys/assets/images/images/page_6/fontsGrid/mixer.webp
+( 88 of 198) /sys/assets/images/images/page_6/fontsGrid/neo.webp
+( 89 of 198) /sys/assets/images/images/page_10/team/joker.webp
+( 90 of 198) /sys/assets/images/images/page_10/team/king.webp
+( 91 of 198) /sys/assets/images/images/page_10/team/louis.webp
+( 92 of 198) /sys/assets/images/images/page_10/team/lorem.webp
+( 93 of 198) /sys/assets/images/images/page_10/team/queen.webp
+( 94 of 198) /sys/assets/images/images/page_9/artGrid/CirclesB.webp
+( 95 of 198) /sys/assets/images/images/page_9/artGrid/Bubi.webp
+( 96 of 198) /sys/assets/images/images/page_9/artGrid/TrilogyA1.webp
+( 97 of 198) /sys/assets/images/images/page_9/artGrid/TWallA.webp
+( 98 of 198) /sys/assets/images/images/page_9/artGrid/Che.webp
+( 99 of 198) /sys/assets/images/images/page_9/artGrid/BonApetit_01.webp
+(100 of 198) /sys/assets/images/images/page_9/artGrid/5crabs1.webp
+(101 of 198) /sys/assets/images/images/page_9/artGrid/jokerHat1.webp
+(102 of 198) /sys/assets/images/images/page_9/artGrid/GunsNRosesDT.webp
+(103 of 198) /sys/assets/images/images/page_9/artGrid/masti171.webp
+(104 of 198) /sys/assets/images/images/page_9/artGrid/queen1.webp
+(105 of 198) /sys/assets/images/images/page_9/artGrid/CirclesA.webp
+(106 of 198) /sys/assets/images/images/page_9/artGrid/map1.webp
+(107 of 198) /sys/assets/images/images/page_9/artGrid/hevel.webp
+(108 of 198) /sys/assets/images/images/page_9/artGrid/BeRovHohma.webp
+(109 of 198) /sys/assets/images/images/page_9/artGrid/map3.webp
+(110 of 198) /sys/assets/images/images/page_9/artGrid/hem1-2.webp
+(111 of 198) /sys/assets/images/images/page_9/artGrid/WindRose1.webp
+(112 of 198) /sys/assets/images/images/page_9/artGrid/LaChute.webp
+(113 of 198) /sys/assets/images/images/page_9/artGrid/PastelLinesDTCOMP.webp
+(114 of 198) /sys/assets/images/images/page_9/artGrid/gagarin1-2.webp
+(115 of 198) /sys/assets/images/images/page_9/artGrid/ZebrasA.webp
+(116 of 198) /sys/assets/images/images/page_9/artGrid/Jack1.webp
+(117 of 198) /sys/assets/images/images/page_9/artGrid/TrilogyA2.webp
+(118 of 198) /sys/assets/images/images/page_9/artGrid/chessNONflatDT.webp
+(119 of 198) /sys/assets/images/images/page_9/artGrid/Goethe2.webp
+(120 of 198) /sys/assets/images/images/page_9/artGrid/Ghost1_01.webp
+(121 of 198) /sys/assets/images/images/page_9/artGrid/dollar1DT.webp
+(122 of 198) /sys/assets/images/images/page_9/artGrid/einstein2.webp
+(123 of 198) /sys/assets/images/images/page_9/artGrid/TrilogyA3.webp
+(124 of 198) /sys/assets/images/images/page_9/artGrid/ChessFLAT1DT.webp
+(125 of 198) /sys/assets/images/images/page_9/artGrid/TWallB.webp
+(126 of 198) /sys/assets/images/images/page_9/artGrid/king1.webp
+(127 of 198) /sys/assets/images/images/page_9/artGrid/napoleoin2.webp
+(128 of 198) /sys/assets/images/images/page_9/artGrid/neon1_01.webp
+(129 of 198) /sys/assets/images/images/page_9/artGrid/OtiotA.webp
+(130 of 198) /sys/assets/images/images/page_9/artGrid/map2-2.webp
+(131 of 198) /sys/assets/images/images/page_9/artGrid/CubesWallA.webp
+(132 of 198) /sys/assets/images/images/page_9/artGrid/linesDT.webp
+(133 of 198) /sys/assets/images/images/page_9/artGrid/KesefHakol.webp
+(134 of 198) /sys/assets/images/images/page_9/artGrid/StrokesA.webp
+(135 of 198) /sys/assets/images/images/page_7/printGrid/Cards3dShadow2.webp
+(136 of 198) /sys/assets/images/images/page_7/printGrid/1052.webp
+(137 of 198) /sys/assets/images/images/page_7/printGrid/cartaTEX.webp
+(138 of 198) /sys/assets/images/images/page_7/printGrid/chessrender20141920.webp
+(139 of 198) /sys/assets/images/images/page_7/printGrid/MenuShadow1.webp
+(140 of 198) /sys/assets/images/images/page_7/printGrid/verso.webp
+(141 of 198) /sys/assets/images/images/page_7/printGrid/allcards3dsvg1MB.webp
+(142 of 198) /sys/assets/images/images/page_7/printGrid/karty2dallinonepngs1MB.webp
+(143 of 198) /sys/assets/images/images/page_7/printGrid/sumoS2.webp
+(144 of 198) /sys/assets/images/images/page_7/printGrid/Cards2dShadow.webp
+(145 of 198) /sys/assets/images/images/page_7/printGrid/JOURNAL.webp
+(146 of 198) /sys/assets/images/images/page_7/printGrid/diplomKravMAga.webp
+(147 of 198) /sys/assets/images/images/page_7/printGrid/BuycardPrint2.webp
+(148 of 198) /sys/assets/images/images/page_7/printGrid/books.webp
+(149 of 198) /sys/assets/images/images/page_7/printGrid/VISITS3dShadow.webp
+(150 of 198) /sys/assets/images/images/page_3/swipe/8.webp
+(151 of 198) /sys/assets/images/images/page_3/swipe/13.webp
+(152 of 198) /sys/assets/images/images/page_3/swipe/1.webp
+(153 of 198) /sys/assets/images/images/page_3/swipe/3.webp
+(154 of 198) /sys/assets/images/images/page_3/swipe/5.webp
+(155 of 198) /sys/assets/images/images/page_3/swipe/11.webp
+(156 of 198) /sys/assets/images/images/page_3/swipe/4.webp
+(157 of 198) /sys/assets/images/images/page_3/swipe/12.webp
+(158 of 198) /sys/assets/images/images/page_3/swipe/10.webp
+(159 of 198) /sys/assets/images/images/page_3/swipe/2.webp
+(160 of 198) /sys/assets/images/images/page_3/swipe/9.webp
+(161 of 198) /sys/assets/images/images/page_3/swipe/7.webp
+(162 of 198) /sys/assets/images/images/page_3/swipe/6.webp
+(163 of 198) /sys/assets/images/images/page_1/8.webp
+(164 of 198) /sys/assets/images/images/page_1/1.webp
+(165 of 198) /sys/assets/images/images/page_1/3.webp
+(166 of 198) /sys/assets/images/images/page_1/5.webp
+(167 of 198) /sys/assets/images/images/page_1/4.webp
+(168 of 198) /sys/assets/images/images/page_1/10.webp
+(169 of 198) /sys/assets/images/images/page_1/2.webp
+(170 of 198) /sys/assets/images/images/page_1/9.webp
+(171 of 198) /sys/assets/images/images/page_1/7.webp
+(172 of 198) /sys/assets/images/images/page_1/6.webp
+(173 of 198) /sys/assets/images/images/page_5/softGrid/9.svg
+(174 of 198) /sys/assets/images/images/page_13/blog/1/brik21.webp
+(175 of 198) /sys/assets/images/images/page_4/internetGrid/8.webp
+(176 of 198) /sys/assets/images/images/page_4/internetGrid/1.webp
+(177 of 198) /sys/assets/images/images/page_4/internetGrid/3.webp
+(178 of 198) /sys/assets/images/images/page_4/internetGrid/5.webp
+(179 of 198) /sys/assets/images/images/page_4/internetGrid/4.webp
+(180 of 198) /sys/assets/images/images/page_4/internetGrid/2.webp
+(181 of 198) /sys/assets/images/images/page_4/internetGrid/7.webp
+(182 of 198) /sys/assets/images/images/page_4/internetGrid/6.webp
+(183 of 198) /sys/modules/Blog.class.module.php
+(184 of 198) /sys/modules/Page.class.module.php
+(185 of 198) /sys/modules/Swiper.class.module.php
+(186 of 198) /sys/modules/Team.class.module.php
+(187 of 198) /sys/modules/Catalog.class.module.php
+(188 of 198) /sys/modules/Files.class.module.php
+(189 of 198) /sys/modules/thebility/thebility.view.php
+(190 of 198) /sys/modules/Contacts.class.module.php
+(191 of 198) /sys/Pages/6.page.php
+(192 of 198) /sys/Pages/1.page.php
+(193 of 198) /sys/Pages/2.page.php
+(194 of 198) /sys/helpers/pmImg.fun.help.php
+(195 of 198) /sys/View/nav_lang.view.html.php
+(196 of 198) /sys/View/index.view.html.php
+(197 of 198) /sys/View/bar_skeleton.view.html.php
+(198 of 198) /.htdeployment
+Creating remote file .htdeployment.running
+
+Renaming:
+(  1 of 198) Renaming /www/master-l-prod.css.map
+(  2 of 198) Renaming /www/master-d-prod.css.map
+(  3 of 198) Renaming /www/master-d-prod.min.css
+(  4 of 198) Renaming /www/master-l-prod.min.css
+(  5 of 198) Renaming /www/master.min.js
+(  6 of 198) Renaming /sys/assets/images/images/page_2/tundraI.webp
+(  7 of 198) Renaming /sys/assets/images/images/page_2/two2.webp
+(  8 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/3a.webp
+(  9 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/55.webp
+( 10 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/8al.webp
+( 11 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/8.webp
+( 12 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/51.webp
+( 13 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/52.webp
+( 14 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/50a.webp
+( 15 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/38.webp
+( 16 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/7al.webp
+( 17 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/17.webp
+( 18 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/13.webp
+( 19 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/54.webp
+( 20 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/20.webp
+( 21 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/11al.webp
+( 22 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/16.webp
+( 23 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/3b.webp
+( 24 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/44.webp
+( 25 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/48.webp
+( 26 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/41.webp
+( 27 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/1.webp
+( 28 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/18.webp
+( 29 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/19.webp
+( 30 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/2a.webp
+( 31 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/43.webp
+( 32 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/14.webp
+( 33 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/59.webp
+( 34 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/5.webp
+( 35 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/53.webp
+( 36 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/11.webp
+( 37 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/18a.webp
+( 38 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/45.webp
+( 39 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/4.webp
+( 40 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/15.webp
+( 41 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/57.webp
+( 42 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/12.webp
+( 43 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/10.webp
+( 44 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/13al.webp
+( 45 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/21.webp
+( 46 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/56.webp
+( 47 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/2.webp
+( 48 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/38a.webp
+( 49 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/9.webp
+( 50 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/17al.webp
+( 51 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/10al.webp
+( 52 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/61.webp
+( 53 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/46.webp
+( 54 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/47.webp
+( 55 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/5al.webp
+( 56 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/22.webp
+( 57 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/37.webp
+( 58 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/9al.webp
+( 59 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/20a.webp
+( 60 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/40.webp
+( 61 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/21a.webp
+( 62 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/39.webp
+( 63 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/7.webp
+( 64 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/58.webp
+( 65 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/42.webp
+( 66 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/6.webp
+( 67 of 198) Renaming /sys/assets/images/images/page_2/logoGrid/60.webp
+( 68 of 198) Renaming /sys/assets/images/images/page_2/twoIIc.webp
+( 69 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/strokes.webp
+( 70 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/skechers.webp
+( 71 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/kimchi.webp
+( 72 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/eco.webp
+( 73 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/patch serif.webp
+( 74 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/yam suf.webp
+( 75 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/josef.webp
+( 76 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/miso.webp
+( 77 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/har sinai.webp
+( 78 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/lilach.webp
+( 79 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/noam.webp
+( 80 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/amit.webp
+( 81 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/daniel.webp
+( 82 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/sayfan.webp
+( 83 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/patch sans.webp
+( 84 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/sticks.webp
+( 85 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/patch stencil.webp
+( 86 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/hidekel.webp
+( 87 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/mixer.webp
+( 88 of 198) Renaming /sys/assets/images/images/page_6/fontsGrid/neo.webp
+( 89 of 198) Renaming /sys/assets/images/images/page_10/team/joker.webp
+( 90 of 198) Renaming /sys/assets/images/images/page_10/team/king.webp
+( 91 of 198) Renaming /sys/assets/images/images/page_10/team/louis.webp
+( 92 of 198) Renaming /sys/assets/images/images/page_10/team/lorem.webp
+( 93 of 198) Renaming /sys/assets/images/images/page_10/team/queen.webp
+( 94 of 198) Renaming /sys/assets/images/images/page_9/artGrid/CirclesB.webp
+( 95 of 198) Renaming /sys/assets/images/images/page_9/artGrid/Bubi.webp
+( 96 of 198) Renaming /sys/assets/images/images/page_9/artGrid/TrilogyA1.webp
+( 97 of 198) Renaming /sys/assets/images/images/page_9/artGrid/TWallA.webp
+( 98 of 198) Renaming /sys/assets/images/images/page_9/artGrid/Che.webp
+( 99 of 198) Renaming /sys/assets/images/images/page_9/artGrid/BonApetit_01.webp
+(100 of 198) Renaming /sys/assets/images/images/page_9/artGrid/5crabs1.webp
+(101 of 198) Renaming /sys/assets/images/images/page_9/artGrid/jokerHat1.webp
+(102 of 198) Renaming /sys/assets/images/images/page_9/artGrid/GunsNRosesDT.webp
+(103 of 198) Renaming /sys/assets/images/images/page_9/artGrid/masti171.webp
+(104 of 198) Renaming /sys/assets/images/images/page_9/artGrid/queen1.webp
+(105 of 198) Renaming /sys/assets/images/images/page_9/artGrid/CirclesA.webp
+(106 of 198) Renaming /sys/assets/images/images/page_9/artGrid/map1.webp
+(107 of 198) Renaming /sys/assets/images/images/page_9/artGrid/hevel.webp
+(108 of 198) Renaming /sys/assets/images/images/page_9/artGrid/BeRovHohma.webp
+(109 of 198) Renaming /sys/assets/images/images/page_9/artGrid/map3.webp
+(110 of 198) Renaming /sys/assets/images/images/page_9/artGrid/hem1-2.webp
+(111 of 198) Renaming /sys/assets/images/images/page_9/artGrid/WindRose1.webp
+(112 of 198) Renaming /sys/assets/images/images/page_9/artGrid/LaChute.webp
+(113 of 198) Renaming /sys/assets/images/images/page_9/artGrid/PastelLinesDTCOMP.webp
+(114 of 198) Renaming /sys/assets/images/images/page_9/artGrid/gagarin1-2.webp
+(115 of 198) Renaming /sys/assets/images/images/page_9/artGrid/ZebrasA.webp
+(116 of 198) Renaming /sys/assets/images/images/page_9/artGrid/Jack1.webp
+(117 of 198) Renaming /sys/assets/images/images/page_9/artGrid/TrilogyA2.webp
+(118 of 198) Renaming /sys/assets/images/images/page_9/artGrid/chessNONflatDT.webp
+(119 of 198) Renaming /sys/assets/images/images/page_9/artGrid/Goethe2.webp
+(120 of 198) Renaming /sys/assets/images/images/page_9/artGrid/Ghost1_01.webp
+(121 of 198) Renaming /sys/assets/images/images/page_9/artGrid/dollar1DT.webp
+(122 of 198) Renaming /sys/assets/images/images/page_9/artGrid/einstein2.webp
+(123 of 198) Renaming /sys/assets/images/images/page_9/artGrid/TrilogyA3.webp
+(124 of 198) Renaming /sys/assets/images/images/page_9/artGrid/ChessFLAT1DT.webp
+(125 of 198) Renaming /sys/assets/images/images/page_9/artGrid/TWallB.webp
+(126 of 198) Renaming /sys/assets/images/images/page_9/artGrid/king1.webp
+(127 of 198) Renaming /sys/assets/images/images/page_9/artGrid/napoleoin2.webp
+(128 of 198) Renaming /sys/assets/images/images/page_9/artGrid/neon1_01.webp
+(129 of 198) Renaming /sys/assets/images/images/page_9/artGrid/OtiotA.webp
+(130 of 198) Renaming /sys/assets/images/images/page_9/artGrid/map2-2.webp
+(131 of 198) Renaming /sys/assets/images/images/page_9/artGrid/CubesWallA.webp
+(132 of 198) Renaming /sys/assets/images/images/page_9/artGrid/linesDT.webp
+(133 of 198) Renaming /sys/assets/images/images/page_9/artGrid/KesefHakol.webp
+(134 of 198) Renaming /sys/assets/images/images/page_9/artGrid/StrokesA.webp
+(135 of 198) Renaming /sys/assets/images/images/page_7/printGrid/Cards3dShadow2.webp
+(136 of 198) Renaming /sys/assets/images/images/page_7/printGrid/1052.webp
+(137 of 198) Renaming /sys/assets/images/images/page_7/printGrid/cartaTEX.webp
+(138 of 198) Renaming /sys/assets/images/images/page_7/printGrid/chessrender20141920.webp
+(139 of 198) Renaming /sys/assets/images/images/page_7/printGrid/MenuShadow1.webp
+(140 of 198) Renaming /sys/assets/images/images/page_7/printGrid/verso.webp
+(141 of 198) Renaming /sys/assets/images/images/page_7/printGrid/allcards3dsvg1MB.webp
+(142 of 198) Renaming /sys/assets/images/images/page_7/printGrid/karty2dallinonepngs1MB.webp
+(143 of 198) Renaming /sys/assets/images/images/page_7/printGrid/sumoS2.webp
+(144 of 198) Renaming /sys/assets/images/images/page_7/printGrid/Cards2dShadow.webp
+(145 of 198) Renaming /sys/assets/images/images/page_7/printGrid/JOURNAL.webp
+(146 of 198) Renaming /sys/assets/images/images/page_7/printGrid/diplomKravMAga.webp
+(147 of 198) Renaming /sys/assets/images/images/page_7/printGrid/BuycardPrint2.webp
+(148 of 198) Renaming /sys/assets/images/images/page_7/printGrid/books.webp
+(149 of 198) Renaming /sys/assets/images/images/page_7/printGrid/VISITS3dShadow.webp
+(150 of 198) Renaming /sys/assets/images/images/page_3/swipe/8.webp
+(151 of 198) Renaming /sys/assets/images/images/page_3/swipe/13.webp
+(152 of 198) Renaming /sys/assets/images/images/page_3/swipe/1.webp
+(153 of 198) Renaming /sys/assets/images/images/page_3/swipe/3.webp
+(154 of 198) Renaming /sys/assets/images/images/page_3/swipe/5.webp
+(155 of 198) Renaming /sys/assets/images/images/page_3/swipe/11.webp
+(156 of 198) Renaming /sys/assets/images/images/page_3/swipe/4.webp
+(157 of 198) Renaming /sys/assets/images/images/page_3/swipe/12.webp
+(158 of 198) Renaming /sys/assets/images/images/page_3/swipe/10.webp
+(159 of 198) Renaming /sys/assets/images/images/page_3/swipe/2.webp
+(160 of 198) Renaming /sys/assets/images/images/page_3/swipe/9.webp
+(161 of 198) Renaming /sys/assets/images/images/page_3/swipe/7.webp
+(162 of 198) Renaming /sys/assets/images/images/page_3/swipe/6.webp
+(163 of 198) Renaming /sys/assets/images/images/page_1/8.webp
+(164 of 198) Renaming /sys/assets/images/images/page_1/1.webp
+(165 of 198) Renaming /sys/assets/images/images/page_1/3.webp
+(166 of 198) Renaming /sys/assets/images/images/page_1/5.webp
+(167 of 198) Renaming /sys/assets/images/images/page_1/4.webp
+(168 of 198) Renaming /sys/assets/images/images/page_1/10.webp
+(169 of 198) Renaming /sys/assets/images/images/page_1/2.webp
+(170 of 198) Renaming /sys/assets/images/images/page_1/9.webp
+(171 of 198) Renaming /sys/assets/images/images/page_1/7.webp
+(172 of 198) Renaming /sys/assets/images/images/page_1/6.webp
+(173 of 198) Renaming /sys/assets/images/images/page_5/softGrid/9.svg
+(174 of 198) Renaming /sys/assets/images/images/page_13/blog/1/brik21.webp
+(175 of 198) Renaming /sys/assets/images/images/page_4/internetGrid/8.webp
+(176 of 198) Renaming /sys/assets/images/images/page_4/internetGrid/1.webp
+(177 of 198) Renaming /sys/assets/images/images/page_4/internetGrid/3.webp
+(178 of 198) Renaming /sys/assets/images/images/page_4/internetGrid/5.webp
+(179 of 198) Renaming /sys/assets/images/images/page_4/internetGrid/4.webp
+(180 of 198) Renaming /sys/assets/images/images/page_4/internetGrid/2.webp
+(181 of 198) Renaming /sys/assets/images/images/page_4/internetGrid/7.webp
+(182 of 198) Renaming /sys/assets/images/images/page_4/internetGrid/6.webp
+(183 of 198) Renaming /sys/modules/Blog.class.module.php
+(184 of 198) Renaming /sys/modules/Page.class.module.php
+(185 of 198) Renaming /sys/modules/Swiper.class.module.php
+(186 of 198) Renaming /sys/modules/Team.class.module.php
+(187 of 198) Renaming /sys/modules/Catalog.class.module.php
+(188 of 198) Renaming /sys/modules/Files.class.module.php
+(189 of 198) Renaming /sys/modules/thebility/thebility.view.php
+(190 of 198) Renaming /sys/modules/Contacts.class.module.php
+(191 of 198) Renaming /sys/Pages/6.page.php
+(192 of 198) Renaming /sys/Pages/1.page.php
+(193 of 198) Renaming /sys/Pages/2.page.php
+(194 of 198) Renaming /sys/helpers/pmImg.fun.help.php
+(195 of 198) Renaming /sys/View/nav_lang.view.html.php
+(196 of 198) Renaming /sys/View/index.view.html.php
+(197 of 198) Renaming /sys/View/bar_skeleton.view.html.php
+(198 of 198) Renaming /.htdeployment
+
+Deleting remote file .htdeployment.running
+
+
+
+Finished at [2020/06/02 17:33] (in 124 seconds)
+----------------------------------------------
+
+

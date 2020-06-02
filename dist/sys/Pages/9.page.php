@@ -14,5 +14,6 @@ echo "<div class='pm_loader'></div>";
 
 $artGrid = new Files;
 $artGrid->folder = "artGrid";
+$artGrid->ext = "png";
 $artGrid->make();
 $page9->close();

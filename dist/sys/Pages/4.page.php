@@ -11,5 +11,6 @@ $page4 = new Page();
 $page4->h(1);
 $internetGrid = new Files;
 $internetGrid->folder = "internetGrid";
+$internetGrid->ext = "png";
 $internetGrid->make();
 $page4->close();

@@ -12,6 +12,7 @@ $page7->h(1);
 
 $printGrid = new Files;
 $printGrid->folder = "printGrid";
+$printGrid->ext = "png";
 $printGrid->make();
 
 $page7->close();

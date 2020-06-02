@@ -12,6 +12,7 @@ class Files
     public $folder;
     public $imgNetto = false;
     public $array_sort = "natsort";
+    public $ext = null;
     public function make($childClass = null, $class = null)
     {
         global $PM_PAGE_NUM;
@@ -25,15 +26,23 @@ class Files
         //MAIN GRID DIV
         $path = PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $this->folder;
         echo '<div id="' . $this->folder . '"' . $_class . '>';
-        $scanned_files = array_diff(scandir($path), array('..', '.'));
+        if ($this->ext === null) {
+            $scanned_files = scandir($path);
+        } else {
+            $scanned_files =
+                preg_grep("~\.($this->ext)$~", scandir($path));
+        }
+
+        $files_array = array_diff($scanned_files, array('..', '.'));
         if ($this->array_sort === "natsort") {
-            natsort($scanned_files);
+            natsort($files_array);
         }
         if ($this->array_sort === "shuffle") {
-            shuffle($scanned_files);
+            shuffle($files_array);
         }
-        $i = 0;
-        foreach ($scanned_files as $key => $val) {
+
+
+        foreach ($files_array as $key => $val) {
 
             $_val = pathinfo($val, PATHINFO_FILENAME);
 
