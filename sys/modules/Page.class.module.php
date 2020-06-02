@@ -67,7 +67,7 @@ class Page
     }
 
 
-    public function img($number, $class = null, $src)
+    public function img($number, $src, $class = null)
     {
         $_extension = pathinfo($src, PATHINFO_EXTENSION);
         if ($_extension === "svg") {
@@ -83,7 +83,6 @@ class Page
         global $PM_PAGE_NUM;
         $img_id = "page_{$PM_PAGE_NUM}_img_{$number}";
 
-        /*  echo '<img alt="page_' . $PM_PAGE_NUM . '-img-' . $number . '" id="' . $img_id . '" class="pm_img ' . $_class . '" src="' . PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . '/' . $src . '">'; */
         pmImg(
             "page_" . $PM_PAGE_NUM . "-img-" . $number,
             PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $src,

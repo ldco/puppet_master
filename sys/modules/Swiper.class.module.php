@@ -3,6 +3,9 @@
 declare(strict_types=1);
 
 //namespace sys\modules;
+
+require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
+
 class Swiper
 {
 
@@ -18,7 +21,11 @@ class Swiper
         $count_files = count($scanned_files);
 
         for ($i = 1; $i < ($count_files + 1); $i++) {
-            echo '<div class="swiper-slide"><img alt="swiper-' . $class . '-img" src="' . $this->folder . '/' . $i . '.png"></div>';
+            echo '<div class="swiper-slide">';
+
+            pmImg("swiper-' . $class . '-img", $this->folder . "/" . $i);
+
+            echo '</div>';
         }
         echo '</div>';
 

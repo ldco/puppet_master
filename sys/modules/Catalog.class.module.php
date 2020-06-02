@@ -32,15 +32,15 @@ class Catalog
                 echo '<div class="' . $childClass . ' pm_catalog_item_category">' . pmTranslate(PM_LANG, "category", false) . ": " . $row[PM_LANG] . '</div>';
                 echo '<div class="' . $childClass . ' pm_catalog_item_subcategory">' . $row["subcategory"] . '</div>';
                 echo '<div class="' . $childClass . ' pm_catalog_item_images">';
-                /*  echo '<img alt="catalog product-' . $row["name"] . ' image" src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["ctlg_id"] . "/" . $row["img1"] . '">'; */
+
                 pmImg("catalog product-" . $row['name'] . "-image", PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $this->folder . "/" . $row['ctlg_id'] . "/" . $row['img1']);
 
                 if ($row["img2"] !== null) {
-                    /*  echo '<img alt="catalog product-' . $row["name"] . ' image" src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["img2"] . '.png">'; */
+
                     pmImg("catalog product-" . $row['name'] . "-image", PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $this->folder . "/" . $row['img2']);
                 }
                 if ($row["img3"] !== null) {
-                    /*  echo '<img alt="catalog product-' . $row["name"] . ' image" src="' . PM_IMAGES_REL . 'page_' . $PM_PAGE_NUM . '/' . $this->folder . '/' . $row["img3"] . '.png">'; */
+
 
                     pmImg("catalog product-" . $row['name'] . "-image", PM_IMAGES_REL . "page_" . $PM_PAGE_NUM . "/" . $this->folder . "/" . $row['img3']);
                 }

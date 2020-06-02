@@ -37,6 +37,13 @@ class Files
 
             $_val = pathinfo($val, PATHINFO_FILENAME);
 
+            $_extension = pathinfo($val, PATHINFO_EXTENSION);
+            if ($_extension === "svg") {
+                $svg = true;
+            } else {
+                $svg = false;
+            }
+
             //ITEM DIV
             if ($this->imgNetto == false) {
                 echo '<div class="' . $childClass . '">';
@@ -46,11 +53,7 @@ class Files
                     echo $_val;
                     echo '</div>';
                 }
-                //IMG
-                /*  echo '<img alt="' . $this->folder . '-image" src="' . $path . '/' . $val . '"></div>'; */
-
-
-                pmImg($this->folder . "-image", $path . "/" . $_val);
+                pmImg($this->folder . "-image", $path . "/" . $_val, $svg);
 
                 echo '</div>';
             }
@@ -63,8 +66,6 @@ class Files
                     echo '</div>';
                 }
                 //IMG
-                /*  echo '<img alt="' . $this->folder . '-image" class="' . $childClass . '" src="' . $path . '/' . $val . '">'; */
-
                 pmImg($this->folder . "-image", $path . "/" . $_val, $childClass);
             }
         }

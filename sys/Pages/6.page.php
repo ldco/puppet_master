@@ -15,7 +15,7 @@ $page6->text("1", "pm_intro_text");
 <?php
 $page6->text("2", "pm_intro_text");
 echo "<a id='gofanariumLink' href='http://ldcodesign.com/gofanarium/'>";
-$page6->img(1, "page6img", "gofanariumLogo.svg");
+$page6->img(1, "gofanariumLogo.svg", "page6img");
 echo "</a>";
 $fontsGrid = new Files;
 $fontsGrid->folder = "fontsGrid";

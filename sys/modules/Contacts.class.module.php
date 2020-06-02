@@ -73,8 +73,6 @@ class Contacts
         }
         echo $_row["link"] . '">';
 
-        /*  echo '<img alt="contacts icons" class="' . $this->classMob . '_img" src="' . PM_ICONS_REL . $_row["img"] . '.' . $this->extension . '">'; */
-
         pmImg("contacts-icons", PM_ICONS_REL . $_row["img"], true, $this->classMob . "_img");
 
         echo '</a>';

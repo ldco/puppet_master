@@ -2,6 +2,8 @@
 <?php
 
 require_once PM_HELPER . "pmTranslate.fun.php";
+require_once PM_HELPER . "pmImg.fun.help.php";
+
 
 
 $thebilityToggleIconSrc = PM_ICONS_REL . "thebility.svg";
@@ -14,19 +16,17 @@ else :
     $thebilityThemeBollean = "true";
 endif;
 ?>
-
 <div id="pm_thebility" class="thebility">
     <div id="thebilityIcon" class="thebility">
-        <img alt="thebility-icon" src="<?= $thebilityToggleIconSrc ?>" class="thebility">
+        <?php pmImg("thebility-icon", $thebilityToggleIconSrc, true, "thebility"); ?>
     </div>
-
     <div id="thebilityMainDiv" class="thebility">
         <div id="thebility_buttonsDiv" class="thebility">
             <div id="dragThebility" class="thebility">
-                <img alt="thebility-drag-icon" id="dragThebility" src="<?= $thebilityDragIconSrc ?>" class="thebility">
+                <?php pmImg("thebility-drag-icon", $thebilityDragIconSrc, true, "thebility"); ?>
             </div>
             <div id="closeThebility" class="thebility">
-                <img alt="thebility-close-icon" src="<?= $thebilityCloseIconSrc ?>" class="thebility">
+                <?php pmImg("thebility-close-icon", $thebilityCloseIconSrc, true, "thebility"); ?>
             </div>
         </div>
         <form id="form_lightDarkTheme" action="index.php" method="POST" onclick="javascript:this.submit();">

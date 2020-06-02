@@ -1,5 +1,5 @@
 <div class="pm_Lang">
-    <img alt="lang navigation" src="<?= $imgSrc; ?>" alt="">
+    <?php pmImg("lang navigation", $imgSrc, true); ?>
     <div class="<?= $navClass; ?>">
         <form action="<?= $navFormAction; ?>" method="POST">
             <?php foreach (PM_ALL_LANGS as $key) { ?>
