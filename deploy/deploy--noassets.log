@@ -430,3 +430,21 @@ Finished at [2020/06/02 20:40] (in 3 seconds)
 ----------------------------------------------
 
 
+Started at [2020/06/02 21:00]
+Config file is /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/deploy/deploy--noassets.php
+
+Deploying my site
+Note: connection is not encrypted
+Live mode
+Connecting to server
+Loaded remote .htdeployment file
+Scanning files in /mnt/sdb2/CURRENT_WORKING_DEV/f21app2020/root/dist/sys
+Ignoring ./assets                       
+Already synchronized.
+
+
+
+Finished at [2020/06/02 21:00] (in 0 seconds)
+----------------------------------------------
+
+
