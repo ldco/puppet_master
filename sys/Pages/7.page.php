@@ -9,10 +9,5 @@ require PM_ROOT . PM_SYS_FOLDER . "/modules/Files.class.module.php";
 
 $page7 = new Page();
 $page7->h(1);
-
-$printGrid = new Files;
-$printGrid->folder = "printGrid";
-$printGrid->ext = "png";
-$printGrid->make();
-
+$page7->inner();
 $page7->close();

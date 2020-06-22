@@ -750,27 +750,27 @@
     return svgCache[query] || (svgCache[query] = createElement(query, ns));
   }
 
-  /* common-shake removed: exports.List = */ void List;
-  /* common-shake removed: exports.ListPool = */ void ListPool;
-  /* common-shake removed: exports.Place = */ void Place;
-  /* common-shake removed: exports.Router = */ void Router;
+  exports.List = List;
+  exports.ListPool = ListPool;
+  exports.Place = Place;
+  exports.Router = Router;
   exports.el = el;
-  /* common-shake removed: exports.h = */ void h;
-  /* common-shake removed: exports.html = */ void html;
-  /* common-shake removed: exports.list = */ void list;
-  /* common-shake removed: exports.listPool = */ void listPool;
+  exports.h = h;
+  exports.html = html;
+  exports.list = list;
+  exports.listPool = listPool;
   exports.mount = mount;
-  /* common-shake removed: exports.place = */ void place;
-  /* common-shake removed: exports.router = */ void router;
-  /* common-shake removed: exports.s = */ void s;
-  /* common-shake removed: exports.setAttr = */ void setAttr;
-  /* common-shake removed: exports.setChildren = */ void setChildren;
-  /* common-shake removed: exports.setData = */ void setData;
-  /* common-shake removed: exports.setStyle = */ void setStyle;
-  /* common-shake removed: exports.setXlink = */ void setXlink;
-  /* common-shake removed: exports.svg = */ void svg;
-  /* common-shake removed: exports.text = */ void text;
-  /* common-shake removed: exports.unmount = */ void unmount;
+  exports.place = place;
+  exports.router = router;
+  exports.s = s;
+  exports.setAttr = setAttr;
+  exports.setChildren = setChildren;
+  exports.setData = setData;
+  exports.setStyle = setStyle;
+  exports.setXlink = setXlink;
+  exports.svg = svg;
+  exports.text = text;
+  exports.unmount = unmount;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
@@ -9708,8 +9708,8 @@ function initFun() {
   setGoTopButton();
   setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
   initModalLocalisation();
-  new Thebility().init();
-  mainPageIntro();
+  new Thebility().init(); // mainPageIntro();
+
   /*end of functions list!*/
 
   var setURL = window.location.hash;
@@ -9722,9 +9722,16 @@ function initFun() {
 "use strict";
 
 function setBarAsset() {
-  var el = document.querySelector("#pm_id_Bar .pm_bar_asset");
-  el.addEventListener("click", function () {//showPMInformation();
+  var el = document.querySelectorAll(".pm_bar_asset ");
+  el.forEach(function (element) {
+    element.addEventListener("click", function () {
+      barAssetFun();
+    });
   });
+
+  var barAssetFun = function barAssetFun() {
+    window.location.href = "admin/index.php";
+  };
 }
 
 "use strict";
@@ -10504,35 +10511,15 @@ function setPageFunctions() {
   if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
   var timeout = 500;
   var fun = {
-    fun_1: function fun_1() {
-      mainPageIntro();
-    },
-    fun_2: function fun_2() {
-      aosjs("logoGrid");
-    },
-    fun_3: function fun_3() {
-      archSlider();
-    },
-    fun_4: function fun_4() {
-      aosjs("internetGrid");
-    },
-    fun_6: function fun_6() {
-      aosjs("fontsGrid");
-      initDownloadFont();
-    },
-    fun_7: function fun_7() {
-      aosjs("printGrid");
-    },
-    fun_8: function fun_8() {
-      aosjs("motiongraphicsGrid");
-      pmLoader("iframe", "#pm_page_8", "load", "pm_loader1");
-    },
-    fun_9: function fun_9() {
-      macyjs("artGrid", 4);
-    },
-    fun_10: function fun_10() {
-      teamHelp();
-    },
+    fun_1: function fun_1() {},
+    fun_2: function fun_2() {},
+    fun_3: function fun_3() {},
+    fun_4: function fun_4() {},
+    fun_6: function fun_6() {},
+    fun_7: function fun_7() {},
+    fun_8: function fun_8() {},
+    fun_9: function fun_9() {},
+    fun_10: function fun_10() {},
     fun_11: function fun_11() {
       pmEmailLoader("11");
     }

@@ -44,7 +44,7 @@ if ($isLocal) {
     <?php endif; ?>
 
     <div id="pm_gototop">
-        <img alt="go top" src="<?= PM_ICONS_REL ?>/up.svg">
+        <img alt="go top" src="<?= PM_ICONS_REL ?>up.svg">
     </div>
 
     <?php if (!$isAdmin) :

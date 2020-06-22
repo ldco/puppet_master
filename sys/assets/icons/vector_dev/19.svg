@@ -50,13 +50,13 @@
   <g
      id="g817">
     <circle
-       style="fill:#294552;fill-opacity:1"
+       style="fill:#120000;fill-opacity:1"
        id="circle2"
        r="3.2"
        cy="12"
        cx="12" />
     <path
-       style="fill:#294552;fill-opacity:1"
+       style="fill:#120000;fill-opacity:1"
        id="path4"
        d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
     <path

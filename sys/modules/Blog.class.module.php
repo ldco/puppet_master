@@ -31,6 +31,7 @@ class Blog
 
                 echo '<div class="pm_blog_text">' . $row["text_" . PM_LANG] . '</div>';
                 echo '<div class="pm_blog_date">' . $row["blog_date"] . '</div>';
+                echo '</div>';
             }
         }
         echo '</div>';

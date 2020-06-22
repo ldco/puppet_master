@@ -9,7 +9,5 @@ require PM_ROOT . PM_SYS_FOLDER . "/modules/Team.class.module.php";
 
 $page10 = new Page();
 $page10->h(1);
-
-$teamGrid = new Team;
-
+$page10->inner();
 $page10->close();

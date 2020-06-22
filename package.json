@@ -13,9 +13,12 @@
         "folder": "core"
     },
     "scripts": {
+        "jpg-png": "./SDK/sh/jpg-png.sh",
         "copy--img-icons": "./SDK/sh/copy--img_icons.sh",
+        "png-resize": "./SDK/sh/png-resize.sh",
         "pngquant": "./SDK/sh/pngquant.sh",
         "cwebp": "./SDK/sh/cwebp.sh",
+        "ffmpeg": "./SDK/sh/ffmpeg.sh",
         "svgo--ico": "svgo -f ./$npm_package_sysFolder_folder/assets/icons/vector -r -o ./$npm_package_sysFolder_folder/assets/icons/vector --multipass",
         "svgo--imgs": "svgo -f ./$npm_package_sysFolder_folder/assets/images/images -r -o ./$npm_package_sysFolder_folder/assets/images/images --multipass",
         "sass--dev-l": "node-sass -w $npm_package_sysFolder_folder/styles/sass/master-l.scss www/master-l.css",
@@ -42,7 +45,7 @@
         "git": "./SDK/sh/git--main.sh",
         "g": "./SDK/sh/git--master.sh",
         "git--self": "./SDK/sh/git--self--deploy.sh",
-        "predist--assets": "npm run copy--img-icons && npm run pngquant && npm run cwebp && npm run svgo--ico && npm run svgo--imgs",
+        "predist--assets": "npm run jpg-png && npm run copy--img-icons && npm run png-resize && npm run pngquant && npm run cwebp && npm run svgo--ico && npm run svgo--imgs && npm run ffmpeg",
         "predist--js": "npm run babel--prod && npm run browserify && npm run uglify",
         "predist--css": "npm run sass--prod-l && npm run sass--prod-r && npm run autoprefixer-l &&  npm run autoprefixer-r && npm run cleancss-l && npm run cleancss-r",
         "predist--noassets": "npm run predist--js && npm run predist--css",

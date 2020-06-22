@@ -10,8 +10,15 @@ function checkIfIsMobileNow()
 
     if ($detect->isMobile()) {
         define("PM_ISMOBILENOW", true);
+        if ($detect->isiOS()) {
+            define("PM_MOB_SYS", "ios");
+        }
+        if ($detect->isAndroidOS()) {
+            define("PM_MOB_SYS", "android");
+        }
     } else {
         define("PM_ISMOBILENOW", false);
+        define("PM_MOB_SYS", "none");
     }
     return PM_ISMOBILENOW;
 }

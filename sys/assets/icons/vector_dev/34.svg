@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   fill="#294552"
+   fill="#120000"
    height="24"
    viewBox="0 0 24 24"
    width="24"
@@ -165,16 +165,16 @@
   <g
      id="g2381"
      transform="matrix(0.18958945,0,0,0.18958945,393.42661,-126.18504)"
-     style="fill:#294552;fill-opacity:1">
+     style="fill:#120000;fill-opacity:1">
     <path
        inkscape:connector-curvature="0"
        id="path2895"
        d="m -1989.6458,724.28792 -5.1626,-5.16253 -23.7669,23.76703 -10.3251,-10.32503 -5.1625,5.16254 15.4876,15.48756 z"
-       style="fill:#294552;fill-opacity:1;stroke-width:4.87029648" />
+       style="fill:#120000;fill-opacity:1;stroke-width:4.87029648" />
     <path
        id="path2893"
        d="m -2054.8503,685.03194 c -5.406,0 -9.6929,4.38327 -9.6929,9.74059 l -0.058,68.18416 c 0,5.35733 4.3346,9.74059 9.7406,9.74059 h 86.0099 c 5.3574,0 9.7406,-4.38326 9.7406,-9.74059 v -68.18416 c 0,-5.35411 -4.3779,-9.73534 -9.7308,-9.74059 v 0 z m 0,24.35149 h 86.0104 v 53.57326 h -86.0104 z"
-       style="fill:#294552;fill-opacity:1;stroke-width:4.87029648"
+       style="fill:#120000;fill-opacity:1;stroke-width:4.87029648"
        inkscape:connector-curvature="0" />
   </g>
   <text

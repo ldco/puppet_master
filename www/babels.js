@@ -124,8 +124,8 @@ function initFun() {
   setGoTopButton();
   setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
   initModalLocalisation();
-  new Thebility().init();
-  mainPageIntro();
+  new Thebility().init(); // mainPageIntro();
+
   /*end of functions list!*/
 
   var setURL = window.location.hash;
@@ -137,9 +137,16 @@ function initFun() {
 "use strict";
 
 function setBarAsset() {
-  var el = document.querySelector("#pm_id_Bar .pm_bar_asset");
-  el.addEventListener("click", function () {//showPMInformation();
+  var el = document.querySelectorAll(".pm_bar_asset ");
+  el.forEach(function (element) {
+    element.addEventListener("click", function () {
+      barAssetFun();
+    });
   });
+
+  var barAssetFun = function barAssetFun() {
+    window.location.href = "admin/index.php";
+  };
 }
 "use strict";
 
@@ -878,35 +885,15 @@ function setPageFunctions() {
   if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
   var timeout = 500;
   var fun = {
-    fun_1: function fun_1() {
-      mainPageIntro();
-    },
-    fun_2: function fun_2() {
-      aosjs("logoGrid");
-    },
-    fun_3: function fun_3() {
-      archSlider();
-    },
-    fun_4: function fun_4() {
-      aosjs("internetGrid");
-    },
-    fun_6: function fun_6() {
-      aosjs("fontsGrid");
-      initDownloadFont();
-    },
-    fun_7: function fun_7() {
-      aosjs("printGrid");
-    },
-    fun_8: function fun_8() {
-      aosjs("motiongraphicsGrid");
-      pmLoader("iframe", "#pm_page_8", "load", "pm_loader1");
-    },
-    fun_9: function fun_9() {
-      macyjs("artGrid", 4);
-    },
-    fun_10: function fun_10() {
-      teamHelp();
-    },
+    fun_1: function fun_1() {},
+    fun_2: function fun_2() {},
+    fun_3: function fun_3() {},
+    fun_4: function fun_4() {},
+    fun_6: function fun_6() {},
+    fun_7: function fun_7() {},
+    fun_8: function fun_8() {},
+    fun_9: function fun_9() {},
+    fun_10: function fun_10() {},
     fun_11: function fun_11() {
       pmEmailLoader("11");
     }

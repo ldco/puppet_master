@@ -92,6 +92,43 @@ class Page
         );
     }
 
+    public function video($name, $class = null, $id = null, $bgVideoEffect = false, $autoplay = true, $muted = true, $loop = true, $controls = false, $width = "auto", $height = "auto")
+    {
+        global $PM_PAGE_NUM;
+        if ($bgVideoEffect === true) {
+            echo "<div class='bgVideoEffect'></div>";
+        }
+        if ($class != null) {
+            $class = " " . $class;
+        } else {
+            $class = "";
+        }
+
+        if ($autoplay === true) {
+            $autoplay = "autoplay";
+        } else {
+            $autoplay = "";
+        }
+        if ($muted === true) {
+            $muted = "muted";
+        } else {
+            $muted = "";
+        }
+        if ($loop === true) {
+            $loop = "loop";
+        } else {
+            $loop = "";
+        }
+        if ($controls === true) {
+            $controls = "controls";
+        } else {
+            $controls = "";
+        };
+        $src = PM_VIDEOS_REL . "/page_" . $PM_PAGE_NUM .  "/" . $name;
+        echo "<div id='$id' class='pm_video$class'><video width='$width' height='$height' $autoplay $muted $loop $controls><source src='$src.mp4' type='video/mp4'>
+<source src='$src.webm' type='video/webm'></video></div>";
+    }
+
 
     public function close()
     {

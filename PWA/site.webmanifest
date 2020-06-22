@@ -1,0 +1,20 @@
+{
+    "name": "Propis",
+    "short_name": "Propis",
+    "icons": [{
+            "src": "assets/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/favicons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.php",
+    "theme_color": "#ca532a",
+    "background_color": "#ca532a",
+    "display": "standalone"
+}

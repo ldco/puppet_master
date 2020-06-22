@@ -49,7 +49,7 @@
     </rdf:RDF>
   </metadata>
   <rect
-     style="opacity:1;fill:#294552;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.92503929;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     style="opacity:1;fill:#120000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.92503929;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      id="rect827"
      width="16"
      height="16"
@@ -60,6 +60,6 @@
   <path
      id="rect4811"
      d="M 3.5,3.5 V 4.5470375 12.5 h 9 v -9 z m 1.125,1.125 h 6.75 v 6.75 h -6.75 z"
-     style="color:#294552;text-indent:0;text-decoration:none;text-decoration-line:none;text-transform:none;isolation:auto;mix-blend-mode:normal;fill:#e4e9ed;stroke-width:1.125;color-rendering:auto;image-rendering:auto;shape-rendering:auto;fill-opacity:1"
+     style="color:#120000;text-indent:0;text-decoration:none;text-decoration-line:none;text-transform:none;isolation:auto;mix-blend-mode:normal;fill:#e4e9ed;stroke-width:1.125;color-rendering:auto;image-rendering:auto;shape-rendering:auto;fill-opacity:1"
      inkscape:connector-curvature="0" />
 </svg>

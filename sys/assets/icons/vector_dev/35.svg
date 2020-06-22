@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   fill="#294552"
+   fill="#120000"
    height="24"
    viewBox="0 0 24 24"
    width="24"
@@ -169,10 +169,10 @@
        inkscape:connector-curvature="0"
        id="path2904"
        d="m 172.14644,-24.975869 v 3.128172 h 17.87526 v -3.128172 z m 0,6.256344 v 3.128172 h 12.5127 v -3.128172 z"
-       style="fill:#294552;fill-opacity:1;stroke-width:1.67207718" />
+       style="fill:#120000;fill-opacity:1;stroke-width:1.67207718" />
     <path
        inkscape:connector-curvature="0"
-       style="fill:#294552;fill-opacity:1;stroke-width:1.56408501"
+       style="fill:#120000;fill-opacity:1;stroke-width:1.56408501"
        d="m 167.2756,-35.924458 c -1.73615,0 -3.11288,1.407677 -3.11288,3.128172 l -0.0177,21.897179 c 0,1.7205062 1.39204,3.1281835 3.12819,3.1281835 h 27.62185 c 1.72054,0 3.12819,-1.4076773 3.12819,-3.1281835 v -21.897179 c 0,-1.719463 -1.40593,-3.126485 -3.12506,-3.128172 h -0.003 z m 0,7.82043 h 27.62203 v 17.204921 H 167.2756 Z"
        id="path2906" />
   </g>

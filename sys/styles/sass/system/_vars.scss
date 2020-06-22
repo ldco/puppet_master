@@ -4,6 +4,31 @@
     @include ping;
 }
 
+//VIDEO
+video {}
+
+.pm_video {
+    video {}
+}
+
+.bgVideo {
+    position: fixed;
+    z-index: 0;
+    video {
+       min-width: 100vw;
+        min-height: 100vh;
+    }
+}
+
+.bgVideoEffect {
+    background: $c_opos;
+    z-index: 1;
+    position: fixed;
+    opacity: 0.6;
+    width: 100vw;
+    height: 100vh;
+}
+
 //COPY
 #copyto {
     user-select: initial !important;

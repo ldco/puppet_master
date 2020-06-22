@@ -16,14 +16,24 @@ class SkeletonIndex
     private $isAdmin = false;
     private $isDev = false;
 
-
     public function __construct()
     {
-        if (!defined("PM_ROOT")) return;
+        if (!defined("PM_ROOT")) {
+            return;
+        }
+
         $this->viewsNames = PM_VIEWS;
-        if (defined("PM_IS_LOCAL")) $this->isLocal = PM_IS_LOCAL;
-        if (defined("PM_DEFINE_ADMIN")) $this->isAdmin = PM_DEFINE_ADMIN;
-        if (defined("PM_IS_DEV_DEFINED")) $this->isDev = PM_IS_DEV_DEFINED;
+        if (defined("PM_IS_LOCAL")) {
+            $this->isLocal = PM_IS_LOCAL;
+        }
+
+        if (defined("PM_DEFINE_ADMIN")) {
+            $this->isAdmin = PM_DEFINE_ADMIN;
+        }
+
+        if (defined("PM_IS_DEV_DEFINED")) {
+            $this->isDev = PM_IS_DEV_DEFINED;
+        }
 
         $modelPath = PM_ROOT . PM_SYS_FOLDER . "/Model/";
         require_once $modelPath . "Skeleton.bar.model.php";
@@ -35,9 +45,12 @@ class SkeletonIndex
         return;
     }
 
-    function index($sPageContent = '')
+    public function index($sPageContent = '')
     {
-        if (!defined("PM_ROOT")) return false;
+        if (!defined("PM_ROOT")) {
+            return false;
+        }
+
         $modelBar = $this->modelBar;
         $modelDepends = $this->modelDepends;
         $modelFooter = $this->modelFooter;
@@ -58,7 +71,7 @@ class SkeletonIndex
         return true;
     }
 
-    function show404()
+    public function show404()
     {
         global $_SERVER;
         $serverProtocol = (empty($_SERVER["SERVER_PROTOCOL"]) ? 'HTTP/1.0' : $_SERVER["SERVER_PROTOCOL"]);
@@ -66,7 +79,6 @@ class SkeletonIndex
         $pm_lang = PM_LANG;
         require PM_ROOT . PM_SYS_FOLDER . "/SysInfo/404.php";
     }
-
 
     public function __destruct()
     {

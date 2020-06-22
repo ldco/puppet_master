@@ -23,7 +23,7 @@ if ($isLocal) {
 }
 ?>
 
-<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>" data-admin="<?= $ifIsAdmin ?>" data-local="<?= $ifIsLocal ?>" data-dev="<?= $ifIsDev ?>" data-webp="<?= var_export(PM_WEBP) ?>">
+<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>" data-mobsys="<?= PM_MOB_SYS ?>" data-admin="<?= $ifIsAdmin ?>" data-local="<?= $ifIsLocal ?>" data-dev="<?= $ifIsDev ?>" data-webp="<?= var_export(PM_WEBP) ?>">
 
 <head>
     <title><?= PM_TITLE ?></title>
@@ -44,7 +44,7 @@ if ($isLocal) {
     <?php endif; ?>
 
     <div id="pm_gototop">
-        <img alt="go top" src="<?= PM_ICONS_REL ?>/up.svg">
+        <img alt="go top" src="<?= PM_ICONS_REL ?>up.svg">
     </div>
 
     <?php if (!$isAdmin) :

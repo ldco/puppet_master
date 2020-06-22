@@ -14,6 +14,7 @@
     }
     img {
         width: 5vh;
+        @include selectNone();
     }
     span:first-of-type {
         text-transform: capitalize;
@@ -24,6 +25,7 @@
     img {
         width: 4vh;
         padding: 3vh;
+        @include selectNone();
     }
 }
 
@@ -44,7 +46,7 @@
         @if $LIGHT_THEME==false {
             a {
                 border: none;
-                box-shadow: $pm_formBS;
+                // box-shadow: $pm_formBS;
                 padding: 0.2vh;
             }
         }

@@ -12,7 +12,7 @@ class SkeletonBar
     //  private $conn;
     private $adminuser;
     private $adminindex;
-    private $logoutimg = PM_ICONS . "/exit.svg";
+    private $logoutimg = PM_ICONS . "exit.svg";
     private $definedAdmin = false;
     private $definedVertical = false;
     private $definedNavLang = true;
