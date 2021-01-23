@@ -13,7 +13,7 @@
    width="16"
    id="svg5154"
    sodipodi:docname="window-maximize.svg"
-   inkscape:version="0.92.4 (unknown)">
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -23,17 +23,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1880"
-     inkscape:window-height="1018"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
      id="namedview9"
      showgrid="false"
      inkscape:zoom="20.85965"
      inkscape:cx="14.962347"
      inkscape:cy="7.3844278"
-     inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-x="1920"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg5154" />
+     inkscape:current-layer="svg5154"
+     inkscape:document-rotation="0" />
   <defs
      id="defs8" />
   <metadata
@@ -48,18 +49,8 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <rect
-     style="opacity:1;fill:#120000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.92503929;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     id="rect827"
-     width="16"
-     height="16"
-     x="0"
-     y="0"
-     rx="100"
-     ry="100" />
   <path
-     id="rect4811"
-     d="M 3.5,3.5 V 4.5470375 12.5 h 9 v -9 z m 1.125,1.125 h 6.75 v 6.75 h -6.75 z"
-     style="color:#120000;text-indent:0;text-decoration:none;text-decoration-line:none;text-transform:none;isolation:auto;mix-blend-mode:normal;fill:#e4e9ed;stroke-width:1.125;color-rendering:auto;image-rendering:auto;shape-rendering:auto;fill-opacity:1"
-     inkscape:connector-curvature="0" />
+     id="rect827"
+     style="opacity:1;fill:#120000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:9.92504;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 8 0 C 3.568 0 4.9515947e-17 3.568 0 8 C 0 12.432 3.568 16 8 16 C 12.432 16 16 12.432 16 8 C 16 3.568 12.432 4.9515947e-17 8 0 z M 3.5 3.5 L 12.5 3.5 L 12.5 12.5 L 3.5 12.5 L 3.5 4.546875 L 3.5 3.5 z M 4.625 4.625 L 4.625 11.375 L 11.375 11.375 L 11.375 4.625 L 4.625 4.625 z " />
 </svg>

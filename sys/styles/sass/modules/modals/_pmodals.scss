@@ -2,6 +2,9 @@
 //common
 .pm_modal {
     @include selectNone;
+    form {
+        width: 80%;
+    }
 }
 
 $modalParentHeight: 30vh;
@@ -55,7 +58,7 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     align-items: center; // position: absolute;
     flex-direction: column;
     div {
-        width: 85%;
+        /*  width: 85%; */
         //padding: 1vh;
     }
 }

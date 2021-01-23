@@ -22,7 +22,7 @@ class Email
     public $Password = PM_MAIN_GMAIL_PASS;
     public $Host = "smtp.gmail.com";
     public $Port = "587"; //465
-    public $SMTPDebug = 1;
+    public $SMTPDebug = 0;
     public $SMTPAuth = true;
     public $SMTPSecure = "tls";
     public $IsHTML = true;
@@ -43,6 +43,9 @@ class Email
 
         //debug output
         $mail->SMTPDebug = $this->SMTPDebug;
+        //encode
+        $mail->CharSet = 'UTF-8';
+        $mail->Encoding = 'base64';
         //Server settings
         $mail->isSMTP(); //Send using SMTP
         $mail->Host = $this->Host;  //Set the SMTP server to send through
@@ -78,20 +81,12 @@ class Email
         $mail->Body = $this->Body;
         $mail->AltBody = $this->Body;
 
-        if ($this->SMTPDebug == 0) {
-            try {
-                $mail->Send();
-            } catch (exception $e) {
+        if ($this->SMTPDebug === 0) {
 
-
+            if ($mail->Send()) {
                 require_once $this->LocationUnSuccess;
-                /*  header("Location: " . path2url($this->LocationUnSuccess)); */
-                die;
-            } finally {
-
+            } else {
                 require_once $this->LocationSuccess;
-                /*  header("Location: " . path2url($this->LocationSuccess)); */
-                die;
             }
         } else {
             if (!$mail->Send()) {

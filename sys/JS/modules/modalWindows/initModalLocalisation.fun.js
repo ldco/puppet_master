@@ -8,7 +8,8 @@ function initModalLocalisation() {
         "close",
         "error",
         "no",
-        "yes"
+        "yes",
+        "submit"
     ];
 
     let name = JSON.stringify(wordsToTranslate);

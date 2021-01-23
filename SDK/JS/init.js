@@ -5,6 +5,18 @@ function initFun() {
     clearTerminal();
     toggleDisabledInput("gitmaster", "gitto");
     toggleDisabledInput("gitself", "gitcom");
+    assignFun("#git_store_pass", function() {
+        storeGitPass();
+    });
+    assignFun("#createpmdev", function() {
+        createPmdevFolder();
+    });
+    assignFun("#check_ftp", function() {
+        checkFtp();
+    });
+    assignFun("#dep_init", function() {
+        depInit();
+    });
     assignFun("#git", function() {
         postGit();
     });
@@ -29,6 +41,9 @@ function initFun() {
     assignFun("#sh", function() {
         execSh();
     });
+
+
+
 }
 
 function goRoot() {
@@ -39,7 +54,7 @@ function goRoot() {
                 if (ajx.responseText) {
                     htmlWrapper(ajx.responseText);
                 } else {
-                    htmlWrapper("matrix error...");
+                    htmlWrapper("ajx matrix error...");
                 }
             }, 100);
         }
@@ -190,6 +205,19 @@ function execNpm(name) {
     ajx.send("npm=" + npm);
 }
 
+function depInit() {
+    let ajx = new XMLHttpRequest();
+
+    ajx.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            htmlWrapper(ajx.responseText);
+        }
+    };
+    ajx.open("POST", "php/execNpm.php", true);
+    ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajx.send("npm=" + "dep--init");
+}
+
 function execSh() {
     let ajx = new XMLHttpRequest();
     let deploy = document.getElementsByName("sh")[0].value;
@@ -201,4 +229,43 @@ function execSh() {
     ajx.open("POST", "php/execSh.php", true);
     ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajx.send("sh=" + sh);
+}
+
+function storeGitPass() {
+    let ajx = new XMLHttpRequest();
+    let deploy = document.getElementsByName("store_pass")[0].value;
+    ajx.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            htmlWrapper(ajx.responseText);
+        }
+    };
+    ajx.open("POST", "php/storeGitPass.php", true);
+    ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajx.send();
+}
+
+function createPmdevFolder() {
+    let ajx = new XMLHttpRequest();
+    let deploy = document.getElementsByName("createpmdev")[0].value;
+    ajx.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            htmlWrapper(ajx.responseText);
+        }
+    };
+    ajx.open("POST", "php/createPmdevFolder.php", true);
+    ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajx.send();
+}
+
+function checkFtp() {
+    let ajx = new XMLHttpRequest();
+    let deploy = document.getElementsByName("check_ftp")[0].value;
+    ajx.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            htmlWrapper(ajx.responseText);
+        }
+    };
+    ajx.open("POST", "php/checkFtpConnection.php", true);
+    ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    ajx.send();
 }

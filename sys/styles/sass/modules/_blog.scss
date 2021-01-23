@@ -12,6 +12,7 @@
     .pm_blog_item {
         padding: 6vh;
         width: 40vw;
+        margin-bottom: 10vh;
         img {
             width: 40vw;
         }
@@ -19,6 +20,7 @@
 }
 
 .pm_blog_item {
+    background-color: $c_domin;
     display: flex;
     flex-direction: column;
     border-radius: 1vh;
@@ -56,6 +58,10 @@
 
 @if $LIGHT_THEME==false {
     .pm_blog_item {
-        box-shadow: 0.2vh 0vh 1vh 0.2vh rgba(255, 255, 255, 0.33);
+        box-shadow: 0.1vh 0.1vh 1vh 0.1vh $c_black;
     }
+}
+
+.pm_blog {
+    z-index: 1977;
 }

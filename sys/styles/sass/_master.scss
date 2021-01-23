@@ -12,7 +12,7 @@
 //animations
 @import "animista/heartbeat";
 @import "animista/ping";
-@import "animista/rotate-center";
+//@import "animista/rotate-center";
 //color
 @import "colors/colors";
 @import "colors/colorsEngine";
@@ -24,6 +24,7 @@
 @import "system/engine";
 @import "system/form";
 @import "system/infoPages";
+@import "system/scrollbar";
 //layout
 //skeleton
 @import "skeleton/main";
@@ -32,29 +33,24 @@
 @import "skeleton/html";
 @import "skeleton/nav";
 @import "skeleton/hamburger";
-@import "skeleton/panel";
 //admin
-@import "admin/login";
+//@import "admin/login";
+//@import "skeleton/panel";
 //modules
-@import "modules/grids/grid";
-@import "modules/grids/team";
-@import "modules/modals/pmodals";
+//@import "modules/grids/grid";
+//@import "modules/grids/team";
+//@import "modules/modals/pmodals";
 @import "modules/thebility/thebility";
 @import "modules/loaders";
 @import "modules/contacts";
-@import "modules/swipe";
-@import "modules/blog";
+//@import "modules/swipe";
+//@import "modules/blog";
+//@import "modules/agents";
+@import "modules/lightbox";
 //pages
 @import "pages/common";
+@import "pages/common_onepager";
 @import "pages/1";
 @import "pages/2";
 @import "pages/3";
 @import "pages/4";
-@import "pages/5";
-@import "pages/6";
-@import "pages/7";
-@import "pages/8";
-@import "pages/9";
-@import "pages/10";
-@import "pages/11";
-@import "pages/12";

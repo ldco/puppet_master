@@ -22,24 +22,24 @@
 //queries
 @mixin mob($x) {
     @if $x==true {
-        [data-mob="true"] {
+        [data-mob=true] {
             @media (max-aspect-ratio: 13/9) {
                 @content;
             }
         }
-        [data-mob="false"] {
+        [data-mob=false] {
             @media (max-width: 1210px) {
                 @content;
             }
         }
     }
     @if $x==false {
-        [data-mob="true"] {
+        [data-mob=true] {
             @media (min-aspect-ratio: 13/9) {
                 @content;
             }
         }
-        [data-mob="false"] {
+        [data-mob=false] {
             @media (min-width: 1210px) {
                 @content;
             }
@@ -47,56 +47,6 @@
     }
 }
 
-//if mob
-@mixin ifmob($MOB_IS) {
-    @media (max-aspect-ratio: 13/9) {
-        $MOB_IS: true;
-    }
-    @media (orientation: portrait) {
-        $MOB_IS: true;
-    }
-    @media (orientation: landscape) {
-        $MOB_IS: false;
-    }
-}
-
-//TO MAKE (DON'T KNOW HOW!!!)
-//$folder: "";
-//  @mixin pmImg($img, $vector, $icon) {
-//  $ext: "";
-//
-//  @if $icon==true {
-//      $folder: "vector";
-//  }
-//
-//  @if $icon==false {
-//      $folder: "images";
-//  }
-//
-//  @if $vector==true {
-//      [data-local="true"] {
-//          background-image: url("../#{$SYS_FOLDER}/assets/icons/#{$folder}_dev/#{$img}.//svg");
-//   }
-//
-//   [data-local="false"] {
-//       background-image: url("../#{$SYS_FOLDER}/assets/icons/#{$folder}/#{$img}.svg")//;
-//   }
-// }
-//
-//  @if $vector==false {
-//    [data-local="true"] {
-//        background-image: url("../#{$SYS_FOLDER}/assets/icons/#{$folder}_dev/#{$img}.//png");
-//    }
-//
-//    [data-local="false"][data-webp="false"] {
-//        background-image: url("../#{$SYS_FOLDER}/assets/icons/#{$folder}/#{$img}.png")//;
-//   }
-//
-//   [data-local="false"][data-webp="true"] {
-//       background-image: url("../#{$SYS_FOLDER}/assets/icons/#{$folder}/#{$img}.//webp");
-//    }
-// }
-//}
 //
 @mixin dir($ltr, $rtl, $ltrV, $rtlV) {
     [dir=ltr] & {
@@ -121,4 +71,9 @@
     /* Internet Explorer/Edge */
     user-select: none;
     /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+//backround images
+@mixin bgimg($name, $page) {
+    background-image: url("#{$IMAGES_FOLDER}page_#{$page}/#{$name}.png");
 }

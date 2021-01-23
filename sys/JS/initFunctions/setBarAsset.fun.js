@@ -1,12 +1,6 @@
 function setBarAsset() {
-    let el = document.querySelectorAll(".pm_bar_asset ");
-    el.forEach((element) => {
-        element.addEventListener("click", () => {
-            barAssetFun();
-        });
+    let el = document.querySelector("#pm_id_Bar .pm_bar_asset");
+    el.addEventListener("click", function() {
+        //showPMInformation();
     });
-
-    const barAssetFun = () => {
-        window.location.href = "admin/index.php";
-    };
 }

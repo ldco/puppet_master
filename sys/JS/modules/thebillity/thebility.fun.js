@@ -1,18 +1,15 @@
 function Thebility() {
     this.init = function() {
-
         document
             .querySelector("#thebilityIcon")
             .addEventListener("click", function() {
                 toggleThebility();
             });
-
         document
             .querySelector("#dragThebility")
             .addEventListener("click", function() {
                 drag(this.parentNode);
             });
-
         document
             .querySelector("#closeThebility")
             .addEventListener("click", function() {

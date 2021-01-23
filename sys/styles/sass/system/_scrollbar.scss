@@ -2,8 +2,8 @@
 
 //bar color
 ::-webkit-scrollbar-thumb {
-    background-color: "";
-    border-radius: 4px;
+    background-color: #333; //$c_domin;
+    border-radius: 0px;
 }
 
 //bar color hover
@@ -13,15 +13,20 @@
 
 //width
 ::-webkit-scrollbar {
-    width: 2vw;
+    width: 2vh;
+}
+
+@include mob(true) {
+     ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 //button is OFF
 ::-webkit-scrollbar-button {
     display: none;
-    height: 13px;
     border-radius: 0;
-    background-color: "";
+    background-color: $c_opos;
 }
 
 //button hover
@@ -31,10 +36,10 @@
 
 //background
 ::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: #555; //$c_brand2;
 }
 
 //background hover
 ::-webkit-scrollbar-track:hover {
-    background-color: transparent;
+    background-color: #555; //$c_brand2;
 }

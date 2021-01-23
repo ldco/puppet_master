@@ -7,5 +7,5 @@ if (isset($_POST["pass"])) {
     ];
     echo  $password . "   -->   " . password_hash($password, PASSWORD_ARGON2I, $options);
 } else {
-    echo ("matrix error...");
+    echo ("Matrix ERROR... :(");
 }

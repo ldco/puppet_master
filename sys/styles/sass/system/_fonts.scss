@@ -1,4 +1,4 @@
-$pm_fonts: (Montserrat: cyrillic, Heebo: hebrew);
+$pm_fonts: (Poppins: cyrillic, Heebo: hebrew);
 @each $font,
 $name in $pm_fonts {
     @import url("https://fonts.googleapis.com/css?family=#{$font}:100,400,900&display=swap&subset=#{$name}");
@@ -14,11 +14,11 @@ $name in $pm_fonts {
 $weight) {
     @if $type==1 {
         [lang=en] & {
-            font-family: Montserrat;
+            font-family: Poppins;
             font-weight: $weight;
         }
         [lang=ru] & {
-            font-family: Montserrat;
+            font-family: Poppins;
             font-weight: $weight;
         }
         [lang=he] & {

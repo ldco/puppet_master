@@ -11,6 +11,6 @@ if (isset($_POST["colorfrom"]) && isset($_POST["colorto"])) {
     if ($change) {
         echo "Changed from " . $from . " to " . $to . " in folder " . $change;
     } else {
-        echo ("matrix error...");
+        echo ("Matrix ERROR... :(");
     }
 }

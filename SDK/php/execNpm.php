@@ -9,8 +9,8 @@ if (isset($_POST["npm"])) {
     if ($shell) {
         echo $shell;
     } else {
-        echo ("matrix error...");
+        echo ("Matrix ERROR... :(");
     }
 } else {
-    echo ("matrix error...");
+    echo ("Matrix ERROR... :(");
 }

@@ -1,4 +1,4 @@
-function pmGetTranslate(text, fun) {
+function pmGetTranslate(text) {
     let _lang = document.querySelector("html");
     let lang = _lang.getAttribute("lang");
 
@@ -8,7 +8,7 @@ function pmGetTranslate(text, fun) {
         if (this.readyState == 4 && this.status == 200) {
             let _fromDB = ajx.responseText;
             let fromDB = JSON.parse(_fromDB);
-            fun();
+            return _fromDB;
         }
     };
     ajx.open("POST", "/sys/helpers/pmTranslateEngine.php", true);

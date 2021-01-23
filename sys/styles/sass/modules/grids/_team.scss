@@ -1,7 +1,7 @@
 //settings
 $rankNumber: 2;
 $rankColumns: 1,
-2;
+3;
 $rankMobColumns: 1,
 1;
 //
@@ -21,10 +21,10 @@ $rankMobColumns: 1,
             @include f-size($teamFontSize);
             img {
                 @if $mob==false {
-                    width:calc(((#{100vw} / (#{$i} / 0.4)) + ((#{100vh} / (#{$i} / 0.8)) * #{$i})) / 2.8);
+                    width:calc(((#{100vw} / (#{$i} / 0.4)) + ((#{100vh} / (#{$i} / 0.8)) * #{$i})) / 3);
                 }
                 @if $mob==true {
-                    width:calc(((#{100vh} / (#{$i} / 0.4)) + ((#{100vw} / (#{$i} / 0.8)) * #{$i})) / 2.8);
+                    width:calc(((#{100vh} / (#{$i} / 0.4)) + ((#{100vw} / (#{$i} / 0.8)) * #{$i})) / 3);
                 }
             }
         }
@@ -52,9 +52,6 @@ $rankMobColumns: 1,
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    a {
-        border-bottom: none;
-    }
 }
 
 .pm_team_item {
@@ -64,30 +61,32 @@ $rankMobColumns: 1,
     align-items: center;
     width: 100%;
     color: #666;
+    &:hover {
+        div,
+        span,
+        img {
+            filter: brightness(1.2);
+        }
+    }
     img {
         @if $LIGHT_THEME==true {
             box-shadow: 0 0 0.8vh 0 $c_shadow;
         }
         @if $LIGHT_THEME==false {
-            box-shadow: none;
+            box-shadow: $pm_formBS;
         }
         border-radius: 50%;
         cursor: pointer;
-        &:hover {
-            filter: brightness(1.2);
-        }
     }
 }
 
 .pm_team_name {
     @include font(1, 400);
     text-align: center;
-    text-transform: uppercase;
 }
 
 .pm_team_job {
     text-align: center;
-    text-transform: capitalize;
 }
 
 .pm_team_bio {

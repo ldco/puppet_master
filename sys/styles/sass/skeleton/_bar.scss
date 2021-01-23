@@ -1,6 +1,7 @@
 //base queries
 @include mob(true) {
     #pm_id_Bar,
+    #pm_id_BarFloat,
     #pm_id_admin_Bar,
     #pm_admin_panel {
         display: none !important;
@@ -8,23 +9,21 @@
 }
 
 @include mob(false) {
-    .pm_mobileBar,
-    .pm_mobileHeader {
+    #pm_mobileHeader,
+    #pm_mobileBar,
+    #pm_mobileHeaderFloat,
+    #pm_mobileBarFloat {
         display: none !important;
     }
 }
 
 //shadow
-$pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.1);
-$pm_bar_mob_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.5);
+$pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
 .pm_class_Bar,
-.pm_bar_scrolled {
+.pm_mobileHeader,
+.pm_bar_scrolled,
+.pm_mobileBar {
     box-shadow: $pm_bar_shadow;
-}
-
-.pm_mobileBar,
-.pm_mobileHeader {
-    box-shadow: $pm_bar_mob_shadow;
 }
 
 //
@@ -39,6 +38,7 @@ $pm_bar_mob_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.5);
     align-items: center;
     img {
         max-width: calc(#{map-get($horBar, logo_width)} - 8vh);
+        // filter: drop-shadow(1px 3px 2px #333);
     }
 }
 
@@ -57,6 +57,7 @@ $pm_bar_mob_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.5);
 }
 
 .pm_bar_asset {
+    display: none;
     cursor: pointer;
     width: map-get($horBar, asset);
     position: fixed;
@@ -98,7 +99,7 @@ $pm_bar_mob_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.5);
         transition: ease 1s;
         .pm_barLogo,
         .pm_bar_asset {
-            transition: ease 1s;
+            transition: ease 0.1s;
         }
         .pm_barLogo {
             top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.65) / 2);
@@ -171,11 +172,15 @@ body {
     height: 100%;
     top: 0;
     z-index: 1977;
-    @include dir("left", "right", -60vw, -60vw);
 }
 
-.pm_mobileHeader {
-    background-color: $c_domin;
+.pm_mobileBar,
+.pm_mobileBarFloat {
+    @include dir("left", "right", -100vw, -100vw);
+}
+
+.pm_mobileHeader,
+.pm_mobileHeaderFloat {
     position: fixed;
     top: 0;
     @include dir("left", "right", 0, 0);
@@ -193,7 +198,14 @@ margin: 0 !important;
 font-size: 2vh;
 
 }
-#mobileHeaderLogo {
+.pm_mobileHeader {
+    background-color: $c_domin;
+}
+.pm_mobileHeaderFloat {
+    background-color: transparent;
+}
+#mobileHeaderLogo,
+#mobileHeaderFloatLogo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,7 +222,81 @@ font-size: 2vh;
         border: none;
     }
 }
+#mobileHeaderFloatLogo {
+    filter: invert(1);
+}
+//BAR FLOAT
+.pm_barLogoFloat {
+    opacity: 0;
+    display: none;
+    cursor: move;
+    cursor: grab;
+    img {
+        width: map-get($floatBar, logo_width);
+        &:hover {
+            filter: opacity(0.5);
+        }
+    }
+    
+    [dir=rtl] & {
+        margin-left: 2vh;
+    }
+    
+    [dir=ltr] & {
+        margin-right: 2vh;
+    }
+    
+    @if $LIGHT_THEME==false {
+        filter: invert(1);
+    }
+}
+%BarFloat_appear {
+    //  box-shadow: 0 0 0vh 0.2vh $c_opos;
+    //  background-color: rgba($c_domin, .8);
+    //  border-radius: 0.5vh;
+    filter: invert(0);
+}
+#pm_id_BarFloat {
+    @extend %BarFloat_appear;
+    filter: invert(1);
+    width: map-get($floatBar, width);
+    height: map-get($floatBar, height);
+    z-index: 1980;
+    position: fixed;
+    padding: 2vh;
+    top: 2vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    [dir=rtl] & {
+        left: 2vh
+    }
+    
+    [dir=ltr] & {
+        right: 2vh
+    }
+    
+    a {
+        border-bottom: none;
+    }
+}
+#pm_mobileBarFloat {
+    @extend %BarFloat_appear;
+    background-color: rgba($c_brand2, 0.8);
+    z-index: 1977;
+    position: fixed;
+    width: map-get($floatMobBar, width);
+    height: map-get($floatMobBar, height);
+    top: 10vh;
+    .pm_Lang {
+        img {
+            display: none
+        }
+    }
+}
+//MISC
 #pm_mobileBar {}
 #pm_admin_mobileBar {}
 #pm_mobileHeader {}
+#pm_mobileHeaderFloat {}
 #pm_admin_mobileHeader {}

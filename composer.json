@@ -6,6 +6,9 @@
         "ezyang/htmlpurifier": "^4.12",
         "tecnickcom/tcpdf": "^6.3",
         "mobiledetect/mobiledetectlib": "^2.8",
-        "masterjoa/htmlpurifier-standalone": "^4.8"
+        "masterjoa/htmlpurifier-standalone": "^4.8",
+        "league/oauth2-google": "^3.0",
+        "symfony/polyfill-mbstring": "^1.20",
+        "shieldon/shieldon": "^2"
     }
 }

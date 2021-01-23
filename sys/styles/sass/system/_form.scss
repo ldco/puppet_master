@@ -1,44 +1,20 @@
 .pm_checkbox {
     display: flex;
     align-items: center;
+    font-size: 1.3vh;
+    label {
+        padding-left: 1vh;
+        padding-right: 1vh;
+        [dir=rtl] & {
+            text-align: right;
+        }
+        [dir=ltr] & {
+            text-align: left;
+        }
+    }
 }
 
-.pm_checkbox label::after {
-    content: "";
-    display: inline-block;
-    height: 1vh;
-    width: 1vh;
-    border-left: 0.2vh solid;
-    border-bottom: 0.2vh solid;
-    transform: rotate(-45deg);
-}
-
-.pm_checkbox label {
-    position: relative;
-}
-
-.pm_checkbox label::before,
-.pm_checkbox label::after {
-    position: absolute;
-}
-
-.pm_checkbox label::after {
-    left: -2.65vh;
-    top: 0.9vh;
-}
-
-.pm_checkbox label::before {}
-
-
-/*Hide the checkmark by default*/
-
-.pm_checkbox input[type="checkbox"]+label::after {
-    content: none;
-}
-
-
-/*Unhide the checkmark on the checked state*/
-
-.pm_checkbox input[type="checkbox"]:checked+label::after {
-    content: "";
+.pm_requiredfield::after {
+    content: "*";
+    color: $c_err;
 }

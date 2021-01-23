@@ -1,14 +1,18 @@
-function setHamburgerMenu() {
+function setHamburgerMenu(float) {
+
     let hamburger = document.querySelectorAll(".pm_hamburger")[0];
     if (hamburger == null) return;
-    let mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
-
+    let mobileBar;
+    if (!float) {
+        mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
+    } else {
+        mobileBar = document.querySelectorAll(".pm_mobileBarFloat")[0];
+    }
     let helperDiv = document.createElement("div");
     helperDiv.setAttribute("class", "hamburgerHelperDiv");
     helperDiv.addEventListener("click", function() {
         hamburger.click();
         helperDiv.remove();
-
     });
     hamburger.addEventListener("click", function() {
         document.body.appendChild(helperDiv);
@@ -18,32 +22,73 @@ function setHamburgerMenu() {
             mobileBar.style.display = "flex";
             setTimeout(() => {
                 if (PM_LTR) {
-                    mobileBar.style.left = "0";
+                    if (!float) {
+                        anime({
+                            targets: mobileBar,
+                            translateX: 0,
+                            left: '0',
+                            easing: 'spring(0, 60, 1, 0)'
+                        });
+                    } else {
+                        anime({
+                            targets: mobileBar,
+                            translateX: 0,
+                            left: '3vh',
+                            easing: 'spring(0.1, 50, 1.6, 0)'
+
+                        });
+                    }
                 } else {
-                    mobileBar.style.right = "0";
+                    if (!float) {
+                        anime({
+                            targets: mobileBar,
+                            translateX: 0,
+                            right: '0',
+                            easing: 'spring(0, 60, 1, 0)'
+                        });
+                    } else {
+                        anime({
+                            targets: mobileBar,
+                            translateX: 0,
+                            right: '3vh',
+                            easing: 'spring(0.1, 50, 1.6, 0)'
+                        });
+                    }
                 }
-                mobileBar.style.transition = "ease 1s";
             }, 10);
         } else {
-            removeHamburger();
+            removeHamburger(float);
         }
     });
 }
 
-function removeHamburger() {
-
+function removeHamburger(float) {
     if (document.querySelector(".hamburgerHelperDiv")) {
         document.querySelectorAll(".pm_hamburger")[0].classList.remove("is-active");
         document.querySelector(".hamburgerHelperDiv").remove();
-        let mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
-        if (PM_LTR) {
-            mobileBar.style.left = "-60vw";
+        let mobileBar;
+        if (!float) {
+            mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
         } else {
-            mobileBar.style.right = "-60vw";
+            mobileBar = document.querySelectorAll(".pm_mobileBarFloat")[0];
         }
-        mobileBar.style.transition = "ease 0.8s";
+        if (PM_LTR) {
+            anime({
+                targets: mobileBar,
+                translateX: '-100vw',
+                left: '0',
+                easing: 'spring'
+            });
+        } else {
+            anime({
+                targets: mobileBar,
+                translateX: '100vw',
+                right: '0',
+                easing: 'spring'
+            });
+        }
         setTimeout(() => {
             mobileBar.style.display = "none";
-        }, 800);
+        }, 300);
     }
 }

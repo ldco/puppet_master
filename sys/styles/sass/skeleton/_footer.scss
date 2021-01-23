@@ -1,6 +1,6 @@
 @include mob(true) {
     .pm_footer {
-        display: none;
+        // display: none;
     }
 }
 
@@ -9,7 +9,7 @@
     //hack to remove stripe between content and footer
     border-top: solid $c_domin 1px;
     /**/
-    color: $c_interBB;
+    color: $c_opos;
     width: 100vw;
     @include font(1, 900);
     height: map-get($footer, height);
@@ -20,7 +20,7 @@
     justify-content: center;
     align-items: center;
     span {
-        font-size: 0.8vh;
+        font-size: 2vh;
     }
     .pm_footerCredits,
     .pm_footerCreditsBy {
@@ -31,5 +31,13 @@
     .pm_footerCreditsCopy {
         position: fixed;
         @include dir('right', 'left', 2vw, 2vw);
+    }
+}
+
+@include mob(true) {
+    .pm_footer {
+        span {
+            font-size: 1vh;
+        }
     }
 }

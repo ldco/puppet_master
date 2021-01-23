@@ -27,9 +27,15 @@ $PM_PAGE_NUM = $needPageId;
 
 if (empty($needPageId)) die(show404());
 
-/* if (!defined("PM_ADMIN_ROOT")) define("PM_ADMIN_ROOT", PM_ROOT . PM_SYS_FOLDER . "/admin/"); */
+if (!defined("PM_ADMIN_ROOT")) define("PM_ADMIN_ROOT", PM_ROOT . PM_SYS_FOLDER . "/admin/");
 
-$viewPagePathPrefix = PM_ROOT . PM_SYS_FOLDER . "/Pages";
+if (defined("PM_ONEPAGER") && !PM_ONEPAGER) {
+    $viewPagePathPrefix = PM_ROOT . PM_SYS_FOLDER . "/Pages";
+}
+if (defined("PM_ONEPAGER") && PM_ONEPAGER) {
+    $viewPagePathPrefix = PM_ROOT . PM_SYS_FOLDER . "/OnePager";
+}
+
 $viewPagePath = $viewPagePathPrefix . '/' . $needPageId . '.page.php';
 if (!file_exists($viewPagePath)) die(show404());
 
@@ -51,6 +57,4 @@ if (PM_SYS_FOLDER === "sys") {
 } elseif (PM_SYS_FOLDER === "core") {
     //$indexModel = new core\Model\SkeletonIndex;
 }
-
-
 $indexModel->index($pageContent);

@@ -17,10 +17,16 @@ class Files
     {
         global $PM_PAGE_NUM;
 
-        if ($class != null) {
+        if ($class !== null) {
             $_class = 'class="' . $class . '"';
         } else {
-            $_class = '';
+            $_class = 'class="' . $this->folder . '_class"';
+        }
+
+        if ($childClass !== null) {
+            $_childClass = $class . '"';
+        } else {
+            $_childClass = $this->folder . '_class_item';
         }
 
         //MAIN GRID DIV
@@ -33,7 +39,7 @@ class Files
                 preg_grep("~\.($this->ext)$~", scandir($path));
         }
 
-        $files_array = array_diff($scanned_files, array('..', '.'));
+        $files_array = array_diff($scanned_files, array("..", "."));
         if ($this->array_sort === "natsort") {
             natsort($files_array);
         }
@@ -55,10 +61,10 @@ class Files
 
             //ITEM DIV
             if ($this->imgNetto == false) {
-                echo '<div class="' . $childClass . '">';
+                echo '<div class="' . $_childClass . '">';
                 //TITLE
                 if ($this->title) {
-                    echo '<div class="' . $childClass . ' grid_title">';
+                    echo '<div class="' . $_childClass . ' grid_title">';
                     echo $_val;
                     echo '</div>';
                 }
@@ -70,12 +76,12 @@ class Files
 
                 //TITLE
                 if ($this->title) {
-                    echo '<div class="' . $childClass . ' grid_title">';
+                    echo '<div class="' . $_childClass . ' grid_title">';
                     echo $_val;
                     echo '</div>';
                 }
                 //IMG
-                pmImg($this->folder . "-image", $path . "/" . $_val, $svg, $childClass);
+                pmImg($this->folder . "-image", $path . "/" . $_val, $svg, $_childClass);
             }
         }
         echo '</div>';

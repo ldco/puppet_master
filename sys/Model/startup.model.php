@@ -64,7 +64,7 @@ if (PM_IS_LOCAL) {
 
 
 define("PM_ADMIN_ROOT", PM_ROOT . "admin/");
-define("PM_CLIENT_LANG", substr($_SERVER["HTTP_ACCEPT_LANGUAGE"], 0, 2));
+/* define("PM_CLIENT_LANG", substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)); */
 define("PM_ADMIN_TITLE", "Admin Dashboard - " . PM_TITLE);
 
 
@@ -102,7 +102,7 @@ if (isset($_POST['submitLang'])) {
     define("PM_LANG", $_SESSION['PM_LANG']);
   }
 }
-if (!defined("PM_LANG")) {
+/* if (!defined("PM_LANG")) {
   if (PM_ALLOW_CLIENTLANG) {
     if (in_array(PM_CLIENT_LANG, PM_ALL_LANGS)) {
       define("PM_LANG", PM_CLIENT_LANG);
@@ -112,6 +112,12 @@ if (!defined("PM_LANG")) {
   } else {
     define("PM_LANG", PM_DEFAULT_LANG);
   }
+} */
+
+if (!defined("PM_LANG")) {
+  define("PM_LANG", PM_DEFAULT_LANG);
+} else {
+  define("PM_LANG", PM_DEFAULT_LANG);
 }
 
 define("RTL_LANGS", array("he", "ar", "arc", "dv", "fa", "ha", "khw", "ku", "ps", "ur", "yi"));
@@ -156,8 +162,8 @@ if (PM_DEFINE_ADMIN) {
 
 //path to views
 define("PM_VIEWS", [
-  "bar_mobile" => PM_SYS_FOLDER . "/View/bar_mobile.view.html.php", "bar_skeleton" => PM_SYS_FOLDER . "/View/bar_skeleton.view.html.php", "depends" => PM_SYS_FOLDER . "/View/depends.view.html.php", "footer" => PM_SYS_FOLDER . "/View/footer.view.html.php",
-  "index" => PM_SYS_FOLDER . "/View/index.view.html.php", "logout" => PM_SYS_FOLDER . "/View/logout.view.html.php", "nav_lang" => PM_SYS_FOLDER . "/View/nav_lang.view.html.php", "nav" => PM_SYS_FOLDER . "/View/nav.view.html.php"
+  "bar_mobile" => PM_SYS_FOLDER . "/View/bar_mobile.view.html.php", "bar_skeleton" => PM_SYS_FOLDER . "/View/bar_skeleton.view.html.php", "depends" => PM_SYS_FOLDER . "/View/depends.view.html.php", "footer" => PM_SYS_FOLDER . "/View/footer.view.html.php", "index" => PM_SYS_FOLDER . "/View/index.view.html.php", "logout" => PM_SYS_FOLDER . "/View/logout.view.html.php", "nav_lang" => PM_SYS_FOLDER . "/View/nav_lang.view.html.php", "nav" => PM_SYS_FOLDER . "/View/nav.view.html.php"
 ]);
+
 
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";

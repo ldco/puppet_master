@@ -23,12 +23,6 @@ img {
     -ms-appearance: none;
     background-color: $c_interB;
     box-shadow: $pm_formBS;
-    &:hover {
-        background-color: $c_interP2;
-    }
-    &:focus {
-        box-shadow: $pm_formBSactive;
-    }
 }
 
 @mixin form_input_fixedHeight {
@@ -49,6 +43,19 @@ option,
 video,
 iframe {
     @extend %commonForElemnts;
+}
+
+button,
+textarea,
+input,
+select,
+option {
+    &:hover {
+        background-color: $c_interP2;
+    }
+    &:focus {
+        box-shadow: $pm_formBSactive;
+    }
 }
 
 select {
@@ -159,10 +166,11 @@ form {
 
 label {
     text-transform: capitalize;
-    padding-bottom: 0.5vh;
+    padding-bottom: 1vh;
     span {
         color: $c_err;
     }
+    display: flex;
 }
 
 textarea {
@@ -213,4 +221,39 @@ video:focus {}
         color: $c_domin;
         background: $c_opos;
     }
+}
+
+input[type="checkbox"] {
+    width: 2vh;
+    height: 2vh;
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+}
+
+input[type="checkbox"]:after {
+    content: "";
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+
+/*Hide the checkmark by default*/
+
+input[type="checkbox"]+label::after {
+    content: none;
+}
+
+
+/*Unhide the checkmark on the checked state*/
+
+input[type="checkbox"]:checked+label::after {
+    content: "";
+}
+
+input[type="checkbox"] {
+    //change this in future!
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
 }

@@ -6,5 +6,5 @@ cd sys/assets/images/images/ && find . -name "*.png" -exec pngquant --ext .png -
 if ($exec) {
     echo $exec;
 } else {
-    echo ("matrix error...");
+    echo ("Matrix ERROR... :(");
 }

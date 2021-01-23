@@ -1,25 +1,32 @@
 //hamburger vars
 $hamburgerColor: null;
 @if $LIGHT_THEME==true {
-    $hamburgerColor: $c_brand;
+    $hamburgerColor: $c_opos;
 }
 
 @if $LIGHT_THEME==false {
     $hamburgerColor: $c_interBB;
 }
 
-$hamburgerBGColor: $c_domin;
-$hamburgerRadius: none; //3px;
-$hamburgerShadow: none; //1px 1px 1px 1px $c_interM2;
-$hamburgerSize: map-get($mob, height) / 4;
+$hamburgerBGColor: rgba($c_brand2, 0.8); //$c_domin;
+$hamburgerRadius: 0; //3px;
+$hamburgerShadow: none;
+$hamburgerSize: map-get($mob, height) / 6;
+$hamburgerDistance: map-get($hamburger, distance);
 .pm_hamburger {
-    height: $hamburgerSize / 1.8;
-    width: $hamburgerSize;
+    height: $hamburgerSize / 0.5;
+    width: $hamburgerSize / 0.4;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include dir('left', 'right', 3vh, 3vh);
+    @include dir('left', 'right', $hamburgerDistance, $hamburgerDistance);
+}
+
+[data-floatbar=true] {
+    .pm_hamburger {
+        top: $hamburgerDistance;
+    }
 }
 
 .hamburger {

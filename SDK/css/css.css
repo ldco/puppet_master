@@ -69,4 +69,11 @@ canvas {
     height: 5vh;
 }
 
-.sdk_control_main {}
+#sdk_control_zero {
+    display: flex;
+    flex-direction: row;
+}
+
+#sdk_control_main {}
+
+#sdk_control_second {}

@@ -115,7 +115,8 @@ label {
     text-transform: uppercase;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button {
     font-size: 2vh;
     /* background: $c_brand; */
     /* color: $c_domin; */
@@ -176,7 +177,6 @@ input[type="checkbox"] {
     width: 2vh;
     height: 2vh;
     background-color: var(--main-bg-color);
-    ;
     cursor: pointer;
 }
 

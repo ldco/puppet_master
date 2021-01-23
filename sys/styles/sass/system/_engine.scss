@@ -1,3 +1,6 @@
+$heightFoot: map-get($footer, height);
+$heightMobBar: map-get($mob, height);
+$heightAdminBar: map-get($adminPanel, height);
 @function generateContentSize($admin, $widthBool, $mobis) {
     $vertical: null;
     @if $admin==false {
@@ -18,40 +21,23 @@
     /**/
     //height
     @if $widthBool==false {
-        //height1 horBar
-        $height1: null;
-        $height2: null;
-        $height3: null;
+        $heightTop: null;
         @if $vertical==false {
             @if $mobis==false {
-                $height1: map-get($horBar, height);
+                $heightTop: map-get($horBar, height);
             }
             @if $mobis==true {
-                $height1: map-get($mob, height);
+                $heightTop: map-get($mob, height);
             }
         }
         @if $vertical==true {
-            $height1: 0px;
-        }
-        //height2 panel
-        $height2: map-get($adminPanel, height);
-        //height3 footer
-        @if $PM_FOOTER==true {
-            @if $mobis==true {
-                $height3: 0px;
-            }
-            @if $mobis==false {
-                $height3: map-get($footer, height);
-            }
-        }
-        @if $PM_FOOTER==false {
-            $height3: 0px;
+            $heightTop: 0px;
         }
         @if $admin==true {
-            @return calc(100vh - #{$height1} - #{$height2});
+            @return calc(100vh - #{$heightTop} - #{$heightAdminBar});
         }
         @if $admin=false {
-            @return calc(100vh - #{$height1} - #{$height3});
+            @return calc(100vh - #{$heightTop} - #{$heightFoot});
         }
     }
 }
@@ -97,14 +83,4 @@
         }
         @return calc(0vw + #{$vert1});
     }
-}
-
-@if $IS_DEV==true {
-    $ICONS_FOLDER: "../#{$SYS_FOLDER}/assets/icons/vector_dev/";
-    $IMAGES_FOLDER: "../#{$SYS_FOLDER}/assets/images/images_dev/";
-}
-
-@if $IS_DEV==false {
-    $ICONS_FOLDER: "../#{$SYS_FOLDER}/assets/icons/vector/";
-    $IMAGES_FOLDER: "../#{$SYS_FOLDER}/assets/images/images/";
 }

@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace sys\Model;
 
-
 class SkeletonFooter
 {
-
     //  private $conn;
     private $modelNav = null;
     private $footerByWho = '';

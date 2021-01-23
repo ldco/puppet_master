@@ -9,8 +9,6 @@ use sys\Controller\DB;
 require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
 require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
 require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
-
-
 class Page
 {
     public $arr = [];
@@ -23,6 +21,7 @@ class Page
         } else {
             $_clss = "";
         }
+
         echo "<div class='pm_page_incontent" . $_clss . "' id='pm_page_" . $PM_PAGE_NUM  . "'>";
     }
 
@@ -92,11 +91,16 @@ class Page
         );
     }
 
-    public function video($name, $class = null, $id = null, $bgVideoEffect = false, $autoplay = true, $muted = true, $loop = true, $controls = false, $width = "auto", $height = "auto")
+    public function video($name, $class = null, $id = null, $fullscreen = true, $bgVideoEffect = false, $autoplay = true, $muted = true, $loop = true, $controls = false, $width = "auto", $height = "auto")
     {
         global $PM_PAGE_NUM;
         if ($bgVideoEffect === true) {
             echo "<div class='bgVideoEffect'></div>";
+        }
+        if ($fullscreen === true) {
+            $fullscreenclass = " bgVideo";
+        } else {
+            $fullscreenclass = "";
         }
         if ($class != null) {
             $class = " " . $class;
@@ -124,9 +128,15 @@ class Page
         } else {
             $controls = "";
         };
-        $src = PM_VIDEOS_REL . "/page_" . $PM_PAGE_NUM .  "/" . $name;
-        echo "<div id='$id' class='pm_video$class'><video width='$width' height='$height' $autoplay $muted $loop $controls><source src='$src.mp4' type='video/mp4'>
-<source src='$src.webm' type='video/webm'></video></div>";
+        if (PM_ONEPAGER) {
+            $path = $name;
+        } else {
+            $path = "page_" . $PM_PAGE_NUM .  "/" . $name;
+        }
+        $src = PM_VIDEOS_REL . $path;
+        echo "<div id='$id' class='pm_video $class $fullscreenclass'>";
+        echo "<video width='$width' height='$height' $autoplay $muted $loop $controls><source src='$src.mp4' type='video/mp4'><source src='$src.webm' type='video/webm'></video>";
+        echo "</div>";
     }
 
 
@@ -143,10 +153,17 @@ class Page
             $_class = "";
         }
         //get text
+
         global $PM_PAGE_NUM;
         global $DB;
+        if (PM_ONEPAGER) {
+            $textpath = $textId;
+        } else {
+            $textpath =
+                $PM_PAGE_NUM . "_" .  $textId;
+        }
         if (!isset($DB)) $DB = new DB;
-        $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_text WHERE id='" . $PM_PAGE_NUM . "_" .  $textId . "';");
+        $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_text WHERE id='" . $textpath . "';");
         if ($result && ($row = $result->fetch_assoc())) {
         } else {
             return; //record not found

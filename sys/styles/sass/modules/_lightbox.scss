@@ -1,0 +1,33 @@
+.pm_lightBox {
+    width: 96vw;
+    height: 92vh;
+    left: 1.5vw;
+    top: 4vh;
+    border-radius: 0.6vh;
+    box-shadow: 0 0 0vh 0.2vh $c_white;
+    position: fixed;
+    background-color: $c_domin;
+    z-index: 1980;
+    img {
+        border-radius: 0.6vh;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .lbClose {
+        position: absolute;
+        width: 5vh;
+        height: 5vh;
+        left: 2vh;
+        top: 2vh;
+        background-image: url("#{$ICONS_FOLDER}close.svg");
+        background-size: contain;
+        background-color: $c_white;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+            filter: invert(1);
+            transition: 0.3s;
+        }
+    }
+}

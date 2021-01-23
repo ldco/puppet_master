@@ -12,8 +12,9 @@ class SkeletonBar
     //  private $conn;
     private $adminuser;
     private $adminindex;
-    private $logoutimg = PM_ICONS_REL . "exit.svg";
+    private $logoutimg = PM_ICONS . "/exit.svg";
     private $definedAdmin = false;
+    private $definedFloatbar = false;
     private $definedVertical = false;
     private $definedNavLang = true;
     private $modelNav = null;
@@ -24,7 +25,9 @@ class SkeletonBar
         if (defined("PM_DEFINE_ADMIN")) {
             $this->definedAdmin = PM_DEFINE_ADMIN;
         }
-
+        /*  if (defined("PM_FLOATBAR")) {
+            $this->definedFloatbar = PM_FLOATBAR;
+        } */
         if (defined("PM_ISNAVLANG")) {
         }
         if (!defined("PM_ROOT") || !defined("PM_VIEWS")) return;
@@ -58,18 +61,27 @@ class SkeletonBar
 
         $isAuthenticated = false;
         if ($admin) {
-
             $navBarId = "pm_id_admin_Bar";
             $navId = "pm_id_admin_Nav";
             if (defined("PM_LOGGING_ADMIN") && PM_LOGGING_ADMIN) $isAuthenticated = true;
             //add $isAuthenticated = true if user logging
         } else {
-            $navBarId = "pm_id_Bar";
-            $navId = "pm_id_Nav";
+            if (defined("PM_FLOATBAR") && PM_FLOATBAR) {
+                $navBarId = "pm_id_BarFloat";
+                $navId = "pm_id_NavFloat";
+                $navBarClass = "pm_class_BarFloat";
+                $navClass = "pm_class_NavFloat";
+                $barLogo = "pm_barLogoFloat";
+            } else if (defined("PM_FLOATBAR") && !PM_FLOATBAR) {
+                $navBarId = "pm_id_Bar";
+                $navId = "pm_id_Nav";
+                $navBarClass = "pm_class_Bar";
+                $navClass = "pm_class_Nav";
+                $barLogo = "pm_barLogo";
+            } else {
+                echo "PM_FLOATBAR not defined!";
+            }
         }
-
-        $navBarClass = "pm_class_Bar";
-        $navClass = "pm_class_Nav";
         $navIsAdmin = $admin;
         $navBarLogoImg = PM_IMAGES_REL . "brand/barLogo.svg";
         $modelNav = $this->modelNav;
@@ -86,10 +98,28 @@ class SkeletonBar
     public function mobileBar(bool $admin, bool $lang)
     {
         if ($admin) {
-            $barId = "pm_id_admin_Bar";
+            $barId = "pm_admin_mobileBar";
+            $headerId = "pm_admin_mobileHeader";
         } else {
-            $barId = "pm_id_Bar";
+            if (defined("PM_FLOATBAR") && PM_FLOATBAR) {
+                $barId = "pm_mobileBarFloat";
+                $headerId = "pm_mobileHeaderFloat";
+                $headerClass = "pm_mobileHeaderFloat";
+                $barClass = "pm_mobileBarFloat";
+                $navClass = "pm_mobileNavFloat";
+                $headerLogoId = "mobileHeaderFloatLogo";
+            } else if (defined("PM_FLOATBAR") && !PM_FLOATBAR) {
+                $barId = "pm_mobileBar";
+                $headerId = "pm_mobileHeader";
+                $headerClass = "pm_mobileHeader";
+                $barClass = "pm_mobileBar";
+                $navClass = "pm_mobileNav";
+                $headerLogoId = "mobileHeaderLogo";
+            } else {
+                echo "PM_FLOATBAR not defined!";
+            }
         }
+
         $nav_pm_bar_asset = PM_ICONS_REL . "100.svg";
         $navBarLogoMob = PM_IMAGES_REL . "brand/barLogo.svg";
         $modelNav = $this->modelNav;

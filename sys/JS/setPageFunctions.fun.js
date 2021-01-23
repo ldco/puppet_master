@@ -6,6 +6,9 @@ function setPageFunctions() {
     let timeout = 500;
 
     let fun = {
+        fun_0: function() {
+
+        },
         fun_1: function() {
 
         },
@@ -18,24 +21,13 @@ function setPageFunctions() {
         fun_4: function() {
 
         },
+        fun_5: function() {
+
+        },
         fun_6: function() {
 
         },
-        fun_7: function() {
 
-        },
-        fun_8: function() {
-
-        },
-        fun_9: function() {
-
-        },
-        fun_10: function() {
-
-        },
-        fun_11: function() {
-            pmEmailLoader("11");
-        },
     };
 
     if (fun["fun_" + id]) {

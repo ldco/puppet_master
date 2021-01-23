@@ -10,7 +10,7 @@ $thebilityToggleIconSrc = PM_ICONS_REL . "thebility.svg";
 $thebilityDragIconSrc = PM_ICONS_REL . "drag.svg";
 $thebilityCloseIconSrc = PM_ICONS_REL . "close.svg";
 
-if (PM_THEME_LIGHT === true) :
+if (PM_THEME_LIGHT) :
     $thebilityThemeBollean = "false";
 else :
     $thebilityThemeBollean = "true";
@@ -29,15 +29,18 @@ endif;
                 <?php pmImg("thebility-close-icon", $thebilityCloseIconSrc, true, "thebility"); ?>
             </div>
         </div>
+        <?php if (PM_ALLOW_THEME) : ?>
         <form id="form_lightDarkTheme" action="index.php" method="POST" onclick="javascript:this.submit();">
             <div class="thebilityDiv thebility" id="lightDarkTheme">
                 <?php echo pmTranslate(PM_LANG, "dark / light theme", false);  ?>
             </div>
             <input type="hidden" name="submitTheme" value=<?= $thebilityThemeBollean ?> />
         </form>
+        <?php endif; ?>
         <div class="thebilityDiv thebility">
             <?php echo pmTranslate(PM_LANG, "font size", false);  ?>
-            <input class="slider thebility" id="fontDivSizeSlider" type="range" value="2" min="0.5" max="7" step="0.01" />
+            <input class="slider thebility" id="fontDivSizeSlider" type="range" value="2" min="0.5" max="7"
+                step="0.01" />
         </div>
         <div class="thebilityDiv thebility">
             <?php echo pmTranslate(PM_LANG, "saturation", false);  ?>
@@ -45,11 +48,13 @@ endif;
         </div>
         <div class="thebilityDiv thebility">
             <?php echo pmTranslate(PM_LANG, "contrast", false);  ?>
-            <input class="slider thebility" id="contrastSlider" type="range" value="1" min="0.6" max="1.3" step="0.01" />
+            <input class="slider thebility" id="contrastSlider" type="range" value="1" min="0.6" max="1.3"
+                step="0.01" />
         </div>
         <div class="thebilityDiv thebility">
             <?php echo pmTranslate(PM_LANG, "brightness", false);  ?>
-            <input class="slider thebility" id="brightnessSlider" type="range" oninput="" value="1" min="0.7" max="1.2" step="0.01" />
+            <input class="slider thebility" id="brightnessSlider" type="range" oninput="" value="1" min="0.7" max="1.2"
+                step="0.01" />
         </div>
         <div class="thebilityDiv thebility" id="bolderFont">
             <?php echo pmTranslate(PM_LANG, "bolder font", false);  ?>

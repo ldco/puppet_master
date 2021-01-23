@@ -1,0 +1,60 @@
+@include mob(true) {
+    .pm_agents_item {
+        img {
+            width: 60vw;
+            margin-bottom: 2vw;
+        }
+    }
+}
+
+@include mob(false) {
+    .pm_agents_item {
+        img {
+            width: 25vw;
+            margin-bottom: 2vh;
+        }
+    }
+}
+
+.pm_agents {}
+
+.pm_agents_item {
+    padding: 5vh;
+    text-align: center;
+    a {
+        text-decoration: none;
+        border: none;
+    }
+    img {
+        border-radius: 50%;
+    }
+}
+
+@if $LIGHT_THEME==true {
+    .pm_agents_item {
+        img {
+            box-shadow: 0.2vh 0.2vh 1vh 0.2vh $c_shadow;
+        }
+    }
+}
+
+@if $LIGHT_THEME==false {
+    .pm_agents_item {
+        img {
+            box-shadow: 0.1vh 0.1vh 1vh 0.1vh $c_black;
+        }
+    }
+}
+
+.pm_agents_name {
+    @include font(1, 600);
+    @include f-size($basicTextSize * 1.5);
+}
+
+.pm_agents_tel,
+.pm_agents_email {
+    direction: ltr;
+    @include f-size($basicTextSize * 1);
+}
+
+.pm_agents_email {}

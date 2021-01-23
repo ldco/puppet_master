@@ -11,6 +11,8 @@ rsync -arvh --delete www/master.min.js www/master-l-prod.min.css www/master-d-pr
 
 rsync -arvh --delete --exclude 'assets/videos/videos_dev' --exclude 'assets/icons/vector_dev' --exclude 'assets/images/images_dev' --exclude 'JS' --exclude 'sql'  --exclude 'styles' sys/ dist/sys &&
 
+#rsync -arvh --delete vendor/ dist/vendor
+
 rsync -arvh --delete admin/ dist/admin
 
 

@@ -49,7 +49,54 @@ function getThisContentView(x) {
 }
 "use strict";
 
-function pmGetTranslate(text, fun) {
+function lightBox(elClass, boxClass) {
+  var elements = document.querySelectorAll("." + elClass);
+  elements.forEach(function (el) {
+    el.addEventListener("click", function () {
+      console.log("asd " + this.children[0].children[0].tagName);
+      var box = document.createElement("div");
+      var boxpmClass = "pm_lightBox";
+      box.setAttribute("class", boxClass + " " + boxpmClass);
+      document.body.appendChild(box);
+
+      if (this.children[0].tagName === "IMG") {
+        var boxImg = document.createElement("img");
+        boxImg.src = this.children[0].src;
+        box.appendChild(boxImg);
+      } else if (this.children[0].children[0].tagName === "VIDEO") {
+        var boxVideo = document.createElement("video");
+        boxVideo.style.width = "100%";
+        boxVideo.style.height = "100%";
+        boxVideo.style.objectFit = "cover";
+        boxVideo.setAttribute("autoplay", "");
+        boxVideo.setAttribute("muted", "");
+        boxVideo.setAttribute("loop", "");
+        var boxVideoSource1 = document.createElement("source");
+        boxVideoSource1.src = this.children[0].children[0].children[0].src;
+        var boxVideoSource2 = document.createElement("source");
+        boxVideoSource2.src = this.children[0].children[0].children[1].src;
+        boxVideo.appendChild(boxVideoSource1);
+        boxVideo.appendChild(boxVideoSource2);
+        box.appendChild(boxVideo);
+      } else {
+        console.log("No images or videos on this element");
+      }
+
+      var boxClose = document.createElement("div");
+      boxClose.setAttribute("class", "lbClose");
+
+      boxClose.onclick = function () {
+        this.parentNode.remove();
+        this.remove();
+      };
+
+      box.appendChild(boxClose);
+    });
+  });
+}
+"use strict";
+
+function pmGetTranslate(text) {
   var _lang = document.querySelector("html");
 
   var lang = _lang.getAttribute("lang");
@@ -60,7 +107,7 @@ function pmGetTranslate(text, fun) {
     if (this.readyState == 4 && this.status == 200) {
       var _fromDB = ajx.responseText;
       var fromDB = JSON.parse(_fromDB);
-      fun();
+      return _fromDB;
     }
   };
 
@@ -104,7 +151,10 @@ var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
 var PM_ISADMIN = document.querySelector("html").getAttribute("data-admin");
 var PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
-var PM_ARR_OF_LANGS = ["en", "ru", "he"];
+var PM_ARR_OF_LANGS = ["en", "he"];
+var PM_BAR = document.querySelector("html").getAttribute("data-bar");
+var PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
+var PM_FLOATBAR = document.querySelector("html").getAttribute("data-floatbar");
 
 if (PM_DIR === "ltr") {
   var PM_DIROPOSITE = "rtl";
@@ -117,36 +167,90 @@ if (PM_DIR === "ltr") {
 }
 
 function initFun() {
-  setHamburgerMenu();
-  setRouter();
-  setChangeLang();
-  setBarAsset();
+  if (PM_ONEPAGER === "false") {
+    setRouter();
+  }
+
+  if (PM_FLOATBAR === "false") {
+    setHamburgerMenu(false);
+  } else {
+    setHamburgerMenu(true);
+  }
+
+  if (PM_BAR === "true" || PM_FLOATBAR === "true") {
+    setChangeLang();
+  }
+
+  if (PM_BAR === "true") {
+    setBarAsset();
+    setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
+  }
+
   setGoTopButton();
-  setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
   initModalLocalisation();
-  new Thebility().init(); // mainPageIntro();
+  new Thebility().init();
+
+  if (PM_ONEPAGER === "false") {
+    getAgent();
+  }
+
+  if (PM_FLOATBAR === "true") {
+    document.querySelector("#pm_barLogoFloat").addEventListener("click", function () {
+      drag(this);
+    });
+    document.querySelector("#pm_barLogoFloat").click();
+  } //CUSTOM FUNCTIONS
+  //
+
+
+  if (PM_ISMOB === "false") {
+    moveBar();
+  }
+
+  lightBox("porfoGrid_item", "porfoGrid_lb");
+  googleMap("rippMap"); //
 
   /*end of functions list!*/
 
-  var setURL = window.location.hash;
-  if (setURL == "") return;
-  var id = setURL.split("#").pop();
-  if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
-  getContentView(id);
+  if (PM_ONEPAGER === "false") {
+    var setURL = window.location.hash;
+    if (setURL == "") return;
+    var id = setURL.split("#").pop();
+    if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
+    getContentView(id);
+  }
+}
+"use strict";
+
+function getAgent() {
+  var hash = window.location.hash.substring(1, 2);
+  var agent = window.location.hash.slice(3);
+
+  if (window.location.hash === "#6") {
+    return;
+  }
+
+  if (hash === "6") {
+    setTimeout(function () {
+      var els = document.querySelectorAll(".pm_agents_item");
+      var current = document.querySelector("#agentid_" + agent);
+      console.log(current);
+
+      for (var i = 0; i < els.length; i++) {
+        els[i].style.display = "none";
+      }
+
+      current.style.display = "inherit";
+    }, 400);
+    window.location.hash = "#6";
+  }
 }
 "use strict";
 
 function setBarAsset() {
-  var el = document.querySelectorAll(".pm_bar_asset ");
-  el.forEach(function (element) {
-    element.addEventListener("click", function () {
-      barAssetFun();
-    });
+  var el = document.querySelector("#pm_id_Bar .pm_bar_asset");
+  el.addEventListener("click", function () {//showPMInformation();
   });
-
-  var barAssetFun = function barAssetFun() {
-    window.location.href = "admin/index.php";
-  };
 }
 "use strict";
 
@@ -165,20 +269,27 @@ function setChangeLang() {
 function setGoTopButton() {
   var el = "#pm_gototop";
   setOnScroll("#pm_gototop", "pm_gototop_scrolled", 180);
-  document.querySelector(el).addEventListener("click", function () {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  });
+  /*  document.querySelector(el).addEventListener("click", function() {
+       window.scroll({
+           top: 0,
+           left: 0,
+           behavior: 'smooth'
+       });
+   }); */
 }
 "use strict";
 
-function setHamburgerMenu() {
+function setHamburgerMenu(float) {
   var hamburger = document.querySelectorAll(".pm_hamburger")[0];
   if (hamburger == null) return;
-  var mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
+  var mobileBar;
+
+  if (!float) {
+    mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
+  } else {
+    mobileBar = document.querySelectorAll(".pm_mobileBarFloat")[0];
+  }
+
   var helperDiv = document.createElement("div");
   helperDiv.setAttribute("class", "hamburgerHelperDiv");
   helperDiv.addEventListener("click", function () {
@@ -194,35 +305,76 @@ function setHamburgerMenu() {
       mobileBar.style.display = "flex";
       setTimeout(function () {
         if (PM_LTR) {
-          mobileBar.style.left = "0";
+          if (!float) {
+            anime({
+              targets: mobileBar,
+              translateX: 0,
+              left: '0',
+              easing: 'spring(0, 60, 1, 0)'
+            });
+          } else {
+            anime({
+              targets: mobileBar,
+              translateX: 0,
+              left: '3vh',
+              easing: 'spring(0.1, 50, 1.6, 0)'
+            });
+          }
         } else {
-          mobileBar.style.right = "0";
+          if (!float) {
+            anime({
+              targets: mobileBar,
+              translateX: 0,
+              right: '0',
+              easing: 'spring(0, 60, 1, 0)'
+            });
+          } else {
+            anime({
+              targets: mobileBar,
+              translateX: 0,
+              right: '3vh',
+              easing: 'spring(0.1, 50, 1.6, 0)'
+            });
+          }
         }
-
-        mobileBar.style.transition = "ease 1s";
       }, 10);
     } else {
-      removeHamburger();
+      removeHamburger(float);
     }
   });
 }
 
-function removeHamburger() {
+function removeHamburger(float) {
   if (document.querySelector(".hamburgerHelperDiv")) {
     document.querySelectorAll(".pm_hamburger")[0].classList.remove("is-active");
     document.querySelector(".hamburgerHelperDiv").remove();
-    var mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
+    var mobileBar;
 
-    if (PM_LTR) {
-      mobileBar.style.left = "-60vw";
+    if (!float) {
+      mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
     } else {
-      mobileBar.style.right = "-60vw";
+      mobileBar = document.querySelectorAll(".pm_mobileBarFloat")[0];
     }
 
-    mobileBar.style.transition = "ease 0.8s";
+    if (PM_LTR) {
+      anime({
+        targets: mobileBar,
+        translateX: '-100vw',
+        left: '0',
+        easing: 'spring'
+      });
+    } else {
+      anime({
+        targets: mobileBar,
+        translateX: '100vw',
+        right: '0',
+        easing: 'spring'
+      });
+    }
+
     setTimeout(function () {
       mobileBar.style.display = "none";
-    }, 800);
+    }, 300);
   }
 }
 "use strict";
@@ -245,6 +397,9 @@ function setRouter() {
     });
   });
 }
+"use strict";
+
+var anime = require('animejs');
 "use strict";
 
 var AOS = require("aos");
@@ -274,19 +429,14 @@ function pmEmailLoader(page) {
   var _parent = "#pm_page_" + page;
 
   var parent = document.querySelector(_parent);
-
-  function init_setEmailLoader() {
-    loader.setAttribute("class", "pm_loader pm_emailLoader");
-    parent.appendChild(loader);
-    document.querySelector("#pm_overlay").style.display = "flex";
-  }
-
-  var form = document.querySelectorAll(_parent + " form");
-  form.forEach(function (el) {
-    el.addEventListener("submit", function () {
-      init_setEmailLoader();
-    });
-  });
+  loader.setAttribute("class", "pm_loader pm_emailLoader");
+  parent.appendChild(loader);
+  /*  let form = document.querySelectorAll(_parent + " form");
+   form.forEach(el => {
+       el.addEventListener("submit", function() {
+           init_setEmailLoader();
+       });
+   }); */
 }
 "use strict";
 
@@ -492,13 +642,13 @@ function pmModalBase(closetype) {
 }
 "use strict";
 
-function pmPrompt(title, fun, content, closetype) {
+function pmPrompt(title, fun, content, closetype, yesbut, nobut) {
   var el = pmModalBase(closetype);
   el.title(title);
   el.button(function () {
     fun();
-  }, PM_MODAL_LOC[6]);
-  el.buttonClose(closetype, PM_MODAL_LOC[5]);
+  }, PM_MODAL_LOC[yesbut]);
+  el.buttonClose(closetype, PM_MODAL_LOC[nobut]);
   el.div(content, "");
 }
 "use strict";
@@ -506,7 +656,7 @@ function pmPrompt(title, fun, content, closetype) {
 var PM_MODAL_LOC = [];
 
 function initModalLocalisation() {
-  var wordsToTranslate = ["alert", "back", "cancel", "close", "error", "no", "yes"];
+  var wordsToTranslate = ["alert", "back", "cancel", "close", "error", "no", "yes", "submit"];
   var name = JSON.stringify(wordsToTranslate);
   var ifdev = document.getElementsByTagName("html")[0].getAttribute("data-dev");
   var ajx = new XMLHttpRequest();
@@ -528,6 +678,154 @@ function initModalLocalisation() {
   ajx.open("POST", sysFolder + "modules/initModalTranslate.php", true);
   ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded; charset=UTF-8");
   ajx.send("name=" + name + "&lang=" + PM_LANG);
+}
+"use strict";
+
+function pmModalLoc(text) {
+  var _lang = document.querySelector("html");
+
+  var lang = _lang.getAttribute("lang");
+
+  var obj = {
+    1: {
+      en: "Business Clients",
+      he: "ללקוחות עסקיים"
+    },
+    2: {
+      en: "Private Clients",
+      he: "ללקוחות פרטיים"
+    },
+    3: {
+      en: "Leave details and we will contact you immediately",
+      he: "השאירו פרטים ומיד ניצור עמכם קשר"
+    },
+    4: {
+      en: "Contact Name",
+      he: "שם איש קשר"
+    },
+    5: {
+      en: "Full name",
+      he: "שם מלא"
+    },
+    6: {
+      en: "Name of company/corporation",
+      he: "שם החברה/תאגיד"
+    },
+    7: {
+      en: "HF/ID number",
+      he: "מספר ח.פ./ת.ז"
+    },
+    8: {
+      en: "Email",
+      he: "כתובת דואל"
+    },
+    9: {
+      en: "Contact phone number",
+      he: "טלפון ליצירת קשר"
+    },
+    10: {
+      en: "I agree with the terms of the policy",
+      he: "אני מסכים עם תנאי המדיניות"
+    },
+    11: {
+      en: "I agree to receive relevant mailings and updates to email",
+      he: "אני מסכים לקבל דיוור ועדכונים רלוונטיים לדואל"
+    },
+    12: {
+      en: "Our representative will contact you as soon as possible. Thank you for your inquiry!",
+      he: "נציגנו יצרו עמכם קשר בהקדם האפשרי. תודה על פנייתכם!"
+    },
+    13: {
+      en: "Please fill all the required fields",
+      he: "נא מלא את כל הפרטים הנדרשים"
+    },
+    14: {
+      en: "Please enter valid email address",
+      he: "אנא הזן כתובת דואל חוקית"
+    },
+    15: {
+      en: "Please enter valid telephone number",
+      he: "אנא הזן מספר טלפון חוקי"
+    },
+    16: {
+      en: "Please accept the Terms of Service",
+      he: "אנא קבל את תנאי השירות"
+    },
+    17: {
+      en: "ID number",
+      he: "מספר ת.ז"
+    },
+    18: {
+      en: "Import Calculator is currently in development",
+      he: "מחשבון יבוא נמצא כעת בפיתוח"
+    },
+    19: {
+      en: "Our representative will contact you as soon as possible. Thank you for your inquiry!",
+      he: "נציגנו יצרו עמכם קשר בהקדם האפשרי. תודה על פנייתכם!"
+    },
+    20: {
+      en: "Request subject",
+      he: "נושא הפניה"
+    }
+  };
+  return obj[text][lang];
+}
+"use strict";
+
+function pmFormValidation(fun) {
+  var els = document.querySelectorAll(".pm_requiredfield");
+  var emails = document.querySelectorAll("input[type='email']");
+  var tels = document.querySelectorAll("input[type='tel']");
+  var iagree = document.querySelector(".pm_iagree");
+  var inps = [];
+  els.forEach(function (element) {
+    inps.push(element.nextSibling);
+  });
+
+  for (var i = 0; i < inps.length; i++) {
+    if (inps[i].value.length === 0) {
+      alert(pmModalLoc(13));
+      return;
+    } else {
+      for (var _i = 0; _i < emails.length; _i++) {
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emails[_i].value)) {
+          for (var k = 0; k < tels.length; k++) {
+            if (/^\d+$/.test(tels[k].value)) {
+              if (iagree.checked == true) {
+                fun();
+                return;
+              } else {
+                alert(pmModalLoc(16));
+                return;
+              }
+            } else {
+              alert(pmModalLoc(15));
+              return;
+            }
+          }
+        } else {
+          alert(pmModalLoc(14));
+          return;
+        }
+      }
+    }
+  }
+}
+"use strict";
+
+var ScrollMagic = require("scrollmagic");
+
+function scrollmagic(object) {
+  // init controller
+  var controller = new ScrollMagic.Controller(); // create a scene
+
+  new ScrollMagic.Scene({
+    duration: 100,
+    // the scene should last for a scroll distance of 100px
+    offset: 50 // start this scene after scrolling for 50px
+
+  }).setPin(object) // pins the element for the the scene's duration
+  .addTo(controller); // assign the scene to the controller
 }
 "use strict";
 
@@ -731,150 +1029,35 @@ function Thebility() {
 }
 "use strict";
 
-function mainPageIntro() {
-  if (window.location.hash !== "" && window.location.hash !== "#1") return;
-  var dir = document.getElementsByTagName("html")[0].getAttribute("dir");
+function moveBar() {
+  window.addEventListener("scroll", function () {
+    var win = window.scrollY;
+    var el = document.querySelector("#pm_id_BarFloat");
+    var elh = el.offsetWidth;
+    var distance = "calc(100vw - " + elh + "px - 7vh)";
+    var height = window.innerHeight;
+    var transition = "0.8s";
+    var logo = document.querySelector("#rippMainLogo ");
+    var logoimg = logo.querySelector("img");
 
-  function getRandomInt(min, max) {
-    return Math.random() * (max - min) + min;
-  }
-
-  function presentation() {
-    for (var i = 0; i < 7; i++) {
-      var _pre = document.createElement("div");
-
-      var _pre1 = document.createElement("div");
-
-      _pre.setAttribute("class", "page_O_present_anim_1");
-
-      document.getElementById("pm_page_1").appendChild(_pre1);
-
-      _pre1.appendChild(_pre);
+    if (win > height / 3) {
+      el.style.right = distance;
+      el.style.transition = transition;
+      logoimg.style.width = "5vh";
+      logo.style.top = "3.5vh";
+      logo.style.left = "2vh";
+      logoimg.style.transition = transition;
+      logo.style.transition = transition;
+    } else {
+      el.style.right = "2vh";
+      el.style.transition = transition;
+      logoimg.style.width = "50vh";
+      logo.style.top = "25vh";
+      logo.style.left = "calc(48vw - 25vh)";
+      logoimg.style.transition = transition;
+      logo.style.transition = transition;
     }
-
-    var colors = ["#597884", "#aebecb", "#294552", "#00070a"];
-    var pre1 = document.getElementsByClassName("page_O_present_anim_1");
-
-    var _loop = function _loop(_i) {
-      pre1[_i].style.height = getRandomInt(1, 1.5) + "vh";
-      pre1[_i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      pre1[_i].style.width = "100vw";
-      pre1[_i].style.position = "absolute";
-      pre1[_i].style.top = getRandomInt(60, 70) + "vh";
-      pre1[_i].style.transition = "2s";
-      pre1[_i].style.zIndex = "3";
-      pre1[_i].style.opacity = "0.8";
-
-      if (dir == "ltr") {
-        pre1[_i].style.left = "-100vw";
-      } else {
-        pre1[_i].style.right = "-100vw";
-      }
-
-      setTimeout(function () {
-        if (dir === "ltr") {
-          pre1[_i].style.left = "0";
-        } else {
-          pre1[_i].style.right = "0";
-        }
-      }, 500);
-    };
-
-    for (var _i = 0; _i < pre1.length; _i++) {
-      _loop(_i);
-    }
-  }
-
-  presentation();
-  var bgimages = ["", "", "", "", "", ""];
-  var videoParent = document.getElementById("bgVideo");
-  var extension;
-  var dataWebpAtr = document.querySelector("html").getAttribute('data-webp');
-  var dataLocalAtr = document.querySelector("html").getAttribute('data-local');
-
-  if (dataLocalAtr === "false" && dataWebpAtr === "true") {
-    extension = "webp";
-  } else {
-    extension = "png";
-  }
-
-  function x(folder) {
-    videoParent.style.backgroundImage = "url('sys/assets/images/" + folder + "/page_1/" + Math.floor(Math.random() * 10 + 1) + "." + extension + "')";
-  }
-
-  x("images");
-}
-"use strict";
-
-var Swiper = require("swiper");
-
-function archSlider() {
-  var mySwiper = new Swiper(".archSlider", {
-    // Optional parameters
-    direction: "horizontal",
-
-    /* effect: 'fade', */
-    centeredSlides: true,
-
-    /*  autoplay: {
-     delay: 2500,
-     disableOnInteraction: false,
-     }, */
-    loop: true,
-    // If we need pagination
-    pagination: {
-      el: ".swiper-pagination"
-    },
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    } // And if we need scrollbar
-
-    /*  scrollbar: {
-        el: ".swiper-scrollbar"
-    } */
-
   });
-}
-"use strict";
-
-function downloadAllFonts() {}
-"use strict";
-
-function downloadFont(font) {
-  var folder = "../ldcofonts/";
-  var fileName = font + ".zip";
-  var link = document.createElement("a");
-  link.href = folder + fileName;
-  link.click();
-  link.remove();
-  if (document.querySelector(".pm_modal_parent")) document.querySelector(".pm_modal_parent").remove();
-  if (document.querySelector("#pm_overlay").style.display !== "none") document.querySelector("#pm_overlay").style.display = "none";
-}
-"use strict";
-
-function initDownloadFont() {
-  var els = document.getElementById("fontsGrid").querySelectorAll("div");
-  els.forEach(function (el) {
-    el.addEventListener("click", function () {
-      promptDownloadFont(this);
-    });
-  });
-  var all = document.getElementById("text_6_3");
-  all.addEventListener("click", function () {
-    downloadFont("LDCOFonts");
-  });
-}
-"use strict";
-
-function promptDownloadFont(y) {
-  var font = y.querySelector("div").innerHTML;
-  pmPrompt("Alert", function () {
-    downloadFont(font);
-  }, "Are you sure you want do download the font", 1);
-  var x = document.querySelector(".pm_modal_innerdiv").innerHTML;
-  document.querySelector(".pm_modal_innerdiv").innerHTML = x + " " + font.toUpperCase() + "?";
 }
 "use strict";
 
@@ -885,18 +1068,13 @@ function setPageFunctions() {
   if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
   var timeout = 500;
   var fun = {
+    fun_0: function fun_0() {},
     fun_1: function fun_1() {},
     fun_2: function fun_2() {},
     fun_3: function fun_3() {},
     fun_4: function fun_4() {},
-    fun_6: function fun_6() {},
-    fun_7: function fun_7() {},
-    fun_8: function fun_8() {},
-    fun_9: function fun_9() {},
-    fun_10: function fun_10() {},
-    fun_11: function fun_11() {
-      pmEmailLoader("11");
-    }
+    fun_5: function fun_5() {},
+    fun_6: function fun_6() {}
   };
 
   if (fun["fun_" + id]) {
@@ -948,4 +1126,25 @@ function getRandMath(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+"use strict";
+
+function googleMap(elemid) {
+  function initMap() {
+    // The location of Uluru
+    var uluru = {
+      lat: -25.344,
+      lng: 131.036
+    }; // The map, centered at Uluru
+
+    var map = new google.maps.Map(document.getElementById(elemid), {
+      zoom: 4,
+      center: uluru
+    }); // The marker, positioned at Uluru
+
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
 }
