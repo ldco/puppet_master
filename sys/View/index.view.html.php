@@ -50,12 +50,11 @@ if (PM_BAR && !PM_FLOATBAR) {
     gtag("js", new Date());
     gtag("config", "GA_MEASUREMENT_ID");
     </script>
-
-    <title><?= PM_TITLE ?></title>
+    <title><?= PM_RENDERED_TITLE ?></title>
     <?php $modelDepends->index(); ?>
 </head>
 
-<body id="pm_body" class="body">
+<body id="<?= PM_BODY_ID ?>" class="body">
     <div id="pm_overlay" style="display: none"></div>
     <?php
     $modelBar->index(); ?>

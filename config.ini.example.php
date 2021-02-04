@@ -34,7 +34,7 @@ define("PM_REMOTE_APPFOLDER", "public_html"); //don't touch unless
 define("PM_DEV_OS", "lin"); //lin/win/mac
 define("PM_PROD_OS", "lin"); //lin/win
 define("PM_ONEPAGER", true); //true or false
-define("PM_ISAPP", false); //true or false
+define("PM_PROGRESSIVE_APP", false); //true or false
 
 //sceleton items
 define("PM_BAR", true); //will be false if PM_FLOATBAR is true

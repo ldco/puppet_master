@@ -25,9 +25,7 @@ class SkeletonBar
         if (defined("PM_DEFINE_ADMIN")) {
             $this->definedAdmin = PM_DEFINE_ADMIN;
         }
-        /*  if (defined("PM_FLOATBAR")) {
-            $this->definedFloatbar = PM_FLOATBAR;
-        } */
+
         if (defined("PM_ISNAVLANG")) {
         }
         if (!defined("PM_ROOT") || !defined("PM_VIEWS")) return;
@@ -63,6 +61,7 @@ class SkeletonBar
         if ($admin) {
             $navBarId = "pm_id_admin_Bar";
             $navId = "pm_id_admin_Nav";
+            $navBarClass = "pm_class_admin_Bar";
             if (defined("PM_LOGGING_ADMIN") && PM_LOGGING_ADMIN) $isAuthenticated = true;
             //add $isAuthenticated = true if user logging
         } else {
@@ -100,6 +99,10 @@ class SkeletonBar
         if ($admin) {
             $barId = "pm_admin_mobileBar";
             $headerId = "pm_admin_mobileHeader";
+            $headerClass = "pm_mobileHeaderFloat_admin";
+            $headerLogoId = "mobileHeaderFloatLogo_admin";
+            $barClass = "pm_mobileBarFloat_admin";
+            $navClass = "pm_mobileNav_admin";
         } else {
             if (defined("PM_FLOATBAR") && PM_FLOATBAR) {
                 $barId = "pm_mobileBarFloat";

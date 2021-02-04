@@ -17,20 +17,20 @@
     ?>
 
     <script>
-        let el = document.getElementsByClassName("loginMessageText")[0];
-        if (el.className === "loginMessageText errorText") {
-            el.style.borderBottom = "solid 2vh red";
-        }
+    let el = document.getElementsByClassName("loginMessageText")[0];
+    if (el.className === "loginMessageText errorText") {
+        el.style.borderBottom = "solid 2vh red";
+    }
     </script>
 
     <!-- login form box -->
     <?php
-    require_once "../vendor/xlad/formr/class.formr.php"; ?>
+    require_once "../vendor/formr/formr/class.formr.php"; ?>
 
     <div class="adminTitle"><img src="../<?= PM_IMAGES_REL ?>brand/barLogo.svg"></div>
 
     <?php
-    $form = new Formr();
+    $form = new Formr\Formr();
     $loginformaction = "/admin/index.php";
     $form->html_purifier = $_SERVER["DOCUMENT_ROOT"] . "vendor/masterjoa/htmlpurifier-standalone/src/HTMLPurifier.php";
     echo $form->form_open("loginform", "loginform", "", "", "");

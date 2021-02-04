@@ -1,7 +1,6 @@
 {
     "require": {
         "phpmailer/phpmailer": "^6.1",
-        "xlad/formr": "dev-master",
         "dg/ftp-deployment": "^3.3",
         "ezyang/htmlpurifier": "^4.12",
         "tecnickcom/tcpdf": "^6.3",
@@ -9,6 +8,7 @@
         "masterjoa/htmlpurifier-standalone": "^4.8",
         "league/oauth2-google": "^3.0",
         "symfony/polyfill-mbstring": "^1.20",
-        "shieldon/shieldon": "^2"
+        "shieldon/shieldon": "^2",
+        "formr/formr": "^1.2"
     }
 }

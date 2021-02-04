@@ -6,7 +6,7 @@
         </div>
     </div>
 
-    <div id="<?= $headerLogoId ?>">
+    <div id="<?= PM_BODY_ID ?>">
         <a href="">
             <img alt="logo" src="<?= $navBarLogoMob ?>"></a>
     </div>

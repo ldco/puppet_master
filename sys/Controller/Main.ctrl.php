@@ -27,7 +27,7 @@ $PM_PAGE_NUM = $needPageId;
 
 if (empty($needPageId)) die(show404());
 
-if (!defined("PM_ADMIN_ROOT")) define("PM_ADMIN_ROOT", PM_ROOT . PM_SYS_FOLDER . "/admin/");
+/* if (!defined("PM_ADMIN_ROOT")) define("PM_ADMIN_ROOT", PM_ROOT . PM_SYS_FOLDER . "/admin/"); */
 
 if (defined("PM_ONEPAGER") && !PM_ONEPAGER) {
     $viewPagePathPrefix = PM_ROOT . PM_SYS_FOLDER . "/Pages";

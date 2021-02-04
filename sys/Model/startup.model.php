@@ -64,6 +64,7 @@ if (PM_IS_LOCAL) {
 
 
 define("PM_ADMIN_ROOT", PM_ROOT . "admin/");
+define("PM_ADMIN_ROOT_SHARED", PM_ROOT);
 /* define("PM_CLIENT_LANG", substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)); */
 define("PM_ADMIN_TITLE", "Admin Dashboard - " . PM_TITLE);
 
@@ -134,14 +135,7 @@ if (in_array(PM_ADMIN_LANG, RTL_LANGS)) {
   define("PM_ADMIN_DIRECTION", "ltr");
 }
 
-if (PM_ISAPP) {
-  define("PM_ADMIN_ISROOT", 1);
-} else {
-  define("PM_ADMIN_ISROOT", 0);
-}
-
 define("PM_HELPER", PM_ROOT . PM_SYS_FOLDER . "/helpers/");
-
 
 require_once PM_HELPER . "checkIfIsMobileNow.fun.help.php";
 checkIfIsMobileNow();
@@ -149,15 +143,15 @@ checkIfIsMobileNow();
 
 if ((getcwd() . "/") === PM_ADMIN_ROOT) {
   define("PM_DEFINE_ADMIN", true);
-} else {
-  define("PM_DEFINE_ADMIN", false);
-}
-if (PM_DEFINE_ADMIN) {
   define("PM_RENDERED_TITLE", PM_ADMIN_TITLE);
   define("PM_BODY_ID", "pm_admin_body_id");
 } else {
+  define("PM_DEFINE_ADMIN", false);
   define("PM_RENDERED_TITLE", PM_TITLE);
   define("PM_BODY_ID", "pm_body_id");
+}
+if (PM_DEFINE_ADMIN) {
+} else {
 }
 
 //path to views
