@@ -6,7 +6,7 @@ declare(strict_types=1);
 
 use sys\Controller\DB;
 
-require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
+require_once PM_SYS . "Controller/DB.class.ctrl.php";
 
 class VideoList
 {

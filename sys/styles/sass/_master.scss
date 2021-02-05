@@ -25,6 +25,7 @@
 @import "system/form";
 @import "system/infoPages";
 @import "system/scrollbar";
+@import "system/loginregister";
 //layout
 //skeleton
 @import "skeleton/main";
@@ -33,13 +34,7 @@
 @import "skeleton/html";
 @import "skeleton/nav";
 @import "skeleton/hamburger";
-//admin
-//@import "admin/login";
-//@import "skeleton/panel";
-//modules
-//@import "modules/grids/grid";
-//@import "modules/grids/team";
-//@import "modules/modals/pmodals";
+@import "skeleton/panel";
 @import "modules/thebility/thebility";
 @import "modules/loaders";
 @import "modules/contacts";

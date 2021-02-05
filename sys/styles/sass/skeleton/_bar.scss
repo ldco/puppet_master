@@ -2,7 +2,6 @@
 @include mob(true) {
     #pm_id_Bar,
     #pm_id_BarFloat,
-    #pm_id_admin_Bar,
     #pm_admin_panel {
         display: none !important;
     }
@@ -112,8 +111,7 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
         }
         .pm_class_Nav {
             @if $PM_NAV_ICONS==true {
-                .nav_item,
-                .nav_admin_item {
+                .nav_item {
                     img,
                     &+div>img {
                         width: calc(#{map-get($vertBar, width)} / 3) !important;
@@ -125,8 +123,7 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
                 }
             }
             @if $PM_NAV_ICONS==false {
-                .nav_item,
-                .nav_admin_item {}
+                .nav_item {}
                 span {
                     font-size: map-get($horBar, height) / 4 !important;
                 }
@@ -151,16 +148,6 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
 body {
     @if $PM_BAR_IS_VERTICAL==false {
         @include scrolledBar;
-    }
-}
-
-#pm_id_admin_Bar {
-    background-color: $c_domin;
-    @if $PM_ADMIN_BAR_IS_VERTICAL==true {
-        @include verticalBar;
-    }
-    @if $PM_ADMIN_BAR_IS_VERTICAL==false {
-        @include horizontalBar;
     }
 }
 
@@ -296,7 +283,5 @@ font-size: 2vh;
 }
 //MISC
 #pm_mobileBar {}
-#pm_admin_mobileBar {}
 #pm_mobileHeader {}
 #pm_mobileHeaderFloat {}
-#pm_admin_mobileHeader {}

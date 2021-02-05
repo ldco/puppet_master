@@ -25,8 +25,6 @@ define("PM_WEBP", true);
 //need ADMIN backend
 define("PM_NEED_ADMIN", false);
 
-//system
-define("PM_SYS_FOLDER", "sys"); //or core -> don't forget to replace in SASS _config.scss file also!
 define("PM_IS_DEV", true); // or true -> don't forget to replace config file on host!
 define("PM_PROD_SERVER", "apache"); //or nginx
 define("PM_LOCAL_APPFOLDER", "root");
@@ -47,7 +45,6 @@ define("PM_FOOTER_NAV", false); //always false if PM_FOOTER false
 define("PM_DEFAULT_LANG", "en");
 define("PM_ALL_LANGS", array("en")); //list of langs
 define("PM_ALLOW_CLIENTLANG", false); // or true (if true, default is client lang)
-define("PM_ADMIN_LANG", "en"); // define lang of admin area
 
 //DB local
 define("DB_NAME_LOCAL", "b");

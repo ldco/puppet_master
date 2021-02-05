@@ -9,8 +9,8 @@ use PHPMailer\PHPMailer\Exception;
 require PM_ROOT . "vendor/phpmailer/phpmailer/src/Exception.php";
 require PM_ROOT . "vendor/phpmailer/phpmailer/src/PHPMailer.php";
 require PM_ROOT . "vendor/phpmailer/phpmailer/src/SMTP.php";
-require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
-require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
+require_once PM_SYS . "Model/startup.model.php";
+require_once PM_SYS . "Controller/DB.class.ctrl.php";
 require_once  PM_HELPER . "path2url.fun.php";
 
 require_once (dirname($_SERVER['DOCUMENT_ROOT'], 1)) . "/config.ini.php";
@@ -34,8 +34,8 @@ class Email
     public $addCC = null;
     public $addBCC = null;
     public $addAttachment = null; // Add attachments
-    private $LocationSuccess = PM_ROOT . PM_SYS_FOLDER . "/SysInfo/mailSuccess.php";
-    private $LocationUnSuccess = PM_ROOT . PM_SYS_FOLDER . "/SysInfo/mailUnSuccess.php";
+    private $LocationSuccess = PM_SYS . "SysInfo/mailSuccess.php";
+    private $LocationUnSuccess = PM_SYS . "SysInfo/mailUnSuccess.php";
 
     function make()
     {

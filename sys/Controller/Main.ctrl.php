@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-require_once PM_ROOT . PM_SYS_FOLDER . "/Model/Skeleton.index.model.php";
+require_once PM_SYS . "/Model/Skeleton.index.model.php";
 
 function show404()
 {
@@ -9,7 +9,7 @@ function show404()
     $serverProtocol = (empty($_SERVER["SERVER_PROTOCOL"]) ? 'HTTP/1.0' : $_SERVER["SERVER_PROTOCOL"]);
     header($serverProtocol . " 404 Not Found");
     $pm_lang = PM_LANG;
-    require PM_ROOT . PM_SYS_FOLDER . "/SysInfo/404.php";
+    require PM_SYS . "/SysInfo/404.php";
 }
 
 $needShowFull = true;
@@ -27,13 +27,11 @@ $PM_PAGE_NUM = $needPageId;
 
 if (empty($needPageId)) die(show404());
 
-/* if (!defined("PM_ADMIN_ROOT")) define("PM_ADMIN_ROOT", PM_ROOT . PM_SYS_FOLDER . "/admin/"); */
-
 if (defined("PM_ONEPAGER") && !PM_ONEPAGER) {
-    $viewPagePathPrefix = PM_ROOT . PM_SYS_FOLDER . "/Pages";
+    $viewPagePathPrefix = PM_SYS . "Pages";
 }
 if (defined("PM_ONEPAGER") && PM_ONEPAGER) {
-    $viewPagePathPrefix = PM_ROOT . PM_SYS_FOLDER . "/OnePager";
+    $viewPagePathPrefix = PM_SYS . "OnePager";
 }
 
 $viewPagePath = $viewPagePathPrefix . '/' . $needPageId . '.page.php';
@@ -52,9 +50,7 @@ if ($needShowFull) {
     exit;
 }
 
-if (PM_SYS_FOLDER === "sys") {
-    $indexModel = new sys\Model\SkeletonIndex;
-} elseif (PM_SYS_FOLDER === "core") {
-    //$indexModel = new core\Model\SkeletonIndex;
-}
+
+$indexModel = new sys\Model\SkeletonIndex;
+
 $indexModel->index($pageContent);

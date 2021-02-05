@@ -15,32 +15,40 @@ if (defined("PM_REMOTE_APPFOLDER") && basename($_SERVER['DOCUMENT_ROOT']) === PM
 if (PM_IS_LOCAL) {
   define("PM_APPFOLDER", PM_LOCAL_APPFOLDER . "/");
   define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER)));
-  define("PM_ROOT_REL", "");
 } else {
   define("PM_APPFOLDER", PM_REMOTE_APPFOLDER . "/");
   if (defined("PM_IS_DEV") && PM_IS_DEV) {
     define("PM_IS_DEV_DEFINED", true);
     define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER .  "PM_DEV/")));
-    define("PM_ROOT_REL", "");
   } else {
     define("PM_IS_DEV_DEFINED", false);
     define("PM_ROOT", join(DIRECTORY_SEPARATOR, array(dirname($_SERVER["DOCUMENT_ROOT"], 1), PM_APPFOLDER)));
-    define("PM_ROOT_REL", "");
   }
 }
 
-if (!defined("PM_SYS_FOLDER")) die("Define PM_SYS_FOLDER in config.ini");
-
-define("PM_ASSETS", (PM_ROOT . PM_SYS_FOLDER . "/assets/"));
-define("PM_FONTS", join(DIRECTORY_SEPARATOR, array(PM_ASSETS, "fonts/")));
-define("PM_ASSETS_REL", PM_ROOT_REL . PM_SYS_FOLDER . "/assets/");
-define("PM_FONTS_REL", join(DIRECTORY_SEPARATOR, array(PM_ASSETS_REL, "fonts/")));
+//sys core
+define("PM_SYS", PM_ROOT . "sys/");
+define("PM_CORE", PM_ROOT . "core/");
+define("PM_HELPER", PM_SYS . "helpers/");
+//misc paths
+define("PM_ASSETS_SYS", (PM_SYS . "assets/"));
+define("PM_ASSETS", (PM_CORE . "assets/"));
+define("PM_FONTS", (PM_ASSETS . "fonts/"));
+//relative misc paths
+//..core
+define("PM_ASSETS_REL", "core/assets/");
+define("PM_FONTS_REL", (PM_ASSETS_REL . "fonts/"));
+//..sys
+define("PM_ASSETS_REL_SYS", "sys/assets/");
+define("PM_FONTS_REL_SYS", (PM_ASSETS_REL_SYS . "fonts/"));
 
 if (PM_IS_LOCAL) {
   define("DB_HOST", "localhost");
   define("DB_NAME", DB_NAME_LOCAL);
   define("DB_USER", DB_USER_LOCAL);
   define("DB_PASS", DB_PASS_LOCAL);
+  //relative misc paths
+  //..core
   define("PM_IMAGES", PM_ASSETS . "images/images_dev/");
   define("PM_IMAGES_REL", PM_ASSETS_REL . "images/images_dev/");
   define("PM_VIDEOS", PM_ASSETS . "videos/videos_dev/");
@@ -48,11 +56,21 @@ if (PM_IS_LOCAL) {
   define("PM_ICONS", PM_ASSETS . "icons/vector_dev/");
   define("PM_ICONS_REL", PM_ASSETS_REL . "icons/vector_dev/");
   define("PM_DEPENS_JS", "pm_master.js");
+  //..sys
+  define("PM_IMAGES_SYS", PM_ASSETS . "images/images_dev/");
+  define("PM_IMAGES_REL_SYS", PM_ASSETS_REL . "images/images_dev/");
+  define("PM_VIDEOS_SYS", PM_ASSETS . "videos/videos_dev/");
+  define("PM_VIDEOS_REL_SYS", PM_ASSETS_REL . "videos/videos_dev/");
+  define("PM_ICONS_SYS", PM_ASSETS . "icons/vector_dev/");
+  define("PM_ICONS_REL_SYS", PM_ASSETS_REL . "icons/vector_dev/");
+  define("PM_DEPENS_JS_SYS", "pm_master.js");
 } else {
   define("DB_HOST", DB_HOST_URL);
   define("DB_NAME", DB_NAME_REMOTE);
   define("DB_USER", DB_USER_REMOTE);
   define("DB_PASS", DB_PASS_REMOTE);
+  //relative misc paths
+  //..core
   define("PM_IMAGES", PM_ASSETS . "images/images/");
   define("PM_IMAGES_REL", PM_ASSETS_REL . "images/images/");
   define("PM_VIDEOS", PM_ASSETS . "videos/videos/");
@@ -60,13 +78,15 @@ if (PM_IS_LOCAL) {
   define("PM_ICONS", PM_ASSETS . "icons/vector/");
   define("PM_ICONS_REL", PM_ASSETS_REL . "icons/vector/");
   define("PM_DEPENS_JS", "pm_master.min.js");
+  //..sys
+  define("PM_IMAGES_SYS", PM_ASSETS . "images/images/");
+  define("PM_IMAGES_REL_SYS", PM_ASSETS_REL . "images/images/");
+  define("PM_VIDEOS_SYS", PM_ASSETS . "videos/videos/");
+  define("PM_VIDEOS_REL_SYS", PM_ASSETS_REL . "videos/videos/");
+  define("PM_ICONS_SYS", PM_ASSETS . "icons/vector/");
+  define("PM_ICONS_REL_SYS", PM_ASSETS_REL . "icons/vector/");
+  define("PM_DEPENS_JS_SYS", "pm_master.min.js");
 }
-
-
-define("PM_ADMIN_ROOT", PM_ROOT . "admin/");
-define("PM_ADMIN_ROOT_SHARED", PM_ROOT);
-/* define("PM_CLIENT_LANG", substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2)); */
-define("PM_ADMIN_TITLE", "Admin Dashboard - " . PM_TITLE);
 
 
 //theme
@@ -129,35 +149,20 @@ if (in_array(PM_LANG, RTL_LANGS)) {
   define("PM_DIRECTION", "ltr");
 }
 
-if (in_array(PM_ADMIN_LANG, RTL_LANGS)) {
-  define("PM_ADMIN_DIRECTION", "rtl");
-} else {
-  define("PM_ADMIN_DIRECTION", "ltr");
-}
 
-define("PM_HELPER", PM_ROOT . PM_SYS_FOLDER . "/helpers/");
 
 require_once PM_HELPER . "checkIfIsMobileNow.fun.help.php";
 checkIfIsMobileNow();
 
 
-if ((getcwd() . "/") === PM_ADMIN_ROOT) {
-  define("PM_DEFINE_ADMIN", true);
-  define("PM_RENDERED_TITLE", PM_ADMIN_TITLE);
-  define("PM_BODY_ID", "pm_admin_body_id");
-} else {
-  define("PM_DEFINE_ADMIN", false);
-  define("PM_RENDERED_TITLE", PM_TITLE);
-  define("PM_BODY_ID", "pm_body_id");
-}
-if (PM_DEFINE_ADMIN) {
-} else {
-}
+
+define("PM_RENDERED_TITLE", PM_TITLE);
+define("PM_BODY_ID", "pm_body_id");
 
 //path to views
 define("PM_VIEWS", [
-  "bar_mobile" => PM_SYS_FOLDER . "/View/bar_mobile.view.html.php", "bar_skeleton" => PM_SYS_FOLDER . "/View/bar_skeleton.view.html.php", "depends" => PM_SYS_FOLDER . "/View/depends.view.html.php", "footer" => PM_SYS_FOLDER . "/View/footer.view.html.php", "index" => PM_SYS_FOLDER . "/View/index.view.html.php", "logout" => PM_SYS_FOLDER . "/View/logout.view.html.php", "nav_lang" => PM_SYS_FOLDER . "/View/nav_lang.view.html.php", "nav" => PM_SYS_FOLDER . "/View/nav.view.html.php"
+  "bar_mobile" => "sys/View/bar_mobile.view.html.php", "bar_skeleton" => "sys/View/bar_skeleton.view.html.php", "depends" => "sys/View/depends.view.html.php", "footer" => "sys/View/footer.view.html.php", "index" => "sys/View/index.view.html.php", "logout" => "sys/View/logout.view.html.php", "nav_lang" => "sys/View/nav_lang.view.html.php", "nav" => "sys/View/nav.view.html.php"
 ]);
 
 
-require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
+require_once PM_SYS . "Controller/DB.class.ctrl.php";

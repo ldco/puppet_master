@@ -1,13 +1,8 @@
 @include mob(false) {
-    #mainAdminContent {
-        width: generateContentSize(true, true, false);
-        min-height: generateContentSize(true, false, false);
-        top: generateContentPosition(true, true, false);
-    }
     #mainContent {
-        width: generateContentSize(false, true, false);
-        min-height: generateContentSize(false, false, false);
-        top: generateContentPosition(false, true, false);
+        width: generateContentSize(true, false);
+        min-height: generateContentSize(false, false);
+        top: generateContentPosition(true, false);
     }
 }
 
@@ -19,30 +14,17 @@
         top: $heightMobBar;
         min-height: calc(100vh - #{$heightFoot} - #{$heightMobBar});
     }
-    #mainAdminContent {
-        left: 0vh !important;
-        right: 0vh !important;
-        width: 100vw;
-        top: map-get($mob, height);
-        min-height: calc(100vh - #{$heightFoot} - #{$heightMobBar});
-    }
 }
 
 [dir=rtl] {
     #mainContent {
-        right: generateContentPosition(false, false, false);
-    }
-    #mainAdminContent {
-        right: generateContentPosition(true, false, false);
+        right: generateContentPosition(false, false);
     }
 }
 
 [dir=ltr] {
     #mainContent {
-        left: generateContentPosition(false, false, false);
-    }
-    #mainAdminContent {
-        left: generateContentPosition(true, false, false);
+        left: generateContentPosition(false, false);
     }
 }
 
@@ -57,7 +39,6 @@
     }
 }
 
-#mainAdminContent,
 #mainContent {
     position: absolute;
     display: flex;

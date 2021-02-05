@@ -22,7 +22,7 @@ class SkeletonFooter
 
         $this->viewsNames = PM_VIEWS;
 
-        $modelPath = PM_ROOT . PM_SYS_FOLDER . "/Model/";
+        $modelPath = PM_SYS . "Model/";
         require_once $modelPath . "Skeleton.nav.model.php";
         $this->modelNav = new SkeletonNav;
         return;

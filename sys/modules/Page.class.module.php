@@ -6,9 +6,9 @@ declare(strict_types=1);
 
 use sys\Controller\DB;
 
-require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
-require_once PM_ROOT . PM_SYS_FOLDER . "/Controller/DB.class.ctrl.php";
-require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
+require_once PM_SYS . "Model/startup.model.php";
+require_once PM_SYS . "Controller/DB.class.ctrl.php";
+require_once PM_SYS . "helpers/pmImg.fun.help.php";
 class Page
 {
     public $arr = [];

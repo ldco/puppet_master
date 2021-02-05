@@ -18,16 +18,16 @@ if (file_exists(dirname($_SERVER['DOCUMENT_ROOT'], 1) . "/config.ini.php")) {
 
 if (basename($_SERVER['DOCUMENT_ROOT']) === PM_REMOTE_APPFOLDER) {
     if (PM_IS_DEV) {
-        require_once $_SERVER['DOCUMENT_ROOT'] . "/PM_DEV/" . PM_SYS_FOLDER . "/Model/startup.model.php";
-        require_once $_SERVER['DOCUMENT_ROOT'] . "/PM_DEV/" . PM_SYS_FOLDER . "/Controller/Main.ctrl.php";
+        require_once $_SERVER['DOCUMENT_ROOT'] . "/PM_DEV/sys/Model/startup.model.php";
+        require_once $_SERVER['DOCUMENT_ROOT'] . "/PM_DEV/sys/Controller/Main.ctrl.php";
         error_log(print_r("is dev", TRUE));
     } else {
-        require_once $_SERVER['DOCUMENT_ROOT'] . "/" . PM_SYS_FOLDER . "/Model/startup.model.php";
-        require_once $_SERVER['DOCUMENT_ROOT'] . "/" . PM_SYS_FOLDER . "/Controller/Main.ctrl.php";
+        require_once $_SERVER['DOCUMENT_ROOT'] . "/sys/Model/startup.model.php";
+        require_once $_SERVER['DOCUMENT_ROOT'] . "/sys/Controller/Main.ctrl.php";
         error_log(print_r("is not dev", TRUE));
     }
 } else {
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/" . PM_SYS_FOLDER . "/Model/startup.model.php";
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/" . PM_SYS_FOLDER . "/Controller/Main.ctrl.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/sys/Model/startup.model.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/sys/Controller/Main.ctrl.php";
     error_log(print_r("is not on server", TRUE));
 }

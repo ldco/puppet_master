@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 //namespace sys\modules;
 
-require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
+require_once PM_SYS . "helpers/pmImg.fun.help.php";
 
 class Swiper
 {

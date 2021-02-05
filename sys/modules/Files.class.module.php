@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-require_once PM_ROOT . PM_SYS_FOLDER . "/Model/startup.model.php";
-require_once PM_ROOT . PM_SYS_FOLDER . "/helpers/pmImg.fun.help.php";
+require_once PM_SYS . "Model/startup.model.php";
+require_once PM_SYS . "helpers/pmImg.fun.help.php";
 
 
 class Files

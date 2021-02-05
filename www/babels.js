@@ -9,28 +9,14 @@ function getContentView(id) {
   ajx.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       pageRP = ajx.responseText;
-
-      if (document.querySelector("html").getAttribute("admin") === null) {
-        document.querySelector("#mainContent").innerHTML = pageRP;
-      } else {
-        document.querySelector("#mainAdminContent").innerHTML = pageRP;
-      }
+      document.querySelector("#mainContent").innerHTML = pageRP;
     }
-  }; //let page = `/sys/View/pages/${id}.view.php`;
+  };
 
-
-  if (document.querySelector("html").getAttribute("admin") === null) {
-    if (document.querySelector("html").getAttribute("data-dev") === "true") {
-      ajx.open("POST", "/PM_DEV/index.php?content_page=1", true);
-    } else {
-      ajx.open("POST", "/index.php?content_page=1", true);
-    }
+  if (document.querySelector("html").getAttribute("data-dev") === "true") {
+    ajx.open("POST", "/PM_DEV/index.php?content_page=1", true);
   } else {
-    if (document.querySelector("html").getAttribute("data-dev") === "true") {
-      ajx.open("POST", "/PM_DEV/admin/index.php?content_page=1", true);
-    } else {
-      ajx.open("POST", "/admin/index.php?content_page=1", true);
-    }
+    ajx.open("POST", "/index.php?content_page=1", true);
   }
 
   ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -149,7 +135,6 @@ document.addEventListener("DOMContentLoaded", initFun);
 window.addEventListener("hashchange", setPageFunctions, false);
 var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
-var PM_ISADMIN = document.querySelector("html").getAttribute("data-admin");
 var PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
 var PM_ARR_OF_LANGS = ["en", "he"];
 var PM_BAR = document.querySelector("html").getAttribute("data-bar");
@@ -381,13 +366,7 @@ function removeHamburger(float) {
 
 function setRouter() {
   var els;
-
-  if (PM_ISADMIN === "false") {
-    els = document.querySelectorAll(".nav_item");
-  } else {
-    els = document.querySelectorAll(".nav_admin_item");
-  }
-
+  els = document.querySelectorAll(".nav_item");
   els.forEach(function (el) {
     el.addEventListener("click", function () {
       getThisContentView(this);

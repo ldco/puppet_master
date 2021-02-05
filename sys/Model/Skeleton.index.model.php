@@ -22,11 +22,10 @@ class SkeletonIndex
         if (!defined("PM_ROOT")) return;
         $this->viewsNames = PM_VIEWS;
         if (defined("PM_IS_LOCAL")) $this->isLocal = PM_IS_LOCAL;
-        if (defined("PM_DEFINE_ADMIN")) $this->isAdmin = PM_DEFINE_ADMIN;
         if (defined("PM_IS_DEV_DEFINED")) $this->isDev = PM_IS_DEV_DEFINED;
 
 
-        $modelPath = PM_ROOT . PM_SYS_FOLDER . "/Model/";
+        $modelPath = PM_SYS . "Model/";
         require_once $modelPath . "Skeleton.bar.model.php";
         require_once $modelPath . "Skeleton.depends.model.php";
         require_once $modelPath . "Skeleton.footer.model.php";
@@ -48,14 +47,14 @@ class SkeletonIndex
         $showAgreeCookie = '';
         if (empty($_COOKIE) || empty($_COOKIE['I_WANT_COOKIE'])) {
             ob_start();
-            require_once PM_ROOT . PM_SYS_FOLDER . "/View/agree.cookie.view.html.php";
+            require_once PM_SYS . "View/agree.cookie.view.html.php";
             $showAgreeCookie = ob_get_contents();
             ob_clean();
         }
         //Store page content to $sPageContent
         require PM_ROOT . $this->viewsNames['index'];
         //MODULES
-        require_once PM_ROOT . PM_SYS_FOLDER . "/modules/thebility/thebility.view.php";
+        require_once PM_SYS . "modules/thebility/thebility.view.php";
         return true;
     }
 
@@ -65,7 +64,7 @@ class SkeletonIndex
         $serverProtocol = (empty($_SERVER["SERVER_PROTOCOL"]) ? 'HTTP/1.0' : $_SERVER["SERVER_PROTOCOL"]);
         header($serverProtocol . " 404 Not Found");
         $pm_lang = PM_LANG;
-        require PM_ROOT . PM_SYS_FOLDER . "/SysInfo/404.php";
+        require PM_SYS . "SysInfo/404.php";
     }
 
 

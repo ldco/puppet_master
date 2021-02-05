@@ -1,20 +1,12 @@
 <div id="<?= $navBarId; ?>" class="<?= $navBarClass; ?>">
-    <?php if (!$admin) : ?>
-    <!--  <a href=""> -->
-    <div id="<?= $barLogo ?>" class="<?= $barLogo ?>">
-        <img alt="logo" src="<?= $navBarLogoImg; ?>">
-    </div>
-    <!--   </a> -->
+
     <?php
-    endif;
+
     if (!$admin || $isAuthenticated) :
     ?>
     <nav id="<?= $navId; ?>" class="<?= $navClass; ?>">
         <?php $modelNav->index();
-            if (!$admin) :
-                if ($lang) $modelNav->makeLang(false);
-            endif;
-            ?>
+            if ($lang) $modelNav->makeLang(false); ?>
 
     </nav>
     <?php

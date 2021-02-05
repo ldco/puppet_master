@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 require_once "main.ftp.php";
 
-if (PM_NEED_ADMIN) {
-    $dist_ignore = "";
+/* if (PM_NEED_ADMIN) {
+    
 } else {
     $dist_ignore = "admin/*";
-}
+} */
+
+$dist_ignore = "";
 
 
 return [

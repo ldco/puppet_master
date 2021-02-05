@@ -1,4 +1,4 @@
-%admin_panel {
+#pm_admin_panel {
     position: fixed;
     z-index: 1979;
     font-size: 1.8vh;
@@ -11,10 +11,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-#pm_admin_panel {
-    @extend %admin_panel;
     .pm_admin_info {
         display: flex;
         flex-direction: row;

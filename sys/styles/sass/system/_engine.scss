@@ -1,14 +1,9 @@
 $heightFoot: map-get($footer, height);
 $heightMobBar: map-get($mob, height);
 $heightAdminBar: map-get($adminPanel, height);
-@function generateContentSize($admin, $widthBool, $mobis) {
+@function generateContentSize($widthBool, $mobis) {
     $vertical: null;
-    @if $admin==false {
-        $vertical: $PM_BAR_IS_VERTICAL;
-    }
-    @if $admin==true {
-        $vertical: $PM_ADMIN_BAR_IS_VERTICAL;
-    }
+    $vertical: $PM_BAR_IS_VERTICAL;
     @if $widthBool==true {
         //width
         @if $vertical==true {
@@ -33,23 +28,13 @@ $heightAdminBar: map-get($adminPanel, height);
         @if $vertical==true {
             $heightTop: 0px;
         }
-        @if $admin==true {
-            @return calc(100vh - #{$heightTop} - #{$heightAdminBar});
-        }
-        @if $admin=false {
-            @return calc(100vh - #{$heightTop} - #{$heightFoot});
-        }
+        @return calc(100vh - #{$heightTop} - #{$heightFoot});
     }
 }
 
-@function generateContentPosition($admin, $topBool, $mobis) {
+@function generateContentPosition($topBool, $mobis) {
     $vertical: null;
-    @if $admin==false {
-        $vertical: $PM_BAR_IS_VERTICAL;
-    }
-    @if $admin==true {
-        $vertical: $PM_ADMIN_BAR_IS_VERTICAL;
-    }
+    $vertical: $PM_BAR_IS_VERTICAL;
     @if $topBool==true {
         $top1: null;
         $top2: null;
@@ -65,12 +50,7 @@ $heightAdminBar: map-get($adminPanel, height);
             $top1: 0px;
         }
         $top2: map-get($adminPanel, height);
-        @if $admin==true {
-            @return calc(0vh + #{$top1} + #{$top2});
-        }
-        @if $admin==false {
-            @return calc(0vh + #{$top1});
-        }
+        @return calc(0vh + #{$top1});
     }
     @if $topBool==false {
         $vert1: null;
