@@ -1,8 +1,11 @@
 node_modules
-vendor/
-SDK/opt/phpMyAdmin/*
+dist/*
+vendor
+SDK/deploy/temp
+SDK/deploy/*.log
 sys/assets/icons/vector/*
 sys/assets/images/images/*
 core/assets/icons/vector/*
 core/assets/images/images/*
+
 
