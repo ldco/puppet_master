@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3fe2cc8b20dd1a95a1eb7084312e1013",
+    "content-hash": "69c18af2e65817b7817819c56e36a71a",
     "packages": [
         {
             "name": "dg/ftp-deployment",
@@ -129,16 +129,16 @@
         },
         {
             "name": "formr/formr",
-            "version": "1.2.4",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/formr/Formr.git",
-                "reference": "e3b335665831a6a17eb67a01628678e646fc78a1"
+                "reference": "5e915b8aaa5abe9ea99ea5f358b5d36af312ae97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/formr/Formr/zipball/e3b335665831a6a17eb67a01628678e646fc78a1",
-                "reference": "e3b335665831a6a17eb67a01628678e646fc78a1",
+                "url": "https://api.github.com/repos/formr/Formr/zipball/5e915b8aaa5abe9ea99ea5f358b5d36af312ae97",
+                "reference": "5e915b8aaa5abe9ea99ea5f358b5d36af312ae97",
                 "shasum": ""
             },
             "require": {
@@ -164,7 +164,7 @@
             "description": "Formr is a PHP micro-framework which helps you build and validate forms quickly, painlessly, and without all the messy overhead.",
             "support": {
                 "issues": "https://github.com/formr/Formr/issues",
-                "source": "https://github.com/formr/Formr/tree/1.2.4"
+                "source": "https://github.com/formr/Formr/tree/1.2.5"
             },
             "funding": [
                 {
@@ -172,7 +172,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-01-19T17:48:41+00:00"
+            "time": "2021-01-28T20:36:14+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -530,51 +530,6 @@
                 "source": "https://github.com/thephpleague/oauth2-google/tree/3.0.3"
             },
             "time": "2020-07-24T15:16:12+00:00"
-        },
-        {
-            "name": "masterjoa/htmlpurifier-standalone",
-            "version": "v4.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Masterjoa/HTMLPurifier-standalone.git",
-                "reference": "c725cc095a19c5f1d7c04013b00f7fd5766bdb6a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Masterjoa/HTMLPurifier-standalone/zipball/c725cc095a19c5f1d7c04013b00f7fd5766bdb6a",
-                "reference": "c725cc095a19c5f1d7c04013b00f7fd5766bdb6a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "HTMLPurifier": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL"
-            ],
-            "authors": [
-                {
-                    "name": "Edward Z. Yang",
-                    "email": "admin@htmlpurifier.org",
-                    "homepage": "http://ezyang.com"
-                }
-            ],
-            "description": "Standalone distribution of HTMLPurifier",
-            "homepage": "http://htmlpurifier.org/",
-            "keywords": [
-                "html"
-            ],
-            "support": {
-                "issues": "https://github.com/Masterjoa/HTMLPurifier-standalone/issues",
-                "source": "https://github.com/Masterjoa/HTMLPurifier-standalone/tree/master"
-            },
-            "time": "2017-02-03T00:23:13+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",

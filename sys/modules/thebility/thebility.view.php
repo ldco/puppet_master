@@ -6,9 +6,9 @@ require_once PM_HELPER . "pmImg.fun.help.php";
 
 
 
-$thebilityToggleIconSrc = PM_ICONS_REL . "thebility.svg";
-$thebilityDragIconSrc = PM_ICONS_REL . "drag.svg";
-$thebilityCloseIconSrc = PM_ICONS_REL . "close.svg";
+$thebilityToggleIconSrc = PM_ICONS_REL_SYS . "thebility.svg";
+$thebilityDragIconSrc = PM_ICONS_REL_SYS . "drag.svg";
+$thebilityCloseIconSrc = PM_ICONS_REL_SYS . "close.svg";
 
 if (PM_THEME_LIGHT) :
     $thebilityThemeBollean = "false";

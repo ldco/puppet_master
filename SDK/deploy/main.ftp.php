@@ -27,9 +27,9 @@ function createFolder($folder)
     $dir = $_remote . $folder;
 
     try {
-        if (ftp_nlist($ftp_conn, $dir) == false) {
+        if (ftp_nlist($ftp_conn, $dir) === false) {
             ftp_mkdir($ftp_conn, $dir);
-        } else if (ftp_nlist($ftp_conn, $dir) == true) {
+        } else if (ftp_nlist($ftp_conn, $dir) === true) {
 
             // ftp_rmdir($ftp_conn, $dir);
         }

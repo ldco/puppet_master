@@ -47,7 +47,8 @@ if (PM_IS_LOCAL) {
   define("DB_NAME", DB_NAME_LOCAL);
   define("DB_USER", DB_USER_LOCAL);
   define("DB_PASS", DB_PASS_LOCAL);
-  //relative misc paths
+  //
+  define("PM_DEPENS_JS", "pm_master.js");
   //..core
   define("PM_IMAGES", PM_ASSETS . "images/images_dev/");
   define("PM_IMAGES_REL", PM_ASSETS_REL . "images/images_dev/");
@@ -55,21 +56,19 @@ if (PM_IS_LOCAL) {
   define("PM_VIDEOS_REL", PM_ASSETS_REL . "videos/videos_dev/");
   define("PM_ICONS", PM_ASSETS . "icons/vector_dev/");
   define("PM_ICONS_REL", PM_ASSETS_REL . "icons/vector_dev/");
-  define("PM_DEPENS_JS", "pm_master.js");
   //..sys
-  define("PM_IMAGES_SYS", PM_ASSETS . "images/images_dev/");
-  define("PM_IMAGES_REL_SYS", PM_ASSETS_REL . "images/images_dev/");
-  define("PM_VIDEOS_SYS", PM_ASSETS . "videos/videos_dev/");
-  define("PM_VIDEOS_REL_SYS", PM_ASSETS_REL . "videos/videos_dev/");
-  define("PM_ICONS_SYS", PM_ASSETS . "icons/vector_dev/");
-  define("PM_ICONS_REL_SYS", PM_ASSETS_REL . "icons/vector_dev/");
+  define("PM_IMAGES_SYS", PM_ASSETS_SYS . "images/images_dev/");
+  define("PM_IMAGES_REL_SYS", PM_ASSETS_REL_SYS . "images/images_dev/");
+  define("PM_ICONS_SYS", PM_ASSETS_SYS . "icons/vector_dev/");
+  define("PM_ICONS_REL_SYS", PM_ASSETS_REL_SYS . "icons/vector_dev/");
   define("PM_DEPENS_JS_SYS", "pm_master.js");
 } else {
   define("DB_HOST", DB_HOST_URL);
   define("DB_NAME", DB_NAME_REMOTE);
   define("DB_USER", DB_USER_REMOTE);
   define("DB_PASS", DB_PASS_REMOTE);
-  //relative misc paths
+  //
+  define("PM_DEPENS_JS", "pm_master.min.js");
   //..core
   define("PM_IMAGES", PM_ASSETS . "images/images/");
   define("PM_IMAGES_REL", PM_ASSETS_REL . "images/images/");
@@ -77,15 +76,11 @@ if (PM_IS_LOCAL) {
   define("PM_VIDEOS_REL", PM_ASSETS_REL . "videos/videos/");
   define("PM_ICONS", PM_ASSETS . "icons/vector/");
   define("PM_ICONS_REL", PM_ASSETS_REL . "icons/vector/");
-  define("PM_DEPENS_JS", "pm_master.min.js");
   //..sys
-  define("PM_IMAGES_SYS", PM_ASSETS . "images/images/");
-  define("PM_IMAGES_REL_SYS", PM_ASSETS_REL . "images/images/");
-  define("PM_VIDEOS_SYS", PM_ASSETS . "videos/videos/");
-  define("PM_VIDEOS_REL_SYS", PM_ASSETS_REL . "videos/videos/");
-  define("PM_ICONS_SYS", PM_ASSETS . "icons/vector/");
-  define("PM_ICONS_REL_SYS", PM_ASSETS_REL . "icons/vector/");
-  define("PM_DEPENS_JS_SYS", "pm_master.min.js");
+  define("PM_IMAGES_SYS", PM_ASSETS_SYS . "images/images/");
+  define("PM_IMAGES_REL_SYS", PM_ASSETS_REL_SYS . "images/images/");
+  define("PM_ICONS_SYS", PM_ASSETS_SYS . "icons/vector/");
+  define("PM_ICONS_REL_SYS", PM_ASSETS_REL_SYS . "icons/vector/");
 }
 
 
@@ -105,6 +100,8 @@ if (isset($_POST['submitTheme'])) {
 }
 
 //lang
+define("PM_CLIENT_LANG", substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
+
 if (isset($_POST['submitLang'])) {
   if (in_array($_POST['submitLang'], PM_ALL_LANGS)) {
     define("PM_LANG", $_POST['submitLang']);
@@ -122,8 +119,7 @@ if (isset($_POST['submitLang'])) {
   if (in_array($_SESSION['PM_LANG'], PM_ALL_LANGS)) {
     define("PM_LANG", $_SESSION['PM_LANG']);
   }
-}
-/* if (!defined("PM_LANG")) {
+} else {
   if (PM_ALLOW_CLIENTLANG) {
     if (in_array(PM_CLIENT_LANG, PM_ALL_LANGS)) {
       define("PM_LANG", PM_CLIENT_LANG);
@@ -133,13 +129,18 @@ if (isset($_POST['submitLang'])) {
   } else {
     define("PM_LANG", PM_DEFAULT_LANG);
   }
-} */
+}
 
-if (!defined("PM_LANG")) {
+
+
+
+
+
+/* if (!defined("PM_LANG")) {
   define("PM_LANG", PM_DEFAULT_LANG);
 } else {
   define("PM_LANG", PM_DEFAULT_LANG);
-}
+} */
 
 define("RTL_LANGS", array("he", "ar", "arc", "dv", "fa", "ha", "khw", "ku", "ps", "ur", "yi"));
 
