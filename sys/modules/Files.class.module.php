@@ -60,7 +60,7 @@ class Files
             }
 
             //ITEM DIV
-            if ($this->imgNetto == false) {
+            if ($this->imgNetto === false) {
                 echo '<div class="' . $_childClass . '">';
                 //TITLE
                 if ($this->title) {
@@ -72,7 +72,7 @@ class Files
 
                 echo '</div>';
             }
-            if ($this->imgNetto == true) {
+            if ($this->imgNetto === true) {
 
                 //TITLE
                 if ($this->title) {

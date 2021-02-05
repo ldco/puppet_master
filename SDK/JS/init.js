@@ -49,7 +49,7 @@ function initFun() {
 function goRoot() {
     let ajx = new XMLHttpRequest();
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             setTimeout(() => {
                 if (ajx.responseText) {
                     htmlWrapper(ajx.responseText);
@@ -127,7 +127,7 @@ function postGit() {
     let gitcom = document.getElementsByName("gitcom")[0].value;
     let ajx = new XMLHttpRequest();
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
             document.getElementsByName("gitcom")[0].value = "";
             document.getElementsByName("gitto")[0].value = "";
@@ -152,7 +152,7 @@ function changeSvgColors() {
     let colorfrom = document.getElementsByName("colorfrom")[0].value;
     let colorto = document.getElementsByName("colorto")[0].value;
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
         }
     };
@@ -165,7 +165,7 @@ function passwordHash() {
     let ajx = new XMLHttpRequest();
     let pass = document.getElementsByName("pass")[0].value;
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
             document.getElementsByName("pass")[0].value = "";
         }
@@ -179,7 +179,7 @@ function execCommand(name) {
     let ajx = new XMLHttpRequest();
     let com = document.getElementsByName(name)[0].value;
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
         }
     };
@@ -196,7 +196,7 @@ function execNpm(name) {
     }
 
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
         }
     };
@@ -209,7 +209,7 @@ function depInit() {
     let ajx = new XMLHttpRequest();
 
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
         }
     };
@@ -222,7 +222,7 @@ function execSh() {
     let ajx = new XMLHttpRequest();
     let deploy = document.getElementsByName("sh")[0].value;
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
         }
     };
@@ -235,7 +235,7 @@ function storeGitPass() {
     let ajx = new XMLHttpRequest();
     let deploy = document.getElementsByName("store_pass")[0].value;
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
         }
     };
@@ -248,7 +248,7 @@ function createPmdevFolder() {
     let ajx = new XMLHttpRequest();
     let deploy = document.getElementsByName("createpmdev")[0].value;
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
         }
     };
@@ -261,7 +261,7 @@ function checkFtp() {
     let ajx = new XMLHttpRequest();
     let deploy = document.getElementsByName("check_ftp")[0].value;
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             htmlWrapper(ajx.responseText);
         }
     };

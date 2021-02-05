@@ -16,7 +16,7 @@ function pmFormValidation(fun) {
                 if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emails[i].value)) {
                     for (let k = 0; k < tels.length; k++) {
                         if (/^\d+$/.test(tels[k].value)) {
-                            if (iagree.checked == true) {
+                            if (iagree.checked === true) {
                                 fun();
                                 return;
                             } else {

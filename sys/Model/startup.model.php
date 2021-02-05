@@ -90,7 +90,7 @@ if (isset($_POST['submitTheme'])) {
 
   define("PM_THEME_LIGHT", filter_var($_POST['submitTheme'], FILTER_VALIDATE_BOOLEAN));
 
-  if (defined("PM_RUN_DEV") && PM_RUN_DEV == true) {
+  if (defined("PM_RUN_DEV") && PM_RUN_DEV === true) {
     $_SESSION['PM_THEME_LIGHT'] = filter_var($_POST['submitTheme'], FILTER_VALIDATE_BOOLEAN); //PHP HTTP server does not support cookie
   } else {
     setcookie("PM_THEME_LIGHT", $_POST['submitTheme'], time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
@@ -105,7 +105,7 @@ define("PM_CLIENT_LANG", substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2));
 if (isset($_POST['submitLang'])) {
   if (in_array($_POST['submitLang'], PM_ALL_LANGS)) {
     define("PM_LANG", $_POST['submitLang']);
-    if (defined("PM_RUN_DEV") && PM_RUN_DEV == true) {
+    if (defined("PM_RUN_DEV") && PM_RUN_DEV === true) {
       $_SESSION['PM_LANG'] = $_POST['submitLang']; //PHP HTTP server does not support cookie
     } else {
       setcookie("PM_LANG", $_POST['submitLang'], time() + (86400 * 30), '/', strtr($_SERVER['HTTP_HOST'], ['www.' => '']));
@@ -115,7 +115,7 @@ if (isset($_POST['submitLang'])) {
   if (in_array($_COOKIE['PM_LANG'], PM_ALL_LANGS)) {
     define("PM_LANG", $_COOKIE['PM_LANG']);
   }
-} elseif (defined("PM_RUN_DEV") && PM_RUN_DEV == true && !empty($_SESSION) && !empty($_SESSION['PM_LANG'])) {
+} elseif (defined("PM_RUN_DEV") && PM_RUN_DEV === true && !empty($_SESSION) && !empty($_SESSION['PM_LANG'])) {
   if (in_array($_SESSION['PM_LANG'], PM_ALL_LANGS)) {
     define("PM_LANG", $_SESSION['PM_LANG']);
   }
@@ -158,7 +158,6 @@ checkIfIsMobileNow();
 
 
 define("PM_RENDERED_TITLE", PM_TITLE);
-define("PM_BODY_ID", "pm_body_id");
 
 //path to views
 define("PM_VIEWS", [

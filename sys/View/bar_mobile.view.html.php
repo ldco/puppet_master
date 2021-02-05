@@ -4,18 +4,18 @@
             <div class="hamburger-inner"></div>
         </div>
     </div>
-    <div id="<?= PM_BODY_ID ?>">
-        <a href="">
-            <img alt="logo" src="<?= $navBarLogoMob ?>"></a>
+    <div id="<?= $headerLogoId ?>">
+        <a href="#">
+            <?php pmImg("Logo", $navBarLogoMob, true, "pm_navBarLogoMob"); ?>
+        </a>
+
     </div>
-    <img alt="bar asset" class="pm_bar_asset anim" src="<?= $nav_pm_bar_asset; ?>" alt="">
+    <?php pmImg("Bar asset", $nav_pm_bar_asset, true, "pm_bar_asset anim"); ?>
 </div>
 </div>
 <div id="<?= $barId ?>" class="<?= $barClass ?>">
     <nav class="<?= $navClass ?>">
-        <?php
-        $modelNav->index();
-        if ($lang) $modelNav->makeLang(true);
-        ?>
+        <?php $modelNav->index();
+        if ($lang) $modelNav->makeLang(true); ?>
     </nav>
 </div>

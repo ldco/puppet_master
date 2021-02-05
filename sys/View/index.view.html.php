@@ -50,7 +50,7 @@ if (PM_BAR && !PM_FLOATBAR) {
     <?php $modelDepends->index(); ?>
 </head>
 
-<body id="<?= PM_BODY_ID ?>" class="body">
+<body id="pm_body" class="body">
     <div id="pm_overlay" style="display: none"></div>
     <?php
     $modelBar->index(); ?>
@@ -59,7 +59,7 @@ if (PM_BAR && !PM_FLOATBAR) {
 
     <a href="#">
         <div id="pm_gototop">
-            <img alt="go top" src="<?= PM_ICONS_REL ?>/up.svg">
+            <img alt="go top" src="<?= PM_ICONS_REL ?>up.svg">
         </div>
     </a>
     <?php if (defined("PM_FOOTER") && PM_FOOTER) $modelFooter->index(); ?>

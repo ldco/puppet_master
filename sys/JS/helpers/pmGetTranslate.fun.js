@@ -5,7 +5,7 @@ function pmGetTranslate(text) {
     let ajx = new XMLHttpRequest();
 
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             let _fromDB = ajx.responseText;
             let fromDB = JSON.parse(_fromDB);
             return _fromDB;

@@ -56,7 +56,7 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
 }
 
 .pm_bar_asset {
-    display: none;
+    // display: none;
     cursor: pointer;
     width: map-get($horBar, asset);
     position: fixed;

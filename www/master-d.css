@@ -2263,7 +2263,6 @@ input[type="checkbox"] {
     top: calc((6vh / 2) - ((calc(6vh / 2.1)) / 2)); } }
 
 .pm_bar_asset {
-  display: none;
   cursor: pointer;
   width: 3vh;
   position: fixed;
@@ -3266,8 +3265,8 @@ body {
 
 .pm_page_incontent {
   color: #f9f9f9;
-  min-height: 100vh;
-  min-width: 100vw;
+  /* min-height: 100vh;
+    min-width: 100vw; */
   display: flex;
   flex-direction: column;
   align-items: center;

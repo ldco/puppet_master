@@ -22,8 +22,12 @@ define("PM_DEFAULT_THEME_LIGHT", true);
 define("PM_ALLOW_THEME", true);
 //WEBP
 define("PM_WEBP", true);
-//need ADMIN backend
-define("PM_NEED_ADMIN", false);
+
+
+//need login
+define("PM_LOGIN", true);
+//need register
+define("PM_REGISTER", false);
 
 define("PM_IS_DEV", true); // or true -> don't forget to replace config file on host!
 define("PM_PROD_SERVER", "apache"); //or nginx
@@ -31,12 +35,12 @@ define("PM_LOCAL_APPFOLDER", "root");
 define("PM_REMOTE_APPFOLDER", "public_html"); //don't touch unless
 define("PM_DEV_OS", "lin"); //lin/win/mac
 define("PM_PROD_OS", "lin"); //lin/win
-define("PM_ONEPAGER", true); //true or false
+define("PM_ONEPAGER", false); //true or false
 define("PM_PROGRESSIVE_APP", false); //true or false
 
 //sceleton items
 define("PM_BAR", true); //will be false if PM_FLOATBAR is true
-define("PM_FLOATBAR", true);
+define("PM_FLOATBAR", false);
 define("PM_SOCIO_BAR", false);
 define("PM_FOOTER", false);
 define("PM_FOOTER_NAV", false); //always false if PM_FOOTER false
@@ -44,10 +48,10 @@ define("PM_FOOTER_NAV", false); //always false if PM_FOOTER false
 //langs
 define("PM_DEFAULT_LANG", "en");
 define("PM_ALL_LANGS", array("en")); //list of langs
-define("PM_ALLOW_CLIENTLANG", false); // or true (if true, default is client lang)
+define("PM_ALLOW_CLIENTLANG", true); // or true (if true, default is client lang)
 
 //DB local
-define("DB_NAME_LOCAL", "b");
+define("DB_NAME_LOCAL", "");
 define("DB_USER_LOCAL", "");
 define("DB_PASS_LOCAL", "");
 

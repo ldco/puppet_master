@@ -42,10 +42,10 @@ class Contacts
     public function makeReg($_row)
     {
         echo '<div class="' . $this->class . '_item">';
-        if ($this->img == true)
+        if ($this->img === true)
             /*  echo '<img alt="contacts icons" class="' . $this->class . '_img" src="' . PM_ICONS_REL . $_row["img"] . '.' . $this->extension . '">'; */
             pmImg("contacts-icons", PM_ICONS_REL . $_row["img"], true, $this->class . "_img");
-        if ($this->text == true)
+        if ($this->text === true)
             echo '<span class="' . $this->class . '_text">' . $_row[PM_LANG] . ': </span>';
         echo '<span class="' . $this->class . '_link">';
         if ($_row["en"] === $this->telName) {

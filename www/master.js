@@ -4925,7 +4925,7 @@ function getContentView(id) {
   var pageRP = '';
 
   ajx.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       pageRP = ajx.responseText;
       document.querySelector("#mainContent").innerHTML = pageRP;
     }
@@ -5011,7 +5011,7 @@ function pmGetTranslate(text) {
   var ajx = new XMLHttpRequest();
 
   ajx.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       var _fromDB = ajx.responseText;
       var fromDB = JSON.parse(_fromDB);
       return _fromDB;
@@ -5124,9 +5124,9 @@ function initFun() {
 
   if (PM_ONEPAGER === "false") {
     var setURL = window.location.hash;
-    if (setURL == "") return;
+    if (setURL === "") return;
     var id = setURL.split("#").pop();
-    if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
+    if (id === null || !isFinite(id) || id !== parseInt(id, 10)) return;
     getContentView(id);
   }
 }
@@ -5196,7 +5196,7 @@ function setGoTopButton() {
 
 function setHamburgerMenu(_float) {
   var hamburger = document.querySelectorAll(".pm_hamburger")[0];
-  if (hamburger == null) return;
+  if (hamburger === null) return;
   var mobileBar;
 
   if (!_float) {
@@ -5608,7 +5608,7 @@ function initModalLocalisation() {
   }
 
   ajx.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       var fromDB = JSON.parse(ajx.responseText);
       PM_MODAL_LOC = fromDB;
     }
@@ -5732,7 +5732,7 @@ function pmFormValidation(fun) {
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emails[_i].value)) {
           for (var k = 0; k < tels.length; k++) {
             if (/^\d+$/.test(tels[k].value)) {
-              if (iagree.checked == true) {
+              if (iagree.checked === true) {
                 fun();
                 return;
               } else {
@@ -6009,9 +6009,9 @@ function moveBar() {
 
 function setPageFunctions() {
   var setURL = window.location.hash;
-  if (setURL == "") return;
+  if (setURL === "") return;
   var id = setURL.split("#").pop();
-  if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
+  if (id === null || !isFinite(id) || id !== parseInt(id, 10)) return;
   var timeout = 500;
   var fun = {
     fun_0: function fun_0() {},

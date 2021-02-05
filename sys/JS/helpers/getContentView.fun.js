@@ -6,7 +6,7 @@ function getContentView(id) {
     let pageRP = '';
 
     ajx.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             pageRP = ajx.responseText;
             document.querySelector("#mainContent").innerHTML = pageRP;
         }

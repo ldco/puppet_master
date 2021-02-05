@@ -5,20 +5,20 @@
 
 
         <?php
-        if ($sysInfopageId == "pm_pageMailSuccess") :
+        if ($sysInfopageId === "pm_pageMailSuccess") :
         ?>
 
-            <div class="pm_infoPageButtons">
-                <button id="pm_infoPageButton_GoHome"><?= $sysInfopageTextLoc["goHome"][$pm_lang]; ?></button>
-                <button id="pm_infoPageButton_GoBack"><?= $sysInfopageTextLoc["goBack"][$pm_lang]; ?></button>
-            </div>
+        <div class="pm_infoPageButtons">
+            <button id="pm_infoPageButton_GoHome"><?= $sysInfopageTextLoc["goHome"][$pm_lang]; ?></button>
+            <button id="pm_infoPageButton_GoBack"><?= $sysInfopageTextLoc["goBack"][$pm_lang]; ?></button>
+        </div>
 
 
-        <?php elseif ($sysInfopageId == "pm_pageMailUnSuccess") :
+        <?php elseif ($sysInfopageId === "pm_pageMailUnSuccess") :
         ?>
-            <div class="pm_infoPageButtons">
-                <button id="pm_infoPageButton_GoBack"><?= $sysInfopageTextLoc["goBack"][$pm_lang]; ?></button>
-            </div>
+        <div class="pm_infoPageButtons">
+            <button id="pm_infoPageButton_GoBack"><?= $sysInfopageTextLoc["goBack"][$pm_lang]; ?></button>
+        </div>
 
         <?php endif; ?>
 
@@ -27,14 +27,14 @@
 </div>
 
 <script>
-    if (document.querySelector("#pm_infoPageButton_GoHome")) {
-        document.querySelector("#pm_infoPageButton_GoHome").addEventListener("click", function() {
-            window.location = '/';
-        });
-    }
-    if (document.querySelector("#pm_infoPageButton_GoBack")) {
-        document.querySelector("#pm_infoPageButton_GoBack").addEventListener("click", function() {
-            window.history.go(-1);
-        });
-    }
+if (document.querySelector("#pm_infoPageButton_GoHome")) {
+    document.querySelector("#pm_infoPageButton_GoHome").addEventListener("click", function() {
+        window.location = '/';
+    });
+}
+if (document.querySelector("#pm_infoPageButton_GoBack")) {
+    document.querySelector("#pm_infoPageButton_GoBack").addEventListener("click", function() {
+        window.history.go(-1);
+    });
+}
 </script>

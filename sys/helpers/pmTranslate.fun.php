@@ -12,7 +12,7 @@ function pmTranslate($_lang, $_text, $ajax)
 
 {
     $DB = new DB();
-    if ($ajax == true) {
+    if ($ajax === true) {
         $arr = [];
     } else {
         $arr = json_encode([]);
@@ -20,7 +20,7 @@ function pmTranslate($_lang, $_text, $ajax)
     $result = $DB->queryRaw("SELECT * FROM pm_loc");
     if ($result) {
         while ($row = $result->fetch_assoc()) {
-            if ($row["en"] == $_text) {
+            if ($row["en"] === $_text) {
                 if ($row[$_lang]) {
                     return $arr = $row[$_lang];
                 } else {
@@ -31,7 +31,7 @@ function pmTranslate($_lang, $_text, $ajax)
             }
         }
     }
-    if ($ajax == true) {
+    if ($ajax === true) {
         return json_encode($arr);
     } else {
         return $arr;

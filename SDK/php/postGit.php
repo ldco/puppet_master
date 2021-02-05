@@ -10,8 +10,8 @@ $now = date("Y-m-d H:i:s");
 
 if (isset($_POST["gitself"]) && isset($_POST["gitmaster"])) {
 
-    if ($_POST["gitself"] == "true") {
-        if ($_POST["gitmaster"] == "true") {
+    if ($_POST["gitself"] === "true") {
+        if ($_POST["gitmaster"] === "true") {
             $com = shell_exec("git commit -am 'self commit " . $now . "'");
             $push = shell_exec("git push -u origin master");
             echo "1 -> git commit -am 'self commit " . $now . "' " . $com . " git push -u origin master " . $push;
@@ -22,7 +22,7 @@ if (isset($_POST["gitself"]) && isset($_POST["gitmaster"])) {
             echo "2 -> git commit -am 'self commit " . $now . "' " . $com . " git push -u " . $_POST['gitto']  . " " . $push;
         }
     } else {
-        if ($_POST["gitmaster"] == "true") {
+        if ($_POST["gitmaster"] === "true") {
 
             $com = shell_exec("git commit -am '" . $_POST['gitcom'] . "'");
             $push = shell_exec("git push -u origin master");

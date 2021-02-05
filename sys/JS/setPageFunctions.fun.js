@@ -1,8 +1,8 @@
 function setPageFunctions() {
     let setURL = window.location.hash;
-    if (setURL == "") return;
+    if (setURL === "") return;
     let id = setURL.split("#").pop();
-    if (id == null || !isFinite(id) || id != parseInt(id, 10)) return;
+    if (id === null || !isFinite(id) || id !== parseInt(id, 10)) return;
     let timeout = 500;
 
     let fun = {

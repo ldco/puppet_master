@@ -1,7 +1,7 @@
 function setHamburgerMenu(float) {
 
     let hamburger = document.querySelectorAll(".pm_hamburger")[0];
-    if (hamburger == null) return;
+    if (hamburger === null) return;
     let mobileBar;
     if (!float) {
         mobileBar = document.querySelectorAll(".pm_mobileBar")[0];

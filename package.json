@@ -60,8 +60,7 @@
         "dep--assets": "npm run predist-assets && npm run dist && npm run git--self && npm run deploy--assets",
         "dep--noassets": "npm run predist--noassets && npm run build--noassets && npm run git--self && npm run deploy--noassets",
         "dep--www": "npm run predist--noassets && npm run build--noassets && npm run git--self && npm run deploy--www",
-        "start--dev": "./SDK/sh/start--dev.sh",
-        "d-test": "./vendor/dg/ftp-deployment/deployment SDK/deploy/d-test.php"
+        "start--dev": "./SDK/sh/start--dev.sh"
     },
     "browserslist": [
         "last 4 versions"
