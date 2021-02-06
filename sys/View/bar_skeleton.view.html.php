@@ -1,8 +1,8 @@
 <div id="<?= $navBarId; ?>">
-    <a href="#">
-        <div id="<?= $barLogo ?>" class="<?= $barLogo ?>">
-        </div>
-    </a>
+
+    <div id="<?= $barLogo ?>">
+    </div>
+
     <nav id="<?= $navId; ?>">
         <?php $modelNav->index();
         $modelNav->makeLang(false); ?>
