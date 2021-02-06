@@ -7,12 +7,6 @@ function pmImg($alt, $src, $svg = false, $class = null, $id = null)
         $_class = "";
     }
 
-    if ($id != null) {
-        $_id = " " . $id;
-    } else {
-        $_id = "";
-    }
-
     $origin_extension = pathinfo($src, PATHINFO_EXTENSION);
     if ($origin_extension === "svg") {
         $src = pathinfo($src, PATHINFO_DIRNAME) . "/" . pathinfo($src, PATHINFO_FILENAME);
@@ -31,19 +25,19 @@ function pmImg($alt, $src, $svg = false, $class = null, $id = null)
     }
     if (PM_WEBP) {
         if (PM_IS_LOCAL) {
-            echo "<img alt='$alt' src='$src.$extension' class='$_class' id='$_id'>";
+            echo "<img alt='$alt' src='$src.$extension' class='$_class' id='$id'>";
         } else {
             if ($extension === "svg") {
-                echo "<img alt='$alt' src='$src.svg' class='$_class' id='$_id'>";
+                echo "<img alt='$alt' src='$src.svg' class='$_class' id='$id'>";
             } else {
                 echo "<picture>
               <source type='image/webp' srcset='$src.webp'>
               <source type='image/png' srcset='$src.png'>
-              <img alt='$alt' src='$src.png' class='$_class' id='$_id'>
+              <img alt='$alt' src='$src.png' class='$_class' id='$id'>
               </picture>";
             }
         }
     } else {
-        echo "<img alt='$alt' src='$src.$extension' class='$_class' id='$_id'>";
+        echo "<img alt='$alt' src='$src.$extension' class='$_class' id='$id'>";
     }
 }

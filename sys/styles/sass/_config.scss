@@ -1,5 +1,3 @@
-//SYS FOLDER
-$SYS_FOLDER: "sys"; //or "core"
 //info pages puppet master or custom branding
 $INFO_PM_BRAND: false !default;
 //
@@ -11,35 +9,33 @@ $PM_ADMIN_NAV_ICONS: false; //always false if PM_ADMIN_BAR_IS_VERTICAL true
 $PM_FOOTER: false;
 $PM_ADMIN_PANEL: true;
 //sizes
-$vertBar: (width: 6vh, a_width: 6vh, );
+$vertBar: (width: 6vh);
+$horBar: (height: 6vh, logo_width: 12vw, asset: 3vh, );
 $floatBar: (width:auto, height:auto, logo_width: 15vh, fontSize: 1.2, );
-$floatMobBar: (width:auto, height:auto, fontSize: 1, );
-$horBar: (height: 6vh, a_height: 6vh, logo_width: 12vw, asset: 3vh, );
 $hamburger: (distance: 3vh, );
-$mob: (height: 6vh, open_width: 45vw, nav_height: 6vh, ad_nav_height: 7vh, );
+$mob: (height: 6vh, open_width: 45vw, nav_height: 6vh, );
 $adminPanel: (height: 3vh, );
 $footer: (height: 3vh); //not relevant if PM_FOOTER FALSE
 $basicTextSize: 1;
-//
-//
-//
-//
-//
-//
-//-> Do NOT touch unless!
-//FOLDERS 
-$ICONS_FOLDER: null;
-$IMAGES_FOLDER: null;
+//DON NOT TOUCH ELSE IF
+@if $PM_FOOTER==false {
+    $footer: (height: 0vh);
+}
+
+$ICONS_SYS: null;
+$IMAGES_SYS: null;
+$ICONS_CORE: null;
+$IMAGES_CORE: null;
 @if $IS_DEV==true {
-    $ICONS_FOLDER: "../#{$SYS_FOLDER}/assets/icons/vector_dev/";
-    $IMAGES_FOLDER: "../#{$SYS_FOLDER}/assets/images/images_dev/";
+    $ICONS_SYS: "../sys/assets/icons/vector_dev/";
+    $IMAGES_SYS: "../sys/assets/images/images_dev/";
+    $ICONS_CORE: "../sys/assets/icons/vector_dev/";
+    $IMAGES_CORE: "../sys/assets/images/images_dev/";
 }
 
 @if $IS_DEV==false {
-    $ICONS_FOLDER: "../#{$SYS_FOLDER}/assets/icons/vector/";
-    $IMAGES_FOLDER: "../#{$SYS_FOLDER}/assets/images/images/";
-}
-
-@if $PM_FOOTER==false {
-    $footer: (height: 0vh);
+    $ICONS_SYS: "../core/assets/icons/vector/";
+    $IMAGES_core: "../core/assets/images/images/";
+    $ICONS_CORE: "../core/assets/icons/vector/";
+    $IMAGES_CORE: "../core/assets/images/images/";
 }

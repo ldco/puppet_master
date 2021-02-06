@@ -5081,11 +5081,7 @@ function initFun() {
     setRouter();
   }
 
-  if (PM_FLOATBAR === "false") {
-    setHamburgerMenu(false);
-  } else {
-    setHamburgerMenu(true);
-  }
+  setHamburgerMenu();
 
   if (PM_BAR === "true" || PM_FLOATBAR === "true") {
     setChangeLang();
@@ -5160,16 +5156,16 @@ function getAgent() {
 "use strict";
 
 function setBarAsset() {
-  var el = document.querySelector("#pm_id_Bar .pm_bar_asset");
-  el.addEventListener("click", function () {//showPMInformation();
+  var el = document.querySelector("#pm_bar_asset");
+  el.addEventListener("click", function () {//do something
   });
 }
 
 "use strict";
 
 function setChangeLang() {
-  var el = document.querySelector('.pm_Lang img');
-  var el2 = document.querySelector('.pm_langNav');
+  var el = document.querySelector('#pm_Lang img');
+  var el2 = document.querySelector('#pm_langNav');
 
   if (el != null) {
     el.addEventListener("click", function () {
@@ -5194,17 +5190,9 @@ function setGoTopButton() {
 
 "use strict";
 
-function setHamburgerMenu(_float) {
-  var hamburger = document.querySelectorAll(".pm_hamburger")[0];
-  if (hamburger === null) return;
-  var mobileBar;
-
-  if (!_float) {
-    mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
-  } else {
-    mobileBar = document.querySelectorAll(".pm_mobileBarFloat")[0];
-  }
-
+function setHamburgerMenu() {
+  var hamburger = document.querySelector(".pm_hamburger");
+  var mobileBar = document.querySelector("#pm_mobileBar");
   var helperDiv = document.createElement("div");
   helperDiv.setAttribute("class", "hamburgerHelperDiv");
   helperDiv.addEventListener("click", function () {
@@ -5220,56 +5208,33 @@ function setHamburgerMenu(_float) {
       mobileBar.style.display = "flex";
       setTimeout(function () {
         if (PM_LTR) {
-          if (!_float) {
-            anime({
-              targets: mobileBar,
-              translateX: 0,
-              left: '0',
-              easing: 'spring(0, 60, 1, 0)'
-            });
-          } else {
-            anime({
-              targets: mobileBar,
-              translateX: 0,
-              left: '3vh',
-              easing: 'spring(0.1, 50, 1.6, 0)'
-            });
-          }
+          anime({
+            targets: mobileBar,
+            translateX: 0,
+            left: '3vh',
+            easing: 'spring(0.1, 50, 1.6, 0)'
+          });
         } else {
-          if (!_float) {
-            anime({
-              targets: mobileBar,
-              translateX: 0,
-              right: '0',
-              easing: 'spring(0, 60, 1, 0)'
-            });
-          } else {
-            anime({
-              targets: mobileBar,
-              translateX: 0,
-              right: '3vh',
-              easing: 'spring(0.1, 50, 1.6, 0)'
-            });
-          }
+          anime({
+            targets: mobileBar,
+            translateX: 0,
+            right: '0',
+            easing: 'spring(0, 60, 1, 0)'
+          });
         }
       }, 10);
     } else {
-      removeHamburger(_float);
+      removeHamburger();
     }
   });
 }
 
-function removeHamburger(_float2) {
+function removeHamburger() {
   if (document.querySelector(".hamburgerHelperDiv")) {
-    document.querySelectorAll(".pm_hamburger")[0].classList.remove("is-active");
+    document.querySelector(".pm_hamburger").classList.remove("is-active");
     document.querySelector(".hamburgerHelperDiv").remove();
     var mobileBar;
-
-    if (!_float2) {
-      mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
-    } else {
-      mobileBar = document.querySelectorAll(".pm_mobileBarFloat")[0];
-    }
+    mobileBar = document.querySelector("#pm_mobileBar");
 
     if (PM_LTR) {
       anime({
@@ -5502,6 +5467,11 @@ var Modal = /*#__PURE__*/function () {
     } //vars
 
   }, {
+    key: "id",
+    get: function get() {
+      return this.idname.substring(1) + " ";
+    }
+  }, {
     key: "close",
     value: function close(closetype, id) {
       if (closetype === 1) {
@@ -5546,11 +5516,6 @@ var Modal = /*#__PURE__*/function () {
       this.button(function () {
         close(closetype, id);
       }, text);
-    }
-  }, {
-    key: "id",
-    get: function get() {
-      return this.idname.substring(1) + " ";
     }
   }]);
 

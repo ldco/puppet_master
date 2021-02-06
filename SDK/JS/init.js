@@ -42,7 +42,7 @@ function initFun() {
         execSh();
     });
 
-
+    xtermInit();
 
 }
 
@@ -268,4 +268,10 @@ function checkFtp() {
     ajx.open("POST", "php/checkFtpConnection.php", true);
     ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajx.send();
+}
+
+function xtermInit() {
+    let term = new Terminal();
+    term.open(document.getElementById('real_terminal'));
+    term.write(" ");
 }

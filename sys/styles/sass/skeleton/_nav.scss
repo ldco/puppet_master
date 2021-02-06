@@ -15,7 +15,7 @@
         a {
             border-bottom: none;
         }
-        .pm_Lang {
+        #pm_Lang {
             img {
                 height: map-get($vertBar, width) / 1.8;
             }
@@ -67,7 +67,7 @@
         a {
             border-bottom: none;
         }
-        .pm_Lang {
+        #pm_Lang {
             img {
                 padding: 0.3vh !important;
                 height: map-get($horBar, height) / 2;
@@ -175,7 +175,7 @@
         cursor: pointer;
     }
     
-    .pm_mobileNav {
+    #pm_mobileNav {
         a {
             border-bottom: none;
         }
@@ -211,9 +211,9 @@
     }
     
     //langs
-    .pm_class_Nav,
-    .pm_class_NavFloat {
-        .pm_Lang {
+    #pm_id_Nav,
+    #pm_id_NavFloat {
+        #pm_Lang {
             [dir=rtl] & {
                 padding-right: 1vw;
             }
@@ -226,12 +226,11 @@
             align-items: center;
             flex-direction: column;
             img {
-                // background-color: $c_brand;
                 border-radius: 50%;
                 padding: 0.7vh !important;
+                box-shadow: 0 0 0.5vh 0 $c_opos;
                 &:hover {
                     filter: brightness(1.2);
-                    box-shadow: 0 0 0.5vh 0 $c_opos;
                 }
                 &:active {
                     filter: brightness(1.2);
@@ -241,12 +240,12 @@
         }
     }
     
-    .pm_langNav {
+    #pm_langNav {
         display: none;
         top: -20vh;
     }
     
-    .pm_langNav.--active {
+    #pm_langNav.--active {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -260,17 +259,16 @@
             align-items: center;
             input {
                 @include f-size($basicTextSize - 0.4);
-                // background-color: rgba($c_domin, 0.8);
-                background-color: $c_brand2;
-                color: $c_black;
+                background-color: $c_brand;
+                color: $c_white;
                 margin-top: 0.5vh;
-                // border-radius: 0.6vh;
                 border-radius: 50%;
                 padding: 0.7vh !important;
                 box-shadow: 0px 0px 2px 0px $c_opos;
+                font-weight: bolder;
                 &:hover {
                     filter: brightness(1.1);
-                    //box-shadow: 0px 0px 0.5vh 0px $c_opos;
+                    box-shadow: 0 0 0vh 0.2vh $c_opos;
                 }
                 &:active {
                     box-shadow: 0 0 0.5vh 0.1vh $c_opos;
@@ -279,14 +277,14 @@
         }
     }
     
-    .pm_mobileNav {
+    #pm_mobileNav {
         @include font(1, 400);
-        .pm_Lang {
+        #pm_Lang {
             align-self: center;
             img {
                 display: none;
             }
-            .pm_langNavMobile {}
+            #pm_langNavMobile {}
             form {
                 flex-direction: row;
                 input {
@@ -301,7 +299,6 @@
                     margin-top: calc(100vw - (45vw / 0.49));
                     @include font(1, 400);
                     @include f-size-fill(1)
-                    /*  @include f-size($basicTextSize - 0.3) */
                 }
             }
         }
@@ -332,56 +329,9 @@
         .nav_item:first-of-type {
             // display: none;
         }
-        .pm_Lang {
+        #pm_Lang {
             img {
                 height: calc(#{map-get($floatBar, fontSize)} * 2.6vh);
-            }
-            [dir=rtl] & {
-                /*  margin-right: 2vh; */
-            }
-            [dir=ltr] & {
-                /* margin-left: 2vh; */
-            }
-        }
-        .pm_langNav.--active {
-            form {
-                input {}
-            }
-        }
-    }
-    
-    .pm_mobileNavFloat {
-        padding: 1vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
-        .nav_item {
-            a {
-                display: flex;
-                align-items: center;
-                border: none;
-                span {
-                    color: $c_opos;
-                    @include f-size(map-get($floatMobBar, fontSize));
-                    padding: 1vh;
-                }
-            }
-            img {
-                // filter: invert(1);
-            }
-        }
-        .pm_langNavMobile {
-            margin-top: 1vh;
-            form {
-                flex-direction: row;
-                input {
-                    padding: 1vh;
-                    margin: 1vh;
-                    background-color: transparent;
-                    color: $c_opos;
-                    box-shadow: 0 0 0vh 0.1vh $c_opos;
-                }
             }
         }
     }

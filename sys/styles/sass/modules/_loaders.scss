@@ -2,7 +2,7 @@
     $width: 20vh;
     $height: 20vh;
     position: fixed;
-    background-image: url($ICONS_FOLDER + "100a.svg");
+    background-image: url($ICONS_CORE + "100a.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: $width;
@@ -13,5 +13,5 @@
 }
 
 .pm_emailLoader {
-    background-image: url($ICONS_FOLDER + "mail.svg");
+    background-image: url($ICONS_CORE + "mail.svg");
 }

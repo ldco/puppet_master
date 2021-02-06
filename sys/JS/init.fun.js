@@ -25,11 +25,7 @@ function initFun() {
     if (PM_ONEPAGER === "false") {
         setRouter();
     }
-    if (PM_FLOATBAR === "false") {
-        setHamburgerMenu(false);
-    } else {
-        setHamburgerMenu(true);
-    }
+    setHamburgerMenu();
 
     if ((PM_BAR === "true") || (PM_FLOATBAR === "true")) {
         setChangeLang();

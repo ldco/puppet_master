@@ -1,8 +1,6 @@
 @include mob(false) {
-    #mainContent {
-        width: generateContentSize(true, false);
-        min-height: generateContentSize(false, false);
-        top: generateContentPosition(true, false);
+    [data-footer=true] {
+        #mainContent {}
     }
 }
 
@@ -28,8 +26,7 @@
     }
 }
 
-[data-bar=false],
-[data-floatbar=true] {
+[data-bar=false] {
     #mainContent {
         width: 100vw;
         min-height: calc(100vh - #{$heightFoot});

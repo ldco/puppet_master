@@ -59,7 +59,7 @@ option {
 }
 
 select {
-    background-image: url("#{$ICONS_FOLDER}down.svg");
+    background-image: url("#{$ICONS_CORE}down.svg");
     background-repeat: no-repeat, repeat;
     background-size: 1.6vh auto, 100%;
     font-family: inherit !important;
@@ -118,8 +118,6 @@ button {
             color: $c_brand;
         }
         @if $LIGHT_THEME==false {
-            @include font(1,
-            400);
             background: $c_interP2;
             color: $c_opos;
         }

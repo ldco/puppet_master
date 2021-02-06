@@ -1,14 +1,16 @@
 //hamburger vars
 $hamburgerColor: null;
+$hamburgerBGColor: null;
 @if $LIGHT_THEME==true {
     $hamburgerColor: $c_opos;
+    $hamburgerBGColor: rgba($c_brand2, 0.0);
 }
 
 @if $LIGHT_THEME==false {
-    $hamburgerColor: $c_interBB;
+    $hamburgerColor: $c_opos;
+    $hamburgerBGColor: rgba($c_brand2, 0.0);
 }
 
-$hamburgerBGColor: rgba($c_brand2, 0.8); //$c_domin;
 $hamburgerRadius: 0; //3px;
 $hamburgerShadow: none;
 $hamburgerSize: map-get($mob, height) / 6;
@@ -21,12 +23,6 @@ $hamburgerDistance: map-get($hamburger, distance);
     justify-content: center;
     align-items: center;
     @include dir('left', 'right', $hamburgerDistance, $hamburgerDistance);
-}
-
-[data-floatbar=true] {
-    .pm_hamburger {
-        top: $hamburgerDistance;
-    }
 }
 
 .hamburger {

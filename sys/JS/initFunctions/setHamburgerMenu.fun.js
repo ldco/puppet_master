@@ -1,13 +1,7 @@
-function setHamburgerMenu(float) {
+function setHamburgerMenu() {
 
-    let hamburger = document.querySelectorAll(".pm_hamburger")[0];
-    if (hamburger === null) return;
-    let mobileBar;
-    if (!float) {
-        mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
-    } else {
-        mobileBar = document.querySelectorAll(".pm_mobileBarFloat")[0];
-    }
+    let hamburger = document.querySelector(".pm_hamburger");
+    let mobileBar = document.querySelector("#pm_mobileBar");
     let helperDiv = document.createElement("div");
     helperDiv.setAttribute("class", "hamburgerHelperDiv");
     helperDiv.addEventListener("click", function() {
@@ -22,56 +16,33 @@ function setHamburgerMenu(float) {
             mobileBar.style.display = "flex";
             setTimeout(() => {
                 if (PM_LTR) {
-                    if (!float) {
-                        anime({
-                            targets: mobileBar,
-                            translateX: 0,
-                            left: '0',
-                            easing: 'spring(0, 60, 1, 0)'
-                        });
-                    } else {
-                        anime({
-                            targets: mobileBar,
-                            translateX: 0,
-                            left: '3vh',
-                            easing: 'spring(0.1, 50, 1.6, 0)'
-
-                        });
-                    }
+                    anime({
+                        targets: mobileBar,
+                        translateX: 0,
+                        left: '3vh',
+                        easing: 'spring(0.1, 50, 1.6, 0)'
+                    });
                 } else {
-                    if (!float) {
-                        anime({
-                            targets: mobileBar,
-                            translateX: 0,
-                            right: '0',
-                            easing: 'spring(0, 60, 1, 0)'
-                        });
-                    } else {
-                        anime({
-                            targets: mobileBar,
-                            translateX: 0,
-                            right: '3vh',
-                            easing: 'spring(0.1, 50, 1.6, 0)'
-                        });
-                    }
+                    anime({
+                        targets: mobileBar,
+                        translateX: 0,
+                        right: '0',
+                        easing: 'spring(0, 60, 1, 0)'
+                    });
                 }
             }, 10);
         } else {
-            removeHamburger(float);
+            removeHamburger();
         }
     });
 }
 
-function removeHamburger(float) {
+function removeHamburger() {
     if (document.querySelector(".hamburgerHelperDiv")) {
-        document.querySelectorAll(".pm_hamburger")[0].classList.remove("is-active");
+        document.querySelector(".pm_hamburger").classList.remove("is-active");
         document.querySelector(".hamburgerHelperDiv").remove();
         let mobileBar;
-        if (!float) {
-            mobileBar = document.querySelectorAll(".pm_mobileBar")[0];
-        } else {
-            mobileBar = document.querySelectorAll(".pm_mobileBarFloat")[0];
-        }
+        mobileBar = document.querySelector("#pm_mobileBar");
         if (PM_LTR) {
             anime({
                 targets: mobileBar,

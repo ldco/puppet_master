@@ -9,24 +9,28 @@
 
 @include mob(false) {
     #pm_mobileHeader,
-    #pm_mobileBar,
-    #pm_mobileHeaderFloat,
-    #pm_mobileBarFloat {
+    #pm_mobileBar {
         display: none !important;
     }
 }
 
 //shadow
 $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
-.pm_class_Bar,
-.pm_mobileHeader,
-.pm_bar_scrolled,
-.pm_mobileBar {
+#pm_id_Bar,
+#pm_bar_scrolled {
     box-shadow: $pm_bar_shadow;
 }
 
-//
-.pm_barLogo {
+[data-floatbar=false] {
+    #pm_mobileHeader {
+        box-shadow: $pm_bar_shadow;
+    }
+    #pm_mobileBar {
+        box-shadow: $pm_bar_shadow;
+    }
+}
+
+#pm_barLogo {
     width: map-get($horBar, logo_width);
     height: map-get($horBar, height);
     position: fixed;
@@ -35,28 +39,26 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-        max-width: calc(#{map-get($horBar, logo_width)} - 8vh);
-        // filter: drop-shadow(1px 3px 2px #333);
-    }
+    background-size: calc(#{map-get($horBar, logo_width)} / 1.8);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @include mob(true) {
-    .pm_bar_asset {
+    #pm_bar_asset {
         height: calc(#{map-get($mob, height)} / 2.1);
         top: calc((#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
     }
 }
 
 @include mob(false) {
-    .pm_bar_asset {
+    #pm_bar_asset {
         height: calc(#{map-get($horBar, height)} / 2.1);
         top: calc((#{map-get($horBar, height)} / 2) - ((calc(#{map-get($horBar, height)} / 2.1)) / 2));
     }
 }
 
-.pm_bar_asset {
-    // display: none;
+#pm_bar_asset {
     cursor: pointer;
     width: map-get($horBar, asset);
     position: fixed;
@@ -64,6 +66,12 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
     @include dir("right", "left", 3vh, 3vh);
     &:hover {
         @include heartbeat;
+    }
+}
+
+@if $LIGHT_THEME==false {
+    #pm_bar_asset {
+        filter: invert(1);
     }
 }
 
@@ -93,23 +101,20 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
 
 @mixin scrolledBar {
     $pmBarScrolledHeight: calc(#{map-get($horBar, height)} / 1.6);
-    .pm_bar_scrolled {
+    #pm_bar_scrolled {
         height: $pmBarScrolledHeight !important;
         transition: ease 1s;
-        .pm_barLogo,
-        .pm_bar_asset {
+        #pm_barLogo,
+        #pm_bar_asset {
             transition: ease 0.1s;
         }
-        .pm_barLogo {
+        #pm_barLogo {
             top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.65) / 2);
-            img {
-                max-width: calc(#{$pmBarScrolledHeight} / 0.35) !important;
-            }
         }
-        .pm_bar_asset {
+        #pm_bar_asset {
             top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.8) / 3.5);
         }
-        .pm_class_Nav {
+        #pm_class_Nav {
             @if $PM_NAV_ICONS==true {
                 .nav_item {
                     img,
@@ -151,25 +156,40 @@ body {
     }
 }
 
-.pm_mobileBar {
-    width: map-get($mob, open_width);
-    background-color: $c_domin;
+#pm_mobileBar {
     display: none;
     position: fixed;
-    height: 100%;
-    top: 0;
     z-index: 1977;
-}
-
-.pm_mobileBar,
-.pm_mobileBarFloat {
     @include dir("left", "right", -100vw, -100vw);
 }
 
-.pm_mobileHeader,
-.pm_mobileHeaderFloat {
+[data-floatbar=false] {
+    #pm_mobileBar {
+        width: map-get($mob, open_width);
+        background-color: $c_domin;
+        height: 100%;
+        top: 0;
+    }
+}
+
+[data-floatbar=true] {
+    #pm_mobileBar {
+        width: map-get($mob, open_width);
+        background-color: $c_domin;
+        top: 0;
+    }
+}
+
+[data-floatbar=true] {
+    #pm_mobileHeader {
+        background-color: transparent;
+    }
+}
+
+#pm_mobileHeader {
     position: fixed;
     top: 0;
+    background-color: $c_domin;
     @include dir("left", "right", 0, 0);
     width: 100%;
     z-index: 1978;
@@ -185,14 +205,21 @@ margin: 0 !important;
 font-size: 2vh;
 
 }
-.pm_mobileHeader {
-    background-color: $c_domin;
+@if $LIGHT_THEME==true {
+    #pm_barLogo,
+    #pm_barLogoFloat,
+    #mobileHeaderLogo {
+        background-image: url("#{$IMAGES_CORE}brand/barLogo--forLight.svg");
+    }
 }
-.pm_mobileHeaderFloat {
-    background-color: transparent;
+@if $LIGHT_THEME==false {
+    #pm_barLogo,
+    #pm_barLogoFloat,
+    #mobileHeaderLogo {
+        background-image: url("#{$IMAGES_CORE}brand/barLogo--forDark.svg");
+    }
 }
-#mobileHeaderLogo,
-#mobileHeaderFloatLogo {
+#mobileHeaderLogo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,40 +228,26 @@ font-size: 2vh;
     height: map-get($mob, height);
     width: 50vw;
     left: 25vw;
-    img {
-        height: calc(#{map-get($mob, height)} / 2.6);
-    }
-    
+    background-position: center;
+    background-size: calc(#{map-get($mob, height)} / 0.5);
+    background-repeat: no-repeat;
     a {
         border: none;
     }
 }
-#mobileHeaderFloatLogo {
-    filter: invert(1);
-}
 //BAR FLOAT
-.pm_barLogoFloat {
-    opacity: 0;
-    display: none;
+#pm_barLogoFloat {
     cursor: move;
     cursor: grab;
-    img {
-        width: map-get($floatBar, logo_width);
-        &:hover {
-            filter: opacity(0.5);
-        }
-    }
-    
+    background-size: 10vh;
+    background-repeat: no-repeat;
+    background-position: center;
     [dir=rtl] & {
         margin-left: 2vh;
     }
     
     [dir=ltr] & {
         margin-right: 2vh;
-    }
-    
-    @if $LIGHT_THEME==false {
-        filter: invert(1);
     }
 }
 %BarFloat_appear {
@@ -245,7 +258,7 @@ font-size: 2vh;
 }
 #pm_id_BarFloat {
     @extend %BarFloat_appear;
-    filter: invert(1);
+    //filter: invert(1);
     width: map-get($floatBar, width);
     height: map-get($floatBar, height);
     z-index: 1980;
@@ -256,32 +269,14 @@ font-size: 2vh;
     align-items: flex-start;
     justify-content: center;
     [dir=rtl] & {
-        left: 2vh
+        right: 2vh;
     }
     
     [dir=ltr] & {
-        right: 2vh
+        left: 2vh;
     }
     
     a {
         border-bottom: none;
     }
 }
-#pm_mobileBarFloat {
-    @extend %BarFloat_appear;
-    background-color: rgba($c_brand2, 0.8);
-    z-index: 1977;
-    position: fixed;
-    width: map-get($floatMobBar, width);
-    height: map-get($floatMobBar, height);
-    top: 10vh;
-    .pm_Lang {
-        img {
-            display: none
-        }
-    }
-}
-//MISC
-#pm_mobileBar {}
-#pm_mobileHeader {}
-#pm_mobileHeaderFloat {}

@@ -8,7 +8,7 @@ function show404()
     global $_SERVER;
     $serverProtocol = (empty($_SERVER["SERVER_PROTOCOL"]) ? 'HTTP/1.0' : $_SERVER["SERVER_PROTOCOL"]);
     header($serverProtocol . " 404 Not Found");
-    $pm_lang = PM_LANG;
+
     require PM_SYS . "/SysInfo/404.php";
 }
 
@@ -28,10 +28,10 @@ $PM_PAGE_NUM = $needPageId;
 if (empty($needPageId)) die(show404());
 
 if (defined("PM_ONEPAGER") && !PM_ONEPAGER) {
-    $viewPagePathPrefix = PM_SYS . "Pages";
+    $viewPagePathPrefix = PM_CORE . "Pages";
 }
 if (defined("PM_ONEPAGER") && PM_ONEPAGER) {
-    $viewPagePathPrefix = PM_SYS . "OnePager";
+    $viewPagePathPrefix = PM_CORE . "OnePager";
 }
 
 $viewPagePath = $viewPagePathPrefix . '/' . $needPageId . '.page.php';
@@ -50,7 +50,5 @@ if ($needShowFull) {
     exit;
 }
 
-
 $indexModel = new sys\Model\SkeletonIndex;
-
 $indexModel->index($pageContent);

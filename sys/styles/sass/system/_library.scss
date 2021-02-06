@@ -75,5 +75,5 @@
 
 //backround images
 @mixin bgimg($name, $page) {
-    background-image: url("#{$IMAGES_FOLDER}page_#{$page}/#{$name}.png");
+    background-image: url("#{$IMAGES_CORE}page_#{$page}/#{$name}.png");
 }

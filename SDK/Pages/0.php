@@ -117,6 +117,7 @@ endif;
 
 <div id="blockB">
     <div id="sdk_terminal"></div>
+    <!--  <div id="real_terminal"></div> -->
 
 </div>
 

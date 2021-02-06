@@ -30,9 +30,9 @@ class SkeletonNav
     {
         if (count(PM_ALL_LANGS) > 1) {
             if ($mobile) {
-                $navClass = "pm_langNavMobile";
+                $navId = "pm_langNavMobile";
             } else {
-                $navClass = "pm_langNav";
+                $navId = "pm_langNav";
             }
             $navFormAction = "index.php";
             $imgSrc = PM_ICONS_REL . "lang.svg";

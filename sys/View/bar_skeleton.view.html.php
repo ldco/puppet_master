@@ -1,17 +1,16 @@
-<div id="<?= $navBarId; ?>" class="<?= $navBarClass; ?>">
+<div id="<?= $navBarId; ?>">
     <a href="#">
         <div id="<?= $barLogo ?>" class="<?= $barLogo ?>">
-            <?php pmImg("Logo", $navBarLogoImg, true, "pm_barLogoImg"); ?>
         </div>
     </a>
-    <nav id="<?= $navId; ?>" class="<?= $navClass; ?>">
+    <nav id="<?= $navId; ?>">
         <?php $modelNav->index();
-        if ($lang) $modelNav->makeLang(false); ?>
+        $modelNav->makeLang(false); ?>
     </nav>
-    <?php if ($admin) : ?>
+    <?php if ($definedLogin) : ?>
     <div id="pm_admin_panel">
         <?php if ($isAuthenticated) $modelBar->makeLogout(); ?>
     </div>
     <?php endif; ?>
-    <?php pmImg("bar asset", $nav_pm_bar_asset, true, "pm_bar_asset anim"); ?>
+    <?php pmImg("bar asset", $nav_pm_bar_asset, true, "anim", "pm_bar_asset"); ?>
 </div>
