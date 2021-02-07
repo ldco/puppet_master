@@ -6,9 +6,9 @@ const PM_DIR = document.querySelector("html").getAttribute("dir");
 const PM_LANG = document.querySelector("html").getAttribute("lang");
 const PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
 const PM_ARR_OF_LANGS = ["en", "he"];
-const PM_BAR = document.querySelector("html").getAttribute("data-bar");
+const PM_HEADER = document.querySelector("html").getAttribute("data-header");
 const PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
-const PM_FLOATBAR = document.querySelector("html").getAttribute("data-floatbar");
+const PM_FLOATHEADER = document.querySelector("html").getAttribute("data-FLOATHEADER");
 
 if (PM_DIR === "ltr") {
     const PM_DIROPOSITE = "rtl";
@@ -27,13 +27,13 @@ function initFun() {
     }
     setHamburgerMenu();
 
-    if ((PM_BAR === "true") || (PM_FLOATBAR === "true")) {
+    if ((PM_HEADER === "true") || (PM_FLOATHEADER === "true")) {
         setChangeLang();
     }
 
-    if (PM_BAR === "true") {
+    if (PM_HEADER === "true") {
         setBarAsset();
-        setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
+        setOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
     }
     setGoTopButton();
     initModalLocalisation();
@@ -42,10 +42,10 @@ function initFun() {
         getAgent();
     }
 
-    if (PM_FLOATBAR === "true") {
+    if (PM_FLOATHEADER === "true") {
 
-        document.querySelector("#pm_barLogoFloat").addEventListener("click", function() { drag(this); });
-        document.querySelector("#pm_barLogoFloat").click();
+        document.querySelector("#pm_logo-float--header").addEventListener("click", function() { drag(this); });
+        document.querySelector("#pm_logo-float--header").click();
     }
     //CUSTOM FUNCTIONS
     //

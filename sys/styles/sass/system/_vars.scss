@@ -1,19 +1,8 @@
-.attention {}
-
-.pm_emailLoader {
-    @include ping;
-}
-
-//VIDEO
-video {}
-
-.pm_video {
-    video {}
-}
-
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../core/styles/sass/system_core/vars_core";
 @if $PM_FOOTER==false {
-    [data-bar=false] {
-        .bgVideo {
+    [data-header=false] {
+        .video--fullscreen {
             video {
                 height: 100vh !important;
                 min-height: 100vh !important;
@@ -23,8 +12,8 @@ video {}
 }
 
 else {
-    [data-bar=false] {
-        .bgVideo {
+    [data-header=false] {
+        .video--fullscreen {
             video {
                 object-fit: cover;
                 width: 100vw !important;
@@ -35,7 +24,7 @@ else {
     }
 }
 
-.bgVideo {
+.video--fullscreen {
     position: absolute;
     z-index: 0;
     width: 100vw;
@@ -48,7 +37,7 @@ else {
 }
 
 @include mob(true) {
-    .bgVideo {
+    .video--fullscreen {
         video {
             min-width: 100vw;
             width: initial;
@@ -59,23 +48,21 @@ else {
     }
 }
 
-.bgVideoEffect {
-    background: $c_opos;
+.video--foreground {
     z-index: 1;
     position: fixed;
-    opacity: 0.6;
     width: 100vw;
     height: 100vh;
 }
 
 @include mob(true) {
-    .bgVideoEffect {
+    .video--foreground {
         height: 100vh;
     }
 }
 
 @include mob(false) {
-    .bgVideoEffect {
+    .video--foreground {
         height: 91vh;
     }
 }
@@ -85,20 +72,17 @@ else {
     user-select: initial !important;
 }
 
-#copytoBut:hover+.pm_copyTooltip {
+#copytoBut:hover+.pm_copytooltip {
     opacity: 1 !important;
 }
 
-.pm_copyTooltip {
+.pm_copytooltip {
     position: relative;
     display: inline-block;
 }
 
-.pm_copyTooltip .pm_copyTooltiptext {
+.pm_copytooltip .pm_copytooltip--text {
     visibility: hidden;
-    width: 140px;
-    background-color: #555;
-    color: #fff;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
@@ -108,10 +92,9 @@ else {
     left: 50%;
     margin-left: -75px;
     opacity: 0;
-    transition: opacity 0.3s;
 }
 
-.pm_copyTooltip .pm_copyTooltiptext::after {
+.pm_copytooltip .pm_copytooltip--text::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -119,70 +102,23 @@ else {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
 }
 
-.pm_copyTooltip:hover .pm_copyTooltiptext {
+.pm_copytooltip:hover .pm_copytooltip--text {
     visibility: visible;
     opacity: 1;
 }
 
-//go top button
-@include mob(true) {
-    #pm_gototop {
-        img {
-            width: 2.5vh;
-            height: 2.5vh;
-        }
-    }
-}
-
-@include mob(false) {
-    #pm_gototop {
-        img {
-            width: 1.5vw;
-            height: 1.5vw;
-        }
-    }
-}
-
 #pm_gototop {
-    [dir=rtl] & {
-        left: 5vh;
-    }
-    [dir=ltr] & {
-        right: 5vh;
-    }
     position: fixed;
     display: none;
     align-items: center;
     justify-content: center;
-    @if $LIGHT_THEME==true {
-        //background-color: $c_domin;
-        background-color: rgba($c_black, 0.2);
-    }
-    @if $LIGHT_THEME==false {
-        // background-color: $c_brand;
-        img {
-            // filter: invert(1);
-        }
-    }
-    bottom: 5vh !important;
-    border-radius: 50%;
-    padding: 1vh;
     cursor: pointer;
-    box-shadow: 0 0 0.1vh 0.1vh $c_opos;
-    filter: invert(1);
-    &:hover {
-        filter: brightness(1.1) invert(1);
-        box-shadow: 0 0 0.1vh 0.2vh $c_opos;
-        transition: 0.2s;
-    }
     z-index: 1979;
-    img {}
 }
 
-.pm_gototop_scrolled {
+.pm_gototop--scrolled {
     display: flex !important;
 }
 
@@ -194,9 +130,6 @@ else {
     top: 0;
     left: 0;
     z-index: 1983 !important;
-    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $c_brand;
-    opacity: 0.8;
 }

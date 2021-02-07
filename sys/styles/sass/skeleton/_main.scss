@@ -1,11 +1,17 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../core/styles/sass/system_core/main_core";
 @include mob(false) {
-    [data-footer=true] {
-        #mainContent {}
+    main {
+        left: 0vh !important;
+        right: 0vh !important;
+        width: 100vw;
+        top: $heightMobBar;
+        min-height: calc(100vh - #{$heightFoot} - #{$heightMobBar});
     }
 }
 
 @include mob(true) {
-    #mainContent {
+    main {
         left: 0vh !important;
         right: 0vh !important;
         width: 100vw;
@@ -15,19 +21,19 @@
 }
 
 [dir=rtl] {
-    #mainContent {
+    main {
         right: generateContentPosition(false, false);
     }
 }
 
 [dir=ltr] {
-    #mainContent {
+    main {
         left: generateContentPosition(false, false);
     }
 }
 
-[data-bar=false] {
-    #mainContent {
+[data-header=false] {
+    main {
         width: 100vw;
         min-height: calc(100vh - #{$heightFoot});
         top: 0vh;
@@ -36,7 +42,7 @@
     }
 }
 
-#mainContent {
+main {
     position: absolute;
     display: flex;
     justify-content: center;

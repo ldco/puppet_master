@@ -26,10 +26,10 @@ class SkeletonIndex
 
 
         $modelPath = PM_SYS . "Model/";
-        require_once $modelPath . "Skeleton.bar.model.php";
+        require_once $modelPath . "Skeleton.header.model.php";
         require_once $modelPath . "Skeleton.depends.model.php";
         require_once $modelPath . "Skeleton.footer.model.php";
-        $this->modelBar = new SkeletonBar;
+        $this->modelBar = new SkeletonHeader;
         $this->modelDepends = new SkeletonDepends;
         $this->modelFooter = new SkeletonFooter;
         return;

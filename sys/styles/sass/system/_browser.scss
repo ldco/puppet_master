@@ -1,4 +1,69 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../core/styles/sass/system_core/browser_core";
+
 /*change browser defaults*/
+
+html {
+    height: 100vh;
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    @include dir('direction', 'direction', ltr, rtl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-wrap: break-word;
+}
+
+header {}
+
+nav {}
+
+section {}
+
+article {}
+
+footer {}
+
+p {}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+ul {}
+
+ol {}
+
+li {}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 img {
     -webkit-user-drag: none;
@@ -7,75 +72,13 @@ img {
     -o-user-drag: none;
 }
 
-@mixin form_input_fixedHeight {
-    input {
-        height: 5vh;
-    }
-    input[type="submit"] {
-        height: 7vh;
-    }
-}
-
-button,
-textarea,
-input,
-canvas,
-select,
-option,
-video,
-iframe {
-    @include font(1, 200);
-    @include f-size(0.9);
-    border: none !important;
-    border-radius: 0.2vh;
-    padding: 0;
-    user-select: none;
-    appearance: none;
-    background-color: $c_interB;
-    box-shadow: $pm_formBS;
-}
-
-button,
-textarea,
-input,
-select,
-option {
-    &:hover {
-        background-color: $c_interP2;
-    }
-    &:focus {
-        box-shadow: $pm_formBSactive;
-    }
-}
-
 select {
-    background-image: url("#{$ICONS_CORE}down.svg");
-    background-repeat: no-repeat, repeat;
-    background-size: 1.6vh auto, 100%;
     font-family: inherit !important;
-    [dir=rtl] & {
-        background-position: left 0.7vh top 50%, 0 0;
-    }
-    [dir=ltr] & {
-        background-position: right 0.7vh top 50%, 0 0;
-    }
-    text-transform: capitalize;
-    @include f-size($basicTextSize - 0.3);
-    background: $c_interB;
-    color: $c_opos;
+    background-repeat: no-repeat, repeat;
 }
 
 select::-ms-expand {
     display: none;
-}
-
-select option {}
-
-select option:hover {}
-
-option {
-    text-transform: capitalize;
-    @include f-size(0.7);
 }
 
 input,
@@ -84,39 +87,15 @@ select {
     margin: 0 0 1.6vh 0;
 }
 
-input[type="submit"] {
-    background: $c_brand;
-    color: $c_domin;
-}
-
-input[type="button"],
-button {
-    background: $c_domin;
-    color: $c_opos;
+input {
+    border: none;
 }
 
 input[type="button"],
 input[type="submit"],
 button {
-    cursor: pointer;
-    box-shadow: $pm_formBS;
     text-align: center;
     vertical-align: text-bottom;
-    &:hover {
-        @if $LIGHT_THEME==true {
-            background: $c_interM1;
-            color: $c_brand;
-        }
-        @if $LIGHT_THEME==false {
-            background: $c_interP2;
-            color: $c_opos;
-        }
-    }
-    &:focus {}
-    &:active {
-        box-shadow: $pm_formBSactive;
-    }
-    text-transform: uppercase;
     padding: 1vh;
 }
 
@@ -140,29 +119,10 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-form {
+form,
+label {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    @include f-size($basicTextSize - 0.1);
-    @if $LIGHT_THEME==true {}
-    @if $LIGHT_THEME==false {
-        @include font(1,
-        400);
-    }
-}
-
-label {
-    text-transform: capitalize;
-    padding-bottom: 1vh;
-    span {
-        color: $c_err;
-    }
-    display: flex;
-}
-
-textarea {
-    @include f-size($basicTextSize - 0.2);
 }
 
 iframe[src*=youtube] {
@@ -170,51 +130,15 @@ iframe[src*=youtube] {
     min-width: 100%;
 }
 
-video:focus {}
-
 *:focus {
     outline: 0 !important;
 }
 
-@if $LIGHT_THEME==true {}
-
-@if $LIGHT_THEME==false {
-    textarea,
-    input,
-    select,
-    option {
-        color: $c_opos;
-    }
-}
-
-@if $LIGHT_THEME==true {
-     ::-moz-selection {
-        /* Code for Firefox */
-        color: $c_domin;
-        background: $c_brand;
-    }
-     ::selection {
-        color: $c_domin;
-        background: $c_brand;
-    }
-}
-
-@if $LIGHT_THEME==false {
-     ::-moz-selection {
-        /* Code for Firefox */
-        color: $c_brand;
-        background: $c_domin;
-    }
-     ::selection {
-        color: $c_domin;
-        background: $c_opos;
-    }
-}
-
-input[type="checkbox"] {
-    width: 2vh;
-    height: 2vh;
-    background-color: var(--main-bg-color);
+input[type="checkbox"],
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"]:after,
+button {
     cursor: pointer;
 }
 
@@ -222,7 +146,6 @@ input[type="checkbox"]:after {
     content: "";
     position: absolute;
     display: none;
-    cursor: pointer;
 }
 
 
@@ -240,8 +163,17 @@ input[type="checkbox"]:checked+label::after {
 }
 
 input[type="checkbox"] {
-    //change this in future!
-    -webkit-appearance: checkbox;
-    -moz-appearance: checkbox;
     appearance: checkbox;
+    display: flex;
+    align-items: center;
+    label {
+        padding-left: 1vh;
+        padding-right: 1vh;
+        [dir=rtl] & {
+            text-align: right;
+        }
+        [dir=ltr] & {
+            text-align: left;
+        }
+    }
 }

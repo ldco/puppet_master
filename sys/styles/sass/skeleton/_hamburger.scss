@@ -1,23 +1,9 @@
-//hamburger vars
+//!!!DO NOT TOUCH - GO TO CORE!!!
 $hamburgerColor: null;
 $hamburgerBGColor: null;
-@if $LIGHT_THEME==true {
-    $hamburgerColor: $c_opos;
-    $hamburgerBGColor: rgba($c_brand2, 0.0);
-}
-
-@if $LIGHT_THEME==false {
-    $hamburgerColor: $c_opos;
-    $hamburgerBGColor: rgba($c_brand2, 0.0);
-}
-
-$hamburgerRadius: 0; //3px;
-$hamburgerShadow: none;
-$hamburgerSize: map-get($mob, height) / 6;
+@import "../../../../core/styles/sass/system_core/hamburgers_core";
 $hamburgerDistance: map-get($hamburger, distance);
 .pm_hamburger {
-    height: $hamburgerSize / 0.5;
-    width: $hamburgerSize / 0.4;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -26,13 +12,12 @@ $hamburgerDistance: map-get($hamburger, distance);
 }
 
 .hamburger {
+    height: $hamburgerSize / 0.5;
+    width: $hamburgerSize / 0.4;
     background-color: $hamburgerBGColor;
-    padding: 2vh;
-    border-width: $hamburgerRadius;
-    border-style: initial;
-    border-color: initial;
-    border-radius: 3px;
-    //margin: 1vh;
+    padding: $hamburgerPadding;
+    border-radius: $hamburgerRadius;
+    border: none;
     box-shadow: $hamburgerShadow;
     .hamburger-box {
         display: flex;
@@ -48,7 +33,7 @@ $hamburgerDistance: map-get($hamburger, distance);
     }
 }
 
-.hamburgerHelperDiv {
+.hamburger--helper {
     width: 100vw;
     height: 100vh;
     bottom: 0;

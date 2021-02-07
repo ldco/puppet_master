@@ -1,13 +1,13 @@
 <footer class="pm_footer">
     <?php if (PM_FOOTER_NAV) : ?>
-    <nav>
-        <?php $modelNav->index(); ?>
-    </nav>
+        <nav>
+            <?php $modelNav->index(); ?>
+        </nav>
     <?php endif; ?>
-    <div class="pm_footerCredits">
+    <div class="pm_footer--credits">
         <a href="<?= $bywww ?>">
-            <span class="pm_footerCreditsBy"><?= $by ?></span>
+            <span class="pm_footer--credits-by"><?= $by ?></span>
         </a>
-        <span class="pm_footerCreditsCopy">&#169;<?= $copy ?></span>
+        <span class="pm_footer--copyright">&#169;<?= $copy ?></span>
     </div>
 </footer>

@@ -1,9 +1,10 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
 $heightFoot: map-get($footer, height);
 $heightMobBar: map-get($mob, height);
 $heightAdminBar: map-get($adminPanel, height);
 @function generateContentSize($widthBool, $mobis) {
     $vertical: null;
-    $vertical: $PM_BAR_IS_VERTICAL;
+    $vertical: $PM_HEADER_IS_VERTICAL;
     @if $widthBool==true {
         //width
         @if $vertical==true {
@@ -34,7 +35,7 @@ $heightAdminBar: map-get($adminPanel, height);
 
 @function generateContentPosition($topBool, $mobis) {
     $vertical: null;
-    $vertical: $PM_BAR_IS_VERTICAL;
+    $vertical: $PM_HEADER_IS_VERTICAL;
     @if $topBool==true {
         $top1: null;
         $top2: null;

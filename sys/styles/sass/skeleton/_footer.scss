@@ -1,43 +1,19 @@
-@include mob(true) {
-    .pm_footer {
-        // display: none;
-    }
-}
-
-.pm_footer {
-    background-color: $c_domin;
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../core/styles/sass/system_core/footer_core";
+footer {
     //hack to remove stripe between content and footer
     border-top: solid $c_domin 1px;
-    /**/
-    color: $c_opos;
     width: 100vw;
-    @include font(1, 900);
     height: map-get($footer, height);
     position: fixed;
     bottom: 0;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span {
-        font-size: 2vh;
-    }
-    .pm_footerCredits,
-    .pm_footerCreditsBy {
+    .pm_footer--credits,
+    .pm_footer--credits-by {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .pm_footerCreditsCopy {
+    .pm_footer--copyright {
         position: fixed;
-        @include dir('right', 'left', 2vw, 2vw);
-    }
-}
-
-@include mob(true) {
-    .pm_footer {
-        span {
-            font-size: 1vh;
-        }
     }
 }

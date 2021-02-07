@@ -4927,7 +4927,7 @@ function getContentView(id) {
   ajx.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       pageRP = ajx.responseText;
-      document.querySelector("#mainContent").innerHTML = pageRP;
+      document.querySelector("main").innerHTML = pageRP;
     }
   };
 
@@ -5062,9 +5062,9 @@ var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
 var PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
 var PM_ARR_OF_LANGS = ["en", "he"];
-var PM_BAR = document.querySelector("html").getAttribute("data-bar");
+var PM_HEADER = document.querySelector("html").getAttribute("data-header");
 var PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
-var PM_FLOATBAR = document.querySelector("html").getAttribute("data-floatbar");
+var PM_FLOATHEADER = document.querySelector("html").getAttribute("data-FLOATHEADER");
 
 if (PM_DIR === "ltr") {
   var PM_DIROPOSITE = "rtl";
@@ -5083,13 +5083,13 @@ function initFun() {
 
   setHamburgerMenu();
 
-  if (PM_BAR === "true" || PM_FLOATBAR === "true") {
+  if (PM_HEADER === "true" || PM_FLOATHEADER === "true") {
     setChangeLang();
   }
 
-  if (PM_BAR === "true") {
+  if (PM_HEADER === "true") {
     setBarAsset();
-    setOnScroll("#pm_id_Bar", "pm_bar_scrolled");
+    setOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
   }
 
   setGoTopButton();
@@ -5100,11 +5100,11 @@ function initFun() {
     getAgent();
   }
 
-  if (PM_FLOATBAR === "true") {
-    document.querySelector("#pm_barLogoFloat").addEventListener("click", function () {
+  if (PM_FLOATHEADER === "true") {
+    document.querySelector("#pm_logo-float--header").addEventListener("click", function () {
       drag(this);
     });
-    document.querySelector("#pm_barLogoFloat").click();
+    document.querySelector("#pm_logo-float--header").click();
   } //CUSTOM FUNCTIONS
   //
 
@@ -5156,7 +5156,7 @@ function getAgent() {
 "use strict";
 
 function setBarAsset() {
-  var el = document.querySelector("#pm_bar_asset");
+  var el = document.querySelector("#pm_asset--header");
   el.addEventListener("click", function () {//do something
   });
 }
@@ -5178,7 +5178,7 @@ function setChangeLang() {
 
 function setGoTopButton() {
   var el = "#pm_gototop";
-  setOnScroll("#pm_gototop", "pm_gototop_scrolled", 180);
+  setOnScroll("#pm_gototop", "pm_gototop--scrolled", 180);
   /*  document.querySelector(el).addEventListener("click", function() {
        window.scroll({
            top: 0,
@@ -5192,9 +5192,9 @@ function setGoTopButton() {
 
 function setHamburgerMenu() {
   var hamburger = document.querySelector(".pm_hamburger");
-  var mobileBar = document.querySelector("#pm_mobileBar");
+  var mobileBar = document.querySelector("#pm_mobile-slide");
   var helperDiv = document.createElement("div");
-  helperDiv.setAttribute("class", "hamburgerHelperDiv");
+  helperDiv.setAttribute("class", "hamburger--helper");
   helperDiv.addEventListener("click", function () {
     hamburger.click();
     helperDiv.remove();
@@ -5230,11 +5230,11 @@ function setHamburgerMenu() {
 }
 
 function removeHamburger() {
-  if (document.querySelector(".hamburgerHelperDiv")) {
+  if (document.querySelector(".hamburger--helper")) {
     document.querySelector(".pm_hamburger").classList.remove("is-active");
-    document.querySelector(".hamburgerHelperDiv").remove();
+    document.querySelector(".hamburger--helper").remove();
     var mobileBar;
-    mobileBar = document.querySelector("#pm_mobileBar");
+    mobileBar = document.querySelector("#pm_mobile-slide");
 
     if (PM_LTR) {
       anime({
@@ -5942,7 +5942,7 @@ function Thebility() {
 function moveBar() {
   window.addEventListener("scroll", function () {
     var win = window.scrollY;
-    var el = document.querySelector("#pm_id_BarFloat");
+    var el = document.querySelector("#pm_Header-float--desktop");
     var elh = el.offsetWidth;
     var distance = "calc(100vw - " + elh + "px - 7vh)";
     var height = window.innerHeight;

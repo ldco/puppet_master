@@ -159,7 +159,7 @@ define("PM_RENDERED_TITLE", PM_TITLE);
 
 //path to views
 define("PM_VIEWS", [
-  "bar_mobile" => "sys/View/bar_mobile.view.html.php", "bar_skeleton" => "sys/View/bar_skeleton.view.html.php", "depends" => "sys/View/depends.view.html.php", "footer" => "sys/View/footer.view.html.php", "index" => "sys/View/index.view.html.php", "logout" => "sys/View/logout.view.html.php", "nav_lang" => "sys/View/nav_lang.view.html.php", "nav" => "sys/View/nav.view.html.php"
+  "header_mobile" => "sys/View/header_mobile.view.html.php", "header_desktop" => "sys/View/header_desktop.view.html.php", "depends" => "sys/View/depends.view.html.php", "footer" => "sys/View/footer.view.html.php", "index" => "sys/View/index.view.html.php", "logout" => "sys/View/logout.view.html.php", "nav_lang" => "sys/View/nav_lang.view.html.php", "nav" => "sys/View/nav.view.html.php"
 ]);
 
 //DB

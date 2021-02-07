@@ -39,8 +39,8 @@ define("PM_ONEPAGER", false); //true or false
 define("PM_PROGRESSIVE_APP", false); //true or false
 
 //sceleton items
-define("PM_BAR", true); //will be false if PM_FLOATBAR is true
-define("PM_FLOATBAR", false);
+define("PM_HEADER", true); //will be false if PM_FLOATHEADER is true
+define("PM_FLOATHEADER", false);
 define("PM_SOCIO_BAR", false);
 define("PM_FOOTER", false);
 define("PM_FOOTER_NAV", false); //always false if PM_FOOTER false

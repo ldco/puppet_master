@@ -1,7 +1,7 @@
 function moveBar() {
     window.addEventListener("scroll", function() {
         let win = window.scrollY;
-        let el = document.querySelector("#pm_id_BarFloat");
+        let el = document.querySelector("#pm_Header-float--desktop");
         let elh = el.offsetWidth;
         let distance = "calc(100vw - " + elh + "px - 7vh)";
         let height = window.innerHeight;

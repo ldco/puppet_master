@@ -8,7 +8,7 @@ function getContentView(id) {
     ajx.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
             pageRP = ajx.responseText;
-            document.querySelector("#mainContent").innerHTML = pageRP;
+            document.querySelector("main").innerHTML = pageRP;
         }
     };
 
@@ -18,8 +18,6 @@ function getContentView(id) {
     } else {
         ajx.open("POST", `/index.php?content_page=1`, true);
     }
-
-
 
     ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajx.send("id=" + id + "&lang=" + lang);

@@ -16,13 +16,14 @@ class Page
     {
         global $PM_PAGE_NUM;
         // ob_start();
-        if ($clss != null) {
-            $_clss = " " . $clss;
+
+        if ($clss !== null) {
+            $_clss = "class= " . $clss;
         } else {
             $_clss = "";
         }
 
-        echo "<div class='pm_page_incontent" . $_clss . "' id='pm_page_" . $PM_PAGE_NUM  . "'>";
+        echo "<section " . $_clss . " id='pm_page_" . $PM_PAGE_NUM  . "'>";
     }
 
     public function h($type)
@@ -52,20 +53,6 @@ class Page
         echo "<h" . $type . ">" . $row[PM_LANG] . '</h' . $type . ">";
     }
 
-
-    public function inner($clss = null)
-    {
-
-        if ($clss != null) {
-            $_clss = " " . $clss;
-        } else {
-            $_clss = "";
-        }
-
-        echo '<div class="pm_inner_page' . $_clss . '">';
-    }
-
-
     public function img($number, $src, $class = null)
     {
         $_extension = pathinfo($src, PATHINFO_EXTENSION);
@@ -91,14 +78,14 @@ class Page
         );
     }
 
-    public function video($name, $class = null, $id = null, $fullscreen = true, $bgVideoEffect = false, $autoplay = true, $muted = true, $loop = true, $controls = false, $width = "auto", $height = "auto")
+    public function video($name, $class = null, $id = null, $fullscreen = true, $videoForeground = false, $autoplay = true, $muted = true, $loop = true, $controls = false, $width = "auto", $height = "auto")
     {
         global $PM_PAGE_NUM;
-        if ($bgVideoEffect === true) {
-            echo "<div class='bgVideoEffect'></div>";
+        if ($videoForeground === true) {
+            echo "<div class='video--foreground'></div>";
         }
         if ($fullscreen === true) {
-            $fullscreenclass = " bgVideo";
+            $fullscreenclass = " video--fullscreen";
         } else {
             $fullscreenclass = "";
         }
@@ -140,11 +127,7 @@ class Page
     }
 
 
-    public function close()
-    {
-        echo '<div class="closingPageDiv"></div>';
-        echo "</div>";
-    }
+
     public function text($textId, $class = null)
     {
         if ($class != null) {
@@ -168,6 +151,13 @@ class Page
         } else {
             return; //record not found
         }
-        echo "<div class='pm_text " . $_class . "' id='text_" . $PM_PAGE_NUM . "_" .  $textId . "'>" . $row[PM_LANG] . '</div>';
+        echo "<article class='pm_text " . $_class . "' id='text_" . $PM_PAGE_NUM . "_" .  $textId . "'>" . $row[PM_LANG] . '</article>';
+    }
+
+
+    public function close()
+    {
+        echo '<div></div>';
+        echo "</section>";
     }
 }

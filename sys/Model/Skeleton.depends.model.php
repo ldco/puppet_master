@@ -21,7 +21,7 @@ class SkeletonDepends
         $this->viewsNames = PM_VIEWS;
         if (!isset($DB)) $DB = new DB;
         $this->DB = $DB;
-        if (defined("PM_DEFINE_ADMIN")) $this->isAdmin = PM_DEFINE_ADMIN;
+        //if (defined("PM_DEFINE_ADMIN")) $this->isAdmin = PM_DEFINE_ADMIN;
     }
 
     function index()

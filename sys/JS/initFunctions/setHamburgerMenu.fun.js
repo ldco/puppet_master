@@ -1,9 +1,9 @@
 function setHamburgerMenu() {
 
     let hamburger = document.querySelector(".pm_hamburger");
-    let mobileBar = document.querySelector("#pm_mobileBar");
+    let mobileBar = document.querySelector("#pm_mobile-slide");
     let helperDiv = document.createElement("div");
-    helperDiv.setAttribute("class", "hamburgerHelperDiv");
+    helperDiv.setAttribute("class", "hamburger--helper");
     helperDiv.addEventListener("click", function() {
         hamburger.click();
         helperDiv.remove();
@@ -38,11 +38,11 @@ function setHamburgerMenu() {
 }
 
 function removeHamburger() {
-    if (document.querySelector(".hamburgerHelperDiv")) {
+    if (document.querySelector(".hamburger--helper")) {
         document.querySelector(".pm_hamburger").classList.remove("is-active");
-        document.querySelector(".hamburgerHelperDiv").remove();
+        document.querySelector(".hamburger--helper").remove();
         let mobileBar;
-        mobileBar = document.querySelector("#pm_mobileBar");
+        mobileBar = document.querySelector("#pm_mobile-slide");
         if (PM_LTR) {
             anime({
                 targets: mobileBar,

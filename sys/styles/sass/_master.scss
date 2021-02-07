@@ -13,29 +13,27 @@
 @import "../../../core/styles/sass/animista/ping";
 //@import "animista/rotate-center";
 //color
-@import "../../../core/styles/sass/colors";
+@import "../../../core/styles/sass/system_core/colors";
 @import "system/colorsEngine";
 //system
 @import "system/vars";
 @import "system/links";
 @import "system/browser";
 @import "system/engine";
-@import "system/form";
 @import "system/infoPages";
 @import "system/loginregister";
-@import "system/html";
-@import "system/sys_page";
-@import "system/sys_onepager";
+@import "system/page";
+@import "system/onepager";
 //layout
 //skeleton
 @import "skeleton/main";
-@import "skeleton/bar";
+@import "skeleton/header";
 @import "skeleton/footer";
 @import "skeleton/nav";
 @import "skeleton/hamburger";
 @import "skeleton/panel";
 //MODULES
-@import "modules/thebility/thebility";
+@import "modules/thebility";
 @import "modules/loaders";
 @import "modules/contacts";
 //@import "modules/swipe";
@@ -47,4 +45,4 @@
 @import "../../../core/styles/sass/pages/1";
 @import "../../../core/styles/sass/pages/2";
 //
-@import "../../../core/styles/sass/scrollbar";
+@import "../../../core/styles/sass/system_core/scrollbar";
