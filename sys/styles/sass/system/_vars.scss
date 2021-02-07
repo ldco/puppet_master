@@ -12,7 +12,6 @@ video {}
 }
 
 @if $PM_FOOTER==false {
-    [data-floatbar=true],
     [data-bar=false] {
         .bgVideo {
             video {
@@ -24,7 +23,6 @@ video {}
 }
 
 else {
-    [data-floatbar=true],
     [data-bar=false] {
         .bgVideo {
             video {

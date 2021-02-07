@@ -14,6 +14,17 @@
     }
 }
 
+#pm_id_Bar,
+#pm_id_BarFloat,
+#pm_admin_panel,
+#pm_mobileHeader,
+#pm_mobileBar {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+}
+
 //shadow
 $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
 #pm_id_Bar,
@@ -237,9 +248,11 @@ font-size: 2vh;
 }
 //BAR FLOAT
 #pm_barLogoFloat {
+    height: 4vh;
+    width: 10vh;
     cursor: move;
     cursor: grab;
-    background-size: 10vh;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     [dir=rtl] & {

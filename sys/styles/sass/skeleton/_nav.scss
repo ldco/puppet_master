@@ -78,7 +78,7 @@
         text-align: center;
         justify-content: space-between;
         height: 100%;
-        width: 70vw;
+        // width: 70vw;
         .nav_item:first-of-type {
             display: none;
         }
@@ -215,10 +215,10 @@
     #pm_id_NavFloat {
         #pm_Lang {
             [dir=rtl] & {
-                padding-right: 1vw;
+                padding-right: 1.8vw;
             }
             [dir=ltr] & {
-                padding-left: 1vw;
+                padding-left: 1.8vw;
             }
             cursor: pointer;
             display: flex;
@@ -266,6 +266,11 @@
                 padding: 0.7vh !important;
                 box-shadow: 0px 0px 2px 0px $c_opos;
                 font-weight: bolder;
+                height: 4vh;
+                width: 4vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 &:hover {
                     filter: brightness(1.1);
                     box-shadow: 0 0 0vh 0.2vh $c_opos;
@@ -281,9 +286,6 @@
         @include font(1, 400);
         #pm_Lang {
             align-self: center;
-            img {
-                display: none;
-            }
             #pm_langNavMobile {}
             form {
                 flex-direction: row;

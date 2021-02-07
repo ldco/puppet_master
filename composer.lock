@@ -5,8 +5,7 @@
         "This file is @generated automatically"
     ],
     "content-hash": "69c18af2e65817b7817819c56e36a71a",
-    "packages": [
-        {
+    "packages": [{
             "name": "dg/ftp-deployment",
             "version": "v3.3.1",
             "source": {
@@ -54,12 +53,10 @@
                 "GPL-2.0",
                 "GPL-3.0"
             ],
-            "authors": [
-                {
-                    "name": "David Grudl",
-                    "homepage": "https://davidgrudl.com"
-                }
-            ],
+            "authors": [{
+                "name": "David Grudl",
+                "homepage": "https://davidgrudl.com"
+            }],
             "description": "A tool for automated deployment of web applications to an FTP server.",
             "homepage": "https://github.com/dg/ftp-deployment",
             "keywords": [
@@ -109,13 +106,11 @@
             "license": [
                 "LGPL-2.1-or-later"
             ],
-            "authors": [
-                {
-                    "name": "Edward Z. Yang",
-                    "email": "admin@htmlpurifier.org",
-                    "homepage": "http://ezyang.com"
-                }
-            ],
+            "authors": [{
+                "name": "Edward Z. Yang",
+                "email": "admin@htmlpurifier.org",
+                "homepage": "http://ezyang.com"
+            }],
             "description": "Standards compliant HTML filter written in PHP",
             "homepage": "http://htmlpurifier.org/",
             "keywords": [
@@ -154,24 +149,20 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "authors": [
-                {
-                    "name": "Tim Gavin",
-                    "homepage": "https://formr.github.io",
-                    "role": "Original Author"
-                }
-            ],
+            "authors": [{
+                "name": "Tim Gavin",
+                "homepage": "https://formr.github.io",
+                "role": "Original Author"
+            }],
             "description": "Formr is a PHP micro-framework which helps you build and validate forms quickly, painlessly, and without all the messy overhead.",
             "support": {
                 "issues": "https://github.com/formr/Formr/issues",
                 "source": "https://github.com/formr/Formr/tree/1.2.5"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/timgavin",
-                    "type": "github"
-                }
-            ],
+            "funding": [{
+                "url": "https://github.com/timgavin",
+                "type": "github"
+            }],
             "time": "2021-01-28T20:36:14+00:00"
         },
         {
@@ -227,8 +218,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
@@ -256,8 +246,7 @@
                 "issues": "https://github.com/guzzle/guzzle/issues",
                 "source": "https://github.com/guzzle/guzzle/tree/7.2.0"
             },
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://github.com/GrahamCampbell",
                     "type": "github"
                 },
@@ -314,13 +303,11 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
-                }
-            ],
+            "authors": [{
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }],
             "description": "Guzzle promises library",
             "keywords": [
                 "promise"
@@ -378,8 +365,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
@@ -446,8 +432,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Alex Bilbie",
                     "email": "hello@alexbilbie.com",
                     "homepage": "http://www.alexbilbie.com",
@@ -509,13 +494,11 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Woody Gilk",
-                    "email": "woody.gilk@gmail.com",
-                    "homepage": "http://shadowhand.me"
-                }
-            ],
+            "authors": [{
+                "name": "Woody Gilk",
+                "email": "woody.gilk@gmail.com",
+                "homepage": "http://shadowhand.me"
+            }],
             "description": "Google OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
             "keywords": [
                 "Authentication",
@@ -564,14 +547,12 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Serban Ghita",
-                    "email": "serbanghita@gmail.com",
-                    "homepage": "http://mobiledetect.net",
-                    "role": "Developer"
-                }
-            ],
+            "authors": [{
+                "name": "Serban Ghita",
+                "email": "serbanghita@gmail.com",
+                "homepage": "http://mobiledetect.net",
+                "role": "Developer"
+            }],
             "description": "Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.",
             "homepage": "https://github.com/serbanghita/Mobile-Detect",
             "keywords": [
@@ -616,13 +597,11 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
+            "authors": [{
+                "name": "Paragon Initiative Enterprises",
+                "email": "security@paragonie.com",
+                "homepage": "https://paragonie.com"
+            }],
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
             "keywords": [
                 "csprng",
@@ -683,8 +662,7 @@
             "license": [
                 "LGPL-2.1-only"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Marcus Bointon",
                     "email": "phpmailer@synchromedia.co.uk"
                 },
@@ -705,12 +683,10 @@
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
                 "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.2.0"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/Synchro",
-                    "type": "github"
-                }
-            ],
+            "funding": [{
+                "url": "https://github.com/Synchro",
+                "type": "github"
+            }],
             "time": "2020-11-25T15:24:57+00:00"
         },
         {
@@ -746,12 +722,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }],
             "description": "Common interface for HTTP clients",
             "homepage": "https://github.com/php-fig/http-client",
             "keywords": [
@@ -798,12 +772,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }],
             "description": "Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
@@ -852,12 +824,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }],
             "description": "Common interface for HTTP messages",
             "homepage": "https://github.com/php-fig/http-message",
             "keywords": [
@@ -906,12 +876,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }],
             "description": "Common interface for HTTP server-side request handler",
             "keywords": [
                 "handler",
@@ -964,12 +932,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
+            "authors": [{
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }],
             "description": "Common interface for HTTP server-side middleware",
             "keywords": [
                 "http",
@@ -1018,12 +984,10 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Ralph Khattar",
-                    "email": "ralph.khattar@gmail.com"
-                }
-            ],
+            "authors": [{
+                "name": "Ralph Khattar",
+                "email": "ralph.khattar@gmail.com"
+            }],
             "description": "A polyfill for getallheaders.",
             "support": {
                 "issues": "https://github.com/ralouphie/getallheaders/issues",
@@ -1061,14 +1025,12 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Terry Lin",
-                    "email": "contact@terryl.in",
-                    "homepage": "https://terryl.in",
-                    "role": "Developer"
-                }
-            ],
+            "authors": [{
+                "name": "Terry Lin",
+                "email": "contact@terryl.in",
+                "homepage": "https://terryl.in",
+                "role": "Developer"
+            }],
             "description": "Event dispatcher for PHP.",
             "homepage": "https://github.com/terrylinooo/event-dispatcher",
             "keywords": [
@@ -1113,14 +1075,12 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Terry Lin",
-                    "email": "contact@terryl.in",
-                    "homepage": "https://terryl.in",
-                    "role": "Developer"
-                }
-            ],
+            "authors": [{
+                "name": "Terry Lin",
+                "email": "contact@terryl.in",
+                "homepage": "https://terryl.in",
+                "role": "Developer"
+            }],
             "description": "Sending messages to the third-party services made easy for PHP.",
             "homepage": "https://github.com/terrylinooo/messenger",
             "keywords": [
@@ -1171,14 +1131,12 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Terry Lin",
-                    "email": "contact@terryl.in",
-                    "homepage": "https://terryl.in",
-                    "role": "Developer"
-                }
-            ],
+            "authors": [{
+                "name": "Terry Lin",
+                "email": "contact@terryl.in",
+                "homepage": "https://terryl.in",
+                "role": "Developer"
+            }],
             "description": "HTTP implementation for PSR standard.",
             "homepage": "https://github.com/terrylinooo/psr-http",
             "keywords": [
@@ -1229,14 +1187,12 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Terry Lin",
-                    "email": "contact@terryl.in",
-                    "homepage": "https://terryl.in",
-                    "role": "Developer"
-                }
-            ],
+            "authors": [{
+                "name": "Terry Lin",
+                "email": "contact@terryl.in",
+                "homepage": "https://terryl.in",
+                "role": "Developer"
+            }],
             "description": "Web application firewall for PHP.",
             "homepage": "https://github.com/terrylinooo/shieldon",
             "keywords": [
@@ -1284,14 +1240,12 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
-                    "name": "Terry Lin",
-                    "email": "contact@terryl.in",
-                    "homepage": "https://terryl.in",
-                    "role": "Developer"
-                }
-            ],
+            "authors": [{
+                "name": "Terry Lin",
+                "email": "contact@terryl.in",
+                "homepage": "https://terryl.in",
+                "role": "Developer"
+            }],
             "description": "XSS protection for PHP.",
             "homepage": "https://github.com/terrylinooo/web-security",
             "keywords": [
@@ -1348,8 +1302,7 @@
             "license": [
                 "MIT"
             ],
-            "authors": [
-                {
+            "authors": [{
                     "name": "Nicolas Grekas",
                     "email": "p@tchwork.com"
                 },
@@ -1370,8 +1323,7 @@
             "support": {
                 "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.0"
             },
-            "funding": [
-                {
+            "funding": [{
                     "url": "https://symfony.com/sponsor",
                     "type": "custom"
                 },
@@ -1428,13 +1380,11 @@
             "license": [
                 "LGPL-3.0-only"
             ],
-            "authors": [
-                {
-                    "name": "Nicola Asuni",
-                    "email": "info@tecnick.com",
-                    "role": "lead"
-                }
-            ],
+            "authors": [{
+                "name": "Nicola Asuni",
+                "email": "info@tecnick.com",
+                "role": "lead"
+            }],
             "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
             "homepage": "http://www.tcpdf.org/",
             "keywords": [

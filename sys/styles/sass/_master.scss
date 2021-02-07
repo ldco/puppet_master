@@ -1,10 +1,9 @@
 //config
-@import "config.scss";
+@import "config";
 //vendor
-@import "vendor/rfs/scss.scss";
-@import "vendor/hamburgers/hamburgers.scss";
-@import "vendor/normalize";
-@import "vendor/swiper";
+@import "sass_vendor/rfs/scss";
+@import "sass_vendor/hamburgers/hamburgers";
+@import "sass_vendor/normalize";
 //library
 @import "system/library";
 //fonts
