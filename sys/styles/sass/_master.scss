@@ -7,18 +7,17 @@
 //library
 @import "system/library";
 //fonts
-@import "system/fontsEngine";
+@import "system/engine--fonts";
 //animations
-@import "../../../core/styles/sass/system_core/animations";
-//@import "animista/rotate-center";
+@import "../../../core/styles/sass/animista/all--animations";
 //color
-@import "system/colorsEngine";
+@import "system/engine--colors";
 //system
 @import "system/vars";
 @import "system/links";
 @import "system/browser";
 @import "system/engine";
-@import "system/infoPages";
+@import "system/info";
 @import "system/loginregister";
 @import "system/page";
 @import "system/onepager";
@@ -38,9 +37,7 @@
 //@import "modules/blog";
 //@import "modules/agents";
 //
-@import "modules/lightbox";
 //pages
-@import "../../../core/styles/sass/pages/1";
-@import "../../../core/styles/sass/pages/2";
+@import "../../../core/styles/sass/pages/all--pages";
 //
 @import "../../../core/styles/sass/system_core/scrollbar";
