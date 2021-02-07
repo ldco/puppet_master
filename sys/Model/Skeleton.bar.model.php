@@ -47,10 +47,12 @@ class SkeletonBar
             $navBarId = "pm_id_BarFloat";
             $navId = "pm_id_NavFloat";
             $barLogo = "pm_barLogoFloat";
+            $bar_asset = "pm_bar_assetFloat";
         } else if (defined("PM_FLOATBAR") && !PM_FLOATBAR) {
             $navBarId = "pm_id_Bar";
             $navId = "pm_id_Nav";
             $barLogo = "pm_barLogo";
+            $bar_asset = "pm_bar_asset";
         } else {
             echo "PM_FLOATBAR not defined!";
         }

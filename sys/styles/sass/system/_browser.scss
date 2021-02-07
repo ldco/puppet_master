@@ -7,24 +7,6 @@ img {
     -o-user-drag: none;
 }
 
-%commonForElemnts {
-    @include font(1, 200);
-    @include f-size(0.9);
-    border: none !important;
-    border-radius: 0.2vh;
-    padding: 0;
-    -webkit-user-select: text;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    -ms-appearance: none;
-    background-color: $c_interB;
-    box-shadow: $pm_formBS;
-}
-
 @mixin form_input_fixedHeight {
     input {
         height: 5vh;
@@ -42,7 +24,15 @@ select,
 option,
 video,
 iframe {
-    @extend %commonForElemnts;
+    @include font(1, 200);
+    @include f-size(0.9);
+    border: none !important;
+    border-radius: 0.2vh;
+    padding: 0;
+    user-select: none;
+    appearance: none;
+    background-color: $c_interB;
+    box-shadow: $pm_formBS;
 }
 
 button,

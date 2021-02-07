@@ -12,5 +12,5 @@
         <?php if ($isAuthenticated) $modelBar->makeLogout(); ?>
     </div>
     <?php endif; ?>
-    <?php pmImg("bar asset", $nav_pm_bar_asset, true, "anim", "pm_bar_asset"); ?>
+    <?php pmImg("bar asset", $nav_pm_bar_asset, true, "anim", $bar_asset); ?>
 </div>

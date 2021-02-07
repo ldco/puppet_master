@@ -13,7 +13,7 @@
     }
     img {
         width: 5vh;
-        @include selectNone();
+        user-select: none;
     }
     span:first-of-type {
         text-transform: capitalize;
@@ -27,7 +27,7 @@
     img {
         width: 7vh;
         padding: 2vh;
-        @include selectNone();
+        user-select: none;
     }
 }
 

@@ -32,15 +32,6 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
     box-shadow: $pm_bar_shadow;
 }
 
-[data-floatbar=false] {
-    #pm_mobileHeader {
-        box-shadow: $pm_bar_shadow;
-    }
-    #pm_mobileBar {
-        box-shadow: $pm_bar_shadow;
-    }
-}
-
 #pm_barLogo {
     width: map-get($horBar, logo_width);
     height: map-get($horBar, height);
@@ -70,19 +61,26 @@ $pm_bar_shadow: 0.1vh 0.1vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
 }
 
 #pm_bar_asset {
-    cursor: pointer;
     width: map-get($horBar, asset);
     position: fixed;
     z-index: 1979;
     @include dir("right", "left", 3vh, 3vh);
-    &:hover {
-        @include heartbeat;
+}
+
+#pm_bar_assetFloat {
+    [dir=rtl] & {
+        margin-right: 2vh;
+    }
+    [dir=ltr] & {
+        margin-left: 2vh;
     }
 }
 
-@if $LIGHT_THEME==false {
-    #pm_bar_asset {
-        filter: invert(1);
+#pm_bar_asset,
+#pm_bar_assetFloat {
+    cursor: pointer;
+    &:hover {
+        @include heartbeat;
     }
 }
 
@@ -174,6 +172,26 @@ body {
     @include dir("left", "right", -100vw, -100vw);
 }
 
+@if $LIGHT_THEME==true {
+    #pm_barLogo,
+    #pm_barLogoFloat,
+    #mobileHeaderLogo {
+        background-image: url("#{$IMAGES_CORE}brand/barLogo--forLight.svg");
+    }
+}
+
+@if $LIGHT_THEME==false {
+    #pm_barLogo,
+    #pm_barLogoFloat,
+    #mobileHeaderLogo {
+        background-image: url("#{$IMAGES_CORE}brand/barLogo--forDark.svg");
+    }
+    #pm_bar_asset,
+    #pm_bar_assetFloat {
+        filter: invert(1);
+    }
+}
+
 [data-floatbar=false] {
     #pm_mobileBar {
         width: map-get($mob, open_width);
@@ -181,17 +199,22 @@ body {
         height: 100%;
         top: 0;
     }
+    #pm_mobileHeader {
+        box-shadow: $pm_bar_shadow;
+    }
+    #pm_mobileBar {
+        box-shadow: $pm_bar_shadow;
+    }
 }
 
 [data-floatbar=true] {
     #pm_mobileBar {
         width: map-get($mob, open_width);
         background-color: $c_domin;
-        top: 0;
+        top: 10vh;
+        box-shadow: 0 0 0 0.05vh $c_opos;
+        background-color: rgba($c_domin, .8);
     }
-}
-
-[data-floatbar=true] {
     #pm_mobileHeader {
         background-color: transparent;
     }
@@ -201,7 +224,10 @@ body {
     position: fixed;
     top: 0;
     background-color: $c_domin;
-    @include dir("left", "right", 0, 0);
+    @include dir("left",
+    "right",
+    0,
+    0);
     width: 100%;
     z-index: 1978;
     height: calc(#{(map-get($mob, height)) + #{1px}
@@ -215,20 +241,6 @@ padding: 0 !important;
 margin: 0 !important;
 font-size: 2vh;
 
-}
-@if $LIGHT_THEME==true {
-    #pm_barLogo,
-    #pm_barLogoFloat,
-    #mobileHeaderLogo {
-        background-image: url("#{$IMAGES_CORE}brand/barLogo--forLight.svg");
-    }
-}
-@if $LIGHT_THEME==false {
-    #pm_barLogo,
-    #pm_barLogoFloat,
-    #mobileHeaderLogo {
-        background-image: url("#{$IMAGES_CORE}brand/barLogo--forDark.svg");
-    }
 }
 #mobileHeaderLogo {
     display: flex;
@@ -263,15 +275,11 @@ font-size: 2vh;
         margin-right: 2vh;
     }
 }
-%BarFloat_appear {
-    //  box-shadow: 0 0 0vh 0.2vh $c_opos;
-    //  background-color: rgba($c_domin, .8);
-    //  border-radius: 0.5vh;
-    filter: invert(0);
-}
 #pm_id_BarFloat {
-    @extend %BarFloat_appear;
-    //filter: invert(1);
+    box-shadow: 0 0 0 0.1vh rgba($c_opos, .1);
+    background-color: rgba($c_domin, .8);
+    border-radius: 0.5vh;
+    filter: invert(0);
     width: map-get($floatBar, width);
     height: map-get($floatBar, height);
     z-index: 1980;
@@ -279,7 +287,7 @@ font-size: 2vh;
     padding: 2vh;
     top: 2vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     [dir=rtl] & {
         right: 2vh;

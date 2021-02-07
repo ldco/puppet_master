@@ -1,5 +1,5 @@
 //config
-@import "config";
+@import "../../../core/styles/sass/config";
 //vendor
 @import "sass_vendor/rfs/scss";
 @import "sass_vendor/hamburgers/hamburgers";
@@ -7,15 +7,14 @@
 //library
 @import "system/library";
 //fonts
-@import "system/fonts";
+@import "system/fontsEngine";
 //animations
-@import "animista/heartbeat";
-@import "animista/ping";
+@import "../../../core/styles/sass/animista/heartbeat";
+@import "../../../core/styles/sass/animista/ping";
 //@import "animista/rotate-center";
 //color
-@import "colors/colors";
-@import "colors/colorsEngine";
-@import "colors/cssFilters";
+@import "../../../core/styles/sass/colors";
+@import "system/colorsEngine";
 //system
 @import "system/vars";
 @import "system/links";
@@ -23,28 +22,29 @@
 @import "system/engine";
 @import "system/form";
 @import "system/infoPages";
-@import "system/scrollbar";
 @import "system/loginregister";
+@import "system/html";
+@import "system/sys_page";
+@import "system/sys_onepager";
 //layout
 //skeleton
 @import "skeleton/main";
 @import "skeleton/bar";
 @import "skeleton/footer";
-@import "skeleton/html";
 @import "skeleton/nav";
 @import "skeleton/hamburger";
 @import "skeleton/panel";
+//MODULES
 @import "modules/thebility/thebility";
 @import "modules/loaders";
 @import "modules/contacts";
 //@import "modules/swipe";
 //@import "modules/blog";
 //@import "modules/agents";
+//
 @import "modules/lightbox";
 //pages
-@import "pages/common";
-@import "pages/common_onepager";
-@import "pages/1";
-@import "pages/2";
-@import "pages/3";
-@import "pages/4";
+@import "../../../core/styles/sass/pages/1";
+@import "../../../core/styles/sass/pages/2";
+//
+@import "../../../core/styles/sass/scrollbar";

@@ -229,12 +229,33 @@
                 border-radius: 50%;
                 padding: 0.7vh !important;
                 box-shadow: 0 0 0.5vh 0 $c_opos;
+            }
+        }
+    }
+    
+    @if $LIGHT_THEME==true {
+        #pm_Lang {
+            img {
                 &:hover {
-                    filter: brightness(1.2);
+                    box-shadow: 0 0 0vh 0.1vh $c_opos !important;
                 }
                 &:active {
-                    filter: brightness(1.2);
-                    box-shadow: 0 0 0.5vh 0.1vh $c_opos;
+                    filter: brightness(1.4);
+                    box-shadow: 0 0 0vh 0.4vh $c_opos !important;
+                }
+            }
+        }
+    }
+    
+    @if $LIGHT_THEME==false {
+        #pm_Lang {
+            img {
+                filter: invert(1);
+                &:hover {
+                    box-shadow: 0 0 0.5vh 0.1vh $c_domin !important;
+                }
+                &:active {
+                    filter: invert(0);
                 }
             }
         }
@@ -303,6 +324,12 @@
                     @include f-size-fill(1)
                 }
             }
+        }
+    }
+    
+    [data-floatbar=true] {
+        #pm_mobileNav {
+            margin-top: 0vh;
         }
     }
     

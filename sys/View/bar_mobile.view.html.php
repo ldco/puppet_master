@@ -4,10 +4,7 @@
             <div class="hamburger-inner"></div>
         </div>
     </div>
-
     <div id="<?= $headerLogoId ?>"></div>
-
-
     <?php pmImg("Bar asset", $nav_pm_bar_asset, true, "anim", "pm_bar_asset"); ?>
 </div>
 </div>
