@@ -1,34 +1,42 @@
 //!!!DO NOT TOUCH!!!
-$heightFoot: map-get($footer, height);
-$heightMobBar: map-get($mob, height);
 @function generateContentSize($widthBool, $mobis) {
-    $vertical: null;
-    $vertical: $PM_HEADER_IS_VERTICAL;
     @if $widthBool==true {
         //width
-        @if $vertical==true {
-            @return calc(100vw - #{map-get($verticalHeader, width)});
+        $widthVar: null;
+        @if $PM_HEADER_IS_VERTICAL==true {
+            @if $mobis==false {
+                $widthVar: calc(100vw - #{map-get($verticalHeader, width)});
+            }
+            @if $mobis==true {
+                $widthVar: 100vw;
+            }
         }
-        @if $vertical==false {
-            @return 100vw;
+        @if $PM_HEADER_IS_VERTICAL==false {
+            $widthVar: 100vw;
         }
+        @return $widthVar;
     }
     /**/
     //height
     @if $widthBool==false {
-        $heightTop: null;
-        @if $vertical==false {
+        $heightVar: null;
+        @if $PM_HEADER_IS_VERTICAL==false {
             @if $mobis==false {
-                $heightTop: map-get($horizontHeader, height);
+                $heightVar: map-get($horizontHeader, height);
             }
             @if $mobis==true {
-                $heightTop: map-get($mob, height);
+                $heightVar: map-get($mob, height);
             }
         }
-        @if $vertical==true {
-            $heightTop: 0px;
+        @if $PM_HEADER_IS_VERTICAL==true {
+            @if $mobis==false {
+                $heightVar: 0px;
+            }
+            @if $mobis==true {
+                $heightVar: map-get($mob, height);
+            }
         }
-        @return calc(100vh - #{$heightTop} - #{$heightFoot});
+        @return calc(100vh - #{$heightVar} - #{map-get($footer, height)});
     }
 }
 
@@ -38,7 +46,7 @@ $heightMobBar: map-get($mob, height);
     @if $topBool==true {
         $top1: null;
         $top2: null;
-        @if $vertical==false {
+        @if $PM_HEADER_IS_VERTICAL==false {
             @if $mobis==false {
                 $top1: map-get($horizontHeader, height);
             }
@@ -46,19 +54,19 @@ $heightMobBar: map-get($mob, height);
                 $top1: map-get($mob, height);
             }
         }
-        @if $vertical==true {
+        @if $PM_HEADER_IS_VERTICAL==true {
             $top1: 0px;
         }
-        $top2: map-get($adminPanel, height);
+        $top2: map-get($panel, height);
         @return calc(0vh + #{$top1});
     }
     @if $topBool==false {
         $vert1: null;
         $vert2: null;
-        @if $vertical==true {
+        @if $PM_HEADER_IS_VERTICAL==true {
             $vert1: map-get($verticalHeader, width);
         }
-        @if $vertical==false {
+        @if $PM_HEADER_IS_VERTICAL==false {
             $vert1: 0px;
         }
         @return calc(0vw + #{$vert1});

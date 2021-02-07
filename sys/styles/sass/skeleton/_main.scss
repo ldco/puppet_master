@@ -1,22 +1,18 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../core/styles/sass/skeleton_core/main_core";
-@include mob(false) {
+@include mob(true) {
     main {
-        left: 0vh !important;
-        right: 0vh !important;
-        width: 100vw;
-        top: $heightMobBar;
-        min-height: calc(100vh - #{$heightFoot} - #{$heightMobBar});
+        width: generateContentSize(true, true);
+        height: generateContentSize(false, true);
+        top: generateContentPosition(true, true);
     }
 }
 
-@include mob(true) {
+@include mob(false) {
     main {
-        left: 0vh !important;
-        right: 0vh !important;
-        width: 100vw;
-        top: $heightMobBar;
-        min-height: calc(100vh - #{$heightFoot} - #{$heightMobBar});
+        width: generateContentSize(true, false);
+        height: generateContentSize(false, false);
+        top: generateContentPosition(true, false);
     }
 }
 
@@ -35,7 +31,7 @@
 [data-header=false] {
     main {
         width: 100vw;
-        min-height: calc(100vh - #{$heightFoot});
+        min-height: calc(100vh - #{map-get($footer, height)});
         top: 0vh;
         left: 0vw;
         right: 0vw;
@@ -43,10 +39,10 @@
 }
 
 main {
+    background-color: $c_domin;
     position: absolute;
     display: flex;
     justify-content: center;
     overflow-y: auto;
-    background-color: $c_domin;
     overflow-x: hidden;
 }

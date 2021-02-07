@@ -1,4 +1,5 @@
 //config
+@import "system/reset";
 @import "system/config";
 //vendor
 @import "sass_vendor/rfs/scss";
@@ -12,6 +13,8 @@
 @import "../../../core/styles/sass/animista/all--animations";
 //color
 @import "system/engine--colors";
+//shadows
+@import "collections/shadows";
 //system
 @import "system/vars";
 @import "system/links";
