@@ -978,7 +978,7 @@ input[type="checkbox"] {
   background-image: url("../sys/assets/images/images_dev/info/pmlogoMailUnSuccess.svg"); }
 
 #pm_pageMailUnSuccess .pm_infoPageText {
-  color: #ff0c00ff !important; }
+  color: #aa0000 !important; }
 
 #pm_pageMailSuccess .pm_infoPageLogo {
   background-image: url("../sys/assets/images/images_dev/info/pmlogoMailSuccess.svg"); }
@@ -988,8 +988,8 @@ input[type="checkbox"] {
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
-  background-color: #aa0000;
-  box-shadow: 0 0 5vh 5vh #aa0000; }
+  background-color: #494949;
+  box-shadow: 0 0 5vh 5vh #494949; }
 
 .pm_infoPage {
   background-color: #2f2f2f;
@@ -1009,7 +1009,7 @@ input[type="checkbox"] {
     top: 8vh;
     position: fixed; }
     .pm_infoPage .pm_infoPageInner .pm_infoPageText {
-      color: #aa0000;
+      color: #575757;
       text-align: center;
       text-transform: uppercase;
       text-shadow: 0.2vh 0.2vh #000; }

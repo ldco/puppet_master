@@ -1,14 +1,13 @@
 //!!!DO NOT TOUCH!!!
 $heightFoot: map-get($footer, height);
 $heightMobBar: map-get($mob, height);
-$heightAdminBar: map-get($adminPanel, height);
 @function generateContentSize($widthBool, $mobis) {
     $vertical: null;
     $vertical: $PM_HEADER_IS_VERTICAL;
     @if $widthBool==true {
         //width
         @if $vertical==true {
-            @return calc(100vw - #{map-get($vertBar, width)});
+            @return calc(100vw - #{map-get($verticalHeader, width)});
         }
         @if $vertical==false {
             @return 100vw;
@@ -20,7 +19,7 @@ $heightAdminBar: map-get($adminPanel, height);
         $heightTop: null;
         @if $vertical==false {
             @if $mobis==false {
-                $heightTop: map-get($horBar, height);
+                $heightTop: map-get($horizontHeader, height);
             }
             @if $mobis==true {
                 $heightTop: map-get($mob, height);
@@ -41,7 +40,7 @@ $heightAdminBar: map-get($adminPanel, height);
         $top2: null;
         @if $vertical==false {
             @if $mobis==false {
-                $top1: map-get($horBar, height);
+                $top1: map-get($horizontHeader, height);
             }
             @if $mobis==true {
                 $top1: map-get($mob, height);
@@ -57,7 +56,7 @@ $heightAdminBar: map-get($adminPanel, height);
         $vert1: null;
         $vert2: null;
         @if $vertical==true {
-            $vert1: map-get($vertBar, width);
+            $vert1: map-get($verticalHeader, width);
         }
         @if $vertical==false {
             $vert1: 0px;

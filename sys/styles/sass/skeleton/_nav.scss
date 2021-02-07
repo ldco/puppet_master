@@ -1,4 +1,5 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../core/styles/sass/skeleton_core/nav_core";
 @mixin navImageFilter {
     @if $LIGHT_THEME==false {
         filter: brightness(1.5) contrast(0.7);
@@ -9,7 +10,7 @@
 }
 
 @mixin hor_navfontsize() {
-    font-size: map-get($horBar, height) / 2;
+    font-size: map-get($horizontHeader, height) / 2;
 }
 
 @mixin pm_class_verticalNav {
@@ -18,13 +19,13 @@
     }
     #pm_Lang {
         img {
-            height: map-get($vertBar, width) / 1.8;
+            height: map-get($verticalHeader, width) / 1.8;
         }
     }
     @extend %base-Nav;
     margin-top: 4vh;
     height: 60vh;
-    width: map-get($vertBar, width);
+    width: map-get($verticalHeader, width);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,14 +39,14 @@
         align-items: center;
         &:hover>a>span {
             transition: ease-in 0.1s;
-            @include dir('left', 'right', calc(#{map-get($vertBar, width)} - 1vh), calc(#{map-get($vertBar, width)} - 1vh));
+            @include dir('left', 'right', calc(#{map-get($verticalHeader, width)} - 1vh), calc(#{map-get($verticalHeader, width)} - 1vh));
         }
         &:hover>a>img {
             transition: ease-in 0.2s;
-            width: calc(#{map-get($vertBar, width)} / 1.8);
+            width: calc(#{map-get($verticalHeader, width)} / 1.8);
         }
         img {
-            width: calc(#{map-get($vertBar, width)} / 2.9);
+            width: calc(#{map-get($verticalHeader, width)} / 2.9);
             @include navImageFilter();
         }
         span {
@@ -55,7 +56,7 @@
             @include dir('left', 'right', -50vh, -50vh);
             width: 15vh;
             justify-content: center;
-            height: calc(#{map-get($vertBar, width)} / 2);
+            height: calc(#{map-get($verticalHeader, width)} / 2);
             z-index: -1;
             border-radius: 1vh;
             background-color: $c_interP1;
@@ -71,7 +72,7 @@
     #pm_Lang {
         img {
             padding: 0.3vh !important;
-            height: map-get($horBar, height) / 2;
+            height: map-get($horizontHeader, height) / 2;
         }
     }
     @extend %base-Nav;
@@ -111,7 +112,7 @@
             &+div>img {
                 padding: 1vh;
                 border: solid 0.1vh transparent;
-                width: calc(#{map-get($vertBar, width)} / 2);
+                width: calc(#{map-get($verticalHeader, width)} / 2);
             }
             a {
                 display: flex;
@@ -128,7 +129,7 @@
                 @include font(1, 400);
                 opacity: 0;
                 position: fixed;
-                top: calc(#{map-get($horBar, height)} / 0.9);
+                top: calc(#{map-get($horizontHeader, height)} / 0.9);
                 z-index: -10;
                 border-radius: 0.5vh;
                 padding: 0.4vh;
@@ -273,7 +274,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: map-get($horBar, height);
+    top: map-get($horizontHeader, height);
     form {
         margin-top: 1.5vh;
         flex-direction: column;
@@ -362,7 +363,7 @@
                 }
                 span {
                     color: $c_opos;
-                    @include f-size(map-get($FLOATHEADER, fontSize))
+                    @include f-size(map-get($floatheader, fontSize))
                 }
             }
         }
@@ -372,7 +373,7 @@
     }
     #pm_Lang {
         img {
-            height: calc(#{map-get($FLOATHEADER, fontSize)} * 2.6vh);
+            height: calc(#{map-get($floatheader, fontSize)} * 2.6vh);
         }
     }
 }

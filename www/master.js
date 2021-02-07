@@ -5064,7 +5064,7 @@ var PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
 var PM_ARR_OF_LANGS = ["en", "he"];
 var PM_HEADER = document.querySelector("html").getAttribute("data-header");
 var PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
-var PM_FLOATHEADER = document.querySelector("html").getAttribute("data-FLOATHEADER");
+var PM_FLOATHEADER = document.querySelector("html").getAttribute("data-floatheader");
 
 if (PM_DIR === "ltr") {
   var PM_DIROPOSITE = "rtl";

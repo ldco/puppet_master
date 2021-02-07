@@ -8,7 +8,7 @@ const PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
 const PM_ARR_OF_LANGS = ["en", "he"];
 const PM_HEADER = document.querySelector("html").getAttribute("data-header");
 const PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
-const PM_FLOATHEADER = document.querySelector("html").getAttribute("data-FLOATHEADER");
+const PM_FLOATHEADER = document.querySelector("html").getAttribute("data-floatheader");
 
 if (PM_DIR === "ltr") {
     const PM_DIROPOSITE = "rtl";

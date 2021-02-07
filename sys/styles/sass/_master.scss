@@ -1,5 +1,5 @@
 //config
-@import "../../../core/styles/sass/config";
+@import "system/config";
 //vendor
 @import "sass_vendor/rfs/scss";
 @import "sass_vendor/hamburgers/hamburgers";
@@ -9,11 +9,9 @@
 //fonts
 @import "system/fontsEngine";
 //animations
-@import "../../../core/styles/sass/animista/heartbeat";
-@import "../../../core/styles/sass/animista/ping";
+@import "../../../core/styles/sass/system_core/animations";
 //@import "animista/rotate-center";
 //color
-@import "../../../core/styles/sass/system_core/colors";
 @import "system/colorsEngine";
 //system
 @import "system/vars";

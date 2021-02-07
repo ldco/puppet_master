@@ -26,7 +26,7 @@ if (PM_HEADER && !PM_FLOATHEADER) {
 }
 ?>
 
-<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>" data-tab="<?= var_export(PM_ISTABLETNOW) ?>" <?php if (PM_ISMOBILENOW || PM_ISTABLETNOW) : ?> data-mobos="<?= var_export(PM_MOBOSNOW) ?>" <?php endif; ?> data-local="<?= $ifIsLocal ?>" data-dev="<?= $ifIsDev ?>" data-webp="<?= var_export(PM_WEBP) ?>" data-header="<?= $dataBar ?>" data-footer="<?= var_export(PM_FOOTER) ?>" data-onepage="<?= var_export(PM_ONEPAGER) ?>" data-FLOATHEADER="<?= var_export(PM_FLOATHEADER) ?>">
+<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>" data-tab="<?= var_export(PM_ISTABLETNOW) ?>" <?php if (PM_ISMOBILENOW || PM_ISTABLETNOW) : ?> data-mobos="<?= var_export(PM_MOBOSNOW) ?>" <?php endif; ?> data-local="<?= $ifIsLocal ?>" data-dev="<?= $ifIsDev ?>" data-webp="<?= var_export(PM_WEBP) ?>" data-header="<?= $dataBar ?>" data-footer="<?= var_export(PM_FOOTER) ?>" data-onepage="<?= var_export(PM_ONEPAGER) ?>" data-floatheader="<?= var_export(PM_FLOATHEADER) ?>">
 
 
 <head>
