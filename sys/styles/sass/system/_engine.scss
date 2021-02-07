@@ -36,39 +36,49 @@
                 $heightVar: map-get($mob, height);
             }
         }
-        @return calc(100vh - #{$heightVar} - #{map-get($footer, height)});
+        @return calc(100vh - #{$heightVar});
     }
 }
 
 @function generateContentPosition($topBool, $mobis) {
-    $vertical: null;
-    $vertical: $PM_HEADER_IS_VERTICAL;
     @if $topBool==true {
-        $top1: null;
-        $top2: null;
+        $topVar: null;
         @if $PM_HEADER_IS_VERTICAL==false {
             @if $mobis==false {
-                $top1: map-get($horizontHeader, height);
+                $topVar: map-get($horizontHeader, height);
             }
             @if $mobis==true {
-                $top1: map-get($mob, height);
+                $topVar: map-get($mob, height);
             }
         }
         @if $PM_HEADER_IS_VERTICAL==true {
-            $top1: 0px;
+            @if $mobis==false {
+                $topVar: 0px;
+            }
+            @if $mobis==true {
+                $topVar: map-get($mob, height);
+            }
         }
-        $top2: map-get($panel, height);
-        @return calc(0vh + #{$top1});
+        @return calc(0vh + #{$topVar});
     }
     @if $topBool==false {
-        $vert1: null;
-        $vert2: null;
-        @if $PM_HEADER_IS_VERTICAL==true {
-            $vert1: map-get($verticalHeader, width);
-        }
+        $sideVar: null;
         @if $PM_HEADER_IS_VERTICAL==false {
-            $vert1: 0px;
+            @if $mobis==false {
+                $sideVar: 0px;
+            }
+            @if $mobis==true {
+                $sideVar: 0px;
+            }
         }
-        @return calc(0vw + #{$vert1});
+        @if $PM_HEADER_IS_VERTICAL==true {
+            @if $mobis==false {
+                $sideVar: map-get($verticalHeader, width);
+            }
+            @if $mobis==true {
+                $sideVar: 0px;
+            }
+        }
+        @return calc(0vw + #{$sideVar});
     }
 }

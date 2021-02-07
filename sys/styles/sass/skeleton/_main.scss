@@ -2,9 +2,11 @@
 @import "../../../../core/styles/sass/skeleton_core/main_core";
 @include mob(true) {
     main {
-        width: generateContentSize(true, true);
         height: generateContentSize(false, true);
         top: generateContentPosition(true, true);
+        width: generateContentSize(true, true);
+        left: 0 !important;
+        right: 0 !important;
     }
 }
 
@@ -31,7 +33,7 @@
 [data-header=false] {
     main {
         width: 100vw;
-        min-height: calc(100vh - #{map-get($footer, height)});
+        height: calc(100vh - #{map-get($footer, height)});
         top: 0vh;
         left: 0vw;
         right: 0vw;
