@@ -1,0 +1,175 @@
+#pm_logo--header {
+    width: map-get($horizontHeader, logo_width);
+    height: map-get($horizontHeader, height);
+    position: fixed;
+    @include dir("left", "right", 0, 0);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: calc(#{map-get($horizontHeader, logo_width)} / 1.8);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@include mob(true) {
+    #pm_asset--header {
+        height: calc(#{map-get($mob, height)} / 2.1);
+        top: calc((#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
+    }
+}
+
+@include mob(false) {
+    #pm_asset--header {
+        height: calc(#{map-get($horizontHeader, height)} / 2.1);
+        top: calc((#{map-get($horizontHeader, height)} / 2) - ((calc(#{map-get($horizontHeader, height)} / 2.1)) / 2));
+    }
+}
+
+#pm_asset--header {
+    width: map-get($horizontHeader, asset);
+    position: fixed;
+    z-index: 1979;
+    @include dir("right", "left", 3vh, 3vh);
+}
+
+#pm_asset-float--header {
+    [dir=rtl] & {
+        margin-right: 2vh;
+    }
+    [dir=ltr] & {
+        margin-left: 2vh;
+    }
+}
+
+#pm_asset--header,
+#pm_asset-float--header {
+    cursor: pointer;
+    &:hover {
+        @include heartbeat;
+    }
+}
+
+header .--scrolled {
+    #pm_logo--header,
+    #pm_asset--header {
+        transition: ease 0.1s;
+    }
+    #pm_logo--header {
+        top: calc((#{$scrolledHeaderHeight} / 2) - (#{$scrolledHeaderHeight} / 0.65) / 2);
+    }
+    #pm_asset--header {
+        top: calc((#{$scrolledHeaderHeight} / 2) - (#{$scrolledHeaderHeight} / 0.8) / 3.5);
+    }
+}
+
+@if $LIGHT_THEME==true {
+    #pm_logo--header,
+    #pm_logo-float--header,
+    #pm_logo-mobile--header {
+        background-image: url("#{$IMAGES_CORE}brand/barLogo--forLight.svg");
+    }
+}
+
+@if $LIGHT_THEME==false {
+    #pm_logo--header,
+    #pm_logo-float--header,
+    #pm_logo-mobile--header {
+        background-image: url("#{$IMAGES_CORE}brand/barLogo--forDark.svg");
+    }
+    #pm_asset--header,
+    #pm_asset-float--header {
+        filter: invert(1);
+    }
+}
+
+#pm_logo-mobile--header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    align-items: center;
+    height: map-get($mob, height);
+    width: 50vw;
+    left: 25vw;
+    background-position: center;
+    background-size: calc(#{map-get($mob, height)} / 0.5);
+    background-repeat: no-repeat;
+    a {
+        border: none;
+    }
+}
+
+#pm_logo--header {
+    width: map-get($horizontHeader, logo_width);
+    height: map-get($horizontHeader, height);
+    position: fixed;
+    @include dir("left",
+    "right",
+    0,
+    0);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: calc(#{map-get($horizontHeader, logo_width)} / 1.8);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@include mob(true) {
+    #pm_asset--header {
+        height: calc(#{map-get($mob, height)} / 2.1);
+        top: calc((#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
+    }
+}
+
+@include mob(false) {
+    #pm_asset--header {
+        height: calc(#{map-get($horizontHeader, height)} / 2.1);
+        top: calc((#{map-get($horizontHeader, height)} / 2) - ((calc(#{map-get($horizontHeader, height)} / 2.1)) / 2));
+    }
+}
+
+#pm_asset--header {
+    width: map-get($horizontHeader, asset);
+    position: fixed;
+    z-index: 1979;
+    @include dir("right",
+    "left",
+    3vh,
+    3vh);
+}
+
+#pm_asset-float--header {
+    [dir=rtl] & {
+        margin-right: 2vh;
+    }
+    [dir=ltr] & {
+        margin-left: 2vh;
+    }
+}
+
+#pm_asset--header,
+#pm_asset-float--header {
+    cursor: pointer;
+    &:hover {
+        @include heartbeat;
+    }
+}
+
+#pm_logo-float--header {
+    height: 4vh;
+    width: 10vh;
+    cursor: move;
+    cursor: grab;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    [dir=rtl] & {
+        margin-left: 2vh;
+    }
+    [dir=ltr] & {
+        margin-right: 2vh;
+    }
+}

@@ -39,6 +39,11 @@ input[type="text"] {
     direction: ltr !important;
 }
 
+header {
+    user-select: none;
+    white-space: nowrap;
+}
+
 //remove arrows from number input
 //For Firefox
 input[type="number"] {

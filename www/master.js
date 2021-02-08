@@ -5248,7 +5248,7 @@ function setRouter() {
 function moveLogoOnScroll() {
   window.addEventListener("scroll", function () {
     var win = window.scrollY;
-    var el = document.querySelector("#pm_Header-float--desktop");
+    var el = document.querySelector("#pm_Header-float");
     var elh = el.offsetWidth;
     var distance = "calc(100vw - " + elh + "px - 7vh)";
     var height = window.innerHeight;

@@ -5,7 +5,7 @@ declare(strict_types=1);
 //title
 define("PM_TITLE", "PUPPET MASTER");
 //meta description
-define("PM_META_DESCRIPT", "פפאפט מאסטר - ווב-פריימורק | 
+define("PM_META_DESCRIPT", "פאפט מאסטר - ווב-פריימורק | 
 Папет Мастер - Веб-фреймворк | 
 Puppet Master - Web framework");
 //credits

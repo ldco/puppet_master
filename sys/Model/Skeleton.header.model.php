@@ -44,7 +44,7 @@ class SkeletonHeader
     {
         $isAuthenticated = false;
         if (defined("PM_FLOATHEADER") && PM_FLOATHEADER) {
-            $headerId = "pm_Header-float--desktop";
+            $headerId = "pm_Header-float";
             $navId = "pm_id_NavFloat";
             $headerLogo = "pm_logo-float--header";
             $bar_asset = "pm_asset-float--header";

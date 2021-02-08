@@ -1,0 +1,113 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../../core/styles/sass/skeleton_core/header_core/header_main_core";
+//VARIABLES
+$scrolledHeaderHeight: calc(#{map-get($horizontHeader, height)} / 1.6);
+$headerShadow: 0vh 0vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
+//base queries
+@include mob(true) {
+    header:first-of-type {
+        display: none !important;
+    }
+}
+
+@include mob(false) {
+    header:nth-of-type(2) {
+        display: none !important;
+    }
+}
+
+header {
+    background-color: $c_domin;
+    box-shadow: $headerShadow;
+    position: fixed;
+    z-index: 1978;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    @include dir("left", "right", 0, 0);
+    @if $PM_HEADER_IS_VERTICAL==true {
+        width: map-get($verticalHeader, width);
+        height: 100vh;
+    }
+    @if $PM_HEADER_IS_VERTICAL==false {
+        width: 100vw;
+        height: map-get($horizontHeader, height);
+        align-items: center;
+        //hack to remove stripe between header and content
+        border-bottom: solid $c_domin 1px;
+    }
+}
+
+header .--scrolled {
+    height: $scrolledHeaderHeight !important;
+    transition: ease 1s;
+}
+
+[data-floatheader=false] {
+    #pm_mobile-slide {
+        background-color: $c_domin;
+        box-shadow: $headerShadow;
+        width: map-get($mob, open_width);
+        height: 100%;
+        top: 0;
+    }
+    #pm_Header--mobile {
+        background-color: $c_domin;
+        box-shadow: $headerShadow;
+    }
+}
+
+[data-floatheader=true] {
+    header {
+        box-shadow: 0 0 0 0.1vh rgba($c_opos, .1);
+        background-color: rgba($c_domin, .8);
+        border-radius: 0.5vh;
+        width: map-get($floatheader, width);
+        height: map-get($floatheader, height);
+        padding: 2vh;
+        top: 2vh;
+        align-items: center;
+        justify-content: center;
+    }
+    #pm_mobile-slide {
+        top: 10vh;
+        box-shadow: 0 0 0 0.05vh $c_opos;
+        background-color: rgba($c_domin, .8);
+        padding: 1vh;
+        border-radius: 1vh;
+    }
+    #pm_Header--mobile {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+#pm_Header-float {
+    @include dir("left", "right", 2vh, 2vh);
+}
+
+#pm_Header--mobile {
+    position: fixed;
+    @include dir("left", "right", 0, 0);
+    top: 0;
+    width: 100%;
+    z-index: 1978;
+    height: calc(#{(map-get($mob, height)) + #{1px}
+}
+
+);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 !important;
+margin: 0 !important;
+
+}
+#pm_mobile-slide {
+    display: none;
+    position: fixed;
+    z-index: 1977;
+    user-select: none;
+    white-space: nowrap;
+    @include dir("left", "right", -100vw, -100vw);
+}

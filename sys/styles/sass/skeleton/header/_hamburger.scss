@@ -1,7 +1,7 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 $hamburgerColor: null;
 $hamburgerBGColor: null;
-@import "../../../../core/styles/sass/skeleton_core/hamburgers_core";
+@import "../../../../../core/styles/sass/skeleton_core/header_core/hamburgers_core";
 $hamburgerDistance: map-get($hamburger, distance);
 .pm_hamburger {
     position: fixed;

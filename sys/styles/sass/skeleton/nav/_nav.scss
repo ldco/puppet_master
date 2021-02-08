@@ -1,5 +1,5 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
-@import "../../../../core/styles/sass/skeleton_core/nav_core";
+@import "../../../../../core/styles/sass/skeleton_core/nav_core/nav_core";
 @mixin navImageFilter {
     @if $LIGHT_THEME==false {
         filter: brightness(1.5) contrast(0.7);
@@ -375,6 +375,29 @@
     #pm_Lang {
         img {
             height: calc(#{map-get($floatheader, fontSize)} * 2.6vh);
+        }
+    }
+}
+
+header .--scrolled {
+    #pm_class_Nav {
+        @if $PM_NAV_ICONS==true {
+            .nav_item {
+                img,
+                &+div>img {
+                    width: calc(#{map-get($verticalHeader, width)} / 3) !important;
+                }
+                span {
+                    top: calc(#{map-get($horizontHeader, height)} / 1.5) !important;
+                    font-size: map-get($horizontHeader, height) / 4 !important;
+                }
+            }
+        }
+        @if $PM_NAV_ICONS==false {
+            .nav_item {}
+            span {
+                font-size: map-get($horizontHeader, height) / 4 !important;
+            }
         }
     }
 }

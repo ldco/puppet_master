@@ -1,5 +1,6 @@
-//config
+//RESET
 @import "system/reset";
+//CONFIG
 @import "system/config";
 //vendor
 @import "sass_vendor/rfs/scss";
@@ -7,6 +8,7 @@
 @import "sass_vendor/normalize";
 //library
 @import "system/library";
+//UI
 //fonts
 @import "system/engine--fonts";
 //animations
@@ -15,23 +17,32 @@
 @import "system/engine--colors";
 //shadows
 @import "collections/shadows";
-//system
-@import "system/vars";
-@import "system/links";
+//browser defaults
 @import "system/browser";
+//SYSTEM
+@import "system/misc";
+@import "system/links";
 @import "system/engine";
 @import "system/info";
 @import "system/loginregister";
+@import "../../../core/styles/sass/system_core/scrollbar";
+//pages common
 @import "system/page";
 @import "system/onepager";
-//layout
-//skeleton
+//SKELETON
 @import "skeleton/main";
-@import "skeleton/header";
-@import "skeleton/footer";
-@import "skeleton/nav";
-@import "skeleton/hamburger";
+//header
+@import "skeleton/header/header_main";
+@import "skeleton/header/header_scrolled";
+@import "skeleton/header/header_inside";
+@import "skeleton/header/hamburger";
+//nav
+@import "skeleton/nav/nav";
+@import "skeleton/nav/nav_lang.scss";
+//panel
 @import "skeleton/panel";
+//footer
+@import "skeleton/footer";
 //MODULES
 @import "modules/thebility";
 @import "modules/loaders";
@@ -40,7 +51,6 @@
 //@import "modules/blog";
 //@import "modules/agents";
 //
-//pages
-@import "../../../core/styles/sass/pages/all--pages";
+//PAGES
+@import "../../../core/styles/sass/pages_core/all--pages";
 //
-@import "../../../core/styles/sass/system_core/scrollbar";
