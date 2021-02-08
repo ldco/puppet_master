@@ -6,7 +6,7 @@ function moveLogoOnScroll() {
         let distance = "calc(100vw - " + elh + "px - 7vh)";
         let height = window.innerHeight;
         let transition = "0.8s";
-        let logo = document.querySelector("#pm_logo-float--header");
+        let logo = document.querySelector("#pm_logo-header--float");
         let logoimg = logo.querySelector("img");
 
         if (win > (height / 3)) {

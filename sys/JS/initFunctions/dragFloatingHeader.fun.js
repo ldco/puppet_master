@@ -1,4 +1,4 @@
  function dragFloatingHeader() {
-     document.querySelector("#pm_logo-float--header").addEventListener("click", function() { drag(this); });
-     document.querySelector("#pm_logo-float--header").click();
+     document.querySelector("#pm_logo-header--float").addEventListener("click", function() { drag(this); });
+     document.querySelector("#pm_logo-header--float").click();
  }

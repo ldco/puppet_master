@@ -5054,10 +5054,13 @@ function smoothScroll(elems) {
 //'a[href^="#"]'
 
 
-"use strict";
+"use strict"; //Start fun!
 
-document.addEventListener("DOMContentLoaded", initFun);
-window.addEventListener("hashchange", setPageFunctions, false);
+
+document.addEventListener("DOMContentLoaded", initFun); //Custom pages functions
+
+window.addEventListener("hashchange", setPageFunctions, false); //CONSTANTS
+
 var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
 var PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
@@ -5065,6 +5068,7 @@ var PM_ARR_OF_LANGS = ["en", "he"];
 var PM_HEADER = document.querySelector("html").getAttribute("data-header");
 var PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
 var PM_FLOATHEADER = document.querySelector("html").getAttribute("data-floatheader");
+var PM_ROUT = document.querySelector("html").getAttribute("data-router"); //
 
 if (PM_DIR === "ltr") {
   var PM_DIROPOSITE = "rtl";
@@ -5074,16 +5078,19 @@ if (PM_DIR === "ltr") {
   var _PM_LTR = false;
 } else {
   console.log("PM_DIR ERROR!");
-}
+} //DO NOT EDIT - EDIT THE CORE JS
+
 
 function initFun() {
-  setTimeout(function () {}, 100);
+  setTimeout(function () {}, 100); //
+  //js router
 
-  if (PM_ONEPAGER === "false") {
+  if (PM_ONEPAGER === "false" || PM_ROUT === "false") {
     setRouter();
-  }
+  } //Set hamburger
 
-  setHamburgerMenu();
+
+  setHamburgerMenu(); //
 
   if (PM_HEADER === "true" || PM_FLOATHEADER === "true") {
     setChangeLang();
@@ -5092,17 +5099,28 @@ function initFun() {
   if (PM_HEADER === "true") {
     setBarAsset();
     setOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
-  }
+  } //Set go to top button
 
-  setGoTopButton();
-  initModalLocalisation();
-  new Thebility().init();
+
+  setGoTopButton(); //Set translation for modal windows - will be removed later
+
+  initModalLocalisation(); //THEBILITY!
+
+  new Thebility().init(); //
 
   if (PM_FLOATHEADER === "true" && PM_ISMOB === "false") {
     dragFloatingHeader();
   }
 
-  if (PM_ISMOB === "false") {}
+  if (PM_ISMOB === "false") {} //Assign refresh page to header logo
+
+
+  if (PM_FLOATHEADER === "false") {
+    document.querySelector("#pm_logo-header").addEventListener("click", function () {
+      location.reload();
+    });
+  } //Get content of page
+
 
   if (PM_ONEPAGER === "false") {
     var hash = window.location.hash;
@@ -5116,16 +5134,16 @@ function initFun() {
 "use strict";
 
 function dragFloatingHeader() {
-  document.querySelector("#pm_logo-float--header").addEventListener("click", function () {
+  document.querySelector("#pm_logo-header--float").addEventListener("click", function () {
     drag(this);
   });
-  document.querySelector("#pm_logo-float--header").click();
+  document.querySelector("#pm_logo-header--float").click();
 }
 
 "use strict";
 
 function setBarAsset() {
-  var el = document.querySelector("#pm_asset--header");
+  var el = document.querySelector("#pm_asset-header");
   el.addEventListener("click", function () {//do something
   });
 }
@@ -5253,7 +5271,7 @@ function moveLogoOnScroll() {
     var distance = "calc(100vw - " + elh + "px - 7vh)";
     var height = window.innerHeight;
     var transition = "0.8s";
-    var logo = document.querySelector("#pm_logo-float--header");
+    var logo = document.querySelector("#pm_logo-header--float");
     var logoimg = logo.querySelector("img");
 
     if (win > height / 3) {

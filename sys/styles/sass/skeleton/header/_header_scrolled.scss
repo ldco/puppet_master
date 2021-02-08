@@ -1,0 +1,12 @@
+header .--scrolled {
+    #pm_logo-header,
+    #pm_asset-header {
+        transition: ease 0.1s;
+    }
+    #pm_logo-header {
+        top: calc((#{$scrolledHeaderHeight} / 2) - (#{$scrolledHeaderHeight} / 0.65) / 2);
+    }
+    #pm_asset-header {
+        top: calc((#{$scrolledHeaderHeight} / 2) - (#{$scrolledHeaderHeight} / 0.8) / 3.5);
+    }
+}

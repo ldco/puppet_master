@@ -4,7 +4,6 @@
 
 $pmLangSkeletonView = PM_LANG;
 $pmDirSkeletonView = PM_DIRECTION;
-$ifIsAdmin = "false";
 
 
 if ($isLocal) {
@@ -26,21 +25,28 @@ if (PM_HEADER && !PM_FLOATHEADER) {
 }
 ?>
 
-<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>" data-tab="<?= var_export(PM_ISTABLETNOW) ?>" <?php if (PM_ISMOBILENOW || PM_ISTABLETNOW) : ?> data-mobos="<?= var_export(PM_MOBOSNOW) ?>" <?php endif; ?> data-local="<?= $ifIsLocal ?>" data-dev="<?= $ifIsDev ?>" data-webp="<?= var_export(PM_WEBP) ?>" data-header="<?= $dataBar ?>" data-footer="<?= var_export(PM_FOOTER) ?>" data-onepage="<?= var_export(PM_ONEPAGER) ?>" data-floatheader="<?= var_export(PM_FLOATHEADER) ?>">
-
+<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-mob="<?= var_export(PM_ISMOBILENOW) ?>"
+    data-tab="<?= var_export(PM_ISTABLETNOW) ?>" <?php if (PM_ISMOBILENOW || PM_ISTABLETNOW) : ?>
+    data-mobos="<?= var_export(PM_MOBOSNOW) ?>" <?php endif; ?> data-local="<?= $ifIsLocal ?>"
+    data-dev="<?= $ifIsDev ?>" data-webp="<?= var_export(PM_WEBP) ?>" data-header="<?= $dataBar ?>"
+    data-footer="<?= var_export(PM_FOOTER) ?>" data-onepage="<?= var_export(PM_ONEPAGER) ?>"
+    data-floatheader="<?= var_export(PM_FLOATHEADER) ?>" data-router="<?= var_export(PM_PHP_ROUTING) ?>">
 
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
+    <!-- <script>
+        //gtag
+    window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-        gtag("config", "GA_MEASUREMENT_ID");
-    </script>
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "GA_MEASUREMENT_ID");
+    </script> -->
+
+
     <title><?= PM_RENDERED_TITLE ?></title>
     <?php $modelDepends->index(); ?>
 </head>
@@ -59,7 +65,3 @@ if (PM_HEADER && !PM_FLOATHEADER) {
 </body>
 
 </html>
-
-<?php
-/*  $shieldon = new \Shieldon\Firewall\Integration\Bootstrap();
-        $shieldon->run(); */ ?>

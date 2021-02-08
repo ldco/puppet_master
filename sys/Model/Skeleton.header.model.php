@@ -46,13 +46,13 @@ class SkeletonHeader
         if (defined("PM_FLOATHEADER") && PM_FLOATHEADER) {
             $headerId = "pm_Header-float";
             $navId = "pm_id_NavFloat";
-            $headerLogo = "pm_logo-float--header";
-            $bar_asset = "pm_asset-float--header";
+            $headerLogo = "pm_logo-header--float";
+            $bar_asset = "pm_asset-header--float";
         } else if (defined("PM_FLOATHEADER") && !PM_FLOATHEADER) {
             $headerId = "pm_Header--desktop";
             $navId = "pm_Nav--desktop";
-            $headerLogo = "pm_logo--header";
-            $bar_asset = "pm_asset--header";
+            $headerLogo = "pm_logo-header";
+            $bar_asset = "pm_asset-header";
         } else {
             echo "PM_FLOATHEADER not defined!";
         }
@@ -70,7 +70,7 @@ class SkeletonHeader
         $mobileSlideId = "pm_mobile-slide";
         $navId = "pm_Nav--mobile";
         $headerId = "pm_Header--mobile";
-        $headerLogo = "pm_logo-mobile--header";
+        $headerLogo = "pm_logo-header--mobile";
         $nav_pm_asset = PM_ICONS_REL . "100.svg";
         $headerLogoMob = PM_IMAGES_REL . "brand/barLogo.svg";
         $modelNav = $this->modelNav;
