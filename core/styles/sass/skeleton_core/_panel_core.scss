@@ -4,7 +4,12 @@
         padding-right: 3vh;
         padding-left: 3vh;
         img {
-            @include dir('transform', 'transform', initial, rotate(180deg));
+            [dir=rtl] & {
+                transform: rotate(180deg);
+            }
+            [dir=ltr] & {
+                transform: initial;
+            }
         }
     }
 }

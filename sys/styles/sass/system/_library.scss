@@ -1,4 +1,3 @@
-//!!!CHANGE ONLY TO MAKE NEW PM VERSION!!!
 //responisve font sizes
 //font fills
 @mixin f-size-fill($size) {
@@ -17,7 +16,7 @@
 
 //rfs font size fix
 @mixin f-size($size) {
-    @include rfs(($size)*((1vh)*3));
+    @include rfs(($size)*(((2vh)*3)/1vw));
 }
 
 //queries
@@ -49,13 +48,28 @@
 }
 
 //
-@mixin dir($ltr, $rtl, $ltrV, $rtlV) {
+@mixin dir($value) {
     [dir=ltr] & {
-        #{$ltr}: $ltrV;
+        left: $value;
     }
     [dir=rtl] & {
-        #{$rtl}: $rtlV;
+        right: $value;
     }
+}
+
+// Disable selection
+@mixin selectNone {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 //backround images

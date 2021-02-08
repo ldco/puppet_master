@@ -8,7 +8,7 @@ $hamburgerDistance: map-get($hamburger, distance);
     display: flex;
     justify-content: center;
     align-items: center;
-    @include dir('left', 'right', $hamburgerDistance, $hamburgerDistance);
+    @include dir($hamburgerDistance);
 }
 
 .hamburger {

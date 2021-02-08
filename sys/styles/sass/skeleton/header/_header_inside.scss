@@ -3,7 +3,7 @@
     width: map-get($horizontHeader, logo_width);
     height: map-get($horizontHeader, height);
     position: fixed;
-    @include dir("left", "right", 0, 0);
+    @include dir(0);
     top: 0;
     display: flex;
     justify-content: center;
@@ -51,10 +51,7 @@
     width: map-get($horizontHeader, logo_width);
     height: map-get($horizontHeader, height);
     position: fixed;
-    @include dir("left",
-    "right",
-    0,
-    0);
+    @include dir(0);
     top: 0;
     display: flex;
     justify-content: center;
@@ -82,10 +79,7 @@
     width: map-get($horizontHeader, asset);
     position: fixed;
     z-index: 1979;
-    @include dir("right",
-    "left",
-    3vh,
-    3vh);
+    @include dir(3vh);
 }
 
 #pm_asset-header--float {
@@ -140,10 +134,7 @@
     width: map-get($horizontHeader, asset);
     position: fixed;
     z-index: 1979;
-    @include dir("right",
-    "left",
-    3vh,
-    3vh);
+    @include dir(3vh);
 }
 
 #pm_asset-header--float {

@@ -14,7 +14,6 @@ body {
     max-height: 100vh;
     max-width: 100vw;
     overflow-x: hidden;
-    @include dir('direction', 'direction', ltr, rtl);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,6 +24,12 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     overflow-wrap: break-word;
+    [dir=rtl] & {
+        direction: rtl;
+    }
+    [dir=ltr] & {
+        direction: ltr;
+    }
 }
 
 [data-header=false],

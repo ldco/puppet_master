@@ -24,7 +24,7 @@ header {
     top: 0;
     display: flex;
     justify-content: space-around;
-    @include dir("left", "right", 0, 0);
+    @include dir(0);
     @if $PM_HEADER_IS_VERTICAL==true {
         width: map-get($verticalHeader, width);
         height: 100vh;
@@ -83,12 +83,12 @@ header .--scrolled {
 }
 
 #pm_Header-float {
-    @include dir("left", "right", 2vh, 2vh);
+    @include dir(2vh);
 }
 
 #pm_Header--mobile {
     position: fixed;
-    @include dir("left", "right", 0, 0);
+    @include dir(0);
     top: 0;
     width: 100%;
     z-index: 1978;
@@ -109,5 +109,5 @@ margin: 0 !important;
     z-index: 1977;
     user-select: none;
     white-space: nowrap;
-    @include dir("left", "right", -100vw, -100vw);
+    @include dir(-100vw);
 }

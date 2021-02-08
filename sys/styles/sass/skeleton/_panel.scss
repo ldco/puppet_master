@@ -5,7 +5,7 @@
     z-index: 1979;
     top: 0;
     justify-content: flex-end;
-    @include dir('left', 'right', map-get($verticalHeader, width), map-get($verticalHeader, width));
+    @include dir(map-get($verticalHeader, width));
     height: map-get($panel, height);
     width: calc(100vw - #{map-get($verticalHeader, width)});
     display: flex;

@@ -39,7 +39,7 @@
         align-items: center;
         &:hover>a>span {
             transition: ease-in 0.1s;
-            @include dir('left', 'right', calc(#{map-get($verticalHeader, width)} - 1vh), calc(#{map-get($verticalHeader, width)} - 1vh));
+            @include dir(calc(#{map-get($verticalHeader, width)} - 1vh));
         }
         &:hover>a>img {
             transition: ease-in 0.2s;
@@ -53,7 +53,7 @@
             position: absolute;
             display: flex;
             align-items: center;
-            @include dir('left', 'right', -50vh, -50vh);
+            @include dir(-50vh);
             width: 15vh;
             justify-content: center;
             height: calc(#{map-get($verticalHeader, width)} / 2);
@@ -188,7 +188,12 @@
     margin-top: 12vh;
     width: 100%;
     text-transform: uppercase;
-    @include dir('align-items', 'align-items', flex-start, flex-end);
+    [dir=rtl] & {
+        align-items: flex-end;
+    }
+    [dir=ltr] & {
+        align-items: flex-start;
+    }
     .nav_item {
         height: map-get($mob, nav_height);
         color: $c_opos;
@@ -197,7 +202,12 @@
         img,
         span {
             @include f-size-fill(1);
-            @include dir('margin-left', 'margin-right', 3vh, 3vh);
+            [dir=rtl] & {
+                margin-right: 3vh;
+            }
+            [dir=ltr] & {
+                margin-left: 3vh;
+            }
         }
         img {
             @include width-fill(1.5);
