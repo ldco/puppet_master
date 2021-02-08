@@ -1,0 +1,14 @@
+@if $LIGHT_THEME==true {
+    $hamburgerColor: $c_opos;
+    $hamburgerBGColor: rgba($c_brand2, .2);
+}
+
+@if $LIGHT_THEME==false {
+    $hamburgerColor: $c_opos;
+    $hamburgerBGColor: rgba($c_brand2, 0.0);
+}
+
+$hamburgerSize: map-get($mob, height) / 4.5; //less is bigger
+$hamburgerRadius: 0;
+$hamburgerShadow: none;
+$hamburgerPadding: 1.2vh;

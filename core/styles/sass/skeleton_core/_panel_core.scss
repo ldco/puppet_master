@@ -1,0 +1,10 @@
+#pm_panel--header {
+    font-size: 1.8vh;
+    div {
+        padding-right: 3vh;
+        padding-left: 3vh;
+        img {
+            @include dir('transform', 'transform', initial, rotate(180deg));
+        }
+    }
+}

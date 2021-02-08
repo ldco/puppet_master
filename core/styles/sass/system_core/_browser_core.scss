@@ -1,0 +1,199 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @include font(1, 100);
+    background-size: 60%;
+}
+
+input[type="checkbox"] {
+    label {
+        padding-left: 1vh;
+        padding-right: 1vh;
+    }
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+    padding: 1vh;
+}
+
+.video--foreground {
+    background: rgba($c_opos, 0.2);
+}
+
+header {}
+
+nav {}
+
+section {}
+
+article {}
+
+p {}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+ul {}
+
+ol {}
+
+li {}
+
+a {
+    border-bottom: solid 0.1vh $c_brand;
+}
+
+button,
+textarea,
+input,
+canvas,
+select,
+option,
+video,
+iframe {
+    background-color: $c_interB;
+    box-shadow: $pm_formBS;
+    @include font(1, 200);
+    @include f-size(0.9);
+    border-radius: 0.2vh;
+}
+
+button,
+textarea,
+input,
+select,
+option:hover {
+    background-color: $c_interP2;
+}
+
+option:focus {
+    box-shadow: $pm_formBSactive;
+}
+
+input[type="checkbox"] {
+    width: 2vh;
+    height: 2vh;
+    background-color: $c_opos;
+    font-size: 1.3vh;
+}
+
+textarea {
+    @include f-size($basicTextSize - 0.2);
+}
+
+label {
+    text-transform: capitalize;
+    padding-bottom: 1vh;
+    span {
+        color: $c_err;
+    }
+}
+
+form {
+    flex-direction: column;
+    @include f-size($basicTextSize - 0.1);
+}
+
+option {
+    text-transform: capitalize;
+    @include f-size(0.7);
+}
+
+select {
+    background-image: url("#{$ICONS_CORE}down.svg");
+    background-size: 1.6vh auto, 100%;
+    background: $c_interB;
+    color: $c_opos;
+    [dir=rtl] & {
+        background-position: left 0.7vh top 50%, 0 0;
+    }
+    [dir=ltr] & {
+        background-position: right 0.7vh top 50%, 0 0;
+    }
+    text-transform: capitalize;
+    @include f-size($basicTextSize - 0.3);
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+    box-shadow: $pm_formBS;
+    text-transform: uppercase;
+}
+
+input[type="submit"] {
+    background: $c_brand;
+    color: $c_domin;
+}
+
+input[type="button"],
+button {
+    background: $c_domin;
+    color: $c_opos;
+}
+
+.pm_requiredfield::after {
+    content: "*";
+    color: $c_err;
+}
+
+select option {}
+
+select option:hover {}
+
+select option:focus {}
+
+video:focus {}
+
+@if $LIGHT_THEME==true {
+     ::selection {
+        color: $c_domin;
+        background: $c_brand;
+    }
+    button:hover {
+        background: $c_interM1;
+        color: $c_brand;
+    }
+    button:focus {}
+    button:active {
+        box-shadow: $pm_formBSactive;
+    }
+}
+
+@if $LIGHT_THEME==false {
+    textarea,
+    input,
+    select,
+    option {
+        color: $c_opos;
+    }
+    form {
+        @include font(1,
+        400);
+    }
+     ::selection {
+        color: $c_domin;
+        background: $c_opos;
+    }
+    button:hover {
+        background: $c_interP2;
+        color: $c_opos;
+    }
+    button:focus {}
+    button:active {
+        box-shadow: $pm_formBSactive;
+    }
+}

@@ -1,0 +1,45 @@
+/*scrolbars*/
+
+//header color
+::-webkit-scrollbar-thumb {
+    background-color: #333; //$c_domin;
+    border-radius: 0px;
+}
+
+//header color hover
+::-webkit-scrollbar-thumb:hover {
+    background-color: "";
+}
+
+//width
+::-webkit-scrollbar {
+    width: 2vh;
+}
+
+@include mob(true) {
+     ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+//button is OFF
+::-webkit-scrollbar-button {
+    display: none;
+    border-radius: 0;
+    background-color: $c_opos;
+}
+
+//button hover
+::-webkit-scrollbar-button:hover {
+    background-color: "";
+}
+
+//background
+::-webkit-scrollbar-track {
+    background-color: #555; //$c_brand2;
+}
+
+//background hover
+::-webkit-scrollbar-track:hover {
+    background-color: #555; //$c_brand2;
+}

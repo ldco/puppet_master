@@ -1,0 +1,6 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../core/styles/sass/system_core/fonts";
+@each $font,
+$name in $pm_fonts {
+    @import url("https://fonts.googleapis.com/css?family=#{$font}:100,400,900&display=swap&subset=#{$name}");
+}

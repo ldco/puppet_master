@@ -1,0 +1,54 @@
+//FONTS ARRAY
+$pm_fonts: (Montserrat: cyrillic, Heebo: hebrew);
+//font url not match template
+//1. SecularOne: hebrew
+@import url('https://fonts.googleapis.com/css?family=Secular+One&display=swap');
+//
+@mixin font($type,
+$weight) {
+    //1- for regular fonts
+    @if $type==1 {
+        [lang=en] & {
+            font-family: Montserrat;
+            font-weight: $weight;
+        }
+        [lang=ru] & {
+            font-family: Montserrat;
+            font-weight: $weight;
+        }
+        [lang=he] & {
+            font-family: Heebo;
+            font-weight: $weight;
+        }
+    }
+    //2 - for special fonts
+    @if $type==2 {
+        [lang=en] & {
+            font-family: Secular One;
+            font-weight: $weight;
+        }
+        [lang=ru] & {
+            font-family: Secular One;
+            font-weight: $weight;
+        }
+        [lang=he] & {
+            font-family: Secular One;
+            font-weight: $weight;
+        }
+    }
+    //3 - for another fonts
+    @if $type==3 {
+        [lang=en] & {
+            font-family: Secular One;
+            font-weight: $weight;
+        }
+        [lang=ru] & {
+            font-family: Secular One;
+            font-weight: $weight;
+        }
+        [lang=he] & {
+            font-family: Secular One;
+            font-weight: $weight;
+        }
+    }
+}

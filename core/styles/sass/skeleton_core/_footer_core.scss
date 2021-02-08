@@ -1,0 +1,30 @@
+@include mob(true) {
+    footer {
+        span {}
+    }
+}
+
+@include mob(false) {
+    footer {}
+}
+
+footer {
+    background-color: $c_domin;
+    color: $c_opos;
+    @include font(1, 900);
+    text-transform: uppercase;
+    span {
+        @include font(1, 400);
+        @include f-size(0.5);
+    }
+    .pm_footer--copyright {
+        @include dir('right', 'left', 2vw, 2vw);
+        direction: ltr;
+    }
+    .pm_footer--credits-by {
+        &:hover {
+            letter-spacing: 0.2vh;
+            transition: 0.1s;
+        }
+    }
+}

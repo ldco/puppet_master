@@ -1,0 +1,116 @@
+fieldset,
+img,
+abbr {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+input {
+    border: none;
+}
+
+a,
+ins {
+    color: inherit;
+}
+
+select {
+    font-family: inherit !important;
+    background-repeat: no-repeat, repeat;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input,
+textarea,
+select {
+    margin: 0 0 1.6vh 0;
+}
+
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    text-align: center !important;
+    direction: ltr !important;
+}
+
+//remove arrows from number input
+//For Firefox
+input[type="number"] {
+    -moz-appearance: textfield !important;
+}
+
+//Webkit browsers like Safari and Chrome
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+}
+
+iframe[src*=youtube] {
+    width: 1px;
+    min-width: 100%;
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+form,
+label {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="checkbox"],
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"]:after,
+button {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/*Hide the checkmark by default*/
+
+input[type="checkbox"]+label::after {
+    content: none;
+}
+
+
+/*Unhide the checkmark on the checked state*/
+
+input[type="checkbox"]:checked+label::after {
+    content: "";
+}
+
+input[type="checkbox"] {
+    appearance: checkbox;
+    display: flex;
+    align-items: center;
+    label {
+        [dir=rtl] & {
+            text-align: right;
+        }
+        [dir=ltr] & {
+            text-align: left;
+        }
+    }
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+    text-align: center;
+    vertical-align: text-bottom;
+}

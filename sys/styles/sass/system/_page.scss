@@ -1,0 +1,39 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../core/styles/sass/system_core/page_core";
+[data-footer=true] {
+    main section:last-of-type {
+        padding-bottom: calc(#{map-get($footer, height)} + #{$sectionPadding}) !important;
+    }
+    section {
+        min-height: calc(#{100vh} - #{map-get($footer, height)} - #{$sectionPadding} - #{$sectionPadding});
+    }
+}
+
+section {
+    min-height: calc(#{100vh} - #{$sectionPadding} - #{$sectionPadding});
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $sectionPadding;
+    h1 {
+        &:after {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            width: 20%;
+        }
+    }
+    div {
+        height: auto;
+        width: auto;
+    }
+}
+
+article {}
+
+.pm_text {}
+
+.pm_page--light {}
+
+.pm_text--intro {}

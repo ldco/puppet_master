@@ -1,0 +1,305 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../core/styles/sass/skeleton_core/header_core";
+//base queries
+@include mob(true) {
+    #pm_Header--desktop,
+    #pm_Header-float--desktop,
+    #pm_panel--header {
+        display: none !important;
+    }
+}
+
+@include mob(false) {
+    #pm_Header--mobile,
+    #pm_mobile-slide {
+        display: none !important;
+    }
+}
+
+#pm_Header--desktop,
+#pm_Header-float--desktop,
+#pm_panel--header,
+#pm_Header--mobile,
+#pm_mobile-slide {
+    user-select: none;
+    white-space: nowrap;
+}
+
+//shadow
+$pm_header_shadow: 0vh 0vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
+#pm_Header--desktop,
+#pm_bar_scrolled {
+    box-shadow: $pm_header_shadow;
+}
+
+#pm_logo--header {
+    width: map-get($horizontHeader, logo_width);
+    height: map-get($horizontHeader, height);
+    position: fixed;
+    @include dir("left", "right", 0, 0);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: calc(#{map-get($horizontHeader, logo_width)} / 1.8);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@include mob(true) {
+    #pm_asset--header {
+        height: calc(#{map-get($mob, height)} / 2.1);
+        top: calc((#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
+    }
+}
+
+@include mob(false) {
+    #pm_asset--header {
+        height: calc(#{map-get($horizontHeader, height)} / 2.1);
+        top: calc((#{map-get($horizontHeader, height)} / 2) - ((calc(#{map-get($horizontHeader, height)} / 2.1)) / 2));
+    }
+}
+
+#pm_asset--header {
+    width: map-get($horizontHeader, asset);
+    position: fixed;
+    z-index: 1979;
+    @include dir("right", "left", 3vh, 3vh);
+}
+
+#pm_asset-float--header {
+    [dir=rtl] & {
+        margin-right: 2vh;
+    }
+    [dir=ltr] & {
+        margin-left: 2vh;
+    }
+}
+
+#pm_asset--header,
+#pm_asset-float--header {
+    cursor: pointer;
+    &:hover {
+        @include heartbeat;
+    }
+}
+
+%base-Header {
+    z-index: 1978;
+    top: 0;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    position: fixed;
+}
+
+@mixin verticalBar {
+    @extend %base-Header;
+    width: map-get($verticalHeader, width);
+    height: 100vh;
+    @include dir("left", "right", 0, 0);
+}
+
+@mixin horizontalBar {
+    @extend %base-Header;
+    width: 100vw;
+    height: map-get($horizontHeader, height);
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin scrolledBar {
+    $pmBarScrolledHeight: calc(#{map-get($horizontHeader, height)} / 1.6);
+    #pm_bar_scrolled {
+        height: $pmBarScrolledHeight !important;
+        transition: ease 1s;
+        #pm_logo--header,
+        #pm_asset--header {
+            transition: ease 0.1s;
+        }
+        #pm_logo--header {
+            top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.65) / 2);
+        }
+        #pm_asset--header {
+            top: calc((#{$pmBarScrolledHeight} / 2) - (#{$pmBarScrolledHeight} / 0.8) / 3.5);
+        }
+        #pm_class_Nav {
+            @if $PM_NAV_ICONS==true {
+                .nav_item {
+                    img,
+                    &+div>img {
+                        width: calc(#{map-get($verticalHeader, width)} / 3) !important;
+                    }
+                    span {
+                        top: calc(#{map-get($horizontHeader, height)} / 1.5) !important;
+                        font-size: map-get($horizontHeader, height) / 4 !important;
+                    }
+                }
+            }
+            @if $PM_NAV_ICONS==false {
+                .nav_item {}
+                span {
+                    font-size: map-get($horizontHeader, height) / 4 !important;
+                }
+            }
+        }
+    }
+}
+
+#pm_Header--desktop {
+    background-color: $c_domin;
+    //hack to remove stripe between header and content
+    border-bottom: solid $c_domin 1px;
+    /**/
+    @if $PM_HEADER_IS_VERTICAL==true {
+        @include verticalBar;
+    }
+    @if $PM_HEADER_IS_VERTICAL==false {
+        @include horizontalBar;
+    }
+}
+
+body {
+    @if $PM_HEADER_IS_VERTICAL==false {
+        @include scrolledBar;
+    }
+}
+
+#pm_mobile-slide {
+    display: none;
+    position: fixed;
+    z-index: 1977;
+    @include dir("left", "right", -100vw, -100vw);
+}
+
+@if $LIGHT_THEME==true {
+    #pm_logo--header,
+    #pm_logo-float--header,
+    #pm_logo-mobile--header {
+        background-image: url("#{$IMAGES_CORE}brand/barLogo--forLight.svg");
+    }
+}
+
+@if $LIGHT_THEME==false {
+    #pm_logo--header,
+    #pm_logo-float--header,
+    #pm_logo-mobile--header {
+        background-image: url("#{$IMAGES_CORE}brand/barLogo--forDark.svg");
+    }
+    #pm_asset--header,
+    #pm_asset-float--header {
+        filter: invert(1);
+    }
+}
+
+[data-floatheader=false] {
+    #pm_mobile-slide {
+        width: map-get($mob, open_width);
+        background-color: $c_domin;
+        height: 100%;
+        top: 0;
+    }
+    #pm_Header--mobile {
+        box-shadow: $pm_header_shadow;
+    }
+    #pm_mobile-slide {
+        box-shadow: $pm_header_shadow;
+    }
+}
+
+[data-floatheader=true] {
+    #pm_mobile-slide {
+        width: map-get($mob, open_width);
+        background-color: $c_domin;
+        top: 10vh;
+        box-shadow: 0 0 0 0.05vh $c_opos;
+        background-color: rgba($c_domin, .8);
+        padding: 1vh;
+        border-radius: 1vh;
+    }
+    #pm_Header--mobile {
+        background-color: transparent;
+    }
+}
+
+#pm_Header--mobile {
+    position: fixed;
+    top: 0;
+    background-color: $c_domin;
+    @include dir("left",
+    "right",
+    0,
+    0);
+    width: 100%;
+    z-index: 1978;
+    height: calc(#{(map-get($mob, height)) + #{1px}
+}
+
+);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 !important;
+margin: 0 !important;
+font-size: 2vh;
+
+}
+#pm_logo-mobile--header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    align-items: center;
+    height: map-get($mob, height);
+    width: 50vw;
+    left: 25vw;
+    background-position: center;
+    background-size: calc(#{map-get($mob, height)} / 0.5);
+    background-repeat: no-repeat;
+    a {
+        border: none;
+    }
+}
+//Header FLOAT
+#pm_logo-float--header {
+    height: 4vh;
+    width: 10vh;
+    cursor: move;
+    cursor: grab;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    [dir=rtl] & {
+        margin-left: 2vh;
+    }
+    
+    [dir=ltr] & {
+        margin-right: 2vh;
+    }
+}
+#pm_Header-float--desktop {
+    box-shadow: 0 0 0 0.1vh rgba($c_opos, .1);
+    background-color: rgba($c_domin, .8);
+    border-radius: 0.5vh;
+    filter: invert(0);
+    width: map-get($floatheader, width);
+    height: map-get($floatheader, height);
+    z-index: 1980;
+    position: fixed;
+    padding: 2vh;
+    top: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    [dir=rtl] & {
+        right: 2vh;
+    }
+    
+    [dir=ltr] & {
+        left: 2vh;
+    }
+    
+    a {
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,65 @@
+$sectionPadding: 3vh;
+section {
+    color: $c_opos;
+    background-color: $c_domin;
+    h1 {
+        color: $c_opos;
+        text-transform: uppercase;
+        text-align: center;
+        @include font(1, 50);
+        @include f-size(2);
+        &:after {
+            padding-top: 1vh;
+            border-bottom: 0.3vh solid $c_brand;
+        }
+    }
+}
+
+@include mob(true) {
+    article {
+        width: 80vw;
+        line-height: 140%;
+        @include f-size($basicTextSize - 0.2);
+    }
+    section {
+        h1 {
+            margin-top: 4vh;
+        }
+        a {
+            @include f-size($basicTextSize - 0.2);
+        }
+    }
+}
+
+@include mob(false) {
+    article {
+        width: 90vw;
+        line-height: 130%;
+    }
+    section {
+        h1 {
+            margin-top: 6vh;
+        }
+        a {
+            @include f-size($basicTextSize);
+        }
+    }
+}
+
+article {
+    @include font(1, 300);
+}
+
+.pm_text {}
+
+.pm_page--light {
+    background-color: $c_white;
+    color: $c_black;
+    h1 {
+        color: $c_black;
+    }
+}
+
+.pm_text--intro {
+    text-align: center;
+}

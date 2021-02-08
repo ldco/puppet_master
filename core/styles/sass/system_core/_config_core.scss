@@ -1,0 +1,15 @@
+//info pages puppet master or custom branding
+//
+//GLOBALS
+$PM_HEADER_IS_VERTICAL: true;
+$PM_NAV_ICONS: false; //always true if PM_HEADER_IS_VERTICAL true
+$INFO_PM_BRAND: true;
+//sizes
+$verticalHeader: (width: 6vh);
+$horizontHeader: (height: 6vh, logo_width: 12vw, asset: 3vh, );
+$floatheader: (width:auto, height:auto, logo_width: 15vh, fontSize: 1.2, );
+$hamburger: (distance: 3vh, );
+$mob: (height: 6vh, open_width: 45vw, nav_height: 6vh, );
+$panel: (height: 3vh, );
+$footer: (height: 3vh);
+$basicTextSize: 1;
