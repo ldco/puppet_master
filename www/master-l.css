@@ -1313,24 +1313,20 @@ main {
   overflow-x: hidden; }
 
 @media (max-aspect-ratio: 13 / 9) {
-  [data-mob=true] #pm_Header--desktop,
-  [data-mob=true] #pm_Header-float--desktop,
-  [data-mob=true] #pm_panel--header {
+  [data-mob=true] header:first-of-type {
     display: none !important; } }
 
 @media (max-width: 1210px) {
-  [data-mob=false] #pm_Header--desktop,
-  [data-mob=false] #pm_Header-float--desktop,
-  [data-mob=false] #pm_panel--header {
+  [data-mob=false] header:first-of-type {
     display: none !important; } }
 
 @media (min-aspect-ratio: 13 / 9) {
-  [data-mob=true] #pm_Header--mobile,
+  [data-mob=true] header:nth-of-type(2),
   [data-mob=true] #pm_mobile-slide {
     display: none !important; } }
 
 @media (min-width: 1210px) {
-  [data-mob=false] #pm_Header--mobile,
+  [data-mob=false] header:nth-of-type(2),
   [data-mob=false] #pm_mobile-slide {
     display: none !important; } }
 
@@ -1849,7 +1845,8 @@ footer {
 #pm_id_NavFloat {
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
   #pm_id_NavFloat .nav_item {
     padding-left: 0.7vh;
     padding-right: 0.7vh; }

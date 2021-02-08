@@ -20,24 +20,15 @@ if (PM_DIR === "ltr") {
     console.log("PM_DIR ERROR!");
 }
 
-function test() {
-    alert("dfdfsdf");
-}
-
 function initFun() {
-    setTimeout(() => {
-
-    }, 100);
-
+    setTimeout(() => {}, 100);
     if (PM_ONEPAGER === "false") {
         setRouter();
     }
     setHamburgerMenu();
-
     if ((PM_HEADER === "true") || (PM_FLOATHEADER === "true")) {
         setChangeLang();
     }
-
     if (PM_HEADER === "true") {
         setBarAsset();
         setOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
@@ -45,23 +36,14 @@ function initFun() {
     setGoTopButton();
     initModalLocalisation();
     new Thebility().init();
-    if (PM_ONEPAGER === "false") {
-        getAgent();
+
+    if (PM_FLOATHEADER === "true" && PM_ISMOB === "false") {
+        dragFloatingHeader();
     }
 
-    if (PM_FLOATHEADER === "true") {
-
-        document.querySelector("#pm_logo-float--header").addEventListener("click", function() { drag(this); });
-        document.querySelector("#pm_logo-float--header").click();
-    }
-    //CUSTOM FUNCTIONS
-    //
     if (PM_ISMOB === "false") {
-        moveBar();
-    }
 
-    lightBox("porfoGrid_item", "porfoGrid_lb");
-    googleMap("rippMap");
+    }
 
     if (PM_ONEPAGER === "false") {
         let hash = window.location.hash;
@@ -69,7 +51,6 @@ function initFun() {
         let id = hash.split("#").pop();
         if (id === null || !isFinite(id) || id !== parseInt(id, 10)) return;
         getContentView(id);
-        alert(id);
     }
 
 }

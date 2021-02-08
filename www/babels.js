@@ -151,10 +151,6 @@ if (PM_DIR === "ltr") {
   console.log("PM_DIR ERROR!");
 }
 
-function test() {
-  alert("dfdfsdf");
-}
-
 function initFun() {
   setTimeout(function () {}, 100);
 
@@ -177,25 +173,11 @@ function initFun() {
   initModalLocalisation();
   new Thebility().init();
 
-  if (PM_ONEPAGER === "false") {
-    getAgent();
+  if (PM_FLOATHEADER === "true" && PM_ISMOB === "false") {
+    dragFloatingHeader();
   }
 
-  if (PM_FLOATHEADER === "true") {
-    document.querySelector("#pm_logo-float--header").addEventListener("click", function () {
-      drag(this);
-    });
-    document.querySelector("#pm_logo-float--header").click();
-  } //CUSTOM FUNCTIONS
-  //
-
-
-  if (PM_ISMOB === "false") {
-    moveBar();
-  }
-
-  lightBox("porfoGrid_item", "porfoGrid_lb");
-  googleMap("rippMap");
+  if (PM_ISMOB === "false") {}
 
   if (PM_ONEPAGER === "false") {
     var hash = window.location.hash;
@@ -203,8 +185,15 @@ function initFun() {
     var id = hash.split("#").pop();
     if (id === null || !isFinite(id) || id !== parseInt(id, 10)) return;
     getContentView(id);
-    alert(id);
   }
+}
+"use strict";
+
+function dragFloatingHeader() {
+  document.querySelector("#pm_logo-float--header").addEventListener("click", function () {
+    drag(this);
+  });
+  document.querySelector("#pm_logo-float--header").click();
 }
 "use strict";
 
@@ -320,6 +309,38 @@ function setRouter() {
         removeHamburger();
       }, 50);
     });
+  });
+}
+"use strict";
+
+function moveLogoOnScroll() {
+  window.addEventListener("scroll", function () {
+    var win = window.scrollY;
+    var el = document.querySelector("#pm_Header-float--desktop");
+    var elh = el.offsetWidth;
+    var distance = "calc(100vw - " + elh + "px - 7vh)";
+    var height = window.innerHeight;
+    var transition = "0.8s";
+    var logo = document.querySelector("#pm_logo-float--header");
+    var logoimg = logo.querySelector("img");
+
+    if (win > height / 3) {
+      el.style.right = distance;
+      el.style.transition = transition;
+      logoimg.style.width = "5vh";
+      logo.style.top = "3.5vh";
+      logo.style.left = "2vh";
+      logoimg.style.transition = transition;
+      logo.style.transition = transition;
+    } else {
+      el.style.right = "2vh";
+      el.style.transition = transition;
+      logoimg.style.width = "50vh";
+      logo.style.top = "25vh";
+      logo.style.left = "calc(48vw - 25vh)";
+      logoimg.style.transition = transition;
+      logo.style.transition = transition;
+    }
   });
 }
 "use strict";
@@ -953,37 +974,6 @@ function Thebility() {
   }
 }
 "use strict";
-
-function moveBar() {
-  window.addEventListener("scroll", function () {
-    var win = window.scrollY;
-    var el = document.querySelector("#pm_Header-float--desktop");
-    var elh = el.offsetWidth;
-    var distance = "calc(100vw - " + elh + "px - 7vh)";
-    var height = window.innerHeight;
-    var transition = "0.8s";
-    var logo = document.querySelector("#rippMainLogo ");
-    var logoimg = logo.querySelector("img");
-
-    if (win > height / 3) {
-      el.style.right = distance;
-      el.style.transition = transition;
-      logoimg.style.width = "5vh";
-      logo.style.top = "3.5vh";
-      logo.style.left = "2vh";
-      logoimg.style.transition = transition;
-      logo.style.transition = transition;
-    } else {
-      el.style.right = "2vh";
-      el.style.transition = transition;
-      logoimg.style.width = "50vh";
-      logo.style.top = "25vh";
-      logo.style.left = "calc(48vw - 25vh)";
-      logoimg.style.transition = transition;
-      logo.style.transition = transition;
-    }
-  });
-}
 "use strict";
 
 function setPageFunctions() {
@@ -1054,15 +1044,15 @@ function getRandMath(min, max) {
 }
 "use strict";
 
-function googleMap(elemid) {
+function googleMap(elem, lat, lng) {
   function initMap() {
     // The location of Uluru
     var uluru = {
-      lat: -25.344,
-      lng: 131.036
+      lat: lat,
+      lng: lng
     }; // The map, centered at Uluru
 
-    var map = new google.maps.Map(document.getElementById(elemid), {
+    var map = new google.maps.Map(document.querySelector(elem), {
       zoom: 4,
       center: uluru
     }); // The marker, positioned at Uluru

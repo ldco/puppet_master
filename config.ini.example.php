@@ -1,16 +1,13 @@
 <?php
 
 declare(strict_types=1);
-
 //PM: MOVE THE FILE FOLDER UP!
-
 //title
 define("PM_TITLE", "PUPPET MASTER");
 //meta description
 define("PM_META_DESCRIPT", "פפאפט מאסטר - ווב-פריימורק | 
 Папет Мастер - Веб-фреймворк | 
-Puppet Master - Web framework
-");
+Puppet Master - Web framework");
 //credits
 define("PM_COPYBY", "FABRICA21");
 //by who
@@ -22,14 +19,12 @@ define("PM_DEFAULT_THEME_LIGHT", true);
 define("PM_ALLOW_THEME", true);
 //WEBP
 define("PM_WEBP", true);
-
-
 //need login
 define("PM_LOGIN", true);
 //need register
 define("PM_REGISTER", false);
-
 define("PM_IS_DEV", true); // or true -> don't forget to replace config file on host!
+
 define("PM_PROD_SERVER", "apache"); //or nginx
 define("PM_LOCAL_APPFOLDER", "root");
 define("PM_REMOTE_APPFOLDER", "public_html"); //don't touch unless
@@ -37,18 +32,18 @@ define("PM_DEV_OS", "lin"); //lin/win/mac
 define("PM_PROD_OS", "lin"); //lin/win
 define("PM_ONEPAGER", false); //true or false
 define("PM_PROGRESSIVE_APP", false); //true or false
-
 //sceleton items
 define("PM_HEADER", true); //will be false if PM_FLOATHEADER is true
-define("PM_FLOATHEADER", false);
+define("PM_FLOATHEADER", true);
 define("PM_SOCIO_BAR", false);
-define("PM_FOOTER", false);
+define("PM_FOOTER", true);
 define("PM_FOOTER_NAV", false); //always false if PM_FOOTER false
-
 //langs
 define("PM_DEFAULT_LANG", "en");
-define("PM_ALL_LANGS", array("en")); //list of langs
+define("PM_ALL_LANGS", array("en", "ru", "he", "fr")); //list of langs
 define("PM_ALLOW_CLIENTLANG", true); // or true (if true, default is client lang)
+//routing
+define("PM_PHP_ROUTING", false);
 
 //DB local
 define("DB_NAME_LOCAL", "");

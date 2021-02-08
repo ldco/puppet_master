@@ -2,15 +2,13 @@
 @import "../../../../core/styles/sass/skeleton_core/header_core";
 //base queries
 @include mob(true) {
-    #pm_Header--desktop,
-    #pm_Header-float--desktop,
-    #pm_panel--header {
+    header:first-of-type {
         display: none !important;
     }
 }
 
 @include mob(false) {
-    #pm_Header--mobile,
+    header:nth-of-type(2),
     #pm_mobile-slide {
         display: none !important;
     }
