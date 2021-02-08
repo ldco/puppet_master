@@ -61,44 +61,6 @@
     background-position: center;
 }
 
-@include mob(true) {
-    #pm_asset-header {
-        height: calc(#{map-get($mob, height)} / 2.1);
-        top: calc((#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
-    }
-}
-
-@include mob(false) {
-    #pm_asset-header {
-        height: calc(#{map-get($horizontHeader, height)} / 2.1);
-        top: calc((#{map-get($horizontHeader, height)} / 2) - ((calc(#{map-get($horizontHeader, height)} / 2.1)) / 2));
-    }
-}
-
-#pm_asset-header {
-    width: map-get($horizontHeader, asset);
-    position: fixed;
-    z-index: 1979;
-    @include dir(3vh);
-}
-
-#pm_asset-header--float {
-    [dir=rtl] & {
-        margin-right: 2vh;
-    }
-    [dir=ltr] & {
-        margin-left: 2vh;
-    }
-}
-
-#pm_asset-header,
-#pm_asset-header--float {
-    cursor: pointer;
-    &:hover {
-        @include heartbeat;
-    }
-}
-
 #pm_logo-header--float {
     height: 4vh;
     width: 10vh;
@@ -116,33 +78,15 @@
 }
 
 //ASSET
-@include mob(true) {
-    #pm_asset-header {
-        height: calc(#{map-get($mob, height)} / 2.1);
-        top: calc((#{map-get($mob, height)} / 2) - ((calc(#{map-get($mob, height)} / 2.1)) / 2));
-    }
-}
-
-@include mob(false) {
-    #pm_asset-header {
-        height: calc(#{map-get($horizontHeader, height)} / 2.1);
-        top: calc((#{map-get($horizontHeader, height)} / 2) - ((calc(#{map-get($horizontHeader, height)} / 2.1)) / 2));
-    }
-}
-
 #pm_asset-header {
     width: map-get($horizontHeader, asset);
     position: fixed;
     z-index: 1979;
-    @include dir(3vh);
-}
-
-#pm_asset-header--float {
     [dir=rtl] & {
-        margin-right: 2vh;
+        left: 3vh;
     }
     [dir=ltr] & {
-        margin-left: 2vh;
+        right: 3vh;
     }
 }
 
@@ -151,5 +95,14 @@
     cursor: pointer;
     &:hover {
         @include heartbeat;
+    }
+}
+
+#pm_asset-header--float {
+    [dir=rtl] & {
+        margin-right: 2vh;
+    }
+    [dir=ltr] & {
+        margin-left: 2vh;
     }
 }
