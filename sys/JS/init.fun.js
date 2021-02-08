@@ -20,7 +20,14 @@ if (PM_DIR === "ltr") {
     console.log("PM_DIR ERROR!");
 }
 
+function test() {
+    alert("dfdfsdf");
+}
+
 function initFun() {
+    setTimeout(() => {
+
+    }, 100);
 
     if (PM_ONEPAGER === "false") {
         setRouter();
@@ -55,13 +62,14 @@ function initFun() {
 
     lightBox("porfoGrid_item", "porfoGrid_lb");
     googleMap("rippMap");
-    //
-    /*end of functions list!*/
+
     if (PM_ONEPAGER === "false") {
-        let setURL = window.location.hash;
-        if (setURL === "") return;
-        let id = setURL.split("#").pop();
+        let hash = window.location.hash;
+        if (hash === "") return;
+        let id = hash.split("#").pop();
         if (id === null || !isFinite(id) || id !== parseInt(id, 10)) return;
         getContentView(id);
+        alert(id);
     }
+
 }

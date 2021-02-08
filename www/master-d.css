@@ -1785,23 +1785,23 @@ footer {
   #pm_Lang img:active {
     box-shadow: 0 0 0vh 0.3vh rgba(47, 47, 47, 0.3) !important; }
 
-#pm_langNav {
+#pm_Nav-lang {
   display: none;
   top: -20vh; }
 
-#pm_langNav.--active {
+#pm_Nav-lang.--active {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   top: 6vh; }
-  #pm_langNav.--active form {
+  #pm_Nav-lang.--active form {
     margin-top: 1.5vh;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    #pm_langNav.--active form input {
+    #pm_Nav-lang.--active form input {
       font-size: 1.8vh;
       background-color: #aa0000;
       color: #f9f9f9;
@@ -1815,10 +1815,10 @@ footer {
       display: flex;
       justify-content: center;
       align-items: center; }
-      #pm_langNav.--active form input:hover {
+      #pm_Nav-lang.--active form input:hover {
         filter: brightness(1.1);
         box-shadow: 0 0 0vh 0.2vh #f9f9f9; }
-      #pm_langNav.--active form input:active {
+      #pm_Nav-lang.--active form input:active {
         box-shadow: 0 0 0.5vh 0.1vh #f9f9f9; }
 
 [lang=en] #pm_Nav--mobile {
@@ -1838,12 +1838,12 @@ footer {
   #pm_Nav--mobile #pm_Lang img {
     display: none; }
 
-#pm_langNavMobile form {
+#pm_Nav-lang--mobile form {
   width: 45vw;
   flex-direction: row;
   justify-content: space-around;
   margin-top: calc(100vw - (45vw / 0.49)); }
-  #pm_langNavMobile form input {
+  #pm_Nav-lang--mobile form input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1851,20 +1851,20 @@ footer {
     color: #f9f9f9;
     border-radius: none;
     font-size: calc(1vw + 1vh + 0.5vmin); }
-    [lang=en] #pm_langNavMobile form input {
+    [lang=en] #pm_Nav-lang--mobile form input {
       font-family: Montserrat;
       font-weight: 400; }
-    [lang=ru] #pm_langNavMobile form input {
+    [lang=ru] #pm_Nav-lang--mobile form input {
       font-family: Montserrat;
       font-weight: 400; }
-    [lang=he] #pm_langNavMobile form input {
+    [lang=he] #pm_Nav-lang--mobile form input {
       font-family: Heebo;
       font-weight: 400; }
 
 [data-floatheader=true] #pm_Nav--mobile {
   margin-top: 1vh; }
 
-[data-floatheader=true] #pm_langNavMobile form {
+[data-floatheader=true] #pm_Nav-lang--mobile form {
   margin-top: 2vh; }
 
 #pm_id_NavFloat {

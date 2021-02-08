@@ -263,12 +263,12 @@
     }
 }
 
-#pm_langNav {
+#pm_Nav-lang {
     display: none;
     top: -20vh;
 }
 
-#pm_langNav.--active {
+#pm_Nav-lang.--active {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,7 +315,7 @@
     }
 }
 
-#pm_langNavMobile {
+#pm_Nav-lang--mobile {
     form {
         width: map-get($mob, open_width);
         flex-direction: row;
@@ -338,7 +338,7 @@
     #pm_Nav--mobile {
         margin-top: 1vh;
     }
-    #pm_langNavMobile {
+    #pm_Nav-lang--mobile {
         form {
             margin-top: 2vh;
             input {}

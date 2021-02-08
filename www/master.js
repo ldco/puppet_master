@@ -4944,7 +4944,7 @@ function getContentView(id) {
 
 "use strict";
 
-function getThisContentView(x) {
+function getThisPageID(x) {
   var _id = x.id;
 
   var id = _id.split("#").pop();
@@ -5076,7 +5076,13 @@ if (PM_DIR === "ltr") {
   console.log("PM_DIR ERROR!");
 }
 
+function test() {
+  alert("dfdfsdf");
+}
+
 function initFun() {
+  setTimeout(function () {}, 100);
+
   if (PM_ONEPAGER === "false") {
     setRouter();
   }
@@ -5114,42 +5120,15 @@ function initFun() {
   }
 
   lightBox("porfoGrid_item", "porfoGrid_lb");
-  googleMap("rippMap"); //
-
-  /*end of functions list!*/
+  googleMap("rippMap");
 
   if (PM_ONEPAGER === "false") {
-    var setURL = window.location.hash;
-    if (setURL === "") return;
-    var id = setURL.split("#").pop();
+    var hash = window.location.hash;
+    if (hash === "") return;
+    var id = hash.split("#").pop();
     if (id === null || !isFinite(id) || id !== parseInt(id, 10)) return;
     getContentView(id);
-  }
-}
-
-"use strict";
-
-function getAgent() {
-  var hash = window.location.hash.substring(1, 2);
-  var agent = window.location.hash.slice(3);
-
-  if (window.location.hash === "#6") {
-    return;
-  }
-
-  if (hash === "6") {
-    setTimeout(function () {
-      var els = document.querySelectorAll(".pm_agents_item");
-      var current = document.querySelector("#agentid_" + agent);
-      console.log(current);
-
-      for (var i = 0; i < els.length; i++) {
-        els[i].style.display = "none";
-      }
-
-      current.style.display = "inherit";
-    }, 400);
-    window.location.hash = "#6";
+    alert(id);
   }
 }
 
@@ -5165,7 +5144,7 @@ function setBarAsset() {
 
 function setChangeLang() {
   var el = document.querySelector('#pm_Lang img');
-  var el2 = document.querySelector('#pm_langNav');
+  var el2 = document.querySelector('#pm_Nav-lang');
 
   if (el != null) {
     el.addEventListener("click", function () {
@@ -5266,7 +5245,7 @@ function setRouter() {
   els = document.querySelectorAll(".nav_item");
   els.forEach(function (el) {
     el.addEventListener("click", function () {
-      getThisContentView(this);
+      getThisPageID(this);
       setTimeout(function () {
         removeHamburger();
       }, 50);
