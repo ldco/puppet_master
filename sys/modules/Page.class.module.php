@@ -153,11 +153,4 @@ class Page
         }
         echo "<article class='pm_text " . $_class . "' id='text_" . $PM_PAGE_NUM . "_" .  $textId . "'>" . $row[PM_LANG] . '</article>';
     }
-
-
-    public function close()
-    {
-        echo '<div></div>';
-        echo "</section>";
-    }
 }

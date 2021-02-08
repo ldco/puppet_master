@@ -5,10 +5,11 @@ footer {
     border-top: solid $c_domin 1px;
     width: 100vw;
     height: map-get($footer, height);
-    position: fixed;
+    position: absolute;
     bottom: 0;
     .pm_footer--credits,
     .pm_footer--credits-by {
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
