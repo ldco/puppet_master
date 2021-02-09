@@ -58,7 +58,7 @@ class SkeletonHeader
         }
         $headerLogoImg = PM_IMAGES_REL . "brand/headerLogo.svg";
         $modelNav = $this->modelNav;
-        $modelBar = $this;
+        $modelHeader = $this;
         $nav_pm_asset = PM_ICONS_REL . "100.svg";
         if (defined("PM_HEADER") && PM_HEADER) {
             require_once PM_ROOT . $this->viewsNames['header_desktop'];

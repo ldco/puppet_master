@@ -2,18 +2,21 @@
 @import "../../../../core/styles/sass/system_core/browser_core";
 html {
     height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     max-height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
     max-width: 100vw;
     overflow-x: hidden;
 }
 
 body {
     height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
     max-height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
     max-width: 100vw;
-    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;

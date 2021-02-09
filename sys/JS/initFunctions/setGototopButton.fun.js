@@ -1,19 +1,27 @@
  function setGototopButton() {
      let el = document.querySelector("#pm_gototop");
+     let section = document.querySelector("section");
+
      window.onscroll = (event) => {
-         if (window.scrollY > 180) {
+         if (window.scrollY > 90) {
              el.style.display = "flex";
-             console.log("asdasdasd");
+             setTimeout(() => {
+                 el.style.opacity = "1";
+                 el.style.transition = "0.3s"
+             }, 300);
+
+
+
          } else {
-             el.style.display = "none";
-             console.log("ccccccccccccccccccc");
+             el.style.opacity = "0";
+             el.style.transition = "0.3s"
+             setTimeout(() => {
+                 el.style.display = "none";
+             }, 300);
          }
      };
-
-
      el.addEventListener("click", function() {
-         document.querySelector("section").scrollIntoView({ behavior: "smooth", block: "start" });
+         section.scrollIntoView({ behavior: "smooth", block: "start" });
 
      });
-
  }

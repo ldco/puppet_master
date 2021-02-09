@@ -54,14 +54,15 @@ if (PM_HEADER && !PM_FLOATHEADER) {
 <body>
     <div id="pm_overlay" style="display: none"></div>
     <?php
-    $modelBar->index(); ?>
-    <main><?= $sPageContent; ?></main>
-
+    $modelHeader->index(); ?>
+    <main><?= $sPageContent; ?>
+        <?php if (defined("PM_FOOTER") && PM_FOOTER) $modelFooter->index(); ?>
+    </main>
     <div id="pm_gototop">
         <img alt="go top" src="<?= PM_ICONS_REL ?>up.svg">
     </div>
 
-    <?php if (defined("PM_FOOTER") && PM_FOOTER) $modelFooter->index(); ?>
+
 </body>
 
 </html>

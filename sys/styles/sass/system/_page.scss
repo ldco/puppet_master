@@ -5,7 +5,7 @@
         padding-bottom: calc(#{map-get($footer, height)} + #{map-get($footer, height)};
     }
     main section {
-        min-height: calc(#{100%} - #{map-get($footer, height)} - #{$sectionPadding});
+        min-height: calc(#{100%} - #{map-get($footer, height)} - #{$sectionBottomPadding});
     }
 }
 
@@ -17,15 +17,12 @@
 
 main section {
     width: 100%;
-    min-height: calc(#{100%} - #{$sectionPadding});
+    min-height: calc(#{100%} - #{$sectionBottomPadding});
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: $sectionPadding;
-    padding-right: $sectionPadding;
-    padding-bottom: $sectionPadding;
-    ;
+    padding-bottom: $sectionBottomPadding;
     h1 {
         &:after {
             content: "";

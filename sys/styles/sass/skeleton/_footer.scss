@@ -7,14 +7,16 @@ footer {
     height: map-get($footer, height);
     position: absolute;
     bottom: 0;
-    .pm_footer--credits,
-    .pm_footer--credits-by {
-        height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    #pm_footer--credits,
+    #pm_footer--credits-by {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .pm_footer--copyright {
-        position: fixed;
+    #pm_footer--copyright {
+        position: absolute;
     }
 }

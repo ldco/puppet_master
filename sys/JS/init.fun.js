@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", initFun);
 //Custom pages functions
 window.addEventListener("hashchange", setPageFunctions, false);
-window.onscroll = function() { scrollFunction() };
 
 //CONSTANTS
 const PM_DIR = document.querySelector("html").getAttribute("dir");
@@ -42,7 +41,7 @@ function initFun() {
     }
     if (PM_HEADER === "true") {
         setBarAsset();
-        addClassOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
+        addClassOnScroll("#pm_Header--desktop", "--scrolled");
     }
     //Set go to top button
     setGototopButton();

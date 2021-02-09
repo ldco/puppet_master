@@ -13,8 +13,8 @@
 @include mob(false) {
     main {
         width: generateContentSize(true, false);
-        height: generateContentSize(false, false);
         top: generateContentPosition(true, false);
+        height: generateContentSize(false, false);
     }
 }
 
@@ -45,6 +45,4 @@ main {
     position: absolute;
     display: flex;
     justify-content: center;
-    overflow-y: auto;
-    overflow-x: hidden;
 }

@@ -11,17 +11,18 @@
 footer {
     background-color: $c_domin;
     color: $c_opos;
+    box-shadow: 0vh 0vh 1vh 0vh rgba($c_black, 0.2);
     @include font(1, 900);
     text-transform: uppercase;
     span {
         @include font(1, 400);
         @include f-size(0.5);
     }
-    .pm_footer--copyright {
+    #pm_footer--copyright {
         @include dir(2vw);
         direction: ltr;
     }
-    .pm_footer--credits-by {
+    #pm_footer--credits-by {
         &:hover {
             letter-spacing: 0.2vh;
             transition: 0.1s;

@@ -5059,12 +5059,7 @@ function smoothScroll(elems) {
 
 document.addEventListener("DOMContentLoaded", initFun); //Custom pages functions
 
-window.addEventListener("hashchange", setPageFunctions, false);
-
-window.onscroll = function () {
-  scrollFunction();
-}; //CONSTANTS
-
+window.addEventListener("hashchange", setPageFunctions, false); //CONSTANTS
 
 var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
@@ -5103,7 +5098,7 @@ function initFun() {
 
   if (PM_HEADER === "true") {
     setBarAsset();
-    addClassOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
+    addClassOnScroll("#pm_Header--desktop", "--scrolled");
   } //Set go to top button
 
 
@@ -5170,19 +5165,26 @@ function setChangeLang() {
 
 function setGototopButton() {
   var el = document.querySelector("#pm_gototop");
+  var section = document.querySelector("section");
 
   window.onscroll = function (event) {
-    if (window.scrollY > 180) {
+    if (window.scrollY > 90) {
       el.style.display = "flex";
-      console.log("asdasdasd");
+      setTimeout(function () {
+        el.style.opacity = "1";
+        el.style.transition = "0.3s";
+      }, 300);
     } else {
-      el.style.display = "none";
-      console.log("ccccccccccccccccccc");
+      el.style.opacity = "0";
+      el.style.transition = "0.3s";
+      setTimeout(function () {
+        el.style.display = "none";
+      }, 300);
     }
   };
 
   el.addEventListener("click", function () {
-    document.querySelector("section").scrollIntoView({
+    section.scrollIntoView({
       behavior: "smooth",
       block: "start"
     });

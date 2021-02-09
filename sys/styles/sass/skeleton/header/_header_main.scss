@@ -19,7 +19,7 @@ $headerShadow: 0vh 0vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
 header {
     background-color: $c_domin;
     box-shadow: $headerShadow;
-    position: fixed;
+    position: fixed !important;
     z-index: 1978;
     top: 0;
     display: flex;
@@ -87,7 +87,6 @@ header .--scrolled {
 }
 
 #pm_Header--mobile {
-    position: fixed;
     @include dir(0);
     top: 0;
     width: 100%;

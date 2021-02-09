@@ -9,7 +9,7 @@
     </nav>
     <?php if ($definedLogin) : ?>
         <div id="pm_panel--header">
-            <?php if ($isAuthenticated) $modelBar->makeLogout(); ?>
+            <?php if ($isAuthenticated) $modelHeader->makeLogout(); ?>
         </div>
     <?php endif; ?>
     <?php pmImg("Asset", $nav_pm_asset, true, "anim", $bar_asset); ?>

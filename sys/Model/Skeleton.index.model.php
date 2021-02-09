@@ -8,7 +8,7 @@ class SkeletonIndex
 {
 
     //  private $conn;
-    private $modelBar = null;
+    private $modelHeader = null;
     private $modelDepends = null;
     private $modelFooter = null;
     private $viewsNames = [];
@@ -29,7 +29,7 @@ class SkeletonIndex
         require_once $modelPath . "Skeleton.header.model.php";
         require_once $modelPath . "Skeleton.depends.model.php";
         require_once $modelPath . "Skeleton.footer.model.php";
-        $this->modelBar = new SkeletonHeader;
+        $this->modelHeader = new SkeletonHeader;
         $this->modelDepends = new SkeletonDepends;
         $this->modelFooter = new SkeletonFooter;
         return;
@@ -38,7 +38,7 @@ class SkeletonIndex
     function index($sPageContent = '')
     {
         if (!defined("PM_ROOT")) return false;
-        $modelBar = $this->modelBar;
+        $modelHeader = $this->modelHeader;
         $modelDepends = $this->modelDepends;
         $modelFooter = $this->modelFooter;
         $isAdmin = $this->isAdmin;
@@ -70,7 +70,7 @@ class SkeletonIndex
 
     public function __destruct()
     {
-        $this->modelBar = null;
+        $this->modelHeader = null;
         $this->modelDepends = null;
         $this->modelFooter = null;
         return;
