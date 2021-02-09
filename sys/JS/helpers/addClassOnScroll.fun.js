@@ -1,4 +1,4 @@
-function setOnScroll(element, classname, height = 180) {
+function addClassOnScroll(element, classname, height = 180) {
     window.addEventListener("scroll", function() {
         let win = window.scrollY;
         let el = document.querySelector(element);

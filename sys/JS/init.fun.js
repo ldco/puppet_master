@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", initFun);
 //Custom pages functions
 window.addEventListener("hashchange", setPageFunctions, false);
+window.onscroll = function() { scrollFunction() };
 
 //CONSTANTS
 const PM_DIR = document.querySelector("html").getAttribute("dir");
@@ -41,10 +42,10 @@ function initFun() {
     }
     if (PM_HEADER === "true") {
         setBarAsset();
-        setOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
+        addClassOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
     }
     //Set go to top button
-    setGoTopButton();
+    setGototopButton();
     //Set translation for modal windows - will be removed later
     initModalLocalisation();
     //THEBILITY!
@@ -58,6 +59,7 @@ function initFun() {
     if (PM_FLOATHEADER === "false") {
         document.querySelector("#pm_logo-header").addEventListener("click", function() { location.reload(); });
     }
+
     //Get content of page
     if (PM_ONEPAGER === "false") {
         let hash = window.location.hash;

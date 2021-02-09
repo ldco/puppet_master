@@ -1,5 +1,20 @@
 "use strict";
 
+function addClassOnScroll(element, classname) {
+  var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 180;
+  window.addEventListener("scroll", function () {
+    var win = window.scrollY;
+    var el = document.querySelector(element);
+
+    if (win > height) {
+      el.classList.add(classname);
+    } else {
+      el.classList.remove(classname);
+    }
+  });
+}
+"use strict";
+
 function getContentView(id) {
   var lang = document.querySelector("html").getAttribute("lang");
   history.replaceState(null, null, " ");
@@ -103,21 +118,6 @@ function pmGetTranslate(text) {
 }
 "use strict";
 
-function setOnScroll(element, classname) {
-  var height = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 180;
-  window.addEventListener("scroll", function () {
-    var win = window.scrollY;
-    var el = document.querySelector(element);
-
-    if (win > height) {
-      el.classList.add(classname);
-    } else {
-      el.classList.remove(classname);
-    }
-  });
-}
-"use strict";
-
 function smoothScroll(elems) {
   document.querySelectorAll(elems).forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
@@ -134,7 +134,12 @@ function smoothScroll(elems) {
 //Start fun!
 document.addEventListener("DOMContentLoaded", initFun); //Custom pages functions
 
-window.addEventListener("hashchange", setPageFunctions, false); //CONSTANTS
+window.addEventListener("hashchange", setPageFunctions, false);
+
+window.onscroll = function () {
+  scrollFunction();
+}; //CONSTANTS
+
 
 var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
@@ -173,11 +178,11 @@ function initFun() {
 
   if (PM_HEADER === "true") {
     setBarAsset();
-    setOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
+    addClassOnScroll("#pm_Header--desktop", "pm_bar_scrolled");
   } //Set go to top button
 
 
-  setGoTopButton(); //Set translation for modal windows - will be removed later
+  setGototopButton(); //Set translation for modal windows - will be removed later
 
   initModalLocalisation(); //THEBILITY!
 
@@ -234,16 +239,25 @@ function setChangeLang() {
 }
 "use strict";
 
-function setGoTopButton() {
-  var el = "#pm_gototop";
-  setOnScroll("#pm_gototop", "pm_gototop--scrolled", 180);
-  /*  document.querySelector(el).addEventListener("click", function() {
-       window.scroll({
-           top: 0,
-           left: 0,
-           behavior: 'smooth'
-       });
-   }); */
+function setGototopButton() {
+  var el = document.querySelector("#pm_gototop");
+
+  window.onscroll = function (event) {
+    if (window.scrollY > 180) {
+      el.style.display = "flex";
+      console.log("asdasdasd");
+    } else {
+      el.style.display = "none";
+      console.log("ccccccccccccccccccc");
+    }
+  };
+
+  el.addEventListener("click", function () {
+    document.querySelector("section").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  });
 }
 "use strict";
 

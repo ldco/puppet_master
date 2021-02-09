@@ -2,10 +2,10 @@
 @import "../../../../core/styles/sass/system_core/page_core";
 [data-footer=true] {
     main section:last-of-type {
-        padding-bottom: calc(#{map-get($footer, height)} + #{$sectionPadding}) !important;
+        padding-bottom: calc(#{map-get($footer, height)} + #{map-get($footer, height)};
     }
-    section {
-        min-height: calc(#{100vh} - #{map-get($footer, height)} - #{$sectionPadding} - #{$sectionPadding});
+    main section {
+        min-height: calc(#{100%} - #{map-get($footer, height)} - #{$sectionPadding});
     }
 }
 
@@ -16,12 +16,16 @@
 }
 
 main section {
-    min-height: calc(#{100vh} - #{$sectionPadding} - #{$sectionPadding});
+    width: 100%;
+    min-height: calc(#{100%} - #{$sectionPadding});
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $sectionPadding;
+    padding-left: $sectionPadding;
+    padding-right: $sectionPadding;
+    padding-bottom: $sectionPadding;
+    ;
     h1 {
         &:after {
             content: "";

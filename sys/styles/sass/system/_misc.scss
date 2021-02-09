@@ -44,15 +44,31 @@
 
 #pm_gototop {
     position: fixed;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     z-index: 1979;
+    width: $gotopButtonSize + vh;
+    height: $gotopButtonSize + vh;
 }
 
-.pm_gototop--scrolled {
-    display: flex !important;
+@include mob(true) {
+    #pm_gototop {
+        img {
+            width: $gotopButtonSize + vh;
+            height: $gotopButtonSize + vh;
+        }
+    }
+}
+
+@include mob(false) {
+    #pm_gototop {
+        img {
+            width: $gotopButtonSize + vh;
+            height: $gotopButtonSize + vh;
+        }
+    }
 }
 
 //page blocking div

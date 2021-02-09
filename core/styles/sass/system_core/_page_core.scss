@@ -1,5 +1,5 @@
 $sectionPadding: 3vh;
-section {
+main section {
     color: $c_opos;
     background-color: $c_domin;
     h1 {
@@ -16,12 +16,12 @@ section {
 }
 
 @include mob(true) {
-    article {
+    main section article {
         width: 80vw;
         line-height: 140%;
         @include f-size($basicTextSize - 0.2);
     }
-    section {
+    main section {
         h1 {
             margin-top: 4vh;
         }
@@ -32,11 +32,11 @@ section {
 }
 
 @include mob(false) {
-    article {
+    main section article {
         width: 90vw;
         line-height: 130%;
     }
-    section {
+    main section {
         h1 {
             margin-top: 6vh;
         }
@@ -46,8 +46,9 @@ section {
     }
 }
 
-article {
+main section article {
     @include font(1, 300);
+    @include f-size($basicTextSize);
 }
 
 .pm_text {}

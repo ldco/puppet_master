@@ -1,4 +1,4 @@
-<div id="<?= $navElementID; ?>" class="<?= $navItemClass; ?>" onclick="<?= $navRenderJS; ?>">
+<div id="<?= $navElementID; ?>" class="<?= $navItemClass; ?>">
     <?php if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING) : ?>
     <a href="<?= $navElemURL; ?>">
         <?php endif; ?>

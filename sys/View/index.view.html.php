@@ -56,11 +56,11 @@ if (PM_HEADER && !PM_FLOATHEADER) {
     <?php
     $modelBar->index(); ?>
     <main><?= $sPageContent; ?></main>
-    <a href="#">
-        <div id="pm_gototop">
-            <img alt="go top" src="<?= PM_ICONS_REL ?>up.svg">
-        </div>
-    </a>
+
+    <div id="pm_gototop">
+        <img alt="go top" src="<?= PM_ICONS_REL ?>up.svg">
+    </div>
+
     <?php if (defined("PM_FOOTER") && PM_FOOTER) $modelFooter->index(); ?>
 </body>
 

@@ -16,24 +16,7 @@
 }
 
 //go top button
-@include mob(true) {
-    #pm_gototop {
-        img {
-            width: 2.5vh;
-            height: 2.5vh;
-        }
-    }
-}
-
-@include mob(false) {
-    #pm_gototop {
-        img {
-            width: 1.5vw;
-            height: 1.5vw;
-        }
-    }
-}
-
+$gotopButtonSize: 2;
 #pm_gototop {
     [dir=rtl] & {
         left: 5vh;
@@ -45,13 +28,14 @@
         background-color: rgba($c_black, 0.2);
     }
     @if $LIGHT_THEME==false {
-        img {}
+        img {
+            filter: invert(1);
+        }
     }
     bottom: 5vh !important;
     border-radius: 50%;
     padding: 1vh;
     box-shadow: 0 0 0.1vh 0.1vh $c_opos;
-    filter: invert(1);
     &:hover {
         filter: brightness(1.1) invert(1);
         box-shadow: 0 0 0.1vh 0.2vh $c_opos;

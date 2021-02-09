@@ -16,12 +16,12 @@
 
 //rfs font size fix
 @mixin f-size($size) {
-    @include rfs(($size)*(((2vh)*3)/1vw));
+    @include rfs(($size)*((1vh)*3));
 }
 
 //queries
-@mixin mob($x) {
-    @if $x==true {
+@mixin mob($bool) {
+    @if $bool==true {
         [data-mob=true] {
             @media (max-aspect-ratio: 13/9) {
                 @content;
@@ -33,7 +33,7 @@
             }
         }
     }
-    @if $x==false {
+    @if $bool==false {
         [data-mob=true] {
             @media (min-aspect-ratio: 13/9) {
                 @content;
