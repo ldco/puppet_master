@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 require_once PM_SYS . "modules/requires_common.php";
-$page1 = new Page();
+$page2 = new Page();
 ?>
 <div>
 
@@ -14,4 +14,4 @@ $page1 = new Page();
     (специалистов) участие в формировании модели развития.
 </div>
 
-<?php
+<?php $page2->close();

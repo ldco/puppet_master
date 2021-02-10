@@ -21,9 +21,7 @@
 }
 
 .pm_contactsMobile_item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     img {
         width: 7vh;
         padding: 2vh;

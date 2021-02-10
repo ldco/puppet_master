@@ -38,9 +38,7 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     position: absolute;
     top: 0;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     text-transform: uppercase;
     div {
         margin-top: 1vh;
@@ -53,9 +51,7 @@ $modalButtonsHeight: $modalButtonsWidth / 2.6;
     position: absolute;
     top: 5vh;
     height: calc(#{$modalParentHeight} - 5vh - 8vh);
-    display: flex;
-    justify-content: center;
-    align-items: center; // position: absolute;
+    @include flex-center(); // position: absolute;
     flex-direction: column;
     div {
         /*  width: 85%; */

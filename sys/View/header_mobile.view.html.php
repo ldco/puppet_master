@@ -5,11 +5,12 @@
         </div>
     </div>
     <div id="<?= $headerLogo ?>"></div>
-    <?php pmImg("Header asset", $nav_pm_asset, true, "anim", "pm_asset-header"); ?>
+    <?php pmImg("Header asset", $headerAssetUrl, true, "anim", "pm_asset-header"); ?>
 </header>
 <div id="<?= $mobileSlideId ?>">
     <nav id="<?= $navId ?>">
         <?php $modelNav->index();
-        $modelNav->makeLang(true); ?>
+        ?>
     </nav>
+    <?php $modelLangMenu->makeLang(true); ?>
 </div>

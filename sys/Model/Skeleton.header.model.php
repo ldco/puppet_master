@@ -16,6 +16,7 @@ class SkeletonHeader
     private $definedLogin = false;
     private $definedRegister = false;
     private $modelNav = null;
+    private $modelLangMenu = null;
     private $viewsNames = [];
 
     public function __construct()
@@ -25,13 +26,16 @@ class SkeletonHeader
         $this->viewsNames = PM_VIEWS;
         $modelPath = PM_SYS . "Model/";
         require_once $modelPath . "Skeleton.nav.model.php";
+        require_once $modelPath . "Skeleton.langMenu.model.php";
         $this->modelNav = new SkeletonNav;
+        $this->modelLangMenu = new SkeletonLangMenu;
+
         return;
     }
     function index()
     {
         $this->makeSkeletonHeader($this->definedLogin, $this->definedRegister);
-        $this->mobileBar($this->definedLogin, $this->definedRegister);
+        $this->mobileHeader($this->definedLogin, $this->definedRegister);
     }
     private function makeLogout()
     {
@@ -47,33 +51,35 @@ class SkeletonHeader
             $headerId = "pm_Header-float";
             $navId = "pm_id_NavFloat";
             $headerLogo = "pm_logo-header--float";
-            $bar_asset = "pm_asset-header--float";
+            $headerAsset = "pm_asset-header--float";
         } else if (defined("PM_FLOATHEADER") && !PM_FLOATHEADER) {
             $headerId = "pm_Header--desktop";
             $navId = "pm_Nav--desktop";
             $headerLogo = "pm_logo-header";
-            $bar_asset = "pm_asset-header";
+            $headerAsset = "pm_asset-header";
         } else {
             echo "PM_FLOATHEADER not defined!";
         }
         $headerLogoImg = PM_IMAGES_REL . "brand/headerLogo.svg";
         $modelNav = $this->modelNav;
+        $modelLangMenu = $this->modelLangMenu;
         $modelHeader = $this;
-        $nav_pm_asset = PM_ICONS_REL . "100.svg";
+        $headerAssetUrl = PM_ICONS_REL . "100.svg";
         if (defined("PM_HEADER") && PM_HEADER) {
             require_once PM_ROOT . $this->viewsNames['header_desktop'];
         }
     }
-    public function mobileBar(bool $login, bool $register)
+    public function mobileHeader(bool $login, bool $register)
     {
 
         $mobileSlideId = "pm_mobile-slide";
         $navId = "pm_Nav--mobile";
         $headerId = "pm_Header--mobile";
         $headerLogo = "pm_logo-header--mobile";
-        $nav_pm_asset = PM_ICONS_REL . "100.svg";
+        $headerAssetUrl = PM_ICONS_REL . "100.svg";
         $headerLogoMob = PM_IMAGES_REL . "brand/barLogo.svg";
         $modelNav = $this->modelNav;
+        $modelLangMenu = $this->modelLangMenu;
         require_once PM_ROOT . $this->viewsNames['header_mobile'];
     }
 }

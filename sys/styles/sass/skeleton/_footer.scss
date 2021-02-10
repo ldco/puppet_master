@@ -3,13 +3,9 @@
 footer {
     //hack to remove stripe between content and footer
     border-top: solid $c_domin 1px;
-    width: 100vw;
+    width: 100%;
     height: map-get($footer, height);
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     #pm_footer--credits,
     #pm_footer--credits-by {
         display: flex;

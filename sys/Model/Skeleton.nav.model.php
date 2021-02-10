@@ -22,19 +22,6 @@ class SkeletonNav
         if (!defined("PM_ROOT")) die('PM_ROOT not defined');
         $this->viewsNames = PM_VIEWS;
     }
-    public function makeLang(bool $mobile)
-    {
-        if (count(PM_ALL_LANGS) > 1) {
-            if ($mobile) {
-                $navId = "pm_Nav-lang--mobile";
-            } else {
-                $navId = "pm_Nav-lang";
-            }
-            $navFormAction = "index.php";
-            $imgSrc = PM_ICONS_REL . "lang.svg";
-            require PM_ROOT . $this->viewsNames['nav_lang'];
-        }
-    }
 
     public function index()
     {

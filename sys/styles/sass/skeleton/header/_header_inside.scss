@@ -1,3 +1,5 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../../core/styles/sass/skeleton_core/header_core/header_inside_core";
 //LOGO
 #pm_logo-header {
     width: map-get($horizontHeader, logo_width);
@@ -5,13 +7,19 @@
     position: fixed;
     @include dir(0);
     top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     background-size: calc(#{map-get($horizontHeader, logo_width)} / 1.8);
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+}
+
+@if $PM_HEADER_IS_VERTICAL==true {
+    #pm_logo-header {
+        position: absolute;
+        width: 100%;
+        background-size: calc(#{map-get($verticalHeader, width)} / 1.8);
+    }
 }
 
 @if $LIGHT_THEME==true {
@@ -19,6 +27,11 @@
     #pm_logo-header--float,
     #pm_logo-header--mobile {
         background-image: url("#{$IMAGES_CORE}brand/barLogo--forLight.svg");
+    }
+    @if $PM_HEADER_IS_VERTICAL==true {
+        #pm_logo-header {
+            background-image: url("#{$IMAGES_CORE}brand/squareLogo--forLight.svg") !important;
+        }
     }
 }
 
@@ -32,33 +45,22 @@
     #pm_asset-header--float {
         filter: invert(1);
     }
+    @if $PM_HEADER_IS_VERTICAL==true {
+        #pm_logo-header {
+            background-image: url("#{$IMAGES_CORE}brand/squareLogo--forDark.svg") !important;
+        }
+    }
 }
 
 #pm_logo-header--mobile {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     height: map-get($mob, height);
     width: 50vw;
     left: 25vw;
     background-position: center;
     background-size: calc(#{map-get($mob, height)} / 0.5);
     background-repeat: no-repeat;
-}
-
-#pm_logo-header {
-    width: map-get($horizontHeader, logo_width);
-    height: map-get($horizontHeader, height);
-    position: fixed;
-    @include dir(0);
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: calc(#{map-get($horizontHeader, logo_width)} / 1.8);
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 #pm_logo-header--float {
@@ -104,5 +106,15 @@
     }
     [dir=ltr] & {
         margin-left: 2vh;
+    }
+}
+
+@if $PM_HEADER_IS_VERTICAL==true {
+    @include mob(false) {
+        #pm_asset-header {
+            right: initial !important;
+            left: initial !important;
+            bottom: 2vh;
+        }
     }
 }

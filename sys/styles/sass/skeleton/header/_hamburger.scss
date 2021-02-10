@@ -5,9 +5,7 @@ $hamburgerBGColor: null;
 $hamburgerDistance: map-get($hamburger, distance);
 .pm_hamburger {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
     @include dir($hamburgerDistance);
 }
 

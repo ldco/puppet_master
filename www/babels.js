@@ -224,7 +224,7 @@ function setBarAsset() {
 
 function setChangeLang() {
   var el = document.querySelector('#pm_Lang img');
-  var el2 = document.querySelector('#pm_Nav-lang');
+  var el2 = document.querySelector('#lang_menu');
 
   if (el != null) {
     el.addEventListener("click", function () {
@@ -265,7 +265,7 @@ function setGototopButton() {
 
 function setHamburgerMenu() {
   var hamburger = document.querySelector(".pm_hamburger");
-  var mobileBar = document.querySelector("#pm_mobile-slide");
+  var mobileHeader = document.querySelector("#pm_mobile-slide");
   var helperDiv = document.createElement("div");
   var slideDistance = "3vh";
   helperDiv.setAttribute("class", "hamburger--helper");
@@ -279,18 +279,18 @@ function setHamburgerMenu() {
     var active = hamburger.classList.contains("is-active");
 
     if (active) {
-      mobileBar.style.display = "flex";
+      mobileHeader.style.display = "flex";
       setTimeout(function () {
         if (PM_LTR) {
           anime({
-            targets: mobileBar,
+            targets: mobileHeader,
             translateX: 0,
             left: slideDistance,
             easing: 'spring(0.1, 50, 1.6, 0)'
           });
         } else {
           anime({
-            targets: mobileBar,
+            targets: mobileHeader,
             translateX: 0,
             right: slideDistance,
             easing: 'spring(0, 60, 1, 0)'
@@ -307,19 +307,19 @@ function removeHamburger() {
   if (document.querySelector(".hamburger--helper")) {
     document.querySelector(".pm_hamburger").classList.remove("is-active");
     document.querySelector(".hamburger--helper").remove();
-    var mobileBar;
-    mobileBar = document.querySelector("#pm_mobile-slide");
+    var mobileHeader;
+    mobileHeader = document.querySelector("#pm_mobile-slide");
 
     if (PM_LTR) {
       anime({
-        targets: mobileBar,
+        targets: mobileHeader,
         translateX: '-100vw',
         left: '0',
         easing: 'spring'
       });
     } else {
       anime({
-        targets: mobileBar,
+        targets: mobileHeader,
         translateX: '100vw',
         right: '0',
         easing: 'spring'
@@ -327,7 +327,7 @@ function removeHamburger() {
     }
 
     setTimeout(function () {
-      mobileBar.style.display = "none";
+      mobileHeader.style.display = "none";
     }, 300);
   }
 }
