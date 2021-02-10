@@ -5099,6 +5099,7 @@ function initFun() {
   if (PM_HEADER === "true") {
     setBarAsset();
     addClassOnScroll("#pm_Header--desktop", "--scrolled");
+    addClassOnScroll("#pm_Header--mobile", "--scrolled");
   } //Set go to top button
 
 
@@ -5198,7 +5199,7 @@ function setHamburgerMenu() {
   var mobileHeader = document.querySelector("#pm_mobile-slide");
   var helperDiv = document.createElement("div");
   var slideDistance = "3vh";
-  helperDiv.setAttribute("class", "hamburger--helper");
+  helperDiv.setAttribute("class", "click-anywhere");
   helperDiv.addEventListener("click", function () {
     hamburger.click();
     helperDiv.remove();
@@ -5234,9 +5235,9 @@ function setHamburgerMenu() {
 }
 
 function removeHamburger() {
-  if (document.querySelector(".hamburger--helper")) {
+  if (document.querySelector(".click-anywhere")) {
     document.querySelector(".pm_hamburger").classList.remove("is-active");
-    document.querySelector(".hamburger--helper").remove();
+    document.querySelector(".click-anywhere").remove();
     var mobileHeader;
     mobileHeader = document.querySelector("#pm_mobile-slide");
 

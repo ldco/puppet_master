@@ -4,7 +4,7 @@ function setHamburgerMenu() {
     let mobileHeader = document.querySelector("#pm_mobile-slide");
     let helperDiv = document.createElement("div");
     let slideDistance = "3vh";
-    helperDiv.setAttribute("class", "hamburger--helper");
+    helperDiv.setAttribute("class", "click-anywhere");
     helperDiv.addEventListener("click", function() {
         hamburger.click();
         helperDiv.remove();
@@ -39,9 +39,9 @@ function setHamburgerMenu() {
 }
 
 function removeHamburger() {
-    if (document.querySelector(".hamburger--helper")) {
+    if (document.querySelector(".click-anywhere")) {
         document.querySelector(".pm_hamburger").classList.remove("is-active");
-        document.querySelector(".hamburger--helper").remove();
+        document.querySelector(".click-anywhere").remove();
         let mobileHeader;
         mobileHeader = document.querySelector("#pm_mobile-slide");
         if (PM_LTR) {

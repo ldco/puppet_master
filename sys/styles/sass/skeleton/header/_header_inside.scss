@@ -18,7 +18,6 @@
     #pm_logo-header {
         position: absolute;
         width: 100%;
-        background-size: calc(#{map-get($verticalHeader, width)} / 1.8);
     }
 }
 
@@ -59,24 +58,15 @@
     width: 50vw;
     left: 25vw;
     background-position: center;
-    background-size: calc(#{map-get($mob, height)} / 0.5);
     background-repeat: no-repeat;
 }
 
 #pm_logo-header--float {
-    height: 4vh;
-    width: 10vh;
     cursor: move;
     cursor: grab;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    [dir=rtl] & {
-        margin-left: 2vh;
-    }
-    [dir=ltr] & {
-        margin-right: 2vh;
-    }
 }
 
 //ASSET
@@ -84,12 +74,6 @@
     width: map-get($horizontHeader, asset);
     position: fixed;
     z-index: 1979;
-    [dir=rtl] & {
-        left: 3vh;
-    }
-    [dir=ltr] & {
-        right: 3vh;
-    }
 }
 
 #pm_asset-header,
@@ -100,21 +84,13 @@
     }
 }
 
-#pm_asset-header--float {
-    [dir=rtl] & {
-        margin-right: 2vh;
-    }
-    [dir=ltr] & {
-        margin-left: 2vh;
-    }
-}
+#pm_asset-header--float {}
 
 @if $PM_HEADER_IS_VERTICAL==true {
     @include mob(false) {
         #pm_asset-header {
             right: initial !important;
             left: initial !important;
-            bottom: 2vh;
         }
     }
 }

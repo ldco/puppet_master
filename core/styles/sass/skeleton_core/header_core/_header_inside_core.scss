@@ -1,0 +1,49 @@
+#pm_logo-header {}
+
+@if $PM_HEADER_IS_VERTICAL==true {
+    #pm_logo-header {
+        background-size: calc(#{map-get($verticalHeader, width)} / 1.8) !important;
+    }
+}
+
+#pm_logo-header--mobile {
+    background-size: calc(#{map-get($mob, height)} / 0.5);
+}
+
+#pm_logo-header--float {
+    height: 4vh;
+    width: 10vh;
+    [dir=rtl] & {
+        margin-left: 2vh;
+    }
+    [dir=ltr] & {
+        margin-right: 2vh;
+    }
+}
+
+//ASSET
+#pm_asset-header {
+    [dir=rtl] & {
+        left: 3vh;
+    }
+    [dir=ltr] & {
+        right: 3vh;
+    }
+}
+
+#pm_asset-header--float {
+    [dir=rtl] & {
+        margin-right: 2vh;
+    }
+    [dir=ltr] & {
+        margin-left: 2vh;
+    }
+}
+
+@if $PM_HEADER_IS_VERTICAL==true {
+    @include mob(false) {
+        #pm_asset-header {
+            bottom: 2vh;
+        }
+    }
+}

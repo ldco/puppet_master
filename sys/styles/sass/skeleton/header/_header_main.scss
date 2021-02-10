@@ -1,8 +1,5 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../../core/styles/sass/skeleton_core/header_core/header_main_core";
-//VARIABLES
-$scrolledHeaderHeight: calc(#{map-get($horizontHeader, height)} / 1.6);
-$headerShadow: 0vh 0vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
 //base queries
 @include mob(true) {
     header:first-of-type {
@@ -40,7 +37,6 @@ header {
 
 header .--scrolled {
     height: $scrolledHeaderHeight !important;
-    transition: ease 1s;
 }
 
 [data-floatheader=false] {
@@ -59,27 +55,13 @@ header .--scrolled {
 
 [data-floatheader=true] {
     header {
-        box-shadow: 0 0 0 0.1vh rgba($c_opos, .1);
-        background-color: rgba($c_domin, .8);
-        border-radius: 0.5vh;
         width: map-get($floatheader, width);
         height: map-get($floatheader, height);
-        padding: 2vh;
-        top: 2vh;
         align-items: center;
         justify-content: center;
     }
-    #pm_mobile-slide {
-        top: 10vh;
-        box-shadow: 0 0 0 0.05vh $c_opos;
-        background-color: rgba($c_domin, .8);
-        padding: 1vh;
-        border-radius: 1vh;
-    }
-    #pm_Header--mobile {
-        background-color: transparent;
-        box-shadow: none;
-    }
+    #pm_mobile-slide {}
+    #pm_Header--mobile {}
 }
 
 #pm_Header-float {

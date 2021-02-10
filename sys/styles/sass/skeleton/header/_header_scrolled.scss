@@ -1,7 +1,7 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../../core/styles/sass/skeleton_core/header_core/header_scrolled_core";
 //
-header .--scrolled {
+#pm_Header--desktop.--scrolled {
     #pm_logo-header,
     #pm_asset-header {
         transition: ease 0.1s;
@@ -13,3 +13,5 @@ header .--scrolled {
         top: calc((#{$scrolledHeaderHeight} / 2) - (#{$scrolledHeaderHeight} / 0.8) / 3.5);
     }
 }
+
+#pm_Header--mobile.--scrolled {}

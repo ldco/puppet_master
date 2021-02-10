@@ -42,6 +42,7 @@ function initFun() {
     if (PM_HEADER === "true") {
         setBarAsset();
         addClassOnScroll("#pm_Header--desktop", "--scrolled");
+        addClassOnScroll("#pm_Header--mobile", "--scrolled");
     }
     //Set go to top button
     setGototopButton();
