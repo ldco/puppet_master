@@ -16,12 +16,14 @@
 }
 
 main section {
-    width: 100%;
+    width: calc(#{100%} - (#{$sectionSidePadding} * 2));
     min-height: calc(#{100%} - #{$sectionBottomPadding});
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: $sectionBottomPadding;
+    padding-left: $sectionSidePadding;
+    padding-right: $sectionSidePadding;
     h1 {
         &:after {
             content: "";
