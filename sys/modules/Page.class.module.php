@@ -43,7 +43,7 @@ class Page
 
         //get page name
         $DB = new DB();
-        $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_loc INNER JOIN pm_pub_nav ON pm_loc.id=pm_pub_nav.name WHERE _id='" . floatval($PM_PAGE_NUM) . "';");
+        $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_loc INNER JOIN pm_nav ON pm_loc.id=pm_nav.name WHERE _id='" . floatval($PM_PAGE_NUM) . "';");
         if ($result && ($_row = $result->fetch_assoc())) {
             $row = $_row;
         } else {

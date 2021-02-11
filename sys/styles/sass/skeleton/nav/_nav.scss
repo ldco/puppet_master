@@ -9,169 +9,146 @@
     }
 }
 
-@mixin hor_navfontsize() {
-    font-size: map-get($horizontHeader, height) / 2;
-}
-
-@mixin pm_class_verticalNav {
-    a {
-        border-bottom: none;
-    }
-    @extend %base-Nav;
-    margin-top: 4vh;
-    height: 60vh;
-    width: map-get($verticalHeader, width);
+$hor_navfontsize: map-get($horizontHeader, height) / 2;
+//
+nav,
+nav ul,
+nav ul li,
+nav span {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    .nav_item {
-        @extend %base-Nav_item;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover>a>span {
-            transition: ease-in 0.1s;
-            @include dir(calc(#{map-get($verticalHeader, width)} - 1vh));
-        }
-        &:hover>a>img {
-            transition: ease-in 0.2s;
-            width: calc(#{map-get($verticalHeader, width)} / 1.8);
-        }
-        img {
-            width: calc(#{map-get($verticalHeader, width)} / 2.9);
-            @include navImageFilter();
-        }
-        span {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            @include dir(-50vh);
-            width: 15vh;
-            justify-content: center;
-            height: calc(#{map-get($verticalHeader, width)} / 2);
-            z-index: -1;
-            border-radius: 1vh;
-            background-color: $c_interP1;
-            padding: 0.5vh;
-        }
-    }
 }
 
-@mixin pm_class_horizontalNav {
+nav {
+    text-transform: uppercase;
+    color: $c_opos;
+    user-select: none;
+    ul li {
+        cursor: pointer;
+    }
     a {
         border-bottom: none;
     }
-    @extend %base-Nav;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    height: 100%;
-    // width: 70vw;
-    .nav_item:first-of-type {
-        display: none;
-    }
-    .nav_item {
-        @if $PM_NAV_ICONS==true {
-            &:hover>a>img {
-                transition: ease-in 0.3s;
-                border-radius: 0.4vh;
-                border: solid 0.1vh;
-                padding: 0.3vh;
-            }
-        }
-    }
-    .nav_item {
-        @extend %base-Nav_item;
-        padding-left: 1vw;
-        padding-right: 1vw;
-        height: 115%;
-        display: flex;
-        justify-content: center;
+}
+
+@if $PM_HEADER_IS_VERTICAL==true {
+    #pm_Nav--desktop {
+        margin-top: 4vh;
+        height: 60vh;
+        width: map-get($verticalHeader, width);
+        justify-content: space-around;
         align-items: center;
-        height: 100%;
-        width: 100%;
-        @if $PM_NAV_ICONS==true {
+        flex-direction: column;
+        ul li {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            &:hover>a>span {
+                transition: ease-in 0.1s;
+                @include dir(calc(#{map-get($verticalHeader, width)} - 1vh));
+            }
+            &:hover>a>img {
+                transition: ease-in 0.2s;
+                width: calc(#{map-get($verticalHeader, width)} / 1.8);
+            }
             img {
+                width: calc(#{map-get($verticalHeader, width)} / 2.9);
                 @include navImageFilter();
             }
-            img,
-            &+div>img {
-                padding: 1vh;
-                border: solid 0.1vh transparent;
-                width: calc(#{map-get($verticalHeader, width)} / 2);
-            }
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            &:hover>a>span {
-                transition: ease-in 0.2s;
-                opacity: 1;
-                background-color: $c_domin;
-            }
             span {
-                @include hor_navfontsize();
-                @include font(1, 400);
-                opacity: 0;
-                position: fixed;
-                top: calc(#{map-get($horizontHeader, height)} / 0.9);
-                z-index: -10;
-                border-radius: 0.5vh;
-                padding: 0.4vh;
+                position: absolute;
+                align-items: center;
+                @include dir(-50vh);
+                width: 15vh;
+                justify-content: center;
+                height: calc(#{map-get($verticalHeader, width)} / 2);
+                z-index: -1;
+                border-radius: 1vh;
+                background-color: $c_interP1;
+                padding: 0.5vh;
             }
         }
-        @if $PM_NAV_ICONS==false {
-            span {
-                @include hor_navfontsize();
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                top: initial !important;
-                width: 100%;
-                height: 100%;
-                &:hover {
-                    transition: 1s;
-                    filter: brightness(1.5);
-                    border-bottom: solid 0.1vh $c_opos;
+    }
+}
+
+@if $PM_HEADER_IS_VERTICAL==false {
+    #pm_Nav--desktop {
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        height: 100%;
+        ul li:first-of-type {
+            display: none;
+        }
+        ul li {
+            padding-left: 1vw;
+            padding-right: 1vw;
+            height: 115%;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            @if $PM_NAV_ICONS==true {
+                &:hover>a>img {
+                    transition: ease-in 0.3s;
+                    border-radius: 0.4vh;
+                    border: solid 0.1vh;
+                    padding: 0.3vh;
+                }
+                img {
+                    @include navImageFilter();
+                }
+                img,
+                &+div>img {
+                    padding: 1vh;
+                    border: solid 0.1vh transparent;
+                    width: calc(#{map-get($verticalHeader, width)} / 2);
+                }
+                &:hover>a>span {
+                    transition: ease-in 0.2s;
+                    opacity: 1;
+                    background-color: $c_domin;
+                }
+                span {
+                    font-size: $hor_navfontsize;
+                    @include font(1, 400);
+                    opacity: 0;
+                    position: fixed;
+                    top: calc(#{map-get($horizontHeader, height)} / 0.9);
+                    z-index: -10;
+                    border-radius: 0.5vh;
+                    padding: 0.4vh;
                 }
             }
-            img {
-                display: none !important;
+            @if $PM_NAV_ICONS==false {
+                span {
+                    font-size: $hor_navfontsize;
+                    align-items: center;
+                    justify-content: center;
+                    top: initial !important;
+                    width: 100%;
+                    height: 100%;
+                    &:hover {
+                        transition: 1s;
+                        filter: brightness(1.5);
+                        border-bottom: solid 0.1vh $c_opos;
+                    }
+                }
+                img {
+                    display: none !important;
+                }
             }
         }
     }
 }
 
-#pm_Nav--desktop {
-    @if $PM_HEADER_IS_VERTICAL==true {
-        @include pm_class_verticalNav;
-    }
-    @if $PM_HEADER_IS_VERTICAL==false {
-        @include pm_class_horizontalNav;
-    }
-}
+@if $LIGHT_THEME==false {}
 
-%base-Nav {
-    opacity: 1;
-    text-transform: uppercase;
-    display: flex;
-    color: $c_opos;
-}
+@if $LIGHT_THEME==true {}
 
-%base-Nav_item {
-    cursor: pointer;
-}
+[data-floatheader=true] {}
 
 #pm_Nav--mobile {
-    a {
-        border-bottom: none;
-    }
-    user-select: none;
-    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 12vh;
@@ -183,11 +160,14 @@
     [dir=ltr] & {
         align-items: flex-start;
     }
-    .nav_item {
+    ul {
+        flex-direction: column;
+    }
+    ul li {
         height: map-get($mob, nav_height);
         color: $c_opos;
         width: 100%;
-        display: flex;
+        align-items: center;
         img,
         span {
             @include f-size-fill(1);
@@ -201,12 +181,6 @@
         img {
             @include width-fill(1.5);
             @include navImageFilter();
-        }
-        &:active {}
-        a {
-            justify-content: center;
-            align-items: center;
-            display: flex;
         }
     }
 }
@@ -224,25 +198,23 @@
 #pm_id_NavFloat {
     width: 100%;
     @include flex-center();
-    .nav_item {
+    ul li {
         padding-left: 0.7vh;
         padding-right: 0.7vh;
         &:hover {
             border-bottom: solid 0.1vh $c_opos;
         }
         @if $PM_NAV_ICONS==false {
-            a {
-                img {
-                    display: none;
-                }
-                span {
-                    color: $c_opos;
-                    @include f-size(map-get($floatheader, fontSize))
-                }
+            img {
+                display: none;
+            }
+            span {
+                color: $c_opos;
+                @include f-size(map-get($floatheader, fontSize))
             }
         }
     }
-    .nav_item:first-of-type {
+    ul li:first-of-type {
         // display: none;
     }
 }

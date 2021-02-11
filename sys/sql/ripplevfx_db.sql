@@ -216,10 +216,10 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pm_pub_nav`
+-- Table structure for table `pm_nav`
 --
 
-CREATE TABLE `pm_pub_nav` (
+CREATE TABLE `pm_nav` (
   `_id` int(11) NOT NULL,
   `name` int(11) NOT NULL,
   `img` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -229,10 +229,10 @@ CREATE TABLE `pm_pub_nav` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `pm_pub_nav`
+-- Dumping data for table `pm_nav`
 --
 
-INSERT INTO `pm_pub_nav` (`_id`, `name`, `img`, `fun`, `link`, `sub`) VALUES
+INSERT INTO `pm_nav` (`_id`, `name`, `img`, `fun`, `link`, `sub`) VALUES
 (1, 1, '7', NULL, '#pageMain', NULL),
 (2, 157, '20', NULL, '#pagePortfolio', NULL),
 (3, 159, '100', NULL, '#pageAbout', NULL),
@@ -300,9 +300,9 @@ ALTER TABLE `pm_loc`
   ADD UNIQUE KEY `id` (`id`,`en`,`ru`,`he`,`fr`,`it`,`de`,`zh`,`ja`,`hi`,`ar`);
 
 --
--- Indexes for table `pm_pub_nav`
+-- Indexes for table `pm_nav`
 --
-ALTER TABLE `pm_pub_nav`
+ALTER TABLE `pm_nav`
   ADD PRIMARY KEY (`_id`),
   ADD UNIQUE KEY `name` (`name`),
   ADD KEY `id` (`_id`);
@@ -337,9 +337,9 @@ ALTER TABLE `pm_loc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
--- AUTO_INCREMENT for table `pm_pub_nav`
+-- AUTO_INCREMENT for table `pm_nav`
 --
-ALTER TABLE `pm_pub_nav`
+ALTER TABLE `pm_nav`
   MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --

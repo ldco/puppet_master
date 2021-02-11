@@ -15,3 +15,7 @@
 }
 
 #pm_Header--mobile.--scrolled {}
+
+@if $PM_HEADER_IS_VERTICAL==true {}
+
+[data-floatheader=true] {}

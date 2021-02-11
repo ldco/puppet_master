@@ -12,7 +12,7 @@ class SkeletonDepends
 
     private $viewsNames = [];
     private $DB;
-    private $isAdmin = false;
+
 
 
     public function __construct()
@@ -21,7 +21,6 @@ class SkeletonDepends
         $this->viewsNames = PM_VIEWS;
         if (!isset($DB)) $DB = new DB;
         $this->DB = $DB;
-        //if (defined("PM_DEFINE_ADMIN")) $this->isAdmin = PM_DEFINE_ADMIN;
     }
 
     function index()
@@ -29,13 +28,8 @@ class SkeletonDepends
 
         if (!defined("PM_ROOT")) return false;
 
-        if ($this->isAdmin) {
-            $tableName = "pm_adm_nav";
-            $fieldsAdd = "`id` as `_id`";
-        } else {
-            $tableName = "pm_pub_nav";
-            $fieldsAdd = "`_id`";
-        }
+        /*  $tableName = "pm_nav";
+        $fieldsAdd = "`_id`";
 
         $hideURLElems = [];
         $result = $this->DB->queryRaw("SELECT " . $fieldsAdd . ",`sub` FROM " . $tableName);
@@ -44,8 +38,8 @@ class SkeletonDepends
                 if ($navItem['sub'] != NULL) continue;
                 $hideURLElems[] = 'pm_' . $navItem['_id'];
             }
-        }
-        $admin = $this->isAdmin;
+        } */
+
         require PM_ROOT . $this->viewsNames['depends'];
         return true;
     }

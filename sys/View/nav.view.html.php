@@ -1,4 +1,4 @@
-<div id="<?= $navElementID; ?>" class="<?= $navItemClass; ?>">
+<li id="<?= $navElementID; ?>" class="<?= $navItemClass; ?>" <?= $onClickHtmlOpen . $onClickFun . $onClickHtmlClose ?>>
     <?php if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING) : ?>
     <a href="<?= $navElemURL; ?>">
         <?php endif; ?>
@@ -7,4 +7,4 @@
         <?php if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING) : ?>
     </a>
     <?php endif; ?>
-</div>
+</li>

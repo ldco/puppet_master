@@ -25,7 +25,7 @@ class SkeletonNav
 
     public function index()
     {
-        $tableName = "pm_pub_nav";
+        $tableName = "pm_nav";
         $navItemClass = "nav_item";
         $fieldsAdd = "";
         $result = $this->DB->queryRaw("SELECT *" . $fieldsAdd . " FROM " . $tableName . " `pm_nav` INNER JOIN `pm_loc` ON `pm_nav`.`name` = `pm_loc`.`id`");
@@ -35,6 +35,14 @@ class SkeletonNav
                 $navElementID = $navItem['_id'];
                 $navImgSrc = PM_ICONS_REL . $navItem['img'] . '.svg';
                 $navLang = $navItem[PM_LANG];
+                $onClickFun = $navItem['fun'];
+                if ($navItem['fun'] !== null) {
+                    $onClickHtmlOpen = "onclick='";
+                    $onClickHtmlClose = "'";
+                } else {
+                    $onClickHtmlOpen = "";
+                    $onClickHtmlClose = "";
+                }
                 $navElemURL = '';
                 if ($this->isOnePage) {
                     $navElemURL = $navItem['link'];

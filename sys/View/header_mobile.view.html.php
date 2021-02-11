@@ -9,8 +9,10 @@
 </header>
 <div id="<?= $mobileSlideId ?>">
     <nav id="<?= $navId ?>">
-        <?php $modelNav->index();
-        ?>
+        <ul>
+            <?php $modelNav->index();
+            ?>
+        </ul>
     </nav>
     <?php $modelLangMenu->makeLang(true); ?>
 </div>
