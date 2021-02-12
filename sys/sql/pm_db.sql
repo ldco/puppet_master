@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 14, 2021 at 02:56 PM
+-- Generation Time: Feb 11, 2021 at 09:10 PM
 -- Server version: 10.3.25-MariaDB-0ubuntu0.20.04.1
--- PHP Version: 8.0.0
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,78 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ripplevfx_db`
+-- Database: `pm_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_blog`
+--
+
+CREATE TABLE `pm_blog` (
+  `blog_id` int(11) NOT NULL,
+  `blog_img` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_en` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_ru` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_he` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `text_en` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `text_ru` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `text_he` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `blog_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pm_blog`
+--
+
+INSERT INTO `pm_blog` (`blog_id`, `blog_img`, `name_en`, `name_ru`, `name_he`, `text_en`, `text_ru`, `text_he`, `blog_date`) VALUES
+(1, '', '', '', '', '', '', '', '2020-05-31 13:00:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_catalog`
+--
+
+CREATE TABLE `pm_catalog` (
+  `ctlg_id` int(100) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `category` int(11) NOT NULL,
+  `subcategory` varchar(20) NOT NULL,
+  `img1` varchar(20) NOT NULL,
+  `img2` varchar(20) DEFAULT NULL,
+  `img3` varchar(20) DEFAULT NULL,
+  `infa` varchar(100) DEFAULT NULL,
+  `price` int(100) DEFAULT NULL,
+  `minorder` int(100) DEFAULT NULL,
+  `localprice` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pm_catalog`
+--
+
+INSERT INTO `pm_catalog` (`ctlg_id`, `name`, `category`, `subcategory`, `img1`, `img2`, `img3`, `infa`, `price`, `minorder`, `localprice`) VALUES
+(1, '', 1, '', '1', NULL, NULL, NULL, NULL, NULL, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_catalog_category`
+--
+
+CREATE TABLE `pm_catalog_category` (
+  `id` int(11) NOT NULL,
+  `cat_name` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pm_catalog_category`
+--
+
+INSERT INTO `pm_catalog_category` (`id`, `cat_name`) VALUES
+(1, 0);
 
 -- --------------------------------------------------------
 
@@ -40,12 +110,12 @@ CREATE TABLE `pm_contact` (
 --
 
 INSERT INTO `pm_contact` (`id`, `text`, `img`, `value`, `link`) VALUES
-(13, 28, 'tel', '+972559292895  ', '+972559292895'),
-(14, 124, 'telega', 'שירות 24/7  ', 'https://telegram.me/Agoranomus'),
-(15, 123, 'wa', ' שירות 24/7  ', 'https://wa.me/972559292895'),
-(16, 122, 'fb', 'אולספוט - סיטונאות בקלות  ', 'https://www.facebook.com/allspotagora/'),
-(17, 126, 'insta', ' אוסלפוט - סיטונאות בקלות', 'https://www.instagram.com/import_export_israel/'),
-(18, 125, 'mail', 'agora@allspot.store  ', 'agora@allspot.store\r\n ');
+(13, 28, 'tel', '+tel_number', '+tel_number'),
+(14, 124, 'telega', '@tetelgram_id', 'telegram_link'),
+(15, 123, 'wa', '+telnumber', 'https://wa.me/telnumber'),
+(16, 122, 'fb', 'fb_user', 'fb_link'),
+(17, 126, 'insta', 'insta_user', 'insta_link'),
+(18, 125, 'mail', 'mail', 'mail');
 
 -- --------------------------------------------------------
 
@@ -206,6 +276,7 @@ INSERT INTO `pm_loc` (`id`, `en`, `ru`, `he`, `fr`, `it`, `de`, `zh`, `ja`, `hi`
 (136, 'UI design', 'UI-дизайн', 'עיצוב ממשק משתמש', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (137, 'UX design', 'UX-дизайн', 'עיצוב חוויית משתמש', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (130, 'visit card', 'визитка', 'כרטיס ביקור', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(160, 'waze', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (132, 'web app', 'интернет приложение', 'אפליקציית ווב', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (131, 'web page', 'веб-сайт', 'אתר אינטרטנט', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (25, 'weight', 'вес', 'משקל', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -225,18 +296,101 @@ CREATE TABLE `pm_nav` (
   `img` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `fun` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `link` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sub` int(11) DEFAULT NULL
+  `parent` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pm_nav`
 --
 
-INSERT INTO `pm_nav` (`_id`, `name`, `img`, `fun`, `link`, `sub`) VALUES
-(1, 1, '7', NULL, '#pageMain', NULL),
-(2, 157, '20', NULL, '#pagePortfolio', NULL),
-(3, 159, '100', NULL, '#pageAbout', NULL),
-(4, 96, '21', NULL, '#pageContacts', NULL);
+INSERT INTO `pm_nav` (`_id`, `name`, `img`, `fun`, `link`, `parent`) VALUES
+(1, 1, '100', NULL, NULL, NULL),
+(2, 95, '30', NULL, NULL, NULL),
+(3, 96, '35', NULL, NULL, NULL),
+(4, 119, '13', NULL, NULL, NULL),
+(5, 120, '43', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_nav_sub_1`
+--
+
+CREATE TABLE `pm_nav_sub_1` (
+  `_id` int(11) NOT NULL,
+  `name` int(11) NOT NULL,
+  `img` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fun` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parent` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pm_nav_sub_1`
+--
+
+INSERT INTO `pm_nav_sub_1` (`_id`, `name`, `img`, `fun`, `link`, `parent`) VALUES
+(1, 1, '100', NULL, NULL, 2),
+(2, 95, '30', NULL, NULL, 3),
+(3, 96, '35', NULL, NULL, 3),
+(4, 119, '13', NULL, NULL, 3),
+(5, 120, '43', NULL, NULL, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_nav_sub_2`
+--
+
+CREATE TABLE `pm_nav_sub_2` (
+  `_id` int(11) NOT NULL,
+  `name` int(11) NOT NULL,
+  `img` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fun` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parent` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pm_nav_sub_2`
+--
+
+INSERT INTO `pm_nav_sub_2` (`_id`, `name`, `img`, `fun`, `link`, `parent`) VALUES
+(1, 1, '100', NULL, NULL, 2),
+(2, 95, '30', NULL, NULL, 3),
+(3, 96, '35', NULL, NULL, 3),
+(4, 119, '13', NULL, NULL, 3),
+(5, 120, '43', NULL, NULL, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_team`
+--
+
+CREATE TABLE `pm_team` (
+  `id` int(11) NOT NULL,
+  `img` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `rank` int(10) NOT NULL,
+  `name_en` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_ru` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name_he` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_en` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_ru` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_he` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bio_en` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bio_ru` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bio_he` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pm_team`
+--
+
+INSERT INTO `pm_team` (`id`, `img`, `rank`, `name_en`, `name_ru`, `name_he`, `job_en`, `job_ru`, `job_he`, `bio_en`, `bio_ru`, `bio_he`) VALUES
+(1, '', 1, '', '', '', '', '', '', '', '', ''),
+(2, '', 2, '', '', '', '', '', '', '', '', ''),
+(3, '', 3, '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -246,9 +400,9 @@ INSERT INTO `pm_nav` (`_id`, `name`, `img`, `fun`, `link`, `sub`) VALUES
 
 CREATE TABLE `pm_text` (
   `id` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `en` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `en` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ru` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `he` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `he` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `fr` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `it` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `es` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -258,6 +412,13 @@ CREATE TABLE `pm_text` (
   `hi` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `ar` varchar(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pm_text`
+--
+
+INSERT INTO `pm_text` (`id`, `en`, `ru`, `he`, `fr`, `it`, `es`, `de`, `zh`, `ja`, `hi`, `ar`) VALUES
+('1_1', '', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -284,6 +445,26 @@ INSERT INTO `users` (`id`, `user_name`, `user_email`, `user_password_hash`) VALU
 --
 
 --
+-- Indexes for table `pm_blog`
+--
+ALTER TABLE `pm_blog`
+  ADD PRIMARY KEY (`blog_id`);
+
+--
+-- Indexes for table `pm_catalog`
+--
+ALTER TABLE `pm_catalog`
+  ADD PRIMARY KEY (`ctlg_id`),
+  ADD KEY `category` (`category`);
+
+--
+-- Indexes for table `pm_catalog_category`
+--
+ALTER TABLE `pm_catalog_category`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `name` (`cat_name`);
+
+--
 -- Indexes for table `pm_contact`
 --
 ALTER TABLE `pm_contact`
@@ -308,6 +489,35 @@ ALTER TABLE `pm_nav`
   ADD KEY `id` (`_id`);
 
 --
+-- Indexes for table `pm_nav_sub_1`
+--
+ALTER TABLE `pm_nav_sub_1`
+  ADD PRIMARY KEY (`_id`),
+  ADD UNIQUE KEY `name` (`name`),
+  ADD KEY `id` (`_id`),
+  ADD KEY `parent` (`parent`);
+
+--
+-- Indexes for table `pm_nav_sub_2`
+--
+ALTER TABLE `pm_nav_sub_2`
+  ADD PRIMARY KEY (`_id`),
+  ADD UNIQUE KEY `name` (`name`),
+  ADD KEY `id` (`_id`),
+  ADD KEY `parent` (`parent`),
+  ADD KEY `parent_2` (`parent`);
+
+--
+-- Indexes for table `pm_team`
+--
+ALTER TABLE `pm_team`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `name` (`name_en`),
+  ADD KEY `job` (`job_en`),
+  ADD KEY `bio` (`bio_en`);
+
+--
 -- Indexes for table `pm_text`
 --
 ALTER TABLE `pm_text`
@@ -325,6 +535,24 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `pm_blog`
+--
+ALTER TABLE `pm_blog`
+  MODIFY `blog_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `pm_catalog`
+--
+ALTER TABLE `pm_catalog`
+  MODIFY `ctlg_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `pm_catalog_category`
+--
+ALTER TABLE `pm_catalog_category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `pm_contact`
 --
 ALTER TABLE `pm_contact`
@@ -334,19 +562,67 @@ ALTER TABLE `pm_contact`
 -- AUTO_INCREMENT for table `pm_loc`
 --
 ALTER TABLE `pm_loc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 
 --
 -- AUTO_INCREMENT for table `pm_nav`
 --
 ALTER TABLE `pm_nav`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `pm_nav_sub_1`
+--
+ALTER TABLE `pm_nav_sub_1`
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `pm_nav_sub_2`
+--
+ALTER TABLE `pm_nav_sub_2`
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `pm_team`
+--
+ALTER TABLE `pm_team`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `pm_contact`
+--
+ALTER TABLE `pm_contact`
+  ADD CONSTRAINT `pm_contact_ibfk_1` FOREIGN KEY (`text`) REFERENCES `pm_loc` (`id`);
+
+--
+-- Constraints for table `pm_nav`
+--
+ALTER TABLE `pm_nav`
+  ADD CONSTRAINT `pm_nav_ibfk_1` FOREIGN KEY (`name`) REFERENCES `pm_loc` (`id`);
+
+--
+-- Constraints for table `pm_nav_sub_1`
+--
+ALTER TABLE `pm_nav_sub_1`
+  ADD CONSTRAINT `pm_nav_sub_1_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `pm_nav` (`_id`),
+  ADD CONSTRAINT `pm_nav_sub_1_ibfk_2` FOREIGN KEY (`name`) REFERENCES `pm_loc` (`id`);
+
+--
+-- Constraints for table `pm_nav_sub_2`
+--
+ALTER TABLE `pm_nav_sub_2`
+  ADD CONSTRAINT `pm_nav_sub_2_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `pm_nav_sub_1` (`_id`),
+  ADD CONSTRAINT `pm_nav_sub_2_ibfk_2` FOREIGN KEY (`name`) REFERENCES `pm_loc` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

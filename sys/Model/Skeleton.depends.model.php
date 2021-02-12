@@ -17,10 +17,10 @@ class SkeletonDepends
 
     public function __construct()
     {
-        global $DB;
+        /*   global $DB;
+           if (!isset($DB)) $DB = new DB;
+        $this->DB = $DB; */
         $this->viewsNames = PM_VIEWS;
-        if (!isset($DB)) $DB = new DB;
-        $this->DB = $DB;
     }
 
     function index()

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace sys\Model;
 
+/* require PM_ROOT .  'vendor/autoload.php'; */
+
 class SkeletonIndex
 {
 

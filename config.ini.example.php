@@ -44,7 +44,8 @@ define("PM_ALL_LANGS", array("en", "ru", "he", "fr")); //list of langs
 define("PM_ALLOW_CLIENTLANG", true); // or true (if true, default is client lang)
 //routing
 define("PM_PHP_ROUTING", false);
-
+//DB TYPE
+define("DB_TYPE", "mysql");
 //DB local
 define("DB_NAME_LOCAL", "");
 define("DB_USER_LOCAL", "");
