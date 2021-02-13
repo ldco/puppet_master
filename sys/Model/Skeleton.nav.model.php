@@ -7,6 +7,7 @@ namespace sys\Model;
 use Mysqli;
 use sys\Controller\DB;
 
+
 class SkeletonNav
 {
     private $DB;
