@@ -2,32 +2,24 @@
 
 declare(strict_types=1);
 
-use sys\Controller\DB;
-
-require_once PM_SYS . "Model/startup.model.php";
-
-require_once PM_SYS . "Controller/DB.class.ctrl.php";
-
 function pmTranslate($_lang, $_text, $ajax)
 
 {
-    /* $DB = new DB();
+    global $DB;
     if ($ajax === true) {
         $arr = [];
     } else {
         $arr = json_encode([]);
     }
-    $result = $DB->queryRaw("SELECT * FROM pm_loc");
+    $result = $DB->select("pm_loc", "*");
     if ($result) {
-        while ($row = $result->fetch_assoc()) {
+        foreach ($result as $row) {
             if ($row["en"] === $_text) {
                 if ($row[$_lang]) {
                     return $arr = $row[$_lang];
                 } else {
                     return $arr = $row["en"];
                 }
-            } else {
-                //$arr = $_text;
             }
         }
     }
@@ -35,5 +27,10 @@ function pmTranslate($_lang, $_text, $ajax)
         return json_encode($arr);
     } else {
         return $arr;
-    } */
+    }
 }
+
+$lang = isset($_POST["lang"]) ? $_POST["lang"] : null;
+$text = isset($_POST["text"]) ? $_POST["text"] : null;
+
+pmTranslate($lang, $text, true);

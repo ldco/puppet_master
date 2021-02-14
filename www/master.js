@@ -5034,7 +5034,7 @@ function pmGetTranslate(text) {
     }
   };
 
-  ajx.open("POST", "/sys/helpers/pmTranslateEngine.php", true);
+  ajx.open("POST", "/sys/helpers/pmTranslate.fun.php", true);
   ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   ajx.send("lang=" + lang + "&text=" + text);
 }
