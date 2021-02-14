@@ -1357,9 +1357,6 @@ main {
   background-color: #f9f9f9;
   position: absolute; }
 
-header .--scrolled {
-  transition: ease 1s; }
-
 [data-floatheader=true] header {
   box-shadow: 0 0 0 0.1vh rgba(47, 47, 47, 0.1);
   background-color: rgba(249, 249, 249, 0.8);
@@ -1411,9 +1408,6 @@ header {
   [dir=rtl] header {
     right: 0; }
 
-header .--scrolled {
-  height: calc(6vh / 1.6) !important; }
-
 [data-floatheader=false] #pm_mobile-slide {
   background-color: #f9f9f9;
   box-shadow: 0vh 0vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
@@ -1463,15 +1457,25 @@ header .--scrolled {
   [dir=rtl] #pm_mobile-slide {
     right: -100vw; }
 
-#pm_Header--desktop.--scrolled #pm_logo-header,
-#pm_Header--desktop.--scrolled #pm_asset-header {
-  transition: ease 0.1s; }
+#pm_Header--desktop.--scrolled {
+  height: calc(6vh / 1.8); }
+  #pm_Header--desktop.--scrolled #pm_logo-header {
+    background-size: calc(12vw / 2.6); }
+  #pm_Header--desktop.--scrolled #pm_asset-header {
+    width: calc(3vh / 1.4); }
+  #pm_Header--desktop.--scrolled #pm_Lang img {
+    height: calc(1.2 * 1.8vh);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0); }
 
-#pm_Header--desktop.--scrolled #pm_logo-header {
-  top: calc((calc(6vh / 1.6) / 2) - (calc(6vh / 1.6) / 0.65) / 2); }
+#pm_logo-header,
+#pm_Header--desktop,
+#pm_asset-header,
+#pm_Header--desktop nav ul li span,
+#pm_Lang img {
+  transition: ease 1s; }
 
-#pm_Header--desktop.--scrolled #pm_asset-header {
-  top: calc((calc(6vh / 1.6) / 2) - (calc(6vh / 1.6) / 0.8) / 3.5); }
+#pm_Header--desktop.--scrolled nav ul li span {
+  font-size: 2vh; }
 
 #pm_logo-header--mobile {
   background-size: calc(6vh / 0.5); }
@@ -1485,10 +1489,10 @@ header .--scrolled {
     margin-right: 2vh; }
 
 [dir=rtl] #pm_asset-header {
-  left: 3vh; }
+  left: 4vh; }
 
 [dir=ltr] #pm_asset-header {
-  right: 3vh; }
+  right: 4vh; }
 
 [dir=rtl] #pm_asset-header--float {
   margin-right: 2vh; }
@@ -1499,11 +1503,7 @@ header .--scrolled {
 #pm_logo-header {
   width: 12vw;
   height: 6vh;
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
   background-size: calc(12vw / 1.8);
   background-repeat: no-repeat;
   background-position: center;
@@ -1538,7 +1538,7 @@ header .--scrolled {
 
 #pm_asset-header {
   width: 3vh;
-  position: fixed;
+  position: absolute;
   z-index: 1979; }
 
 #pm_asset-header,
@@ -1696,7 +1696,8 @@ header .--scrolled {
   background-color: #aa0000;
   color: #f9f9f9;
   border-radius: 50%;
-  box-shadow: 0px 0px 2px 0px #2f2f2f; }
+  box-shadow: 0px 0px 2px 0px #2f2f2f;
+  padding-bottom: 3.2vh; }
   #lang_menu form input:hover {
     filter: brightness(1.1);
     box-shadow: 0 0 0vh 0.2vh #2f2f2f; }
@@ -1704,7 +1705,7 @@ header .--scrolled {
     box-shadow: 0 0 0.5vh 0.1vh #2f2f2f; }
 
 #pm_Lang {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1991,7 +1992,7 @@ footer {
   [dir="rtl"] #thebility_buttonsDiv {
     left: 36vh; }
   #thebility_buttonsDiv div {
-    background: rgba(249, 249, 249, 0.2);
+    background: rgba(249, 249, 249, 0.8);
     padding: 1vh;
     border-radius: 0.4vh;
     box-shadow: 0 0 0 0.4vh rgba(47, 47, 47, 0.2);
@@ -2031,7 +2032,7 @@ footer {
     font-size: 1.8vh;
     text-transform: capitalize;
     text-align: center;
-    background: rgba(249, 249, 249, 0.2);
+    background: rgba(249, 249, 249, 0.8);
     padding: 2vh;
     border-radius: 0.8vh;
     box-shadow: 0 0 0 0.4vh rgba(47, 47, 47, 0.2);
@@ -2049,7 +2050,7 @@ footer {
       font-family: Heebo;
       font-weight: 400; }
     #thebilityMainDiv .thebilityDiv:hover {
-      background: rgba(122, 122, 122, 0.2);
+      background: rgba(122, 122, 122, 0.8);
       box-shadow: 0 0 0 0.4vh rgba(175, 175, 175, 0.2); }
     #thebilityMainDiv .thebilityDiv input {
       margin-top: 1vh; }
@@ -2135,7 +2136,7 @@ footer {
   animation-play-state: paused !important; }
 
 .aUnderline {
-  border-bottom: 0.5vh solid rgba(249, 249, 249, 0.2) !important; }
+  border-bottom: 0.5vh solid rgba(249, 249, 249, 0.8) !important; }
 
 .invertHtml {
   filter: invert(100%) !important; }

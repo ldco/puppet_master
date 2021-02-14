@@ -4,10 +4,8 @@
 #pm_logo-header {
     width: map-get($horizontHeader, logo_width);
     height: map-get($horizontHeader, height);
-    position: fixed;
+    position: absolute;
     @include dir(0);
-    top: 0;
-    @include flex-center();
     background-size: calc(#{map-get($horizontHeader, logo_width)} / 1.8);
     background-repeat: no-repeat;
     background-position: center;
@@ -72,7 +70,7 @@
 //ASSET
 #pm_asset-header {
     width: map-get($horizontHeader, asset);
-    position: fixed;
+    position: absolute;
     z-index: 1979;
 }
 

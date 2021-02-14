@@ -11,7 +11,7 @@ require_once PM_SYS . "Controller/DB.class.ctrl.php";
 function pmTranslate($_lang, $_text, $ajax)
 
 {
-    $DB = new DB();
+    /* $DB = new DB();
     if ($ajax === true) {
         $arr = [];
     } else {
@@ -35,5 +35,5 @@ function pmTranslate($_lang, $_text, $ajax)
         return json_encode($arr);
     } else {
         return $arr;
-    }
+    } */
 }

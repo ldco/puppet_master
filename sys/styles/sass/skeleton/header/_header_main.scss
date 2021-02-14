@@ -35,10 +35,6 @@ header {
     }
 }
 
-header .--scrolled {
-    height: $scrolledHeaderHeight !important;
-}
-
 [data-floatheader=false] {
     #pm_mobile-slide {
         background-color: $c_domin;

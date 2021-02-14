@@ -1,10 +1,5 @@
 //VARIABLES
-$scrolledHeaderHeight: calc(#{map-get($horizontHeader, height)} / 1.6);
 $headerShadow: 0vh 0vh 1vh 0.1vh rgba(0, 0, 0, 0.4);
-header .--scrolled {
-    transition: ease 1s;
-}
-
 [data-floatheader=true] {
     header {
         box-shadow: 0 0 0 0.1vh rgba($c_opos, .1);

@@ -6,7 +6,7 @@ use sys\Controller\DB;
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/" . "sys/Model/startup.model.php";
 require_once PM_SYS . "Controller/DB.class.ctrl.php";
-
+/* 
 $name = isset($_POST["name"]) ? $_POST["name"] : '';
 $lang = isset($_POST["lang"]) ? $_POST["lang"] : null;
 
@@ -34,3 +34,4 @@ foreach ($result->fetchAll() as $oneRow) {
 echo json_encode($arrForJSON);
 
 exit;
+ */
