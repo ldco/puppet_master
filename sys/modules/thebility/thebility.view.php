@@ -4,8 +4,6 @@
 require_once PM_HELPER . "pmTranslate.fun.php";
 require_once PM_HELPER . "pmImg.fun.help.php";
 
-
-
 $thebilityToggleIconSrc = PM_ICONS_REL_SYS . "thebility.svg";
 $thebilityDragIconSrc = PM_ICONS_REL_SYS . "drag.svg";
 $thebilityCloseIconSrc = PM_ICONS_REL_SYS . "close.svg";

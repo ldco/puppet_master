@@ -11,7 +11,7 @@ require_once PM_ROOT . "vendor/catfan/medoo/src/Medoo.php";
 
 require_once (dirname($_SERVER['DOCUMENT_ROOT'], 1)) . "/config.ini.php";
 
-$DB = new Medoo([
+$PM_DB = new Medoo([
 
     // required
     'database_type' => DB_TYPE,

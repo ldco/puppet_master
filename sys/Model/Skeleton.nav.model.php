@@ -6,7 +6,24 @@ namespace sys\Model;
 
 use sys\Controller\DB;
 
+function buildNavArray(array $elements, $parentId = null)
+{
+    $branch = array();
 
+    foreach ($elements as $element) {
+        if ($element['parent'] == $parentId) {
+            $children = buildNavArray($elements, $element['_id']);
+            if ($children) {
+                $element['children'] = $children;
+            }
+            $branch[] = $element;
+        }
+    }
+
+    return $branch;
+}
+
+require PM_ROOT . $this->viewsNames['nav'];
 class SkeletonNav
 {
     private $isOnePage = false;
@@ -19,31 +36,15 @@ class SkeletonNav
     }
     public function index()
     {
-        global $DB;
+        global $PM_DB;
+
         $tableName = "pm_nav";
-        $navItemClass = "nav_item";
-        $fieldsAdd = "";
-        $result = $DB->select("pm_nav",  ["[><]pm_loc" => ["name" => "id"]], [PM_LANG, "_id", "img", "fun"]);
+        $result = $PM_DB->select("pm_nav",  ["[><]pm_loc" => ["name" => "id"]], [PM_LANG, "_id", "img", "fun", "parent"]);
+
         if ($result) {
-            foreach ($result as $navItem) {
-                $navElementID = $navItem['_id'];
-                $navImgSrc = PM_ICONS_REL . $navItem['img'] . '.svg';
-                $navLang = $navItem[PM_LANG];
-                $onClickFun = $navItem['fun'];
-                if ($navItem['fun'] !== null) {
-                    $onClickHtmlOpen = "onclick='";
-                    $onClickHtmlClose = "'";
-                } else {
-                    $onClickHtmlOpen = "";
-                    $onClickHtmlClose = "";
-                }
-                $navElemURL = '';
-                if ($this->isOnePage) {
-                    $navElemURL = $navItem['link'];
-                } else {
-                    $navElemURL =  '/index.php?show_page=' . $navItem['_id'];
-                }
-                require PM_ROOT . $this->viewsNames['nav'];
+            $_result = buildNavArray($result);
+            if ($_result) {
+                makeNavigationView($_result);
             }
         }
     }

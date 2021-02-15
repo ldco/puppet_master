@@ -15,7 +15,7 @@ $name = array_values(json_decode($name));
 if (!is_array($name)) exit;
 
 global $DB;
-if (!isset($DB)) $DB = new DB;
+
 
 $sql = "SELECT * FROM `pm_loc` where `en` IN (";
 $langCount = count($name);

@@ -18,13 +18,13 @@ class agents
     public function __construct($_id = null, $childClass = null, $class = "pm_agents")
     {
         global $PM_PAGE_NUM;
-        global $DB;
+        global $PM_DB;
         if ($childClass !== null) {
             $childClass = " " + $childClass;
         }
-        if (!isset($DB)) $DB = new DB;
+
         echo '<div id="' . $_id . '" class="' . $class . '">';
-        $result = $DB->queryRaw("SELECT * FROM $this->table");
+        /*  $result = $PM_DB->queryRaw("SELECT * FROM $this->table");
         if ($result) {
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="' . $childClass . 'pm_agents_item" id="agentid_' . $row["agent_id"] . '">';
@@ -56,6 +56,6 @@ class agents
                 echo '</div>';
             }
         }
-        echo '</div>';
+        echo '</div>'; */
     }
 }

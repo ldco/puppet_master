@@ -163,4 +163,4 @@ define("PM_VIEWS", [
 ]);
 
 //DB
-require_once PM_SYS . "Controller/DB.class.ctrl.php";
+/* require_once PM_SYS . "Controller/DB.class.ctrl.php"; */
