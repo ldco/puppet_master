@@ -6,7 +6,7 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
         justify-content: space-between;
         height: 100%;
         ul:first-of-type li:first-of-type {
-            // display: none;
+            display: none;
         }
         ul:first-of-type li {
             padding-left: 1vw;
@@ -67,5 +67,8 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
                 }
             }
         }
+        .pm_nav_item {}
+        .pm_nav_item_sub_ul {}
+        .pm_nav_item_sub {}
     }
 }

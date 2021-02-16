@@ -1742,7 +1742,10 @@ header {
     padding: 0.7vh !important;
     height: calc(1.2 * 2.6vh); }
 
-#pm_Lang {
+[dir=rtl] #pm_Lang {
+  left: 10vh; }
+
+[dir=ltr] #pm_Lang {
   right: 10vh; }
 
 #lang_menu form {
@@ -1808,11 +1811,17 @@ nav {
   color: #f9f9f9;
   text-transform: uppercase; }
 
+.pm_nav_item_sub_ul,
+.pm_nav_item_sub {
+  display: none; }
+
 #pm_Nav--desktop {
   align-items: center;
   text-align: center;
   justify-content: space-between;
   height: 100%; }
+  #pm_Nav--desktop ul:first-of-type li:first-of-type {
+    display: none; }
   #pm_Nav--desktop ul:first-of-type li {
     padding-left: 1vw;
     padding-right: 1vw;

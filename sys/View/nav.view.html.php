@@ -25,6 +25,11 @@ function makeNavigationView($arr)
         } else {
             $_sub_navItemClass = null;
         }
+        if ($navItem['isempty'] !== "0") {
+            $navItemIsempty = " isempty";
+        } else {
+            $navItemIsempty = null;
+        }
         $navElemURL = '';
         if (PM_ONEPAGER) {
             $navElemURL = $navItem['link'];
@@ -32,13 +37,13 @@ function makeNavigationView($arr)
             $navElemURL =  '/index.php?show_page=' . $navElementID;
         }
 
-        echo "<li id='{$navElementID}' class='{$navItemClass}{$_sub_navItemClass}'{$onClickHtmlOpen}{$onClickFun}{$onClickHtmlClose}>";
-        if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING) :
+        echo "<li id='{$navElementID}' class='{$navItemClass}{$navItemIsempty}{$_sub_navItemClass}'{$onClickHtmlOpen}{$onClickFun}{$onClickHtmlClose}>";
+        if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING && ($navItem['isempty'] !== "1")) :
             echo "<a href='$navElemURL'>";
         endif;
         echo "<img alt='Menu icon' src='{$navImgSrc}'>";
         echo "<span>{$navLang}</span>";
-        if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING) :
+        if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING && ($navItem['isempty'] !== "1")) :
             echo "</a>";
         endif;
         echo '</li>';

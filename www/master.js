@@ -5255,7 +5255,7 @@ function removeHamburger() {
 "use strict";
 
 function setRouter() {
-  var els = document.querySelectorAll("li.pm_nav_item");
+  var els = document.querySelectorAll("li.pm_nav_item:not(.isempty)");
   els.forEach(function (el) {
     el.addEventListener("click", function () {
       var _id = this.id;

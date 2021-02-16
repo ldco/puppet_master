@@ -39,7 +39,7 @@ class SkeletonNav
         global $PM_DB;
 
         $tableName = "pm_nav";
-        $result = $PM_DB->select("pm_nav",  ["[><]pm_loc" => ["name" => "id"]], [PM_LANG, "_id", "img", "fun", "parent"]);
+        $result = $PM_DB->select("pm_nav",  ["[><]pm_loc" => ["name" => "id"]], [PM_LANG, "_id", "img", "fun", "parent", "isempty"]);
 
         if ($result) {
             $_result = buildNavArray($result);

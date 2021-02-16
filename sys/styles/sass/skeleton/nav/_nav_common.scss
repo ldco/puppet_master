@@ -34,3 +34,8 @@ nav {
     color: $c_opos;
     text-transform: uppercase;
 }
+
+.pm_nav_item_sub_ul,
+.pm_nav_item_sub {
+    display: none;
+}

@@ -38,7 +38,12 @@
 
 @if $PM_HEADER_IS_VERTICAL==false {
     #pm_Lang {
-        right: $langMenuMarginFromEnd;
+        [dir=rtl] & {
+            left: $langMenuMarginFromEnd;
+        }
+        [dir=ltr] & {
+            right: $langMenuMarginFromEnd;
+        }
     }
     #lang_menu {
         form {
