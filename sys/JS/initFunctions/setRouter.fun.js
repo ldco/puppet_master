@@ -1,9 +1,11 @@
 function setRouter() {
-    let els;
-    els = document.querySelectorAll(".nav_item");
+    let els = document.querySelectorAll("li.pm_nav_item");
     els.forEach(el => {
         el.addEventListener("click", function() {
-            getThisPageID(this);
+            let _id = this.id;
+            let id = _id.split("#").pop();
+            getContentView(id);
+            console.log(this);
             setTimeout(() => {
                 removeHamburger();
             }, 50);

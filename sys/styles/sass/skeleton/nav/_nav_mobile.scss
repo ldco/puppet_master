@@ -1,0 +1,45 @@
+#pm_Nav--mobile {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 12vh;
+    width: 100%;
+    [dir=rtl] & {
+        align-items: flex-end;
+    }
+    [dir=ltr] & {
+        align-items: flex-start;
+    }
+    ul {
+        flex-direction: column;
+    }
+    ul li {
+        height: map-get($mob, nav_height);
+        color: $c_opos;
+        width: 100%;
+        align-items: center;
+        img,
+        span {
+            @include f-size-fill(1);
+            [dir=rtl] & {
+                margin-right: 3vh;
+            }
+            [dir=ltr] & {
+                margin-left: 3vh;
+            }
+        }
+        img {
+            @include width-fill(1.5);
+            @include navImageFilter();
+        }
+    }
+}
+
+#pm_Nav--mobile {
+    @include font(1, 400);
+}
+
+[data-floatheader=true] {
+    #pm_Nav--mobile {
+        margin-top: 1vh;
+    }
+}

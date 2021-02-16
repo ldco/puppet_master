@@ -1,0 +1,36 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../../core/styles/sass/skeleton_core/nav_core/nav_common_core";
+@mixin navImageFilter {
+    @if $LIGHT_THEME==false {
+        filter: brightness(1.5) contrast(0.7);
+    }
+    @if $LIGHT_THEME==true {
+        filter: none;
+    }
+}
+
+//
+nav,
+nav ul,
+nav ul li,
+nav span {
+    display: flex;
+}
+
+nav {
+    user-select: none;
+    ul li {
+        cursor: pointer;
+    }
+    a {
+        border-bottom: none;
+    }
+}
+
+#pm_Nav--desktop,
+#pm_Nav--mobile,
+#pm_Nav--footer,
+#pm_Nav--float {
+    color: $c_opos;
+    text-transform: uppercase;
+}

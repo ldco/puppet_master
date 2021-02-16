@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 function makeNavigationView($arr)
 {
-    $navItemClass = "nav_item";
+    $navItemClass = "pm_nav_item";
+    $sub_navItemClass = "pm_nav_item_sub";
+    $sub_UlClass = "pm_nav_item_sub_ul";
 
     foreach ($arr as $navItem) {
         $navElementID = $navItem['_id'];
@@ -18,6 +20,11 @@ function makeNavigationView($arr)
             $onClickHtmlOpen = "";
             $onClickHtmlClose = "";
         }
+        if ($navItem['parent'] !== null) {
+            $_sub_navItemClass = " " . $sub_navItemClass;
+        } else {
+            $_sub_navItemClass = null;
+        }
         $navElemURL = '';
         if (PM_ONEPAGER) {
             $navElemURL = $navItem['link'];
@@ -25,7 +32,7 @@ function makeNavigationView($arr)
             $navElemURL =  '/index.php?show_page=' . $navElementID;
         }
 
-        echo "<li id='{$navElementID}' class='{$navItemClass}'{$onClickHtmlOpen}{$onClickFun}{$onClickHtmlClose}>";
+        echo "<li id='{$navElementID}' class='{$navItemClass}{$_sub_navItemClass}'{$onClickHtmlOpen}{$onClickFun}{$onClickHtmlClose}>";
         if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING) :
             echo "<a href='$navElemURL'>";
         endif;
@@ -34,11 +41,12 @@ function makeNavigationView($arr)
         if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING) :
             echo "</a>";
         endif;
+        echo '</li>';
 
         if (isset($navItem['children']) && is_array($navItem['children'])) {
-            echo "<ul>";
+            echo "<ul class='{$sub_UlClass}'>";
             makeNavigationView($navItem['children']);
-            echo "</ul>";
+            echo '</li></ul>';
         } else {
             echo '</li>';
         }

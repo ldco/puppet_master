@@ -4960,17 +4960,6 @@ function getContentView(id) {
 
 "use strict";
 
-function getThisPageID(x) {
-  var _id = x.id;
-
-  var id = _id.split("#").pop();
-
-  var name = x.querySelector("span").innerHTML;
-  getContentView(id);
-}
-
-"use strict";
-
 function lightBox(elClass, boxClass) {
   var elements = document.querySelectorAll("." + elClass);
   elements.forEach(function (el) {
@@ -5266,11 +5255,15 @@ function removeHamburger() {
 "use strict";
 
 function setRouter() {
-  var els;
-  els = document.querySelectorAll(".nav_item");
+  var els = document.querySelectorAll("li.pm_nav_item");
   els.forEach(function (el) {
     el.addEventListener("click", function () {
-      getThisPageID(this);
+      var _id = this.id;
+
+      var id = _id.split("#").pop();
+
+      getContentView(id);
+      console.log(this);
       setTimeout(function () {
         removeHamburger();
       }, 50);

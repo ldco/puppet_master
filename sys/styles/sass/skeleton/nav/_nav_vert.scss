@@ -1,0 +1,41 @@
+$vert_navfontsize: map-get($verticalHeader, width) / 2;
+@if $PM_HEADER_IS_VERTICAL==true {
+    #pm_Nav--desktop {
+        margin-top: 4vh;
+        height: 60vh;
+        width: map-get($verticalHeader, width);
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        ul li {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            &:hover>a>span {
+                transition: ease-in 0.1s;
+                @include dir(calc(#{map-get($verticalHeader, width)} - 1vh));
+            }
+            &:hover>a>img {
+                transition: ease-in 0.2s;
+                width: calc(#{map-get($verticalHeader, width)} / 1.8);
+            }
+            img {
+                width: calc(#{map-get($verticalHeader, width)} / 2.9);
+                @include navImageFilter();
+            }
+            span {
+                position: absolute;
+                align-items: center;
+                @include dir(-50vh);
+                width: 15vh;
+                justify-content: center;
+                height: calc(#{map-get($verticalHeader, width)} / 2);
+                z-index: -1;
+                border-radius: 1vh;
+                background-color: $c_interP1;
+                padding: 0.5vh;
+            }
+        }
+    }
+}

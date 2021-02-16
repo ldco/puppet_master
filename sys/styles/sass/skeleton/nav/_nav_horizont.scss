@@ -1,0 +1,71 @@
+$hor_navfontsize: map-get($horizontHeader, height) / 2;
+@if $PM_HEADER_IS_VERTICAL==false {
+    #pm_Nav--desktop {
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        height: 100%;
+        ul:first-of-type li:first-of-type {
+            // display: none;
+        }
+        ul:first-of-type li {
+            padding-left: 1vw;
+            padding-right: 1vw;
+            height: 115%;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            @if $PM_NAV_ICONS==true {
+                &:hover>a>img {
+                    transition: ease-in 0.3s;
+                    border-radius: 0.4vh;
+                    border: solid 0.1vh;
+                    padding: 0.3vh;
+                }
+                img {
+                    @include navImageFilter();
+                }
+                img,
+                &+div>img {
+                    padding: 1vh;
+                    border: solid 0.1vh transparent;
+                    width: calc(#{map-get($verticalHeader, width)} / 2);
+                }
+                &:hover>a>span {
+                    transition: ease-in 0.2s;
+                    opacity: 1;
+                    background-color: $c_domin;
+                }
+                span {
+                    font-size: $hor_navfontsize;
+                    @include font(1, 400);
+                    opacity: 0;
+                    position: fixed;
+                    top: calc(#{map-get($horizontHeader, height)} / 0.9);
+                    z-index: -10;
+                    border-radius: 0.5vh;
+                    padding: 0.4vh;
+                }
+            }
+            @if $PM_NAV_ICONS==false {
+                span {
+                    font-size: $hor_navfontsize;
+                    align-items: center;
+                    justify-content: center;
+                    top: initial !important;
+                    width: 100%;
+                    height: 100%;
+                    &:hover {
+                        transition: 1s;
+                        filter: brightness(1.5);
+                        border-bottom: solid 0.1vh $c_opos;
+                    }
+                }
+                img {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

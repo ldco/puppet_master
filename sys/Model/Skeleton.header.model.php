@@ -49,7 +49,7 @@ class SkeletonHeader
         $isAuthenticated = false;
         if (defined("PM_FLOATHEADER") && PM_FLOATHEADER) {
             $headerId = "pm_Header-float";
-            $navId = "pm_id_NavFloat";
+            $navId = "pm_Nav--float";
             $headerLogo = "pm_logo-header--float";
             $headerAsset = "pm_asset-header--float";
         } else if (defined("PM_FLOATHEADER") && !PM_FLOATHEADER) {
