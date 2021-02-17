@@ -1795,8 +1795,6 @@ li.isempty {
   text-align: center;
   justify-content: space-between;
   height: 100%; }
-  #pm_Nav--desktop ul:first-of-type li:first-of-type {
-    display: none; }
   #pm_Nav--desktop ul:first-of-type li {
     padding-left: 1vw;
     padding-right: 1vw;
@@ -1820,13 +1818,14 @@ li.isempty {
       display: none !important; }
   #pm_Nav--desktop .pm_nav_item_sub_ul {
     position: absolute;
-    top: 5vh;
-    background-color: ivory;
+    background-color: gray;
+    margin-top: 10vh;
     padding: 1vh;
-    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center; }
+    #pm_Nav--desktop .pm_nav_item_sub_ul li span {
+      font-size: 1vh !important; }
 
 #pm_Nav--mobile {
   flex-direction: column;
