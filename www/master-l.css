@@ -1785,9 +1785,10 @@ nav {
   color: #2f2f2f;
   text-transform: uppercase; }
 
-.pm_nav_item_sub_ul,
-.pm_nav_item_sub {
-  display: none; }
+li.isempty {
+  cursor: default; }
+  li.isempty span:hover {
+    border-bottom: none !important; }
 
 #pm_Nav--desktop {
   align-items: center;
@@ -1817,6 +1818,15 @@ nav {
         border-bottom: solid 0.1vh #2f2f2f; }
     #pm_Nav--desktop ul:first-of-type li img {
       display: none !important; }
+  #pm_Nav--desktop .pm_nav_item_sub_ul {
+    position: absolute;
+    top: 5vh;
+    background-color: ivory;
+    padding: 1vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
 
 #pm_Nav--mobile {
   flex-direction: column;

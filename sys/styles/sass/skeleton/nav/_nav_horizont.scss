@@ -68,7 +68,17 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
             }
         }
         .pm_nav_item {}
-        .pm_nav_item_sub_ul {}
+        //SUB NAVS
+        .pm_nav_item_sub_ul {
+            position: absolute;
+            top: 5vh;
+            background-color: ivory;
+            padding: 1vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
         .pm_nav_item_sub {}
     }
 }

@@ -46,8 +46,6 @@ function makeNavigationView($arr)
         if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING && ($navItem['isempty'] !== "1")) :
             echo "</a>";
         endif;
-        echo '</li>';
-
         if (isset($navItem['children']) && is_array($navItem['children'])) {
             echo "<ul class='{$sub_UlClass}'>";
             makeNavigationView($navItem['children']);

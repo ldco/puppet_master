@@ -37,5 +37,12 @@ nav {
 
 .pm_nav_item_sub_ul,
 .pm_nav_item_sub {
-    display: none;
+    //display: none;
+}
+
+li.isempty {
+    cursor: default;
+    span:hover {
+        border-bottom: none !important;
+    }
 }
