@@ -14,38 +14,6 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
             justify-content: center;
             align-items: center;
             width: 100%;
-            /* @if $PM_NAV_ICONS==true {
-                &:hover>a>img {
-                    transition: ease-in 0.3s;
-                    border-radius: 0.4vh;
-                    border: solid 0.1vh;
-                    padding: 0.3vh;
-                }
-                img {
-                    @include navImageFilter();
-                }
-                img,
-                &+div>img {
-                    padding: 1vh;
-                    border: solid 0.1vh transparent;
-                    width: calc(#{map-get($verticalHeader, width)} / 2);
-                }
-                &:hover>a>span {
-                    transition: ease-in 0.2s;
-                    opacity: 1;
-                    background-color: $c_domin;
-                }
-                span {
-                    font-size: $hor_navfontsize;
-                    @include font(1, 400);
-                    opacity: 0;
-                    position: fixed;
-                    top: calc(#{map-get($horizontHeader, height)} / 0.9);
-                    z-index: -10;
-                    border-radius: 0.5vh;
-                    padding: 0.4vh;
-                }
-            } */
             @if $PM_NAV_ICONS==false {
                 &:hover .pm_nav_item_sub_ul {
                     display: flex;
@@ -56,8 +24,6 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
                     top: initial !important;
                     width: 100%;
                     &:hover {
-                        // filter: brightness(1.5);
-                        transition: 0s !important;
                         margin-top: 0.1vh;
                         border-bottom: 0.1vh solid;
                     }
@@ -66,37 +32,100 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
                     display: none !important;
                 }
             }
+            @if $PM_NAV_ICONS==true {
+                img {
+                    @include navImageFilter();
+                    padding: 0.5vh;
+                    width: calc(#{map-get($verticalHeader, width)} / 2);
+                    transition: ease-in 0.3s;
+                    border-radius: 0.4vh;
+                    border: solid 0.1vh;
+                    border-color: transparent;
+                }
+                >span {
+                    width: 20vh;
+                    justify-content: center;
+                    align-items: center;
+                    top: map-get($horizontHeader, height);
+                    font-size: $hor_navfontsize / 1.4;
+                    @include font(1, 400);
+                    background-color: $c_domin;
+                    border-radius: 0.2vh;
+                    // box-shadow: 0vh 0.1vh 0.2vh 0vh $c_black;
+                    padding: 0.4vh;
+                    margin-bottom: 0.8vh;
+                    display: none;
+                    position: fixed;
+                }
+                &:not(.isempty)>span:hover {
+                    background-color: $c_opos;
+                    color: $c_domin;
+                }
+                &:hover>img {
+                    border-color: $c_opos;
+                }
+                &:hover>span {
+                    display: flex;
+                }
+                &:hover>ul {
+                    display: flex;
+                }
+            }
         }
         .pm_nav_item {}
         //
         //**SUB NAVS**//
         //
+        @if $PM_NAV_ICONS==false {
+            .pm_nav_item_sub_ul {
+                background-color: $c_domin;
+                border-radius: 0.5vh;
+                top: map-get($horizontHeader, height);
+                box-shadow: 0vh 0vh 0.8vh 0vh $c_black;
+                li {
+                    width: 100%;
+                    @include flex-center;
+                    >span {
+                        padding: 1vh;
+                        font-size: $hor_navfontsize / 1.6;
+                    }
+                    &:hover {
+                        background-color: $c_opos;
+                        color: $c_domin;
+                    }
+                }
+            }
+        }
+        @if $PM_NAV_ICONS==true {
+            .pm_nav_item_sub_ul {
+                background-color: $c_domin;
+                border-radius: 0.3vh;
+                top: map-get($horizontHeader, height) + $hor_navfontsize;
+                box-shadow: 0vh 0.1vh 0.1vh $c_black, 0vh 0.1vh 0.1vh $c_black;
+                li {
+                    padding: 0.5vh;
+                    width: 20vh;
+                    @include flex-center;
+                    >span {
+                        font-size: $hor_navfontsize / 1.8;
+                    }
+                    &:hover {
+                        background-color: $c_opos;
+                        color: $c_domin;
+                    }
+                    &:hover>img {
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
         .pm_nav_item_sub_ul {
             display: none;
             position: absolute;
             background-color: $c_domin;
-            border-radius: 0.5vh;
-            top: map-get($horizontHeader, height);
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0vh 0vh 0.8vh 0vh $c_black;
-            li {
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                >span {
-                    padding: 1vh;
-                    transition: 0s !important;
-                    font-size: $hor_navfontsize / 1.6;
-                }
-                &:hover {
-                    transition: 0s !important;
-                    background-color: $c_opos;
-                    color: $c_domin;
-                }
-            }
         }
         .pm_nav_item_sub {}
     }
