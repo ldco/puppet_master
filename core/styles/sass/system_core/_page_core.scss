@@ -9,7 +9,7 @@ main section {
         text-transform: uppercase;
         text-align: center;
         @include font(1, 50);
-        @include f-size(2);
+        @include f-size($basicTextSize + 1);
         &:after {
             padding-top: 1vh;
             border-bottom: 0.3vh solid $c_brand;

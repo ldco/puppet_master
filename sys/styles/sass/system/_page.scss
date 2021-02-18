@@ -24,6 +24,7 @@ main section {
     padding-bottom: $sectionBottomPadding;
     padding-left: $sectionSidePadding;
     padding-right: $sectionSidePadding;
+    @include f-size($basicTextSize);
     h1 {
         &:after {
             content: "";

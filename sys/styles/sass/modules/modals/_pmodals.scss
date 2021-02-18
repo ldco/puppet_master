@@ -79,7 +79,7 @@ input.pm_modal_button {
 //title
 .pm_modal_title {
     @include font(1, 400);
-    @include f-size(1.1);
+    @include f-size($basicTextSize + 0.1);
     color: $c_brand;
 }
 

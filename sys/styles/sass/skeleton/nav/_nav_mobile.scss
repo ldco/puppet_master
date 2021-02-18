@@ -19,7 +19,7 @@
         align-items: center;
         img,
         span {
-            @include f-size-fill(1);
+            @include f-size-fill($basicTextSize);
             [dir=rtl] & {
                 margin-right: 3vh;
             }

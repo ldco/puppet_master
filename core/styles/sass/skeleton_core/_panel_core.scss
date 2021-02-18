@@ -1,5 +1,5 @@
 #pm_panel--header {
-    font-size: 1.8vh;
+    @include f-size($basicTextSize + 0.3);
     div {
         padding-right: 3vh;
         padding-left: 3vh;

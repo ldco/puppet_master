@@ -16,7 +16,12 @@
 
 //rfs font size fix
 @mixin f-size($size) {
-    @include rfs(($size)*((1vh)*3));
+    @media (orientation: landscape) {
+        font-size: calc(((#{$size}rem) + (#{$size}em)) / 1.8);
+    }
+    @media (orientation: portrait) {
+        font-size: calc(((#{$size}rem) + (#{$size}em)) / 2);
+    }
 }
 
 //queries

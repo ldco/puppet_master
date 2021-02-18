@@ -50,7 +50,7 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
             }
             @if $PM_NAV_ICONS==false {
                 span {
-                    font-size: $hor_navfontsize;
+                    // font-size: $hor_navfontsize;
                     align-items: center;
                     justify-content: center;
                     top: initial !important;
@@ -79,7 +79,7 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
             align-items: center;
             li {
                 span {
-                    font-size: 1vh !important;
+                    @include f-size($basicTextSize);
                 }
             }
         }

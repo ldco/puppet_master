@@ -67,7 +67,7 @@ iframe {
     background-color: $c_interB;
     box-shadow: $pm_formBS;
     @include font(1, 200);
-    @include f-size(0.9);
+    @include f-size($basicTextSize - 0.1);
     border-radius: 0.2vh;
 }
 
@@ -109,7 +109,7 @@ form {
 
 option {
     text-transform: capitalize;
-    @include f-size(0.7);
+    @include f-size($basicTextSize - 0.3);
 }
 
 select {

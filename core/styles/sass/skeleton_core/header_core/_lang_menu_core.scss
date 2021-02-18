@@ -22,7 +22,7 @@ $langMenuInputsFontSize: 0.4;
             color: $c_white;
             border-radius: 0vh;
             @include font(1, 400);
-            @include f-size-fill(1)
+            @include f-size-fill($basicTextSize)
         }
     }
 }

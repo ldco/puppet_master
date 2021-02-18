@@ -696,7 +696,6 @@ video,
 iframe {
   background-color: #e5e5e5;
   box-shadow: 0.1vh 0.1vh 0.1vh 0.1vh rgba(169, 169, 169, 0.4);
-  font-size: 2.7vh;
   border-radius: 0.2vh; }
   [lang=en] button, [lang=en]
   textarea, [lang=en]
@@ -728,6 +727,26 @@ iframe {
   iframe {
     font-family: Heebo;
     font-weight: 200; }
+  @media (orientation: landscape) {
+    button,
+    textarea,
+    input,
+    canvas,
+    select,
+    option,
+    video,
+    iframe {
+      font-size: calc(((0.9rem) + (0.9em)) / 1.8); } }
+  @media (orientation: portrait) {
+    button,
+    textarea,
+    input,
+    canvas,
+    select,
+    option,
+    video,
+    iframe {
+      font-size: calc(((0.9rem) + (0.9em)) / 2); } }
 
 button,
 textarea,
@@ -745,8 +764,13 @@ input[type="checkbox"] {
   background-color: #2f2f2f;
   font-size: 1.3vh; }
 
-textarea {
-  font-size: 2.4vh; }
+@media (orientation: landscape) {
+  textarea {
+    font-size: calc(((0.8rem) + (0.8em)) / 1.8); } }
+
+@media (orientation: portrait) {
+  textarea {
+    font-size: calc(((0.8rem) + (0.8em)) / 2); } }
 
 label {
   text-transform: capitalize;
@@ -755,24 +779,39 @@ label {
     color: #ff0c00ff; }
 
 form {
-  flex-direction: column;
-  font-size: 2.7vh; }
+  flex-direction: column; }
+  @media (orientation: landscape) {
+    form {
+      font-size: calc(((0.9rem) + (0.9em)) / 1.8); } }
+  @media (orientation: portrait) {
+    form {
+      font-size: calc(((0.9rem) + (0.9em)) / 2); } }
 
 option {
-  text-transform: capitalize;
-  font-size: 2.1vh; }
+  text-transform: capitalize; }
+  @media (orientation: landscape) {
+    option {
+      font-size: calc(((0.7rem) + (0.7em)) / 1.8); } }
+  @media (orientation: portrait) {
+    option {
+      font-size: calc(((0.7rem) + (0.7em)) / 2); } }
 
 select {
   background-image: url("../core/assets/icons/vector_dev/down.svg");
   background-size: 1.6vh auto, 100%;
   background: #e5e5e5;
   color: #2f2f2f;
-  text-transform: capitalize;
-  font-size: 2.1vh; }
+  text-transform: capitalize; }
   [dir=rtl] select {
     background-position: left 0.7vh top 50%, 0 0; }
   [dir=ltr] select {
     background-position: right 0.7vh top 50%, 0 0; }
+  @media (orientation: landscape) {
+    select {
+      font-size: calc(((0.7rem) + (0.7em)) / 1.8); } }
+  @media (orientation: portrait) {
+    select {
+      font-size: calc(((0.7rem) + (0.7em)) / 2); } }
 
 input[type="button"],
 input[type="submit"],
@@ -1109,27 +1148,51 @@ body {
 @media (max-aspect-ratio: 13 / 9) {
   .pm_infoPageInner button {
     width: 18vh;
-    height: 7vh;
-    font-size: 2.1vh; }
+    height: 7vh; } }
+  @media (max-aspect-ratio: 13 / 9) and (orientation: landscape) {
+    .pm_infoPageInner button {
+      font-size: calc(((0.7rem) + (0.7em)) / 1.8); } }
+  @media (max-aspect-ratio: 13 / 9) and (orientation: portrait) {
+    .pm_infoPageInner button {
+      font-size: calc(((0.7rem) + (0.7em)) / 2); } }
+
+@media (max-aspect-ratio: 13 / 9) {
   .pm_infoPageLogo {
     width: 30vh;
     height: 30vh; }
   .pm_infoPageText {
-    margin-top: 7vh;
-    font-size: 3.6vh; } }
+    margin-top: 7vh; } }
+  @media (max-aspect-ratio: 13 / 9) and (orientation: landscape) {
+    .pm_infoPageText {
+      font-size: calc(((1.2rem) + (1.2em)) / 1.8); } }
+  @media (max-aspect-ratio: 13 / 9) and (orientation: portrait) {
+    .pm_infoPageText {
+      font-size: calc(((1.2rem) + (1.2em)) / 2); } }
 
 @media (min-aspect-ratio: 13 / 9) {
   .pm_infoPageInner button {
     width: 18vw;
     height: 5vw;
-    font-size: 2.4vh;
-    margin: 2vw; }
+    margin: 2vw; } }
+  @media (min-aspect-ratio: 13 / 9) and (orientation: landscape) {
+    .pm_infoPageInner button {
+      font-size: calc(((0.8rem) + (0.8em)) / 1.8); } }
+  @media (min-aspect-ratio: 13 / 9) and (orientation: portrait) {
+    .pm_infoPageInner button {
+      font-size: calc(((0.8rem) + (0.8em)) / 2); } }
+
+@media (min-aspect-ratio: 13 / 9) {
   .pm_infoPageLogo {
     width: 26vw;
     height: 26vw; }
   .pm_infoPageText {
-    margin-top: 3vw;
-    font-size: 6.6vh; } }
+    margin-top: 3vw; } }
+  @media (min-aspect-ratio: 13 / 9) and (orientation: landscape) {
+    .pm_infoPageText {
+      font-size: calc(((2.2rem) + (2.2em)) / 1.8); } }
+  @media (min-aspect-ratio: 13 / 9) and (orientation: portrait) {
+    .pm_infoPageText {
+      font-size: calc(((2.2rem) + (2.2em)) / 2); } }
 
 #pm_adminLoginView {
   width: 100vw;
@@ -1203,8 +1266,7 @@ main section {
   main section h1 {
     color: #2f2f2f;
     text-transform: uppercase;
-    text-align: center;
-    font-size: 6vh; }
+    text-align: center; }
     [lang=en] main section h1 {
       font-family: Montserrat;
       font-weight: 50; }
@@ -1214,6 +1276,12 @@ main section {
     [lang=he] main section h1 {
       font-family: Heebo;
       font-weight: 50; }
+    @media (orientation: landscape) {
+      main section h1 {
+        font-size: calc(((2rem) + (2em)) / 1.8); } }
+    @media (orientation: portrait) {
+      main section h1 {
+        font-size: calc(((2rem) + (2em)) / 2); } }
     main section h1:after {
       padding-top: 1vh;
       border-bottom: 0.3vh solid #aa0000; }
@@ -1221,52 +1289,98 @@ main section {
 @media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] main section article {
     width: 80vw;
-    line-height: 140%;
-    font-size: 2.4vh; }
+    line-height: 140%; } }
+  @media (max-aspect-ratio: 13 / 9) and (orientation: landscape) {
+    [data-mob=true] main section article {
+      font-size: calc(((0.8rem) + (0.8em)) / 1.8); } }
+  @media (max-aspect-ratio: 13 / 9) and (orientation: portrait) {
+    [data-mob=true] main section article {
+      font-size: calc(((0.8rem) + (0.8em)) / 2); } }
+
+@media (max-aspect-ratio: 13 / 9) {
   [data-mob=true] main section h1 {
-    margin-top: 4vh; }
+    margin-top: 4vh; } }
+
+@media (max-aspect-ratio: 13 / 9) and (orientation: landscape) {
   [data-mob=true] main section a {
-    font-size: 2.4vh; } }
+    font-size: calc(((0.8rem) + (0.8em)) / 1.8); } }
+
+@media (max-aspect-ratio: 13 / 9) and (orientation: portrait) {
+  [data-mob=true] main section a {
+    font-size: calc(((0.8rem) + (0.8em)) / 2); } }
 
 @media (max-width: 1210px) {
   [data-mob=false] main section article {
     width: 80vw;
-    line-height: 140%;
-    font-size: 2.4vh; }
+    line-height: 140%; } }
+  @media (max-width: 1210px) and (orientation: landscape) {
+    [data-mob=false] main section article {
+      font-size: calc(((0.8rem) + (0.8em)) / 1.8); } }
+  @media (max-width: 1210px) and (orientation: portrait) {
+    [data-mob=false] main section article {
+      font-size: calc(((0.8rem) + (0.8em)) / 2); } }
+
+@media (max-width: 1210px) {
   [data-mob=false] main section h1 {
-    margin-top: 4vh; }
+    margin-top: 4vh; } }
+
+@media (max-width: 1210px) and (orientation: landscape) {
   [data-mob=false] main section a {
-    font-size: 2.4vh; } }
+    font-size: calc(((0.8rem) + (0.8em)) / 1.8); } }
+
+@media (max-width: 1210px) and (orientation: portrait) {
+  [data-mob=false] main section a {
+    font-size: calc(((0.8rem) + (0.8em)) / 2); } }
 
 @media (min-aspect-ratio: 13 / 9) {
   [data-mob=true] main section article {
     width: 90vw;
     line-height: 130%; }
   [data-mob=true] main section h1 {
-    margin-top: 6vh; }
+    margin-top: 6vh; } }
+
+@media (min-aspect-ratio: 13 / 9) and (orientation: landscape) {
   [data-mob=true] main section a {
-    font-size: 3vh; } }
+    font-size: calc(((1rem) + (1em)) / 1.8); } }
+
+@media (min-aspect-ratio: 13 / 9) and (orientation: portrait) {
+  [data-mob=true] main section a {
+    font-size: calc(((1rem) + (1em)) / 2); } }
 
 @media (min-width: 1210px) {
   [data-mob=false] main section article {
     width: 90vw;
     line-height: 130%; }
   [data-mob=false] main section h1 {
-    margin-top: 6vh; }
-  [data-mob=false] main section a {
-    font-size: 3vh; } }
+    margin-top: 6vh; } }
 
-main section article {
-  font-size: 3vh; }
-  [lang=en] main section article {
-    font-family: Montserrat;
-    font-weight: 300; }
-  [lang=ru] main section article {
-    font-family: Montserrat;
-    font-weight: 300; }
-  [lang=he] main section article {
-    font-family: Heebo;
-    font-weight: 300; }
+@media (min-width: 1210px) and (orientation: landscape) {
+  [data-mob=false] main section a {
+    font-size: calc(((1rem) + (1em)) / 1.8); } }
+
+@media (min-width: 1210px) and (orientation: portrait) {
+  [data-mob=false] main section a {
+    font-size: calc(((1rem) + (1em)) / 2); } }
+
+[lang=en] main section article {
+  font-family: Montserrat;
+  font-weight: 300; }
+
+[lang=ru] main section article {
+  font-family: Montserrat;
+  font-weight: 300; }
+
+[lang=he] main section article {
+  font-family: Heebo;
+  font-weight: 300; }
+
+@media (orientation: landscape) {
+  main section article {
+    font-size: calc(((1rem) + (1em)) / 1.8); } }
+
+@media (orientation: portrait) {
+  main section article {
+    font-size: calc(((1rem) + (1em)) / 2); } }
 
 .pm_page--light {
   background-color: #f9f9f9;
@@ -1300,6 +1414,12 @@ main section {
   padding-bottom: 3vh;
   padding-left: 5vh;
   padding-right: 5vh; }
+  @media (orientation: landscape) {
+    main section {
+      font-size: calc(((1rem) + (1em)) / 1.8); } }
+  @media (orientation: portrait) {
+    main section {
+      font-size: calc(((1rem) + (1em)) / 2); } }
   main section h1:after {
     content: "";
     display: block;
@@ -1474,8 +1594,13 @@ header {
 #pm_Lang img {
   transition: ease 1s; }
 
-#pm_Header--desktop.--scrolled nav ul li span {
-  font-size: 2vh; }
+@media (orientation: landscape) {
+  #pm_Header--desktop.--scrolled nav ul li span {
+    font-size: calc(((0.66667rem) + (0.66667em)) / 1.8); } }
+
+@media (orientation: portrait) {
+  #pm_Header--desktop.--scrolled nav ul li span {
+    font-size: calc(((0.66667rem) + (0.66667em)) / 2); } }
 
 #pm_logo-header--mobile {
   background-size: calc(6vh / 0.5); }
@@ -1736,13 +1861,18 @@ header {
     justify-content: center;
     align-items: center; }
     #lang_menu form input {
-      font-size: 1.8vh;
       display: flex;
       justify-content: center;
       align-items: center;
       font-weight: bolder;
       height: 4vh;
       width: 4vh; }
+      @media (orientation: landscape) {
+        #lang_menu form input {
+          font-size: calc(((0.6rem) + (0.6em)) / 1.8); } }
+      @media (orientation: portrait) {
+        #lang_menu form input {
+          font-size: calc(((0.6rem) + (0.6em)) / 2); } }
 
 #lang_menu.--active {
   display: flex; }
@@ -1804,7 +1934,6 @@ li.isempty {
     height: 100%;
     width: 100%; }
     #pm_Nav--desktop ul:first-of-type li span {
-      font-size: 3vh;
       align-items: center;
       justify-content: center;
       top: initial !important;
@@ -1824,8 +1953,12 @@ li.isempty {
     justify-content: center;
     flex-direction: column;
     align-items: center; }
-    #pm_Nav--desktop .pm_nav_item_sub_ul li span {
-      font-size: 1vh !important; }
+    @media (orientation: landscape) {
+      #pm_Nav--desktop .pm_nav_item_sub_ul li span {
+        font-size: calc(((1rem) + (1em)) / 1.8); } }
+    @media (orientation: portrait) {
+      #pm_Nav--desktop .pm_nav_item_sub_ul li span {
+        font-size: calc(((1rem) + (1em)) / 2); } }
 
 #pm_Nav--mobile {
   flex-direction: column;
@@ -1884,18 +2017,29 @@ li.isempty {
     #pm_Nav--float ul li img {
       display: none; }
     #pm_Nav--float ul li span {
-      color: #2f2f2f;
-      font-size: 3.6vh; }
+      color: #2f2f2f; }
+      @media (orientation: landscape) {
+        #pm_Nav--float ul li span {
+          font-size: calc(((1.2rem) + (1.2em)) / 1.8); } }
+      @media (orientation: portrait) {
+        #pm_Nav--float ul li span {
+          font-size: calc(((1.2rem) + (1.2em)) / 2); } }
 
-#pm_panel--header {
-  font-size: 1.8vh; }
-  #pm_panel--header div {
-    padding-right: 3vh;
-    padding-left: 3vh; }
-    [dir=rtl] #pm_panel--header div img {
-      transform: rotate(180deg); }
-    [dir=ltr] #pm_panel--header div img {
-      transform: initial; }
+@media (orientation: landscape) {
+  #pm_panel--header {
+    font-size: calc(((1.3rem) + (1.3em)) / 1.8); } }
+
+@media (orientation: portrait) {
+  #pm_panel--header {
+    font-size: calc(((1.3rem) + (1.3em)) / 2); } }
+
+#pm_panel--header div {
+  padding-right: 3vh;
+  padding-left: 3vh; }
+  [dir=rtl] #pm_panel--header div img {
+    transform: rotate(180deg); }
+  [dir=ltr] #pm_panel--header div img {
+    transform: initial; }
 
 #pm_panel--header {
   position: fixed;
@@ -1931,17 +2075,21 @@ footer {
   [lang=he] footer {
     font-family: Heebo;
     font-weight: 900; }
-  footer span {
-    font-size: 1.5vh; }
-    [lang=en] footer span {
-      font-family: Montserrat;
-      font-weight: 400; }
-    [lang=ru] footer span {
-      font-family: Montserrat;
-      font-weight: 400; }
-    [lang=he] footer span {
-      font-family: Heebo;
-      font-weight: 400; }
+  [lang=en] footer span {
+    font-family: Montserrat;
+    font-weight: 400; }
+  [lang=ru] footer span {
+    font-family: Montserrat;
+    font-weight: 400; }
+  [lang=he] footer span {
+    font-family: Heebo;
+    font-weight: 400; }
+  @media (orientation: landscape) {
+    footer span {
+      font-size: calc(((0.5rem) + (0.5em)) / 1.8); } }
+  @media (orientation: portrait) {
+    footer span {
+      font-size: calc(((0.5rem) + (0.5em)) / 2); } }
   footer #pm_footer--copyright {
     direction: ltr; }
     [dir=ltr] footer #pm_footer--copyright {
@@ -2049,7 +2197,6 @@ footer {
   [dir="rtl"] #thebilityMainDiv {
     left: calc(-12.5vw + 35vh); }
   #thebilityMainDiv .thebilityDiv {
-    font-size: 1.8vh;
     text-transform: capitalize;
     text-align: center;
     background: rgba(249, 249, 249, 0.8);
@@ -2069,6 +2216,12 @@ footer {
     [lang=he] #thebilityMainDiv .thebilityDiv {
       font-family: Heebo;
       font-weight: 400; }
+    @media (orientation: landscape) {
+      #thebilityMainDiv .thebilityDiv {
+        font-size: calc(((0.6rem) + (0.6em)) / 1.8); } }
+    @media (orientation: portrait) {
+      #thebilityMainDiv .thebilityDiv {
+        font-size: calc(((0.6rem) + (0.6em)) / 2); } }
     #thebilityMainDiv .thebilityDiv:hover {
       background: rgba(122, 122, 122, 0.8);
       box-shadow: 0 0 0 0.4vh rgba(175, 175, 175, 0.2); }
@@ -2103,8 +2256,15 @@ footer {
   [data-mob=true] #pm_thebility .column {
     flex-direction: column; }
   [data-mob=true] #pm_thebility .thebilityDiv {
-    width: 60vw;
-    font-size: 1.8vh; }
+    width: 60vw; } }
+  @media (max-aspect-ratio: 13 / 9) and (orientation: landscape) {
+    [data-mob=true] #pm_thebility .thebilityDiv {
+      font-size: calc(((0.6rem) + (0.6em)) / 1.8); } }
+  @media (max-aspect-ratio: 13 / 9) and (orientation: portrait) {
+    [data-mob=true] #pm_thebility .thebilityDiv {
+      font-size: calc(((0.6rem) + (0.6em)) / 2); } }
+
+@media (max-aspect-ratio: 13 / 9) {
     [data-mob=true] #pm_thebility .thebilityDiv input {
       margin-top: 1.5vh; }
   [data-mob=true] #dragThebility {
@@ -2127,8 +2287,15 @@ footer {
   [data-mob=false] #pm_thebility .column {
     flex-direction: column; }
   [data-mob=false] #pm_thebility .thebilityDiv {
-    width: 60vw;
-    font-size: 1.8vh; }
+    width: 60vw; } }
+  @media (max-width: 1210px) and (orientation: landscape) {
+    [data-mob=false] #pm_thebility .thebilityDiv {
+      font-size: calc(((0.6rem) + (0.6em)) / 1.8); } }
+  @media (max-width: 1210px) and (orientation: portrait) {
+    [data-mob=false] #pm_thebility .thebilityDiv {
+      font-size: calc(((0.6rem) + (0.6em)) / 2); } }
+
+@media (max-width: 1210px) {
     [data-mob=false] #pm_thebility .thebilityDiv input {
       margin-top: 1.5vh; }
   [data-mob=false] #dragThebility {
@@ -2268,8 +2435,13 @@ footer {
 
 .pm_contacts {
   display: flex;
-  flex-direction: column;
-  font-size: 3vh; }
+  flex-direction: column; }
+  @media (orientation: landscape) {
+    .pm_contacts {
+      font-size: calc(((1rem) + (1em)) / 1.8); } }
+  @media (orientation: portrait) {
+    .pm_contacts {
+      font-size: calc(((1rem) + (1em)) / 2); } }
 
 .pm_contacts_item {
   display: flex;

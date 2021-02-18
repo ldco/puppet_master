@@ -33,19 +33,19 @@
 .pm_blog_name {
     align-self: center;
     margin-bottom: 2vh;
-    @include f-size(1.2);
+    @include f-size($basicTextSize + 0.2);
     @include font(1, 600);
 }
 
 .pm_blog_text {
     margin-top: 2vh;
-    @include f-size(1);
+    @include f-size($basicTextSize);
     @include font(1, 300);
 }
 
 .pm_blog_date {
     margin-top: 2vh;
-    @include f-size(0.6);
+    @include f-size($basicTextSize - 0.4);
     @include font(1, 400);
     font-style: italic;
 }
