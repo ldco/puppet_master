@@ -5,6 +5,7 @@ declare(strict_types=1);
 function makeNavigationView($arr)
 {
     $navItemClass = "pm_nav_item";
+    // $navItemULClass = "pm_nav_item_ul";
     $sub_navItemClass = "pm_nav_item_sub";
     $sub_UlClass = "pm_nav_item_sub_ul";
 

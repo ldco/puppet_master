@@ -42,7 +42,7 @@ nav {
 
 li.isempty {
     cursor: default;
-    span:hover {
+    >span:hover {
         border-bottom: none !important;
     }
 }

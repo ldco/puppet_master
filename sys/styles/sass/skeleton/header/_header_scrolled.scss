@@ -5,13 +5,19 @@
      #pm_logo-header,
      #pm_Header--desktop,
      #pm_asset-header,
-     #pm_Header--desktop nav ul li span,
+     #pm_Header--desktop nav>ul li span,
      #pm_Lang img {
          transition: $scrolledHeaderTransition;
      }
      #pm_Header--desktop.--scrolled {
-         nav ul li span {
+         nav>ul>li span {
              @include f-size($basicTextSize / $horizontalNavFont);
+         }
+         .pm_nav_item_sub_ul li span {
+             @include f-size($basicTextSize / $horizontalNavFont / 1.4);
+         }
+         .pm_nav_item_sub_ul {
+             top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight});
          }
      }
      #pm_Header--desktop.--scrolled {}

@@ -4,19 +4,17 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
         align-items: center;
         text-align: center;
         justify-content: space-between;
-        height: 100%;
-        ul:first-of-type li:first-of-type {
-            // display: none;
+        >ul>li:first-of-type {
+            display: none;
         }
-        ul:first-of-type li {
+        >ul>li {
+            height: map-get($horizontHeader, height);
             padding-left: 1vw;
             padding-right: 1vw;
-            height: 115%;
             justify-content: center;
             align-items: center;
-            height: 100%;
             width: 100%;
-            @if $PM_NAV_ICONS==true {
+            /* @if $PM_NAV_ICONS==true {
                 &:hover>a>img {
                     transition: ease-in 0.3s;
                     border-radius: 0.4vh;
@@ -47,19 +45,21 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
                     border-radius: 0.5vh;
                     padding: 0.4vh;
                 }
-            }
+            } */
             @if $PM_NAV_ICONS==false {
-                span {
-                    // font-size: $hor_navfontsize;
+                &:hover .pm_nav_item_sub_ul {
+                    display: flex;
+                }
+                >span {
                     align-items: center;
                     justify-content: center;
                     top: initial !important;
                     width: 100%;
-                    height: 100%;
                     &:hover {
-                        transition: 1s;
-                        filter: brightness(1.5);
-                        border-bottom: solid 0.1vh $c_opos;
+                        // filter: brightness(1.5);
+                        transition: 0s !important;
+                        margin-top: 0.1vh;
+                        border-bottom: 0.1vh solid;
                     }
                 }
                 img {
@@ -68,18 +68,33 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
             }
         }
         .pm_nav_item {}
-        //SUB NAVS
+        //
+        //**SUB NAVS**//
+        //
         .pm_nav_item_sub_ul {
+            display: none;
             position: absolute;
-            background-color: gray;
-            margin-top: 10vh;
-            padding: 1vh;
+            background-color: $c_domin;
+            border-radius: 0.5vh;
+            top: map-get($horizontHeader, height);
             justify-content: center;
             flex-direction: column;
             align-items: center;
+            box-shadow: 0vh 0vh 0.8vh 0vh $c_black;
             li {
-                span {
-                    @include f-size($basicTextSize);
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >span {
+                    padding: 1vh;
+                    transition: 0s !important;
+                    font-size: $hor_navfontsize / 1.6;
+                }
+                &:hover {
+                    transition: 0s !important;
+                    background-color: $c_opos;
+                    color: $c_domin;
                 }
             }
         }
