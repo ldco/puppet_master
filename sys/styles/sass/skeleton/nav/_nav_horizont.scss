@@ -16,6 +16,15 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
             align-items: center;
             width: 100%;
             @if $PM_NAV_ICONS==false {
+                img {
+                    display: none !important;
+                }
+            }
+            @if $PM_NAV_ICONS==false or both {
+                &:not(.isempty)>div>span:hover {
+                    margin-top: 0.1vh;
+                    border-bottom: 0.1vh solid;
+                }
                 &:hover .pm_nav_item_sub_ul {
                     display: flex;
                 }
@@ -24,21 +33,35 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
                     justify-content: center;
                     top: initial !important;
                     width: 100%;
-                    &:hover {
-                        margin-top: 0.1vh;
-                        border-bottom: 0.1vh solid;
+                }
+            }
+            @if $PM_NAV_ICONS==both {
+                >div {
+                    [dir=rtl] & {
+                        margin-right: 1vh
+                    }
+                    [dir=ltr] & {
+                        margin-left: 1vh
                     }
                 }
-                img {
-                    display: none !important;
+                >ul>li>img {
+                    padding: 1vh;
+                    [dir=rtl] & {
+                        margin-left: -1vh;
+                    }
+                    [dir=ltr] & {
+                        margin-right: -1vh;
+                    }
                 }
             }
             @if $PM_NAV_ICONS==true {
+                >img {
+                    transition: ease-in 0.3s;
+                }
                 img {
                     @include navImageFilter();
                     padding: 0.5vh;
                     width: calc(#{map-get($verticalHeader, width)} / 2);
-                    transition: ease-in 0.3s;
                     border-radius: 0.4vh;
                     border: solid 0.1vh;
                     border-color: transparent;
@@ -84,7 +107,7 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
         //
         //**SUB NAVS**//
         //
-        @if $PM_NAV_ICONS==false {
+        @if $PM_NAV_ICONS==false or both {
             .pm_nav_item_sub_ul {
                 background-color: $c_domin;
                 border-radius: 0.2vh;
@@ -100,6 +123,15 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
                     &:hover {
                         background-color: $c_opos;
                         color: $c_domin;
+                    }
+                }
+            }
+        }
+        @if $PM_NAV_ICONS==true or both {
+            .pm_nav_item_sub_ul {
+                li {
+                    &:hover>img {
+                        filter: invert(1);
                     }
                 }
             }
@@ -121,9 +153,6 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
                     &:hover {
                         background-color: $c_opos;
                         color: $c_domin;
-                    }
-                    &:hover>img {
-                        filter: invert(1);
                     }
                 }
             }

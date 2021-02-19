@@ -1,9 +1,10 @@
 //info pages puppet master or custom branding
 //
 //GLOBALS
-$PM_HEADER_IS_VERTICAL: false;
-$PM_NAV_ICONS: false; //always true if PM_HEADER_IS_VERTICAL true
-$INFO_PM_BRAND: true;
+$PM_HEADER_IS_VERTICAL: false; //true //false
+$PM_NAV_ICONS: true; //true //false //both
+//always true if PM_HEADER_IS_VERTICAL true
+$INFO_PM_BRAND: true; //true //false
 //sizes
 $basicTextSize: 1;
 $verticalHeader: (width: 6vh);
