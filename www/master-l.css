@@ -1909,7 +1909,8 @@ header {
 nav,
 nav ul,
 nav ul li,
-nav span {
+nav div,
+nav div span {
   display: flex; }
 
 nav {
@@ -1938,68 +1939,40 @@ li.isempty {
   #pm_Nav--desktop > ul > li:first-of-type {
     display: none; }
   #pm_Nav--desktop > ul > li {
-    height: 6vh;
+    height: 10vh;
     padding-left: 1vw;
     padding-right: 1vw;
     justify-content: center;
     align-items: center;
     width: 100%; }
-    #pm_Nav--desktop > ul > li img {
-      filter: none;
-      padding: 0.5vh;
-      width: calc(6vh / 2);
-      transition: ease-in 0.3s;
-      border-radius: 0.4vh;
-      border: solid 0.1vh;
-      border-color: transparent; }
-    #pm_Nav--desktop > ul > li > span {
-      width: 20vh;
-      justify-content: center;
+    #pm_Nav--desktop > ul > li:hover .pm_nav_item_sub_ul {
+      display: flex; }
+    #pm_Nav--desktop > ul > li > div > span {
       align-items: center;
-      top: 6vh;
-      font-size: 2.14286vh;
-      background-color: #f9f9f9;
-      border-radius: 0.2vh;
-      padding: 0.4vh;
-      margin-bottom: 0.8vh;
-      display: none;
-      position: fixed; }
-      [lang=en] #pm_Nav--desktop > ul > li > span {
-        font-family: Montserrat;
-        font-weight: 400; }
-      [lang=ru] #pm_Nav--desktop > ul > li > span {
-        font-family: Montserrat;
-        font-weight: 400; }
-      [lang=he] #pm_Nav--desktop > ul > li > span {
-        font-family: Heebo;
-        font-weight: 400; }
-    #pm_Nav--desktop > ul > li:not(.isempty) > span:hover {
-      background-color: #2f2f2f;
-      color: #f9f9f9; }
-    #pm_Nav--desktop > ul > li:hover > img {
-      border-color: #2f2f2f; }
-    #pm_Nav--desktop > ul > li:hover > span {
-      display: flex; }
-    #pm_Nav--desktop > ul > li:hover > ul {
-      display: flex; }
+      justify-content: center;
+      top: initial !important;
+      width: 100%; }
+      #pm_Nav--desktop > ul > li > div > span:hover {
+        margin-top: 0.1vh;
+        border-bottom: 0.1vh solid; }
+    #pm_Nav--desktop > ul > li img {
+      display: none !important; }
   #pm_Nav--desktop .pm_nav_item_sub_ul {
     background-color: #f9f9f9;
-    border-radius: 0.3vh;
-    top: 9vh;
-    box-shadow: 0vh 0.1vh 0.1vh #2f2f2f, 0vh 0.1vh 0.1vh #2f2f2f; }
+    border-radius: 0.2vh;
+    top: 8vh;
+    box-shadow: 0vh 0.1vh 0.2vh 0vh #2f2f2f; }
     #pm_Nav--desktop .pm_nav_item_sub_ul li {
-      padding: 0.5vh;
-      width: 20vh;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center; }
-      #pm_Nav--desktop .pm_nav_item_sub_ul li > span {
-        font-size: 1.66667vh; }
+      #pm_Nav--desktop .pm_nav_item_sub_ul li > div > span {
+        padding: 1vh;
+        font-size: 1.875vh; }
       #pm_Nav--desktop .pm_nav_item_sub_ul li:hover {
         background-color: #2f2f2f;
         color: #f9f9f9; }
-      #pm_Nav--desktop .pm_nav_item_sub_ul li:hover > img {
-        filter: invert(1); }
   #pm_Nav--desktop .pm_nav_item_sub_ul {
     display: none;
     position: absolute;
@@ -2062,6 +2035,16 @@ li.isempty {
     padding-right: 0.7vh; }
     #pm_Nav--float ul li:hover {
       border-bottom: solid 0.1vh #2f2f2f; }
+    #pm_Nav--float ul li img {
+      display: none; }
+    #pm_Nav--float ul li span {
+      color: #2f2f2f; }
+      @media (orientation: landscape) {
+        #pm_Nav--float ul li span {
+          font-size: calc(((1.2rem) + (1.2em)) / 1.8); } }
+      @media (orientation: portrait) {
+        #pm_Nav--float ul li span {
+          font-size: calc(((1.2rem) + (1.2em)) / 2); } }
 
 @media (orientation: landscape) {
   #pm_panel--header {

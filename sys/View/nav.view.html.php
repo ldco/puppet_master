@@ -43,7 +43,7 @@ function makeNavigationView($arr)
             echo "<a href='$navElemURL'>";
         endif;
         echo "<img alt='Menu icon' src='{$navImgSrc}'>";
-        echo "<span>{$navLang}</span>";
+        echo "<div><span>{$navLang}</span></div>";
         if (defined("PM_PHP_ROUTING") && PM_PHP_ROUTING && ($navItem['isempty'] !== "1")) :
             echo "</a>";
         endif;

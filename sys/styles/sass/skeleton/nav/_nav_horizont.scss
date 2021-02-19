@@ -1,4 +1,5 @@
 $hor_navfontsize: map-get($horizontHeader, height) / 2;
+$hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
 @if $PM_HEADER_IS_VERTICAL==false {
     #pm_Nav--desktop {
         align-items: center;
@@ -8,7 +9,7 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
             display: none;
         }
         >ul>li {
-            height: map-get($horizontHeader, height);
+            height: map-get($horizontHeader, height) + 4vh;
             padding-left: 1vw;
             padding-right: 1vw;
             justify-content: center;
@@ -18,7 +19,7 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
                 &:hover .pm_nav_item_sub_ul {
                     display: flex;
                 }
-                >span {
+                >div>span {
                     align-items: center;
                     justify-content: center;
                     top: initial !important;
@@ -42,29 +43,36 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
                     border: solid 0.1vh;
                     border-color: transparent;
                 }
-                >span {
+                >div {
+                    display: none;
+                    position: fixed;
+                    top: map-get($horizontHeader, height) + 1vh;
+                    height: 7vh;
+                    background-color: transparent;
+                    align-items: center;
+                }
+                >div>span {
                     width: 20vh;
                     justify-content: center;
                     align-items: center;
-                    top: map-get($horizontHeader, height);
+                    height: 2vh;
+                    margin-bottom: 3vh;
+                    padding-top: 1vh;
+                    padding-bottom: 1vh;
                     font-size: $hor_navfontsize / 1.4;
                     @include font(1, 400);
                     background-color: $c_domin;
                     border-radius: 0.2vh;
-                    // box-shadow: 0vh 0.1vh 0.2vh 0vh $c_black;
-                    padding: 0.4vh;
-                    margin-bottom: 0.8vh;
-                    display: none;
-                    position: fixed;
+                    box-shadow: $hor_navSubULshadow;
                 }
-                &:not(.isempty)>span:hover {
+                &:not(.isempty)>div>span:hover {
                     background-color: $c_opos;
                     color: $c_domin;
                 }
                 &:hover>img {
                     border-color: $c_opos;
                 }
-                &:hover>span {
+                &:hover>div {
                     display: flex;
                 }
                 &:hover>ul {
@@ -79,13 +87,13 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
         @if $PM_NAV_ICONS==false {
             .pm_nav_item_sub_ul {
                 background-color: $c_domin;
-                border-radius: 0.5vh;
-                top: map-get($horizontHeader, height);
-                box-shadow: 0vh 0vh 0.8vh 0vh $c_black;
+                border-radius: 0.2vh;
+                top: map-get($horizontHeader, height) + 2vh;
+                box-shadow: $hor_navSubULshadow;
                 li {
                     width: 100%;
                     @include flex-center;
-                    >span {
+                    >div>span {
                         padding: 1vh;
                         font-size: $hor_navfontsize / 1.6;
                     }
@@ -99,14 +107,15 @@ $hor_navfontsize: map-get($horizontHeader, height) / 2;
         @if $PM_NAV_ICONS==true {
             .pm_nav_item_sub_ul {
                 background-color: $c_domin;
-                border-radius: 0.3vh;
-                top: map-get($horizontHeader, height) + $hor_navfontsize;
-                box-shadow: 0vh 0.1vh 0.1vh $c_black, 0vh 0.1vh 0.1vh $c_black;
+                border-radius: 0.2vh;
+                top: map-get($horizontHeader, height) + $hor_navfontsize + 3vh;
+                box-shadow: $hor_navSubULshadow;
                 li {
-                    padding: 0.5vh;
+                    padding-top: 0.2vh;
+                    padding-bottom: 0.2vh;
                     width: 20vh;
                     @include flex-center;
-                    >span {
+                    >div>span {
                         font-size: $hor_navfontsize / 1.8;
                     }
                     &:hover {
