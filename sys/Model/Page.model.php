@@ -32,9 +32,10 @@ class Page
             echo $_POST['el'];
             exit;
         }
+        global $DB;
         global $PM_PAGE_NUM;
         //if PM_LANG is trash or hacked
-        if (!defined('PM_LANG') || (strlen(PM_LANG) != 2)) return;
+        if (!defined('PM_LANG') || (strlen(PM_LANG) !== 2)) return;
         $byteLANG = ord(PM_LANG);
         if ($byteLANG < 32 || $byteLANG > 127) return;
         $byteLANG = ord(substr(PM_LANG, 1, 1));
@@ -42,7 +43,6 @@ class Page
         //PM_LANG -> en,ru,he,fr,it,de,zh,ja,hi,ar
 
         //get page name
-        $DB = new DB();
         $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_loc INNER JOIN pm_nav ON pm_loc.id=pm_nav.name WHERE _id='" . floatval($PM_PAGE_NUM) . "';");
         if ($result && ($_row = $result->fetch_assoc())) {
             $row = $_row;
@@ -61,7 +61,7 @@ class Page
         } else {
             $svg = false;
         }
-        if ($class != null) {
+        if ($class !== null) {
             $_class = " " . $class;
         } else {
             $_class = "";
@@ -89,7 +89,7 @@ class Page
         } else {
             $fullscreenclass = "";
         }
-        if ($class != null) {
+        if ($class !== null) {
             $class = " " . $class;
         } else {
             $class = "";
@@ -130,7 +130,7 @@ class Page
 
     public function text($textId, $class = null)
     {
-        if ($class != null) {
+        if ($class !== null) {
             $_class = " " . $class;
         } else {
             $_class = "";
@@ -145,7 +145,7 @@ class Page
             $textpath =
                 $PM_PAGE_NUM . "_" .  $textId;
         }
-        if (!isset($DB)) $DB = new DB;
+
         $result = $DB->queryRaw("SELECT `" . PM_LANG . "` FROM pm_text WHERE id='" . $textpath . "';");
         if ($result && ($row = $result->fetch_assoc())) {
         } else {

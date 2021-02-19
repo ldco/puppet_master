@@ -56,8 +56,9 @@ if (PM_HEADER && !PM_FLOATHEADER) {
     <?php
     $modelHeader->index(); ?>
     <main><?= $sPageContent; ?>
-        <?php if (defined("PM_FOOTER") && PM_FOOTER) $modelFooter->index(); ?>
+
     </main>
+    <?php if (defined("PM_FOOTER") && PM_FOOTER) $modelFooter->index(); ?>
     <div id="pm_gototop">
         <img alt="go top" src="<?= PM_ICONS_REL ?>up.svg">
     </div>

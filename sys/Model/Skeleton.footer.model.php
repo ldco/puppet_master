@@ -36,7 +36,6 @@ class SkeletonFooter
         $by = $this->footerByWho;
         $copy = $this->footerCopyright;
         $modelNav = $this->modelNav;
-        //require PM_ROOT . $this->modelNav['footer'];
 
         if (defined("PM_FOOTER") && PM_FOOTER) {
             require PM_ROOT . $this->viewsNames['footer'];

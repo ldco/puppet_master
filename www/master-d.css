@@ -2170,7 +2170,9 @@ footer {
   height: 3vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: fixed;
+  bottom: 0; }
   footer #pm_footer--credits,
   footer #pm_footer--credits-by {
     display: flex;
