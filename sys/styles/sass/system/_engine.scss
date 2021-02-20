@@ -1,4 +1,45 @@
 //!!!DO NOT TOUCH!!!
+@function generateContentSize($widthBool, $mobis) {
+    @if $widthBool==true {
+        //width
+        $widthVar: null;
+        @if $PM_HEADER_IS_VERTICAL==true {
+            @if $mobis==false {
+                $widthVar: calc(100vw - #{map-get($verticalHeader, width)});
+            }
+            @if $mobis==true {
+                $widthVar: 100vw;
+            }
+        }
+        @if $PM_HEADER_IS_VERTICAL==false {
+            $widthVar: 100vw;
+        }
+        @return $widthVar;
+    }
+    /**/
+    //height
+    @if $widthBool==false {
+        $heightVar: null;
+        @if $PM_HEADER_IS_VERTICAL==false {
+            @if $mobis==false {
+                $heightVar: map-get($horizontHeader, height) + map-get($footer, height);
+            }
+            @if $mobis==true {
+                $heightVar: map-get($mob, height) + map-get($footer, height);
+            }
+        }
+        @if $PM_HEADER_IS_VERTICAL==true {
+            @if $mobis==false {
+                $heightVar: map-get($footer, height);
+            }
+            @if $mobis==true {
+                $heightVar: map-get($mob, height) + map-get($footer, height);
+            }
+        }
+        @return calc(100vh - #{$heightVar});
+    }
+}
+
 @function generateContentPosition($topBool, $mobis) {
     @if $topBool==true {
         $topVar: null;

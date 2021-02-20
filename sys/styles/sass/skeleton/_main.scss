@@ -2,6 +2,8 @@
 @import "../../../../core/styles/sass/skeleton_core/main_core";
 @include mob(true) {
     main {
+        height: generateContentSize(false, true);
+        width: generateContentSize(true, true);
         top: generateContentPosition(true, true);
         left: 0 !important;
         right: 0 !important;
@@ -10,6 +12,8 @@
 
 @include mob(false) {
     main {
+        height: generateContentSize(false, false);
+        width: generateContentSize(true, false);
         top: generateContentPosition(true, false);
     }
 }
@@ -17,12 +21,14 @@
 [dir=rtl] {
     main {
         right: generateContentPosition(false, false);
+        left: 0;
     }
 }
 
 [dir=ltr] {
     main {
         left: generateContentPosition(false, false);
+        right: 0;
     }
 }
 
@@ -37,6 +43,5 @@
 }
 
 main {
-    background-color: $c_domin;
-    position: absolute;
+    position: fixed;
 }
