@@ -1,40 +1,97 @@
 $vert_navfontsize: map-get($verticalHeader, width) / 2;
 @if $PM_HEADER_IS_VERTICAL==true {
     #pm_Nav--desktop {
-        margin-top: 4vh;
-        height: 60vh;
         width: map-get($verticalHeader, width);
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-        ul li {
-            width: 100%;
+        justify-content: center;
+        >ul {
+            margin-top: 12vh;
+            height: 60vh;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        >ul>li {
+            width: map-get($verticalHeader, width);
             height: 100%;
             justify-content: center;
-            align-items: center;
-            &:hover>a>span {
-                transition: ease-in 0.1s;
-                @include dir(calc(#{map-get($verticalHeader, width)} - 1vh));
-            }
-            &:hover>a>img {
+            align-items: flex-start;
+            &:hover>div {
                 transition: ease-in 0.2s;
-                width: calc(#{map-get($verticalHeader, width)} / 1.8);
+                display: flex;
+            }
+            &:hover>div>span {}
+            &:hover>img {
+                transition: ease-in 0.2s;
+                width: calc(#{map-get($verticalHeader, width)} / 1.4);
+            }
+            &:hover>ul {
+                transition: ease-in 0.2s;
+                display: flex;
+            }
+            &:not(.isempty)>div>span {
+                background-color: $c_opos;
+                color: $c_domin;
             }
             img {
-                width: calc(#{map-get($verticalHeader, width)} / 2.9);
+                width: calc(#{map-get($verticalHeader, width)} / 2);
                 @include navImageFilter();
             }
-            span {
+            >div {
+                display: none;
                 position: absolute;
+                @include dir(calc(#{map-get($verticalHeader, width)}));
+                height: 7vh;
+            }
+            >div>span {
                 align-items: center;
-                @include dir(-50vh);
-                width: 15vh;
+                width: 20vh;
                 justify-content: center;
                 height: calc(#{map-get($verticalHeader, width)} / 2);
-                z-index: -1;
-                border-radius: 1vh;
+                border-radius: 0.1vh;
                 background-color: $c_interP1;
-                padding: 0.5vh;
+                padding-top: 0.5vh;
+                padding-bottom: 0.5vh;
+                box-shadow: $hor_navSubULshadow;
+                [dir=rtl] & {
+                    margin-right: 2vh;
+                }
+                [dir=ltr] & {
+                    margin-left: 2vh;
+                }
+            }
+        }
+        .pm_nav_item_sub_ul {
+            position: absolute;
+            @include dir(calc(#{map-get($verticalHeader, width)} + 2vh));
+            display: none;
+            flex-direction: column;
+            background-color: $c_domin;
+            border-radius: 0.2vh;
+            box-shadow: $hor_navSubULshadow;
+            margin-top: 5.5vh;
+            >li {
+                width: 20vh;
+                padding-top: 0.8vh;
+                padding-bottom: 0.8vh;
+                @include flex-center;
+                >div>span {
+                    font-size: $hor_navfontsize / 1.8;
+                }
+                &:hover {
+                    background-color: $c_opos;
+                    color: $c_domin;
+                }
+                &:hover>img {
+                    filter: invert(1);
+                }
+                img {
+                    [dir=rtl] & {
+                        padding-left: 1vh;
+                    }
+                    [dir=ltr] & {
+                        padding-right: 1vh;
+                    }
+                }
             }
         }
     }
