@@ -20,15 +20,30 @@ body {
     overflow-x: hidden;
     flex-direction: column;
     margin: 0 0 0 0;
+    background-color: $c_black;
+    background-image: url("#{$IMAGES_CORE}brand/squareLogo--forDark.svg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 40%;
     overflow-wrap: break-word;
     [dir=rtl] & {
         direction: rtl;
     }
     [dir=ltr] & {
         direction: ltr;
+    }
+}
+
+@if $LIGHT_THEME==true {
+    body {
+        // background-image: url("#{$IMAGES_CORE}brand/squareLogo--forDark.svg");
+    }
+}
+
+@if $LIGHT_THEME==false {
+    body {
+        // background-image: url("#{$IMAGES_CORE}brand/squareLogo--forLight.svg");
     }
 }
 

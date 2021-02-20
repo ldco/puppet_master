@@ -2,7 +2,7 @@
 //
 //GLOBALS
 $PM_HEADER_IS_VERTICAL: false; //true //false
-$PM_NAV_ICONS: true; //true //false //both
+$PM_NAV_ICONS: both; //true //false //both
 //always true if PM_HEADER_IS_VERTICAL true
 $INFO_PM_BRAND: true; //true //false
 //sizes
@@ -14,3 +14,7 @@ $hamburger: (distance: 3vh, );
 $mob: (height: 6vh, open_width: 45vw, nav_height: 6vh, );
 $panel: (height: 3vh, );
 $footer: (height: 3vh);
+
+/* :root {
+    --footer-height: 3vh
+} */

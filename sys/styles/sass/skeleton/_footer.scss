@@ -3,7 +3,6 @@
 footer {
     //hack to remove stripe between content and footer
     border-top: solid $c_domin 1px;
-    width: 100%;
     height: map-get($footer, height);
     @include flex-center();
     #pm_footer--credits,
@@ -15,8 +14,26 @@ footer {
     #pm_footer--copyright {
         position: absolute;
     }
+    [dir=rtl] & {
+        left: 0;
+    }
+    [dir=ltr] & {
+        right: 0
+    }
     //**fixed footer
     position: fixed;
     bottom: 0;
     //**//
+}
+
+@if $PM_HEADER_IS_VERTICAL==true {
+    footer {
+        width: calc(#{100vw} - #{map-get($verticalHeader, width)});
+    }
+}
+
+@if $PM_HEADER_IS_VERTICAL==false {
+    footer {
+        width: 100vw;
+    }
 }

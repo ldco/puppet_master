@@ -1,9 +1,10 @@
 $sectionBottomPadding: 3vh;
 $sectionSidePadding: 5vh;
+$sectionTopPadding: 5vh;
 main section {
     color: $c_opos;
     background-color: $c_domin;
-    padding-top: 5vh;
+    padding-top: $sectionTopPadding;
     h1 {
         color: $c_opos;
         text-transform: uppercase;

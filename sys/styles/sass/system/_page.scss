@@ -1,23 +1,25 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../core/styles/sass/system_core/page_core";
-[data-footer=true] {
-    main section:last-of-type {
-        padding-bottom: calc(#{map-get($footer, height)} + #{map-get($footer, height)});
-    }
-    main section {
-        min-height: calc(#{100%} - #{map-get($footer, height)} - #{$sectionBottomPadding});
-    }
-}
-
 @include mob(true) {
     main section:first-of-type {
         margin-top: -1px;
     }
 }
 
+@if $PM_HEADER_IS_VERTICAL==true {
+    main section {
+        min-height: calc(#{100vh} - #{$sectionBottomPadding} - #{$sectionTopPadding} - #{map-get($footer, height)});
+    }
+}
+
+@if $PM_HEADER_IS_VERTICAL==false {
+    main section {
+        min-height: calc(#{100vh} - #{$sectionBottomPadding} - #{$sectionTopPadding} - #{map-get($horizontHeader, height)} - #{map-get($footer, height)});
+    }
+}
+
 main section {
     width: calc(#{100%} - (#{$sectionSidePadding} * 2));
-    min-height: calc(#{100%} - #{$sectionBottomPadding});
     display: flex;
     flex-direction: column;
     align-items: center;

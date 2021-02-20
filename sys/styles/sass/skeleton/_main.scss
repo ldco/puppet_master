@@ -2,9 +2,7 @@
 @import "../../../../core/styles/sass/skeleton_core/main_core";
 @include mob(true) {
     main {
-        height: generateContentSize(false, true);
         top: generateContentPosition(true, true);
-        width: generateContentSize(true, true);
         left: 0 !important;
         right: 0 !important;
     }
@@ -12,9 +10,7 @@
 
 @include mob(false) {
     main {
-        width: generateContentSize(true, false);
         top: generateContentPosition(true, false);
-        height: generateContentSize(false, false);
     }
 }
 
