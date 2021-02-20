@@ -16,8 +16,27 @@
          .pm_nav_item_sub_ul li span {
              @include f-size($basicTextSize / $horizontalNavFont / 1.4);
          }
-         .pm_nav_item_sub_ul {
-             top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight});
+         @if $PM_NAV_ICONS==false or both {
+             .pm_nav_item_sub_ul {
+                 top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 1vh);
+             }
+         }
+         @if $PM_NAV_ICONS==true {
+             nav>ul>li span {
+                 @include f-size($basicTextSize / $horizontalNavFont / 1.2);
+             }
+             nav>ul>li div {
+                 top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 1vh);
+             }
+             nav>ul>li {
+                 &:hover>img {
+                     border-color: transparent;
+                     transform: rotate(180deg);
+                 }
+             }
+             .pm_nav_item_sub_ul {
+                 top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 6vh);
+             }
          }
      }
      #pm_Header--desktop.--scrolled {}
