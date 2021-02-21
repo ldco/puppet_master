@@ -35,6 +35,7 @@ function initFun() {
     }
     //Set hamburger
     setHamburgerMenu();
+    dynamFixSubmenusMargin();
     //
     if ((PM_HEADER === "true") || (PM_FLOATHEADER === "true")) {
         setChangeLang();

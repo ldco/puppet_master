@@ -1,3 +1,4 @@
+$mobNavLiHeight: 4vh;
 #pm_Nav--mobile {
     flex-direction: column;
     justify-content: flex-start;
@@ -13,13 +14,14 @@
         flex-direction: column;
     }
     ul li {
-        height: map-get($mob, nav_height);
+        align-items: center;
+    }
+    >ul>li {
+        height: $mobNavLiHeight;
         color: $c_opos;
         width: 100%;
         align-items: center;
-        img,
-        span {
-            @include f-size-fill($basicTextSize);
+        >img {
             [dir=rtl] & {
                 margin-right: 3vh;
             }
@@ -27,9 +29,45 @@
                 margin-left: 3vh;
             }
         }
-        img {
+        >div>span {
+            @include f-size-fill($basicTextSize);
+            [dir=rtl] & {
+                margin-right: 2vh;
+            }
+            [dir=ltr] & {
+                margin-left: 2vh;
+            }
+        }
+        >img {
             @include width-fill(1.5);
             @include navImageFilter();
+        }
+    }
+    >ul>li>ul {
+        position: absolute;
+        align-self: flex-start;
+        margin-top: calc(#{$mobNavLiHeight} + 0.5vh);
+        [dir=rtl] & {
+            margin-right: 3vh;
+        }
+        [dir=ltr] & {
+            margin-left: 3vh;
+        }
+        >li {
+            padding: 0.5vh;
+            >div>span {
+                @include f-size-fill($basicTextSize - 0.2);
+                [dir=rtl] & {
+                    margin-right: 2vh;
+                }
+                [dir=ltr] & {
+                    margin-left: 2vh;
+                }
+            }
+            >img {
+                @include width-fill(1.2);
+                @include navImageFilter();
+            }
         }
     }
 }

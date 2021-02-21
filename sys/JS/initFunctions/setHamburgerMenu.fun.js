@@ -64,3 +64,14 @@ function removeHamburger() {
         }, 300);
     }
 }
+
+function dynamFixSubmenusMargin() {
+    let els = document.querySelectorAll("#pm_Nav--mobile>ul>li");
+    els.forEach(el => {
+        let k = el.getElementsByTagName("ul")[0];
+        if (k) {
+            console.log(k.childElementCount);
+            el.style.marginBottom = (k.childElementCount * 4) + "vh";
+        }
+    });
+}

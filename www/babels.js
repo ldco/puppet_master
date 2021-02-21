@@ -155,7 +155,8 @@ function initFun() {
   } //Set hamburger
 
 
-  setHamburgerMenu(); //
+  setHamburgerMenu();
+  dynamFixSubmenusMargin(); //
 
   if (PM_HEADER === "true" || PM_FLOATHEADER === "true") {
     setChangeLang();
@@ -321,6 +322,18 @@ function removeHamburger() {
       mobileHeader.style.display = "none";
     }, 300);
   }
+}
+
+function dynamFixSubmenusMargin() {
+  var els = document.querySelectorAll("#pm_Nav--mobile>ul>li");
+  els.forEach(function (el) {
+    var k = el.getElementsByTagName("ul")[0];
+
+    if (k) {
+      console.log(k.childElementCount);
+      el.style.marginBottom = k.childElementCount * 4 + "vh";
+    }
+  });
 }
 "use strict";
 
