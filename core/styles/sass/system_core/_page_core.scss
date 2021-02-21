@@ -18,7 +18,7 @@ main section {
     }
 }
 
-@include mob(true) {
+@include qr(mob) {
     main section article {
         width: 80vw;
         line-height: 140%;
@@ -34,7 +34,7 @@ main section {
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     main section article {
         width: 90vw;
         line-height: 130%;

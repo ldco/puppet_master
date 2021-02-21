@@ -93,7 +93,7 @@ $rankMobColumns: 1,
     text-align: justify;
 }
 
-@include mob(false) {
+@include qr(desk) {
     @include col-pm_team(false);
     .pm_team {
         margin-bottom: 10vh;
@@ -108,7 +108,7 @@ $rankMobColumns: 1,
     .pm_team_bio {}
 }
 
-@include mob(false) {
+@include qr(desk) {
     @include col-pm_team(false);
     .pm_team {}
     .pm_team_item {
@@ -121,7 +121,7 @@ $rankMobColumns: 1,
     .pm_team_bio {}
 }
 
-@include mob(true) {
+@include qr(mob) {
     @include col-pm_team(true);
     .pm_team {}
     .pm_team_item {

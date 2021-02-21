@@ -1,4 +1,4 @@
-@include mob(true) {
+@include qr(mob) {
     .pm_blog_item {
         padding: 3vh;
         width: 70vw;
@@ -8,7 +8,7 @@
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     .pm_blog_item {
         padding: 6vh;
         width: 40vw;

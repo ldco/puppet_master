@@ -17,7 +17,7 @@
     }
 }
 
-@include mob(true) {
+@include qr(mob) {
     #rippMainLogo {
         top: initial;
         left: initial;

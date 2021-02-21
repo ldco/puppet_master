@@ -901,7 +901,7 @@ body {
     width: 100vw;
     height: 90vh; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] .video--fullscreen video {
     object-fit: cover;
     width: 100vw;
@@ -915,7 +915,7 @@ body {
     min-height: 91vh;
     height: initial; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] .video--fullscreen video {
     min-width: 100vw;
     width: initial;
@@ -933,7 +933,7 @@ body {
   [data-mob=true] .video--foreground {
     height: 100vh; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] .video--foreground {
     height: 100vh; } }
 
@@ -941,7 +941,7 @@ body {
   [data-mob=true] .video--foreground {
     height: 91vh; } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] .video--foreground {
     height: 91vh; } }
 
@@ -1066,7 +1066,7 @@ body {
     width: 2vh;
     height: 2vh; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] #pm_gototop img {
     width: 2vh;
     height: 2vh; } }
@@ -1076,7 +1076,7 @@ body {
     width: 2vh;
     height: 2vh; } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] #pm_gototop img {
     width: 2vh;
     height: 2vh; } }
@@ -1223,7 +1223,7 @@ body {
   [data-mob=true] #pm_adminLoginView img {
     width: 45vh; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] #pm_adminLoginView img {
     width: 45vh; } }
 
@@ -1247,7 +1247,7 @@ body {
   [data-mob=true] ::-webkit-scrollbar {
     display: none; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] ::-webkit-scrollbar {
     display: none; } }
 
@@ -1315,26 +1315,26 @@ main section {
   [data-mob=true] main section a {
     font-size: calc(((0.8rem) + (0.8em)) / 2); } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] main section article {
     width: 80vw;
     line-height: 140%; } }
-  @media (max-width: 1210px) and (orientation: landscape) {
+  @media (orientation: portrait) and (orientation: landscape) {
     [data-mob=false] main section article {
       font-size: calc(((0.8rem) + (0.8em)) / 1.8); } }
-  @media (max-width: 1210px) and (orientation: portrait) {
+  @media (orientation: portrait) and (orientation: portrait) {
     [data-mob=false] main section article {
       font-size: calc(((0.8rem) + (0.8em)) / 2); } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] main section h1 {
     margin-top: 4vh; } }
 
-@media (max-width: 1210px) and (orientation: landscape) {
+@media (orientation: portrait) and (orientation: landscape) {
   [data-mob=false] main section a {
     font-size: calc(((0.8rem) + (0.8em)) / 1.8); } }
 
-@media (max-width: 1210px) and (orientation: portrait) {
+@media (orientation: portrait) and (orientation: portrait) {
   [data-mob=false] main section a {
     font-size: calc(((0.8rem) + (0.8em)) / 2); } }
 
@@ -1353,18 +1353,18 @@ main section {
   [data-mob=true] main section a {
     font-size: calc(((1rem) + (1em)) / 2); } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] main section article {
     width: 90vw;
     line-height: 130%; }
   [data-mob=false] main section h1 {
     margin-top: 6vh; } }
 
-@media (min-width: 1210px) and (orientation: landscape) {
+@media (orientation: landscape) and (orientation: landscape) {
   [data-mob=false] main section a {
     font-size: calc(((1rem) + (1em)) / 1.8); } }
 
-@media (min-width: 1210px) and (orientation: portrait) {
+@media (orientation: landscape) and (orientation: portrait) {
   [data-mob=false] main section a {
     font-size: calc(((1rem) + (1em)) / 2); } }
 
@@ -1401,7 +1401,7 @@ main section {
   [data-mob=true] main section:first-of-type {
     margin-top: -1px; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] main section:first-of-type {
     margin-top: -1px; } }
 
@@ -1439,7 +1439,7 @@ main section {
     left: 0 !important;
     right: 0 !important; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] main {
     height: calc(100vh - 9vh);
     width: 100vw;
@@ -1453,7 +1453,7 @@ main section {
     width: calc(100vw - 6vh);
     top: calc(0vh + 0px); } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] main {
     height: calc(100vh - 3vh);
     width: calc(100vw - 6vh);
@@ -1500,7 +1500,7 @@ main {
   [data-mob=true] header:first-of-type {
     display: none !important; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] header:first-of-type {
     display: none !important; } }
 
@@ -1508,7 +1508,7 @@ main {
   [data-mob=true] header:nth-of-type(2) {
     display: none !important; } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] header:nth-of-type(2) {
     display: none !important; } }
 
@@ -1606,7 +1606,7 @@ header {
   [data-mob=true] #pm_asset-header {
     bottom: 2vh; } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] #pm_asset-header {
     bottom: 2vh; } }
 
@@ -1740,7 +1740,7 @@ header {
     right: initial !important;
     left: initial !important; } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] #pm_asset-header {
     right: initial !important;
     left: initial !important; } }
@@ -2381,7 +2381,7 @@ footer {
   [data-mob=true] #closeThebility {
     display: none; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] #thebilityIcon img {
     width: 2vh; }
     [data-mob=false] #thebilityIcon img:hover {
@@ -2397,14 +2397,14 @@ footer {
     flex-direction: column; }
   [data-mob=false] #pm_thebility .thebilityDiv {
     width: 60vw; } }
-  @media (max-width: 1210px) and (orientation: landscape) {
+  @media (orientation: portrait) and (orientation: landscape) {
     [data-mob=false] #pm_thebility .thebilityDiv {
       font-size: calc(((0.6rem) + (0.6em)) / 1.8); } }
-  @media (max-width: 1210px) and (orientation: portrait) {
+  @media (orientation: portrait) and (orientation: portrait) {
     [data-mob=false] #pm_thebility .thebilityDiv {
       font-size: calc(((0.6rem) + (0.6em)) / 2); } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
     [data-mob=false] #pm_thebility .thebilityDiv input {
       margin-top: 1.5vh; }
   [data-mob=false] #dragThebility {
@@ -2418,7 +2418,7 @@ footer {
   [data-mob=true] #pm_thebility .column {
     flex-direction: column; } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] #thebilityIcon img {
     width: 2.8vh; }
   [data-mob=false] #pm_thebility .column {
@@ -2579,7 +2579,7 @@ footer {
   [data-mob=true] .pm_contacts_item {
     display: none !important; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] .pm_contacts a {
     border: none; }
   [data-mob=false] .pm_contacts_item {
@@ -2589,7 +2589,7 @@ footer {
   [data-mob=true] .pm_contactsMobile_item {
     display: none !important; } }
 
-@media (min-width: 1210px) {
+@media (orientation: landscape) {
   [data-mob=false] .pm_contactsMobile_item {
     display: none !important; } }
 
@@ -2618,7 +2618,7 @@ footer {
     [data-mob=true] #rippMainLogo img {
       width: 30vh; } }
 
-@media (max-width: 1210px) {
+@media (orientation: portrait) {
   [data-mob=false] #rippMainLogo {
     top: initial;
     left: initial;

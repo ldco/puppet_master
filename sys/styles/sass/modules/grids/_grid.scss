@@ -25,12 +25,12 @@ div {
 }
 
 }
-@include mob(true) {
+@include qr(mob) {
     .grid_title {
         margin-bottom: 2vh;
     }
 }
-@include mob(false) {
+@include qr(desk) {
     .grid_title {
         margin-bottom: 4vh;
     }

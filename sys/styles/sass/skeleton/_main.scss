@@ -1,6 +1,6 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../core/styles/sass/skeleton_core/main_core";
-@include mob(true) {
+@include qr(mob) {
     main {
         height: generateContentSize(false, true);
         width: generateContentSize(true, true);
@@ -10,7 +10,7 @@
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     main {
         height: generateContentSize(false, false);
         width: generateContentSize(true, false);

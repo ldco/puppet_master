@@ -41,7 +41,7 @@
 }
 
 @if $PM_HEADER_IS_VERTICAL==true {
-    @include mob(false) {
+    @include qr(desk) {
         #pm_asset-header {
             bottom: 2vh;
         }

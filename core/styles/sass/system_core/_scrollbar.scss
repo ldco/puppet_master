@@ -16,7 +16,7 @@
     width: 2vh;
 }
 
-@include mob(true) {
+@include qr(mob) {
      ::-webkit-scrollbar {
         display: none;
     }

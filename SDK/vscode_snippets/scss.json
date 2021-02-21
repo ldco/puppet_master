@@ -7,9 +7,9 @@
     "mob query": {
         "prefix": "mob",
         "body": [
-            "@include mob(true) {",
+            "@include qr(mob) {",
             "$1#someid {$2display: none !important;}}",
-            "@include mob(false) {",
+            "@include qr(desk) {",
             "$3#someid{$4display: none !important;}}"
         ],
         "description": "mob query"

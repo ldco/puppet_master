@@ -1,10 +1,10 @@
-@include mob(true) {
+@include qr(mob) {
     footer {
         span {}
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     footer {}
 }
 

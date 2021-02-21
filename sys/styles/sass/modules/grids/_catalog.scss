@@ -33,13 +33,13 @@ $catalogMobColumns: 1;
     text-align: center;
 }
 
-@include mob(false) {
+@include qr(desk) {
     .pm_catalog_wraper {
         grid-template-columns: repeat($catalogColumns, 1fr);
     }
 }
 
-@include mob(true) {
+@include qr(mob) {
     .pm_catalog_wraper {
         grid-template-columns: repeat($catalogMobColumns, 1fr);
     }
@@ -104,7 +104,7 @@ $catalogMobColumns: 1;
     font-size: smaller;
 }
 
-@include mob(false) {
+@include qr(desk) {
     @include col-pm_catalog(false);
     .pm_catalog {
         margin-bottom: 10vh;
@@ -120,7 +120,7 @@ $catalogMobColumns: 1;
     .pm_catalog_item_minorder {}
 }
 
-@include mob(false) {
+@include qr(desk) {
     @include col-pm_catalog(false);
     .pm_catalog {}
     .pm_catalog_item {
@@ -131,7 +131,7 @@ $catalogMobColumns: 1;
     .pm_catalog_bio {}
 }
 
-@include mob(true) {
+@include qr(mob) {
     @include col-pm_catalog(true);
     .pm_catalog {}
     .pm_catalog_item {

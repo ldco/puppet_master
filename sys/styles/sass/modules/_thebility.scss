@@ -142,7 +142,7 @@ $backTHebiltyColor: rgba($c_white, 0.8); //rgba($c_domin, 0.8);
     filter: grayscale(0);
 }
 
-@include mob(true) {
+@include qr(mob) {
     #thebilityIcon {
         img {
             width: 2vh;
@@ -183,7 +183,7 @@ $backTHebiltyColor: rgba($c_white, 0.8); //rgba($c_domin, 0.8);
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     #thebilityIcon {
         img {
             width: 2.8vh;

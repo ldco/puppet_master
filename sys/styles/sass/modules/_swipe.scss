@@ -1,13 +1,13 @@
 $swiperArrowSize: 8vh;
 $swiperArrowSizeMob: 9vw;
-@include mob(true) {
+@include qr(mob) {
     %swiper-button {
         height: $swiperArrowSizeMob;
         width: $swiperArrowSizeMob;
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     %swiper-button {
         height: $swiperArrowSize;
         width: $swiperArrowSize;

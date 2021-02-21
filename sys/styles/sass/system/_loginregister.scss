@@ -21,7 +21,7 @@
     }
 }
 
-@include mob(true) {
+@include qr(mob) {
     #pm_adminLoginView {
         img {
             width: 45vh;

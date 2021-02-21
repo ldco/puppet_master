@@ -1,4 +1,4 @@
-@include mob(true) {
+@include qr(mob) {
     .pm_agents_item {
         img {
             width: 60vw;
@@ -7,7 +7,7 @@
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     .pm_agents_item {
         img {
             width: 25vw;

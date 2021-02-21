@@ -74,7 +74,7 @@ body {
     height: 100vh;
 }
 
-@include mob(true) {
+@include qr(mob) {
     .video--fullscreen {
         video {
             object-fit: cover;
@@ -84,7 +84,7 @@ body {
     }
 }
 
-@include mob(true) {
+@include qr(mob) {
     .video--fullscreen {
         video {
             min-width: 100vw;
@@ -103,13 +103,13 @@ body {
     height: 100vh;
 }
 
-@include mob(true) {
+@include qr(mob) {
     .video--foreground {
         height: 100vh;
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     .video--foreground {
         height: 91vh;
     }

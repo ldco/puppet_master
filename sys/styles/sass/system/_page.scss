@@ -1,6 +1,6 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../core/styles/sass/system_core/page_core";
-@include mob(true) {
+@include qr(mob) {
     main section:first-of-type {
         margin-top: -1px;
     }

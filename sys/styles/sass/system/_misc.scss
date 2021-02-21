@@ -54,7 +54,7 @@
     height: $gotopButtonSize + vh;
 }
 
-@include mob(true) {
+@include qr(mob) {
     #pm_gototop {
         img {
             width: $gotopButtonSize + vh;
@@ -63,7 +63,7 @@
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     #pm_gototop {
         img {
             width: $gotopButtonSize + vh;

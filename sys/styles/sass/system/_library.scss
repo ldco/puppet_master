@@ -25,30 +25,42 @@
 }
 
 //queries
-@mixin mob($bool) {
-    @if $bool==true {
+@mixin qr($device) {
+    @if $device==mob {
         [data-mob=true] {
             @media (max-aspect-ratio: 13/9) {
                 @content;
             }
         }
         [data-mob=false] {
-            @media (max-width: 1210px) {
+            @media (orientation: portrait) {
                 @content;
             }
         }
     }
-    @if $bool==false {
+    @if $device==desk {
         [data-mob=true] {
             @media (min-aspect-ratio: 13/9) {
                 @content;
             }
         }
         [data-mob=false] {
-            @media (min-width: 1210px) {
+            @media (orientation: landscape) {
                 @content;
             }
         }
+    }
+    @if $device==tab {
+        /*  [data-mob=true] {
+            @media (min-aspect-ratio: 13/9) {
+                @content;
+            }
+        }
+        [data-mob=false] {
+            @media (orientation: landscape) {
+                @content;
+            }
+        } */
     }
 }
 

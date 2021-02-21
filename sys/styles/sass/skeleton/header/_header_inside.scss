@@ -85,7 +85,7 @@
 #pm_asset-header--float {}
 
 @if $PM_HEADER_IS_VERTICAL==true {
-    @include mob(false) {
+    @include qr(desk) {
         #pm_asset-header {
             right: initial !important;
             left: initial !important;

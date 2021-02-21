@@ -1,13 +1,13 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../../core/styles/sass/skeleton_core/header_core/header_main_core";
 //base queries
-@include mob(true) {
+@include qr(mob) {
     header:first-of-type {
         display: none !important;
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     header:nth-of-type(2) {
         display: none !important;
     }

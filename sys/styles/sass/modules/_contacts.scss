@@ -29,7 +29,7 @@
     }
 }
 
-@include mob(true) {
+@include qr(mob) {
     .pm_contacts {
         a {
             border: none;
@@ -40,7 +40,7 @@
     }
 }
 
-@include mob(false) {
+@include qr(desk) {
     .pm_contacts {
         @if $LIGHT_THEME==true {}
         @if $LIGHT_THEME==false {
