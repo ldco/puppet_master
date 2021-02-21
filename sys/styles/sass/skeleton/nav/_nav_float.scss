@@ -1,23 +1,7 @@
 [data-floatheader=true] {}
 
-#pm_Nav--float {
-    width: 100%;
-    @include flex-center();
-    ul li {
-        padding-left: 0.7vh;
-        padding-right: 0.7vh;
-        &:hover {
-            border-bottom: solid 0.1vh $c_opos;
-        }
-        @if $PM_NAV_ICONS==false {
-            img {
-                display: none;
-            }
-            span {
-                color: $c_opos;
-                @include f-size(map-get($floatheader, fontSize))
-            }
-        }
+@if $PM_HEADER_IS_VERTICAL==false or true {
+    #pm_Nav--float {
+        @extend .nav_common_horizont_and_float;
     }
-    ul li:first-of-type {}
 }

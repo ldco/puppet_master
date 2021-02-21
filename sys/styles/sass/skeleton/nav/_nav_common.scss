@@ -9,6 +9,15 @@
     }
 }
 
+$navSubULshadow: null;
+@if $LIGHT_THEME==true {
+    $navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
+}
+
+@if $LIGHT_THEME==false {
+    $navSubULshadow: 0vh 0vh 0.1vh 0.1vh $c_white;
+}
+
 //
 nav,
 nav ul,

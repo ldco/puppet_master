@@ -1,8 +1,4 @@
 //!!!DO NOT TOUCH!!!
-@if $PM_HEADER_IS_VERTICAL==true {
-    $PM_NAV_ICONS: true;
-}
-
 @if $PM_FOOTER==false {
     $footer: (height: 0vh)
 }

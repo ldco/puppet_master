@@ -1,0 +1,177 @@
+$hor_navfontsize: map-get($horizontHeader, height) / 2;
+.nav_common_horizont_and_float {
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    >ul>li:first-of-type {
+        display: none;
+    }
+    >ul>li {
+        height: map-get($horizontHeader, height) + 4vh;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        @if $PM_NAV_ICONS==false {
+            img {
+                display: none !important;
+            }
+        }
+        @if $PM_NAV_ICONS==false or both {
+            &:not(.isempty)>div>span:hover {
+                margin-top: 0.1vh;
+                border-bottom: 0.1vh solid;
+            }
+            &:hover .pm_nav_item_sub_ul {
+                display: flex;
+            }
+            >div>span {
+                align-items: center;
+                justify-content: center;
+                top: initial !important;
+                width: 100%;
+            }
+        }
+        @if $PM_NAV_ICONS==both {
+            >div {
+                [dir=rtl] & {
+                    margin-right: 1vh
+                }
+                [dir=ltr] & {
+                    margin-left: 1vh
+                }
+            }
+            >img {
+                @if $LIGHT_THEME==false {
+                    filter: invert(1);
+                }
+            }
+            >ul>li>img {
+                padding: 1vh;
+                [dir=rtl] & {
+                    margin-left: -1vh;
+                }
+                [dir=ltr] & {
+                    margin-right: -1vh;
+                }
+            }
+        }
+        @if $PM_NAV_ICONS==true {
+            >img {
+                transition: ease-in 0.3s;
+            }
+            img {
+                @include navImageFilter();
+                padding: 0.5vh;
+                width: calc(#{map-get($verticalHeader, width)} / 2);
+                border-radius: 0.4vh;
+                border: solid 0.1vh;
+                border-color: transparent;
+            }
+            >div {
+                display: none;
+                position: fixed;
+                top: map-get($horizontHeader, height) + 1vh;
+                height: 7vh;
+                background-color: transparent;
+                align-items: center;
+            }
+            >div>span {
+                width: 20vh;
+                justify-content: center;
+                align-items: center;
+                height: 2vh;
+                margin-bottom: 3vh;
+                padding-top: 1vh;
+                padding-bottom: 1vh;
+                font-size: $hor_navfontsize / 1.4;
+                @include font(1, 400);
+                background-color: $c_domin;
+                border-radius: 0.2vh;
+                box-shadow: $navSubULshadow;
+            }
+            &:not(.isempty)>div>span:hover {
+                background-color: $c_opos;
+                color: $c_domin;
+            }
+            &:hover>img {
+                border-color: $c_opos;
+            }
+            &:hover>div {
+                display: flex;
+            }
+            &:hover>ul {
+                display: flex;
+            }
+        }
+    }
+    .pm_nav_item {}
+    //
+    //**SUB NAVS**//
+    //
+    @if $PM_NAV_ICONS==false or both {
+        .pm_nav_item_sub_ul {
+            background-color: $c_domin;
+            border-radius: 0.2vh;
+            top: map-get($horizontHeader, height) + 2vh;
+            box-shadow: $navSubULshadow;
+            li {
+                width: 100%;
+                @include flex-center;
+                >div>span {
+                    padding: 1vh;
+                    font-size: $hor_navfontsize / 1.6;
+                }
+                &:hover {
+                    background-color: $c_opos;
+                    color: $c_domin;
+                }
+            }
+        }
+    }
+    @if $PM_NAV_ICONS==true or both {
+        .pm_nav_item_sub_ul {
+            li {
+                &:hover>img {
+                    @if $LIGHT_THEME==true {
+                        filter: invert(1);
+                    }
+                    @if $LIGHT_THEME==false {
+                        filter: invert(0);
+                    }
+                }
+            }
+        }
+    }
+    @if $PM_NAV_ICONS==true {
+        .pm_nav_item_sub_ul {
+            background-color: $c_domin;
+            border-radius: 0.2vh;
+            top: map-get($horizontHeader, height) + $hor_navfontsize + 3vh;
+            box-shadow: $navSubULshadow;
+            li {
+                padding-top: 0.2vh;
+                padding-bottom: 0.2vh;
+                width: 20vh;
+                @include flex-center;
+                >div>span {
+                    font-size: $hor_navfontsize / 1.8;
+                }
+                &:hover {
+                    background-color: $c_opos;
+                    color: $c_domin;
+                }
+            }
+        }
+    }
+    .pm_nav_item_sub_ul {
+        display: none;
+        position: absolute;
+        background-color: $c_domin;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pm_nav_item_sub {}
+}
