@@ -22,15 +22,20 @@ $vert_navfontsize: map-get($verticalHeader, width) / 2;
             &:hover>div>span {}
             &:hover>img {
                 transition: ease-in 0.2s;
-                width: calc(#{map-get($verticalHeader, width)} / 1.4);
+                filter: brightness(20);
             }
             &:hover>ul {
                 transition: ease-in 0.2s;
                 display: flex;
             }
             &:not(.isempty)>div>span {
-                background-color: $c_opos;
-                color: $c_domin;
+                @if $LIGHT_THEME==true {
+                    background-color: $c_opos;
+                    color: $c_domin;
+                }
+                @if $LIGHT_THEME==false {
+                    filter: contrast(2);
+                }
             }
             img {
                 width: calc(#{map-get($verticalHeader, width)} / 2);
@@ -41,6 +46,7 @@ $vert_navfontsize: map-get($verticalHeader, width) / 2;
                 position: absolute;
                 @include dir(calc(#{map-get($verticalHeader, width)}));
                 height: 7vh;
+                margin-top: -0.5vh;
             }
             >div>span {
                 align-items: center;
@@ -51,7 +57,7 @@ $vert_navfontsize: map-get($verticalHeader, width) / 2;
                 background-color: $c_interP1;
                 padding-top: 0.5vh;
                 padding-bottom: 0.5vh;
-                box-shadow: $hor_navSubULshadow;
+                box-shadow: $navSubULshadow;
                 [dir=rtl] & {
                     margin-right: 2vh;
                 }
@@ -67,7 +73,7 @@ $vert_navfontsize: map-get($verticalHeader, width) / 2;
             flex-direction: column;
             background-color: $c_domin;
             border-radius: 0.2vh;
-            box-shadow: $hor_navSubULshadow;
+            box-shadow: $navSubULshadow;
             margin-top: 5.5vh;
             >li {
                 width: 20vh;
@@ -82,7 +88,9 @@ $vert_navfontsize: map-get($verticalHeader, width) / 2;
                     color: $c_domin;
                 }
                 &:hover>img {
-                    filter: invert(1);
+                    @if $LIGHT_THEME==true {
+                        filter: invert(1);
+                    }
                 }
                 img {
                     [dir=rtl] & {

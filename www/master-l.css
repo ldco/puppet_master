@@ -1941,7 +1941,7 @@ li.isempty {
       display: flex; }
     #pm_Nav--desktop > ul > li:hover > img {
       transition: ease-in 0.2s;
-      width: calc(6vh / 1.4); }
+      filter: brightness(20); }
     #pm_Nav--desktop > ul > li:hover > ul {
       transition: ease-in 0.2s;
       display: flex; }
@@ -1954,7 +1954,8 @@ li.isempty {
     #pm_Nav--desktop > ul > li > div {
       display: none;
       position: absolute;
-      height: 7vh; }
+      height: 7vh;
+      margin-top: -0.5vh; }
       [dir=ltr] #pm_Nav--desktop > ul > li > div {
         left: calc(6vh); }
       [dir=rtl] #pm_Nav--desktop > ul > li > div {

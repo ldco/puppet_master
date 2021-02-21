@@ -1,5 +1,13 @@
 $hor_navfontsize: map-get($horizontHeader, height) / 2;
-$hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
+$navSubULshadow: null;
+@if $LIGHT_THEME==true {
+    $navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
+}
+
+@if $LIGHT_THEME==false {
+    $navSubULshadow: 0vh 0vh 0.1vh 0.1vh $c_white;
+}
+
 @if $PM_HEADER_IS_VERTICAL==false {
     #pm_Nav--desktop {
         align-items: center;
@@ -44,6 +52,11 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
                         margin-left: 1vh
                     }
                 }
+                >img {
+                    @if $LIGHT_THEME==false {
+                        filter: invert(1);
+                    }
+                }
                 >ul>li>img {
                     padding: 1vh;
                     [dir=rtl] & {
@@ -86,7 +99,7 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
                     @include font(1, 400);
                     background-color: $c_domin;
                     border-radius: 0.2vh;
-                    box-shadow: $hor_navSubULshadow;
+                    box-shadow: $navSubULshadow;
                 }
                 &:not(.isempty)>div>span:hover {
                     background-color: $c_opos;
@@ -112,7 +125,7 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
                 background-color: $c_domin;
                 border-radius: 0.2vh;
                 top: map-get($horizontHeader, height) + 2vh;
-                box-shadow: $hor_navSubULshadow;
+                box-shadow: $navSubULshadow;
                 li {
                     width: 100%;
                     @include flex-center;
@@ -131,7 +144,12 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
             .pm_nav_item_sub_ul {
                 li {
                     &:hover>img {
-                        filter: invert(1);
+                        @if $LIGHT_THEME==true {
+                            filter: invert(1);
+                        }
+                        @if $LIGHT_THEME==false {
+                            filter: invert(0);
+                        }
                     }
                 }
             }
@@ -141,7 +159,7 @@ $hor_navSubULshadow: 0vh 0.1vh 0.2vh 0vh $c_black;
                 background-color: $c_domin;
                 border-radius: 0.2vh;
                 top: map-get($horizontHeader, height) + $hor_navfontsize + 3vh;
-                box-shadow: $hor_navSubULshadow;
+                box-shadow: $navSubULshadow;
                 li {
                     padding-top: 0.2vh;
                     padding-bottom: 0.2vh;
