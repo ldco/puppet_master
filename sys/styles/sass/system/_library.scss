@@ -27,41 +27,32 @@
 //queries
 @mixin qr($device) {
     @if $device==mob {
-        [data-mob=true] {
+        [data-mob=mob] {
             @media (max-aspect-ratio: 13/9) {
                 @content;
             }
         }
-        [data-mob=false] {
+        [data-mob=desk],
+        [data-mob=tab] {
             @media (orientation: portrait) {
                 @content;
             }
         }
     }
     @if $device==desk {
-        [data-mob=true] {
+        [data-mob=mob] {
             @media (min-aspect-ratio: 13/9) {
                 @content;
             }
         }
-        [data-mob=false] {
+        [data-mob=desk],
+        [data-mob=tab] {
             @media (orientation: landscape) {
                 @content;
             }
         }
     }
-    @if $device==tab {
-        /*  [data-mob=true] {
-            @media (min-aspect-ratio: 13/9) {
-                @content;
-            }
-        }
-        [data-mob=false] {
-            @media (orientation: landscape) {
-                @content;
-            }
-        } */
-    }
+    @if $device==tab {}
 }
 
 //
