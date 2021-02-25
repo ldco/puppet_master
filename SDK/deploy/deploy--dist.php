@@ -8,7 +8,7 @@ $dist_ignore = "";
 return [
     "my site" => [
         "remote" => REMOTE_ROOT,
-        "local" => LOCAL_ROOT . "/dist",
+        "local" => LOCAL_ROOT . "/www",
         "test" => false,
         "ignore" => "
          $dist_ignore

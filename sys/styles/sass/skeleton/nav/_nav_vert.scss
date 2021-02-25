@@ -1,3 +1,6 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../../core/styles/sass/skeleton_core/nav_core/nav_vert_core";
+//
 $vert_navfontsize: map-get($verticalHeader, width) / 2;
 @if $PM_HEADER_IS_VERTICAL==true {
     #pm_Nav--desktop {

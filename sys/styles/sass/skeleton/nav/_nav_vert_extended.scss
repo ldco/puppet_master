@@ -1,0 +1,8 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../../core/styles/sass/skeleton_core/nav_core/nav_vert_extended_core";
+//
+@if $PM_HEADER_IS_VERTICAL==true {
+    #pm_Header--desktop.header_vert_extended {
+        #pm_Nav--desktop {}
+    }
+}

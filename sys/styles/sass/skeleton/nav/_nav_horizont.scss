@@ -1,3 +1,6 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../../core/styles/sass/skeleton_core/nav_core/nav_horizont_core";
+//
 @if $PM_HEADER_IS_VERTICAL==false {
     #pm_Nav--desktop {
         @extend .nav_common_horizont_and_float;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 11, 2021 at 09:10 PM
+-- Generation Time: Feb 25, 2021 at 08:48 AM
 -- Server version: 10.3.25-MariaDB-0ubuntu0.20.04.1
 -- PHP Version: 8.0.1
 
@@ -296,71 +296,25 @@ CREATE TABLE `pm_nav` (
   `img` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `fun` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `link` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `parent` int(11) DEFAULT NULL
+  `parent` int(11) DEFAULT NULL,
+  `isempty` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `pm_nav`
 --
 
-INSERT INTO `pm_nav` (`_id`, `name`, `img`, `fun`, `link`, `parent`) VALUES
-(1, 1, '100', NULL, NULL, NULL),
-(2, 95, '30', NULL, NULL, NULL),
-(3, 96, '35', NULL, NULL, NULL),
-(4, 119, '13', NULL, NULL, NULL),
-(5, 120, '43', NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pm_nav_sub_1`
---
-
-CREATE TABLE `pm_nav_sub_1` (
-  `_id` int(11) NOT NULL,
-  `name` int(11) NOT NULL,
-  `img` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fun` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `link` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `parent` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `pm_nav_sub_1`
---
-
-INSERT INTO `pm_nav_sub_1` (`_id`, `name`, `img`, `fun`, `link`, `parent`) VALUES
-(1, 1, '100', NULL, NULL, 2),
-(2, 95, '30', NULL, NULL, 3),
-(3, 96, '35', NULL, NULL, 3),
-(4, 119, '13', NULL, NULL, 3),
-(5, 120, '43', NULL, NULL, 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pm_nav_sub_2`
---
-
-CREATE TABLE `pm_nav_sub_2` (
-  `_id` int(11) NOT NULL,
-  `name` int(11) NOT NULL,
-  `img` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fun` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `link` varchar(30) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `parent` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `pm_nav_sub_2`
---
-
-INSERT INTO `pm_nav_sub_2` (`_id`, `name`, `img`, `fun`, `link`, `parent`) VALUES
-(1, 1, '100', NULL, NULL, 2),
-(2, 95, '30', NULL, NULL, 3),
-(3, 96, '35', NULL, NULL, 3),
-(4, 119, '13', NULL, NULL, 3),
-(5, 120, '43', NULL, NULL, 2);
+INSERT INTO `pm_nav` (`_id`, `name`, `img`, `fun`, `link`, `parent`, `isempty`) VALUES
+(1, 1, '100', NULL, NULL, NULL, 0),
+(2, 97, '30', NULL, NULL, NULL, 0),
+(3, 96, '35', NULL, NULL, NULL, 1),
+(4, 119, '13', NULL, NULL, NULL, 0),
+(5, 120, '43', NULL, NULL, NULL, 0),
+(6, 120, '100', NULL, NULL, 2, 0),
+(7, 120, '100', NULL, NULL, 2, 0),
+(9, 120, '100', NULL, NULL, 3, 0),
+(10, 120, '100', NULL, NULL, 3, 0),
+(11, 120, '100', NULL, NULL, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -485,27 +439,8 @@ ALTER TABLE `pm_loc`
 --
 ALTER TABLE `pm_nav`
   ADD PRIMARY KEY (`_id`),
-  ADD UNIQUE KEY `name` (`name`),
-  ADD KEY `id` (`_id`);
-
---
--- Indexes for table `pm_nav_sub_1`
---
-ALTER TABLE `pm_nav_sub_1`
-  ADD PRIMARY KEY (`_id`),
-  ADD UNIQUE KEY `name` (`name`),
   ADD KEY `id` (`_id`),
-  ADD KEY `parent` (`parent`);
-
---
--- Indexes for table `pm_nav_sub_2`
---
-ALTER TABLE `pm_nav_sub_2`
-  ADD PRIMARY KEY (`_id`),
-  ADD UNIQUE KEY `name` (`name`),
-  ADD KEY `id` (`_id`),
-  ADD KEY `parent` (`parent`),
-  ADD KEY `parent_2` (`parent`);
+  ADD KEY `name` (`name`);
 
 --
 -- Indexes for table `pm_team`
@@ -568,19 +503,7 @@ ALTER TABLE `pm_loc`
 -- AUTO_INCREMENT for table `pm_nav`
 --
 ALTER TABLE `pm_nav`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT for table `pm_nav_sub_1`
---
-ALTER TABLE `pm_nav_sub_1`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `pm_nav_sub_2`
---
-ALTER TABLE `pm_nav_sub_2`
-  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `pm_team`
@@ -609,20 +532,6 @@ ALTER TABLE `pm_contact`
 --
 ALTER TABLE `pm_nav`
   ADD CONSTRAINT `pm_nav_ibfk_1` FOREIGN KEY (`name`) REFERENCES `pm_loc` (`id`);
-
---
--- Constraints for table `pm_nav_sub_1`
---
-ALTER TABLE `pm_nav_sub_1`
-  ADD CONSTRAINT `pm_nav_sub_1_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `pm_nav` (`_id`),
-  ADD CONSTRAINT `pm_nav_sub_1_ibfk_2` FOREIGN KEY (`name`) REFERENCES `pm_loc` (`id`);
-
---
--- Constraints for table `pm_nav_sub_2`
---
-ALTER TABLE `pm_nav_sub_2`
-  ADD CONSTRAINT `pm_nav_sub_2_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `pm_nav_sub_1` (`_id`),
-  ADD CONSTRAINT `pm_nav_sub_2_ibfk_2` FOREIGN KEY (`name`) REFERENCES `pm_loc` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,3 +1,6 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../../core/styles/sass/skeleton_core/nav_core/nav_mobile_core";
+//
 $mobNavLiHeight: 4vh;
 #pm_Nav--mobile {
     flex-direction: column;
@@ -15,6 +18,9 @@ $mobNavLiHeight: 4vh;
     }
     ul li {
         align-items: center;
+    }
+    >ul>li.isempty>div>span {
+        filter: opacity(0.5);
     }
     >ul>li {
         height: $mobNavLiHeight;

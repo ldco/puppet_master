@@ -19,7 +19,7 @@
 }
 
 main section {
-    width: calc(#{100%} - (#{$sectionSidePadding} * 2));
+    // width: calc(#{100%} - (#{$sectionSidePadding} * 2));
     display: flex;
     flex-direction: column;
     align-items: center;

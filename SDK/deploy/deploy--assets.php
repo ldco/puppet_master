@@ -7,7 +7,7 @@ require_once "main.ftp.php";
 return [
     "my site" => [
         "remote" => REMOTE_ROOT . "sys/assets/",
-        "local" => LOCAL_ROOT . "dist/sys/assets/",
+        "local" => LOCAL_ROOT . "www/sys/assets/",
         "test" => false,
         "ignore" => "
 		",

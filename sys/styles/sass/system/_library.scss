@@ -27,26 +27,26 @@
 //queries
 @mixin qr($device) {
     @if $device==mob {
-        [data-mob=mob] {
+        [data-device=mob] {
             @media (max-aspect-ratio: 13/9) {
                 @content;
             }
         }
-        [data-mob=desk],
-        [data-mob=tab] {
+        [data-device=desk],
+        [data-device=tab] {
             @media (orientation: portrait) {
                 @content;
             }
         }
     }
     @if $device==desk {
-        [data-mob=mob] {
+        [data-device=mob] {
             @media (min-aspect-ratio: 13/9) {
                 @content;
             }
         }
-        [data-mob=desk],
-        [data-mob=tab] {
+        [data-device=desk],
+        [data-device=tab] {
             @media (orientation: landscape) {
                 @content;
             }

@@ -6,12 +6,24 @@ window.addEventListener("hashchange", setPageFunctions, false);
 //CONSTANTS
 const PM_DIR = document.querySelector("html").getAttribute("dir");
 const PM_LANG = document.querySelector("html").getAttribute("lang");
-const PM_ISMOB = document.querySelector("html").getAttribute("data-mob");
+const PM_ISDEVICE = document.querySelector("html").getAttribute("data-device");
+const PM_ISMOBOS = document.querySelector("html").getAttribute("mobos");
 const PM_ARR_OF_LANGS = ["en", "he"];
 const PM_HEADER = document.querySelector("html").getAttribute("data-header");
-const PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
 const PM_FLOATHEADER = document.querySelector("html").getAttribute("data-floatheader");
+const PM_FOOTER = document.querySelector("html").getAttribute("data-footer");
+const PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
 const PM_ROUT = document.querySelector("html").getAttribute("data-router");
+//SIZES
+/* const PM_SIZE_HEADER;
+const PM_SIZE_MAIN;
+const PM_SIZE_FOTTER;
+if (PM_HEADER === "true") {
+    if (document.querySelector("#pm_Header--mobile")) {
+
+    }
+} */
+
 
 //
 if (PM_DIR === "ltr") {
@@ -35,8 +47,10 @@ function initFun() {
     }
     //Set hamburger
     setHamburgerMenu();
+    //Set Misc Fixes
     dynamFixSubmenusMargin();
-    //
+    noHoverOnVerticalMenuTablet()
+        //
     if ((PM_HEADER === "true") || (PM_FLOATHEADER === "true")) {
         setChangeLang();
     }

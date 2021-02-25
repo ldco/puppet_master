@@ -7,7 +7,7 @@ require_once "main.ftp.php";
 return [
     "my site" => [
         "remote" => REMOTE_ROOT . "assets/icons/vector",
-        "local" => LOCAL_ROOT . "dist/assets/icons/vector/",
+        "local" => LOCAL_ROOT . "www/assets/icons/vector/",
         "test" => false,
         "ignore" => "
      

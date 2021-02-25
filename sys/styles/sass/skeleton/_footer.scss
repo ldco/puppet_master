@@ -43,3 +43,9 @@ footer {
         width: 100vw;
     }
 }
+
+@include qr(mob) {
+    footer {
+        width: 100vw;
+    }
+}
