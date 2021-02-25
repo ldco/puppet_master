@@ -1,35 +1,12 @@
 <!DOCTYPE html>
 <!-- MADE WITH PUPPET MASTER -->
-<?php
-
-$pmLangSkeletonView = PM_LANG;
-$pmDirSkeletonView = PM_DIRECTION;
 
 
-if ($isLocal) {
-    $ifIsLocal = "true";
-    $ifIsDev = "local";
-} else {
-    $ifIsLocal = "false";
-    if ($isDev) {
-        $ifIsDev = "true";
-    } else {
-        $ifIsDev = "false";
-    }
-}
-
-if (PM_HEADER && !PM_FLOATHEADER) {
-    $dataBar = "true";
-} else {
-    $dataBar = "false";
-}
-?>
-
-<html lang="<?= $pmLangSkeletonView ?>" dir="<?= $pmDirSkeletonView ?>" data-device="<?= PM_DEVICETYPE ?>"
-    <?php if (PM_ISMOBILENOW) : ?> data-mobos="<?= PM_MOBOSNOW ?>" <?php endif; ?> data-local="<?= $ifIsLocal ?>"
-    data-dev="<?= $ifIsDev ?>" data-webp="<?= var_export(PM_WEBP) ?>" data-header="<?= $dataBar ?>"
-    data-footer="<?= var_export(PM_FOOTER) ?>" data-onepage="<?= var_export(PM_ONEPAGER) ?>"
-    data-floatheader="<?= var_export(PM_FLOATHEADER) ?>" data-router="<?= var_export(PM_PHP_ROUTING) ?>">
+<html lang="<?= PM_LANG ?>" dir="<?= PM_DIRECTION ?>" data-device="<?= PM_DEVICETYPE ?>" <?php if (PM_ISMOBILENOW) : ?>
+    data-mobos="<?= PM_MOBOSNOW ?>" <?php endif; ?> data-local="<?= var_export(PM_IS_LOCAL) ?>"
+    data-dev="<?= var_export(PM_IS_DEV) ?>" data-webp="<?= var_export(PM_WEBP) ?>"
+    data-onepage="<?= var_export(PM_ONEPAGER) ?>" data-skeleton="<?= PM_SKELETON_CASE ?>"
+    data-float="<?= var_export(PM_FLOATHEADER) ?>" data-router="<?= var_export(PM_PHP_ROUTING) ?>">
 
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>

@@ -47,18 +47,16 @@ class SkeletonHeader
     public function makeSkeletonHeader(bool $login, bool $register)
     {
         $isAuthenticated = false;
-        if (defined("PM_FLOATHEADER") && PM_FLOATHEADER) {
+        if (defined("PM_HEADER") && PM_HEADER === "float") {
             $headerId = "pm_Header-float";
             $navId = "pm_Nav--float";
             $headerLogo = "pm_logo-header--float";
             $headerAsset = "pm_asset-header--float";
-        } else if (defined("PM_FLOATHEADER") && !PM_FLOATHEADER) {
+        } else {
             $headerId = "pm_Header--desktop";
             $navId = "pm_Nav--desktop";
             $headerLogo = "pm_logo-header";
             $headerAsset = "pm_asset-header";
-        } else {
-            echo "PM_FLOATHEADER not defined!";
         }
         $headerLogoImg = PM_IMAGES_REL . "brand/headerLogo.svg";
         $modelNav = $this->modelNav;

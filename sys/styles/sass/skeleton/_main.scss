@@ -1,6 +1,7 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../core/styles/sass/skeleton_core/main_core";
-@include qr(mob) {
+
+/* @include qr(mob) {
     main {
         height: generateContentSize(false, true);
         width: generateContentSize(true, true);
@@ -39,8 +40,9 @@
         top: 0vh;
         left: 0vw;
         right: 0vw;
+       
     }
-}
+} */
 
 main {
     position: absolute;

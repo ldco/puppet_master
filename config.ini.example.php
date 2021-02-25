@@ -33,8 +33,6 @@ define("PM_ONEPAGER", false); // true || false
 define("PM_ISAPP", false); // true || false
 define("PM_PROGRESSIVE_APP", false); // true || false -> always true if PM_ISAPP
 //skeleton items
-/* define("PM_HEADER", true); // true || false -> always false if PM_FLOATHEADER is true
-define("PM_FLOATHEADER", false); */
 define("PM_HEADER", "vert"); // none || float || horiz || vert || vertext (vetical extended) -> always vertext if PM_ISAPP
 define("PM_FOOTER", true); // true || false
 define("PM_FOOTER_NAV", false); // true || false -> always false if PM_FOOTER false

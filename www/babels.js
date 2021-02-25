@@ -131,8 +131,8 @@ var PM_LANG = document.querySelector("html").getAttribute("lang");
 var PM_ISDEVICE = document.querySelector("html").getAttribute("data-device");
 var PM_ISMOBOS = document.querySelector("html").getAttribute("mobos");
 var PM_ARR_OF_LANGS = ["en", "he"];
-var PM_HEADER = document.querySelector("html").getAttribute("data-header");
-var PM_FLOATHEADER = document.querySelector("html").getAttribute("data-floatheader");
+var PM_SKELETON_CASE = document.querySelector("html").getAttribute("data-skeleton");
+var PM_FLOATHEADER = document.querySelector("html").getAttribute("data-float");
 var PM_FOOTER = document.querySelector("html").getAttribute("data-footer");
 var PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
 var PM_ROUT = document.querySelector("html").getAttribute("data-router"); //SIZES
@@ -172,11 +172,11 @@ function initFun() {
   dynamFixSubmenusMargin();
   noHoverOnVerticalMenuTablet(); //
 
-  if (PM_HEADER === "true" || PM_FLOATHEADER === "true") {
+  if (PM_SKELETON_CASE !== "case_A" || PM_SKELETON_CASE !== "case_B" || PM_FLOATHEADER === "true") {
     setChangeLang();
   }
 
-  if (PM_HEADER === "true") {
+  if (PM_SKELETON_CASE !== "case_A" || PM_SKELETON_CASE !== "case_B") {
     setBarAsset();
     addClassOnScroll("#pm_Header--desktop", "--scrolled");
     addClassOnScroll("#pm_Header--mobile", "--scrolled");
@@ -189,11 +189,9 @@ function initFun() {
 
   new Thebility().init(); //
 
-  if (PM_FLOATHEADER === "true" && PM_ISMOB === "false") {
+  if (PM_FLOATHEADER === "true" && PM_ISDEVICE === "desk") {
     dragFloatingHeader();
-  }
-
-  if (PM_ISMOB === "false") {} //Assign refresh page to header logo
+  } //Assign refresh page to header logo
 
 
   if (PM_FLOATHEADER === "false") {

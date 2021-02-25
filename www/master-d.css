@@ -1468,51 +1468,48 @@ main section {
     height: auto;
     width: auto; }
 
-@media (max-aspect-ratio: 13 / 9) {
-  [data-device=mob] main {
-    height: calc(100vh - 9vh);
-    width: 100vw;
-    top: calc(0vh + 6vh);
-    left: 0 !important;
-    right: 0 !important; } }
+/* @include qr(mob) {
+    main {
+        height: generateContentSize(false, true);
+        width: generateContentSize(true, true);
+        top: generateContentPosition(true, true);
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
 
-@media (orientation: portrait) {
-  [data-device=desk] main,
-  [data-device=tab] main {
-    height: calc(100vh - 9vh);
-    width: 100vw;
-    top: calc(0vh + 6vh);
-    left: 0 !important;
-    right: 0 !important; } }
+@include qr(desk) {
+    main {
+        height: generateContentSize(false, false);
+        width: generateContentSize(true, false);
+        top: generateContentPosition(true, false);
+    }
+}
 
-@media (min-aspect-ratio: 13 / 9) {
-  [data-device=mob] main {
-    height: calc(100vh - 3vh);
-    width: calc(100vw - 6vh);
-    top: calc(0vh + 0px); } }
+[dir=rtl] {
+    main {
+        right: generateContentPosition(false, false);
+        left: 0;
+    }
+}
 
-@media (orientation: landscape) {
-  [data-device=desk] main,
-  [data-device=tab] main {
-    height: calc(100vh - 3vh);
-    width: calc(100vw - 6vh);
-    top: calc(0vh + 0px); } }
+[dir=ltr] {
+    main {
+        left: generateContentPosition(false, false);
+        right: 0;
+    }
+}
 
-[dir=rtl] main {
-  right: calc(0vw + 6vh);
-  left: 0; }
-
-[dir=ltr] main {
-  left: calc(0vw + 6vh);
-  right: 0; }
-
-[data-header=false] main {
-  width: 100vw;
-  height: calc(100vh - 3vh);
-  top: 0vh;
-  left: 0vw;
-  right: 0vw; }
-
+[data-header=false] {
+    main {
+        width: 100vw;
+        height: calc(100vh - 3vh);
+        top: 0vh;
+        left: 0vw;
+        right: 0vw;
+       
+    }
+} */
 main {
   position: absolute; }
 

@@ -11,7 +11,7 @@
 //fonts
 @import "system/engine--fonts";
 //animations
-@import "../../../core/styles/sass/animista/all--animations";
+@import "animista/all--animations";
 //color
 @import "system/engine--colors";
 //shadows
@@ -21,10 +21,10 @@
 //SYSTEM
 @import "system/misc";
 @import "system/links";
-@import "system/engine";
+//@import "system/engine";
 @import "system/info";
 @import "system/loginregister";
-@import "../../../core/styles/sass/system_core/scrollbar";
+@import "system/scrollbar";
 //pages common
 @import "system/page";
 @import "system/onepager";

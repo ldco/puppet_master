@@ -14,19 +14,16 @@ class SkeletonIndex
     private $modelDepends = null;
     private $modelFooter = null;
     private $viewsNames = [];
-    private $isLocal = false;
-    private $isAdmin = false;
-    private $isDev = false;
-
+    // private $isAdmin = false;
 
     public function __construct()
     {
         if (!defined("PM_ROOT")) return;
         $this->viewsNames = PM_VIEWS;
-        if (defined("PM_IS_LOCAL")) $this->isLocal = PM_IS_LOCAL;
         if (defined("PM_IS_DEV_DEFINED")) $this->isDev = PM_IS_DEV_DEFINED;
-
-
+        // skeleton cases
+        require_once PM_SYS . "Controller/Skeleton_cases.ctrl.php";
+        //
         $modelPath = PM_SYS . "Model/";
         require_once $modelPath . "Skeleton.header.model.php";
         require_once $modelPath . "Skeleton.depends.model.php";
@@ -43,9 +40,8 @@ class SkeletonIndex
         $modelHeader = $this->modelHeader;
         $modelDepends = $this->modelDepends;
         $modelFooter = $this->modelFooter;
-        $isAdmin = $this->isAdmin;
-        $isDev = $this->isDev;
-        $isLocal = $this->isLocal;
+        // $isAdmin = $this->isAdmin;
+
         $showAgreeCookie = '';
         if (empty($_COOKIE) || empty($_COOKIE['I_WANT_COOKIE'])) {
             ob_start();
