@@ -1,5 +1,48 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../core/styles/sass/skeleton_core/main_core";
+main {
+    position: absolute;
+}
+
+@include qr(desk) {
+    [data-skeleton="case_A"] {
+        main {
+            [dir=rtl] & {}
+            [dir=ltr] & {}
+        }
+    }
+    [data-skeleton="case_B"] {
+        main {
+            [dir=rtl] & {}
+            [dir=ltr] & {}
+        }
+    }
+    [data-skeleton="case_C"] {
+        main {
+            [dir=rtl] & {}
+            [dir=ltr] & {}
+        }
+    }
+    [data-skeleton="case_D"] {
+        main {
+            [dir=rtl] & {}
+            [dir=ltr] & {}
+        }
+    }
+    [data-skeleton="case_E"] {
+        main {
+            [dir=rtl] & {}
+            [dir=ltr] & {}
+        }
+    }
+    [data-skeleton="case_F"] {
+        main {
+            [dir=rtl] & {}
+            [dir=ltr] & {}
+        }
+    }
+}
+
 
 /* @include qr(mob) {
     main {
@@ -43,7 +86,3 @@
        
     }
 } */
-
-main {
-    position: absolute;
-}

@@ -2,11 +2,7 @@
 
 
 declare(strict_types=1);
-if (PM_HEADER === "float") {
-    define("PM_FLOATHEADER", true);
-} else {
-    define("PM_FLOATHEADER", false);
-}
+
 if ((PM_HEADER === "none") || (PM_HEADER === "float")) {
     if (PM_FOOTER === false) {
         define("PM_SKELETON_CASE", "case_A"); //no header (or float), no footer

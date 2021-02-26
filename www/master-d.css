@@ -1468,6 +1468,9 @@ main section {
     height: auto;
     width: auto; }
 
+main {
+  position: absolute; }
+
 /* @include qr(mob) {
     main {
         height: generateContentSize(false, true);
@@ -1510,9 +1513,6 @@ main section {
        
     }
 } */
-main {
-  position: absolute; }
-
 [data-floatheader=true] header {
   box-shadow: 0 0 0 0.1vh rgba(249, 249, 249, 0.1);
   background-color: rgba(47, 47, 47, 0.8);
@@ -1945,7 +1945,7 @@ header {
       margin-right: 0; }
 
 #pm_Header--desktop.header_vert_extended {
-  width: 18vh; }
+  width: 18vh !important; }
 
 nav,
 nav ul,

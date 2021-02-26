@@ -5054,22 +5054,19 @@ var PM_DIR = document.querySelector("html").getAttribute("dir");
 var PM_LANG = document.querySelector("html").getAttribute("lang");
 var PM_ISDEVICE = document.querySelector("html").getAttribute("data-device");
 var PM_ISMOBOS = document.querySelector("html").getAttribute("mobos");
-var PM_ARR_OF_LANGS = ["en", "he"];
 var PM_SKELETON_CASE = document.querySelector("html").getAttribute("data-skeleton");
-var PM_FLOATHEADER = document.querySelector("html").getAttribute("data-float");
+var PM_HEADER = document.querySelector("html").getAttribute("data-header");
 var PM_FOOTER = document.querySelector("html").getAttribute("data-footer");
 var PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
-var PM_ROUT = document.querySelector("html").getAttribute("data-router"); //SIZES
+var PM_ROUT = document.querySelector("html").getAttribute("data-router");
 
-/* const PM_SIZE_HEADER;
-const PM_SIZE_MAIN;
-const PM_SIZE_FOTTER;
-if (PM_HEADER === "true") {
-    if (document.querySelector("#pm_Header--mobile")) {
-
-    }
-} */
-//
+if (PM_ISDEVICE === "mob" || PM_ISDEVICE === "tab") {
+  var _PM_ISMOB = true;
+} else if (PM_ISDEVICE === "desk") {
+  var _PM_ISMOB2 = false;
+} else {
+  console.log("PM_ISDEVICE not defined");
+}
 
 if (PM_DIR === "ltr") {
   var PM_DIROPOSITE = "rtl";
@@ -5079,12 +5076,12 @@ if (PM_DIR === "ltr") {
   var _PM_LTR = false;
 } else {
   console.log("PM_DIR ERROR!");
-} //DO NOT EDIT - EDIT THE CORE JS
+} //SIZES
+//DO NOT EDIT - EDIT THE CORE JS
 
 
 function initFun() {
-  setTimeout(function () {}, 100); //
-  //js router
+  setTimeout(function () {}, 100); //js router
 
   if (PM_ONEPAGER === "false" || PM_ROUT === "false") {
     setRouter();
@@ -5094,13 +5091,10 @@ function initFun() {
   setHamburgerMenu(); //Set Misc Fixes
 
   dynamFixSubmenusMargin();
-  noHoverOnVerticalMenuTablet(); //
+  noHoverOnVerticalMenuTablet();
 
-  if (PM_SKELETON_CASE !== "case_A" || PM_SKELETON_CASE !== "case_B" || PM_FLOATHEADER === "true") {
+  if (PM_HEADER !== "none") {
     setChangeLang();
-  }
-
-  if (PM_SKELETON_CASE !== "case_A" || PM_SKELETON_CASE !== "case_B") {
     setBarAsset();
     addClassOnScroll("#pm_Header--desktop", "--scrolled");
     addClassOnScroll("#pm_Header--mobile", "--scrolled");
@@ -5113,17 +5107,15 @@ function initFun() {
 
   new Thebility().init(); //
 
-  if (PM_FLOATHEADER === "true" && PM_ISDEVICE === "desk") {
+  if (PM_HEADER === "float" && PM_ISMOB === "false") {
     dragFloatingHeader();
   } //Assign refresh page to header logo
 
 
-  if (PM_FLOATHEADER === "false") {
-    document.querySelector("#pm_logo-header").addEventListener("click", function () {
-      location.reload();
-    });
-  } //Get content of page
-
+  document.querySelector("#pm_logo-header").addEventListener("click", function () {
+    location.reload();
+    console.log("Sdf");
+  }); //Get content of page
 
   if (PM_ONEPAGER === "false") {
     var hash = window.location.hash;

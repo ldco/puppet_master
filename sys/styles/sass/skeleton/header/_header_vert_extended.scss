@@ -1,9 +1,6 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../../core/styles/sass/skeleton_core/header_core/header_vert_extended_core";
 //
-@if $PM_HEADER_IS_VERTICAL==true {
-    $headerVertExtendedWidth: 18vh;
-    #pm_Header--desktop.header_vert_extended {
-        width: $headerVertExtendedWidth;
-    }
+#pm_Header--desktop.header_vert_extended {
+    width: map-get($verticalHeader, extend_with) !important;
 }
