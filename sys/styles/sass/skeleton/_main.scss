@@ -4,42 +4,69 @@ main {
     position: absolute;
 }
 
-@include qr(desk) {
-    [data-skeleton="case_A"] {
-        main {
-            [dir=rtl] & {}
-            [dir=ltr] & {}
-        }
+main.case_A,
+main.case_B,
+main.case_C,
+main.case_D {
+    [dir=rtl] & {
+        right: 0;
     }
-    [data-skeleton="case_B"] {
-        main {
-            [dir=rtl] & {}
-            [dir=ltr] & {}
-        }
+    [dir=ltr] & {
+        left: 0;
     }
-    [data-skeleton="case_C"] {
-        main {
-            [dir=rtl] & {}
-            [dir=ltr] & {}
-        }
+}
+
+//no header (or float), no footer
+main.case_A {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+}
+
+//no header (or float), with footer
+main.case_B {
+    height: calc(#{100vh} - #{map-get($footer, height)});
+    width: 100vw;
+    top: 0;
+}
+
+//horiz header, no footer
+main.case_C {
+    height: calc(#{100vh} - #{map-get($horizontHeader, height)});
+    width: 100vw;
+    top: map-get($horizontHeader, height);
+}
+
+//horiz header, with footer
+main.case_D {
+    height: calc(#{100vh} - #{map-get($horizontHeader, height)} - #{map-get($footer, height)});
+    width: 100vw;
+    top: map-get($horizontHeader, height);
+}
+
+//vert (or vertext) header, no footer
+main.case_E {
+    height: 100vh;
+    width: calc(#{100vw} - #{map-get($verticalHeader, width)});
+    top: 0;
+    [dir=rtl] & {
+        right: map-get($verticalHeader, width);
     }
-    [data-skeleton="case_D"] {
-        main {
-            [dir=rtl] & {}
-            [dir=ltr] & {}
-        }
+    [dir=ltr] & {
+        left: map-get($verticalHeader, width);
     }
-    [data-skeleton="case_E"] {
-        main {
-            [dir=rtl] & {}
-            [dir=ltr] & {}
-        }
+}
+
+//vert (or vertext) header, with footer
+main.case_F {
+    height: calc(#{100vh} - #{map-get($footer, height)});
+    width: calc(#{100vw} - #{map-get($verticalHeader, width)});
+    top: 0;
+    [dir=rtl] & {
+        right: map-get($verticalHeader, width);
     }
-    [data-skeleton="case_F"] {
-        main {
-            [dir=rtl] & {}
-            [dir=ltr] & {}
-        }
+    [dir=ltr] & {
+        left: map-get($verticalHeader, width);
     }
 }
 

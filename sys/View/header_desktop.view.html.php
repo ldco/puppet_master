@@ -1,4 +1,5 @@
-<header id="<?= $headerId; ?>" class="header_vert_extended">
+<!-- class="header_vert_extended" -->
+<header id="<?= $headerId; ?>">
 
     <div id="<?= $headerLogo ?>">
     </div>

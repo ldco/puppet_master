@@ -1452,6 +1452,56 @@ main section {
 main {
   position: absolute; }
 
+[dir=rtl] main.case_A, [dir=rtl]
+main.case_B, [dir=rtl]
+main.case_C, [dir=rtl]
+main.case_D {
+  right: 0; }
+
+[dir=ltr] main.case_A, [dir=ltr]
+main.case_B, [dir=ltr]
+main.case_C, [dir=ltr]
+main.case_D {
+  left: 0; }
+
+main.case_A {
+  height: 100vh;
+  width: 100vw;
+  top: 0; }
+
+main.case_B {
+  height: calc(100vh - 3vh);
+  width: 100vw;
+  top: 0; }
+
+main.case_C {
+  height: calc(100vh - 6vh);
+  width: 100vw;
+  top: 6vh; }
+
+main.case_D {
+  height: calc(100vh - 6vh - 3vh);
+  width: 100vw;
+  top: 6vh; }
+
+main.case_E {
+  height: 100vh;
+  width: calc(100vw - 6vh);
+  top: 0; }
+  [dir=rtl] main.case_E {
+    right: 6vh; }
+  [dir=ltr] main.case_E {
+    left: 6vh; }
+
+main.case_F {
+  height: calc(100vh - 3vh);
+  width: calc(100vw - 6vh);
+  top: 0; }
+  [dir=rtl] main.case_F {
+    right: 6vh; }
+  [dir=ltr] main.case_F {
+    left: 6vh; }
+
 /* @include qr(mob) {
     main {
         height: generateContentSize(false, true);
