@@ -37,10 +37,11 @@ nav {
     }
 }
 
-#pm_Nav--desktop,
-#pm_Nav--mobile,
-#pm_Nav--footer,
-#pm_Nav--float {
+header.header-desktop--horiz nav,
+header.header-desktop--horiz nav,
+header.header-desktop--float nav,
+footer nav,
+#pm_Nav--mobile {
     color: $c_opos;
     text-transform: uppercase;
 }

@@ -2,7 +2,7 @@
 @import "../../../../../core/styles/sass/skeleton_core/nav_core/nav_horizont_core";
 //
 header.header-desktop--horiz {
-    #pm_Nav--desktop {
+    nav {
         @extend .nav_common_horizont_and_float;
     }
 }

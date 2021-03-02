@@ -4,6 +4,7 @@ footer {
     //hack to remove stripe between content and footer
     border-top: solid $c_domin 1px;
     height: map-get($footer, height);
+    width: 100vw;
     @include flex-center();
     #pm_footer--credits,
     #pm_footer--credits-by {
@@ -26,26 +27,14 @@ footer {
     //**//
 }
 
-header.header-desktop--vert {
+[data-skeleton=case_F] {
     footer {
         width: calc(#{100vw} - #{map-get($verticalHeader, width)});
     }
 }
 
-header.header-desktop--horiz {
-    footer {
-        width: 100vw;
-    }
-}
-
-[data-header=float] {
-    footer {
-        width: 100vw;
-    }
-}
-
 @include qr(mob) {
     footer {
-        width: 100vw;
+        width: 100vw !important;
     }
 }

@@ -3,7 +3,7 @@
 //
 $vert_navfontsize: map-get($verticalHeader, width) / 2;
 header.header-desktop--vert {
-    #pm_Nav--desktop {
+    nav {
         width: map-get($verticalHeader, width);
         justify-content: center;
         >ul {

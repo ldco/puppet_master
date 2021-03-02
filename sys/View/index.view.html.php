@@ -6,7 +6,8 @@
     data-mobos="<?= PM_MOBOSNOW ?>" <?php endif; ?> data-local="<?= var_export(PM_IS_LOCAL) ?>"
     data-dev="<?= var_export(PM_IS_DEV) ?>" data-webp="<?= var_export(PM_WEBP) ?>"
     data-onepage="<?= var_export(PM_ONEPAGER) ?>" data-header="<?= PM_HEADER ?>"
-    data-footer="<?= var_export(PM_FOOTER) ?>" data-router="<?= var_export(PM_PHP_ROUTING) ?>">
+    data-footer="<?= var_export(PM_FOOTER) ?>" data-router="<?= var_export(PM_PHP_ROUTING) ?>"
+    data-skeleton="<?= PM_SKELETON_CASE ?>">
 
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>

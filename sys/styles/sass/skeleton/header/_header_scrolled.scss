@@ -1,48 +1,39 @@
  //!!!DO NOT TOUCH - GO TO CORE!!!
  @import "../../../../../core/styles/sass/skeleton_core/header_core/header_scrolled_core";
  //
- header.header-desktop--horiz {
+ header.header-desktop--horiz.--scrolled {
      #pm_logo-header,
-     #pm_Header--desktop,
      #pm_asset-header,
-     #pm_Header--desktop,
      #pm_Lang img {
          transition: $scrolledHeaderTransition;
      }
-     #pm_Header--desktop.--scrolled {
-         nav>ul>li span {
-             @include f-size($basicTextSize / $horizontalNavFont);
-         }
-         .pm_nav_item_sub_ul li span {
-             @include f-size($basicTextSize / $horizontalNavFont / 1.4);
-         }
-         @if $PM_NAV_ICONS==false or both {
-             .pm_nav_item_sub_ul {
-                 top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 1vh);
-             }
-         }
-         @if $PM_NAV_ICONS==true {
-             nav>ul>li span {
-                 @include f-size($basicTextSize / $horizontalNavFont / 1.2);
-             }
-             nav>ul>li div {
-                 top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 1vh);
-             }
-             nav>ul>li {
-                 &:hover>img {
-                     border-color: transparent;
-                     transform: rotate(180deg);
-                 }
-             }
-             .pm_nav_item_sub_ul {
-                 top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 6vh);
-             }
+     nav>ul>li span {
+         @include f-size($basicTextSize / $horizontalNavFont);
+     }
+     .pm_nav_item_sub_ul li span {
+         @include f-size($basicTextSize / $horizontalNavFont / 1.4);
+     }
+     @if $PM_NAV_ICONS==false or both {
+         .pm_nav_item_sub_ul {
+             top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 1vh);
          }
      }
-     #pm_Header--desktop.--scrolled {}
-     #pm_Header--mobile.--scrolled {
-         #pm_logo-header--mobile {}
-         #pm_asset-header {}
+     @if $PM_NAV_ICONS==true {
+         nav>ul>li span {
+             @include f-size($basicTextSize / $horizontalNavFont / 1.2);
+         }
+         nav>ul>li div {
+             top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 1vh);
+         }
+         nav>ul>li {
+             &:hover>img {
+                 border-color: transparent;
+                 transform: rotate(180deg);
+             }
+         }
+         .pm_nav_item_sub_ul {
+             top: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight} + 6vh);
+         }
      }
      [data-header=float] {}
  }

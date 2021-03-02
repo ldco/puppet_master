@@ -51,34 +51,44 @@ main.case_D {
 //
 //no header (or float), no footer
 main.case_A {
-    height: 100vh;
+    section {
+        min-height: 100vh;
+    }
     width: 100vw;
     top: 0;
 }
 
 //no header (or float), with footer
 main.case_B {
-    height: calc(#{100vh} - #{map-get($footer, height)});
+    section {
+        min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($footer, height)});
+    }
     width: 100vw;
     top: 0;
 }
 
 //horiz header, no footer
 main.case_C {
-    height: calc(#{100vh} - #{map-get($horizontHeader, height)});
+    section {
+        min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($horizontHeader, height)});
+    }
     width: 100vw;
 }
 
 //horiz header, with footer
 main.case_D {
-    height: calc(#{100vh} - #{map-get($horizontHeader, height)} - #{map-get($footer, height)});
+    section {
+        min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($horizontHeader, height)} - #{map-get($footer, height)});
+    }
     width: 100vw;
 }
 
 //vert (or vertext) header, no footer
 @include qr(desk) {
     main.case_E {
-        height: 100vh;
+        section {
+            min-height: 100vh;
+        }
         width: calc(#{100vw} - #{map-get($verticalHeader, width)});
         top: 0;
     }
@@ -86,7 +96,9 @@ main.case_D {
 
 @include qr(mob) {
     main.case_E {
-        height: calc(#{100vh} - #{map-get($mob, height)});
+        section {
+            min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($mob, height)});
+        }
         width: 100vw;
         top: map-get($mob, height);
     }
@@ -95,7 +107,9 @@ main.case_D {
 //vert (or vertext) header, with footer
 @include qr(desk) {
     main.case_F {
-        height: calc(#{100vh} - #{map-get($footer, height)});
+        section {
+            min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($footer, height)});
+        }
         width: calc(#{100vw} - #{map-get($verticalHeader, width)});
         top: 0;
     }
@@ -103,7 +117,9 @@ main.case_D {
 
 @include qr(mob) {
     main.case_F {
-        height: calc(#{100vh} - #{map-get($footer, height)} - #{map-get($mob, height)});
+        section {
+            min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($footer, height)} - #{map-get($mob, height)});
+        }
         width: 100vw;
         top: map-get($mob, height);
     }
