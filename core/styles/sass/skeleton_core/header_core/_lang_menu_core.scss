@@ -2,7 +2,7 @@ $langMenuMarginFromEnd: 10vh;
 $langMenuInputsMargin: 2vh;
 $langMenuInputsSize: 4vh;
 $langMenuInputsFontSize: 0.4;
-@if $PM_HEADER_IS_VERTICAL==false {
+header.header-desktop--horiz {
     #lang_menu {
         top: map-get($horizontHeader, height) * 1.2;
     }
@@ -27,7 +27,7 @@ $langMenuInputsFontSize: 0.4;
     }
 }
 
-[data-floatheader=true] {
+[data-header=float] {
     #lang_menu {
         top: map-get($horizontHeader, height) * 1.5;
     }

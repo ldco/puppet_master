@@ -47,23 +47,31 @@ class SkeletonHeader
     public function makeSkeletonHeader(bool $login, bool $register)
     {
         $isAuthenticated = false;
-        if (defined("PM_HEADER") && PM_HEADER === "float") {
+        if (PM_HEADER === "float") {
             $headerId = "pm_Header-float";
             $navId = "pm_Nav--float";
             $headerLogo = "pm_logo-header--float";
             $headerAsset = "pm_asset-header--float";
+            $headerClass = "header-desktop--float";
         } else {
             $headerId = "pm_Header--desktop";
             $navId = "pm_Nav--desktop";
             $headerLogo = "pm_logo-header";
             $headerAsset = "pm_asset-header";
+            if (PM_HEADER === "horiz") {
+                $headerClass = "header-desktop--horiz";
+            } else if (PM_HEADER === "vert") {
+                $headerClass = "header-desktop--vert";
+            } else if (PM_HEADER === "vertext") {
+                $headerClass = "header-desktop--vert vert--extended";
+            }
         }
         $headerLogoImg = PM_IMAGES_REL . "brand/headerLogo.svg";
         $modelNav = $this->modelNav;
         $modelLangMenu = $this->modelLangMenu;
         $modelHeader = $this;
         $headerAssetUrl = PM_ICONS_REL . "100.svg";
-        if (defined("PM_HEADER") && PM_HEADER) {
+        if (PM_HEADER !== "none") {
             require_once PM_ROOT . $this->viewsNames['header_desktop'];
         }
     }
@@ -78,6 +86,8 @@ class SkeletonHeader
         $headerLogoMob = PM_IMAGES_REL . "brand/barLogo.svg";
         $modelNav = $this->modelNav;
         $modelLangMenu = $this->modelLangMenu;
-        require_once PM_ROOT . $this->viewsNames['header_mobile'];
+        if (PM_HEADER !== "none") {
+            require_once PM_ROOT . $this->viewsNames['header_mobile'];
+        }
     }
 }

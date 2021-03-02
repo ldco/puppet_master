@@ -16,7 +16,7 @@
     }
 }
 
-@if $PM_HEADER_IS_VERTICAL==true {
+header.header-desktop--vert {
     #pm_Lang {
         bottom: $langMenuMarginFromEnd;
     }
@@ -36,7 +36,7 @@
     }
 }
 
-@if $PM_HEADER_IS_VERTICAL==false {
+header.header-desktop--horiz {
     #pm_Lang {
         [dir=rtl] & {
             left: $langMenuMarginFromEnd;
@@ -90,7 +90,7 @@
     }
 }
 
-[data-floatheader=true] {
+[data-header=float] {
     #pm_Lang {
         position: initial;
     }

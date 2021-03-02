@@ -1,7 +1,7 @@
  //!!!DO NOT TOUCH - GO TO CORE!!!
  @import "../../../../../core/styles/sass/skeleton_core/header_core/header_scrolled_core";
  //
- @if $PM_HEADER_IS_VERTICAL==false {
+ header.header-desktop--horiz {
      #pm_logo-header,
      #pm_Header--desktop,
      #pm_asset-header,
@@ -44,7 +44,5 @@
          #pm_logo-header--mobile {}
          #pm_asset-header {}
      }
-     [data-floatheader=true] {}
+     [data-header=float] {}
  }
- 
- @if $PM_HEADER_IS_VERTICAL=true {}

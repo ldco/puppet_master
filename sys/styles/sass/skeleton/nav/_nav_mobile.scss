@@ -82,7 +82,7 @@ $mobNavLiHeight: 4vh;
     @include font(1, 400);
 }
 
-[data-floatheader=true] {
+[data-header=float] {
     #pm_Nav--mobile {
         margin-top: 1vh;
     }

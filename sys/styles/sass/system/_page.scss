@@ -6,20 +6,10 @@
     }
 }
 
-@if $PM_HEADER_IS_VERTICAL==true {
-    main section {
-        min-height: calc(#{100vh} - #{$sectionBottomPadding} - #{$sectionTopPadding} - #{map-get($footer, height)});
-    }
-}
-
-@if $PM_HEADER_IS_VERTICAL==false {
-    main section {
-        min-height: calc(#{100vh} - #{$sectionBottomPadding} - #{$sectionTopPadding} - #{map-get($horizontHeader, height)} - #{map-get($footer, height)});
-    }
-}
-
 main section {
-    // width: calc(#{100%} - (#{$sectionSidePadding} * 2));
+    height: auto;
+    width: auto;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;

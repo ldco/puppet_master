@@ -1,0 +1,40 @@
+[data-header=float] {
+    #pm_mobile-slide {
+        top: 10vh;
+        box-shadow: 0 0 0 0.05vh $c_opos;
+        background-color: rgba($c_domin, .8);
+        padding: 1vh;
+        border-radius: 1vh;
+    }
+    #pm_Header--mobile {
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+#pm_Header--mobile {
+    @include dir(0);
+    top: 0;
+    width: 100%;
+    z-index: 1978;
+    height: calc(#{(map-get($mob, height)) + #{1px}
+}
+
+);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0 !important;
+margin: 0 !important;
+background-color: $c_domin;
+box-shadow: $headerShadow;
+
+}
+#pm_mobile-slide {
+    display: none;
+    position: fixed;
+    z-index: 1977;
+    user-select: none;
+    white-space: nowrap;
+    @include dir(-100vw);
+}

@@ -26,19 +26,19 @@ footer {
     //**//
 }
 
-@if $PM_HEADER_IS_VERTICAL==true {
+header.header-desktop--vert {
     footer {
         width: calc(#{100vw} - #{map-get($verticalHeader, width)});
     }
 }
 
-@if $PM_HEADER_IS_VERTICAL==false {
+header.header-desktop--horiz {
     footer {
         width: 100vw;
     }
 }
 
-[data-floatheader=true] {
+[data-header=float] {
     footer {
         width: 100vw;
     }

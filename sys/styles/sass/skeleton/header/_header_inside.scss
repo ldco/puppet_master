@@ -12,7 +12,7 @@
     cursor: pointer;
 }
 
-@if $PM_HEADER_IS_VERTICAL==true {
+header.header-desktop--vert {
     #pm_logo-header {
         position: absolute;
         width: 100%;
@@ -25,7 +25,7 @@
     #pm_logo-header--mobile {
         background-image: url("#{$IMAGES_CORE}brand/barLogo--forLight.svg");
     }
-    @if $PM_HEADER_IS_VERTICAL==true {
+    header.header-desktop--vert {
         #pm_logo-header {
             background-image: url("#{$IMAGES_CORE}brand/squareLogo--forLight.svg") !important;
         }
@@ -42,7 +42,7 @@
     #pm_asset-header--float {
         filter: invert(1);
     }
-    @if $PM_HEADER_IS_VERTICAL==true {
+    header.header-desktop--vert {
         #pm_logo-header {
             background-image: url("#{$IMAGES_CORE}brand/squareLogo--forDark.svg") !important;
         }
@@ -84,7 +84,7 @@
 
 #pm_asset-header--float {}
 
-@if $PM_HEADER_IS_VERTICAL==true {
+header.header-desktop--vert {
     @include qr(desk) {
         #pm_asset-header {
             right: initial !important;

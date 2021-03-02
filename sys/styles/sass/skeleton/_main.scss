@@ -4,6 +4,7 @@ main {
     position: absolute;
 }
 
+//common
 main.case_A,
 main.case_B,
 main.case_C,
@@ -16,6 +17,38 @@ main.case_D {
     }
 }
 
+main.case_E,
+main.case_F {
+    [dir=rtl] & {
+        right: map-get($verticalHeader, width);
+    }
+    [dir=ltr] & {
+        left: map-get($verticalHeader, width);
+    }
+}
+
+@include qr(mob) {
+    main.case_E,
+    main.case_F {
+        right: 0;
+        left: 0;
+    }
+}
+
+main.case_C,
+main.case_D {
+    top: map-get($horizontHeader, height);
+}
+
+@include qr(mob) {
+    main.case_C,
+    main.case_D {
+        top: map-get($mob, height);
+    }
+}
+
+//
+//
 //no header (or float), no footer
 main.case_A {
     height: 100vh;
@@ -34,82 +67,44 @@ main.case_B {
 main.case_C {
     height: calc(#{100vh} - #{map-get($horizontHeader, height)});
     width: 100vw;
-    top: map-get($horizontHeader, height);
 }
 
 //horiz header, with footer
 main.case_D {
     height: calc(#{100vh} - #{map-get($horizontHeader, height)} - #{map-get($footer, height)});
     width: 100vw;
-    top: map-get($horizontHeader, height);
 }
 
 //vert (or vertext) header, no footer
-main.case_E {
-    height: 100vh;
-    width: calc(#{100vw} - #{map-get($verticalHeader, width)});
-    top: 0;
-    [dir=rtl] & {
-        right: map-get($verticalHeader, width);
+@include qr(desk) {
+    main.case_E {
+        height: 100vh;
+        width: calc(#{100vw} - #{map-get($verticalHeader, width)});
+        top: 0;
     }
-    [dir=ltr] & {
-        left: map-get($verticalHeader, width);
+}
+
+@include qr(mob) {
+    main.case_E {
+        height: calc(#{100vh} - #{map-get($mob, height)});
+        width: 100vw;
+        top: map-get($mob, height);
     }
 }
 
 //vert (or vertext) header, with footer
-main.case_F {
-    height: calc(#{100vh} - #{map-get($footer, height)});
-    width: calc(#{100vw} - #{map-get($verticalHeader, width)});
-    top: 0;
-    [dir=rtl] & {
-        right: map-get($verticalHeader, width);
-    }
-    [dir=ltr] & {
-        left: map-get($verticalHeader, width);
-    }
-}
-
-
-/* @include qr(mob) {
-    main {
-        height: generateContentSize(false, true);
-        width: generateContentSize(true, true);
-        top: generateContentPosition(true, true);
-        left: 0 !important;
-        right: 0 !important;
-    }
-}
-
 @include qr(desk) {
-    main {
-        height: generateContentSize(false, false);
-        width: generateContentSize(true, false);
-        top: generateContentPosition(true, false);
+    main.case_F {
+        height: calc(#{100vh} - #{map-get($footer, height)});
+        width: calc(#{100vw} - #{map-get($verticalHeader, width)});
+        top: 0;
     }
 }
 
-[dir=rtl] {
-    main {
-        right: generateContentPosition(false, false);
-        left: 0;
-    }
-}
-
-[dir=ltr] {
-    main {
-        left: generateContentPosition(false, false);
-        right: 0;
-    }
-}
-
-[data-header=false] {
-    main {
+@include qr(mob) {
+    main.case_F {
+        height: calc(#{100vh} - #{map-get($footer, height)} - #{map-get($mob, height)});
         width: 100vw;
-        height: calc(100vh - #{map-get($footer, height)});
-        top: 0vh;
-        left: 0vw;
-        right: 0vw;
-       
+        top: map-get($mob, height);
     }
-} */
+}

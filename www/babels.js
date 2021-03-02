@@ -18,6 +18,14 @@ function addClassOnScroll(element, classname) {
 function getContentView(id) {
   var lang = document.querySelector("html").getAttribute("lang");
   history.replaceState(null, null, " ");
+  var path;
+
+  if (PM_ISLOCAL === "false" && PM_ISDEV === "true") {
+    path = '/PM_DEV/index.php?content_page=1';
+  } else {
+    path = '/index.php?content_page=1';
+  }
+
   var ajx = new XMLHttpRequest();
   var pageRP = '';
 
@@ -28,12 +36,7 @@ function getContentView(id) {
     }
   };
 
-  if (document.querySelector("html").getAttribute("data-dev") === "true") {
-    ajx.open("POST", "/PM_DEV/index.php?content_page=1", true);
-  } else {
-    ajx.open("POST", "/index.php?content_page=1", true);
-  }
-
+  ajx.open("POST", path, true);
   ajx.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   ajx.send("id=" + id + "&lang=" + lang);
   window.location.hash += id;
@@ -135,21 +138,27 @@ var PM_HEADER = document.querySelector("html").getAttribute("data-header");
 var PM_FOOTER = document.querySelector("html").getAttribute("data-footer");
 var PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
 var PM_ROUT = document.querySelector("html").getAttribute("data-router");
+var PM_ISDEV = document.querySelector("html").getAttribute("data-dev");
+var PM_ISLOCAL = document.querySelector("html").getAttribute("data-local");
+var PM_ISMOB;
 
-if (PM_ISDEVICE === "mob" || PM_ISDEVICE === "tab") {
-  var _PM_ISMOB = true;
+if (PM_ISDEVICE === "mob" && PM_ISDEVICE === "tab") {
+  PM_ISMOB = true;
 } else if (PM_ISDEVICE === "desk") {
-  var _PM_ISMOB2 = false;
+  PM_ISMOB = false;
 } else {
   console.log("PM_ISDEVICE not defined");
 }
 
+var PM_DIROPOSITE;
+var PM_LTR;
+
 if (PM_DIR === "ltr") {
-  var PM_DIROPOSITE = "rtl";
-  var PM_LTR = true;
+  PM_DIROPOSITE = "rtl";
+  PM_LTR = true;
 } else if (PM_DIR === "rtl") {
-  var _PM_DIROPOSITE = "ltr";
-  var _PM_LTR = false;
+  PM_DIROPOSITE = "ltr";
+  PM_LTR = false;
 } else {
   console.log("PM_DIR ERROR!");
 } //SIZES
@@ -160,9 +169,11 @@ function initFun() {
   setTimeout(function () {}, 100); //js router
 
   if (PM_ONEPAGER === "false" || PM_ROUT === "false") {
-    setRouter();
-  } //Set hamburger
+    console.log(PM_ONEPAGER);
+    console.log(PM_ROUT);
+  }
 
+  setRouter(); //Set hamburger
 
   setHamburgerMenu(); //Set Misc Fixes
 
@@ -172,8 +183,14 @@ function initFun() {
   if (PM_HEADER !== "none") {
     setChangeLang();
     setBarAsset();
+  }
+
+  if (PM_HEADER !== "none" && PM_HEADER !== "float") {
     addClassOnScroll("#pm_Header--desktop", "--scrolled");
     addClassOnScroll("#pm_Header--mobile", "--scrolled");
+    document.querySelector("#pm_logo-header").addEventListener("click", function () {
+      location.reload();
+    });
   } //Set go to top button
 
 
@@ -183,15 +200,11 @@ function initFun() {
 
   new Thebility().init(); //
 
-  if (PM_HEADER === "float" && PM_ISMOB === "false") {
+  if (PM_HEADER === "float" && !PM_ISMOB) {
     dragFloatingHeader();
   } //Assign refresh page to header logo
+  //Get content of page
 
-
-  document.querySelector("#pm_logo-header").addEventListener("click", function () {
-    location.reload();
-    console.log("Sdf");
-  }); //Get content of page
 
   if (PM_ONEPAGER === "false") {
     var hash = window.location.hash;

@@ -1,19 +1,17 @@
 $scrolledHeaderTransition: ease 1s;
 $scrolledHeaderHeight: 1.8;
 $horizontalNavFont: 1.5;
-@if $PM_HEADER_IS_VERTICAL==false {
-    #pm_Header--desktop.--scrolled {
-        height: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight});
-        #pm_logo-header {
-            background-size: calc(#{map-get($horizontHeader, logo_width)} / 2.6);
-        }
-        #pm_asset-header {
-            width: calc(#{map-get($horizontHeader, asset)} / 1.4);
-        }
-        #pm_Lang img {
-            height: calc(#{map-get($floatheader, fontSize)} * 1.8vh);
-            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-        }
+header.header-desktop--horiz.--scrolled {
+    height: calc(#{map-get($horizontHeader, height)} / #{$scrolledHeaderHeight});
+    #pm_logo-header {
+        background-size: calc(#{map-get($horizontHeader, logo_width)} / 2.6);
+    }
+    #pm_asset-header {
+        width: calc(#{map-get($horizontHeader, asset)} / 1.4);
+    }
+    #pm_Lang img {
+        height: calc(#{map-get($floatheader, fontSize)} * 1.8vh);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
     }
 }
 

@@ -13,20 +13,26 @@ const PM_HEADER = document.querySelector("html").getAttribute("data-header");
 const PM_FOOTER = document.querySelector("html").getAttribute("data-footer");
 const PM_ONEPAGER = document.querySelector("html").getAttribute("data-onepage");
 const PM_ROUT = document.querySelector("html").getAttribute("data-router");
+const PM_ISDEV = document.querySelector("html").getAttribute("data-dev");
+const PM_ISLOCAL = document.querySelector("html").getAttribute("data-local");
 
-if (PM_ISDEVICE === "mob" || PM_ISDEVICE === "tab") {
-    const PM_ISMOB = true;
+let PM_ISMOB;
+if (PM_ISDEVICE === "mob" &&
+    PM_ISDEVICE === "tab") {
+    PM_ISMOB = true;
 } else if (PM_ISDEVICE === "desk") {
-    const PM_ISMOB = false;
+    PM_ISMOB = false;
 } else {
     console.log("PM_ISDEVICE not defined");
 }
+let PM_DIROPOSITE;
+let PM_LTR;
 if (PM_DIR === "ltr") {
-    const PM_DIROPOSITE = "rtl";
-    const PM_LTR = true;
+    PM_DIROPOSITE = "rtl";
+    PM_LTR = true;
 } else if (PM_DIR === "rtl") {
-    const PM_DIROPOSITE = "ltr";
-    const PM_LTR = false;
+    PM_DIROPOSITE = "ltr";
+    PM_LTR = false;
 } else {
     console.log("PM_DIR ERROR!");
 }
@@ -35,11 +41,16 @@ if (PM_DIR === "ltr") {
 
 //DO NOT EDIT - EDIT THE CORE JS
 function initFun() {
+
     setTimeout(() => {}, 100);
     //js router
     if (PM_ONEPAGER === "false" || PM_ROUT === "false") {
-        setRouter();
+
+        console.log(PM_ONEPAGER);
+        console.log(PM_ROUT);
     }
+    setRouter();
+
     //Set hamburger
     setHamburgerMenu();
     //Set Misc Fixes
@@ -48,9 +59,15 @@ function initFun() {
     if (PM_HEADER !== "none") {
         setChangeLang();
         setBarAsset();
+    }
+    if (PM_HEADER !== "none" && PM_HEADER !== "float") {
         addClassOnScroll("#pm_Header--desktop", "--scrolled");
         addClassOnScroll("#pm_Header--mobile", "--scrolled");
+        document.querySelector("#pm_logo-header").addEventListener("click", function() {
+            location.reload();
+        });
     }
+
     //Set go to top button
     setGototopButton();
     //Set translation for modal windows - will be removed later
@@ -58,14 +75,11 @@ function initFun() {
     //THEBILITY!
     new Thebility().init();
     //
-    if (PM_HEADER === "float" && PM_ISMOB === "false") {
+    if (PM_HEADER === "float" && !PM_ISMOB) {
         dragFloatingHeader();
     }
     //Assign refresh page to header logo
-    document.querySelector("#pm_logo-header").addEventListener("click", function() {
-        location.reload();
-        console.log("Sdf");
-    });
+
     //Get content of page
     if (PM_ONEPAGER === "false") {
         let hash = window.location.hash;
