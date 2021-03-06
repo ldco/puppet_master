@@ -1,6 +1,6 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../../core/styles/sass/skeleton_core/header_core/header_vert_extended_core";
 //
-#pm_Header--desktop.vert--extended {
-    width: map-get($verticalHeader, extend_with) !important;
+header.header-desktop--vert.vert--extended {
+    width: map-get($verticalHeader, extend_width);
 }

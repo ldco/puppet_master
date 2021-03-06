@@ -45,20 +45,17 @@ function initFun() {
     setTimeout(() => {}, 100);
     //js router
     if (PM_ONEPAGER === "false" || PM_ROUT === "false") {
-
-        console.log(PM_ONEPAGER);
-        console.log(PM_ROUT);
+        setRouter();
     }
-    setRouter();
 
-    //Set hamburger
-    setHamburgerMenu();
     //Set Misc Fixes
-    dynamFixSubmenusMargin();
+    // dynamFixSubmenusMargin();
     noHoverOnVerticalMenuTablet()
     if (PM_HEADER !== "none") {
         setChangeLang();
         setBarAsset();
+        //Set hamburger
+        setHamburgerMenu();
     }
     if (PM_HEADER !== "none" && PM_HEADER !== "float") {
         addClassOnScroll("#pm_Header--desktop", "--scrolled");
@@ -66,6 +63,11 @@ function initFun() {
         document.querySelector("#pm_logo-header").addEventListener("click", function() {
             location.reload();
         });
+    }
+
+    if (PM_HEADER === "vert" || PM_HEADER === "vertext") {
+        setChangeVertHeader();
+
     }
 
     //Set go to top button

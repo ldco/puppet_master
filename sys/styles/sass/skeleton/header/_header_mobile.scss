@@ -1,6 +1,10 @@
+//!!!DO NOT TOUCH - GO TO CORE!!!
+@import "../../../../../core/styles/sass/skeleton_core/header_core/header_mobile_core";
 [data-header=float] {
     #pm_mobile-slide {
-        top: 10vh;
+        top: calc(#{(map-get($mob, height))} + 5vh);
+        height: auto;
+        width: auto;
         box-shadow: 0 0 0 0.05vh $c_opos;
         background-color: rgba($c_domin, .8);
         padding: 1vh;
@@ -12,29 +16,32 @@
     }
 }
 
+#pm_mobile-slide {
+    top: 0vh;
+    background-color: $c_domin;
+    box-shadow: 0 0 1.5vh 0vh $c_opos;
+    height: 100vh;
+    width: 30vh;
+    display: none;
+    position: fixed;
+    z-index: 1977;
+    justify-content: center;
+    user-select: none;
+    white-space: nowrap;
+    @include dir(-100vw);
+}
+
 #pm_Header--mobile {
     @include dir(0);
     top: 0;
     width: 100%;
     z-index: 1978;
-    height: calc(#{(map-get($mob, height)) + #{1px}
-}
-
-);
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 0 !important;
-margin: 0 !important;
-background-color: $c_domin;
-box-shadow: $headerShadow;
-
-}
-#pm_mobile-slide {
-    display: none;
-    position: fixed;
-    z-index: 1977;
-    user-select: none;
-    white-space: nowrap;
-    @include dir(-100vw);
+    height: calc(#{(map-get($mob, height))} + 1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: $c_domin;
+    box-shadow: $headerShadow;
 }

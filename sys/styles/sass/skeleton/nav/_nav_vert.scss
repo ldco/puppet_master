@@ -4,8 +4,6 @@
 $vert_navfontsize: map-get($verticalHeader, width) / 2;
 header.header-desktop--vert {
     nav {
-        width: map-get($verticalHeader, width);
-        justify-content: center;
         >ul {
             margin-top: 12vh;
             height: 60vh;
@@ -13,6 +11,15 @@ header.header-desktop--vert {
             align-items: center;
             flex-direction: column;
         }
+        >ul>li {}
+    }
+}
+
+header.header-desktop--vert:not(.vert--extended) {
+    nav {
+        width: map-get($verticalHeader, width);
+        justify-content: center;
+        >ul {}
         >ul>li {
             width: map-get($verticalHeader, width);
             height: 100%;

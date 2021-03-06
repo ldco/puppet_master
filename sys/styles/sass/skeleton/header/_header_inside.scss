@@ -15,6 +15,7 @@
 header.header-desktop--vert {
     #pm_logo-header {
         position: absolute;
+        height: 9vh;
         width: 100%;
     }
 }
@@ -91,4 +92,31 @@ header.header-desktop--vert {
             left: initial !important;
         }
     }
+}
+
+#vertHeaderChanger {
+    position: fixed;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    top: 0%;
+    transform: translate(-60%, -60%);
+    background-color: $c_brand;
+    z-index: 1977;
+    cursor: pointer;
+    filter: opacity(0.2);
+    &:hover {
+        filter: opacity(0.5);
+    }
+    &:active {
+        filter: opacity(1);
+    }
+}
+
+#vertHeaderChanger:not(.vert--extended) {
+    left: map-get($verticalHeader, width);
+}
+
+#vertHeaderChanger.vert--extended {
+    left: map-get($verticalHeader, extend_width);
 }

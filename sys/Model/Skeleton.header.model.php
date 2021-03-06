@@ -47,6 +47,7 @@ class SkeletonHeader
     public function makeSkeletonHeader(bool $login, bool $register)
     {
         $isAuthenticated = false;
+        $vertHeaderChanger = false;
         if (PM_HEADER === "float") {
             $headerId = "pm_Header-float";
             $navId = "pm_Nav--float";

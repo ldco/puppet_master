@@ -1,4 +1,4 @@
-<footer id="pm_footer">
+<footer id="pm_footer" <?= $vertExtend ?>>
     <?php if (defined("PM_FOOTER_NAV") && PM_FOOTER_NAV) : ?>
     <nav>
         <?php $modelNav->index(); ?>

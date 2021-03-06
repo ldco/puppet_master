@@ -17,8 +17,8 @@ main.case_D {
     }
 }
 
-main.case_E,
-main.case_F {
+main.case_E:not(.vert--extended),
+main.case_F:not(.vert--extended) {
     [dir=rtl] & {
         right: map-get($verticalHeader, width);
     }
@@ -27,11 +27,22 @@ main.case_F {
     }
 }
 
+main.case_E.vert--extended,
+main.case_F.vert--extended {
+    width: calc(#{100vw} - #{map-get($verticalHeader, extend_width)});
+    [dir=rtl] & {
+        right: map-get($verticalHeader, extend_width);
+    }
+    [dir=ltr] & {
+        left: map-get($verticalHeader, extend_width);
+    }
+}
+
 @include qr(mob) {
     main.case_E,
     main.case_F {
-        right: 0;
-        left: 0;
+        right: 0 !important;
+        left: 0 !important;
     }
 }
 

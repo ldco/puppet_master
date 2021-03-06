@@ -7,7 +7,7 @@ $PM_FOOTER: true; //true //false
 $INFO_PM_BRAND: true; //true //false
 //sizes
 $basicTextSize: 1;
-$verticalHeader: (width: 6vh, extend_with: 18vh);
+$verticalHeader: (width: 6vh, extend_width: 18vh);
 $horizontHeader: (height: 6vh, logo_width: 12vw, asset: 3vh, );
 $floatheader: (width:auto, height:auto, logo_width: 15vh, fontSize: $basicTextSize + 0.2, );
 $hamburger: (distance: 3vh, );

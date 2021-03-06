@@ -1,6 +1,39 @@
 //!!!DO NOT TOUCH - GO TO CORE!!!
 @import "../../../../../core/styles/sass/skeleton_core/nav_core/nav_vert_extended_core";
 //
-header.header-desktop--vert {
-    #pm_Header--desktop.vert--extended {}
+header.header-desktop--vert.vert--extended {
+    nav {
+        width: map-get($verticalHeader, extend_width);
+        >ul {}
+        >ul>li {
+            width: map-get($verticalHeader, extend_width);
+            &:hover>div {}
+            &:hover>div>span {}
+            &:hover>img {}
+            &:hover>ul {}
+            &:not(.isempty)>div>span {
+                @if $LIGHT_THEME==true {}
+                @if $LIGHT_THEME==false {}
+            }
+            img {}
+            >div {}
+            >div>span {
+                [dir=rtl] & {}
+                [dir=ltr] & {}
+            }
+        }
+        .pm_nav_item_sub_ul {
+            >li {
+                >div>span {}
+                &:hover {}
+                &:hover>img {
+                    @if $LIGHT_THEME==true {}
+                }
+                img {
+                    [dir=rtl] & {}
+                    [dir=ltr] & {}
+                }
+            }
+        }
+    }
 }

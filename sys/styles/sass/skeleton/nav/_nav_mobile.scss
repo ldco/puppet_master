@@ -3,29 +3,25 @@
 //
 $mobNavLiHeight: 4vh;
 #pm_Nav--mobile {
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 12vh;
-    width: 100%;
-    [dir=rtl] & {
-        align-items: flex-end;
-    }
-    [dir=ltr] & {
-        align-items: flex-start;
-    }
-    ul {
+    // flex-direction: column;
+    // justify-content: flex-start;
+    margin-top: calc(#{(map-get($mob, height))} + 5vh);
+    // width: 100%;
+    // align-items: flex-start;
+    >ul {
         flex-direction: column;
     }
-    ul li {
+    >ul li {
+        display: block;
         align-items: center;
     }
     >ul>li.isempty>div>span {
         filter: opacity(0.5);
     }
     >ul>li {
-        height: $mobNavLiHeight;
+        //  height: $mobNavLiHeight;
         color: $c_opos;
-        width: 100%;
+        // width: 100%;
         align-items: center;
         >img {
             [dir=rtl] & {
@@ -36,7 +32,7 @@ $mobNavLiHeight: 4vh;
             }
         }
         >div>span {
-            @include f-size-fill($basicTextSize);
+            @include f-size-fill($basicTextSize * 1.4);
             [dir=rtl] & {
                 margin-right: 2vh;
             }
@@ -45,7 +41,8 @@ $mobNavLiHeight: 4vh;
             }
         }
         >img {
-            @include width-fill(1.5);
+            height: 4vh;
+            // @include width-fill(1.5);
             @include navImageFilter();
         }
     }
@@ -62,7 +59,7 @@ $mobNavLiHeight: 4vh;
         >li {
             padding: 0.5vh;
             >div>span {
-                @include f-size-fill($basicTextSize - 0.2);
+                @include f-size-fill($basicTextSize * 1.1);
                 [dir=rtl] & {
                     margin-right: 2vh;
                 }

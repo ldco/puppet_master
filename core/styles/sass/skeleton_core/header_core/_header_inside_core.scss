@@ -4,10 +4,8 @@ header.header-desktop--vert {
     #pm_logo-header {
         background-size: calc(#{map-get($verticalHeader, width)} / 1.8) !important;
     }
-    @include qr(desk) {
-        #pm_asset-header {
-            bottom: 2vh;
-        }
+    #pm_asset-header {
+        bottom: 2vh;
     }
 }
 
@@ -26,13 +24,15 @@ header.header-desktop--vert {
     }
 }
 
-//ASSET
-#pm_asset-header {
-    [dir=rtl] & {
-        left: 4vh;
-    }
-    [dir=ltr] & {
-        right: 4vh;
+header.header-desktop--horiz,
+#pm_Header--mobile {
+    #pm_asset-header {
+        [dir=rtl] & {
+            left: 4vh;
+        }
+        [dir=ltr] & {
+            right: 4vh;
+        }
     }
 }
 

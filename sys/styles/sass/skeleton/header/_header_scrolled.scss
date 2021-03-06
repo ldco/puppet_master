@@ -2,6 +2,7 @@
  @import "../../../../../core/styles/sass/skeleton_core/header_core/header_scrolled_core";
  //
  header.header-desktop--horiz.--scrolled {
+     transition: $scrolledHeaderTransition;
      #pm_logo-header,
      #pm_asset-header,
      #pm_Lang img {

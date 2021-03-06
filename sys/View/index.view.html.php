@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <!-- MADE WITH PUPPET MASTER -->
-
+<?php
+$mainClass;
+if (PM_HEADER === "vertext") {
+    $mainClass = "class='" . PM_SKELETON_CASE . " vert--extended'";
+} else {
+    $mainClass = "class='" . PM_SKELETON_CASE . "'";
+}
+?>
 
 <html lang="<?= PM_LANG ?>" dir="<?= PM_DIRECTION ?>" data-device="<?= PM_DEVICETYPE ?>" <?php if (PM_ISMOBILENOW) : ?>
     data-mobos="<?= PM_MOBOSNOW ?>" <?php endif; ?> data-local="<?= var_export(PM_IS_LOCAL) ?>"
@@ -32,7 +39,7 @@
     <div id="pm_overlay" style="display: none"></div>
     <?php
     $modelHeader->index(); ?>
-    <main class=<?= PM_SKELETON_CASE ?>><?= $sPageContent; ?>
+    <main <?= $mainClass ?>><?= $sPageContent; ?>
     </main>
     <?php if (defined("PM_FOOTER") && PM_FOOTER) $modelFooter->index(); ?>
     <div id="pm_gototop">

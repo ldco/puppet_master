@@ -3,7 +3,12 @@ function setHamburgerMenu() {
     let hamburger = document.querySelector(".pm_hamburger");
     let mobileHeader = document.querySelector("#pm_mobile-slide");
     let helperDiv = document.createElement("div");
-    let slideDistance = "3vh";
+    let slideDistance;
+    if (PM_HEADER === "float") {
+        slideDistance = "4vh";
+    } else {
+        slideDistance = "0vh";
+    }
     helperDiv.setAttribute("class", "click-anywhere");
     helperDiv.addEventListener("click", function() {
         hamburger.click();

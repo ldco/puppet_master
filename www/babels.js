@@ -169,20 +169,18 @@ function initFun() {
   setTimeout(function () {}, 100); //js router
 
   if (PM_ONEPAGER === "false" || PM_ROUT === "false") {
-    console.log(PM_ONEPAGER);
-    console.log(PM_ROUT);
-  }
+    setRouter();
+  } //Set Misc Fixes
+  // dynamFixSubmenusMargin();
 
-  setRouter(); //Set hamburger
 
-  setHamburgerMenu(); //Set Misc Fixes
-
-  dynamFixSubmenusMargin();
   noHoverOnVerticalMenuTablet();
 
   if (PM_HEADER !== "none") {
     setChangeLang();
-    setBarAsset();
+    setBarAsset(); //Set hamburger
+
+    setHamburgerMenu();
   }
 
   if (PM_HEADER !== "none" && PM_HEADER !== "float") {
@@ -191,6 +189,10 @@ function initFun() {
     document.querySelector("#pm_logo-header").addEventListener("click", function () {
       location.reload();
     });
+  }
+
+  if (PM_HEADER === "vert" || PM_HEADER === "vertext") {
+    setChangeVertHeader();
   } //Set go to top button
 
 
@@ -277,6 +279,27 @@ function setChangeLang() {
 }
 "use strict";
 
+function setChangeVertHeader() {
+  var el = document.querySelector("#vertHeaderChanger");
+  var arr = [document.querySelector("#pm_Header--desktop"), document.querySelector("main"), document.querySelector("footer"), el];
+  var clas = "vert--extended";
+  var transition = "1s ease";
+  el.addEventListener("click", function () {
+    if (!this.classList.contains(clas)) {
+      arr.forEach(function (elem) {
+        elem.classList.add(clas);
+        elem.style.transition = transition;
+      });
+    } else {
+      arr.forEach(function (elem) {
+        elem.classList.remove(clas);
+        elem.style.transition = transition;
+      });
+    }
+  });
+}
+"use strict";
+
 function setGototopButton() {
   var el = document.querySelector("#pm_gototop");
   var section = document.querySelector("section");
@@ -310,7 +333,14 @@ function setHamburgerMenu() {
   var hamburger = document.querySelector(".pm_hamburger");
   var mobileHeader = document.querySelector("#pm_mobile-slide");
   var helperDiv = document.createElement("div");
-  var slideDistance = "3vh";
+  var slideDistance;
+
+  if (PM_HEADER === "float") {
+    slideDistance = "4vh";
+  } else {
+    slideDistance = "0vh";
+  }
+
   helperDiv.setAttribute("class", "click-anywhere");
   helperDiv.addEventListener("click", function () {
     hamburger.click();

@@ -28,8 +28,11 @@ footer {
 }
 
 [data-skeleton=case_F] {
-    footer {
+    footer:not(.vert--extended) {
         width: calc(#{100vw} - #{map-get($verticalHeader, width)});
+    }
+    footer.vert--extended {
+        width: calc(#{100vw} - #{map-get($verticalHeader, extend_width)});
     }
 }
 

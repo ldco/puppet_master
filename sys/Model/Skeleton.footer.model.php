@@ -36,6 +36,12 @@ class SkeletonFooter
         $by = $this->footerByWho;
         $copy = $this->footerCopyright;
         $modelNav = $this->modelNav;
+        if (PM_HEADER === "vertext") {
+            $vertExtend = "class='vert--extended'";
+        } else {
+            $vertExtend = null;
+        }
+
 
         if (defined("PM_FOOTER") && PM_FOOTER) {
             require PM_ROOT . $this->viewsNames['footer'];
