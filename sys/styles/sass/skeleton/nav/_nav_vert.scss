@@ -11,7 +11,7 @@ header.header-desktop--vert {
             align-items: center;
             flex-direction: column;
         }
-        >ul>li {}
+        //>ul>li {}
     }
 }
 
@@ -19,24 +19,25 @@ header.header-desktop--vert:not(.vert--extended) {
     nav {
         width: map-get($verticalHeader, width);
         justify-content: center;
-        >ul {}
         >ul>li {
+            &:hover>ul {
+                transition: ease-in 0.2s;
+                display: flex;
+            }
             width: map-get($verticalHeader, width);
             height: 100%;
             justify-content: center;
             align-items: flex-start;
-            &:hover>div {
+            &:hover>div>div {
                 transition: ease-in 0.2s;
                 display: flex;
             }
-            &:hover>div>span {}
+        }
+        >ul>li>div {
+            // &:hover>div>span {}
             &:hover>img {
                 transition: ease-in 0.2s;
                 filter: brightness(20);
-            }
-            &:hover>ul {
-                transition: ease-in 0.2s;
-                display: flex;
             }
             &:not(.isempty)>div>span {
                 @if $LIGHT_THEME==true {
