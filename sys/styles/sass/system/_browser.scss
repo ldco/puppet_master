@@ -47,7 +47,7 @@ body {
     }
 }
 
-[data-header=false],
+[data-header=none],
 [data-footer=false] {
     .video--fullscreen {
         video {
@@ -57,7 +57,9 @@ body {
     }
 }
 
-[data-header=true],
+[data-header=vert],
+[data-header=vertext],
+[data-header=horiz],
 [data-footer=true] {
     .video--fullscreen {
         video {

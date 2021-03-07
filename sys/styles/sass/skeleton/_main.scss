@@ -29,7 +29,7 @@ main.case_F:not(.vert--extended) {
 
 main.case_E.vert--extended,
 main.case_F.vert--extended {
-    width: calc(#{100vw} - #{map-get($verticalHeader, extend_width)});
+    width: calc(#{100%} - #{map-get($verticalHeader, extend_width)});
     [dir=rtl] & {
         right: map-get($verticalHeader, extend_width);
     }
@@ -65,7 +65,7 @@ main.case_A {
     section {
         min-height: 100vh;
     }
-    width: 100vw;
+    width: 100%;
     top: 0;
 }
 
@@ -74,7 +74,7 @@ main.case_B {
     section {
         min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($footer, height)});
     }
-    width: 100vw;
+    width: 100%;
     top: 0;
 }
 
@@ -83,7 +83,7 @@ main.case_C {
     section {
         min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($horizontHeader, height)});
     }
-    width: 100vw;
+    width: 100%;
 }
 
 //horiz header, with footer
@@ -91,7 +91,7 @@ main.case_D {
     section {
         min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($horizontHeader, height)} - #{map-get($footer, height)});
     }
-    width: 100vw;
+    width: 100%;
 }
 
 //vert (or vertext) header, no footer
@@ -100,7 +100,7 @@ main.case_D {
         section {
             min-height: 100vh;
         }
-        width: calc(#{100vw} - #{map-get($verticalHeader, width)});
+        width: calc(#{100%} - #{map-get($verticalHeader, width)});
         top: 0;
     }
 }
@@ -110,7 +110,7 @@ main.case_D {
         section {
             min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($mob, height)});
         }
-        width: 100vw;
+        width: 100%;
         top: map-get($mob, height);
     }
 }
@@ -121,7 +121,7 @@ main.case_D {
         section {
             min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($footer, height)});
         }
-        width: calc(#{100vw} - #{map-get($verticalHeader, width)});
+        width: calc(#{100%} - #{map-get($verticalHeader, width)});
         top: 0;
     }
 }
@@ -131,7 +131,7 @@ main.case_D {
         section {
             min-height: calc(#{100vh} - (#{$sectionBottomPadding} * 2) - #{map-get($footer, height)} - #{map-get($mob, height)});
         }
-        width: 100vw;
+        width: 100%;
         top: map-get($mob, height);
     }
 }

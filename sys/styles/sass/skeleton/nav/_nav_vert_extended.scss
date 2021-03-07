@@ -4,34 +4,63 @@
 header.header-desktop--vert.vert--extended {
     nav {
         width: map-get($verticalHeader, extend_width);
-        >ul {}
-        >ul>li {
-            width: map-get($verticalHeader, extend_width);
-            &:hover>div {}
-            &:hover>div>span {}
-            &:hover>img {}
-            &:hover>ul {}
-            &:not(.isempty)>div>span {
-                @if $LIGHT_THEME==true {}
-                @if $LIGHT_THEME==false {}
-            }
-            img {}
-            >div {}
+        margin-top: 5vh;
+        >ul {
+            position: absolute;
+            display: block;
+        }
+        ul li {
+            display: block;
+        }
+        ul>li {
+            margin-bottom: 1vh;
+        }
+        >ul>li.isempty>div>div>span {
+            filter: opacity(0.5);
+        }
+        >ul>li>div {
+            margin-bottom: 1vh;
+            color: $c_opos;
+            display: flex;
+            align-items: center;
+            >img {}
             >div>span {
-                [dir=rtl] & {}
-                [dir=ltr] & {}
+                @include f-size-fill($basicTextSize * 1.4);
+                [dir=rtl] & {
+                    margin-right: 2vh;
+                }
+                [dir=ltr] & {
+                    margin-left: 2vh;
+                }
+            }
+            >img {
+                height: 4vh;
+                // @include width-fill(1.5);
+                @include navImageFilter();
             }
         }
-        .pm_nav_item_sub_ul {
+        >ul>li>ul {
+            display: block;
+            [dir=rtl] & {
+                margin-right: 5vh;
+            }
+            [dir=ltr] & {
+                margin-left: 5vh;
+            }
             >li {
-                >div>span {}
-                &:hover {}
-                &:hover>img {
-                    @if $LIGHT_THEME==true {}
+                padding: 0.5vh;
+                >div>div>span {
+                    @include f-size-fill($basicTextSize * 1.1);
+                    [dir=rtl] & {
+                        margin-right: 2vh;
+                    }
+                    [dir=ltr] & {
+                        margin-left: 2vh;
+                    }
                 }
-                img {
-                    [dir=rtl] & {}
-                    [dir=ltr] & {}
+                >div>img {
+                    @include width-fill(1.2);
+                    @include navImageFilter();
                 }
             }
         }
