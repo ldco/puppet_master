@@ -171,10 +171,11 @@ function initFun() {
   if (PM_ONEPAGER === "false" || PM_ROUT === "false") {
     setRouter();
   } //Set Misc Fixes
-  // dynamFixSubmenusMargin();
 
 
-  noHoverOnVerticalMenuTablet();
+  if (PM_ISDEVICE === "tab") {
+    noHoverOnVerticalMenuTablet();
+  }
 
   if (PM_HEADER !== "none") {
     setChangeLang();
@@ -225,17 +226,6 @@ function dragFloatingHeader() {
   document.querySelector("#pm_logo-header--float").click();
 }
 "use strict";
-
-function dynamFixSubmenusMargin() {
-  var els = document.querySelectorAll("#pm_Nav--mobile>ul>li");
-  els.forEach(function (el) {
-    var k = el.getElementsByTagName("ul")[0];
-
-    if (k) {
-      el.style.marginBottom = k.childElementCount * 4 + "vh";
-    }
-  });
-}
 
 function noHoverOnVerticalMenuTablet() {
   var istab = document.getElementsByTagName("html")[0].getAttribute('data-device');

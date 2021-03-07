@@ -49,8 +49,9 @@ function initFun() {
     }
 
     //Set Misc Fixes
-    // dynamFixSubmenusMargin();
-    noHoverOnVerticalMenuTablet()
+    if (PM_ISDEVICE === "tab") {
+        noHoverOnVerticalMenuTablet()
+    }
     if (PM_HEADER !== "none") {
         setChangeLang();
         setBarAsset();

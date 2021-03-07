@@ -1,13 +1,3 @@
-function dynamFixSubmenusMargin() {
-    let els = document.querySelectorAll("#pm_Nav--mobile>ul>li");
-    els.forEach(el => {
-        let k = el.getElementsByTagName("ul")[0];
-        if (k) {
-            el.style.marginBottom = (k.childElementCount * 4) + "vh";
-        }
-    });
-}
-
 function noHoverOnVerticalMenuTablet() {
     let istab = document.getElementsByTagName("html")[0].getAttribute('data-device');
     if (istab === "tab") {

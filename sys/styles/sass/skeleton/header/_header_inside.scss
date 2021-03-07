@@ -12,6 +12,12 @@
     cursor: pointer;
 }
 
+header.header-desktop--vert.vert--extended {
+    #pm_logo-header {
+        background-size: calc(#{map-get($horizontHeader, logo_width)} * 0.7) !important;
+    }
+}
+
 header.header-desktop--vert {
     #pm_logo-header {
         position: absolute;
@@ -26,9 +32,9 @@ header.header-desktop--vert {
     #pm_logo-header--mobile {
         background-image: url("#{$IMAGES_CORE}brand/barLogo--forLight.svg");
     }
-    header.header-desktop--vert {
+    header.header-desktop--vert:not(.vert--extended) {
         #pm_logo-header {
-            background-image: url("#{$IMAGES_CORE}brand/squareLogo--forLight.svg") !important;
+            background-image: url("#{$IMAGES_CORE}brand/squareLogo--forLight.svg");
         }
     }
 }
@@ -43,7 +49,7 @@ header.header-desktop--vert {
     #pm_asset-header--float {
         filter: invert(1);
     }
-    header.header-desktop--vert {
+    header.header-desktop--vert:not(.vert--extended) {
         #pm_logo-header {
             background-image: url("#{$IMAGES_CORE}brand/squareLogo--forDark.svg") !important;
         }

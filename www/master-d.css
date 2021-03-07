@@ -1798,6 +1798,9 @@ header.header-desktop--vert #pm_asset-header {
   [dir=rtl] #pm_logo-header {
     right: 0; }
 
+header.header-desktop--vert.vert--extended #pm_logo-header {
+  background-size: calc(12vw * 0.7) !important; }
+
 header.header-desktop--vert #pm_logo-header {
   position: absolute;
   height: 9vh;
@@ -1812,7 +1815,7 @@ header.header-desktop--vert #pm_logo-header {
 #pm_asset-header--float {
   filter: invert(1); }
 
-header.header-desktop--vert #pm_logo-header {
+header.header-desktop--vert:not(.vert--extended) #pm_logo-header {
   background-image: url("../core/assets/images/images_dev/brand/squareLogo--forDark.svg") !important; }
 
 #pm_logo-header--mobile {
@@ -2288,45 +2291,52 @@ header.header-desktop--vert.vert--extended nav {
 #pm_Nav--mobile {
   margin-top: calc(6vh + 5vh); }
   #pm_Nav--mobile > ul {
-    flex-direction: column; }
-  #pm_Nav--mobile > ul li {
-    display: block;
-    align-items: center; }
-  #pm_Nav--mobile > ul > li.isempty > div > span {
+    position: absolute;
+    display: block; }
+    [dir=rtl] #pm_Nav--mobile > ul {
+      right: 1.5vh; }
+    [dir=ltr] #pm_Nav--mobile > ul {
+      left: 1.5vh; }
+  #pm_Nav--mobile ul li {
+    display: block; }
+  #pm_Nav--mobile ul > li {
+    margin-bottom: 1vh; }
+  #pm_Nav--mobile > ul > li > div {
+    margin-bottom: 1vh; }
+  #pm_Nav--mobile > ul > li.isempty > div > div > span {
     filter: opacity(0.5); }
-  #pm_Nav--mobile > ul > li {
+  #pm_Nav--mobile > ul > li > div {
     color: #f9f9f9;
+    display: flex;
     align-items: center; }
-    [dir=rtl] #pm_Nav--mobile > ul > li > img {
+    [dir=rtl] #pm_Nav--mobile > ul > li > div > img {
       margin-right: 3vh; }
-    [dir=ltr] #pm_Nav--mobile > ul > li > img {
+    [dir=ltr] #pm_Nav--mobile > ul > li > div > img {
       margin-left: 3vh; }
-    #pm_Nav--mobile > ul > li > div > span {
+    #pm_Nav--mobile > ul > li > div > div > span {
       font-size: calc(1.4vw + 1.4vh + 0.7vmin); }
-      [dir=rtl] #pm_Nav--mobile > ul > li > div > span {
+      [dir=rtl] #pm_Nav--mobile > ul > li > div > div > span {
         margin-right: 2vh; }
-      [dir=ltr] #pm_Nav--mobile > ul > li > div > span {
+      [dir=ltr] #pm_Nav--mobile > ul > li > div > div > span {
         margin-left: 2vh; }
-    #pm_Nav--mobile > ul > li > img {
+    #pm_Nav--mobile > ul > li > div > img {
       height: 4vh;
       filter: brightness(10) contrast(1); }
   #pm_Nav--mobile > ul > li > ul {
-    position: absolute;
-    align-self: flex-start;
-    margin-top: calc(4vh + 0.5vh); }
+    display: block; }
     [dir=rtl] #pm_Nav--mobile > ul > li > ul {
-      margin-right: 3vh; }
+      margin-right: 5vh; }
     [dir=ltr] #pm_Nav--mobile > ul > li > ul {
-      margin-left: 3vh; }
+      margin-left: 5vh; }
     #pm_Nav--mobile > ul > li > ul > li {
       padding: 0.5vh; }
-      #pm_Nav--mobile > ul > li > ul > li > div > span {
+      #pm_Nav--mobile > ul > li > ul > li > div > div > span {
         font-size: calc(1.1vw + 1.1vh + 0.55vmin); }
-        [dir=rtl] #pm_Nav--mobile > ul > li > ul > li > div > span {
+        [dir=rtl] #pm_Nav--mobile > ul > li > ul > li > div > div > span {
           margin-right: 2vh; }
-        [dir=ltr] #pm_Nav--mobile > ul > li > ul > li > div > span {
+        [dir=ltr] #pm_Nav--mobile > ul > li > ul > li > div > div > span {
           margin-left: 2vh; }
-      #pm_Nav--mobile > ul > li > ul > li > img {
+      #pm_Nav--mobile > ul > li > ul > li > div > img {
         width: calc(1.2vw + 1.2vh + 0.6vmin);
         filter: brightness(10) contrast(1); }
 
