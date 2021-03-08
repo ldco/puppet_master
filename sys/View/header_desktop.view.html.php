@@ -5,7 +5,7 @@
 
     <nav id="<?= $navId; ?>">
         <ul>
-            <?php $modelNav->index();
+            <?php $modelNav->index(false);
             ?></ul>
     </nav>
     <?php $modelLangMenu->makeLang(false); ?>

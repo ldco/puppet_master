@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-function makeNavigationView($arr)
+function makeNavigationView($arr, bool $mobile)
 {
 
-    if (PM_HEADER === "vert" || PM_HEADER === "vertext") {
+    if (PM_HEADER === "vert" || PM_HEADER === "vertext" || $mobile) {
         $headerIsVertical = true;
     } else {
         $headerIsVertical = false;
@@ -62,7 +62,12 @@ function makeNavigationView($arr)
         endif;
         if (isset($navItem['children']) && is_array($navItem['children'])) {
             echo "<ul class='{$sub_UlClass}'>";
-            makeNavigationView($navItem['children']);
+            if ($mobile) {
+                makeNavigationView($navItem['children'], true);
+            } else {
+                makeNavigationView($navItem['children'], false);
+            }
+
             echo '</li></ul>';
         } else {
             echo '</li>';

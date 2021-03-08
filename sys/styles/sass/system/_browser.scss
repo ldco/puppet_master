@@ -47,7 +47,8 @@ body {
     }
 }
 
-[data-header=none],
+
+/* [data-header=none],
 [data-footer=false] {
     .video--fullscreen {
         video {
@@ -67,7 +68,7 @@ body {
             min-height: 97vh !important;
         }
     }
-}
+} */
 
 .video--fullscreen {
     position: absolute;

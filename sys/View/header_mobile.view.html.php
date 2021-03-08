@@ -10,7 +10,7 @@
 <div id="<?= $mobileSlideId ?>">
     <nav id="<?= $navId ?>">
         <ul>
-            <?php $modelNav->index();
+            <?php $modelNav->index(true);
             ?>
         </ul>
     </nav>

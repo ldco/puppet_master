@@ -5,6 +5,9 @@
     header:first-of-type {
         display: none !important;
     }
+    #vertHeaderChanger {
+        display: none !important;
+    }
 }
 
 @include qr(desk) {

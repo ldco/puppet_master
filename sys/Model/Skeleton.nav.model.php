@@ -11,7 +11,7 @@ function buildNavArray(array $elements, $parentId = null)
     $branch = array();
 
     foreach ($elements as $element) {
-        if ($element['parent'] == $parentId) {
+        if ($element['parent'] === $parentId) {
             $children = buildNavArray($elements, $element['_id']);
             if ($children) {
                 $element['children'] = $children;
@@ -34,7 +34,7 @@ class SkeletonNav
         if (!defined("PM_ROOT")) die('PM_ROOT not defined');
         $this->viewsNames = PM_VIEWS;
     }
-    public function index()
+    public function index(bool $mobile)
     {
         global $PM_DB;
 
@@ -44,7 +44,11 @@ class SkeletonNav
         if ($result) {
             $_result = buildNavArray($result);
             if ($_result) {
-                makeNavigationView($_result);
+                if ($mobile)
+                    makeNavigationView($_result, true);
+                else {
+                    makeNavigationView($_result, false);
+                }
             }
         }
     }
