@@ -87,5 +87,8 @@ $mobNavLiHeight: 4vh;
 [data-header=float] {
     #pm_Nav--mobile {
         margin-top: 1vh;
+        >ul {
+            position: initial;
+        }
     }
 }

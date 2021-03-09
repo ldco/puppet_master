@@ -1504,7 +1504,7 @@ main.case_F:not(.vert--extended) {
 
 main.case_E.vert--extended,
 main.case_F.vert--extended {
-  width: calc(100% - 18vh); }
+  width: calc(100vw - 18vh); }
   [dir=rtl] main.case_E.vert--extended, [dir=rtl]
   main.case_F.vert--extended {
     right: 18vh; }
@@ -1543,30 +1543,30 @@ main.case_D {
     top: 6vh; } }
 
 main.case_A {
-  width: 100%;
+  width: 100vw;
   top: 0; }
   main.case_A section {
     min-height: 100vh; }
 
 main.case_B {
-  width: 100%;
+  width: 100vw;
   top: 0; }
   main.case_B section {
     min-height: calc(100vh - (3vh * 2) - 3vh); }
 
 main.case_C {
-  width: 100%; }
+  width: 100vw; }
   main.case_C section {
     min-height: calc(100vh - (3vh * 2) - 6vh); }
 
 main.case_D {
-  width: 100%; }
+  width: 100vw; }
   main.case_D section {
     min-height: calc(100vh - (3vh * 2) - 6vh - 3vh); }
 
 @media (min-aspect-ratio: 13 / 9) {
   [data-device=mob] main.case_E {
-    width: calc(100% - 6vh);
+    width: calc(100vw - 6vh);
     top: 0; }
     [data-device=mob] main.case_E section {
       min-height: 100vh; } }
@@ -1574,7 +1574,7 @@ main.case_D {
 @media (orientation: landscape) {
   [data-device=desk] main.case_E,
   [data-device=tab] main.case_E {
-    width: calc(100% - 6vh);
+    width: calc(100vw - 6vh);
     top: 0; }
     [data-device=desk] main.case_E section,
     [data-device=tab] main.case_E section {
@@ -1582,7 +1582,6 @@ main.case_D {
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-device=mob] main.case_E {
-    width: 100%;
     top: 6vh; }
     [data-device=mob] main.case_E section {
       min-height: calc(100vh - (3vh * 2) - 6vh); } }
@@ -1590,7 +1589,6 @@ main.case_D {
 @media (orientation: portrait) {
   [data-device=desk] main.case_E,
   [data-device=tab] main.case_E {
-    width: 100%;
     top: 6vh; }
     [data-device=desk] main.case_E section,
     [data-device=tab] main.case_E section {
@@ -1598,23 +1596,35 @@ main.case_D {
 
 @media (min-aspect-ratio: 13 / 9) {
   [data-device=mob] main.case_F {
-    width: calc(100% - 6vh);
+    width: calc(100vw - 6vh);
     top: 0; }
     [data-device=mob] main.case_F section {
+      min-height: calc(100vh - (3vh * 2) - 3vh); }
+  [data-device=mob] main.case_F.vert--extended {
+    width: calc(100vw - 18vh);
+    top: 0; }
+    [data-device=mob] main.case_F.vert--extended section {
       min-height: calc(100vh - (3vh * 2) - 3vh); } }
 
 @media (orientation: landscape) {
   [data-device=desk] main.case_F,
   [data-device=tab] main.case_F {
-    width: calc(100% - 6vh);
+    width: calc(100vw - 6vh);
     top: 0; }
     [data-device=desk] main.case_F section,
     [data-device=tab] main.case_F section {
+      min-height: calc(100vh - (3vh * 2) - 3vh); }
+  [data-device=desk] main.case_F.vert--extended,
+  [data-device=tab] main.case_F.vert--extended {
+    width: calc(100vw - 18vh);
+    top: 0; }
+    [data-device=desk] main.case_F.vert--extended section,
+    [data-device=tab] main.case_F.vert--extended section {
       min-height: calc(100vh - (3vh * 2) - 3vh); } }
 
 @media (max-aspect-ratio: 13 / 9) {
   [data-device=mob] main.case_F {
-    width: 100%;
+    width: 100vw;
     top: 6vh; }
     [data-device=mob] main.case_F section {
       min-height: calc(100vh - (3vh * 2) - 3vh - 6vh); } }
@@ -1622,7 +1632,7 @@ main.case_D {
 @media (orientation: portrait) {
   [data-device=desk] main.case_F,
   [data-device=tab] main.case_F {
-    width: 100%;
+    width: 100vw;
     top: 6vh; }
     [data-device=desk] main.case_F section,
     [data-device=tab] main.case_F section {
@@ -1699,7 +1709,8 @@ header.header-desktop--float {
   box-shadow: 0 0 0 0.05vh #f9f9f9;
   background-color: rgba(47, 47, 47, 0.8);
   padding: 1vh;
-  border-radius: 1vh; }
+  border-radius: 1vh;
+  flex-direction: column; }
 
 [data-header=float] #pm_Header--mobile {
   background-color: transparent;
@@ -2127,6 +2138,11 @@ header.header-desktop--horiz #lang_menu form {
 [data-header=float] #pm_Lang {
   position: initial; }
 
+[data-header=float] #pm_Lang--mobile {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  position: initial; }
+
 [data-header=float] #lang_menu {
   left: initial;
   right: initial; }
@@ -2409,6 +2425,8 @@ header.header-desktop--vert.vert--extended nav {
 
 [data-header=float] #pm_Nav--mobile {
   margin-top: 1vh; }
+  [data-header=float] #pm_Nav--mobile > ul {
+    position: initial; }
 
 @media (orientation: landscape) {
   #pm_panel--header {
