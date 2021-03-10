@@ -3,11 +3,14 @@
 //
 header.header-desktop--vert.vert--extended {
     nav {
+        justify-content: center;
         width: map-get($verticalHeader, extend_width);
-        margin-top: 5vh;
         >ul {
             position: absolute;
-            display: block;
+            display: flex;
+            align-items: baseline;
+            @include font(1, 600);
+            height: auto;
         }
         ul li {
             display: block;
@@ -17,50 +20,65 @@ header.header-desktop--vert.vert--extended {
         }
         >ul>li.isempty>div>div>span {
             filter: opacity(0.5);
+            pointer-events: none;
         }
         >ul>li>div {
             margin-bottom: 1vh;
             color: $c_opos;
             display: flex;
             align-items: center;
-            >img {}
             >div>span {
-                @include f-size-fill($basicTextSize * 1.4);
+                @include f-size-fill($basicTextSize * 0.6);
                 [dir=rtl] & {
-                    margin-right: 2vh;
+                    margin-right: 0.5vh;
                 }
                 [dir=ltr] & {
-                    margin-left: 2vh;
+                    margin-left: 0.5vh;
+                }
+                &:hover {
+                    background-color: $c_brand;
+                    color: $c_white;
+                }
+                &:active {
+                    filter: saturate(0);
                 }
             }
             >img {
-                height: 4vh;
-                // @include width-fill(1.5);
-                @include navImageFilter();
+                display: none;
+                /*  @include width-fill(1);
+                @include navImageFilter(); */
             }
         }
         >ul>li>ul {
             display: block;
             [dir=rtl] & {
-                margin-right: 5vh;
+                margin-right: 2vh;
             }
             [dir=ltr] & {
-                margin-left: 5vh;
+                margin-left: 2vh;
             }
             >li {
                 padding: 0.5vh;
                 >div>div>span {
-                    @include f-size-fill($basicTextSize * 1.1);
+                    @include f-size-fill($basicTextSize * 0.5);
                     [dir=rtl] & {
-                        margin-right: 2vh;
+                        margin-right: 0.5vh;
                     }
                     [dir=ltr] & {
-                        margin-left: 2vh;
+                        margin-left: 0.5vh;
+                    }
+                    &:hover {
+                        background-color: $c_brand;
+                        color: $c_white;
+                    }
+                    &:active {
+                        filter: saturate(0);
                     }
                 }
                 >div>img {
-                    @include width-fill(1.2);
-                    @include navImageFilter();
+                    display: none;
+                    /*  @include width-fill(1);
+                    @include navImageFilter(); */
                 }
             }
         }

@@ -2171,7 +2171,7 @@ nav {
     border-bottom: none; }
 
 header.header-desktop--horiz nav,
-header.header-desktop--horiz nav,
+header.header-desktop--vert nav,
 header.header-desktop--float nav,
 footer nav,
 #pm_Nav--mobile {
@@ -2316,48 +2316,72 @@ header.header-desktop--vert:not(.vert--extended) nav {
         padding-right: 1vh; }
 
 header.header-desktop--vert.vert--extended nav {
-  width: 18vh;
-  margin-top: 5vh; }
+  justify-content: center;
+  width: 18vh; }
   header.header-desktop--vert.vert--extended nav > ul {
     position: absolute;
-    display: block; }
+    display: flex;
+    align-items: baseline;
+    height: auto; }
+    [lang=en] header.header-desktop--vert.vert--extended nav > ul {
+      font-family: Montserrat;
+      font-weight: 600; }
+    [lang=ru] header.header-desktop--vert.vert--extended nav > ul {
+      font-family: Montserrat;
+      font-weight: 600; }
+    [lang=he] header.header-desktop--vert.vert--extended nav > ul {
+      font-family: Heebo;
+      font-weight: 600; }
   header.header-desktop--vert.vert--extended nav ul li {
     display: block; }
   header.header-desktop--vert.vert--extended nav ul > li {
     margin-bottom: 1vh; }
   header.header-desktop--vert.vert--extended nav > ul > li.isempty > div > div > span {
-    filter: opacity(0.5); }
+    filter: opacity(0.5);
+    pointer-events: none; }
   header.header-desktop--vert.vert--extended nav > ul > li > div {
     margin-bottom: 1vh;
     color: #f9f9f9;
     display: flex;
     align-items: center; }
     header.header-desktop--vert.vert--extended nav > ul > li > div > div > span {
-      font-size: calc(1.4vw + 1.4vh + 0.7vmin); }
+      font-size: calc(0.6vw + 0.6vh + 0.3vmin); }
       [dir=rtl] header.header-desktop--vert.vert--extended nav > ul > li > div > div > span {
-        margin-right: 2vh; }
+        margin-right: 0.5vh; }
       [dir=ltr] header.header-desktop--vert.vert--extended nav > ul > li > div > div > span {
-        margin-left: 2vh; }
+        margin-left: 0.5vh; }
+      header.header-desktop--vert.vert--extended nav > ul > li > div > div > span:hover {
+        background-color: #aa0000;
+        color: #f9f9f9; }
+      header.header-desktop--vert.vert--extended nav > ul > li > div > div > span:active {
+        filter: saturate(0); }
     header.header-desktop--vert.vert--extended nav > ul > li > div > img {
-      height: 4vh;
-      filter: brightness(10) contrast(1); }
+      display: none;
+      /*  @include width-fill(1);
+                @include navImageFilter(); */ }
   header.header-desktop--vert.vert--extended nav > ul > li > ul {
     display: block; }
     [dir=rtl] header.header-desktop--vert.vert--extended nav > ul > li > ul {
-      margin-right: 5vh; }
+      margin-right: 2vh; }
     [dir=ltr] header.header-desktop--vert.vert--extended nav > ul > li > ul {
-      margin-left: 5vh; }
+      margin-left: 2vh; }
     header.header-desktop--vert.vert--extended nav > ul > li > ul > li {
       padding: 0.5vh; }
       header.header-desktop--vert.vert--extended nav > ul > li > ul > li > div > div > span {
-        font-size: calc(1.1vw + 1.1vh + 0.55vmin); }
+        font-size: calc(0.5vw + 0.5vh + 0.25vmin); }
         [dir=rtl] header.header-desktop--vert.vert--extended nav > ul > li > ul > li > div > div > span {
-          margin-right: 2vh; }
+          margin-right: 0.5vh; }
         [dir=ltr] header.header-desktop--vert.vert--extended nav > ul > li > ul > li > div > div > span {
-          margin-left: 2vh; }
+          margin-left: 0.5vh; }
+        header.header-desktop--vert.vert--extended nav > ul > li > ul > li > div > div > span:hover {
+          background-color: #aa0000;
+          color: #f9f9f9; }
+        header.header-desktop--vert.vert--extended nav > ul > li > ul > li > div > div > span:active {
+          filter: saturate(0); }
       header.header-desktop--vert.vert--extended nav > ul > li > ul > li > div > img {
-        width: calc(1.2vw + 1.2vh + 0.6vmin);
-        filter: brightness(10) contrast(1); }
+        display: none;
+        /*  @include width-fill(1);
+                    @include navImageFilter(); */ }
 
 #pm_Nav--mobile {
   margin-top: calc(6vh + 5vh); }

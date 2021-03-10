@@ -271,19 +271,28 @@ function setChangeLang() {
 
 function setChangeVertHeader() {
   var el = document.querySelector("#vertHeaderChanger");
+  var nav = document.querySelector(".header-desktop--vert nav");
   var arr = [document.querySelector("#pm_Header--desktop"), document.querySelector("main"), document.querySelector("footer"), el];
   var clas = "vert--extended";
-  var transition = "1s ease";
+  var transition = 1;
   el.addEventListener("click", function () {
     if (!this.classList.contains(clas)) {
+      nav.style.opacity = 0;
+      setTimeout(function () {
+        nav.style.opacity = 1;
+      }, transition * 300);
       arr.forEach(function (elem) {
         elem.classList.add(clas);
-        elem.style.transition = transition;
+        elem.style.transition = transition + "s ease";
       });
     } else {
+      nav.style.opacity = 0;
+      setTimeout(function () {
+        nav.style.opacity = 1;
+      }, transition * 50);
       arr.forEach(function (elem) {
         elem.classList.remove(clas);
-        elem.style.transition = transition;
+        elem.style.transition = transition + "s ease";
       });
     }
   });
